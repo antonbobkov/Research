@@ -1,0 +1,65 @@
+\documentclass{amsart}
+
+\usepackage{AMC_style}	
+\usepackage{Research}	
+
+\newcommand{\D}{\Delta}
+\newcommand{\F}{\mathcal F}
+
+            
+\begin{document}
+The following is the proof of the Theorem \textbf{7.1} in \textit{Vapnik-Chervonenkis density in some theories without the independence property, I} without using a stong $\VC d$ property.
+\ \\
+\begin{Theorem}
+	Assume that $\vc(m) \leq r$ and the theory has the $\VC d$ property. Then $\vc(m+1) \leq r + d$.
+\end{Theorem}
+\begin{proof}
+	Write $x = (x_0, x')$ with $x' = (x_1, \ldots, x_m)$ so that $|x_0| = 1$ and $|x'| = m$. Let $\D(x;y)$ be given. Define
+	\begin{align*}
+		\D_0(x_0;x', y) = \{\phi(x_0; x', y) \mid \phi(x;y) \in \D\}
+	\end{align*}
+	Applying VC $d$ property to $\D_0$ we have finitely many families 
+	\begin{align*}
+		&\F_i = (\phi_i(x', y; y_1, \ldots, y_d))_{\phi \in \D} &(i \in I)
+	\end{align*}
+	of $\LL$-formulas with the following property: for any $a_1 \in M^{|x_0|}$, $a_2 \in M^{|x'|}$, any finite $B \subset M^{|y|}$ there are $\vec b \in B^d$ and $i \in I$ such that $\F_i(a_2, y; \vec b)$ defines $\tp_{\D_0}(a_1/a_2B)$, i.e. for all $\phi \in \D, b \in B$
+	\begin{align*}
+		\models \phi(a_1, a_2, b) \iff \models \phi_i(a_2, b, \vec b)
+	\end{align*}
+	For each $i \in I$ let
+	\begin{align*}
+		\D_i(x';y, y_1 \ldots y_d) = \{\phi_i(x'; y, y_1 \ldots y_d) \mid \phi(x;y) \in \D\}
+	\end{align*}
+	As $|x'| = m$ the assumption that $\vc(m) \leq r$ applies to each $\D_i$. Thus there is a constant $K$ such that for any finite $C \subset (M^{|y|})^{(d+1)}$ there is a set of representatives for $S^{\D_i}(C)$ of size at most $K|C|^r$. (More precisely, for each $\D_i$ there is going to be such a constant $K_i$ and we can take $K$ to be the maximum of these). Now fix a finite set $B \subset M^{|y|}$. Let $N = K|B|^r$. For every element $\vec b \in B^d$ fix a set of representatives of $S^{\D_i}(B\vec b)$ (Note that $|B| = |B\vec b|$) 
+	\begin{align*}
+		\alpha^{i, \vec b}_1, \alpha^{i, \vec b}_2, \ldots, \alpha^{i, \vec b}_{N}
+	\end{align*}
+	(Some of the representatives may be repeated). Also fix a set of representatives of every type in $S^\D(B)$. That is we pick some functions
+	\begin{align*}
+		F_1 &\colon S^\D(B) \arr M^{|x_0|} \\
+		F_2 &\colon S^\D(B) \arr M^{|x'|}
+	\end{align*}
+	such that for all $\pp(x_0, x') \in S^\D(B)$ we have $\pp = \tp^\D(F_1(\pp)F_2(\pp) / B)$, i.e. $(F_1(\pp), F_2(\pp))$ is a realization of $\pp$. Now to every type in $S^\D(B)$ we assign a triple of elements $\langle i, \vec b, \alpha \rangle$ where $i \in I, \vec b \in B^d$ and $\alpha$ is one of the chosen representatives. This is done as follows. Given a type $\boldsymbol p \in S^\D(B)$ we pick its realization $(a_1, a_2) = (F_1(\pp), F_2(\pp))$ . By definability of $\D_0$ there is $j \in I$ and $\vec b \in B^d$ such that for all $\phi \in \D, b \in B$
+	\begin{align*}
+		\models \phi(a_1, a_2, b) \iff \models \phi_j(a_2, b, \vec b)
+	\end{align*}
+	Pick $\alpha$, a representative of $S^{\D_j}(B\vec b)$ that has the same $\D_j$-type as $a_2$. ($\alpha = \alpha^{i, \vec b}_k$ for some $k \in [N]$). That is for all $b \in B, \phi \in \D$ we have
+	\begin{align*}
+		\models \phi_j(a_2, b, \vec b) \iff \models \phi_j(\alpha, b, \vec b)
+	\end{align*}
+	To the type $\pp$ we associate triple $\langle j, \vec b, \alpha\rangle$. (In general there might be more than one choice for the triple. To ensure uniqueness pick the smallest triple after fixing some appropriate ordering) This defines a map
+	\begin{align*}
+		F \colon S^\D(B) \arr T
+	\end{align*}
+	where $T$ is the space of all possible resulting tuples. We have $|T| = I \cdot |B^d| \cdot N = |I||B|^dK|B|^r= K|I||B|^{d + r}$. Once we show that $F$ is injective we will have $S^\D(B) \leq K|I||B|^{d + r}$. As choice of $\D$ and $B$ was arbitrary we will be done. Thus, all that remains is to show injectivity of $F$. We claim that $\pp$ is uniquely determined by its triple. Fix $\pp \in S^\D(B)$ and let $F(\pp) = \langle j, \vec b, \alpha\rangle$. Now for all $\phi \in \D, b \in B$ we have
+	\begin{align*}
+		\phi(x_0, x', b) \in \pp &\iff \models \phi(F_1(\pp), F_2(\pp), b) \\
+		&\iff \models \phi_j(F_2(\pp), b, \vec b) \iff \models \phi_j(\alpha, b, \vec b)
+	\end{align*}
+	This shows that two different types would have different tuples associated to them. Thus $F$ is injective as needed.
+\end{proof}
+\begin{Corollary}
+	If $vc(1) = r$ and the theory has $\VC d$ property then $\vc(m) \leq r + d \cdot (m - 1)$
+\end{Corollary}
+
+\end{document}
