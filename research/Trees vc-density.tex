@@ -365,4 +365,17 @@ Stable trees are exactly trees of finite height.
 Given a tree $T$ of finite height and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. Define $T \midr [n,m]$ to be the subtree of $T$ obtained only by considering nodes at depth $d$, with $n \leq d \leq m$. Call $T \midr [n, \infty]$ the \emph{$n$-slice} of $T$.
 \end{Definition}
 
+\begin{Definition}
+	Consider a tree $T$ of height $N$. Let $S_n$ denote the collection of connected components in the $n$-slice of $T$. $T$ is called \emph{almost finite} if for every $n \leq N$, $S_n$ contains finitely many element up to a (tree) isomorphism.
+\end{Definition}
+
+\begin{Theorem}
+	Let $T$ be a stable tree of height $N$. The following are equivalent
+\begin{enumerate}
+	\item $T$ is $\kappa_0$-categorical
+	\item $T$ has NFCP
+	\item $T$ is almost finite
+	\item 
+\end{enumerate}
+\end{Theorem}
 \end{document}
