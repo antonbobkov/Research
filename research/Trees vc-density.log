@@ -409,28 +409,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\Anton\SparkleShare\Research\research\vc-trees-fig_1.tex)) [3] [4] [5] [6] [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8] [9]
-
-! LaTeX Error: \begin{proof} on input line 388 ended by \end{Proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.392 \end{Proof}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[10] [11] ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux") ) 
+ [8] [9] [10] [11]
+("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
- 11156 strings out of 493922
- 213226 string characters out of 3144898
+ 11155 strings out of 493922
+ 213218 string characters out of 3144898
  373897 words of memory out of 3000000
- 14088 multiletter control sequences out of 15000+200000
+ 14087 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,864b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (11 pages, 175504 bytes).
+Output written on "Trees vc-density.dvi" (11 pages, 175512 bytes).
