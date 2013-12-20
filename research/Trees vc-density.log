@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2013 16:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2013 16:23
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.tex"
@@ -409,15 +409,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\Anton\SparkleShare\Research\research\vc-trees-fig_1.tex)) [3] [4] [5] [6] [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8] [9] [10]
-("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux") ) 
+ [8] [9]
+! Undefined control sequence.
+<recently read> \Kappa 
+                       
+l.379 	\item $T$ is $\Kappa
+                           _0$-categorical
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10] ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
- 11155 strings out of 493922
- 213218 string characters out of 3144898
+ 11156 strings out of 493922
+ 213223 string characters out of 3144898
  373897 words of memory out of 3000000
- 14087 multiletter control sequences out of 15000+200000
+ 14088 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (10 pages, 173152 bytes).
+Output written on "Trees vc-density.dvi" (10 pages, 173148 bytes).
