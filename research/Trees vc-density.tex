@@ -385,7 +385,7 @@ Given a tree $T$ of finite height and $n \leq m$ with $n \in \N, m \in \N \cup \
 
 Note that conditions (3) and (4) are purely combinatorial.
 
-\begin{Proof}
+\begin{proof}
 	$(1) \Rightarrow (2)$. This is true in arbitrary theories. For a given arity $\aleph_0$-categorical theories have finitely many types, all of them isolated. This means that for a given formula $\phi(x, y)$ we can list all the types of $y$ for which there are infinitely many $x$ such that $\phi(x, y)$ holds. There are finitely many such types and all of them are isolated, so we can code it by single formula - disjunction of isolating formulas.
 	
 	$(2) \Rightarrow (3)$. We prove this by contrapositive. Suppose $T$ is not almost finite. Pick largest $n$ such that $n$-slice has infinitely many isomorphism classes. Thus $(n+1)$-slice has finitely many isomorphism classes. Label them $0$ through $N$. Now, every element of $S_n$ can be coded by a sequence of elements of $\N \cup \{\infty\}$ of length $N$ as follows. Pick $s \in S_n$ and $k \in [N]$. Let $c \in S_{n+1}$ be coded by $k$. Count number of copies of $c$ as child cones of $s$ and record that number as $k$th element of the coding sequence. Two elements of $S_n$ will have the same coding sequence iff they are isomorphic. There are infinitely many isomorphism classes, each coded by a finite sequence. This implies that there has to be some $k$ such that $k$th position has arbitrarily high finite values. This means 
