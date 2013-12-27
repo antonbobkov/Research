@@ -374,7 +374,7 @@ Consider a tree $T$ and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. De
 
 Given $T$ suppose $T_n$ is finite. We associate a coding sequence to every node at depth $n-1$. First denote all elments of $T_n$ as $C_1, \ldots, C_N$. Given a node $t$ at depth $n-1$ we will construct a sequence $c_1, \ldots, c_N$ of elements in $\N \cup \{\infty\}$. $c_i$ counts all the cones of $t$ with isomorphism class $C_i$.
 
-\begin{Lemma}
+\begin{Lemma} \label{lm_tree_code}
 	Suppose we have a countable tree $T$ with $T_n$ finite. Two nodes $t,s$ at depth $n$ have the same code if and only if $A_t$ is isomorphic to $A_s$.
 \end{Lemma}
 
@@ -382,12 +382,12 @@ Given $T$ suppose $T_n$ is finite. We associate a coding sequence to every node 
 	Clear.
 \end{Proof}
 
-\begin{Lemma}
+\begin{Lemma} \label{lm_categoricity}
 	Suppose $T$ is almost finite and countable. Then all the non-isomorphic connected components have different theories.
 \end{Lemma}
 
 \begin{Proof}
-	Note that in almost finite theory all slices are also almost finite. Prove the statement by the reverse induction on slices' depth. Suppose we have proven the claim for $n$th slice. Consider a node $t \in T$ at depth $n-1$. All the cones under $t$ has different theories by induction, and there are finitely many isomorphism classes of them by assumption that $T$ is almost finite. Label those isomorphism classes $1$ through $N$. We assign $t$ a code which is a sequence of length $N$ with elements of $\N \cup \{\infty\}$. This is done by counting number of occuring isomorphic cones. $i$th element of the sequence is going to be the number of cones that have $i$th isomorphism class. Clearly two nodes have the same isomorphism class if and only if they have the same code. Two different codes can be told apart by their theories as all the children nodes have theories that can be told apart by a sentence.
+	Note that in almost finite theory all slices are also almost finite. Prove the statement by the reverse induction on slices' depth. Suppose we have proven the claim for $n$th slice. As $T_n$ is finite, we can apply Lemma \ref{lm_tree_code} to obtain codes for nodes at depth $n-1$. Two different codes can be told apart by their theories as all the children nodes have theories that can be told apart by a sentence.
 \end{Proof}
 
 
