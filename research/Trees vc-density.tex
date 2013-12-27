@@ -368,17 +368,30 @@ Consider a tree $T$ and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. De
 	Consider a tree $T$ of height $N$. Let $T_n$ denote the collection of connected components in the $n$th-slice of $T$. $T$ is called \emph{almost finite} if for every $n \leq N$, $S_n$ contains finitely many elements up to a (poset) isomorphism.
 \end{Definition}
 
+\begin{Definition}
+	Given an element $t \in T$ in a tree, let $A_t = \{a \in T \mid a > t\}$ denote all the elements below $t$. Call a connected component of $A_t$ a \emph{cone} of $t$.
+\end{Definition}
+
+Given $T$ suppose $T_n$ is finite. We associate a coding sequence to every node at depth $n-1$. First denote all elments of $T_n$ as $C_1, \ldots, C_N$. Given a node $t$ at depth $n-1$ we will construct a sequence $c_1, \ldots, c_N$ of elements in $\N \cup \{\infty\}$. $c_i$ counts all the cones of $t$ with isomorphism class $C_i$.
+
+\begin{Lemma}
+	Suppose we have a countable tree $T$ with $T_n$ finite. Two nodes $t,s$ at depth $n$ have the same code if and only if $A_t$ is isomorphic to $A_s$.
+\end{Lemma}
+
+\begin{Proof}
+	Clear.
+\end{Proof}
+
 \begin{Lemma}
 	Suppose $T$ is almost finite and countable. Then all the non-isomorphic connected components have different theories.
 \end{Lemma}
 
 \begin{Proof}
+	Note that in almost finite theory all slices are also almost finite. Prove the statement by the induction on slices.
 	Consider a node $t \in T$. All the cones under $t$ has different theories by induction, and there are finitely many isomorphism classes of them by assumption that $T$ is almost finite. Label those isomorphism classes $1$ through $N$. We assign $t$ a code which is a sequence of length $N$ with elements of $\N \cup \{\infty\}$. This is done by counting number of occuring isomorphic cones. $i$th element of the sequence is going to be the number of cones that have $i$th isomorphism class. Clearly two nodes have the same isomorphism class if and only if they have the same code. Two different codes can be told apart by their theories as all the children nodes have theories that can be told apart by a sentence.
 \end{Proof}
 
-\begin{Definition}
-	Given an element $t \in T$ in a tree, let $A_t = \{a \in T \mid a > t\}$ denote all the elements below $t$. Call a connected component of $A_t$ a \emph{child cone} of $t$.
-\end{Definition}
+
 
 \begin{Theorem}
 	Let $T$ be a stable tree of height $N$. The following are equivalent:
