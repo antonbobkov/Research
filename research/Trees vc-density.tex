@@ -361,12 +361,20 @@ Putting all of those results together we are able to compute $\vc$-density of fo
 In this section all the considered trees $T$ are stable. Note that stable trees are exactly trees of finite height.
 
 \begin{Definition}
-Given a tree $T$ of finite height and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. Define $T \midr [n,m]$ to be the subtree of $T$ obtained restricting nodes at depth $[n,m]$. Call $T \midr [n, \infty]$ the \emph{$n$-slice} of $T$.
+Consider a tree $T$ and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. Define $T \midr [n,m]$ to be the subtree of $T$ obtained restricting nodes at depth $[n,m]$. Call $T \midr [n, \infty]$ the \emph{$n$th-slice} of $T$.
 \end{Definition}
 
 \begin{Definition}
-	Consider a tree $T$ of height $N$. Let $S_n$ denote the collection of connected components in the $n$-slice of $T$. $T$ is called \emph{almost finite} if for every $n \leq N$, $S_n$ contains finitely many elements up to a (poset) isomorphism.
+	Consider a tree $T$ of height $N$. Let $T_n$ denote the collection of connected components in the $n$th-slice of $T$. $T$ is called \emph{almost finite} if for every $n \leq N$, $S_n$ contains finitely many elements up to a (poset) isomorphism.
 \end{Definition}
+
+\begin{Lemma}
+	Suppose $T$ is almost finite. Then all the connected components have different theories.
+\end{Lemma}
+
+\begin{Proof}
+	
+\end{Proof}
 
 \begin{Definition}
 	Given an element $t \in T$ in a tree, let $A_t = \{a \in T \mid a > t\}$ denote all the elements below $t$. Call a connected component of $A_t$ a \emph{child cone} of $t$.
