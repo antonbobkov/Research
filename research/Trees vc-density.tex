@@ -373,7 +373,7 @@ Consider a tree $T$ and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. De
 \end{Lemma}
 
 \begin{Proof}
-	Consider a node $t \in T$. All the cones under $t$ has different theories by induction, and there are finitely many isomorphism classes of them by assumption that $T$ is almost finite. Label those isomorphism classes $1$ through $N$. We assign $t$ a code which is a sequence of length $N$ with elements of $\N \cup \{\infty\}$. This is done by counting number of occuring isomorphisms
+	Consider a node $t \in T$. All the cones under $t$ has different theories by induction, and there are finitely many isomorphism classes of them by assumption that $T$ is almost finite. Label those isomorphism classes $1$ through $N$. We assign $t$ a code which is a sequence of length $N$ with elements of $\N \cup \{\infty\}$. This is done by counting number of occuring isomorphic cones. $i$th element of the sequence is going to be the number of cones that have $i$th isomorphism class. Clearly two nodes have the same isomorphism class if and only if they have the same code. Two different codes can be told apart by their theories as all the children nodes have theories that can be told apart by a sentence.
 \end{Proof}
 
 \begin{Definition}
@@ -395,7 +395,7 @@ Note that conditions (3) and (4) are purely combinatorial.
 \begin{proof}
 	$(1) \Rightarrow (2)$. This is true in arbitrary theories. For a given arity $\aleph_0$-categorical theories have finitely many types, all of them isolated. This means that for a given formula $\phi(x, y)$ we can list all the types of $y$ for which there are infinitely many $x$ such that $\phi(x, y)$ holds. There are finitely many such types and all of them are isolated, so we can code it by single formula - disjunction of isolating formulas.
 	
-	$(2) \Rightarrow (3)$. We prove this by contrapositive. Suppose $T$ is not almost finite. Pick largest $n$ such that $n$-slice has infinitely many isomorphism classes. Thus $(n+1)$-slice has finitely many isomorphism classes. Label them $0$ through $N$. Now, every element of $S_n$ can be coded by a sequence of elements of $\N \cup \{\infty\}$ of length $N$ as follows. Pick $s \in S_n$ and $k \in [N]$. Let $c \in S_{n+1}$ be coded by $k$. Count number of copies of $c$ as child cones of $s$ and record that number as $k$th element of the coding sequence. Two elements of $S_n$ will have the same coding sequence iff they are isomorphic. There are infinitely many isomorphism classes, each coded by a finite sequence. This implies that there has to be some $k$ such that $k$th position has arbitrarily high finite values. This means 
+	$(2) \Rightarrow (3)$. We prove this by contrapositive. Suppose $T$ is not almost finite. Pick largest $n$ such that $n$-slice has infinitely many isomorphism classes. Thus $(n+1)$-slice is almost finite. Label them $0$ through $N$. Now, every element of $S_n$ can be coded by a sequence of elements of $\N \cup \{\infty\}$ of length $N$ as follows. Pick $s \in S_n$ and $k \in [N]$. Let $c \in S_{n+1}$ be coded by $k$. Count number of copies of $c$ as child cones of $s$ and record that number as $k$th element of the coding sequence. Two elements of $S_n$ will have the same coding sequence iff they are isomorphic. There are infinitely many isomorphism classes, each coded by a finite sequence. This implies that there has to be some $k$ such that $k$th position has arbitrarily high finite values. This means 
 \end{proof}
 
 \end{document}
