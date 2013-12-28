@@ -408,9 +408,9 @@ Note that conditions (3) and (4) are purely combinatorial.
 	
 	$(2) \Rightarrow (3)$. We prove this by contrapositive. Suppose $T$ is not almost finite. Pick largest $n$ such that $n$-slice has infinitely many isomorphism classes. Thus $(n+1)$-slice is almost finite. Do construction as in lemma to obtain codes for nodes at depth $n$. There are infinitely many isomorphism classes for those thus there are infnitely many codes realized. As every code is a finite sequence, there has to be $i$ such $i$th position of the sequences has to take arbitrarily large finite values. Let $\phi(x,y)$ be a formula such that $\phi(T, t)$ equals to the $i$th position in the sequence coding $t$. This formula fails to have NFCP.
 	
-	$(3) \Rightarrow (1)$ This is exactly the lemma
+	$(3) \Rightarrow (1)$ This is exactly Lemma \ref{lm_tree_code}
 	
-	$(3) \Leftrightarrow (4)$ Forward direction is trivial. Converse we prove this by contrapositive. Suppose $T$ is not almost finite. Pick smallest $n$ 
+	$(3) \Leftrightarrow (4)$ Forward direction is trivial. Converse we prove this by contrapositive. Suppose $T$ is not almost finite. Pick smallest $n$ such that $T_n$ is infinite. If $n=0$ this contradicts $T_0$ being finite. Otherwise there has to be a node at depth $n-1$ that has infinitely many non-isomorphic nodes under it. 
 \end{proof}
 
 \end{document}
