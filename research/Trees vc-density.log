@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  26 DEC 2013 23:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  1 JAN 2014 11:04
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.tex"
@@ -113,30 +113,4 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-\c@Theorem=\count99
-)
-(C:\Users\Anton\SparkleShare\Research\research\Research.sty)
-
-! LaTeX Error: File `tikz.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.7 
-     
-*** (cannot \read from terminal in nonstop modes)
-
- 
-Here is how much of TeX's memory you used:
- 1606 strings out of 493922
- 17474 string characters out of 3144899
- 65809 words of memory out of 3000000
- 4799 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
- 1002 hyphenation exceptions out of 8191
- 34i,0n,28p,253b,43s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+\c@Theor
