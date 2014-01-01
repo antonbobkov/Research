@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  1 JAN 2014 11:07
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  1 JAN 2014 11:12
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.tex"
@@ -410,72 +410,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8] [9]
-
-! LaTeX Error: Environment Proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.381 \begin{Proof}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{Proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.383 \end{Proof}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Overfull \hbox (1.27309pt too wide) in paragraph at lines 386--387
 []\OT1/cmr/bx/n/10 Lemma 5.5. [][]\OT1/cmr/m/it/10 Sup-pose $\OML/cmm/m/it/10 T$ \OT1/cmr/m/it/10 is al-most fi-nite and
  count-able. Then all the non-isomorphic
  []
 
-
-! LaTeX Error: Environment Proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.389 \begin{Proof}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{Proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.392 \end{Proof}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 [10] [11] ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
- 11159 strings out of 493922
- 212182 string characters out of 3144899
+ 11157 strings out of 493922
+ 212169 string characters out of 3144899
  373919 words of memory out of 3000000
- 14091 multiletter control sequences out of 15000+200000
+ 14089 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 64i,19n,75p,809b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,19n,75p,810b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (11 pages, 178532 bytes).
+Output written on "Trees vc-density.dvi" (11 pages, 178652 bytes).

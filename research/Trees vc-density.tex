@@ -224,7 +224,7 @@ In the following four definitions $\B$-structures are going to be in the same la
 	\end{itemize}
 \end{proof}
 
-\section{Main Proof}
+\section{Main proof}
 
 Basic idea for the proof is that we are able to divide our parameter space into $O(n)$ many pieces. Each of $q$ parameters can come from any of those $O(n)$ partitions giving us $O(n)^q$ many choices for parameter configuration. When every parameter coming from a fixed partition the number of definable sets is constant and in fact is uniformly bounded by some $N$. This gives us $N O(n)^q = O(n^q)$ possibilities for different definable sets.
 
@@ -378,18 +378,18 @@ Given $T$ suppose $T_n$ is finite. We associate a coding sequence to every node 
 	Suppose we have a countable tree $T$ with $T_n$ finite. Two nodes $t,s$ at depth $n$ have the same code if and only if $A_t$ is isomorphic to $A_s$.
 \end{Lemma}
 
-\begin{Proof}
+\begin{proof}
 	Clear.
-\end{Proof}
+\end{proof}
 
 \begin{Lemma} \label{lm_categoricity}
 	Suppose $T$ is almost finite and countable. Then all the non-isomorphic connected components have different theories.
 \end{Lemma}
 
-\begin{Proof}
+\begin{proof}
 	Note that in almost finite theory all slices are also almost finite. Prove the statement by the reverse induction on slices' depth. Suppose we have proven the claim for $n$th slice. As $T_n$ is finite and countable, we can apply Lemma \ref{lm_tree_code} to obtain codes for nodes at depth $n-1$. By induction assumption all (finitely many) elements of $T_n$ have different theories. For each isomorphism class $C_i \in T_n$ we can pick a sentence $\phi_i$ such that $\forall C \in T_n \  C = C_i \iff C \models \phi_i$. If two elements $t,s$ at depth $n-1$ have different codes, then they have different number of cones with some isomorphism class $C_i$. As having $C_i$ as an isomorphism class is witnessed by $\phi_i$ we can construct a formula that tells apart $t,s$.
 	% technically we have to change phi_i to a downward function.
-\end{Proof}
+\end{proof}
 
 \begin{Theorem}
 	Let $T$ be a stable tree of height $N$. The following are equivalent:
