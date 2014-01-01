@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  1 JAN 2014 11:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  1 JAN 2014 11:07
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.tex"
@@ -456,9 +456,6 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-LaTeX Warning: Reference `lm_tree_code' on page 10 undefined on input line 390.
-
-
 ! LaTeX Error: \begin{document} ended by \end{Proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -471,25 +468,14 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[10]
-
-LaTeX Warning: Reference `lm_tree_code' on page 11 undefined on input line 411.
-
-[11] ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux")
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[10] [11] ("C:\Users\Anton\SparkleShare\Research\research\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
  11159 strings out of 493922
  212182 string characters out of 3144899
- 373897 words of memory out of 3000000
+ 373919 words of memory out of 3000000
  14091 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 64i,19n,75p,810b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,19n,75p,809b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (11 pages, 178540 bytes).
+Output written on "Trees vc-density.dvi" (11 pages, 178532 bytes).
