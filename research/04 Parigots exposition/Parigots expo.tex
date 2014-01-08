@@ -21,18 +21,18 @@
 
 \section{Definitions}
 
-\begin{Definition}Work inside a model of a tree $M$
+\begin{Definition} Work inside a model of a tree $M$
 	\begin{enumerate}
 		\item Given a set $A$ denote its \emph{initial closure} 
 		\begin{align*}
 			I(A) = \{b \mid \exists a \in A \ b \leq a\}
 		\end{align*}
-		\item \emph{Initial segements} are sets that are closed under initial closure.
+		\item \emph{Initial segements} are sets that are initially closed and linearly ordered (chain)
 		\item Given set $A$ define its \emph{initial part} (which is an initial segment)
 		\begin{align*}
 			S(A) = \{b \mid b < A\} = \{b \mid \forall a \in A \ b < a\}
 		\end{align*}
-		\item Given initial segment $S$ define its \emph{final part}
+		\item Given initial segment $S$ define its \emph{final part} (also known as the closed cone of $S$)
 		\begin{align*}
 			F(S) = \{b \mid b > A\} = \{b \mid \forall a \in A \ b > a\}
 		\end{align*}
@@ -40,14 +40,39 @@
 		\begin{align*}
 			T(S) = M - F(S)
 		\end{align*}
+		\item Connected component $B$ of some final part $F(S)$ is called \emph{branch} of $S$ (also known as an open cone of $S$)
 	\end{enumerate}
+	All those definitions are understood to be inside of $M$. If the underlying model is unclear from the context we will specify it with an underscript such as, for example, $F_M(S)$ or $S_M(A)$
 \end{Definition}
 
 \begin{Definition}
+	We would like to study how constructions in the previous definition behave under elementary extensions. Let $M \preccurlyeq M'$, $S \subset M$, an initial segment, $F = F_M(S)$, its final part and $B$ some branch in $F$.
 	\begin{enumerate}
-		\item Given an initial segment $S$ let $S^* = I_{M'}(S)$, initial closure of $S$ in the monster model.
-		\item Given an initial segment $S$ let $S' = S_{M'}(F_A(S))$, initial part of 
+		\item Define $S^*$ the \emph{weak extension} of $S$ to be initial closure of $S$ in $M'$, i.e. $S^* = I_{M'}(S)$
+		\item Define $S'$ the \emph{strong extension} of $S$ to be initial part of $F$ in $M'$, i.e. $S' = S_{M'}(F)$
+		\item Define $B^*$ the \emph{weak extension} of $B$ to be \emph{final closure} of $B$ in $M'$
+		\begin{align*}
+			B^* = \{m \in M' \mid \exists a \in B \ b \leq m\}
+		\end{align*}
+		\item Collection of all such $B^*$ is called \emph{weak branch collection} of $S$ and is denoted $F_M(S)^*$
+		\begin{align*}
+			F_M(S)^* = \bigcup \{B^* \mid B \text{ is a branch of } S\}
+		\end{align*}
+		\item Define $B'$ the \emph{strong extension} of $B$ to be the connected component of $F_{M'}(S')$ containing $B$
+		\item Collection of all such $B'$ is called \emph{strong branch collection} of $S$ and is denoted $F_M(S)'$
+		\begin{align*}
+			F_M(S)^* = \bigcup \{B' \mid B \text{ is a branch of } S\}
+		\end{align*}
+		\item \emph{Complete branch collection} of $S$ is defined to be the final part of $S'$, i.e. $F_{M'}(S')$
 	\end{enumerate}
 \end{Definition}
+
+\begin{Note}
+	\begin{enumerate} Observe following containments. All of them can be strict
+		\item $S^* \subseteq S'$
+		\item $B^* \subseteq B'$
+		\item $F_M(S)^* \subseteq F_M(S)' \subseteq F_{M'}(S')$
+	\end{enumerate}
+\end{Note}
 
 \end{document}
