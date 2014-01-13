@@ -16,12 +16,12 @@
 
 \maketitle
 
-Work with a labeled graph $(G, a, b)$. We call it $n$-connected if there isn't a set of $n-1$ vertices not including $a,b$ which removal disconnects $a$ from $b$. Connectivity of a graph is the largest $n$ such that the graph is $n$-connected.
+We work with an infinite graph $G$. Say that two vertices $a, b$ are $n$-connected if they can't be disconnected by removing $n-1$ points from graph. Connectivity of $a,b$ is the smallest $n$ such that $a,b$ are $n$-connectivity
 
 \begin{Lemma}
-	Suppose $(G, a, b)$ has finite connectivity $n+1$. Then there are finitely many $n$-point sets that disconnect $a$ from $b$.
+	Suppose $a,b$ in $G$ have finite connectivity $n+1$. Then there are finitely many $n$-point sets that disconnect $a$ from $b$.
 \end{Lemma}
 
-Suppose we have an indiscernable sequence over parameter set $A$ in a flat graph $(a_i)_{i \in I}$. Fix $n$. By flatness result we can find an infinite $J \subset I$ and a finite set $B'$ such that each pair from $(a_j)_{j \in J}$ have infinite distance over $B'$. By indiscernability we have an automorphism sending $(a_j)_{j \in J}$ to $(a_i)_{i \in I}$. Denote image of $B'$ under this automorphism as $B$. Fix $a = a_i$ and $b = a_j$ from some $i \neq j$. In $(G, a, b)$ is disconnected by $B$, thus is has finite connectivity. 
+Suppose we have an indiscernible sequence over parameter set $A$ in a flat graph $(a_i)_{i \in I}$. Fix $n$. By flatness result we can find an infinite $J \subset I$ and a finite set $B'$ such that each pair from $(a_j)_{j \in J}$ have infinite distance over $B'$. By indiscernability we have an automorphism sending $(a_j)_{j \in J}$ to $(a_i)_{i \in I}$. Denote image of $B'$ under this automorphism as $B$. Fix $a = a_i$ and $b = a_j$ from some $i \neq j$. In $(G, a, b)$ is disconnected by $B$, thus is has finite connectivity. 
 
 \end{document}
