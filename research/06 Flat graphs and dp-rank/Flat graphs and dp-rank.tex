@@ -44,7 +44,10 @@ Here we show our main technical lemma. This result is purely combinatorial, with
 
 In this section we work in a flat graph. It is stable so all the indiscernible sequences are totally indiscernible.
 
-We need a refined notion of connectivity for the following argument to work. 
+We need a refined notion of connectivity for the following argument to work. Suppose we have two points $a,b$ distance $n$ apart. Denote $P(a,b)$ union of all paths of length $n$ going from $a$ to $b$. If we have a collection of vertices $V$ such that every two have distance $n$ between them, denote
+\begin{align*}
+	P(V) = \bigcup_{a \neq b \in V} P(a,b)
+\end{align*}
 
 \begin{Lemma}
 	Suppose we have an indiscernible sequence over parameter set $A$ in a flat graph $(a_i)_{i \in I}$ with $I$ countable. Then $(a_i)$
