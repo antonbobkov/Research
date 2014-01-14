@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  13 JAN 2014 17:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  13 JAN 2014 17:53
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.tex"
@@ -138,8 +138,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1]
-("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
+)
+Overfull \hbox (8.36407pt too wide) in paragraph at lines 47--48
+\OT1/cmr/m/it/10 there is a count-able $\OML/cmm/m/it/10 B$ \OT1/cmr/m/it/10 such that $\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 a[]\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 is in-dis-cernible over $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10
+ B$ \OT1/cmr/m/it/10 and $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 j d[
+]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; a[]\OT1/cmr/m/n/10 ) =
+ []
+
+[1] ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
 Here is how much of TeX's memory you used:
  1666 strings out of 493922
  18814 string characters out of 3144898
@@ -149,4 +156,4 @@ Here is how much of TeX's memory you used:
  1002 hyphenation exceptions out of 8191
  34i,4n,28p,329b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (1 page, 4656 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (1 page, 5096 bytes).
