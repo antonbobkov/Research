@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  7 JAN 2014 16:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  13 JAN 2014 17:52
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.tex"
@@ -116,7 +116,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty)
-No file Flat*graphs*and*dp-rank.aux.
+("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -130,6 +130,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Try loading font information for U+msa on input line 7.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -140,12 +141,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1]
 ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
 Here is how much of TeX's memory you used:
- 1664 strings out of 493922
- 18614 string characters out of 3144899
- 66869 words of memory out of 3000000
+ 1666 strings out of 493922
+ 18814 string characters out of 3144898
+ 69869 words of memory out of 3000000
  4829 multiletter control sequences out of 15000+200000
  9914 words of font info for 39 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,4n,28p,289b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,4n,28p,329b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (1 page, 1916 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (1 page, 4656 bytes).
