@@ -138,41 +138,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-! LaTeX Error: Environment Proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \begin{Proof}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{Proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 \end{Proof}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1] [2] ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
+) [1] [2]
+("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
 Here is how much of TeX's memory you used:
- 1670 strings out of 493922
- 18848 string characters out of 3144898
+ 1668 strings out of 493922
+ 18835 string characters out of 3144898
  71869 words of memory out of 3000000
- 4833 multiletter control sequences out of 15000+200000
+ 4831 multiletter control sequences out of 15000+200000
  10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,8n,31p,353b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,8n,31p,368b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (2 pages, 8160 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (2 pages, 8228 bytes).
