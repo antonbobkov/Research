@@ -61,6 +61,9 @@ Here we show our main technical lemma. This section is purely combinatorial, wit
 In this section we work in a flat graph. It is stable so all the indiscernible sequences are totally indiscernible. Also note that by indiscernibility all pairwise distances between points are the same.
 
 We will need a refined notion of connectivity for the following argument to work. Suppose we have two points $a,b$ distance $n$ apart. Denote $P(a,b)$ union of all paths of length $n$ going from $a$ to $b$. If we have a collection of vertices $V$ such that every two have distance $n$ between them, denote
+
+Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$.
+
 \begin{align*}
 	P(V) = \bigcup_{a \neq b \in V} P(a,b)
 \end{align*}
@@ -73,7 +76,7 @@ We will need a refined notion of connectivity for the following argument to work
 \end{Lemma}
 
 \begin{proof}
-	By a flatness result we can find an infinite $J \subset I$ and a finite set $B'$ such that each pair from $(a_j)_{j \in J}$ have infinite distance over $B'$. Using total indiscernibility we have an automorphism sending $(a_j)_{j \in J}$ to $(a_i)_{i \in I}$. Image of $B'$ under this automorphism is the required set $B$.
+	By a flatness result we can find an infinite $J \subset I$ and a finite set $B'$ such that each pair from $(a_j)_{j \in J}$ have distance $>n$ over $B'$. Using total indiscernibility we have an automorphism sending $(a_j)_{j \in J}$ to $(a_i)_{i \in I}$. Image of $B'$ under this automorphism is the required set $B$.
 \end{proof}
 
 In other words, $B$ disconnects $P(\{a_i\})$. This shows that $\{a_i\}$ has finite connectivity in $P(\{a_i\})$. Applying lemma from last section we obtain that connectivity hull of $\{a_i\}$ in $P(\{a_i\})$ is finite.
