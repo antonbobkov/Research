@@ -21,39 +21,39 @@
 We work with an infinite graph $G$ and a subset of vertices $V \subset V(G)$. Say that $V$ is $n$-connected if there aren't a set of $n-1$ vertices removing which disconnects every pair of vertices in $V$. Connectivity of $V$ is the smallest $n$ such that $V$ are $n$-connected.
 
 \begin{Definition}
-	For a set of vertices $V$
+	Suppose $V \subset V(G)$ has finite connectivity $n+1$. Let connectivity hull of $V$ to be union of all $n$-point sets that disconnect it.
 \end{Definition}
 
+\begin{Note}
+	If $V$ has finite connectivity $n+1$, then having finite connectivity hull is the same as having finitely many $n$-point sets that disconnect it.
+\end{Note}
+
 \begin{Definition}
-	Suppose $V \subset V(G)$ has finite connectivity $n+1$. Let connectivity hull of $V$ to be union of all $n$-point sets that disconnect it.
+	Let $V \subset V(G)$. We say that a set is minimal with respect to $V$ when that set disconnects $V$ and is minimal among such sets (ordered by inclusion).
 \end{Definition}
 
 \section{Connectivity hull is finite}
 
-Here we show our main technical lemma. This result is purely combinatorial, with no mention of model theory.
+Here we show our main technical lemma. This section is purely combinatorial, with no mention of model theory.
 
 \begin{Lemma}
-	Suppose $\{a,b\}$ in $G$ have finite connectivity $n+1$. Then there are finitely many $n$-point sets that disconnect $a$ from $b$.
+	Suppose $V = \{a,b\}$ is subset of  $V(G)$ with finite connectivity. Then its connectivity hull is finite.
 \end{Lemma}
 
 \begin{Corollary}
-	Suppose a finite $V \subset V(G)$ has finite connectivity $n+1$. Then there are finitely many $n$-point sets that disconnect $V$.
+	Suppose $V$ is a finite subset of $V(G)$ with finite connectivity. Then its connectivity hull is finite.
 \end{Corollary}
 
 \begin{proof}
-	Fix set $P = {p_1, \ldots, p_m}$ of all unordered pairs from $V$. Every pair $p_i$ has connectivity $n_i \leq n + 1$ and by previous lemma has finitely many sets of $n_i$ points that disconnect it, denoted by $S_i$. Every minimal set that disconnects $V$ can be written as (not necessarily unique) union
-	\begin{align*}
-		\bigcup_{i \leq m \ s_i \in S_i} s_i 
-	\end{align*}
-	There are finitely many $(\prod |S_i|)$ ways to write that union giving finitely many minimal sets that can disconnect $V$.
+	Fix set $P = {p_1, \ldots, p_m}$ of all unordered pairs from $V$. Every pair $p_i$ has connectivity $n_i$ and by previous lemma has finitely many sets of $n_i$ points that disconnect it, denoted by $S_i$. Consider a finite minimal set $D$ that disconnects $V$. Define $D_i$ to be one of the sets in $S_i$ such that $D_i \subset D$ (one always exists). Then $D = \cup_{i \in I} D_i$ (if it was larger that would contradict minimality). Thus minimal sets are determined by unions of sets in $\{S_1 \ldots S_m\}$ and there are finitely many of such possible sets as each $S_i$ is finite. Connectivity hull of $V$ is a union of some finite minimal sets thus it has to be finite.
 \end{proof}
 
 \begin{Corollary}
-	Suppose a countable $V \subset V(G)$ has finite connectivity $n+1$. Then there are finitely many $n$-point sets that disconnect $V$.
+	Suppose $V$ is a countable subset of $V(G)$ with finite connectivity. Then its connectivity hull is finite.
 \end{Corollary}
 
 \begin{proof}
-	Order $V = \{v_1, v_2, \ldots\}$ and consider increasing finite parts $V_i = \{v_1, \dots, v_i\}$. By compactness connectivity becomes equal to $n+1$ for large enough $i$. Number of sets disconnecting $V$ is bounded by number of sets disconnecting $V_i$ for that large $i$, which has to be finite by previous lemma.
+	Let $n+1$ be connectivity of $V$. Order $V = \{v_1, v_2, \ldots\}$ and consider increasing finite parts $V_i = \{v_1, \dots, v_i\}$. Connectivity of $V_i$ as a function of $i$ is nondecreasing and is bounded by connectivity of $V$ which is $n+1$. Suppose connectivity of all $V_i$ is less than $n+1$ for all $i$ then by compactness connectivity of $V$ would be less than $n+1$ as well, which is a contradiction. Thus for large enough $i$, let's say $\forall i \geq N$, connectivity of $V_i$ is $n+1$. Let $H_N$ denote connectivity hull of $V_N$ and $H$ denote connectivity hull of $V$. As $V_N \subset V$ we have that $H \subset V_N$ as any $n$-point set disconnecting $V$ would also disconnect smaller set $V_N$. $V_N$ is finite by the previous corollary, so $V$ has to be finite as well.
 \end{proof}
 
 \section{Application to indiscernible sequences}
