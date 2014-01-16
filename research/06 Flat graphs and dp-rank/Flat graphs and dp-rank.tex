@@ -53,20 +53,20 @@ Here we show our main technical lemma. This section is purely combinatorial, wit
 \end{Corollary}
 
 \begin{proof}
-	Let $n+1$ be connectivity of $V$. Order $V = \{v_1, v_2, \ldots\}$ and consider increasing finite parts $V_i = \{v_1, \dots, v_i\}$. Connectivity of $V_i$ as a function of $i$ is nondecreasing and is bounded by connectivity of $V$ which is $n+1$. Suppose connectivity of all $V_i$ is less than $n+1$ for all $i$ then by compactness connectivity of $V$ would be less than $n+1$ as well, which is a contradiction. Thus for large enough $i$, let's say $\forall i \geq N$, connectivity of $V_i$ is $n+1$. Let $H_N$ denote connectivity hull of $V_N$ and $H$ denote connectivity hull of $V$. As $V_N \subset V$ we have that $H \subset V_N$ as any $n$-point set disconnecting $V$ would also disconnect smaller set $V_N$. $V_N$ is finite by the previous corollary, so $V$ has to be finite as well.
+	Let $n+1$ be connectivity of $V$. Order $V = \{v_1, v_2, \ldots\}$ and consider increasing finite parts $V_i = \{v_1, \dots, v_i\}$. Connectivity of $V_i$ as a function of $i$ is non-decreasing and is bounded by connectivity of $V$ which is $n+1$. Suppose connectivity of all $V_i$ is less than $n+1$ for all $i$ then by compactness connectivity of $V$ would be less than $n+1$ as well, which is a contradiction. Thus for large enough $i$, let's say $\forall i \geq N$, connectivity of $V_i$ is $n+1$. Let $H_N$ denote connectivity hull of $V_N$ and $H$ denote connectivity hull of $V$. As $V_N \subset V$ we have that $H \subset V_N$ as any $n$-point set disconnecting $V$ would also disconnect smaller set $V_N$. $V_N$ is finite by the previous corollary, so $V$ has to be finite as well.
 \end{proof}
 
 \section{Application to indiscernible sequences}
 
 In this section we work in a flat graph. It is stable so all the indiscernible sequences are totally indiscernible. Also note that by indiscernibility all pairwise distances between points are the same.
 
-We need a refined notion of connectivity for the following argument to work. Suppose we have two points $a,b$ distance $n$ apart. Denote $P(a,b)$ union of all paths of length $n$ going from $a$ to $b$. If we have a collection of vertices $V$ such that every two have distance $n$ between them, denote
+We will need a refined notion of connectivity for the following argument to work. Suppose we have two points $a,b$ distance $n$ apart. Denote $P(a,b)$ union of all paths of length $n$ going from $a$ to $b$. If we have a collection of vertices $V$ such that every two have distance $n$ between them, denote
 \begin{align*}
 	P(V) = \bigcup_{a \neq b \in V} P(a,b)
 \end{align*}
 
 \begin{Lemma}
-	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Let $n = d(a_i, a_j)$ for some (any) $i \neq j$. There exists a finite set $B$ such that
+	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Fix $n \in \N$. There exists a finite set $B$ such that
 	\begin{align*}
 		\forall i \neq j \ d_B(a_i, a_j) > n
 	\end{align*}
