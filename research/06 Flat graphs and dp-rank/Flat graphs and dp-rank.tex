@@ -56,7 +56,7 @@ Here we show our main technical lemma. This section is purely combinatorial, wit
 \begin{proof}
 	Let $n+1$ be connectivity of $V$. Order $V = \{v_1, v_2, \ldots\}$ and consider increasing finite parts $V_i = \{v_1, \dots, v_i\}$. Connectivity of $V_i$ as a function of $i$ is non-decreasing and is bounded by connectivity of $V$ which is $n+1$. Suppose connectivity of all $V_i$ is less than $n+1$ for all $i$ then by compactness connectivity of $V$ would be less than $n+1$ as well, which is a contradiction. Thus for large enough $i$, let's say $\forall i \geq N$, connectivity of $V_i$ is $n+1$. Let $H_N$ denote connectivity hull of $V_N$ and $H$ denote connectivity hull of $V$. As $V_N \subset V$ we have that $H \subset V_N$ as any $n$-point set disconnecting $V$ would also disconnect smaller set $V_N$. $V_N$ is finite by the previous corollary, so $V$ has to be finite as well.
 	Let $n$ be connectivity of $V$.
-	To every $V_i$ we associate two values. $n_i \in \N$ is connectivity of $V_i$ and $S_i$ collection of $n_i-1$-element sets that disconnect it, which is finite by previous lemma. For $i \leq j$ we have $n_i \leq n_j \leq n$. If $n_i = n_j$, then $S_i \supseteq S_j$ as any $(n-1)$-point set disconnecting $V_j$ would also disconnect smaller set $V_i$. 
+	To every $V_i$ we associate two values. $n_i \in \N$ is connectivity of $V_i$ and $S_i$ collection of $n_i-1$-element sets that disconnect it, which is finite by previous lemma. For $i \leq j$ we have $n_i \leq n_j \leq n$. If $n_i = n_j$, then $S_i \supseteq S_j$ as any $(n_i-1)$-point set disconnecting $V_j$ would also disconnect smaller set $V_i$. 
 \end{proof}
 
 \section{Application to indiscernible sequences}
