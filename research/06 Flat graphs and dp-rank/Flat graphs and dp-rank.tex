@@ -20,7 +20,17 @@
 
 Superflat graphs in model theoretic context were first introduced in \cite{stable_graphs} as a natural class of stable graphs. In this paper we further explore model theoretic structure of such graphs by directly showing that they are dp-minimal.
 
-We work with an infinite graph $G$ and a subset of vertices $V \subset V(G)$. Say that $V$ is $n$-connected if there aren't a set of $n-1$ vertices removing which disconnects every pair of vertices in $V$. Connectivity of $V$ is the smallest $n$ such that $V$ are $n$-connected.
+\begin{Definition}
+
+\begin{enumerate}
+	\item Let $A \subset V(G)$ with $G$ an infinite graph. Then for $a,b \in V(G)$ define $d_A(a,b)$ to be the distance (length of the smallest path) in an induced subgraph of $G$ after removing veritces $A$.
+	\item Let $A, V \subset V(G)$. We say that $A$ separates $V$ if for all $a,b \in V$, $d_A(a,b)$
+\end{enumerate}
+
+	
+\end{Definition}
+
+We work with an infinite graph $G$ and a subset of vertices $V \subset V(G)$. We say that $A \subset V(G)$ separates $V$ if  Say that $V$ is $n$-connected if there aren't a set of $n-1$ vertices removing which disconnects every pair of vertices in $V$. Connectivity of $V$ is the smallest $n$ such that $V$ are $n$-connected.
 
 \begin{Definition}
 	Suppose $V \subset V(G)$ has finite connectivity $n+1$. Let connectivity hull of $V$ to be union of all $n$-point sets that disconnect it.
