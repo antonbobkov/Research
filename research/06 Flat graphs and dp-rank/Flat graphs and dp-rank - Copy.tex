@@ -1,0 +1,187 @@
+\documentclass{amsart}
+
+\usepackage{../AMC_style}	
+\usepackage{../Research}
+
+
+\begin{document}
+
+\title{Superflat graphs are dp-minimal}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+
+\begin{abstract}
+	We show that the theory of superflat graphs is dp-minimal.
+\end{abstract}
+
+\maketitle
+
+\section{Preliminaries}
+
+Superflat graphs in model theoretic context were first introduced in \cite{stable_graphs} as a natural class of stable graphs.
+
+We work with an infinite graph $G$ and a subset of vertices $V \subset V(G)$. Say that $V$ is $n$-connected if there aren't a set of $n-1$ vertices removing which disconnects every pair of vertices in $V$. Connectivity of $V$ is the smallest $n$ such that $V$ are $n$-connected.
+
+\begin{Definition}
+	Suppose $V \subset V(G)$ has finite connectivity $n+1$. Let connectivity hull of $V$ to be union of all $n$-point sets that disconnect it.
+\end{Definition}
+
+\begin{Note}
+	If $V$ has finite connectivity $n+1$, then having finite connectivity hull is the same as having finitely many $n$-point sets that disconnect it.
+\end{Note}
+
+\begin{Definition}
+	Let $V \subset V(G)$. We say that a set is minimal with respect to $V$ when that set disconnects $V$ and is minimal among such sets (ordered by inclusion).
+\end{Definition}
+
+\section{Connectivity hull is finite}
+
+Here we show our main technical lemma. This section is purely combinatorial, with no mention of model theory.
+
+\begin{Lemma}
+	Suppose $V = \{a,b\}$ is subset of  $V(G)$ with finite connectivity. Then its connectivity hull is finite.
+\end{Lemma}
+
+\begin{Corollary}
+	Suppose $V$ is a finite subset of $V(G)$ with finite connectivity. Then its connectivity hull is finite.
+\end{Corollary}
+
+\begin{proof}
+	Fix set $P = {p_1, \ldots, p_m}$ of all unordered pairs from $V$. Every pair $p_i$ has connectivity $n_i$ and by previous lemma has finitely many sets of $n_i$ points that disconnect it, denoted by $S_i$. Consider a finite minimal set $D$ that disconnects $V$. Define $D_i$ to be one of the sets in $S_i$ such that $D_i \subset D$ (one always exists). Then $D = \cup_{i \in I} D_i$ (if it was larger that would contradict minimality). Thus minimal sets are determined by unions of sets in $\{S_1 \ldots S_m\}$ and there are finitely many of such possible sets as each $S_i$ is finite. Connectivity hull of $V$ is a union of some finite minimal sets thus it has to be finite.
+\end{proof}
+
+\begin{Corollary}
+	Suppose $V$ is a countable subset of $V(G)$ with finite connectivity. Then its connectivity hull is finite.
+\end{Corollary}
+
+% no compactness!
+\begin{proof}
+	Let $n+1$ be connectivity of $V$. Order $V = \{v_1, v_2, \ldots\}$ and consider increasing finite parts $V_i = \{v_1, \dots, v_i\}$. Connectivity of $V_i$ as a function of $i$ is non-decreasing and is bounded by connectivity of $V$ which is $n+1$. Suppose connectivity of all $V_i$ is less than $n+1$ for all $i$ then by compactness connectivity of $V$ would be less than $n+1$ as well, which is a contradiction. Thus for large enough $i$, let's say $\forall i \geq N$, connectivity of $V_i$ is $n+1$. Let $H_N$ denote connectivity hull of $V_N$ and $H$ denote connectivity hull of $V$. As $V_N \subset V$ we have that $H \subset V_N$ as any $n$-point set disconnecting $V$ would also disconnect smaller set $V_N$. $V_N$ is finite by the previous corollary, so $V$ has to be finite as well.
+	Let $n$ be connectivity of $V$.
+	To every $V_i$ we associate two values. $n_i \in \N$ is connectivity of $V_i$ and $S_i$ collection of $n_i-1$-element sets that disconnect it, which is finite by previous lemma. For $i \leq j$ we have $n_i \leq n_j \leq n$. If $n_i = n_j$, then $S_i \supseteq S_j$ as any $(n_i-1)$-point set disconnecting $V_j$ would also disconnect smaller set $V_i$. Thus pair $(n_i, S_i)$ stabilizes at some $(m, S)$ as $i$ goes to infinity. $\bigcup S$ is the connectivity hull of $V$, and it is finite as needed.
+\end{proof}
+
+\section{Application to indiscernible sequences}
+
+In this section we work in a flat graph. It is stable so all the indiscernible sequences are totally indiscernible. Also note that by indiscernibility all pairwise distances between points are the same.
+
+Superflat graphs are the graphs that for every $m \in \N$ there is $n \in \N$ such that avoid $K^m_n$ is avoided, where $K^m_n$ is $m$-subdvision of complete graph on $n$ vertices. Equivalent characterization given in \cite{stable_graphs}, Theorem 2
+
+\begin{Theorem}
+	In a flat Graphs for every $n \in \N$ and an infinite set $A$ of vertices, there exists a finite $B$ and infinite $A' \subseteq A$ such that for all $x,y \in A'$ we have $d_{B}(x, y) > n$.
+\end{Theorem}
+
+Roughly, the intuition is that from every infinite set we can extract a sparse infinite subset (after throwing away finitely many nodes).
+
+We will need a refined notion of connectivity for the following argument to work. Suppose we have two points $a,b$ distance $n$ apart. Denote $P(a,b)$ union of all paths of length $n$ going from $a$ to $b$. If we have a collection of vertices $V$ such that every two have distance $n$ between them, denote
+
+Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$. It is a subgraph of $G$.
+
+\begin{align*}
+	P(V) = \bigcup_{a \neq b \in V} P(a,b)
+\end{align*}
+
+\begin{Lemma}
+	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Fix $n \in \N$. There exists a finite set $B$ such that
+	\begin{align*}
+		\forall i \neq j \ d_B(a_i, a_j) > n
+	\end{align*}
+\end{Lemma}
+
+\begin{proof}
+	By a flatness result we can find an infinite $J \subset I$ and a finite set $B'$ such that each pair from $(a_j)_{j \in J}$ have distance $>n$ over $B'$. Using total indiscernibility we have an automorphism sending $(a_j)_{j \in J}$ to $(a_i)_{i \in I}$. Image of $B'$ under this automorphism is the required set $B$.
+\end{proof}
+
+In other words, $B$ disconnects $P_n(\{a_i\})$. This shows that $\{a_i\}$ has finite connectivity in $P(\{a_i\})$. Applying lemma from last section we obtain that connectivity hull of $\{a_i\}$ in $P_n(\{a_i\})$ is finite.
+
+\begin{Lemma}
+	Connectivity hull of $\{a_i\}$ in $P_n(\{a_i\})$ is $\{a_i\}$-definable as a subset of $G$.
+\end{Lemma}
+
+\begin{Definition}
+	Given a graph $G$ and $V \subset V(G)$ define $H(G, V)$ to be connectivity hull of $V$ in $G$.
+\end{Definition}
+
+\begin{Note}
+	Given a finite $V$ we have $H(P_n(V), V)$ is definable.
+\end{Note}
+
+\begin{proof}
+	Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$. We study $H_i = H(P_n(I_i), I_i)$ as a function of $i$ as approximations of the hull in question. We have the following properties
+	\begin{align*}
+		 \forall i \ H(P_n(I_i), I_i) &\subseteq H(P_n(I), I_i) \\
+		 \forall i \leq j \ H(P_n(I), I_i) &\supseteq H(P_n(I), I_j)
+	\end{align*}
+	By proof of previous lemma $H(P_n(I), I_i)$ stabilizes to a finite $H(P_n(I), I)$. Eventually $H_i(P_n(I), I_i)$ stabilizes to that value as well. This shows that for large enough $i>N$ we have $H_i = H_{i+m}$. By symmetry of indiscernible sequence we have that any subset of size $N$ defines the connectivity hull.
+\end{proof}
+
+\begin{Lemma}
+	$I$ is indiscernible over the $A \cup H(P_n(I), I)$.
+\end{Lemma}
+
+\begin{proof}
+	Denote the hull by $H$. Fix an $A$-formula $\phi(x,y)$. Consider a collection of traces $\phi(\vec a, H^\{|y|\})$ for $\vec a \in I^{|x|}$. As $H$ is $I$ definable those are either all distinct or all the same. Finiteness of $H$ forces latter. This shows indiscernability.
+\end{proof}
+
+\begin{Corollary}
+	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Then there is a countable $B$ such that  $(a_i)$ is indiscernible over $A \cup B$ and
+	\begin{align*}
+		\forall i \neq j \ d_B(a_i, a_j) = \infty
+	\end{align*}
+\end{Corollary}
+
+\begin{proof}
+	Let $B_i = H(P_i(I), I)$. Successive applications of previous lemma yield the appropriate set $B = \bigcup B_i$.
+\end{proof}
+
+That is every indiscernible sequence can be upgraded to have infinite distance over its parameter set.
+
+\section{Superflat graphs are dp-minimal}
+
+\begin{Lemma}
+	Suppose $x \equiv_A y$ and $d_A(x, c) = d_A(y, c) = \infty$. Then $x \equiv_{Ac} y$
+\end{Lemma}
+
+\begin{proof}
+	Define an equivalence relation $G - A$. Two points $p, q$ are equivalent if $d_A(p,q)$ is finite. There is an automorphism $f$ of $G$ fixing $A$ sending $x$ to $y$. Denote by $X$ and $Y$ equivalence classes of $x$ and $y$ respectively. It's easy to see that $f(X) = Y$. Define the following function
+	\begin{align*}
+		&g = f \text { on } X \\
+		&g = f^{-1} \text { on } Y \\
+		&\text{identity otherwise}
+	\end{align*}
+	It is easy to see that $g$ is an automorphism fixing $Ac$ that sends $x$ to $y$.
+\end{proof}
+
+\begin{Theorem}
+	Let $G$ be a flat graph with $(a_i)_{i\in\Q}$ indiscernible over $A$ and $b \in G$. There exists $c \in \Q$ such that all $(a_i)_{i\in\{\Q - c\}}$ have the same type over $Ab$.
+\end{Theorem}
+
+\begin{proof}
+	Find $B \supseteq A$ such that $(a_i)$ is indiscernible over $B$ and has infinite distance over $B$. All the elements of the indiscernible sequence fall into distinct equivalence classes. $b$ can be in at most one of them. Exclude that element from the sequence. Remaining sequence elements are all infinitely far away from $b$. By previous lemma we have that elements of indiscernible sequence all have the same type over $Bb$.
+\end{proof}
+
+But this is exactly what it means to be dp-minimal, as given, say, in \cite{simon_dp_minimal} Lemma 1.4.4
+
+\begin{Corollary}
+	Flat graphs are dp-minimal.
+\end{Corollary}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{diestel}
+	Reinhard Diestel. \textit{Graph Theory}, volume 173 of \textit{Grad. Texts in Math.} Springer, 2005.
+
+\bibitem{infinite_megner}
+	Aharoni, Ron and Berger, Eli (2009). "Menger's Theorem for infinite graphs". \textit{Inventiones Mathematicae} 176: 1–62
+
+\bibitem{stable_graphs}
+	Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
+	
+\bibitem{simon_dp_minimal}
+	P. Simon, \textit{On dp-minimal ordered structures}, J. Symbolic Logic 76 (2011), no. 2, 448–460.
+
+
+\end{thebibliography}
+
+\end{document}
