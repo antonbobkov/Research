@@ -35,11 +35,15 @@ First, we introduce some basic graph-theoretic definitions.
 
 Connectivity of graphs is well described by Megner's Theorem. Here is a simple modification of the result in \cite{infinite_megner} concerning generalization of Megner's Theorem to infinite graphs.
 
-In \cite{infinite_megner} we find a generalization of Megner's Theorem for infinite graphs. We state it slightly rephrased.
+In \cite{infinite_megner} we find a generalization of Megner's Theorem for infinite graphs
 
-\begin{Theorem}
-	Let $V$ be a subset of a graph $G$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
+\begin{Theorem} [Megner, Erd\H os, Aharoni, Berger]
+	Let $A$ and $B$ be two sets of vertices in a possibly infinite digraph. Then there exist a set $P$ of disjoint $A–B$ paths, and a set $S$ of vertices separating $A$ from $B$, such that $S$ consists of a choice of precisely one vertex from each path in $P$.
 \end{Theorem}
+
+\begin{Corollary}
+	Let $V$ be a subset of a graph $G$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
+\end{Corollary}
 
 \begin{Corollary}
 	With assumptions as above, connectivity hull of $V$ is finite.
