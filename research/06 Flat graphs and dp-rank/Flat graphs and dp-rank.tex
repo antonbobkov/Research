@@ -43,7 +43,7 @@ In \cite{infinite_megner} we find a generalization of Megner's Theorem for infin
 
 We use the following easy consequence
 
-\begin{Corollary}
+\begin{Corollary} \label{cr_disjoint_paths}
 	Let $V$ be a subset of a graph $G$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
 \end{Corollary}
 
@@ -121,7 +121,13 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 \end{Note}
 
 \begin{proof}(of \ref{lm_uniform})
-	Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$. We study $H_i = H(P_n(I_i), I_i)$ as a function of $i$ as approximations of the hull $H(P_n(I), I)$. We have the following properties
+	Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$.
+	Define $H_i = H(P_n(I_i), I_i)$.
+	It is $I_i$-definable and we have $H(P_n(I_i), I_i) \subseteq H(P_n(I), I)$.
+	Corollary \ref{cr_disjoint_paths} tells us that there finitely many paths between elements of $V$ such that $H(P_n(I), I)$ is inside those paths.
+	But for large enough $i$, say $i \geq N_1$, $P_n(I_i)$ will contain all of those paths.
+	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq P_n(I_i)$
+	as a function of $i$ as approximations of the hull $H(P_n(I), I)$. We have the following properties
 	\begin{align*}
 		 \forall i \ H(P_n(I_i), I_i) &\subseteq H(P_n(I), I_i) \\
 		 \forall i \leq j \ H(P_n(I), I_i) &\supseteq H(P_n(I), I_j)
