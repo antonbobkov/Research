@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  23 JAN 2014 11:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  23 JAN 2014 11:53
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.tex"
@@ -139,22 +139,40 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-! I can't write on file `"Flat graphs and dp-rank.pdf"'.
-Please type another file name for output
-! Emergency stop.
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.59 		\item $
-              G$ is superflat
-*** (job aborted, file error in nonstop mode)
 
- 
+LaTeX Warning: Citation `stable_graphs' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `infinite_megner' on page 1 undefined on input line 36.
+
+
+LaTeX Warning: Citation `stable_graphs' on page 1 undefined on input line 54.
+
+[1] [2]
+
+LaTeX Warning: Citation `simon_dp_minimal' on page 3 undefined on input line 147.
+
+Missing character: There is no â in font cmr8!
+Missing character: There is no € in font cmr8!
+Missing character: There is no “ in font cmr8!
+Missing character: There is no â in font cmr8!
+Missing character: There is no € in font cmr8!
+Missing character: There is no “ in font cmr8!
+[3] ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1664 strings out of 493921
- 18623 string characters out of 3144875
- 70869 words of memory out of 3000000
- 4832 multiletter control sequences out of 15000+200000
- 9695 words of font info for 38 fonts, out of 3000000 for 9000
+ 1671 strings out of 493922
+ 18885 string characters out of 3144898
+ 73869 words of memory out of 3000000
+ 4834 multiletter control sequences out of 15000+200000
+ 10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,4n,31p,342b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 34i,10n,32p,475b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on "Flat graphs and dp-rank.dvi" (3 pages, 17084 bytes).
