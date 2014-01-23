@@ -20,11 +20,11 @@
 
 Superflat graphs in model theoretic context were first introduced in \cite{stable_graphs} as a natural class of stable graphs. In this paper we further explore model theoretic structure of such graphs by directly showing that they are dp-minimal.
 
-First, we intruduce some basic definition regarding connectivity in graphs.
+First, we introduce some basic definition regarding connectivity in graphs.
 \begin{Definition}
 	Work in an infinite graph $G$. Let $A, V \subset V(G)$
 	\begin{enumerate}
-		\item Then for $a,b \in V(G)$ define $d_A(a,b)$ to be the \emph{distance} (length of the smallest path) in an induced subgraph of $G$ after removing veritces $A$.
+		\item Then for $a,b \in V(G)$ define $d_A(a,b)$ to be the \emph{distance} (length of the smallest path) in an induced subgraph of $G$ after removing vertices $A$.
 		\item We say that $A$ \emph{separates} $V$ if for all $a,b \in V$, $d_A(a,b) = \infty$.
 		\item We say that $V$ has \emph{connectivity} $n$ if there are no sets of size $n-1$ in $V(G)$ that separates $V$.
 		\item Suppose $V$ has finite connectivity $n$. \emph{Connectivity hull} of $V$ is defined to be the union of all sets separating $V$ of size $n-1$.
@@ -49,10 +49,15 @@ Connectivity of graphs is well described by Megner's Theorem. Here is a simple m
 
 In this section we work in a flat graph. It is stable so all the indiscernible sequences are totally indiscernible. Also note that by indiscernibility all pairwise distances between points are the same.
 
-Superflat graphs are the graphs that for every $m \in \N$ there is $n \in \N$ such that avoid $K^m_n$ is avoided, where $K^m_n$ is $m$-subdvision of complete graph on $n$ vertices. Equivalent characterization given in \cite{stable_graphs}, Theorem 2
+Denote by $K^m_n$ an $m$-subdivision of the complete graph on $n$ vertices. Graph is called superflat if for every $m \in \N$ there is $n \in \N$ such that the graph avoids $K^m_n$ as a subgraph. We have the following useful equivalent characterization as given in \cite{stable_graphs}, Theorem 2
 
 \begin{Theorem}
-	In a flat Graphs for every $n \in \N$ and an infinite set $A$ of vertices, there exists a finite $B$ and infinite $A' \subseteq A$ such that for all $x,y \in A'$ we have $d_{B}(x, y) > n$.
+	The following are equivalent
+	
+	\begin{enumerate}
+		\item $G$ is superflat
+		\item For every $n \in \N$ and an infinite set $A$ of vertices, there exists a finite $B$ and infinite $A' \subseteq A$ such that for all $x,y \in A'$ we have $d_{B}(x, y) > n$.
+	\end{enumerate}
 \end{Theorem}
 
 Roughly, the intuition is that from every infinite set we can extract a sparse infinite subset (after throwing away finitely many nodes).
