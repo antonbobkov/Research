@@ -45,7 +45,7 @@ We use the following easy consequence
 	Let $V$ be a subset of a graph $G$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
 \end{Corollary}
 
-\begin{Corollary}
+\begin{Corollary} \label{cr_hull_finite}
 	With assumptions as above, connectivity hull of $V$ is finite.
 \end{Corollary}
 
@@ -75,7 +75,7 @@ Roughly, in superflat graphs every infinite set contains a sparse infinite subse
 In this section we work in a superflat graph $G$. Stability implies that all the indiscernible sequences are totally indiscernible.
 
 \begin{Definition}
-	Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$. It is a subgraph of $G$.
+	Let $V \subset V(G)$. $P_n(V)$, a subgraph of $G$ denotes a union of all paths of length $\leq n$ between points of $V$.
 \end{Definition}
 
 \begin{Lemma}
@@ -89,7 +89,7 @@ In this section we work in a superflat graph $G$. Stability implies that all the
 	By a flatness result we can find an infinite $J \subset I$ and a finite set $B'$ such that each pair from $(a_j)_{j \in J}$ have distance $>n$ over $B'$. Using total indiscernibility we have an automorphism sending $(a_j)_{j \in J}$ to $(a_i)_{i \in I}$. Image of $B'$ under this automorphism is the required set $B$.
 \end{proof}
 
-In other words, $B$ disconnects $P_n(\{a_i\})$. This shows that $\{a_i\}$ has finite connectivity in $P(\{a_i\})$. Applying lemma from last section we obtain that connectivity hull of $\{a_i\}$ in $P_n(\{a_i\})$ is finite.
+In other words, $B$ disconnects $P_n((a_i)_{i \in I})$. This shows that $(a_i)_{i \in I}$ has finite connectivity in $P((a_i)_{i \in I})$. Applying Corollary {cr_hull_finite} we obtain that connectivity hull of $\{a_i\}$ in $P_n(\{a_i\})$ is finite.
 
 \begin{Lemma}
 	Connectivity hull of $\{a_i\}$ in $P_n(\{a_i\})$ is $\{a_i\}$-definable as a subset of $G$.
