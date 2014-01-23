@@ -154,10 +154,10 @@ Missing character: There is no “ in font cmr8!
 Here is how much of TeX's memory you used:
  1671 strings out of 493922
  18885 string characters out of 3144898
- 72869 words of memory out of 3000000
+ 73869 words of memory out of 3000000
  4834 multiletter control sequences out of 15000+200000
  10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,10n,32p,475b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,10n,32p,475b,266s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (3 pages, 17968 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (3 pages, 17628 bytes).
