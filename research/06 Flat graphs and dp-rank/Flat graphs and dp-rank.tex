@@ -61,6 +61,7 @@ Denote by $K^m_n$ an $m$-subdivision of the complete graph on $n$ vertices. Grap
 
 If the graph is superflat then, roughly, the intuition is that from every infinite set we can extract a sparse infinite subset (after throwing away finitely many nodes).
 
+Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$. It is a subgraph of $G$.
 
 \begin{Lemma}
 	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Fix $n \in \N$. There exists a finite set $B$ such that
@@ -80,14 +81,11 @@ In other words, $B$ disconnects $P_n(\{a_i\})$. This shows that $\{a_i\}$ has fi
 \end{Lemma}
 
 \begin{Definition}
-	\begin{enumerate}
-		\item 	Given a graph $G$ and $V \subset V(G)$ define $H(G, V)$ to be connectivity hull of $V$ in $G$.
-		\item   Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$. It is a subgraph of $G$.
-	\end{enumerate}
+	Given a graph $G$ and $V \subset V(G)$ define $H(G, V)$ to be connectivity hull of $V$ in $G$.
 \end{Definition}
 
 \begin{Note}
-	Given a finite $V$ we have that $H(P_n(V), V)$ is $V$-definable.
+	Given a finite $V$ we have $H(P_n(V), V)$ is definable.
 \end{Note}
 
 \begin{proof}
