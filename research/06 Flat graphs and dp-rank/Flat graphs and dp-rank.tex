@@ -61,13 +61,6 @@ Denote by $K^m_n$ an $m$-subdivision of the complete graph on $n$ vertices. Grap
 
 If the graph is superflat then, roughly, the intuition is that from every infinite set we can extract a sparse infinite subset (after throwing away finitely many nodes).
 
-We will need a refined notion of connectivity for the following argument to work. Suppose we have two points $a,b$ distance $n$ apart. Denote $P(a,b)$ union of all paths of length $n$ going from $a$ to $b$. If we have a collection of vertices $V$ such that every two have distance $n$ between them, denote
-
-Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$. It is a subgraph of $G$.
-
-\begin{align*}
-	P_n(V) = \bigcup_{a \neq b \in V} P_n(a,b)
-\end{align*}
 
 \begin{Lemma}
 	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Fix $n \in \N$. There exists a finite set $B$ such that
@@ -87,7 +80,10 @@ In other words, $B$ disconnects $P_n(\{a_i\})$. This shows that $\{a_i\}$ has fi
 \end{Lemma}
 
 \begin{Definition}
-	Given a graph $G$ and $V \subset V(G)$ define $H(G, V)$ to be connectivity hull of $V$ in $G$.
+	\begin{enumerate}
+		\item 	Given a graph $G$ and $V \subset V(G)$ define $H(G, V)$ to be connectivity hull of $V$ in $G$.
+		\item   Let $V \subset V(G)$. Denote $P_n(V)$ a union of all paths of length $\leq n$ between points of $V$. It is a subgraph of $G$.
+	\end{enumerate}
 \end{Definition}
 
 \begin{Note}
