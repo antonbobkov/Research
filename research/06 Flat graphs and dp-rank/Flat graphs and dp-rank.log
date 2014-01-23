@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  23 JAN 2014 13:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  23 JAN 2014 14:29
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.tex"
@@ -143,8 +143,41 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
  [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
 
-LaTeX Warning: Reference `th_superflat_equivalence' on page 2 undefined on input line 92.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.109 \begin{Lemma} \{lm_
+                         uniform}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.109 \begin{Lemma} \{lm_uniform}
+                                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.110 ...countable indiscernible sequence $I = (a_
+                                                  i : i \in \I)$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Reference `lm_uniform' on page 2 undefined on input line 123.
 
 [2]
 Missing character: There is no â in font cmr8!
@@ -157,17 +190,14 @@ Missing character: There is no “ in font cmr8!
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 1675 strings out of 493922
- 18931 string characters out of 3144898
+ 1693 strings out of 493922
+ 19247 string characters out of 3144898
  73869 words of memory out of 3000000
- 4838 multiletter control sequences out of 15000+200000
+ 4853 multiletter control sequences out of 15000+200000
  10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,10n,32p,475b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (3 pages, 18628 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (3 pages, 18296 bytes).
