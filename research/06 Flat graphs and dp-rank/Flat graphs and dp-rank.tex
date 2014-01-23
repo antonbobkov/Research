@@ -123,10 +123,12 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 \begin{proof}(of \ref{lm_uniform})
 	Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$.
 	Define $H_i = H(P_n(I_i), I_i)$.
-	It is $I_i$-definable and we have $H(P_n(I_i), I_i) \subseteq H(P_n(I), I)$.
+	It is $I_i$-definable. %and we have $H(P_n(I_i), I_i) \subseteq H(P_n(I), I)$.
 	Corollary \ref{cr_disjoint_paths} tells us that there finitely many paths between elements of $V$ such that $H(P_n(I), I)$ is inside those paths.
 	But for large enough $i$, say $i \geq N_1$, $P_n(I_i)$ will contain all of those paths.
-	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq P_n(I_i)$
+	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq P_n(I_i)$.
+	If a set separates $I$ then would separate $I_i$ as well.
+	Thus for $i \geq N$ we have $H(P_n(I_i), I_i) \subseteq H(P_n(I), I)$.
 	as a function of $i$ as approximations of the hull $H(P_n(I), I)$. We have the following properties
 	\begin{align*}
 		 \forall i \ H(P_n(I_i), I_i) &\subseteq H(P_n(I), I_i) \\
