@@ -142,25 +142,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [1]
-
-LaTeX Warning: Reference `lm_uniform' on page 2 undefined on input line 123.
-
-[2]
+ [1] [2]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
- [3] ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux")
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [3]
+("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
 Here is how much of TeX's memory you used:
  1676 strings out of 493922
  18943 string characters out of 3144898
@@ -170,4 +160,4 @@ Here is how much of TeX's memory you used:
  1002 hyphenation exceptions out of 8191
  34i,10n,32p,475b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (3 pages, 18272 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (3 pages, 18284 bytes).
