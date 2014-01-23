@@ -146,37 +146,37 @@ Missing character: There is no “ in font cmr10!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.93 ...(a_i)_{i \in I})$. Applying Corollary {cr_
-                                                  hull_finite} we obtain tha...
+l.95 Applying Corollary {cr_
+                            hull_finite} we obtain that connectivity hull of...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.93 ... I})$. Applying Corollary {cr_hull_finite}
-                                                   we obtain that connectivi...
+l.95 Applying Corollary {cr_hull_finite}
+                                         we obtain that connectivity hull of...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.93 ... we obtain that connectivity hull of $\{a_
+l.95 ... we obtain that connectivity hull of $\{a_
                                                   i\}$ in $P_n(\{a_i\})$ is ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (39.15805pt too wide) in paragraph at lines 93--94
+Overfull \hbox (39.15805pt too wide) in paragraph at lines 93--96
 \OT1/cmr/m/n/10 nec-tiv-ity in $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )[])$. Ap-ply-in
 g Corol-lary cr$[]\OML/cmm/m/it/10 ull[]initeweobtainthatconnectivityhullof$\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 a$[]\OMS/c
 msy/m/n/10 g$
@@ -192,7 +192,7 @@ Missing character: There is no “ in font cmr8!
  [3] ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 93 ({)
+### simple group (level 1) entered at line 95 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  1690 strings out of 493922
