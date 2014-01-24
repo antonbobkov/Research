@@ -90,7 +90,7 @@ In this section we work in a superflat graph $G$. Stability implies that all the
 
 \begin{proof}
 	By a \ref{th_superflat_equivalence} we can find an infinite $\J \subset \I$ and a finite set $B'$ such that each pair from $J = (a_j : j \in \J)$ have distance $>n$ over $B'$.
-	Using total indiscernibility we have an automorphism sending $J$ to $I$.
+	Using total indiscernibility we have an automorphism sending $J$ to $I$ fixing $A$.
 	Image of $B'$ under this automorphism is the required set $B$.
 \end{proof}
 
@@ -128,7 +128,7 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 	But for large enough $i$, say $i \geq N$, $P_n(I_i)$ will contain all of those paths.
 	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq P_n(I_i)$.
 	If a set separates $I$ then would be inside $P_n(I_i)$ and would separate $I_i$ as well.
-	Thus for $i \geq N$ we have $H(P_n(I_i), I_i) \subseteq H(P_n(I), I)$.
+	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq H(P_n(I_i), I_i)$.
 	$H(P_n(I), I)$ is finite by Corollary \ref{cr_hull_finite} and size of $H(P_n(I_i), I_i)$ grows with $i$. Thus eventually it would stabilize.
 		Eventually $H(P_n(I_i))$ contains $n$ disjoint paths for the whole graph, thus stabilizes at $H(P_n(I), I)$. This shows that for large enough $i>N$ we have $H_i = H_{i+m}$. By symmetry of indiscernible sequence we have that any subset of size $N$ defines the connectivity hull.
 \end{proof}
