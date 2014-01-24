@@ -149,7 +149,12 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 \end{Corollary}
 
 \begin{proof}
-	Let $B_i = H(P_i(I), I)$. This is well defined by Successive applications of Lemma \ref{cr_bump} yield the appropriate set $B = \bigcup B_i$.
+	Let $B_n = H(P_n(I), I)$. This is well defined by Lemma \ref{lm_bump} and has property
+	\begin{align*}
+		\forall i \neq j \ d_{B_n}(a_i, a_j) > n
+	\end{align*}
+	% does limiting work?
+	and $I$ is indiscernible over $A \cup B_i$ by Corollary \ref{cr_bump}. Let $B = \bigcup_{n \in \N} B_n$.
 \end{proof}
 
 That is every indiscernible sequence can be upgraded to have infinite distance over its parameter set.
