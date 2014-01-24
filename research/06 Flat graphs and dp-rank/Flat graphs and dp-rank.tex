@@ -129,8 +129,8 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq P_n(I_i)$.
 	If a set separates $I$ then would be inside $P_n(I_i)$ and would separate $I_i$ as well.
 	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq H(P_n(I_i), I_i)$.
-	$H(P_n(I), I)$ is finite by Corollary \ref{cr_hull_finite} and size of $H(P_n(I_i), I_i)$ grows with $i$. Thus eventually it would stabilize.
-		Eventually $H(P_n(I_i))$ contains $n$ disjoint paths for the whole graph, thus stabilizes at $H(P_n(I), I)$. This shows that for large enough $i>N$ we have $H_i = H_{i+m}$. By symmetry of indiscernible sequence we have that any subset of size $N$ defines the connectivity hull.
+	If the two sets are not equal, it is due to some elements in $H(P_n(I_i), I_i)$ failing to separate entire $I$. There are finitely many of those, so for large enough $i$, say $i \geq M$ we have $H(P_n(I_i), I_i) = H(P_n(I), I)$ stabilizing.
+	This shows that for $i \geq M$ we have $H_i = H_{i+m} = H(P_n(I), I)$. By symmetry of indiscernible sequence we have that any subset of size $N$ defines the connectivity hull.
 \end{proof}
 
 \begin{Lemma}
