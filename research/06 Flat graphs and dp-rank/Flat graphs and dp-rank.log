@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  23 JAN 2014 14:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  23 JAN 2014 19:14
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.tex"
@@ -142,22 +142,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [1] [2]
+ [1]
+
+LaTeX Warning: Reference `cr_disjoint_paths' on page 2 undefined on input line 127.
+
+[2]
+
+LaTeX Warning: Reference `lm_bump' on page 3 undefined on input line 152.
+
+
+LaTeX Warning: Reference `cr_bump' on page 3 undefined on input line 157.
+
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
+[3]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
- [3]
-("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux") ) 
+ [4] ("C:\Users\Anton\SparkleShare\Research\research\06 Flat graphs and dp-rank\Flat graphs and dp-rank.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1676 strings out of 493922
- 18943 string characters out of 3144898
+ 1679 strings out of 493922
+ 18980 string characters out of 3144898
  73869 words of memory out of 3000000
- 4839 multiletter control sequences out of 15000+200000
+ 4842 multiletter control sequences out of 15000+200000
  10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,10n,32p,475b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,10n,32p,541b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (3 pages, 18284 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (4 pages, 19644 bytes).
