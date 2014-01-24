@@ -138,7 +138,7 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 \end{Lemma}
 
 \begin{proof}
-	Denote the hull by $H$. Fix an $A$-formula $\phi(x,y)$. Consider a collection of traces $\phi(\vec a, H^\{|y|\})$ for $\vec a \in I^{|x|}$. As $H$ is $I$ definable those are either all distinct or all the same. Finiteness of $H$ forces latter. This shows indiscernability.
+	Denote the hull by $H$. Fix an $A$-formula $\phi(x,y)$. Consider a collection of traces $\phi(a, H^\{|y|\})$ for $a \in I^{|x|}$. If two of them are distinct, then by indiscernibility all of them are. But that is impossible as $H$ has finitely many subsets. Thus all the traces are identical. This shows that for any $a,b \in I^{|x|}$ and $h \in H^\{|y|\}$ we have $\phi(a, h) \iff \phi(b, h)$. As choice of $\phi$ was arbitrary, this shows that $I$ is indiscernible over $A \cup H(P_n(I), I)$.
 \end{proof}
 
 \begin{Corollary}
