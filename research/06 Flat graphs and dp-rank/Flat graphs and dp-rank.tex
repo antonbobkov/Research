@@ -120,6 +120,13 @@ Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ 
 	Given a finite $V$ we have $H(P_n(V), V)$ is $V$-definable.
 \end{Note}
 
+\begin{proof}
+	Corollary \ref{cr_disjoint_paths} tells us that there finitely many paths between elements of $V$ such that $H(P_n(I), I)$ is inside those paths.
+	Take $J \subset I$ be the endpoints of those paths.
+	$H(P_n(J), J)$ is $J$-definable as noted above.
+	Moreover we have $H(P_n(I), I) \subseteq H(P_n(J), J)$, both finite sets. In particular we have $H \subset \acl()$
+\end{proof}
+
 \begin{proof}(of \ref{lm_uniform})
 	Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$.
 	Define $H_i = H(P_n(I_i), I_i)$.
