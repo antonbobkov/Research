@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  27 JAN 2014 16:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  27 JAN 2014 16:53
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.tex"
@@ -405,27 +405,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ! Missing { inserted.
 <to be read again> 
                    \mathop 
-l.62 ...defines a \emph{shatter function} $\pi_\CS
-                                                  (n)$
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.62 ...nes a \emph{shatter function} $\pi_\CS(n)$
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \mathop 
 l.65 \end{align*}
                  
 A left brace was mandatory here, so I've put one in.
@@ -470,10 +449,10 @@ Try to go on, since this might almost work.
 Here is how much of TeX's memory you used:
  11166 strings out of 493922
  212626 string characters out of 3144899
- 378509 words of memory out of 3000000
+ 377146 words of memory out of 3000000
  14096 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (10 pages, 175796 bytes).
+Output written on "Trees vc-density.dvi" (10 pages, 175680 bytes).
