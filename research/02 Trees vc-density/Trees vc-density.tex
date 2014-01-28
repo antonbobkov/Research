@@ -9,6 +9,7 @@
 \DeclareMathOperator{\A}{\boldface A}
 \DeclareMathOperator{\B}{\boldface B}
 \DeclareMathOperator{\PR}{P}
+\DeclareMathOperator{\S}{\mathcal S}
 
 \begin{document}
 
@@ -56,7 +57,14 @@ We work with finite relational languages. Given a formula we can define its comp
 
 Language for the trees consists of a single binary predicate $\{\leq\}$. Theory of trees states that $\leq$ defines a partial order and for every element $a$ we have $\{x \mid x < a\}$ a linear order. Theory of meet trees requires that in addition tree is closed under meet operation, i.e. for any $a, b$ in the same connected component there exists the greatest upper bound for elements both $\leq$ than $a$ and $b$. Note that we allow our trees to be disconnected or finite unless otherwise stated.
 
-For completeness we also present definition of VC function. One should refer to \cite{vc_density} for more details.
+For completeness we also present definition of VC function.
+One should refer to \cite{vc_density} for more details.
+Given a collection of definable sets $\S$ one defines a \emph{shatter function} $\pi_\S(n)$
+\begin{align*}
+	\pi_\S(n) = max \{|A \cap \S| : A \subset M \text{ and } |A| = n\}
+\end{align*}
+
+
 \section{Proper Subdivisions: Definition and Properties}
 
 % empty ok?
