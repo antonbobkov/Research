@@ -407,11 +407,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [3] [4] [5] [6] [7] [8]
-[9] [10] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux")
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[9] [10] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
  11164 strings out of 493922
  212621 string characters out of 3144899
@@ -421,4 +417,4 @@ Here is how much of TeX's memory you used:
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (10 pages, 175148 bytes).
+Output written on "Trees vc-density.dvi" (10 pages, 175256 bytes).
