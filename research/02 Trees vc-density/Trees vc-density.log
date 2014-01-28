@@ -380,15 +380,15 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
 
-! LaTeX Error: Command \S already defined.
+! LaTeX Error: Command \SS already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \DeclareMathOperator{\S}{\mathcal S}
-                                         
+l.12 \DeclareMathOperator{\SS}{\mathcal S}
+                                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -415,20 +415,97 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ABD: EveryShipout initializing macros [1] [2]
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
+) ABD: EveryShipout initializing macros
+
+LaTeX Warning: Command \SS invalid in math mode on input line 62.
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.62 ...defines a \emph{shatter function} $\pi_\SS
+                                                  (n)$
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \SS invalid in math mode on input line 62.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.62 ...nes a \emph{shatter function} $\pi_\SS(n)$
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.65 \end{align*}
+                 
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \SS invalid in math mode on input line 65.
+
+
+LaTeX Warning: Command \SS invalid in math mode on input line 65.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.65 \end{align*}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.65 \end{align*}
+                 
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \SS invalid in math mode on input line 65.
+
+
+LaTeX Warning: Command \SS invalid in math mode on input line 65.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.65 \end{align*}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+[1] [2] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [3] [4] [5] [6] [7] [8]
 [9] [10] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
- 11164 strings out of 493922
- 212621 string characters out of 3144899
+ 11165 strings out of 493922
+ 212627 string characters out of 3144899
  378496 words of memory out of 3000000
- 14094 multiletter control sequences out of 15000+200000
+ 14095 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (10 pages, 175792 bytes).
+Output written on "Trees vc-density.dvi" (10 pages, 175788 bytes).
