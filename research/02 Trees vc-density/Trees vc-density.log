@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  27 JAN 2014 16:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  27 JAN 2014 16:54
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.tex"
@@ -401,58 +401,20 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ABD: EveryShipout initializing macros
-! Missing { inserted.
-<to be read again> 
-                   \mathop 
-l.65 \end{align*}
-                 
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.65 \end{align*}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing { inserted.
-<to be read again> 
-                   \mathop 
-l.65 \end{align*}
-                 
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.65 \end{align*}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-[1] [2] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
+) ABD: EveryShipout initializing macros [1] [2]
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [3] [4] [5] [6] [7] [8]
 [9] [10] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
- 11166 strings out of 493922
- 212626 string characters out of 3144899
- 377146 words of memory out of 3000000
- 14096 multiletter control sequences out of 15000+200000
+ 11165 strings out of 493922
+ 212623 string characters out of 3144899
+ 377137 words of memory out of 3000000
+ 14095 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (10 pages, 175688 bytes).
+Output written on "Trees vc-density.dvi" (10 pages, 175700 bytes).
