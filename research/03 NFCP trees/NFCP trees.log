@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  29 JAN 2014 14:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  29 JAN 2014 14:47
 entering extended mode
 **NFCP*trees.tex
 ("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.tex"
@@ -407,14 +407,14 @@ Overfull \hbox (1.27309pt too wide) in paragraph at lines 58--59
  count-able. Then all the non-isomorphic
  []
 
-[1] [2] ("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.aux") ) 
+[1] [2] [3] ("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.aux") ) 
 Here is how much of TeX's memory you used:
  10230 strings out of 493922
  188814 string characters out of 3144899
- 232322 words of memory out of 3000000
+ 233322 words of memory out of 3000000
  13181 multiletter control sequences out of 15000+200000
  10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 56i,10n,55p,804b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,13n,55p,804b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "NFCP trees.dvi" (2 pages, 16268 bytes).
+Output written on "NFCP trees.dvi" (3 pages, 17184 bytes).
