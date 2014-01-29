@@ -58,6 +58,10 @@ We code $t$ by sequence $\langle s_1, s_2, \ldots, s_N \rangle$
 	Suppose $T$ is almost finite and countable. Then all the non-isomorphic connected components have different theories.
 \end{Lemma}
 
+\begin{Note}
+	For any sentence $\phi$ we can easily construct a formula $\psi(x)$
+\end{Note}
+
 \begin{proof}
 	Suppose the tree has depth $N$. We prove the statement by induction for $T_n$ with $n = 0..N$. Induction starts at $T_N$ and finishes at $T_0 = T$. For $T_N$ the statement is trivial as in $T_N$ all components are single nodes, so there is a unique isomorphism class. Now, suppose the statement holds for $T_{n+1}$. Label isomorphism classes in $T_{n+1}$ as $C_1, \ldots, C_N$ and pick distinguishing sentences $\phi_1, \phi_2, \ldots, \phi_N$. That is, for a node $t$ at depth $n+1$ we have 
 	\begin{align*}
@@ -72,7 +76,9 @@ We code $t$ by sequence $\langle s_1, s_2, \ldots, s_N \rangle$
 		%P(t) \iff \{s \text{ node under $t$} \midr T \models \psi_i(s)\} \text { has $n_a$ elements}
 		P(t) \iff \{s \text{ node under $t$} \midr A_s \models \phi_i\} \text { has $n_a$ elements}
 	\end{align*}
+	is first-order definable. This shows that $A_a, A_b$ have different theories. 
 \end{proof}
+
 
 \begin{proof}
 	Note that in almost finite theory all slices are also almost finite. Prove the statement by the reverse induction on slices' depth. Suppose we have proven the claim for $n$th slice. As $T_n$ is finite and countable, we can apply Lemma \ref{lm_tree_code} to obtain codes for nodes at depth $n-1$. By induction assumption all (finitely many) elements of $T_n$ have different theories. For each isomorphism class $C_i \in T_n$ we can pick a sentence $\phi_i$ such that $\forall C \in T_n \  C = C_i \iff C \models \phi_i$. If two elements $t,s$ at depth $n-1$ have different codes, then they have different number of cones with some isomorphism class $C_i$. As having $C_i$ as an isomorphism class is witnessed by $\phi_i$ we can construct a formula that tells apart $t,s$.
