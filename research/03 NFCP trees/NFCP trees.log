@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  1 JAN 2014 11:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  29 JAN 2014 14:39
 entering extended mode
 **NFCP*trees.tex
 ("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.tex"
@@ -379,7 +379,7 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-No file NFCP*trees.aux.
+("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
@@ -393,6 +393,7 @@ LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -401,19 +402,19 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) ABD: EveryShipout initializing macros
-Overfull \hbox (1.27309pt too wide) in paragraph at lines 52--53
+
+LaTeX Warning: Citation `parigot_trees' on page 1 undefined on input line 27.
+
+
+LaTeX Warning: Reference `th_tree_nfcp' on page 1 undefined on input line 27.
+
+
+Overfull \hbox (1.27309pt too wide) in paragraph at lines 58--59
 []\OT1/cmr/bx/n/10 Lemma 1.5. [][]\OT1/cmr/m/it/10 Sup-pose $\OML/cmm/m/it/10 T$ \OT1/cmr/m/it/10 is al-most fi-nite and
  count-able. Then all the non-isomorphic
  []
 
-
-LaTeX Warning: Reference `lm_tree_code' on page 1 undefined on input line 56.
-
-[1]
-
-LaTeX Warning: Reference `lm_tree_code' on page 2 undefined on input line 77.
-
-[2] ("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.aux")
+[1] [2] ("C:\Users\Anton\SparkleShare\Research\research\03 NFCP trees\NFCP trees.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -422,12 +423,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 10222 strings out of 493922
- 188602 string characters out of 3144899
- 232246 words of memory out of 3000000
- 13175 multiletter control sequences out of 15000+200000
+ 10230 strings out of 493922
+ 188814 string characters out of 3144899
+ 234303 words of memory out of 3000000
+ 13181 multiletter control sequences out of 15000+200000
  10215 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 56i,6n,55p,804b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,10n,55p,804b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "NFCP trees.dvi" (2 pages, 14072 bytes).
+Output written on "NFCP trees.dvi" (2 pages, 15952 bytes).

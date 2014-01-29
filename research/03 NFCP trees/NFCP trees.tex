@@ -61,7 +61,7 @@ We code $t$ by sequence $\langle s_1, s_2, \ldots, s_N \rangle$
 \begin{proof}
 	Suppose the tree has depth $N$. We prove the statement by induction for $T_n$ with $n = 0..N$. Induction starts at $T_N$ and finishes at $T_0 = T$. For $T_N$ the statement is trivial as in $T_N$ all components are single nodes, so there is a unique isomorphism class. Now, suppose the statement holds for $T_{n+1}$. Label isomorphism classes in $T_{n+1}$ as $C_1, \ldots, C_N$ and pick distinguishing sentences $\phi_1, \phi_2, \ldots, \phi_N$. That is, for a node $t$ at depth $n+1$ we have 
 	\begin{align*}
-		
+		A_t \models \phi_i \iff A_t \text{ has isomorphism class } C_i
 	\end{align*}
 \end{proof}
 
