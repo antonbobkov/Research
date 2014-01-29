@@ -33,14 +33,18 @@ Consider a tree $T$ and $n \leq m$ with $n \in \N, m \in \N \cup \{\infty\}$. De
 \end{Definition}
 
 \begin{Definition}
-	Consider a tree $T$ of height $N$. Let $T_n$ denote the collection of connected components in the $n$th-slice of $T$. $T$ is called \emph{almost finite} if for every $n \leq N$, $S_n$ contains finitely many elements up to a (poset) isomorphism.
+	Consider a tree $T$ of height $N$. Let $T_n$ denote the collection of connected components in the $n$th-slice of $T$. $T$ is called \emph{almost finite} if for every $n \leq N$, $T_n$ contains finitely many elements up to a (poset) isomorphism.
 \end{Definition}
 
 \begin{Definition}
-	Given an element $t \in T$ in a tree, let $A_t = \{a \in T \mid a > t\}$ denote all the elements below $t$. Call a connected component of $A_t$ a \emph{cone} of $t$.
+	Given an element $t \in T$ in a tree, let $A_t = \{a \in T \mid a \geq t\}$ denote all the elements below $t$.
 \end{Definition}
 
-Given $T$ suppose $T_n$ is finite. We associate a coding sequence to every node at depth $n-1$. First denote all elments of $T_n$ as $C_1, \ldots, C_N$. Given a node $t$ at depth $n-1$ we will construct a sequence $c_1, \ldots, c_N$ of elements in $\N \cup \{\infty\}$. $c_i$ counts all the cones of $t$ with isomorphism class $C_i$.
+Given $T$ suppose $T_{n+1}$ is finite. We associate a coding sequence to every node at depth $n$.
+Denote all elments of $T_{n+1}$ as $C_1, \ldots, C_N$.
+Fix a node $t$ at depth $n$ and let $S$ be all the nodes at depth $n+1$ that are below $t$.
+Let $c_i \in \N \cup \{\infty\}$ be the number of elements $s \in S$ such that $A_s$ has the isomorphism class $C_i$.
+We code $t$ by sequence $\langle s_1, s_2, \ldots, s_N \rangle$
 
 \begin{Lemma} \label{lm_tree_code}
 	Suppose we have a countable tree $T$ with $T_n$ finite. Two nodes $t,s$ at depth $n$ have the same code if and only if $A_t$ is isomorphic to $A_s$.
@@ -53,6 +57,10 @@ Given $T$ suppose $T_n$ is finite. We associate a coding sequence to every node 
 \begin{Lemma} \label{lm_categoricity}
 	Suppose $T$ is almost finite and countable. Then all the non-isomorphic connected components have different theories.
 \end{Lemma}
+
+\begin{proof}
+	Suppose the tree has depth $n$. We prove the statement by induction star
+\end{proof}
 
 \begin{proof}
 	Note that in almost finite theory all slices are also almost finite. Prove the statement by the reverse induction on slices' depth. Suppose we have proven the claim for $n$th slice. As $T_n$ is finite and countable, we can apply Lemma \ref{lm_tree_code} to obtain codes for nodes at depth $n-1$. By induction assumption all (finitely many) elements of $T_n$ have different theories. For each isomorphism class $C_i \in T_n$ we can pick a sentence $\phi_i$ such that $\forall C \in T_n \  C = C_i \iff C \models \phi_i$. If two elements $t,s$ at depth $n-1$ have different codes, then they have different number of cones with some isomorphism class $C_i$. As having $C_i$ as an isomorphism class is witnessed by $\phi_i$ we can construct a formula that tells apart $t,s$.
