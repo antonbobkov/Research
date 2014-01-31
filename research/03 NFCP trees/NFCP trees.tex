@@ -82,12 +82,6 @@ We code $t$ by sequence $\langle s_1, s_2, \ldots, s_N \rangle$
 	is first-order definable. This shows that $A_a, A_b$ have different theories. 
 \end{proof}
 
-
-\begin{proof}
-	Note that in almost finite theory all slices are also almost finite. Prove the statement by the reverse induction on slices' depth. Suppose we have proven the claim for $n$th slice. As $T_n$ is finite and countable, we can apply Lemma \ref{lm_tree_code} to obtain codes for nodes at depth $n-1$. By induction assumption all (finitely many) elements of $T_n$ have different theories. For each isomorphism class $C_i \in T_n$ we can pick a sentence $\phi_i$ such that $\forall C \in T_n \  C = C_i \iff C \models \phi_i$. If two elements $t,s$ at depth $n-1$ have different codes, then they have different number of cones with some isomorphism class $C_i$. As having $C_i$ as an isomorphism class is witnessed by $\phi_i$ we can construct a formula that tells apart $t,s$.
-	% technically we have to change phi_i to a downward function.
-\end{proof}
-
 \begin{Theorem} \label{th_tree_nfcp}
 	Let $T$ be a stable tree of height $N$. The following are equivalent:
 	\begin{enumerate}
