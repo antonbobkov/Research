@@ -100,7 +100,7 @@ Note that conditions (3) and (4) are purely combinatorial.
 \begin{proof}
 	$(1) \Rightarrow (2)$. This is true in arbitrary theories. For a given arity $\aleph_0$-categorical theories have finitely many types, all of them isolated. This means that for a given formula $\phi(x, y)$ we can list all the types of $y$ for which there are infinitely many $x$ such that $\phi(x, y)$ holds. There are finitely many such types and all of them are isolated, so we can code it by single formula - disjunction of isolating formulas.
 	
-	$(2) \Rightarrow (3)$. We prove this by contrapositive. Suppose $T$ is not almost finite. Pick largest $n$ such that $T_n$ has infinitely many isomorphism classes. Thus $T_{n+1}$ is almost finite, thus we can code elements at depth $n$.
+	$(2) \Rightarrow (3)$. We prove this by contrapositive. Suppose $T$ is not almost finite. Pick largest $n$ such that $T_n$ has infinitely many isomorphism classes. Thus $T_{n+1}$ is almost finite, thus we can code elements at depth $n$ (see Definition \ref{df_coding}). Applying lemma \ref{lm_categoricity} to $T_{n+1}$.
 	
 	Do construction as in lemma to obtain codes for nodes at depth $n$. There are infinitely many isomorphism classes for those thus there are infnitely many codes realized. As every code is a finite sequence, there has to be $i$ such $i$th position of the sequences has to take arbitrarily large finite values. Let $\phi(x,y)$ be a formula such that $\phi(T, t)$ equals to the $i$th position in the sequence coding $t$. This formula fails to have NFCP.
 	
