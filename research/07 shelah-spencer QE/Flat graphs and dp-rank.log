@@ -116,6 +116,20 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty)
+
+! LaTeX Error: Command \C already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \DeclareMathOperator{\C}{\mathcal C}
+                                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -145,35 +159,6 @@ LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 22.
 
 LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 29.
 
-! Undefined control sequence.
-l.34 	Fix $\Ac \in \K
-                     $, $\Phi, \Gamma$ finite subsets of $\Kc$, and $m \in \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \Kc 
-                    
-l.34 ...\K$, $\Phi, \Gamma$ finite subsets of $\Kc
-                                                  $, and $m \in \omega$ such...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.34 ...mma$ we have $\Ac \subseteq \Bc$ and $|B\A
-                                                  | < m$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
@@ -186,12 +171,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1688 strings out of 493922
- 18913 string characters out of 3144898
+ 1697 strings out of 493922
+ 19056 string characters out of 3144898
  67869 words of memory out of 3000000
- 4851 multiletter control sequences out of 15000+200000
- 10178 words of font info for 40 fonts, out of 3000000 for 9000
+ 4852 multiletter control sequences out of 15000+200000
+ 12627 words of font info for 48 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,4n,32p,286b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,32p,286b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (1 page, 2812 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (1 page, 2960 bytes).
