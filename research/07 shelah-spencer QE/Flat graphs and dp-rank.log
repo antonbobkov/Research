@@ -116,20 +116,6 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty)
-
-! LaTeX Error: Command \AA already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \DeclareMathOperator{\AA}{\mathcal A}
-                                         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -253,10 +239,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1685 strings out of 493922
- 18906 string characters out of 3144898
+ 1687 strings out of 493922
+ 18911 string characters out of 3144898
  67869 words of memory out of 3000000
- 4848 multiletter control sequences out of 15000+200000
+ 4850 multiletter control sequences out of 15000+200000
  10178 words of font info for 40 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,4n,32p,286b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
