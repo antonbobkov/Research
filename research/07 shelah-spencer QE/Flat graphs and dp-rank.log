@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 MAY 2014 16:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 MAY 2014 16:55
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.tex"
@@ -116,20 +116,6 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty)
-
-! LaTeX Error: Command \C already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 \DeclareMathOperator{\C}{\mathcal C}
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
