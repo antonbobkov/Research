@@ -3,8 +3,10 @@
 \usepackage{../AMC_style}	
 \usepackage{../Research}
 
-\DeclareMathOperator{\I}{\mathcal I}
-\DeclareMathOperator{\J}{\mathcal J}
+\DeclareMathOperator{\A}{\mathcal A}
+\DeclareMathOperator{\B}{\mathcal B}
+\DeclareMathOperator{\C}{\mathcal C}
+\DeclareMathOperator{\D}{\mathcal D}
 \DeclareMathOperator{\acl}{acl}
 
 \begin{document}
@@ -23,138 +25,11 @@
 
 Laskowski's paper \cite{Laskowski} provides a combinatorial proof of quantifier elimination in Shelah-Spencer graphs. Here we provide a simplification of the proof using only maximal chains and avoiding technical lemmas of sections 3 and 4.
 
-\section{Preliminaries}
-
-We 
-
-\section{Indiscernible sequences}
-
-In this section we work in a superflat graph $G$. Stability implies that all the indiscernible sequences are totally indiscernible.
+\section{Proof}
 
 \begin{Definition}
-	Let $V \subset V(G)$. $P_n(V)$, a subgraph of $G$ denotes a union of all paths of length $\leq n$ between points of $V$.
+	Fix $\A $
 \end{Definition}
-
-\begin{Lemma} \label{lm_bump}
-	Let $I = (a_i : i \in \I)$ be a countable indiscernible sequence over $A$. Fix $n \in \N$.
-	There exists a finite set $B$ such that
-	\begin{align*}
-		\forall i \neq j \ d_B(a_i, a_j) > n
-	\end{align*}
-\end{Lemma}
-
-\begin{proof}
-	By a \ref{th_superflat_equivalence} we can find an infinite $\J \subset \I$ and a finite set $B'$ such that each pair from $J = (a_j : j \in \J)$ have distance $>n$ over $B'$.
-	Using total indiscernibility we have an automorphism sending $J$ to $I$ fixing $A$.
-	Image of $B'$ under this automorphism is the required set $B$.
-\end{proof}
-
-In other words, $B$ separates $I$ when viewed inside subgraph $P_n(I)$.
-This shows that $I$ has finite connectivity in $P_n(I)$.
-Applying Corollary \ref{cr_hull_finite} we obtain that connectivity hull of $I$ in $P_n(I)$ is finite.
-
-\begin{Definition}
-	We call a set $H \subseteq V(G)$ uniformly definable from an indiscernible sequence $I$ if there is a formula $\phi(x, y)$ such that for every $J \subset I$ of size $|y|$ we have
-	\begin{align*}
-		H = \{g \in G \mid \phi(g, J)\}
-	\end{align*}
-	where $J$ is considered a tuple.
-\end{Definition}
-
-\begin{Lemma} \label{lm_uniform}
-	Fix a countable indiscernible sequence $I = (a_i : i \in \I)$.
-	Let $H$ be its connectivity hull inside of graph $P_n(I)$.
-	Then $H$ is uniformly definable from $I$ in $G$.
-\end{Lemma}
-
-\begin{Definition}
-	Given a graph $G$ and $V \subset V(G)$ define $H(G, V)$ to be connectivity hull of $V$ in $G$.
-\end{Definition}
-
-\begin{Note}
-	Given a finite $V$ we have $H(P_n(V), V)$ is $V$-definable.
-\end{Note}
-
-\begin{proof}
-	Corollary \ref{cr_disjoint_paths} tells us that there finitely many paths between elements of $V$ such that $H(P_n(I), I)$ is inside those paths.
-	Take $J \subset I$ be the endpoints of those paths.
-	$H(P_n(J), J)$ is $J$-definable as noted above.
-	Moreover we have $H(P_n(I), I) \subseteq H(P_n(J), J)$, both finite sets.
-	In particular we have $H \subset \acl(J)$.
-	$I-J$ is indiscernible over $A \cup J$.
-	
-\end{proof}
-
-\begin{proof}(of \ref{lm_uniform})
-	Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$.
-	Define $H_i = H(P_n(I_i), I_i)$.
-	It is $I_i$-definable. %and we have $H(P_n(I_i), I_i) \subseteq H(P_n(I), I)$.
-	Corollary \ref{cr_disjoint_paths} tells us that there finitely many paths between elements of $V$ such that $H(P_n(I), I)$ is inside those paths.
-	But for large enough $i$, say $i \geq N$, $P_n(I_i)$ will contain all of those paths.
-	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq P_n(I_i)$.
-	If a set separates $I$ then would be inside $P_n(I_i)$ and would separate $I_i$ as well.
-	Thus for $i \geq N$ we have $H(P_n(I), I) \subseteq H(P_n(I_i), I_i)$.
-	If the two sets are not equal, it is due to some elements in $H(P_n(I_i), I_i)$ failing to separate entire $I$. There are finitely many of those, so for large enough $i$, say $i \geq M$ we have $H(P_n(I_i), I_i) = H(P_n(I), I)$ stabilizing.
-	This shows that for $i \geq M$ we have $H_i = H_{i+m} = H(P_n(I), I)$. By symmetry of indiscernible sequence we have that any subset of size $N$ defines the connectivity hull.
-\end{proof}
-
-\begin{Lemma} \label{cr_bump}
-	$I$ is indiscernible over the $A \cup H(P_n(I), I)$.
-\end{Lemma}
-
-\begin{proof}
-	Denote the hull by $H$. Fix an $A$-formula $\phi(x,y)$. Consider a collection of traces $\phi(a, H^\{|y|\})$ for $a \in I^{|x|}$. If two of them are distinct, then by indiscernibility all of them are. But that is impossible as $H$ has finitely many subsets. Thus all the traces are identical. This shows that for any $a,b \in I^{|x|}$ and $h \in H^\{|y|\}$ we have $\phi(a, h) \iff \phi(b, h)$. As choice of $\phi$ was arbitrary, this shows that $I$ is indiscernible over $A \cup H(P_n(I), I)$.
-\end{proof}
-
-\begin{Corollary} 
-	Let $(a_i)_{i \in I}$ be a countable indiscernible sequence over $A$. Then there is a countable $B$ such that  $(a_i)$ is indiscernible over $A \cup B$ and
-	\begin{align*}
-		\forall i \neq j \ d_B(a_i, a_j) = \infty
-	\end{align*}
-\end{Corollary}
-
-\begin{proof}
-	Let $B_n = H(P_n(I), I)$. This is well defined by Lemma \ref{lm_bump} and has property
-	\begin{align*}
-		\forall i \neq j \ d_{B_n}(a_i, a_j) > n
-	\end{align*}
-	% does limiting work?
-	and $I$ is indiscernible over $A \cup B_i$ by Corollary \ref{cr_bump}. Let $B = \bigcup_{n \in \N} B_n$.
-\end{proof}
-
-That is every indiscernible sequence can be upgraded to have infinite distance over its parameter set.
-
-\section{Superflat graphs are dp-minimal}
-
-% monster model?
-\begin{Lemma}
-	Suppose $x \equiv_A y$ and $d_A(x, c) = d_A(y, c) = \infty$. Then $x \equiv_{Ac} y$
-\end{Lemma}
-
-\begin{proof}
-	Define an equivalence relation $G - A$. Two points $p, q$ are equivalent if $d_A(p,q)$ is finite. There is an automorphism $f$ of $G$ fixing $A$ sending $x$ to $y$. Denote by $X$ and $Y$ equivalence classes of $x$ and $y$ respectively. It's easy to see that $f(X) = Y$. Define the following function
-	\begin{align*}
-		&g = f \text { on } X \\
-		&g = f^{-1} \text { on } Y \\
-		&\text{identity otherwise}
-	\end{align*}
-	It is easy to see that $g$ is an automorphism fixing $Ac$ that sends $x$ to $y$.
-\end{proof}
-
-\begin{Theorem}
-	Let $G$ be a flat graph with $(a_i)_{i\in\Q}$ indiscernible over $A$ and $b \in G$. There exists $c \in \Q$ such that all $(a_i)_{i\in\{\Q - c\}}$ have the same type over $Ab$.
-\end{Theorem}
-
-\begin{proof}
-	Find $B \supseteq A$ such that $(a_i)$ is indiscernible over $B$ and has infinite distance over $B$. All the elements of the indiscernible sequence fall into distinct equivalence classes. $b$ can be in at most one of them. Exclude that element from the sequence. Remaining sequence elements are all infinitely far away from $b$. By previous lemma we have that elements of indiscernible sequence all have the same type over $Bb$.
-\end{proof}
-
-But this is exactly what it means to be dp-minimal, as given, say, in \cite{simon_dp_minimal} Lemma 1.4.4
-
-\begin{Corollary}
-	Flat graphs are dp-minimal.
-\end{Corollary}
-
 
 \begin{thebibliography}{9}
 
