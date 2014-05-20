@@ -37,6 +37,14 @@ We will use notation of \cite{Laskowski}, in particular things like $\K$, $\delt
 \section{Omitting lemma}
 
 \begin{Definition}
+	Let $\M \models \S$, $\B \in \K$, embedding $f \colon \B \to \M$, $\Phi$ finite subset of $\K$
+	\begin{enumerate}
+		\item Say that $f$ \textsl{omits} $\Phi$ if there are no $\C \in \Phi$ and $g \colon \C \to \M$ extending $f$.
+		\item Say that $f$ \textsl{admits} $\Phi$ if for every $\C \in \Phi$ there is $g \colon \C \to \M$ extending $f$.
+	\end{enumerate}
+\end{Definition}
+
+\begin{Definition}
 	Fix $\B, \C \in \K$, and $m \in \omega$ such that $|C \backslash B| < m$. Define $Z(\B, \C, m)$ to be all $\B^* \in X_m(\B)$ such that there are no $\H$ with $|H \backslash B^*| < m$ satisfying
 		\begin{diagram}
 							&							&\H		\\
@@ -69,13 +77,7 @@ We will use notation of \cite{Laskowski}, in particular things like $\K$, $\delt
 	\end{enumerate}
 \end{Definition}
 
-\begin{Definition}
-	Let $\M \models \S$, $\B \in \K$, embedding $f \colon \B \to \M$, $\Phi$ finite subset of $\K$
-	\begin{enumerate}
-		\item Say that $f$ \textsl{omits} $\Phi$ if there are no $\C \in \Phi$ and $g \colon \C \to \M$ extending $f$.
-		\item Say that $f$ \textsl{admits} $\Phi$ if for every $\C \in \Phi$ there is $g \colon \C \to \M$ extending $f$.
-	\end{enumerate}
-\end{Definition}
+
 
 \begin{Lemma}
 	Let $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. The following are equivalent:
