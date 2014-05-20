@@ -202,54 +202,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 |if you really still need it, you can still get it by loading the |
 |package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
 ===================================================================)
-
-! LaTeX Error: \A undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 \renewcommand{\A}
-                     {\mathcal A}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \B undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 \renewcommand{\B}
-                     {\mathcal B}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \D undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \renewcommand{\D}
-                      {\mathcal D}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \G undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \renewcommand{\G}
-                      {\mathcal G}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
