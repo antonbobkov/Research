@@ -59,7 +59,7 @@ We will use notation of \cite{Laskowski}, in particular things like $\K$, $\delt
 		\end{diagram}
 \end{Definition}
 
-\begin{Lemma}
+\begin{Lemma} \label{A}
 	Let $\B, \C \in \K$, and $m \in \omega$ such that $|C \backslash B| < m$. Also let $\M \models \S$ and $f \colon \B \to \M$ an embedding. The following are equivalent:
 	\begin{enumerate}
 		\item $f$ omits $\{\C\}$.
@@ -83,7 +83,7 @@ We will use notation of \cite{Laskowski}, in particular things like $\K$, $\delt
 	$(2) \Rightarrow (1)$ Suppose $f$ doesn't omit $\{C\}$. Then by the note above $f$ admits $\{C\}$, i.e. there is an embedding of $\C$ into $M$ over $f$. We identify $\C$ with the image of that embedding. Similarly we identify $\B^*$ with the image of its maximal embedding over $f$. That is we may assume $\C, \B^* \subset \M$. Let $H$ be the substructure of $M$ induced by vertices $C \cup B^*$. As $|C \backslash B| < m$ we have $|H \backslash B^*| < m$. $\B^*$ is $m$-strong by remark 5.3 of \cite{Laskowski}. This forces $\B^* \leq H$. But this contradicts the fact that $\B^* \in Z(\B, \C, m)$.
 \end{proof}
 
-\begin{Corollary}
+\begin{Corollary} \label{B}
 	With the setup of the previous lemma, the following are equivalent:
 	\begin{enumerate}
 		\item $f$ admits $\{\C\}$.
