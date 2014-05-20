@@ -109,23 +109,7 @@ For quantifier elimination we need to track multiple structures being admitted a
 	\end{enumerate}
 \end{Lemma}
 \begin{proof}
-	$(1) \Rightarrow (2)$ Identify $\B$ with $f(\B)$, i.e. for ease of notation assume that $\B \subset \M$. By remark 5.3 of \cite{Laskowski} there is some $B^* \in X_m(\B)$ maximally embeddable in $\M$ over $f$. Such embedding is unique by Lemma 3.8 of \cite{Laskowski}. Again, we identify $B^*$ with its maximal embedding into $\M$. To show $(2)$ we need to verify that $\B^* \in Z(\B, \Phi, \Gamma, m)$. Suppose not. Two things can go wrong. First, there can be $\H$ with $|H \backslash B^*| < m$ and $\C \in \Phi$ satisfying
-			\begin{diagram}
-								&							&\H		\\
-								&\ruLine^\leq	&					&\luLine	\\
-					\B^*	&           	&					&					&\C \\
-								&\luLine			&					&\ruLine	\\
-								&							&\B
-			\end{diagram}
-			As $\B^* \leq \H$ and $\B \subset \M$ we can embed $\H$ into $\M$ (as $\M \models \S$). But this would witness $\C$ extending $\B$ in $\M$ which is impossible as we assumed that $f$ omits $\Phi$. Another thing that could go wrong is that there could be $\D \in \Gamma$ and no $\G$ with $|G \backslash B^*| < m$ satisfying
-			\begin{diagram}
-								&							&\G		\\
-								&\ruLine^\leq	&					&\luLine	\\
-					\B^*	&           	&					&					&\D \\
-								&\luLine			&					&\ruLine	\\
-								&							&\B
-			\end{diagram}
-			As $f$ admits 
+	This is an easy corollary of  
 \end{proof}
 
 \begin{thebibliography}{9}
