@@ -76,7 +76,14 @@ We will use notation of \cite{Laskowski}, in particular things like $\K$, $\delt
 	\end{enumerate}
 \end{Lemma}
 \begin{proof}
-	$(1) \Rightarrow (2)$ Identify $\B$ with $f(\B)$, i.e. for ease of notation assume that $\B \subset \M$. By remark 5.3 of \cite{Laskowski} there is some $B^* \in X_m(\B)$ maximally embeddable in $\M$ over $f$. Such embedding is unique by Lemma 3.8 of \cite{Laskowski}. Again, we identify $B^*$ with its maximal embedding into $\M$. To show $(2)$ we need to verify that $\B^* \in Z(\B, \Phi, \Gamma, m)$.
+	$(1) \Rightarrow (2)$ Identify $\B$ with $f(\B)$, i.e. for ease of notation assume that $\B \subset \M$. By remark 5.3 of \cite{Laskowski} there is some $B^* \in X_m(\B)$ maximally embeddable in $\M$ over $f$. Such embedding is unique by Lemma 3.8 of \cite{Laskowski}. Again, we identify $B^*$ with its maximal embedding into $\M$. To show $(2)$ we need to verify that $\B^* \in Z(\B, \Phi, \Gamma, m)$. Suppose not. Two things can go wrong. First, there can be $\H$ with $|H \backslash B^*| < m$ satisfying
+			\begin{diagram}
+								&							&\H		\\
+								&\ruLine^\leq	&					&\luLine	\\
+					\B^*	&           	&					&					&\C \\
+								&\luLine			&					&\ruLine	\\
+								&							&\B
+			\end{diagram}
 \end{proof}
 
 \begin{thebibliography}{9}
