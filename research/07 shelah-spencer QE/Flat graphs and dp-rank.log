@@ -203,18 +203,52 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 |package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
 ===================================================================)
 
-! LaTeX Error: Command \H already defined.
-               Or name \end... illegal, see p.192 of the manual.
+! LaTeX Error: \A undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \DeclareMathOperator{\H}{\mathcal H}
-                                         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.8 \renewcommand{\A}
+                     {\mathcal A}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \B undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \renewcommand{\B}
+                     {\mathcal B}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \D undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \renewcommand{\D}
+                      {\mathcal D}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \G undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \renewcommand{\G}
+                      {\mathcal G}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -236,88 +270,6 @@ LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 26.
 
 LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 33.
 
-
-LaTeX Warning: Command \H invalid in math mode on input line 40.
-
-! Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
-                                                   with $|H \backslash C^*| ...
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! Extra }, or forgotten $.
-\add@accent ... \accent@spacefactor \spacefactor }
-                                                  \accent #1 #2\egroup \spac...
-l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
-                                                   with $|H \backslash C^*| ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
-                                                   with $|H \backslash C^*| ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
-                                                   with $|H \backslash C^*| ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
-                                                   with $|H \backslash C^*| ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
-                                                   with $|H \backslash C^*| ...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.40 ...in \Phi$ there are \textsl{no} $\H$ with $
-                                                  |H \backslash C^*| < m$ sa...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.40 ...e are \textsl{no} $\H$ with $|H \backslash
-                                                   C^*| < m$ satisfying
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
@@ -331,12 +283,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3634 strings out of 493922
- 33583 string characters out of 3144898
+ 3630 strings out of 493922
+ 33575 string characters out of 3144898
  94501 words of memory out of 3000000
- 6785 multiletter control sequences out of 15000+200000
+ 6781 multiletter control sequences out of 15000+200000
  12980 words of font info for 49 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,18n,32p,408b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (1 page, 4312 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (1 page, 4292 bytes).
