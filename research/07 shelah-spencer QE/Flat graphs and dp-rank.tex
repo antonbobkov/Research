@@ -31,7 +31,16 @@ Laskowski's paper \cite{Laskowski} provides a combinatorial proof of quantifier 
 \section{Proof}
 
 \begin{Definition}
-	Fix $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. Define $$
+	Fix $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. Define $Z(\B, \Phi, \Gamma, m)$ to be all $\B* \in X_m(\B)$ such that	
+	\begin{enumerate}
+		\item For every $\C \in \Phi$ there are \textsl{no} $\H$ with $|H \backslash C^*| < m$ satisfying
+			\begin{diagram}
+							 &           &x \in X \phantom{ \ni x}        &              \\
+							 &\ruTo^\phi &         &\luTo^\psi     \\
+				a \in U&           &\pile{\rTo^{\invert{\psi} \circ \phi} \\ \lTo_{\invert{\phi} \circ \psi}}         &       &V \ni b
+			\end{diagram}
+		\item For every $\D \in \Gamma$ there \textsl{is} some $\G$ with $|G \backslash C^*| < m$ satisfying
+	\end{enumerate}
 \end{Definition}
 
 \begin{thebibliography}{9}
