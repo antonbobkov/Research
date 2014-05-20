@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 MAY 2014 17:13
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 MAY 2014 17:14
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.tex"
@@ -202,33 +202,47 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 |if you really still need it, you can still get it by loading the |
 |package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
 ===================================================================)
+
+! LaTeX Error: Command \H already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \DeclareMathOperator{\H}{\mathcal H}
+                                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 24.
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 26.
 
 
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 31.
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 33.
 
 
-LaTeX Warning: Command \H invalid in math mode on input line 38.
+LaTeX Warning: Command \H invalid in math mode on input line 40.
 
 ! Improper \spacefactor.
 <recently read> \spacefactor 
                              
-l.38 ...y $\C \in \Phi$ there are \textsl{no} $\H$
+l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
                                                    with $|H \backslash C^*| ...
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -238,7 +252,7 @@ I'm forgetting what you said and using zero instead.
 ! Extra }, or forgotten $.
 \add@accent ... \accent@spacefactor \spacefactor }
                                                   \accent #1 #2\egroup \spac...
-l.38 ...y $\C \in \Phi$ there are \textsl{no} $\H$
+l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
                                                    with $|H \backslash C^*| ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -249,7 +263,7 @@ deleted material, e.g., by typing `I$}'.
 ! Please use \mathaccent for accents in math mode.
 \add@accent ...@spacefactor \spacefactor }\accent 
                                                   #1 #2\egroup \spacefactor ...
-l.38 ...y $\C \in \Phi$ there are \textsl{no} $\H$
+l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
                                                    with $|H \backslash C^*| ...
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
@@ -257,7 +271,7 @@ I'm changing \accent to \mathaccent here; wish me luck.
 ! Missing { inserted.
 <to be read again> 
                    $
-l.38 ...y $\C \in \Phi$ there are \textsl{no} $\H$
+l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
                                                    with $|H \backslash C^*| ...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -267,7 +281,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.38 ...y $\C \in \Phi$ there are \textsl{no} $\H$
+l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
                                                    with $|H \backslash C^*| ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -278,7 +292,7 @@ my insertion and my current dilemma will both disappear.
 ! You can't use `\spacefactor' in math mode.
 \add@accent ...}\accent #1 #2\egroup \spacefactor 
                                                   \accent@spacefactor 
-l.38 ...y $\C \in \Phi$ there are \textsl{no} $\H$
+l.40 ...y $\C \in \Phi$ there are \textsl{no} $\H$
                                                    with $|H \backslash C^*| ...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -288,7 +302,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.38 ...in \Phi$ there are \textsl{no} $\H$ with $
+l.40 ...in \Phi$ there are \textsl{no} $\H$ with $
                                                   |H \backslash C^*| < m$ sa...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -299,21 +313,10 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.38 ...e are \textsl{no} $\H$ with $|H \backslash
+l.40 ...e are \textsl{no} $\H$ with $|H \backslash
                                                    C^*| < m$ satisfying
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
-
-! Undefined control sequence.
-<recently read> \G 
-                   
-l.44 ...$\D \in \Gamma$ there \textsl{is} some $\G
-                                                  $ with $|G \backslash C^*|...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
@@ -328,12 +331,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3633 strings out of 493922
- 33581 string characters out of 3144898
+ 3634 strings out of 493922
+ 33583 string characters out of 3144898
  94501 words of memory out of 3000000
- 6784 multiletter control sequences out of 15000+200000
+ 6785 multiletter control sequences out of 15000+200000
  12980 words of font info for 49 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,18n,32p,408b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Flat graphs and dp-rank.dvi" (1 page, 4308 bytes).
+Output written on "Flat graphs and dp-rank.dvi" (1 page, 4312 bytes).
