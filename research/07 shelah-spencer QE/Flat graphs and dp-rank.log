@@ -109,13 +109,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \thm@headsep=\skip50
 \dth@everypar=\toks24
 )
-(C:\Users\Anton\SparkleShare\Research\research\AMC_style.sty
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-\c@Theorem=\count99
-)
-(C:\Users\Anton\SparkleShare\Research\research\Research.sty)
 
 ! LaTeX Error: File `diagrams.sty' not found.
 
@@ -126,16 +119,16 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.7 
+l.4 
      
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 1611 strings out of 493922
- 17682 string characters out of 3144898
- 65869 words of memory out of 3000000
- 4802 multiletter control sequences out of 15000+200000
+ 1321 strings out of 493922
+ 14785 string characters out of 3144898
+ 63949 words of memory out of 3000000
+ 4523 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,0n,28p,260b,43s stack positions out of 5000i,500n,10000p,200000b,50000s
