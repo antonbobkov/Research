@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 MAY 2014 11:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  20 MAY 2014 12:27
 entering extended mode
 **Shelah-Spencer*QE.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.tex"
@@ -196,11 +196,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1889.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-| >>>>>>>> POSTSCRIPT MODE (DVIPS) IS NOW THE DEFAULT <<<<<<<<<<<<|
-|(DVI mode has not been supported since 1992 and produces inferior|
-|results which are completely unsuitable for publication. However,|
-|if you really still need it, you can still get it by loading the |
-|package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
+| running in pdf mode -- diagonal arrows will work automatically |
 ===================================================================)
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -225,18 +221,39 @@ LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 33.
 
 LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 35.
 
+[1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 71.
-
-
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 71.
-
-[1]
-
-LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 92.
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 73.
 
 
-LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 92.
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 73.
+
+! Undefined control sequence.
+l.83 ...by vertices $C \cup B^*$. As $|C \backlash
+                                                   B| < m$ we have $|H \back...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.83 ...|C \backlash B| < m$ we have $|H \backlash
+                                                   B^*| < m$. $\B^*$ is $m$-...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 83.
+
+
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 94.
+
+
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 94.
 
 [2]
 Missing character: There is no â in font cmr8!
@@ -253,12 +270,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3629 strings out of 493922
- 33527 string characters out of 3144898
- 98501 words of memory out of 3000000
+ 3630 strings out of 493921
+ 33537 string characters out of 3144875
+ 99455 words of memory out of 3000000
  6779 multiletter control sequences out of 15000+200000
  13326 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,9n,32p,566b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,9n,32p,638b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb>
+Output written on "Shelah-Spencer QE.pdf" (3 pages, 193089 bytes).
+PDF statistics:
+ 76 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on "Shelah-Spencer QE.dvi" (3 pages, 11016 bytes).
