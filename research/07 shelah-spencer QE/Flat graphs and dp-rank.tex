@@ -37,7 +37,7 @@ Laskowski's paper \cite{Laskowski} provides a combinatorial proof of quantifier 
 \begin{Definition}
 	Fix $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. Define $Z(\B, \Phi, \Gamma, m)$ to be all $\B^* \in X_m(\B)$ such that	
 	\begin{enumerate}
-		\item For every $\C \in \Phi$ there \textsl{are no} $\H$ with $|H \backslash C^*| < m$ satisfying
+		\item For every $\C \in \Phi$ there \textsl{are no} $\H$ with $|H \backslash B^*| < m$ satisfying
 			\begin{diagram}
 							 &           &\H               \\
 							 &\ruTo^\leq &          &\luTo     \\
@@ -46,6 +46,13 @@ Laskowski's paper \cite{Laskowski} provides a combinatorial proof of quantifier 
 							 &					 &\B
 			\end{diagram}
 		\item For every $\D \in \Gamma$ there \textsl{is some} $\G$ with $|G \backslash B^*| < m$ satisfying
+			\begin{diagram}
+							 &           &\G               \\
+							 &\ruTo^\leq &          &\luTo     \\
+					\B^* &           &					&						&\D \\
+							 &\luTo			 &          &\ruTo     \\
+							 &					 &\B
+			\end{diagram}
 	\end{enumerate}
 \end{Definition}
 
