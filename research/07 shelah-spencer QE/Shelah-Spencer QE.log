@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 MAY 2014 11:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 MAY 2014 11:39
 entering extended mode
 **Shelah-Spencer*QE.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.tex"
@@ -202,7 +202,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 |if you really still need it, you can still get it by loading the |
 |package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
 ===================================================================)
-No file Shelah-Spencer*QE.aux.
+("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -215,6 +215,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
+
 
 LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 28.
 
@@ -242,13 +243,10 @@ Commutative Diagram: try the PostScript option for better results
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3629 strings out of 493922
- 33358 string characters out of 3144898
+ 3631 strings out of 493922
+ 33534 string characters out of 3144898
  97501 words of memory out of 3000000
  6781 multiletter control sequences out of 15000+200000
  13326 words of font info for 50 fonts, out of 3000000 for 9000
