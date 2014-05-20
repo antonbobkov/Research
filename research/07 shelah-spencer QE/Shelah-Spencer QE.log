@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 MAY 2014 11:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 MAY 2014 11:51
 entering extended mode
 **Shelah-Spencer*QE.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.tex"
@@ -225,21 +225,29 @@ LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 33.
 
 LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 35.
 
+
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 71.
+
+
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 71.
+
 [1]
 
-LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 78.
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 92.
 
 
-LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 78.
+LaTeX Warning: Citation `Laskowski' on page 2 undefined on input line 92.
 
+[2]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
+
 Commutative Diagram: try the PostScript option for better results
-[2] ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux")
+[3] ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -247,10 +255,10 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  3629 strings out of 493922
  33527 string characters out of 3144898
- 96501 words of memory out of 3000000
+ 98501 words of memory out of 3000000
  6779 multiletter control sequences out of 15000+200000
  13326 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,9n,32p,566b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer QE.dvi" (2 pages, 9092 bytes).
+Output written on "Shelah-Spencer QE.dvi" (3 pages, 11016 bytes).
