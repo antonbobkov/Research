@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  19 MAY 2014 17:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  19 MAY 2014 17:51
 entering extended mode
 **Flat*graphs*and*dp-rank.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.tex"
@@ -198,28 +198,42 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 | running in pdf mode -- diagonal arrows will work automatically |
 ===================================================================)
+
+! LaTeX Error: Command \S already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \DeclareMathOperator{\S}{S_\alpha}
+                                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Flat graphs and dp-rank.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 26.
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 28.
 
 
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 33.
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 35.
 
 
-LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 37.
+LaTeX Warning: Citation `Laskowski' on page 1 undefined on input line 39.
 
 
 Underfull \vbox (badness 3396) has occurred while \output is active []
@@ -237,16 +251,13 @@ Commutative Diagram: try the PostScript option for better results
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3631 strings out of 493921
- 33585 string characters out of 3144875
+ 3633 strings out of 493921
+ 33606 string characters out of 3144875
  95455 words of memory out of 3000000
- 6781 multiletter control sequences out of 15000+200000
- 12980 words of font info for 49 fonts, out of 3000000 for 9000
+ 6782 multiletter control sequences out of 15000+200000
+ 13326 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,9n,32p,408b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
@@ -258,7 +269,7 @@ ts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
  2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Flat graphs and dp-rank.pdf" (2 pages, 157116 bytes).
+Output written on "Flat graphs and dp-rank.pdf" (2 pages, 159924 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
