@@ -1,0 +1,131 @@
+\documentclass{amsart}
+
+\usepackage{../AMC_style}	
+\usepackage{../Research}
+
+\usepackage{diagrams}
+
+  \newcommand{\A}{\mathcal A}
+  \newcommand{\B}{\mathcal B}
+\renewcommand{\C}{\mathcal C}
+  \newcommand{\D}{\mathcal D}
+\renewcommand{\H}{\mathcal H}
+  \newcommand{\G}{\mathcal G}
+  \newcommand{\M}{\mathcal M}
+
+  \newcommand{\K}{\boldface K_\alpha}
+\renewcommand{\S}{S_\alpha}
+
+\begin{document}
+
+\title{Quantifier elimination in Shelah-Spencer graphs}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+
+\begin{abstract}
+	We simplify \cite{Laskowski} proof of quantifier elimination in Shelah-Spencer graphs.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Laskowski's paper \cite{Laskowski} provides a combinatorial proof of quantifier elimination in Shelah-Spencer graphs. Here we provide a simplification of the proof using only maximal chains and avoiding technical lemmas of sections 3 and 4.
+
+We will use notation of \cite{Laskowski}, in particular things like $\K$, $\delta(\A/\B)$, $X_m(\A)$, $\S$, maximal embedding, etc.
+
+\section{Omitting lemma}
+
+\begin{Definition}
+	Let $\M \models \S$, $\B \in \K$, embedding $f \colon \B \to \M$, $\Phi$ finite subset of $\K$
+	\begin{enumerate}
+		\item Say that $f$ \textsl{omits} $\Phi$ if there are no $\C \in \Phi$ and $g \colon \C \to \M$ extending $f$.
+		\item Say that $f$ \textsl{admits} $\Phi$ if for every $\C \in \Phi$ there is $g \colon \C \to \M$ extending $f$.
+	\end{enumerate}
+\end{Definition}
+
+\begin{Definition}
+	Fix $\B, \C \in \K$, and $m \in \omega$ such that $|C \backslash B| < m$. Define $Z(\B, \C, m)$ to be all $\B^* \in X_m(\B)$ such that there are no $\H$ with $|H \backslash B^*| < m$ satisfying
+		\begin{diagram}
+							&							&\H		\\
+							&\ruLine^\leq	&					&\luLine	\\
+				\B^*	&           	&					&					&\C \\
+							&\luLine			&					&\ruLine	\\
+							&							&\B
+		\end{diagram}
+\end{Definition}
+
+\begin{Definition}
+	Fix $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. Define $Z(\B, \Phi, \Gamma, m)$ to be all $\B^* \in X_m(\B)$ such that	
+	\begin{enumerate}
+		\item For every $\C \in \Phi$ there \textsl{are no} $\H$ with $|H \backslash B^*| < m$ satisfying
+			\begin{diagram}
+								&							&\H		\\
+								&\ruLine^\leq	&					&\luLine	\\
+					\B^*	&           	&					&					&\C \\
+								&\luLine			&					&\ruLine	\\
+								&							&\B
+			\end{diagram}
+		\item For every $\D \in \Gamma$ there \textsl{is some} $\G$ with $|G \backslash B^*| < m$ satisfying
+			\begin{diagram}
+								&							&\G		\\
+								&\ruLine^\leq	&					&\luLine	\\
+					\B^*	&           	&					&					&\D \\
+								&\luLine			&					&\ruLine	\\
+								&							&\B
+			\end{diagram}
+	\end{enumerate}
+\end{Definition}
+
+\begin{Lemma}
+	Let $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. The following are equivalent:
+	\begin{enumerate}
+		\item $f$ omits $\Phi$ and admits $\Gamma$.
+		\item There exists $\B^* \in Z(\B, \Phi, \Gamma, m)$ maximally embeddable into $\M$ over $f$.
+	\end{enumerate}
+\end{Lemma}
+
+\begin{Lemma}
+	Let $\B \in \K$, $\Phi, \Gamma$ finite subsets of $\K$, and $m \in \omega$ such that for each $\C \in \Phi$ or $\C \in \Gamma$ we have $\B \subseteq \C$ and $|C \backslash B| < m$. The following are equivalent:
+	\begin{enumerate}
+		\item $f$ omits $\Phi$ and admits $\Gamma$.
+		\item There exists $\B^* \in Z(\B, \Phi, \Gamma, m)$ maximally embeddable into $\M$ over $f$.
+	\end{enumerate}
+\end{Lemma}
+\begin{proof}
+	$(1) \Rightarrow (2)$ Identify $\B$ with $f(\B)$, i.e. for ease of notation assume that $\B \subset \M$. By remark 5.3 of \cite{Laskowski} there is some $B^* \in X_m(\B)$ maximally embeddable in $\M$ over $f$. Such embedding is unique by Lemma 3.8 of \cite{Laskowski}. Again, we identify $B^*$ with its maximal embedding into $\M$. To show $(2)$ we need to verify that $\B^* \in Z(\B, \Phi, \Gamma, m)$. Suppose not. Two things can go wrong. First, there can be $\H$ with $|H \backslash B^*| < m$ and $\C \in \Phi$ satisfying
+			\begin{diagram}
+								&							&\H		\\
+								&\ruLine^\leq	&					&\luLine	\\
+					\B^*	&           	&					&					&\C \\
+								&\luLine			&					&\ruLine	\\
+								&							&\B
+			\end{diagram}
+			As $\B^* \leq \H$ and $\B \subset \M$ we can embed $\H$ into $\M$ (as $\M \models \S$). But this would witness $\C$ extending $\B$ in $\M$ which is impossible as we assumed that $f$ omits $\Phi$. Another thing that could go wrong is that there could be $\D \in \Gamma$ and no $\G$ with $|G \backslash B^*| < m$ satisfying
+			\begin{diagram}
+								&							&\G		\\
+								&\ruLine^\leq	&					&\luLine	\\
+					\B^*	&           	&					&					&\D \\
+								&\luLine			&					&\ruLine	\\
+								&							&\B
+			\end{diagram}
+			As $f$ admits 
+\end{proof}
+
+\begin{thebibliography}{9}
+
+\bibitem{stable_graphs}
+	Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
+
+\bibitem{infinite_megner}
+	Aharoni, Ron and Berger, Eli (2009). "Menger's Theorem for infinite graphs". \textit{Inventiones Mathematicae} 176: 1–62
+	
+\bibitem{simon_dp_minimal}
+	P. Simon, \textit{On dp-minimal ordered structures}, J. Symbolic Logic 76 (2011), no. 2, 448–460.
+
+%\bibitem{diestel}
+%	Reinhard Diestel. \textit{Graph Theory}, volume 173 of \textit{Grad. Texts in Math.} Springer, 2005.
+
+\end{thebibliography}
+
+\end{document}
