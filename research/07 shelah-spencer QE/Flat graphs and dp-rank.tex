@@ -39,9 +39,11 @@ Laskowski's paper \cite{Laskowski} provides a combinatorial proof of quantifier 
 	\begin{enumerate}
 		\item For every $\C \in \Phi$ there are \textsl{no} $\H$ with $|H \backslash C^*| < m$ satisfying
 			\begin{diagram}
-							 &           &x \in X \phantom{ \ni x}        &              \\
-							 &\ruTo^\phi &         &\luTo^\psi     \\
-				a \in U&           &\pile{\rTo^{\invert{\psi} \circ \phi} \\ \lTo_{\invert{\phi} \circ \psi}}         &       &V \ni b
+							 &           &\H               \\
+							 &\ruTo^\leq &          &\luTo     \\
+						\B*&           &					&						&\C \\
+							 &\luTo			 &          &\ruTo     \\
+							 &					 &\B
 			\end{diagram}
 		\item For every $\D \in \Gamma$ there \textsl{is} some $\G$ with $|G \backslash C^*| < m$ satisfying
 	\end{enumerate}
