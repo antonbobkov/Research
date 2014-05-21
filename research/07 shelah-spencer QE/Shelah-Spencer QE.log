@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.3)  20 MAY 2014 17:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  21 MAY 2014 11:23
 entering extended mode
 **Shelah-Spencer*QE.tex
 ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.tex"
@@ -211,12 +211,12 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+ [1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 Commutative Diagram: try the PostScript option for better results
 [3] ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux") ) 
 Here is how much of TeX's memory you used:
  3633 strings out of 493921
- 33519 string characters out of 3144877
+ 33519 string characters out of 3144875
  99455 words of memory out of 3000000
  6781 multiletter control sequences out of 15000+200000
  13678 words of font info for 51 fonts, out of 3000000 for 9000
@@ -236,7 +236,7 @@ m/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Shelah-Spencer QE.pdf" (3 pages, 236966 bytes).
+Output written on "Shelah-Spencer QE.pdf" (3 pages, 236981 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
