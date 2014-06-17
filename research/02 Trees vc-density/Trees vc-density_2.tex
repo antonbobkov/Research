@@ -106,11 +106,15 @@ Here we work with colored trees. There are finitely many colors represented by u
 \end{proof}
 
 \begin{Definition}
-	For $c_1 > c_2$ in a tree $T$ we define an interval
+	For $c_1 > c_2$ in a tree $T$ we define an (open) interval
 	\begin{align*}
 		(c_1, c_2) = \{t \in T \mid c_1 > t \text{ and } c_2 \ngeq t\}
 	\end{align*}
 \end{Definition}
+
+\begin{Corollary}
+	Fix $a,b \in (c_1, c_2)$ s.t. $a \equiv_{c_1c_2} b$. Denote $D = T - (c_1, c_2)$. Then $a \equiv_D b$.
+\end{Corollary}
 
 
 
