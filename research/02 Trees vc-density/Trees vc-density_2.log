@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  17 JUN 2014 12:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  17 JUN 2014 13:02
 entering extended mode
 **Trees*vc-density_2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density_2.tex"
@@ -407,14 +407,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [4] [5] [6] [7] [8] [9]
-[10] [11] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density_2.aux") ) 
+[10] [11] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density_2.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  11165 strings out of 493922
  212643 string characters out of 3144899
- 375962 words of memory out of 3000000
+ 376936 words of memory out of 3000000
  14095 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,809b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density_2.dvi" (11 pages, 179940 bytes).
+Output written on "Trees vc-density_2.dvi" (11 pages, 180544 bytes).
