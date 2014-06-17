@@ -394,4 +394,93 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbo
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) ABD: EveryShipout initializing macros
+
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 27.
+
+
+LaTeX Warning: Citation `parigot_trees' on page 1 undefined on input line 35.
+
+
+LaTeX Warning: Citation `simon_dp_min' on page 1 undefined on input line 35.
+
+
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 35.
+
+
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 61.
+
+[1]
+
+LaTeX Warning: Citation `vc_density' on page 2 undefined on input line 82.
+
+[2]
+
+LaTeX Warning: Reference `lm_subdivision' on page 3 undefined on input line 186.
+
+[3] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex"))
+
+LaTeX Warning: Reference `ex_cone' on page 4 undefined on input line 239.
+
+[4] [5] [6]
+
+LaTeX Warning: Reference `lm_subdivision' on page 7 undefined on input line 266.
+
+
+LaTeX Warning: Reference `cor_type_count' on page 7 undefined on input line 298.
+
+[7]
+
+LaTeX Warning: Reference `nt_type_count' on page 8 undefined on input line 301.
+
+
+LaTeX Warning: Reference `cor_type_count' on page 8 undefined on input line 323.
+
+[8]
+
+LaTeX Warning: Reference `lm_meet' on page 9 undefined on input line 356.
+
+
+LaTeX Warning: Reference `nt_type_count' on page 9 undefined on input line 382.
+
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+ [9]
+
+LaTeX Warning: Reference `lm_partition_bound' on page 10 undefined on input line 393.
+
+
+LaTeX Warning: Reference `lm_partition_bound' on page 10 undefined on input line 409.
+
+[10] [11] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density_2.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 11163 strings out of 493922
+ 212467 string characters out of 3144899
+ 374586 words of memory out of 3000000
+ 14095 multiletter control sequences out of 15000+200000
+ 13362 words of font info for 50 fonts, out of 3000000 for 9000
+ 1002 hyphenation exceptions out of 8191
+ 64i,19n,75p,809b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on "Trees vc-density_2.dvi" (11 pages, 179628 bytes).
