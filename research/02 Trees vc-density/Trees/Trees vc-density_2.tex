@@ -66,8 +66,9 @@ Define complexity of a formula by induction:
 A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas with fixed complexity and the number of free variables. We will use the following notation for types and Stone Space:
 \begin{Definition}
 	\begin{itemize}
-		\item Let $n$ be naturals, $\B$ a structure and $a$ a tuple in $\B$. Then $\tp^n_{\B}(a)$ will stand for all the formulas of complexity $n$ that are true of $a$ in $\B$. Note that as there are finitely many of them and complexity
-		\item Let $n,m$ be naturals, $\B$ a structure and $A$ a parameter set. Then $S^n_{\B, m}(A)$ will stand for types
+		\item Let $n$ be naturals, $\B$ a structure, $A$ a finite parameter set and $a$ a tuple in $\B$. Then $\tp^n_{\B}(a/A)$ will stand for all the $A$-formulas of complexity $n$ that are true of $a$ in $\B$. Note that as there are finitely many of them and complexity is invariant under conjunctions we can just associate a single formula describing this type.
+		\item $$
+		\item Let $n,m$ be naturals, $\B$ a structure and $A$ a parameter set. Then $S^n_{\B, m}(A)$ will stand for all types 
 	\end{itemize}
 \end{Definition}
 
