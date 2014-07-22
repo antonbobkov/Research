@@ -1,0 +1,457 @@
+\documentclass{amsart}
+
+\usepackage{../../AMC_style}	
+\usepackage{../../Research}
+
+\usepackage{tikz}
+
+\DeclareMathOperator{\TT}{\boldface T}
+\DeclareMathOperator{\A}{\boldface A}
+\DeclareMathOperator{\B}{\boldface B}
+\DeclareMathOperator{\PR}{P}
+\DeclareMathOperator{\cl}{cl}
+\newcommand{\CS}{\mathcal S}
+
+\DeclareMathOperator{\I}{\mathcal I}
+\DeclareMathOperator{\J}{\mathcal J}
+
+\begin{document}
+
+\title{vc-density for trees}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+%more info
+
+\begin{abstract}
+	We show that for the theory of infinite trees we have $\vc(n) = n$ for all $n$.
+\end{abstract}
+
+\maketitle
+
+VC density was introduced in \cite{vc_density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In a NIP theory we can define a VC function
+
+\begin{align*}
+	\vc : \N \arr \N
+\end{align*}
+
+Where $vc(n)$ measures complexity of definable sets $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with that property are known to be dp-minimal, i.e. having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
+
+In this paper we work with infinite trees viewed as posets. Parigot in \cite{parigot_trees} showed that such theory is NIP. This result was strengthened by Simon in \cite{simon_dp_min} showing that trees are dp-minimal. \cite{vc_density} has the following problem 
+
+\begin{Problem} (\cite{vc_density} p. 47)
+	Determine the VC density function of each (infinite) tree.
+\end{Problem}
+
+Here we settle this question by showing that theory of trees has $\vc(n) = n$.
+
+\section{Preliminaries}
+%tree finite? meet? disconnected?
+%MAYBE: Work in connected trees for simplicity!
+%MAYBE: Define complexity?
+%inequality directions
+We use notation $a \in T^n$ for tuples of size $n$. For variable $x$ or tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
+
+We work with finite relational languages. Given a formula we can define its complexity $n$ as the depth of quantifiers used to build up the formula. See for example \cite{ynm_notes} Definition 2D.4 pg.72. $S^n_{\A}(x)$ stands for all the types made up of formulas of complexity at most $n$ in a structure $\A$. $\tp^n_{\B}(a)$ stands for such a type. For two structures $\A, \B$ we say $\A \equiv_n \B$ if two structures agree on all sentences of complexity at most $n$.
+
+\begin{Note}
+	Saying that $(\A, a_1) \equiv_n (\A, a_2)$ is the same as saying that $a_1$ and $a_2$ have the same $n$-complexity type in $\A$.
+\end{Note}
+%Define meet more precisely?
+
+Language for the trees consists of a single binary predicate $\{\leq\}$. Theory of trees states that $\leq$ defines a partial order and for every element $a$ we have $\{x \mid x < a\}$ a linear order. Theory of meet trees requires that in addition tree is closed under meet operation, i.e. for any $a, b$ in the same connected component there exists the greatest upper bound for elements both $\leq$ than $a$ and $b$. In this paper we will work with colored trees, where we simply add a finite number of unary predicates to our language. Note that we allow our trees to be disconnected or finite unless otherwise stated.
+
+For visualization purposes we assume trees grow upwards, with smaller elements on the bottom and larger elements on the top. If $a < b$ we will say that $a$ is below $b$ and $b$ is above $a$.
+
+For completeness we also present definition of VC function.
+One should refer to \cite{vc_density} for more details.
+Suppose we have a collection $\CS$ of subsets of $X$. We define a \emph{shatter function} $\pi_\CS(n)$
+
+\begin{align*}
+	\pi_\CS(n) = \max \{|A \cap \CS| : A \subset X \text{ and } |A| = n\}
+\end{align*}
+
+Sauer's Lemma asserts that asymptotically $\pi_\CS$ is either $2^n$ or polynomial.
+In the polynomial case we define VC density of $\CS$ to be power of polynomial that bounds $\pi_\CS$.
+More formally 
+\begin{align*}
+	\vc(\CS) = \limsup_{n \to \infty}\frac{\log \pi_\CS}{\log n}
+\end{align*}
+
+Given a model $M \models T$ and a formula $\phi(x, y)$ we define 
+
+\begin{align*}
+	\CS_\phi &= \{\phi(M^{|n|}, b) : b \in M^{|y|}\} \\
+	\vc(\phi) &=  \vc(\CS_\phi)
+\end{align*}
+
+One has to check that this definition is independent of realization of $T$, see \cite{vc_density}, Lemma 3.2. For a theory $T$ we define the VC function
+
+\begin{align*}
+	\vc(n) = \sup \{\vc(\phi(x, y)) : |x| = n\}
+\end{align*}
+
+\section{Proper Subdivisions}
+% empty ok?
+\begin{Definition}
+	Let $\A$, $\B$, $\TT$ be models in (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
+\end{Definition}
+
+\begin{Definition}
+	$(\A, \B)$ subdivision of $\TT$ is called \emph{$n$-proper} if for all $p,q \in \N$, for all $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ we have
+	\begin{align*}
+		(\A, a_1) &\equiv_n (\A, a_2) \\
+		(\B, b_1) &\equiv_n (\B, b_2)
+	\end{align*}
+	then
+	\begin{align*}
+		(\TT, a_1, b_1) \equiv_n (\TT, a_2, b_2)
+	\end{align*}
+\end{Definition}
+
+\begin{Definition}
+	$(\A, \B)$ subdivision of $\TT$ is called \emph{proper} if it is $n$-proper for all $n \in \N$.
+\end{Definition}
+
+\begin{Lemma} \label{lm_subdivision}
+	Consider a subdivision $(\A, \B)$ of $\TT$. If it is $0$-proper then it is proper.
+\end{Lemma}
+
+%only L_A L_B required to be relational
+\begin{proof}
+	% why is one existential quantifier enough?
+	Prove the subdivision is $n$-proper for all $n$ by induction. Case $n = 0$ is given by the assumption. Suppose $n = k + 1$ and we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim i.e. $\TT \models \phi^k(a, a_1, b_1)$. $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
+	\begin{align*}
+		\A \models \exists x \, \tp^k_{\A}(x, a_1) = \pp
+	\end{align*}
+	Formula $\tp^k_{\A}(x, a_1) = \pp$ is of complexity $k$ so $\exists x \, \tp^k_{\A}(x, a_1) = \pp$ is of complexity $k+1$ by inductive hypothesis we have
+	\begin{align*}
+		\A \models \exists x \, \tp^k_{\A}(x, a_2) = \pp
+	\end{align*}
+	Let $a'$ witness this existential claim so that  
+	\begin{align*}
+		\tp^k_{\A}(a', a_2) &= \pp \\
+		\tp^k_{\A}(a', a_2) &= \tp^k_{\A}(a, a_1) \\
+		(\A, a', a_2) &\equiv_k (\A, a, a_1)
+	\end{align*}
+	% careful with induction!
+	by inductive assumption we have
+	\begin{align*}
+		(\TT, a, a_1, b_1) &\equiv_k (\TT, a', a_2, b_2) \\
+		\TT &\models \phi^k(a', a_2, b_2) & \text {as } \TT &\models \phi^k(a, a_1, b_1)\\
+		\TT &\models \exists x \phi^k(x, a_2, b_2)
+	\end{align*}
+\end{proof}
+
+We use this lemma for colored trees. Suppose we have $\TT$ to be a model of a colored tree in some language $\LL = \{\leq, \ldots\}$ and $\A, \B$ be in some languages $\LL_A, \LL_B$ which will be expands of $\LL$, with $\A, \B$ substructures of $\TT$ as reducts to $\LL$. In this case we'll refer to $(\A, \B)$ as a \emph{proper subdivision} (of $\TT$).
+
+\begin{Example}
+	Suppose a tree consists of two connected components $C_1, C_2$. Then $(C_1, \leq)$ and $(C_2, \leq)$ form a proper subdivision.
+\end{Example}
+
+\begin{Example} \label{ex_cone}
+	Fix $\TT$ and $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
+\end{Example}
+
+\begin{proof}
+	By Lemma \ref{lm_subdivision} we only need to check that it is $0$-proper. Suppose we have 
+	\begin{align*}
+		a &= (a_1, a_2, \ldots, a_p) \in A^p \\
+		a' &= (a_1', a_2', \ldots, a_p') \in A^p  \\
+		b &= (b_1, b_2, \ldots, b_q) \in B^q  \\
+		b' &= (b_1', b_2', \ldots, b_q') \in B^q 
+	\end{align*}
+	with $(\A, a) \equiv_0 (\A, a')$ and $(\B, b) \equiv_0 (\B, b')$. We need to make sure that $ab$ has the same quantifier free type as $a'b'$. Any two elements in $T$ can be related in the four following ways
+	\begin{align*}
+		x &= y \\
+		x &< y \\
+		x &> y \\
+		x&,y \text{ are incomparable}
+	\end{align*}
+	We need to check that the same relations hold for pairs of $(a_i, b_j), (a_i', b_j')$ for all $i,j$.
+	
+	\begin{itemize}
+		\item It is impossible that $a_i = b_j$ as they come from disjoint sets.
+		\item It is impossible $a_i > b_j$
+		\item Suppose $a_i < b_j$. This forces $a_i \in S$ thus $a_i' \in S$ and $a_i' < b_j'$ 
+		\item Suppose $a_i$ and $b_j$ are incomparable. This forces $a_i \notin S$ so $a_i' \notin S$ making $a_i', b_j'$ incomparable.
+	\end{itemize}
+\end{proof}
+
+\section{Intervals}
+
+\begin{Definition}
+	For $c_1 > c_2$ in a tree $\T$ we define an (open) interval
+	\begin{align*}
+		(c_1, c_2) = \{t \in T \mid c_1 > t \text{ and } c_2 \ngeq t\}
+	\end{align*}
+	We also allow endpoints to be infinite, $c_1 = \neg \infty$ or $c_2 = \infty$.
+\end{Definition}
+
+\begin{Lemma} \label{lm_interval}
+	Suppose we have $I = (c_1, c_2)$, $a,b \in I$ and $a \equiv^n_{c_1c_2} b$. Denote $D = T - I$. Then $a \equiv^n_D b$.
+\end{Lemma}
+
+To prove this, first we do the following two lemmas:
+
+\begin{Lemma}
+	Suppose we have $I = (-\infty, c_2)$, $a,b \in I$ and $a \equiv^n_{c_2} b$. Denote $U = T - I$. Then $a \equiv^n_U b$.
+\end{Lemma}
+
+\begin{proof} \label{lm_ui}
+	Consider subdivision as in the example \ref{ex_cone} and fix a tuple $c \in U^{|c|}$. Universe and relations in $\A$ are $c_2$-definable. Then $a \equiv^n_{c_2} b$ implies that $(\A, a) \equiv_n (\A, b)$. We automatically have that $(\B, c) \equiv_n (\B, c)$. Thus by properness we get $T \models a \equiv^n_c b$. As choice of $c$ was arbitrary we are done.
+\end{proof}
+
+\begin{Lemma} \label{lm_li}
+	Suppose we have $I = (c_1, \infty)$, $a,b \in I$ and $a \equiv^n_{c_1} b$. Denote $L = T - I$. Then $a \equiv^n_L b$.
+\end{Lemma}
+\begin{proof}
+	Similar to the proof above.
+\end{proof}
+
+\begin{proof} (of lemma \ref{lm_interval})
+	Easy application of lemmas above. Pick an arbitrary tuple $d \in D^{|d|}$ and partition it as $d = (l, u)$ such that $l \in L^{|l|}$ and $u \in U^{|u|}$ (where $L$ and $U$ are as in the lemmas above). Then 
+	\begin{align*}
+		a &\equiv^n_{c_1} b \\
+		a &\equiv^n_{c_2l} b 		&\text{ by lemma \ref{lm_li}}\\
+		la &\equiv^n_{c_2} lb \\
+		la &\equiv^n_{c_2u} lb  &\text{ by lemma \ref{lm_ui}}\\
+		a &\equiv^n_{c_2lu} b \\
+		a &\equiv^n_{c_2lu} b \\
+		a &\equiv^n_{d} b
+	\end{align*}
+\end{proof}
+
+\begin{Note}
+	If we weren't restricting complexity of type, this lemma could be proven in an easier way by modifying automorphism sending $a$ to $b$. However to have a uniform bound on complexity we need to use a finer analysis involving proper subdivisions.
+\end{Note}
+
+Next we state a generalization of this result for a collection of disjoint intervals. For technical reasons we will allow some of the intervals to be single points $\{c\}$. This will only required for computing vc-density for formulas $\phi(x, y)$ with $|y| > 1$.
+\begin{Corollary} \label{cor_disj_int}
+	Let $I_i$ with $i \in [1..m]$ be a collection of disjoint sets where each set is either interval $(l_i, u_i)$ or a point $\{c_i\}$. We denote $E_i$ denote endpoints of $I_i$. If $I = (l_i, u_i)$ then $E_i = \{l_i, u_i\}$ and if $I = \{c_i\}$ then $E_i = \{c_i\}$. Also we have tuples
+	\begin{align*}
+		a &= (a_1, a_2, \ldots, a_m) \\
+		b &= (b_1, b_2, \ldots, b_m) \\
+	\end{align*}
+	 s.t. $a_i \in I_i^{|a_i|}$ and $b_i \in I_i^{|b_i|}$ for all $i \in [1..m]$ (i.e every $a_i$ and $b_i$ are also tuples). Moreover we require
+	\begin{align*}
+		a_i \equiv^n_{E_i} b_i \text{ for all } i \in [1..m]
+	\end{align*}
+	Let $E = \bigcup_i E_i$ be a collection of all endpoints. Then we $a \equiv^n_E b$.
+\end{Corollary}
+
+\begin{proof}
+	We apply lemma $m$ times - one for each tuple. For example assume $I_1 = (l_1, u_1)$ and denote $C_1 = T - I_1$ (case for when $I_i$ is singleton is trivial). Then
+	\begin{align*}
+		a_1 &\equiv^n_{l_1u_1} b_1 \\
+		a_1 &\equiv^n_{C_1} b_1 \\
+		a_1 &\equiv^n_{Ea_2a_3\ldots a_m} b_1 \\
+		a_1a_2a_3\ldots a_m &\equiv^n_{E} b_1a_2a_3\ldots a_m
+	\end{align*}
+	Denote $C_2 = T - I_2$ and assume $I_2 = (l_2, u_2)$. Then
+	\begin{align*} 
+		a_2 &\equiv^n_{l_2u_2} b_2 \\
+		a_2 &\equiv^n_{C_2} b_2 \\
+		a_2 &\equiv^n_{Eb_1a_3\ldots a_m} b_2 \\
+		b_1a_2a_3\ldots a_m &\equiv^n_{E} b_1b_2a_3\ldots a_m
+	\end{align*}
+	Continuing in such fashion we get
+	\begin{align*}
+		a = a_1a_2a_3\ldots a_m &\equiv^n_{E} \\
+		    b_1a_2a_3\ldots a_m &\equiv^n_{E} \\
+		    b_1b_2b_3\ldots a_m &\equiv^n_{E} \\
+				\ldots \\
+				b_1b_2b_3\ldots b_m &= b
+	\end{align*}
+	i.e. $a \equiv^n_{E} b$ as needed.
+\end{proof}
+
+
+\section {Partition into intervals}
+
+Here we show that every tree can be partitioned into intervals with prescribed endpoints. To do this we must restrict our attention to meet trees (closed under meets). Given a finite subset $B$ of a meet tree $T$ let $\cl(B)$ denote its closure under meets.
+
+% write an actual proof!
+\begin{Lemma} \label{lm_meet}
+	Suppose $S \subseteq T$ is a non-empty finite subset of size $n$ in a meet tree and $S' = \cl(S)$ its closure under meets. Then $|S'| \leq 2n - 1$.
+\end{Lemma}
+\begin{proof}
+	We prove by induction on $n$. Base case $n = 1$ is clear. Suppose we have $S$ of size $k$ with closure of size at most $2k - 1$. Take a new point and look at its meets with all the elements of $S$. Pick the largest one. That is the only element we need to add to $S'$ to make sure the set is closed under meets.
+\end{proof}
+
+This way we make sure the set grows at most linearly when closed under meets.
+
+\begin{Lemma}
+	Let $C$ be a non-empty finite set closed under meets in a tree $T$. Then there is a collection of disjoint intervals $\{I_i = (a_i, b_i)\}_{1..n}$ such that
+	\begin{enumerate}
+		\item endpoints are either in $C$ or infinite.
+		\item $n = |C| + 1$.
+		\item $I_i$ partition $T - C$.
+	\end{enumerate}
+\end{Lemma}
+
+\begin{proof}
+	For every $c \in C$ define $c^+$ to be supremum of all elements of $C$ greater than $c$. If there aren't any, let $c^+ = \infty$. Also let $c^-$ to be the supremum of elements in $C$. Our desired collection of intervals is $(c, c^+)_{c \in C}, (-\infty, c^-)$.
+\end{proof}
+%add picture
+
+\section{Type counting}
+
+\begin{Definition} For $\phi(x, y)$, $A \subseteq T^{|x|}$ and $B \subseteq T^{|y|}$
+\begin{itemize}
+	\item Let $\phi(A, b) = \{a \in A \mid \phi(a, b)\} \subseteq A$
+	\item Let $\phi(A, B) = \{\phi(A, b) \mid b \in B\} \subseteq \PP(A)$	
+\end{itemize}
+\end{Definition}
+That is $\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with parameters from $B$.
+
+\begin{Note}
+	For $A_1 \subseteq A_2$ we have $|\phi(A_1, B)| \leq |\phi(A_2, B)|$.
+\end{Note}
+
+\begin{Definition} \label{def_type_count}
+	Fix a (finite relational) language $\LL_B$, and $n$, $|y|$. Let $N = N(n, |y|, \LL_B)$ be smallest number such that for any structure $\B$ in $\LL_B$ we have $|S^n_{\B}(y)| \leq N$. Note the following easy inequalities
+	\begin{align*}
+		n \leq m &\Rightarrow N(n, |y|, \LL_B) \leq N(m, |y|, \LL_B) \\
+		|y| \leq |z| &\Rightarrow N(n, |y|, \LL_B) \leq N(n, |z|, \LL_B) \\
+		\LL_A \subseteq \LL_B &\Rightarrow N(n, |y|, \LL_A) \leq N(n, |y|, \LL_B)
+	\end{align*}
+	\begin{align*}
+		N(n, |y|, \LL_B) \cdot N(n, |z|, \LL_B) &\leq N(n, |y|+|z|, \LL_B) 
+	\end{align*}
+\end{Definition}
+
+\begin{proof}
+	Take some $a \in A^{|x|}$. We have $(\B, b_1) \equiv_n (\B, b_2)$ and (trivially) $(\A, a) \equiv_n (\A, a)$. Thus by the Lemma \ref{lm_subdivision} we have $(\TT, a, b_1) \equiv_n (\TT, a, b_2)$ so $\phi(a, b_1) \iff \phi(a, b_2)$. Since $a$ was arbitrary we have $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$.
+\end{proof}
+
+\begin{Lemma}
+	Suppose $\phi(x,y)$ is a formula of complexity $n$ in language $\LL$ of trees. Let $I = (c_1, c_2)$ an interval and let its compliment be $D$. Then  
+	\begin{align*}
+		|\phi(D^{|x|}, I^{|y|})| < N(n, |y|, \LL')
+	\end{align*}
+	where $\LL'$ is $\LL$ with two extra constant symbols.
+\end{Lemma}
+
+Note that the bound provided is uniform.
+
+\begin{proof}
+	Fix $a, b \in I^{|y|}$. Then if $a \equiv^n_{c_1c_2} b$ then $\phi(D^{|x|}, a) = \phi(D^{|x|}, b)$ by lemma \ref{pew} Thus $|\phi(D^{|x|}, I^{|y|})|$ is bounded by $|S^n(y/c_1c_2)|$.
+\end{proof}
+
+We extract a similar result from Lemma \ref{pewpew}.
+
+\begin{Lemma}
+	Suppose $\phi(x,y)$ is a formula of complexity $n$. Let $I_i$ with $i \in [1..m]$ be a disjoint collection of set that are either intervals or points. Denote collection of all endpoints by $E$. Moreover fix naturals $k_1, \ldots k_m$ such that $|y| = k_1 + k_2 + \ldots + k_n$. Then
+	\begin{align*}
+		|\phi(E^{|x|}, I_1^{k_1} \times I_2^{k_2} \times \ldots \times I_m^{k_m})| \leq N(n, |y|, \LL')
+	\end{align*}
+	where $\LL'$ is $\LL$ with two extra constant symbols.
+\end{Lemma}
+
+\begin{proof}
+	Fix $a_i, b_i \in I_i^{k_i}$ for each $i$ such that $a_i \equiv^n_{E_i} b_i$ where $E_i$ is endpoints of $I_i$. Then by lemma \ref{pewpew} $\phi(E^{|x|}, a_1, a_2, \ldots, a_m) = \phi(E^{|x|}, b_1, b_2, \ldots, b_m)$. This implies that
+	\begin{align*}
+		|\phi(E^{|x|}, I_1^{k_1} \times I_2^{k_2} \times \ldots \times I_m^{k_m})|
+		%notation!
+		&\leq |S^n_{k_1}(E_1)| \cdot |S^n_{k_2}(E_2)| \cdot \ldots \cdot |S^n_{k_m}(E_m)| \leq \\
+		&\leq N(n, k_1, \LL') \cdot N(n, k_2, \LL') \cdot \ldots \cdot N(n, k_m, \LL')  \leq \\
+		&\leq N(n, k_1 + k_2 + \ldots + k_m, \LL') = N(n, |y|, \LL')
+	\end{align*}
+\end{proof}
+
+\section{Proof for one-dimensional case}
+
+To demonstrate our method in a simple setting we present the computation of vc-density for formulas $\phi(x, y)$ with $|x| = |y| = 1$ in an infinite (colored) meet tree $\TT$. Let $B$ be an arbitrary finite set in $T$. We would like to show that $|\phi(B, T)| = O(|B|)$. This would show that vc-density of $\phi$ is 1. First let $C = \cl(B)$. By Lemma \ref{lm_meet} we have $|C| \leq 2|B| + 1$. Using Lemma \ref{pew} we have a collection of intervals $\{I_i\}_{1..|C|}$ such that $T - C = \bigsqcup I_i$. Observe
+\begin{align*}
+	\phi(C,T) = \phi(C, \bigsqcup I_i \sqcup C) = \bigcup \phi(C, I_i) \cup \phi(C, C)
+\end{align*}
+Thus
+\begin{align*}
+ |\phi(C,T)| = \left|\bigcup \phi(C, I_i) \cup \phi(C, C)\right| \leq \sum |\phi(C, I_i)| + |\phi(C, C)| = \sum_{1..|C|} |\phi(C, I_i)| + |C|
+\end{align*}
+Let $N = N(n_\phi, 1, \LL')$. Now observe that by Lemma \ref{pew} $|\phi(C, I_i)| \leq N$ for any $i$. Thus
+\begin{align*}
+	|\phi(C,T)| \leq \sum_{1..|C|} |\phi(C, I_i)| + |C| \leq \sum_{1..|C|} N + |C| = |C|(N+1)
+\end{align*}
+Finally, as $B \subseteq C$ we have $|\phi(B,T)| \leq |\phi(C,T)|$ so
+\begin{align*}
+	|\phi(B,T)| \leq |\phi(C,T)| \leq |C|(N+1) \leq (2|B| + 1)(N + 1)
+\end{align*}
+As $N$ is independent from $B$, this finishes the proof.
+
+\section{Main proof}
+
+Basic idea for the proof is that we are able to divide our parameter space into $O(n)$ many intervals. Each of $q$ parameters can come from any of those $O(n)$ intervals giving us $O(n)^q = O(n^q)$ many choices for parameter configuration. With every parameter coming from a fixed partition the number of definable sets is constant and in fact is uniformly bounded by some $N$. This gives us $N O(n^q) = O(n^q)$ possibilities for different definable sets.
+
+\begin{Theorem}
+	Let $\TT$ be an infinite (colored) meet tree and $\phi(x, y)$ a formula with $|x| = p$ and $|y| = q$. Then $\vc(\phi) \leq q$.
+\end{Theorem}
+
+\begin{proof}
+	Pick a finite subset of $S_0 \subset T^p$ of size $n$. Let $S_1 \subset T$ consist of coordinates of $S_0$. Let $S \subset T$ be a closure of $S_1$ under meets. Using Lemma \ref{lm_meet} we have $|S| \leq 2|S_1| \leq 2p|S_0| = 2pn = O(n)$. We have $S_0 \subseteq S^p$, so $|\phi(S_0, T^q)| \leq |\phi(S^p, T^q)|$. Thus it is enough to show $|\phi(S^p, T^q)| = O(n^q)$.
+% type up and refence the used inequality 	$S_0 \subseteq S^p$, so $|\phi(S_0, T^q)| \leq |\phi(S^p, T^q)|$
+	Using Lemma \ref{boom} construct collection of intervals $\{I_i\}_{i \in \I}$ for the set $S$. We have $|\I| = 2|S| + 1$. Extend this collection of intervals by adding singletons $\{s\}$ for each $s \in S$. Denote new collection $\{I_j\}_{j \in \J}$. We have $|\J| = |\I| + |S| = 3|S| + 1 \leq 6pn + 1 = O(n)$. We now have that $\{I_j\}_{j \in \J}$ partitions $T$ i.e. $T = \bigsqcup_{j \in \J} I_j$.
+	
+	Basic idea for the general case $q \geq 1$ is that we have $q$ parameters and $|J| = O(n)$ partitions to pick each parameter from giving us $|J|^q = O(n^q)$ choices for parameter configuration, each giving uniformly constant number of definable subsets of $S$. (If every parameter is picked from a fixed partition, Lemma \ref{lm_partition_bound} provides a uniform bound). This yields $\vc(\phi) \leq q$ as needed. The rest of the proof is stating this idea formally.
+	
+	For $(j_1, j_2, \ldots j_q) = \vec j \in \J^q$ denote 
+	\begin{align*}
+		I_{\vec j} = I_{j_1} \times I_{j_2} \times \ldots \times I_{j_q}
+	\end{align*}
+	Then we have the following identity
+	\begin{align*}
+		T^q = (\bigsqcup_{j \in \J} I_j)^q = \bigsqcup_{\vec j \in \J^q} I_{\vec j}
+	\end{align*}
+	Thus we have that $\{I_{\vec j}\}_{\vec j \in \J^q}$ partition $T^q$. Compute
+	\begin{align*}
+		|\phi(S^p, T^q)|
+		&= \left|\bigcup_{\vec j \in \J^q} \phi(S^p, I_{\vec j}) \right| \leq \\
+		&\leq \sum_{\vec j \in \J^q} |\phi(S^p, I_{\vec j})|
+	\end{align*}
+	We can bound $|\phi(S^p, I_{\vec j})|$ uniformly using Lemma \ref{lm_partition_bound}. $\{I_j\}_{j \in \J}$ satisfies the requirements of the lemma and $I_{\vec j}$ looks like the argument in the lemma after possibly permuting some variables in $\phi$. Applying the lemma we get
+	\begin{align*}
+		|\phi(S^p, I_{\vec j})| \leq N \left(= N(\text{complexity of $\phi$}, q, \LL')\right)
+	\end{align*}
+	with $N$ only depending on $q$ and complexity of $\phi$. We complete our computation
+	\begin{align*}
+		|\phi(S^p, T^q)|
+		&\leq \sum_{\vec j \in \J^q} |\phi(S^p, I_{\vec j})| \leq \\
+		&\leq \sum_{\vec j \in \J^q} N \leq \\
+		&\leq |\J^q| N \leq \\
+		&\leq (6pn + 1)^q N = O(n^q)
+	\end{align*}
+	\end{proof}
+	\begin{Corollary}
+		In the theory of infinite (colored) meet trees we have $vc(n) = n$ for all $n$.
+	\end{Corollary}
+	\begin{Corollary}
+		In the theory of infinite (colored) trees we have $vc(n) = n$ for all $n$.
+	\end{Corollary}
+	\begin{proof}
+		Let $\TT$ be a tree and $\TT'$ its closure under meets. $\TT$ can be interpreted as a subset of $\TT'$ using an extra color.
+	\end{proof}
+
+\begin{thebibliography}{9}
+
+\bibitem{vc_density}
+	M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+	\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+
+\bibitem{simon_dp_min}
+	P. Simon,
+	\textit{On dp-minimal ordered structures},
+	J. Symbolic Logic 76 (2011), no. 2, 448-460
+
+\bibitem{parigot_trees}
+	Michel Parigot.
+	Th\'eories d'arbres.
+	\textit{Journal of Symbolic Logic}, 47, 1982.
+	
+\bibitem{ynm_notes}
+	Yiannis N. Moschovakis.
+	Logic notes.
+	http://www.math.ucla.edu/~ynm/lectures/lnl.pdf
+	
+\end{thebibliography}
+
+\end{document}

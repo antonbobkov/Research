@@ -9,6 +9,7 @@
 \DeclareMathOperator{\A}{\boldface A}
 \DeclareMathOperator{\B}{\boldface B}
 \DeclareMathOperator{\PR}{P}
+\DeclareMathOperator{\cl}{cl}
 \newcommand{\CS}{\mathcal S}
 
 \begin{document}
@@ -44,7 +45,7 @@ Here we settle this question by showing that theory of trees has $\vc(n) = n$.
 %tree finite? meet? disconnected?
 %Work in connected trees for simplicity?
 %Work in non-meet trees for generality?
-%Hodges M.T. for reference
+%Define complexity!
 %inequality directions
 We use notation $a \in T^n$ for tuples of size $n$. For variable $x$ or tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
 
@@ -55,7 +56,7 @@ We work with finite relational languages. Given a formula we can define its comp
 \end{Note}
 %Define meet more precisely?
 
-Language for the trees consists of a single binary predicate $\{\leq\}$. Theory of trees states that $\leq$ defines a partial order and for every element $a$ we have $\{x \mid x < a\}$ a linear order. Theory of meet trees requires that in addition tree is closed under meet operation, i.e. for any $a, b$ in the same connected component there exists the greatest upper bound for elements both $\leq$ than $a$ and $b$. Note that we allow our trees to be disconnected or finite unless otherwise stated.
+Language for the trees consists of a single binary predicate $\{\leq\}$. Theory of trees states that $\leq$ defines a partial order and for every element $a$ we have $\{x \mid x < a\}$ a linear order. Theory of meet trees requires that in addition tree is closed under meet operation, i.e. for any $a, b$ in the same connected component there exists the greatest upper bound for elements both $\leq$ than $a$ and $b$. In addition we will work with colored trees, where we simply add a finite number of unary predicates to our language. Note that we allow our trees to be disconnected or finite unless otherwise stated.
 
 For completeness we also present definition of VC function.
 One should refer to \cite{vc_density} for more details.
@@ -85,51 +86,8 @@ One has to check that this definition is independet of realization of $T$, see \
 	\vc(n) = \sup \{\vc(\phi(x, y)) : |x| = n\}
 \end{align*}
 
-\section{Main lemma}
-
-Here we work with colored trees. There are finitely many colors represented by unary predicates.
-
-\begin{Definition}
-	Elements $a,b$ are \textit{separated} by $c$ if one of the following holds
-	\begin{itemize}
-		\item $c < a$ and $c \nless b$
-		\item $c < b$ and $c \nless a$
-	\end{itemize}
-\end{Definition}
-
-\begin{Lemma}
-	Fix $a,b,c$ in a tree such that $a \equiv_c b$ (note that is guarantees that $a,b$ not separated by $c$). Denote by $D$ set of all elements separated from $a$ and $b$ by $c$. Then $a \equiv_D b$. (Note that in this setup an element is separated from $a$ by $c$ if and only if it is separated from $b$ by $c$).
-\end{Lemma}
-
-\begin{proof}
-	Isomorphism modification.
-\end{proof}
-
-\begin{Definition}
-	For $c_1 > c_2$ in a tree $T$ we define an (open) interval
-	\begin{align*}
-		(c_1, c_2) = \{t \in T \mid c_1 > t \text{ and } c_2 \ngeq t\}
-	\end{align*}
-	We also allow endpoints to be infinite, $c_1 = \neg \infty$ or $c_2 = \infinity$.
-\end{Definition}
-
-\begin{Corollary}
-	Fix $a,b \in (c_1, c_2)$ s.t. $a \equiv_{c_1c_2} b$. Denote $D = T - (c_1, c_2)$. Then $a \equiv_D b$.
-\end{Corollary}
-
-\begin{proof}
-	Two applications of previous lemma.
-\end{proof}
-
-We specialize previous lemma to finite complexity types using compactness.
-
-\begin{Corollary}
-	For every $n$ there exists $m = m(n)$ such that if $a,b \in (c_1, c_2)$ s.t. $a \equiv^m_{c_1c_2} b$
-\end{Corollary}
-
-
 \section{Proper Subdivisions: Definition and Properties}
-
+Def
 % empty ok?
 \begin{Definition}
 	Let $\A$, $\B$, $\TT$ be models in (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
@@ -191,6 +149,31 @@ We don't require this lemma in full generality. From now on in this paper we'll 
 	Fix $\TT$ and $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
 \end{Example}
 
+\begin{proof}
+	By Lemma \ref{lm_subdivision} we only need to check that it is $0$-proper. Suppose we have 
+	\begin{align*}
+		a &= (a_1, a_2, \ldots, a_p) \in A^p \\
+		a' &= (a_1', a_2', \ldots, a_p') \in A^p  \\
+		b &= (b_1, b_2, \ldots, b_q) \in B^q  \\
+		b' &= (b_1', b_2', \ldots, b_q') \in B^q 
+	\end{align*}
+	with $(\A, a) \equiv_0 (\A, a')$ and $(\B, b) \equiv_0 (\B, b')$. We need to make sure that $ab$ has the same quantifier free type as $a'b'$. Any two elements in $T$ can be related in the four following ways
+	\begin{align*}
+		x &= y \\
+		x &< y \\
+		x &> y \\
+		x&,y \text{ are incomparable}
+	\end{align*}
+	We need to check that the same relations hold for pairs of $(a_i, b_j), (a_i', b_j')$ for all $i,j$.
+	
+	\begin{itemize}
+		\item It is impossible that $a_i = b_j$ as they come from disjoint sets.
+		\item It is impossible $a_i > b_j$
+		\item Suppose $a_i < b_j$. This forces $a_i \in S$ thus $a_i' \in S$ and $a_i' < b_j'$ 
+		\item Suppose $a_i$ and $b_j$ are incomparable. This forces $a_i \notin S$ so $a_i' \notin S$ making $a_i', b_j'$ incomparable.
+	\end{itemize}
+\end{proof}
+
 \begin{Definition} For $\phi(x, y)$, $A \subseteq T^{|x|}$ and $B \subseteq T^{|y|}$
 \begin{itemize}
 	\item Let $\phi(A, b) = \{a \in A \mid \phi(a, b)\} \subseteq A$
@@ -210,21 +193,173 @@ $\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with paramete
 Now we note that the number of such types can be bounded uniformly.
 
 \begin{Note} \label{nt_type_count}
-	Fix a (finite relational) language $\LL_B$, and $n$, $|y|$. Then there is some $N = N(n, |y|, \LL_B)$ such that for any structure $\B$ in $\LL_B$ we have $|S^n_{\B}(y)| \leq N$ 
+	Fix a (finite relational) language $\LL_B$, and $n$, $|y|$. Let $N = N(n, |y|, \LL_B)$ be smallest number such that for any structure $\B$ in $\LL_B$ we have $|S^n_{\B}(y)| \leq N$. Note the following easy inequalities
+	\begin{align*}
+		n \leq m &\Rightarrow N(n, |y|, \LL_B) \leq N(m, |y|, \LL_B) \\
+		|y| \leq |z| &\Rightarrow N(n, |y|, \LL_B) \leq N(n, |z|, \LL_B) \\
+		\LL_A \subseteq \LL_B &\Rightarrow N(n, |y|, \LL_A) \leq N(n, |y|, \LL_B)
+	\end{align*}
+	\begin{align*}
+		N(n, |y|, \LL_B) \cdot N(n, |z|, \LL_B) &\leq N(n, |y|+|z|, \LL_B) 
+	\end{align*}
 \end{Note}
 
 %relations with this number
 
 \section{Intervals}
 
+Here we work with colored trees. There are finitely many colors represented by unary predicates.
+
 \begin{Definition}
 	For $c_1 > c_2$ in a tree $T$ we define an (open) interval
 	\begin{align*}
 		(c_1, c_2) = \{t \in T \mid c_1 > t \text{ and } c_2 \ngeq t\}
 	\end{align*}
-	We also allow endpoints to be infinite, $c_1 = \neg \infty$ or $c_2 = \infinity$.
+	We also allow endpoints to be infinite, $c_1 = \neg \infty$ or $c_2 = \infty$.
 \end{Definition}
 
+\begin{Lemma} \label{lm_interval}
+	Suppose we have $I = (c_1, c_2)$ with and $a \equiv^n_{c_1c_2} b$. Denote $D = T - I$. Then $a \equiv^n_D b$.
+\end{Lemma}
+
+To prove this, first we do the following two lemmas:
+
+\begin{Lemma}
+	Suppose we have $I = (-\infty, c_2)$ with and $a \equiv^n_{c_2} b$. Denote $U = T - I$. Then $a \equiv^n_U b$.
+\end{Lemma}
+
+\begin{proof} \label{lm_ui}
+	Consider subdivision as in the example \ref{ex_cone} and fix a tuple $c \in U^{|c|}$. Universe and relations in $\A$ are $c_2$-definable. Then $a \equiv^n_{c_2} b$ implies that $(\A, a) \equiv_n (\A, b)$. We automatically have that $(\B, c) \equiv_n (\B, c)$. Thus by properness we get $T \models a \equiv^n_c b$. As choice of $c$ was arbitrary we are done.
+\end{proof}
+
+\begin{Lemma} \label{lm_li}
+	Suppose we have $I = (c_1, \infty)$ with and $a \equiv^n_{c_1} b$. Denote $L = T - I$. Then $a \equiv^n_L b$.
+\end{Lemma}
+\begin{proof}
+	Similar to the proof above.
+\end{proof}
+
+\begin{proof} (of lemma \ref{lm_interval})
+	Easy application of lemmas above. Pick an arbitrary tuple $d \in D^{|d|}$ and partition it as $d = (l, u)$ such that $l \in L^{|l|}$ and $u \in U^{|u|}$ (where $L$ and $U$ are as in the lemmas above). Then 
+	\begin{align*}
+		a &\equiv^n_{c_1} b \\
+		a &\equiv^n_{c_2l} b 		&\text{ by lemma \ref{lm_li}}\\
+		la &\equiv^n_{c_2} lb \\
+		la &\equiv^n_{c_2u} lb  &\text{ by lemma \ref{lm_ui}}\\
+		a &\equiv^n_{c_2lu} b \\
+		a &\equiv^n_{c_2lu} b \\
+		a &\equiv^n_{d} b
+	\end{align*}
+\end{proof}
+
+\begin{Note}
+	If we weren't resticting complexity of type, this lemma could be proven in an easier way by modifying automorphism sending $a$ to $b$. However to have a uniform bound on complexity we need to use a finer analysis involving proper subdivisions.
+\end{Note}
+
+We get a similar result to Corollary \ref{cor_type_count}.
+
+\begin{Corollary}
+	Suppose $\phi(x,y)$ is a formula of complexity $n$. Let $I = (c_1, c_2)$ and let its compliment be $D$. Fix $a, b \in I^{|y|}$. Then if $a \equiv^n_{c_1c_2} b$ then $\phi(D^{|x|}, a) = \phi(D^{|x|}, b)$. Thus $|\phi(D^{|x|}, I^{|y|})|$ is bounded by $|S^n(y/c_1c_2)| \leq N(n, |y|, \LL')$ where $\LL'$ is $\LL$ with two extra constant symbols.
+\end{Corollary}
+
+Next we state a generalization of this result for a collection of disjoint intervals. This will only required for computing vc-density for formulas $\phi(x, y)$ with $|y| > 1$.
+\begin{Corollary} \label{cor_disj_int}
+	Let $I_i = (l_i, u_i)$ with $i \in [1..m]$ be a collection of disjoint intervals and tuples
+	\begin{align*}
+		a &= (a_1, a_2, \ldots, a_m) \\
+		b &= (b_1, b_2, \ldots, b_m) \\
+	\end{align*}
+	 s.t. $a_i \in I_i^{|a_i|}$ and $b_i \in I_i^{|b_i|}$ for all $i \in [1..m]$ (i.e every $a_i$ and $b_i$ are also tuples). Moreover we require
+	\begin{align*}
+		a_i \equiv^n_{l_iu_i} b_i \text{ for all } i \in [1..m]
+	\end{align*}
+	Let $E = \bigcup_i {l_i, u_i}$ be a collection of all endpoints. Then we $a \equiv^n_E b$.
+\end{Corollary}
+
+\begin{proof}
+	We apply lemma $m$ times - one for each tuple. For example denote $C_1 = T - I_1$. Then
+	\begin{align*}
+		a_1 &\equiv^n_{l_1u_1} b_1 \\
+		a_1 &\equiv^n_{C_1} b_1 \\
+		a_1 &\equiv^n_{Ea_2a_3\ldots a_m} b_1 \\
+		a_1a_2a_3\ldots a_m &\equiv^n_{E} b_1a_2a_3\ldots a_m
+	\end{align*}
+	Denote $C_2 = T - I_2$. Then
+	\begin{align*} 
+		a_2 &\equiv^n_{l_2u_2} b_2 \\
+		a_2 &\equiv^n_{C_2} b_2 \\
+		a_2 &\equiv^n_{Eb_1a_3\ldots a_m} b_2 \\
+		b_1a_2a_3\ldots a_m &\equiv^n_{E} b_1b_2a_3\ldots a_m
+	\end{align*}
+	Continuing in such fashion we get
+	\begin{align*}
+		a = a_1a_2a_3\ldots a_m &\equiv^n_{E} \\
+		    b_1a_2a_3\ldots a_m &\equiv^n_{E} \\
+		    b_1b_2b_3\ldots a_m &\equiv^n_{E} \\
+				\ldots \\
+				b_1b_2b_3\ldots b_m &= b
+	\end{align*}
+	i.e. $a \equiv^n_{E} b$ as needed.
+\end{proof}
+
+Similarly, we rephrase that result to get a uniform type counting.
+
+\begin{Corollary}
+	Suppose $\phi(x,y)$ is a formula of complexity $n$. Let $I_i = (l_i, u_i)$ with $i \in [1..m]$ be a collection of disjoint intervals. Denote collection of all endpoints by $E$. More over fix naturals $k_1, \ldots k_m$ and $k = k_1 + k_2 + \ldots + k_n$. Then
+	\begin{align*}
+		|\phi(E^{|x|}, I_1^{k_1} \times I_2^{k_2} \times \ldots \times I_m^{k_m})| &\leq N(n, k_1, \LL') \cdot N(n, k_2, \LL') \cdot \ldots \cdot N(n, k_m, \LL')  \leq \\
+		&\leq N(n, k, \LL')
+	\end{align*}
+	Fix $a, b \in I^{|y|}$. Then if $a \equiv^n_{c_1c_2} b$ then $\phi(D^{|x|}, a) = \phi(D^{|x|}, b)$. Thus $|\phi(D^{|x|}, I^{|y|})|$ is bounded by $|S^n(y/c_1c_2)| \leq N(n, |y|, \LL')$ where $\LL'$ is $\LL$ with two extra constant symbols.
+\end{Corollary}
+
+\section {Partition into intervals}
+
+Here we show that every tree can be partitioned into intervals with prescribed endpoints. To do this we must restrict our attention to trees closed under meets. Given a finite subset $B$ of our tree $T$ let $\cl(B)$ denote its closure under meets.
+
+% write an actual proof!
+\begin{Lemma} \label{lm_meet}
+	Suppose $S \subseteq T$ is a non-empty finite subset of a meet tree of size $n$ and $S' = \cl(S)$ its closure under meets. Then $|S'| \leq 2n - 1$.
+\end{Lemma}
+\begin{proof}
+	We prove by induction on $n$. Base case $n = 1$ is clear. Suppose we have $S$ of size $k$ with closure of size at most $2k - 1$. Take a new point and look at its meets with all the elements of $S$. Pick the largest one. That is the only element we need to add to $S'$ to make sure the set is closed under meets.
+\end{proof}
+
+This way we make sure the set grows at most linearly when closed under meets.
+
+\begin{Lemma}
+	Let $C$ be a non-empty finite set closed under meets in a tree $T$. Then there is a collection of disjoint intervals $\{I_i = (a_i, b_i)\}_{1..n}$ such that
+	\begin{enumerate}
+		\item endpoints are either in $C$ or infinite.
+		\item $n = |C| + 1$.
+		\item $I_i$ partition $T - C$.
+	\end{enumerate}
+\end{Lemma}
+
+\begin{proof}
+	For every $c \in C$ define $c^+$ to be supremum of all elements of $C$ greater than $c$. If there aren't any, let $c^+ = \infty$. Also let $c^-$ to be the supremum of elements in $C$. Our desired collection of intervals is $(c, c^+)_{c \in C}, (-\infty, c^-)$.
+\end{proof}
+%add picture
+
+\section{Proof for one-dimensional case}
+
+To demonstrate our method in a simple setting we present the computation of vc-density for formulas $\phi(x, y)$ with $|x| = |y| = 1$. Let $B$ be an arbitrary finite set in $T$. We would like to show that $|\phi(B, T)| = O(|B|)$. This would show that vc-density of $\phi$ is 1. First let $C = \cl(B)$. By Lemma \ref{lm_meet} we have $|C| \leq 2|B| + 1$. Using Lemma \ref{pew} we have a collection of intervals $\{I_i\}_{1..|C|}$ such that $T - C = \bigsqcup I_i$. Observe
+\begin{align*}
+	\phi(C,T) = \phi(C, \bigsqcup I_i \sqcup C) = \bigcup \phi(C, I_i) \cup \phi(C, C)
+\end{align*}
+Thus
+\begin{align*}
+ |\phi(C,T)| = \left|\bigcup \phi(C, I_i) \cup \phi(C, C)\right| \leq \sum |\phi(C, I_i)| + |\phi(C, C)| = \sum_{1..|C|} |\phi(C, I_i)| + |C|
+\end{align*}
+Let $N = N(n_\phi, 1, \LL')$. Now observe that by Lemma \ref{pew} $|\phi(C, I_i)| \leq N$ for any $i$. Thus
+\begin{align*}
+	|\phi(C,T)| \leq \sum_{1..|C|} |\phi(C, I_i)| + |C| \leq \sum_{1..|C|} N + |C| = |C|(N+1)
+\end{align*}
+Finally, as $B \subseteq C$ we have $|\phi(B,T)| \leq |\phi(C,T)|$ so
+\begin{align*}
+	|\phi(B,T)| \leq |\phi(C,T)| \leq |C|(N+1) \leq (2|B| + 1)(N + 1)
+\end{align*}
+As $N$ is independent from $B$, this finishes the proof.
 
 \section{Proper Subdivisions: Constructions}
 
@@ -244,7 +379,7 @@ First, we describe several constructions of proper subdivisions that are needed 
 
 In the following four definitions $\B$-structures are going to be in the same language $\LL_B = \{\leq, U\}$ with $U$ a unary predicate. It is not always necessary to have this predicate but for the sake of uniformity we keep it. $\A$-structures will have different $\LL_A$ languages (those are not as important in later applications).
 
-\input {vc-trees-all_figures}
+%\input {vc-trees-all_figures}
 
 % Simon's cone, parigot's notation?
 \begin{Definition}
