@@ -51,7 +51,15 @@ Here we settle this question by showing that theory of trees has $\vc(n) = n$.
 %inequality directions
 We use notation $a \in T^n$ for tuples of size $n$. For variable $x$ or tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
 
-We work with finite relational languages. Given a formula we can define its complexity $n$ as the depth of quantifiers used to build up the formula. See for example \cite{ynm_notes} Definition 2D.4 pg.72. $S^n_{\A}(x)$ stands for all the types made up of formulas of complexity at most $n$ in a structure $\A$. $\tp^n_{\B}(a)$ stands for such a type. For two structures $\A, \B$ we say $\A \equiv_n \B$ if two structures agree on all sentences of complexity at most $n$.
+We work with finite relational languages. Given a formula we can define its complexity $n$ as the depth of quantifiers used to build up the formula. See for example \cite{ynm_notes} Definition 2D.4 pg.72. We will use the following notation
+\begin{Definition}
+	\begin{itemize}
+		\item Let $n$ be naturals, $\B$ a structure and $a$ a tuple in $\B$. Then $\tp^n_{\B}(a)$ will stand for the type
+		\item Let $n,m$ be naturals, $\B$ a structure and $A$ a parameter set. Then $S^n_{\B, m}(A)$ will stand for types
+	\end{itemize}
+\end{Definition}
+
+$S^n_{\A}(x)$ stands for all the types made up of formulas of complexity at most $n$ in a structure $\A$. $\tp^n_{\B}(a)$ stands for such a type. For two structures $\A, \B$ we say $\A \equiv_n \B$ if two structures agree on all sentences of complexity at most $n$.
 
 \begin{Note}
 	Saying that $(\A, a_1) \equiv_n (\A, a_2)$ is the same as saying that $a_1$ and $a_2$ have the same $n$-complexity type in $\A$.
