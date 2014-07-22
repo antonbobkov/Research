@@ -14,6 +14,7 @@
 
 \DeclareMathOperator{\I}{\mathcal I}
 \DeclareMathOperator{\J}{\mathcal J}
+\DeclareMathOperator{\cx}{Complexity}
 
 \begin{document}
 
@@ -51,10 +52,21 @@ Here we settle this question by showing that theory of trees has $\vc(n) = n$.
 %inequality directions
 We use notation $a \in T^n$ for tuples of size $n$. For variable $x$ or tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
 
-We work with finite relational languages. Given a formula we can define its complexity $n$ as the depth of quantifiers used to build up the formula. See for example \cite{ynm_notes} Definition 2D.4 pg.72. We will use the following notation
+We work with finite relational languages. Given a formula we can define its complexity $n$ as the depth of quantifiers used to build up the formula. More precisely
+%See for example \cite{ynm_notes} Definition 2D.4 pg.72.
+\begin{Definition}
+Define complexity of a formula by induction:
+\begin{align*}
+	&\cx(\text{q.f. formula}) = 0 \\
+	&\cx(\exists x \phi(x)) = \cx(\phi(x)) + 1 \\
+	&\cx(\phi \cap \psi) = \max(\cx(\phi), \cx(\psi)) \\
+	&\cx(\neg \phi) = \cx(\phi)
+\end{align*}
+\end{Definition}
+A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas with fixed complexity and the number of free variables. We will use the following notation for types and Stone Space:
 \begin{Definition}
 	\begin{itemize}
-		\item Let $n$ be naturals, $\B$ a structure and $a$ a tuple in $\B$. Then $\tp^n_{\B}(a)$ will stand for the type
+		\item Let $n$ be naturals, $\B$ a structure and $a$ a tuple in $\B$. Then $\tp^n_{\B}(a)$ will stand for all the formulas of complexity $n$ that are true of $a$ in $\B$. Note that as there are finitely many of them and complexity
 		\item Let $n,m$ be naturals, $\B$ a structure and $A$ a parameter set. Then $S^n_{\B, m}(A)$ will stand for types
 	\end{itemize}
 \end{Definition}
