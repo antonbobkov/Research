@@ -429,8 +429,14 @@ Putting all of those results together we are able to compute $\vc$-density of fo
 	\begin{Corollary}
 		In the theory of infinite (colored) meet trees we have $vc(n) = n$ for all $n \in \N^{+}$.
 	\end{Corollary}
-
-\begin{thebibliography}{9}
+	\begin{Corollary}
+		In the theory of infinite (colored) trees we have $vc(n) = n$ for all $n$.
+	\end{Corollary}
+	\begin{proof}
+		Let $\TT'$ be a tree. We can embed it in a larger tree that is closed under meets $\TT' \subset \TT$. Expand $\TT$ by an extra color and interpret it by coloring the subset $\TT'$. Thus we can interpret $\TT'$ in $T^1$. By Corollary 3.17 in \cite{vc_density} we get that $\vc^{\TT'}(n) \leq \vc^T(1 \cdot n) = n$ thus $\vc^{\TT'}(n) = n$ as well.
+	\end{proof}
+	
+	\begin{thebibliography}{9}
 
 \bibitem{vc_density}
 	M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
