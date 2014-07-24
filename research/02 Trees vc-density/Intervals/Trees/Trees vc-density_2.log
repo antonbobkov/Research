@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  24 JUL 2014 15:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  24 JUL 2014 15:22
 entering extended mode
 **Trees*vc-density_2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Intervals\Trees\Trees vc-density_2.tex"
@@ -423,62 +423,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \MPnumerator=\count124
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks36
-)
+))
 Runaway argument?
-{\maketitle 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.83 }
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+{\maketitle \par VC density was introduced in \cite {vc_density} by A\ETC.
+! File ended while scanning use of \textit .
+<inserted text> 
+                \par 
+<*> Trees*vc-density_2.tex
+                          
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-[1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-! Too many }'s.
-<recently read> \egroup 
-                        
-l.83 }
-      
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
+! Emergency stop.
+<*> Trees*vc-density_2.tex
+                          
+*** (job aborted, no legal \end found)
 
-[3] [4] [5] [6] [7] [8]
-Overfull \hbox (7.18752pt too wide) in paragraph at lines 387--387
-[] 
- []
-
-[9] [10] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Intervals\Trees\Trees vc-density_2.aux")
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 10852 strings out of 493921
- 198808 string characters out of 3144875
- 241242 words of memory out of 3000000
- 13780 multiletter control sequences out of 15000+200000
- 13362 words of font info for 50 fonts, out of 3000000 for 9000
+ 10813 strings out of 493921
+ 198201 string characters out of 3144875
+ 236059 words of memory out of 3000000
+ 13758 multiletter control sequences out of 15000+200000
+ 7686 words of font info for 30 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 56i,14n,55p,654b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Trees vc-density_2.pdf" (10 pages, 289203 bytes).
-PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 56i,3n,55p,639b,159s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
