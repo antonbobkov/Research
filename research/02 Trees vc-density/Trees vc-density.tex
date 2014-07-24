@@ -331,11 +331,11 @@ First, we generalize Corollary \ref{cor_type_count}. (This is only required for 
 	\end{align*}
 	Now for each type space we have inequality
 	\begin{align*}
-		|S^m_{\B_j, i_j}| \leq N(m, i_j, \LL_B) \leq N(m, |y|, \LL_B) \leq N
+		|S^m_{\B_j, i_j}| \leq N(m, i_j, \LL_B)
 	\end{align*}
-	(For singletons $|S^m_{\B_j, i_j}| = 1 \leq N$). Only non-zero indexes contribute to the product and there are at most $|y|$ of those (by equality $i_1 + i_2 + \ldots + i_n = |y|$). Thus we have
+	(For singletons $|S^m_{\B_j, i_j}| = 1 \leq N(m, i_j, \LL_B)$). Thus we have
 	\begin{align*}
-		|\phi(A^{|x|}, B)| \leq N^{|y|}
+		|\phi(A^{|x|}, B)| \leq N(m, i_1, \LL_B) \cdot N(m, i_2, \LL_B) \cdot \ldots \cdot N(m, i_n, \LL_B)
 	\end{align*}
 	as needed.
 \end{proof}
