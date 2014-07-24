@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  24 JUL 2014 16:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  24 JUL 2014 16:46
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.tex"
@@ -402,33 +402,26 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) ABD: EveryShipout initializing macros [1] [2] [3]
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex") [4]
+[4] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [5] [6] [7]
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [5] [6] [7] [8] [9]
 
-LaTeX Warning: Reference `nt_type_count' on page 8 undefined on input line 304.
-
-[8] [9]
-
-LaTeX Warning: Reference `nt_type_count' on page 10 undefined on input line 385.
+LaTeX Warning: Reference `nt_type_count' on page 10 undefined on input line 388.
 
 [10] [11] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux")
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  11170 strings out of 493922
  212649 string characters out of 3144899
- 374241 words of memory out of 3000000
+ 375396 words of memory out of 3000000
  14100 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (11 pages, 182628 bytes).
+Output written on "Trees vc-density.dvi" (11 pages, 183500 bytes).
