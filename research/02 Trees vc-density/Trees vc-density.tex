@@ -414,20 +414,20 @@ Putting all of those results together we are able to compute $\vc$-density of fo
 	\end{align*}
 	We can bound $|\phi(S^p, B_{\vec k})|$ uniformly using Lemma \ref{lm_partition_bound}. $(\A_k, \B_k)_{k \in K}$ satisfies the requirements of the lemma and $B_{\vec k}$ looks like $B$ in the lemma after possibly permuting some variables in $\phi$. Applying the lemma we get
 	\begin{align*}
-		|\phi(S^p, B_{\vec k})| \leq N^q
+		|\phi(S^p, B_{\vec k})| \leq N
 	\end{align*}
 	with $N$ only depending on $q$ and complexity of $\phi$. We complete our computation
 	\begin{align*}
 		|\phi(S^p, T^q)|
 		&\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})| \leq \\
-		&\leq \sum_{\vec k \in K^q} N^q \leq \\
+		&\leq \sum_{\vec k \in K^q} N \leq \\
 		&\leq |K^q| N^q \leq \\
-		&\leq (|J| + |I|)^q N^q \leq \\
-		&\leq (4pn + 1 + 2pn)^q N^q = N^q (6p + 1/n)^q n^q = O(n^q)
+		&\leq (|J| + |I|)^q N \leq \\
+		&\leq (4pn + 1 + 2pn)^q N = N (6p + 1/n)^q n^q = O(n^q)
 	\end{align*}
 	\end{proof}
 	\begin{Corollary}
-		In the theory of infinite meet trees we have $vc(n) = n$ for all $n \in \N^{+}$.
+		In the theory of infinite (colored) meet trees we have $vc(n) = n$ for all $n \in \N^{+}$.
 	\end{Corollary}
 
 \begin{thebibliography}{9}
