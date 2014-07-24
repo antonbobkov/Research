@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  24 JUL 2014 15:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  24 JUL 2014 15:23
 entering extended mode
 **Trees*vc-density_2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Intervals\Trees\Trees vc-density_2.tex"
@@ -401,31 +401,104 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ABD: EveryShipout initializing macros)
-Runaway argument?
-{\maketitle \par VC density was introduced in \cite {vc_density} by A\ETC.
-! File ended while scanning use of \textit .
-<inserted text> 
-                \par 
-<*> Trees*vc-density_2.tex
-                          
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+) ABD: EveryShipout initializing macros
 
-! Emergency stop.
-<*> Trees*vc-density_2.tex
-                          
-*** (job aborted, no legal \end found)
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 32.
 
- 
+
+LaTeX Warning: Citation `parigot_trees' on page 1 undefined on input line 40.
+
+
+LaTeX Warning: Citation `simon_dp_min' on page 1 undefined on input line 40.
+
+
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 40.
+
+
+LaTeX Warning: Citation `vc_density' on page 1 undefined on input line 42.
+
+[1]
+
+LaTeX Warning: Citation `vc_density' on page 2 undefined on input line 85.
+
+
+LaTeX Warning: Citation `vc_density' on page 2 undefined on input line 106.
+
+[2]
+
+LaTeX Warning: Reference `lm_subdivision' on page 3 undefined on input line 176.
+
+[3]
+
+LaTeX Warning: Reference `ex_cone' on page 4 undefined on input line 223.
+
+
+LaTeX Warning: Reference `lm_interval' on page 4 undefined on input line 233.
+
+
+LaTeX Warning: Reference `lm_li' on page 4 undefined on input line 243.
+
+
+LaTeX Warning: Reference `lm_ui' on page 4 undefined on input line 243.
+
+
+LaTeX Warning: Reference `lm_li' on page 4 undefined on input line 243.
+
+
+LaTeX Warning: Reference `lm_ui' on page 4 undefined on input line 243.
+
+[4] [5] [6]
+
+LaTeX Warning: Reference `lm_interval' on page 7 undefined on input line 355.
+
+
+LaTeX Warning: Reference `cor_disj_int' on page 7 undefined on input line 358.
+
+
+LaTeX Warning: Reference `cor_disj_int' on page 7 undefined on input line 369.
+
+
+LaTeX Warning: Reference `lm_meet' on page 7 undefined on input line 380.
+
+
+LaTeX Warning: Reference `lm_partition' on page 7 undefined on input line 380.
+
+[7]
+Overfull \hbox (7.18752pt too wide) in paragraph at lines 387--387
+[] 
+ []
+
+
+LaTeX Warning: Reference `lm_easy_bound' on page 8 undefined on input line 388.
+
+
+LaTeX Warning: Reference `lm_meet' on page 8 undefined on input line 407.
+
+
+LaTeX Warning: Reference `lm_partition' on page 8 undefined on input line 408.
+
+[8]
+
+LaTeX Warning: Reference `lm_hard_bound' on page 9 undefined on input line 423.
+
+
+LaTeX Warning: Citation `vc_density' on page 9 undefined on input line 443.
+
+[9] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Intervals\Trees\Trees vc-density_2.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 10214 strings out of 493922
- 189727 string characters out of 3144898
- 228609 words of memory out of 3000000
- 13172 multiletter control sequences out of 15000+200000
- 7686 words of font info for 30 fonts, out of 3000000 for 9000
+ 10266 strings out of 493922
+ 190497 string characters out of 3144898
+ 240352 words of memory out of 3000000
+ 13208 multiletter control sequences out of 15000+200000
+ 13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 56i,3n,55p,639b,159s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+ 56i,14n,55p,654b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on "Trees vc-density_2.dvi" (9 pages, 59580 bytes).
