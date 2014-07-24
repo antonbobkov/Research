@@ -77,7 +77,7 @@ Language for the trees consists of a single binary predicate $\{\leq\}$. Theory 
 
 Theory of meet trees requires that any two elements in the same connected component have a meet. Colored trees are trees with a finite number of colors added via unary predicates.
 
-For the entire paper when we say tree we mean colored tree. We allow our trees to be disconnected or finite unless otherwise stated.
+For the entire paper when we say tree we mean a colored tree. We allow our trees to be disconnected or finite unless otherwise stated.
 
 For completeness we also present definition of VC function.
 One should refer to \cite{vc_density} for more details.
@@ -106,6 +106,8 @@ One has to check that this definition is independent of realization of $T$, see 
 \begin{align*}
 	\vc(n) = \sup \{\vc(\phi(x, y)) : |x| = n\}
 \end{align*}
+
+Also, \cite{vc_density}, Lemma 3.22 tells us that $\vc(n) \geq n$.
 
 \section{Proper Subdivisions: Definition and Properties}
 \begin{Definition}
