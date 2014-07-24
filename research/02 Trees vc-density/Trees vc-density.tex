@@ -239,7 +239,7 @@ Fix a language for colored trees $\LL = \{\leq, C_1, \ldots C_n\} = \{\leq, \vec
 		A &= T - B \\
 		S_1 &= \{t \in T \mid t < c\}
 	\end{align*}
-	Define structures $\A_{c} = (A, \leq, \vec C)$ and $\B_{c} = (B, \leq, S_1)$ where $\LL_A = \LL$ (and $\LL_B$ as defined above). Note that $c \notin B$. (cf example \ref{ex_cone}).
+	Define structures $\A_{c} = (A, \leq, \vec C)$ and $\B_{c} = (B, \leq, \vec C, S_1)$ where $\LL_A = \LL$ (and $\LL_B$ as defined above). Note that $c \notin B$. (cf example \ref{ex_cone}).
 \end{Definition}
 
 \begin{Definition}
@@ -249,7 +249,7 @@ Fix a language for colored trees $\LL = \{\leq, C_1, \ldots C_n\} = \{\leq, \vec
 		A &= T - B \\
 		S_1 &= \{t \in T \mid t \leq c\}
 	\end{align*}
-	Define structures $\A^{c}_{S} = (A, \leq, S_1)$ and $\B^{c}_{S} = (B, \leq, B)$ where $L_A$ is expansion of $\{\leq\}$ by a single unary predicate (and $U \in \LL_B$ vacuously interpreted by $B$). Note that $c \notin B$ and $S \cap B = \emptyset$.
+	Define structures $\A^{c}_{S} = (A, \leq, \vec C, S_1)$ and $\B^{c}_{S} = (B, \leq, \vec C, B)$ where $L_A$ is expansion of $\LL$ by a single unary predicate (and $U \in \LL_B$ vacuously interpreted by $B$). Note that $c \notin B$ and $S \cap B = \emptyset$.
 \end{Definition}
 
 \begin{Definition}
