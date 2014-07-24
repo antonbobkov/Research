@@ -207,9 +207,9 @@ First, we describe several constructions of proper subdivisions that are needed 
 	\begin{align*}
 		E(b, c) \ifff \exists x \, (b \geq x) \wedge (c \geq x)
 	\end{align*}
-	Similarly $E_a(b, c)$ means that $b$ and $c$ are connected through an element above $a$. More precisely
+	Given a tree element $a$ we can look at all elements above $a$, i.e. $\{x \mid x \geq a\}$. We can think about it as a closed cone above $a$. Connected component of that cone can be thought of an open cones. With that interpretation the notation $E_a(b, c)$ means that $b$ and $c$ are in the same open cone over $a$. More precisely
 	\begin{align*}
-		E_a(b, c) \ifff \exists x \, (x > a) \wedge (b \geq x) \wedge (c \geq x)
+		E_a(b, c) \ifff b \wedge c > a
 	\end{align*}
 \end{Definition}
 
