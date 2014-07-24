@@ -164,12 +164,7 @@ We use this lemma for colored trees. Suppose we have $\TT$ to be a model of a co
 \end{Example}
 
 \begin{Example} \label{ex_cone}
-	Work with a (colored) tree $\TT$ in language $\LL = \{\leq, C_1, \ldots, C_n\}$ with colors interpreted by sets $S_1, \ldots S_n$. Fix $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Let $\LL_A = \LL \cup \{C\}$ - just $\LL$ expanded by extra unary predicate. Consider structures $\A$ in language $\LL_A$ with universe $A$, colors $C_1 \ldots C_n$ interpreted appropriately and $S$ 
-	\begin{align*}
-		\A = (A, \leq, S_1 \cap A, \ldots, S_n \cap A, S) \text{ in language with an extra color} \LL_A = \LL \cup \{C\} \\
-		\B = (B, \leq, S_1 \cap B, \ldots, S_n \cap B) \text{ in language } \LL
-	\end{align*}
-	Then $(\A, \B)$ is a proper subdivision of $\TT$.
+	Work with a (colored) tree $\TT$ in language $\LL = \{\leq, C_1, \ldots, C_n\}$ with colors interpreted by sets $S_1, \ldots S_n$. Fix $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Let $\LL_A = \LL \cup \{C\}$ - just $\LL$ expanded by extra unary predicate. Consider structure $\A$ in language $\LL_A$ with universe $A$, colors $C_1 \ldots C_n$ interpreted appropriately and $C$ interpreted by $S$. Also let $\B$ be a structure in language $\LL$ and universe $B$, considered as substructure of $\TT$.	Then $(\A, \B)$ is a proper subdivision of $\TT$.
 \end{Example}
 
 \begin{Definition} For $\phi(x, y)$, $A \subseteq T^{|x|}$ and $B \subseteq T^{|y|}$
