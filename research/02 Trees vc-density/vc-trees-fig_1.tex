@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 	\node[up] {}
-		child[grow = south, level distance=10mm] {node[up] {}
-			child[grow = south west, level distance=10mm]{node[up]{}	%left up
+		child[grow = north, level distance=10mm] {node[up] {}
+			child[grow = north west, level distance=10mm]{node[up]{}	%left up
 				[sibling distance=5mm]
 				child{node[up]{}}
 				child{node[up]{}}
@@ -15,7 +15,7 @@
 							child{node[md]{}}
 						}
 						child[grow = -120]{node[c2]{$c_2$} %3
-							[grow = south]
+							[grow = north]
 							child{node[dn]{}}
 							child{node[dn]{}
 								child{node[dn]{}}
@@ -23,7 +23,7 @@
 							}
 						}
 					}
-					child[grow = south]{node[md]{}
+					child[grow = north]{node[md]{}
 						child[grow = -60]{node[md]{}}
 					}
 				}
@@ -38,14 +38,14 @@
 					child{node[ds]{}}
 				}
 			}
-			child [grow = south east, level distance=10mm] {node[up]{}	%right up
+			child [grow = north east, level distance=10mm] {node[up]{}	%right up
 				[sibling distance=5mm]
 				child{node[up]{}}
 				child{node[up]{}}
 			}
 		}
 		child[grow = east, level distance=40mm, white]{node[black, ex]{}
-			[grow = south]
+			[grow = north]
 			[level distance=10mm]
 			child[black]{node[ex]{}
 				[sibling distance=5mm]
