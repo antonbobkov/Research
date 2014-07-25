@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  25 JUL 2014 12:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.8.30)  25 JUL 2014 12:48
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.tex"
@@ -408,22 +408,19 @@ Overfull \hbox (2.62808pt too wide) in paragraph at lines 163--164
 proper
  []
 
-[3] [4] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
+[3] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [5] [6] [7] [8] [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10] [11] [12]
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
+("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [4] [5] [6] [7] [8] [9]
+[10] [11] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
 Here is how much of TeX's memory you used:
  11169 strings out of 493922
  212630 string characters out of 3144899
- 372819 words of memory out of 3000000
+ 378075 words of memory out of 3000000
  14099 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (12 pages, 183188 bytes).
+Output written on "Trees vc-density.dvi" (11 pages, 182384 bytes).
