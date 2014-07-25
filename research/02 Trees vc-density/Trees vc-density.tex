@@ -183,6 +183,10 @@ $\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with paramete
 	Suppose $\phi(x,y)$ is a formula of complexity $n$. Let $\A, \B$ be a proper subdivision of $\TT$ and $b_1, b_2 \in B^{|y|}$. If $\tp^n_{\B}(b_1) = \tp^n_{\B}(b_2)$ then $\phi(A^{|x|}, b_1) = \phi(A^{|x|} n, b_2)$. Thus $|\phi(A^{|x|}, B^{|y|})|$ is bounded by $|S^n_{\B}(y)|$
 \end{Corollary}
 
+\begin{Corollary} \label{cor_type_count}
+	Suppose $\phi(x,y)$ is a formula of complexity $n$. Let $\A, \B$ be a proper subdivision of $\TT$. Then $|\phi(A^{|x|}, B^{|y|})|$ is bounded by $|S^n_{\B}(y)|$
+\end{Corollary}
+
 \begin{proof}
 	Take some $a \in A^{|x|}$. We have $(\B, b_1) \equiv_n (\B, b_2)$ and (trivially) $(\A, a) \equiv_n (\A, a)$. Thus by the Lemma \ref{lm_subdivision} we have $(\TT, a, b_1) \equiv_n (\TT, a, b_2)$ so $\phi(a, b_1) \iff \phi(a, b_2)$. Since $a$ was arbitrary we have $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$.
 \end{proof}
