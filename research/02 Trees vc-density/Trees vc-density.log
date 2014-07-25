@@ -394,30 +394,4 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for U+msa on input line 17.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ABD: EveryShipout initializing macros [1] [2] [3]
-[4] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [5] [6] [7] [8] [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10] [11] [12]
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
-Here is how much of TeX's memory you used:
- 11169 strings out of 493922
- 212630 string characters out of 3144899
- 372819 words of memory out of 3000000
- 14099 multiletter control sequences out of 15000+200000
- 13362 words of font info for 50 fonts, out of 3000000 for 9000
- 1002 hyphenation exceptions out of 8191
- 64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on "Trees vc-density.dvi" (12 pages, 182884 bytes).
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\am
