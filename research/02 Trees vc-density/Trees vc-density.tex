@@ -72,7 +72,7 @@ A simple inductive argument verifies that there are (up to equivalence) only fin
 Language for the trees consists of a single binary predicate $\{\leq\}$. Theory of trees states that $\leq$ defines a partial order and for every element $a$ we have $\{x \mid x < a\}$ a linear order. For visualization purposes we assume trees grow upwards, with smaller elements on the bottom and larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
 
 \begin{Definition}
-	Work in a tree $\TT$. For $x \in T$ let $I(x) = \{t \in T \mid t \leq x\}$ denote all elements below $x$. \emph{Meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
+	Work in a tree $\TT$. For $x \in T$ let $I(x) = \{t \in T \mid t \leq x\}$ denote all the elements below $x$. \emph{Meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
 \end{Definition}
 
 Theory of meet trees requires that any two elements in the same connected component have a meet. Colored trees are trees with a finite number of colors added via unary predicates.
