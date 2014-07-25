@@ -408,19 +408,19 @@ Overfull \hbox (2.62808pt too wide) in paragraph at lines 163--164
 proper
  []
 
-[3] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-all_figures.tex"
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
-("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [4] [5] [6] [7] [8] [9]
-[10] [11] [12] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux") ) 
+[3] [4] [5] [6] [7] [8] [9] [10] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.au
+x")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11169 strings out of 493922
- 212630 string characters out of 3144899
- 378157 words of memory out of 3000000
- 14099 multiletter control sequences out of 15000+200000
+ 10259 strings out of 493922
+ 189190 string characters out of 3144899
+ 238396 words of memory out of 3000000
+ 13201 multiletter control sequences out of 15000+200000
  13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,14n,55p,807b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (12 pages, 182732 bytes).
+Output written on "Trees vc-density.dvi" (10 pages, 62136 bytes).
