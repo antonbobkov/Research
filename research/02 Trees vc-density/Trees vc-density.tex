@@ -300,7 +300,7 @@ Fix a language for colored trees $\LL = \{\leq, C_1, \ldots C_n\} = \{\leq, \vec
 
 Basic idea for the proof is as follows. Suppose we have a formula with $q$ parameters. We are able to split our parameter space into $O(n)$ many partitions. Each of $q$ parameters can come from any of those $O(n)$ partitions giving us $O(n)^q$ many choices for parameter configuration. When every parameter is coming from a fixed partition the number of definable sets is constant and in fact is uniformly bounded above by some $N$. This gives us at most $N \cdot O(n)^q$ possibilities for different definable sets.
 
-First, we generalize Corollary \ref{cor_type_count}. (This is only required for computing vc-density for formulas $\phi(x, y)$ with $|y| > 1$)
+First, we generalize Corollary \ref{cor_type_count}. (This is required for computing vc-density for formulas $\phi(x, y)$ with $|y| > 1$)
 
 \begin{Lemma} \label{lm_partition_bound}
 	Consider a finite collection $(\A_i, \B_i)_{i \leq n}$ where each $(\A_i, \B_i)$ is a proper subdivision or a singleton: $B_i = \{b_i\}$ with $A_i = T$. Also assume that all $\B_i$ have the same language $\LL_B$. Let $A = \bigcap_{i \in I} A_i$. Fix a formula $\phi(x, y)$ of complexity $m$ . Let $N = N(m, |y|, \LL_B)$ as in Definition \ref{def_type_count}. Consider any $B \subseteq T^{|y|}$ of the form
