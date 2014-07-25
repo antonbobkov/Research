@@ -328,16 +328,15 @@ First, we generalize Corollary \ref{cor_type_count}. (This is only required for 
 	This is easy to see by applying Corollary \ref{cor_type_count} one by one for each tuple. This works if $B_i$ is part of a proper subdivision; if it is a singleton then the implication is trivial as $b_i = b_i'$.
 	This shows that $\phi(A^{|x|}, B)$ only depends on the choice of types for the tuples
 	\begin{align*}
-		|\phi(A^{|x|}, B)| \leq |S^m_{\B_1, i_1}| \cdot |S^m_{\B_2, i_2}| \cdot \ldots \cdot |S^m_{\B_n, i_n}|
+		|\phi(A^{|x|}, B)| \leq |\tp^m_{B_1}(i_1)| \cdot |\tp^m_{B_2}(i_2)| \cdot \ldots \cdot |\tp^m_{B_n}(i_n)|
 	\end{align*}
 	Now for each type space we have inequality
 	\begin{align*}
-		|S^m_{\B_j, i_j}| \leq N(m, i_j, \LL_B)
+		|\tp^m_{B_1}(i_1)| \leq N(m, i_1, \LL_B) \leq N(m, |y|, \LL_B) \leq N
 	\end{align*}
-	(For singletons $|S^m_{\B_j, i_j}| = 1 \leq N(m, i_j, \LL_B)$). Thus we have
+	(For singletons $|\tp^m_{B_j}(i_j)| = 1 \leq N$). Only non-zero indexes contribute to the product and there are at most $|y|$ of those (by equality $i_1 + i_2 + \ldots + i_n = |y|$). Thus we have
 	\begin{align*}
-		|\phi(A^{|x|}, B)| &\leq N(m, i_1, \LL_B) \cdot N(m, i_2, \LL_B) \cdot \ldots \cdot N(m, i_n, \LL_B) \\
-		&\leq N(m, |y|, \LL_B) \cdot N(m, |y|, \LL_B) \cdot \ldots \cdot N(m, |y|, \LL_B) = N^{|y|}
+		|\phi(A^{|x|}, B)| \leq N^{|y|}
 	\end{align*}
 	as needed.
 \end{proof}
