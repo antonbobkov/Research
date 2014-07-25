@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1476
+NormalPos.right=1350
 NormalPos.bottom=728
 Class=LaTeXView
-Document=Trees vc-density_2.tex
+Document=Trees vc-density.tex
 
 [Frame0_View0,0]
-TopLine=10
-Cursor=533
+TopLine=0
+Cursor=371
 
 [SessionInfo]
 FrameCount=1
