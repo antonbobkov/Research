@@ -358,7 +358,7 @@ Putting all of those results together we are able to compute $\vc$-density of fo
 \end{Theorem}
 
 \begin{proof}
-	Pick a finite subset of $S_0 \subset T^p$ of size $n$. Let $S_1 \subset T$ consist of coordinates of $S_0$. Let $S \subset T$ be a closure of $S_1$ under meets. Using Lemma \ref{lm_meet} we have $|S_2| \leq 2|S_1| \leq 2p|S_0| = 2pn = O(n)$. We have $S_0 \subseteq S^p$, so $|\phi(S_0, T^q)| \leq |\phi(S^p, T^q)|$. Thus it is enough to show $|\phi(S^p, T^q)| = O(n^q)$.
+	Pick a finite subset of $S_0 \subset T^p$ of size $n$. Let $S_1 \subset T$ consist of coordinates of $S_0$. Let $S \subset T$ be a closure of $S_1$ under meets. Using Lemma \ref{lm_meet} we have $|S| \leq 2|S_1| \leq 2p|S_0| = 2pn = O(n)$. We have $S_0 \subseteq S^p$, so $|\phi(S_0, T^q)| \leq |\phi(S^p, T^q)|$. Thus it is enough to show $|\phi(S^p, T^q)| = O(n^q)$.
 	
 	Label $S = \{c_i\}_{i \in I}$ with $|I| \leq 2pn$. For every $c_i$ we construct two partitions in the following way. We have $c_i$ is either minimal in $S$ or it has a predecessor in $S$ (greatest element less than $c$). If it is minimal construct $(\A_{c_i}, \B_{c_i})$. If there is a predecessor $p$ construct $(\A^p_{c_i}, \B^p_{c_i})$. For the second subdivision let $G$ be all elements in $S$ greater than $c_i$ and construct $(\A^c_G, \B^c_G)$. So far we have constructed two subdivisions for every $i \in I$. Additionally construct $(\A_S, \B_S)$. We end up with a finite collection of proper subdivisons $(\A_j, \B_j)_{j \in J}$ with $|J| = 2|I| + 1$. Before we proceed we note the following two lemmas describing our partitions.
 	
