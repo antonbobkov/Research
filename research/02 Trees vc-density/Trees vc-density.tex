@@ -345,7 +345,7 @@ For subdivisions to work out properly we will need to work with subsets closed u
 
 %MAYBE: write a more detailed proof
 \begin{Lemma} \label{lm_meet}
-	Suppose $S \subseteq T$ is a finite subset of size $n$ in a meet tree and $S' = \cl(S)$ its closure under meets. Then $|S'| \leq 2n$.
+	Suppose $S \subseteq T$ is a finite subset of size $n$ in a meet tree and $S'$ its closure under meets. Then $|S'| \leq 2n$.
 \end{Lemma}
 \begin{proof}
 	We can partition $S$ into connected components and prove the result separately for each component. Thus we may assume elements of $S$ lie in the same connected component. We prove the claim by induction on $n$. Base case $n = 1$ is clear. Suppose we have $S$ of size $k$ with closure of size at most $2k - 1$. Take a new point $s$, and look at its meets with all the elements of $S$. Pick the smallest one, $s'$. Then $S \cup \{s, s'\}$ is closed under meets.
