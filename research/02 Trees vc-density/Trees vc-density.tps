@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Trees vc-density.tex
 
 [Frame0_View0,0]
-TopLine=454
-Cursor=23642
+TopLine=231
+Cursor=11750
 
 [Frame1]
 Flags=0
