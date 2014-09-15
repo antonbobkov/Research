@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  21 MAY 2014 11:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  14 SEP 2014 17:37
 entering extended mode
-**Shelah-Spencer*QE.tex
-("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.tex"
+**Shelah-Spencer*VC.tex
+("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
-ian, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
+ian, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
  kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
--x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
+-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
 ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
 elsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsart.cls"
@@ -116,7 +116,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty)
-("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\diagrams.sty"
+("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\diagrams.sty"
 ==================================================================
 <Paul Taylor's commutative diagrams - version 3.94, April 2011>
 Package: diagrams 2011/04/19 v3.94 Paul Taylor's commutative diagrams
@@ -196,9 +196,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1889.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-| running in pdf mode -- diagonal arrows will work automatically |
+| >>>>>>>> POSTSCRIPT MODE (DVIPS) IS NOW THE DEFAULT <<<<<<<<<<<<|
+|(DVI mode has not been supported since 1992 and produces inferior|
+|results which are completely unsuitable for publication. However,|
+|if you really still need it, you can still get it by loading the |
+|package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
 ===================================================================)
-("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux")
+No file Shelah-Spencer*VC.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
@@ -211,34 +215,19 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
- [1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 Commutative Diagram: try the PostScript option for better results
-[3] ("C:\Users\Anton\SparkleShare\Research\research\07 shelah-spencer QE\Shelah-Spencer QE.aux") ) 
-Here is how much of TeX's memory you used:
- 3633 strings out of 493921
- 33519 string characters out of 3144875
- 99455 words of memory out of 3000000
- 6781 multiletter control sequences out of 15000+200000
- 13678 words of font info for 51 fonts, out of 3000000 for 9000
- 1002 hyphenation exceptions out of 8191
- 34i,14n,32p,642b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Shelah-Spencer QE.pdf" (3 pages, 236981 bytes).
-PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+[1] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux")
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3606 strings out of 493922
+ 33116 string characters out of 3144899
+ 91501 words of memory out of 3000000
+ 6767 multiletter control sequences out of 15000+200000
+ 10530 words of font info for 41 fonts, out of 3000000 for 9000
+ 1002 hyphenation exceptions out of 8191
+ 34i,6n,32p,402b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on "Shelah-Spencer VC.dvi" (1 page, 1492 bytes).
