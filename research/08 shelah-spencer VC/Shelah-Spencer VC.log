@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  19 SEP 2014 16:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.19)  19 SEP 2014 16:36
 entering extended mode
 **Shelah-Spencer*VC.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.tex"
@@ -196,11 +196,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1889.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-| >>>>>>>> POSTSCRIPT MODE (DVIPS) IS NOW THE DEFAULT <<<<<<<<<<<<|
-|(DVI mode has not been supported since 1992 and produces inferior|
-|results which are completely unsuitable for publication. However,|
-|if you really still need it, you can still get it by loading the |
-|package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
+| running in pdf mode -- diagonal arrows will work automatically |
 ===================================================================)
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -215,16 +211,31 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
- [1]
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Commutative Diagram: try the PostScript option for better results
 [2] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux") ) 
 Here is how much of TeX's memory you used:
- 3626 strings out of 493922
- 33475 string characters out of 3144899
- 96501 words of memory out of 3000000
+ 3627 strings out of 493921
+ 33485 string characters out of 3144876
+ 96455 words of memory out of 3000000
  6776 multiletter control sequences out of 15000+200000
  13325 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,7n,32p,450b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "Shelah-Spencer VC.pdf" (2 pages, 172340 bytes).
+PDF statistics:
+ 69 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on "Shelah-Spencer VC.dvi" (2 pages, 5800 bytes).
