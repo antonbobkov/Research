@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  14 SEP 2014 17:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  19 SEP 2014 16:34
 entering extended mode
 **Shelah-Spencer*VC.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.tex"
@@ -202,7 +202,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 |if you really still need it, you can still get it by loading the |
 |package using ``\usepackage[UglyObsolete]{diagrams}'' instead. ) |
 ===================================================================)
-No file Shelah-Spencer*VC.aux.
+("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
@@ -215,19 +215,43 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
+
+
+! LaTeX Error: Environment Proof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 \begin{Proof}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{Proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \end{Proof}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1]
 Commutative Diagram: try the PostScript option for better results
-[1] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux")
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[2] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux") ) 
 Here is how much of TeX's memory you used:
- 3606 strings out of 493922
- 33116 string characters out of 3144899
- 91501 words of memory out of 3000000
- 6767 multiletter control sequences out of 15000+200000
- 10530 words of font info for 41 fonts, out of 3000000 for 9000
+ 3628 strings out of 493922
+ 33488 string characters out of 3144899
+ 95501 words of memory out of 3000000
+ 6778 multiletter control sequences out of 15000+200000
+ 13325 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,6n,32p,402b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,32p,450b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC.dvi" (1 page, 1492 bytes).
+Output written on "Shelah-Spencer VC.dvi" (2 pages, 5736 bytes).
