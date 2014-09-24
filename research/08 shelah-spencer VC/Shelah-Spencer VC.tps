@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1083
-NormalPos.bottom=621
+NormalPos.right=1289
+NormalPos.bottom=728
 Class=LaTeXView
 Document=Shelah-Spencer VC.tex
 
 [Frame0_View0,0]
-TopLine=37
-Cursor=1247
+TopLine=40
+Cursor=2441
 
 [SessionInfo]
 FrameCount=1
