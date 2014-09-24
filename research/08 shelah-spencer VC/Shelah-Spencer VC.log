@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  23 SEP 2014 18:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  23 SEP 2014 19:46
 entering extended mode
 **Shelah-Spencer*VC.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.tex"
@@ -211,7 +211,14 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
- [1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+Overfull \hbox (13.00912pt too wide) in paragraph at lines 55--56
+[]\OT1/cmr/m/n/10 From the di-a-gram we see that $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 B\OML/cmm/m/it/10 
+=\OMS/cmsy/m/n/10 A\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 B[] [ A\OML/cmm/m/it/10 =\OMS
+/cmsy/m/n/10 A\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10  []$\OT1/cmr/m/n/10 . 
+ []
+
+[1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Commutative Diagram: try the PostScript option for better results
 [2] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC.aux") ) 
 Here is how much of TeX's memory you used:
@@ -221,7 +228,7 @@ Here is how much of TeX's memory you used:
  6776 multiletter control sequences out of 15000+200000
  13325 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,7n,32p,450b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,32p,463b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 
@@ -233,7 +240,7 @@ amsfonts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Shelah-Spencer VC.pdf" (2 pages, 172551 bytes).
+Output written on "Shelah-Spencer VC.pdf" (2 pages, 172464 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
