@@ -220,7 +220,7 @@ Commutative Diagram: try the PostScript option for better results
 Here is how much of TeX's memory you used:
  3627 strings out of 493921
  33485 string characters out of 3144875
- 97455 words of memory out of 3000000
+ 96455 words of memory out of 3000000
  6776 multiletter control sequences out of 15000+200000
  13325 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
@@ -237,7 +237,7 @@ amsfonts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 /cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb>
-Output written on "Shelah-Spencer VC.pdf" (2 pages, 182304 bytes).
+Output written on "Shelah-Spencer VC.pdf" (2 pages, 182322 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
