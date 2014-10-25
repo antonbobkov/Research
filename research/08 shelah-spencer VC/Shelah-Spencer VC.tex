@@ -39,30 +39,39 @@ We fix the density of the graph $\alpha$.
 \end{proof}
 
 \begin{Lemma}
-	Let $\A_1 \subset \B_1$ and $\A_2 \subset \B_2$ be $\K$ structures with $(\A_2, \B_2)$ a minimal pair. Let $M$ be some ambient structure. Fix embeddings of $\A_1, \B_1, \A_2$ into $M$. Assume that it is not that case that $\A_2 \subset \B_2$ and $\A_1$ is disjoint from $\A_2$. Now consider all possible embeddings $f \colon \B_2 \to M$ over $\A_1$.  Let $\A = \A_1 \cup \A_2$ and $\B_f = \B_1 \cup f(\B_2)$ with $\delta_f = \delta(\B_f/\A)$. Then $\delta_f$ is at most $\delta(\B_1 \cup \A/\A) + \delta (\B_2/\A_2)$
+	Let $\A_1 \subset \B_1$ and $\A_2 \subset \B_2$ be $\K$ structures with $(\A_2, \B_2)$ a minimal pair with $\epsilon = \delta (\B_2/\A_2)$. Let $M$ be some ambient structure. Fix embeddings of $\A_1, \B_1, \A_2$ into $M$. Assume that it is not that case that $\A_2 \subset \B_2$ and $\A_1$ is disjoint from $\A_2$. Now consider all possible embeddings $f \colon \B_2 \to M$ over $\A_1$.  Let $\A = \A_1 \cup \A_2$ and $\B_f = \B_1 \cup f(\B_2)$ with $\delta_f = \delta(\B_f/\A)$. Then $\delta_f$ is at most $\delta(\B_1 \cup \A/\A) + \epsilon$
 \end{Lemma}
 
-Fix an embedding $f$. It induces the following substructure diagram in $M$. 
+Fix an embedding $f$. It induces the following substructure diagram in $M$. Denote 
+\begin{align*}
+	\A &= \A_1 \cup \A_2 \\
+	\B_f^* &= \B_1 \cup f(\B_2) \\
+	\B_1^* &= \B_1 \cup \A \\
+	\B_2^* &= f(\B_2) \cup \A \\
+	\B^* &= (\B_1 \cap f(\B_2)) \cup \A
+\end{align*}
 
 \begin{diagram}
-								&							&\B_1 \cup f(\B_2) = \B_f		\\
+								&							&\B_f		\\
 								&\ruLine    	&										&\luLine	\\
-	\B_1 \cup \A	&           	&										&					&f(\B_2) \cup \A \\
+	\B_1^*      	&           	&										&					&\B_2^* \\
 								&\luLine			&										&\ruLine	\\
-								&							&(\B_1 \cap f(\B_2)) \cup \A \\
+								&							&\B^* \\
 								&							&\uLine \\
-								&							&\A_1 \cup \A_2 = \A\\
+								&							&\A\\
 \end{diagram}
 
 From the diagram we see that
 \begin{align*}
-	\delta(\B_f/\A) \leq \delta(\B_1 \cup \A/\A) + \delta\left((f(\B_2) \cup \A)/((\B_1 \cap f(\B_2)) \cup \A)\right)
+	\delta(\B_f/\A) \leq \delta(\B_1^*/\A) + \delta(\B_2^*/\B^*)
 \end{align*}
 Thus all we need to do is to verify that
 \begin{align*}
-	\delta\left((f(\B_2) \cup \A)/((\B_1 \cap f(\B_2)) \cup \A)\right) \leq \delta (\B_2/\A_2)
+	\delta(\B_2^*/\B^*) \leq \epsilon
 \end{align*}
-Let $\B^*$ denote all the vertices in $f(\B_2)$ that are not in $\B_1 - \A_2$. Then $\delta (\B^*/A_2)$ has to be less than $\delta (\B_2/\A_2)$ by minimality of $(\B_2, \A_2)$. Relative dimension of the whole construction has to be even smaller.
+Let $\B'$ denote graph induced on all the vertices in $(f(B_2) / B_1) \cup A_2$.
+Then $\B'$ is a substructure of $\B_2$ over $\A_2$. By minimality we get that $\delta(\B'/\A_2) \leq \epsilon$. Moreover $\delta(\B_2^*/\B^*) \leq \delta(\B'/\A_2)$ thus proving the claimed statement.
+Then $\delta (\B^*/A_2)$ has to be less than $\delta (\B_2/\A_2)$ by minimality of $(\B_2, \A_2)$. Relative dimension of the whole construction has to be even smaller.
 It is easy to show that this construction induces a proper subpair in $(\A_2, \B_2)$ which has to have smaller dimension.
 
 
