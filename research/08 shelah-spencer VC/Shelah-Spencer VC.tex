@@ -88,9 +88,28 @@ and
 So the sets of the extra vertices in the extension are the same. The base $\B_2^*/\B^*$ is larger so we can introduce some extra edges but no new vertices. This means that $\delta(\B_2^*/\B^*) \leq \delta(\B'/\A_2)$ giving us the original statement.
 
 
-Let $\phi(x,y)$ be a formula in a random graph with $|x|=|y|=1$ saying that there exists $\D$ over $\C = \{x,y\}$ such that $(\D, \C)$ is minimal with relative dimension $\epsilon$. Let $n$ be such that $n\epsilon < 1 < (n+1)\epsilon$. Then we argue that $vc(\phi) = n$.
+Let $\phi(x,y)$ be a formula in a random graph with $|x|=|y|=1$ saying that there exists $\D$ over $\C = \{x,y\}$ such that $(\D, \C)$ is minimal with relative dimension $\epsilon$. Let $N$ be such that $N\epsilon < 1 < (N+1)\epsilon$. Then we argue that $vc(\phi) = N$.
 
-Fix a $m$-strong (for any $m > |M|$) set of non-connected vertices $A$. Fix some $a$. We invesitgate the trace of $\phi(x, a)$ on $B$. Suppose we have $b_1, \ldots, b_k$ satisfying $\phi(b_i, a)$ as witnessed by $M_j$. Relative dimension of $M_1 \cup M_2 \cup \ldots \cup M_j \cup {a}$ is minimized when all $M_j$ are disjoint (by minimality). Thus for that dimension to be positive we can have at most $n$ extensions.
+Fix a $m$-strong (for any $m > |D|$) set of non-connected vertices $A$. Fix some $a*$. We invesitgate the trace of $\phi(x, a*)$ on $A$. Suppose we have $a_1, \ldots, a_k$ satisfying $\phi(a_i, a^*)$ as witnessed by $D_i / \{a_i, a*\}$. Let $\D^* = \bigcap \D_i$ and $\C^*$
+
+Call $\M$ $n$-composite embedding if there are distinct vertices $a_1, \ldots a_n$ and $a*$ in $M$ and there are an embeddings $\D \arr \M$ with $\C$ going to $\{a_i, a^*\}$. Image of $i$-th embedding is denoted $\D_i$. Note that images of embeddings can intersect each other or $a_j$'s. Consider $\D^* = \bigcap \D_i$ and $\C^* = \{a_1, \ldots a_n, a^*\}$. Dimension of $M$ is $\delta(\D^*/\C^*)$.
+
+Lemma: Dimension of $n$-composite embedding is at most $-n\epsilon$.
+
+Note: if $\D_i$ are disjoint over $\C^*$ then the dimension is exactly $-n\epsilon$.
+
+Take $n$-composite embedding with maximal dimension. Suppose it is larger than $-n\epsilon$.
+Without loss of generality we may assume $\D_n$ intersects with $\D_1 \cup \ldots \cup \D_{n-1}$ over $\C^*$.
+Consider two cases.
+First, suppose that there is some element in $\D_n$ outside of $\D_1 \cup \ldots \cup \D_{n-1}$.
+Let $\B_1 = \D_1 \cup \ldots \cup \D_{n-1}$.
+Let $\A_1 = \{a_1, \ldots a_{n-1}\} \cup \{a*\}$.
+Let $\B_2 = \D_n$.
+Let $\A_2 = \{a_n, a*\}$.
+
+Lemma applies to the above. Above dimension is minimized when $\D_n$ is disjoint. Contradiction.
+
+Second, suppose that $\D_n \subseteq \B_1$. In particular $a_n \in \B_1$. Consider
 
 Consider sets $\B_1 \ldots \B_n$ with 
 \begin{enumerate}
