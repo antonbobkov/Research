@@ -138,30 +138,7 @@ Then we have by tail property $f*(\omega) << x^{a_\gamma}$ and $g*(\omega) << x^
   f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f*(\w) - g*(\w)) + (f_\beta - g_\beta) x^{a_\beta}
 \end{align*}
 
-Precompute 
-
-\begin{align*}
-  f(\w)\midr\beta - g(\w)\midr\beta &= 
-	\brac{f(\w)\midr\beta - f(\w)\midr{\gamma + 1} } - 
-	\brac{g(\w)\midr\beta - g(\w)\midr{\gamma + 1} } +
-	\brac{f(\w)\midr{\gamma + 1} - g(\w)\midr{\gamma + 1} }\\
-	&= \brac{<< \w^{a_\gamma}} + \brac{<< \w^{a_\gamma}} +
-	\brac{f(\w)\midr{\gamma + 1} - g(\w)\midr{\gamma + 1} } \\
-	&= \brac{<< \w^{a_\gamma}} + \brac{f(\w)\midr\gamma - g(\w)\midr\gamma } +
-	\brac{(f_\gamma - g_\gamma) x^{a_\gamma}} \\
-	&= \brac{<< \w^{a_\gamma}} + \brac{ 0 } + \brac{(f_\gamma - g_\gamma) x^{a_\gamma}} \\
-	&= \brac{<< \w^{a_\gamma}} + \brac{(f_\gamma - g_\gamma) x^{a_\gamma}}	
-\end{align*}
-
-Compute
-
-\begin{align*}
-  f(\w) - g(\w) &= \brac{f(\w)\midr\beta - g(\w)\midr\beta} + \brac{f_\beta - g_\beta} \w^{a_\beta} \\
-	&= \brac{f(\w)\midr\beta - g(\w)\midr\beta} + \brac{<< \w^{a_\gamma}} \\
-	&= \brac{(f_\gamma - g_\gamma) x^{a_\gamma}} + \brac{<< \w^{a_\gamma}} > 0
-\end{align*}
-
-Both $(f*(\w) - g*(\w))$ and $x^{a_\beta}$ are dominated by $x^{a_\gamma}$ and $(f_\gamma - g_\gamma) \in \R^{>0}$.
+We have $f_\gamma > g_\gamma$. Both $(f*(\w) - g*(\w))$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$
 Thus $f(\w) - g(\w) > 0$ as needed.
 
 Case 2: $\alpha$ is a limit ordinal.
