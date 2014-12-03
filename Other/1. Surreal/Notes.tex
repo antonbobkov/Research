@@ -168,31 +168,8 @@ Rewrite definitions of $f(\w)$ and $g(\w)$ using $\gamma$
 By induction hypothesis easily shows that those cuts are cofinal (and are in fact final segments) in the cuts given in the original definition.
 Pick any $\bar f(\w) \in R_f$ and $\bar g(\w) \in L_g$.
 Then $\bar f(x) < \bar g(x)$ as first coefficient where they differ is $x^{a_\gamma}$ and $f_\gamma < g_\gamma$.
-
-They can be written as 
-
-\begin{align*}
-  \bar f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f^*\\
-  \bar g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g^*
-\end{align*}
-
-where
-
-\begin{align*}
-	h(\w) &= \bar f(\w)\midr\gamma = \bar g(\w)\midr\gamma \\
-	f^* &= \bar f(\w) - f(\w)\midr{\gamma + 1} \\
-	g^* &= \bar g(\w) - g(\w)\midr{\gamma + 1}
-\end{align*}
-
-Compute
-
-\begin{align*}
-	f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f* - g*)
-\end{align*}
-
-We have $f_\gamma < g_\gamma$, so 
-Also 
- we have $\bar f(x) < \bar g(x)$ and thus by induction hypothesis $\bar f(\w) < \bar g(\w)$. As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
+Thus by inductive hypothesis $\bar f(\w) < \bar g(\w)$.
+As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
 
 Tail property
 
