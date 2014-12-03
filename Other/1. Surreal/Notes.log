@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  2 DEC 2014 18:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  2 DEC 2014 18:38
 entering extended mode
 **Notes.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\Notes.tex"
@@ -158,6 +158,6 @@ Here is how much of TeX's memory you used:
  4641 multiletter control sequences out of 15000+200000
  12161 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,15n,26p,320b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,15n,26p,256b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Notes.dvi (4 pages, 18044 bytes).
+Output written on Notes.dvi (4 pages, 16820 bytes).
