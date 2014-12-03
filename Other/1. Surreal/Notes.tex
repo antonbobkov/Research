@@ -171,7 +171,15 @@ By induction hypothesis easily shows that those cuts are cofinal (and are in fac
   \bar f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f*(\w)\\
   \bar g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g*(\w)
 \end{align*}
-where $$
+
+where
+
+\begin{align*}
+	h(\w) &= f(\w)\midr\gamma = g(\w)\midr\gamma \\
+	f^* &= f(\w)\midr\beta - f(\w)\midr{\gamma + 1} \\
+	g^* &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
+\end{align*}
+
 where $h(x)$ has the powers $x^{a_i}$ for $i < \gamma$ and $f*(x), g*(x)$ have the powers $x^{a_i}$ for $\gamma < i$.
 
 As $f_\gamma < g_\gamma$ we have $\bar f(x) < \bar g(x)$ and thus by induction hypothesis $\bar f(\w) < \bar g(\w)$. As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
