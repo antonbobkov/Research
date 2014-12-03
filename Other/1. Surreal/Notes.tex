@@ -168,10 +168,13 @@ Rewrite definitions of $f(\w)$ and $g(\w)$ using $\gamma$
 By induction hypothesis easily shows that those cuts are cofinal (and are in fact final segments) in the cuts given in the original definition. Pick any $\bar f(\w) \in R_f$ and $\bar g(\w) \in L_g$. They can be written as 
 
 \begin{align*}
-  \bar f(x) &= h(x) + f_\gamma x^{a_\gamma} + f*(x)\\
-  \bar g(x) &= h(x) + g_\gamma x^{a_\gamma} + g*(x)
+  \bar f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f*(\w)\\
+  \bar g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g*(\w)
 \end{align*}
-where $h(x)$ has the powers $x^{a_i}$ for $i < \gamma$ and $f*(x), g*(x)$ have the powers $x^{a_i}$ for $\gamma < i$. As $f_\gamma < g_\gamma$ we have $\bar f(x) < \bar g(x)$ and thus by induction hypothesis $\bar f(\w) < \bar g(\w)$. As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
+where $$
+where $h(x)$ has the powers $x^{a_i}$ for $i < \gamma$ and $f*(x), g*(x)$ have the powers $x^{a_i}$ for $\gamma < i$.
+
+As $f_\gamma < g_\gamma$ we have $\bar f(x) < \bar g(x)$ and thus by induction hypothesis $\bar f(\w) < \bar g(\w)$. As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
 
 Tail property
 
