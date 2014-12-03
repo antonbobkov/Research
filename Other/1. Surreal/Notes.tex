@@ -160,31 +160,9 @@ Recall that
 	\colon \beta < \alpha, \epsilon \in \R^{>0}}
 \end{align*}
 
-Pick any $\beta$ with $\gamma < \beta < \alpha$ and $\epsilon \in \R^{>0}$, and pick limit elements $\bar f(\w) \in L_f$ and $\bar g(\w) \in R_g$ corresponding to those.
+Pick any $\beta$ with $\gamma < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
+and pick limit elements $\bar f(\w) \in L_f$ and $\bar g(\w) \in R_g$ corresponding to those.
 
-Rewrite definitions of $f(\w)$ and $g(\w)$ using $\gamma$
-
-\begin{align*}
-  f(\w) &= \curly{L_f \mid R_f} \\
-  g(\w) &= \curly{L_g \mid R_g}
-\end{align*}
-
-\begin{align*}
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
-
-\begin{align*}
-  L_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta - \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta + \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
-
-By induction hypothesis easily shows that those cuts are cofinal (and are in fact final segments) in the cuts given in the original definition.
-Pick any $\bar f(\w) \in R_f$ and $\bar g(\w) \in L_g$.
 Then $\bar f(x) < \bar g(x)$ as first coefficient where they differ is $x^{a_\gamma}$ and $f_\gamma < g_\gamma$.
 Thus by inductive hypothesis $\bar f(\w) < \bar g(\w)$.
 As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
