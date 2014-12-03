@@ -214,34 +214,5 @@ By induction hypothesis we have
  
 Thus $f(\w) - F(\w) << \w^{a_\kappa}$ as it is between two elements that are $<<  \w^{a_\kappa}$.
 
-We have $l(\w) \leq f(\w) \leq r(\w)$ we have $f(\w) << \w^{a_\kappa}$
-
-
-\begin{align*}
-  L_f &= \curly{F(\w) + \sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f &= \curly{F(\w) + \sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
-\end{align*}
-
-As before it is cofinal in $L, R$ so we define the same number.
-
-Compute
-
-\begin{align*}
-  &\sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} = \\
-	= &f(\w) - F(\w) = \\
-	= &\curly{L_f - F(\w) \mid R_f - F(\w)}
-\end{align*}
-
-\begin{align*}
-  L_f - F(\w) &= \curly{\sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f - F(\w) &= \curly{\sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
-\end{align*}
-
-By induction hypothesis all elements of $L_f - F(\w), R_f - F(\w)$ are $<< \w^\gamma$. Thus the element defined by their cut has to be $<< \w^\gamma$ as well.
-
 \end{document}
 
