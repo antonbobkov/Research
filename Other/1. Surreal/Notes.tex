@@ -122,24 +122,24 @@ Now suppose $\gamma < \beta$.
 %\end{align*}
 Group the terms
 \begin{align*}
-  f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f^*(\w) + f_\beta \w^{a_\beta} \\
-  g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g^*(\w) + g_\beta \w^{a_\beta}
+  f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f^* + f_\beta \w^{a_\beta} \\
+  g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g^* + g_\beta \w^{a_\beta}
 \end{align*}
 where
 \begin{align*}
 	h(\w) &= f(\w)\midr\gamma = g(\w)\midr\gamma \\
-	f^*(\w) &= f(\w)\midr\beta - f(\w)\midr{\gamma + 1} \\
-	g^*(\w) &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
+	f^* &= f(\w)\midr\beta - f(\w)\midr{\gamma + 1} \\
+	g^* &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
 \end{align*}
 
 Then we have by tail property $f*(\omega) << x^{a_\gamma}$ and $g*(\omega) << x^{a_\gamma}$. Compute
 
 \begin{align*}
-  f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f*(\w) - g*(\w)) + (f_\beta - g_\beta) x^{a_\beta}
+  f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f* - g*) + (f_\beta - g_\beta) x^{a_\beta}
 \end{align*}
 
 We have $f_\gamma > g_\gamma$.
-Both $(f*(\w) - g*(\w))$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$.
+Both $f* - g*$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$.
 Thus $f(\w) - g(\w) > 0$ as needed.
 
 Case 2: $\alpha$ is a limit ordinal.
