@@ -1,0 +1,243 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{fullpage}
+
+\newcommand{\No}{\mathbf{No}}
+\newcommand{\On}{\mathbf{On}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\rar}{\rightarrow}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{question}{Question}
+\newtheorem{defn}{Definition}
+\newtheorem{cor}{Corollary}
+\newtheorem{claim}{Claim}
+\newtheorem{lem}{Lemma}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\concat}{\mathbin{\raisebox{1ex}{\scalebox{.7}{$\frown$}}}} %sequence concatenation
+\newcommand{\dom}[1]{\operatorname{dom}\paren{#1}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\NBG}{\mathsf{NBG}}
+\newcommand{\coloneq}{\colonequals}
+\newcommand{\N}{\mathbb{N}}
+
+\DeclareMathOperator{\supp}{supp}
+
+\newcommand{\w}{\omega}
+\newcommand{\midr}[1]{\restriction_{#1}}
+
+\title{Notes on Surreal Numbers \\ Math 285: Fall 2014}
+\author{Class Taught by Prof. Aschenbrenner \\ Notes by John Susice}
+\date{\today}
+\begin{document}
+\maketitle{}
+
+\section*{Day 1: Friday October 3, 2014}
+
+We define a map which will eventually be proven to be an ordered field isomorphism.
+
+\begin{align*}
+  K = \R((t^\No)) \overset{\sim}{\longrightarrow} \No
+\end{align*}
+
+We have an element written as 
+\begin{align*}
+	&f = \sum_{\gamma \in \No} f_\gamma t^\gamma \\
+	&\supp(f) = \{\gamma \colon f_\gamma \neq 0\}
+\end{align*}
+where $\supp(f)$ is a well-ordered sub\textbf{set}. Now let $x = t^{-1}$ and write
+\begin{align*}
+  f(x) = \sum_{i < \alpha} f_i x^{a_i}
+\end{align*}
+where $(a_i)_{i<\alpha}$ is strictly decreasing in $\No$, $\alpha$ ordinal and $f_i \in \R$ for $i < \alpha$. Also define $l(f(x))$ to be the order type of $\supp(f)$ (which may be smaller than $\alpha$ as we allow zero coefficients).
+
+\begin{question}
+	What is the relationship of what we are going to do with Kaplansky's results from valuation theory?
+\end{question}
+
+To define $\sum_{i < \alpha} f_i \w^{a_i} = f(\omega)$ we proceed by induction on $\alpha$:
+
+$\sum_{i < \alpha} f_i \w^{a_i} = \paren{\sum_{i \leq \beta} f_i \omega^{a_i}} + f_\beta \w$
+
+$\sum_{i < \alpha} f_i \w^{a_i} = \curly{L \mid R}$
+
+where
+
+\begin{align*}
+  L &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}}
+\end{align*}
+
+\begin{enumerate}
+	\item $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+	\item if $\gamma < \kappa < \alpha$, then (tail property)
+	\begin{align*}
+		\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
+	\end{align*}
+\end{enumerate}
+
+Suppose we have
+\begin{align*}
+  f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
+  g(x) &= \sum_{i < \alpha} g_i x^{a_i}
+\end{align*}
+
+Suppose $f(x) < g(x)$
+
+Choose $\gamma$ smallest such that $f_\gamma \neq g_\gamma$.
+It has to be that $f_\gamma > g_\gamma$. Also $f(x)\midr\gamma = g(x)\midr\gamma$
+
+Case 1: $\alpha = \beta + 1$
+
+\begin{align*}
+  f(x) &= f(x)\midr\beta + f_\beta x^{a_\beta}\\
+  g(x) &= g(x)\midr\beta + g_\beta x^{a_\beta}
+\end{align*}
+
+Suppose $\gamma = \beta$.
+Then $\bar f(x) = \bar g(x)$, $\bar f(\w) = \bar g(\w)$, so compute
+\begin{align*}
+  f(\w) - g(\w) &= \\
+	&= f(\w)\midr\beta + f_\beta \w^{a_\beta} - g(\w)\midr\beta - g_\beta \w^{a_\beta} \\
+	&= f_\beta \w^{a_\beta} - g_\beta \w^{a_\beta} \\
+	&= \paren{f_\beta - g_\beta} \w^{a_\beta} > 0
+\end{align*}
+
+Now suppose $\gamma < \beta$.
+
+%\begin{align*}
+%  f(x) &= \sum_{i < \gamma} f_i x^{a_i} + f_\gamma x^{a_\gamma} + \sum_{\gamma < i < \beta} f_i x^{a_i} + f_\beta x^{a_\beta} \\
+%  g(x) &= \sum_{i < \gamma} g_i x^{a_i} + g_\gamma x^{a_\gamma} + \sum_{\gamma < i < \beta} g_i x^{a_i} + g_\beta x^{a_\beta}
+%\end{align*}
+Group the terms
+\begin{align*}
+  f(x) &= h(x) + f_\gamma x^{a_\gamma} + f*(x) + f_\beta x^{a_\beta} \\
+  g(x) &= h(x) + g_\gamma x^{a_\gamma} + g*(x) + g_\beta x^{a_\beta}
+\end{align*}
+where $h(x)$ has the powers $x^{a_i}$ for $i < \gamma$ and $f*(x), g*(x)$ have the powers $x^{a_i}$ for $\gamma < i < \beta$.
+Then we have by tail property $f*(\omega) << x^{a_\gamma}$ and $g*(\omega) << x^{a_\gamma}$. Compute
+
+\begin{align*}
+  f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f*(\w) - g*(\w)) + (f_\beta - g_\beta) x^{a_\beta}
+\end{align*}
+
+Precompute 
+
+\begin{align*}
+  f(\w)\midr\beta - g(\w)\midr\beta &= 
+	\brac{f(\w)\midr\beta - f(\w)\midr{\gamma + 1} } - 
+	\brac{g(\w)\midr\beta - g(\w)\midr{\gamma + 1} } +
+	\brac{f(\w)\midr{\gamma + 1} - g(\w)\midr{\gamma + 1} }\\
+	&= \brac{<< \w^{a_\gamma}} + \brac{<< \w^{a_\gamma}} +
+	\brac{f(\w)\midr{\gamma + 1} - g(\w)\midr{\gamma + 1} } \\
+	&= \brac{<< \w^{a_\gamma}} + \brac{f(\w)\midr\gamma - g(\w)\midr\gamma } +
+	\brac{(f_\gamma - g_\gamma) x^{a_\gamma}} \\
+	&= \brac{<< \w^{a_\gamma}} + \brac{ 0 } + \brac{(f_\gamma - g_\gamma) x^{a_\gamma}} \\
+	&= \brac{<< \w^{a_\gamma}} + \brac{(f_\gamma - g_\gamma) x^{a_\gamma}}	
+\end{align*}
+
+Compute
+
+\begin{align*}
+  f(\w) - g(\w) &= \brac{f(\w)\midr\beta - g(\w)\midr\beta} + \brac{f_\beta - g_\beta} \w^{a_\beta} \\
+	&= \brac{f(\w)\midr\beta - g(\w)\midr\beta} + \brac{<< \w^{a_\gamma}} \\
+	&= \brac{(f_\gamma - g_\gamma) x^{a_\gamma}} + \brac{<< \w^{a_\gamma}} > 0
+\end{align*}
+
+Both $(f*(\w) - g*(\w))$ and $x^{a_\beta}$ are dominated by $x^{a_\gamma}$ and $(f_\gamma - g_\gamma) \in \R^{>0}$.
+Thus $f(\w) - g(\w) > 0$ as needed.
+
+Case 2: $\alpha$ is a limit ordinal.
+
+Rewrite definitions of $f(\w)$ and $g(\w)$ using $\gamma$
+
+\begin{align*}
+  f(\w) &= \curly{L_f \mid R_f} \\
+  g(\w) &= \curly{L_g \mid R_g}
+\end{align*}
+
+\begin{align*}
+  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
+\end{align*}
+
+\begin{align*}
+  L_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta - \epsilon) \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta + \epsilon) \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
+\end{align*}
+
+By induction hypothesis easily shows that those cuts are cofinal (and are in fact final segments) in the cuts given in the original definition. Pick any $\bar f(\w) \in R_f$ and $\bar g(\w) \in L_g$. They can be written as 
+
+\begin{align*}
+  \bar f(x) &= h(x) + f_\gamma x^{a_\gamma} + f*(x)\\
+  \bar g(x) &= h(x) + g_\gamma x^{a_\gamma} + g*(x)
+\end{align*}
+where $h(x)$ has the powers $x^{a_i}$ for $i < \gamma$ and $f*(x), g*(x)$ have the powers $x^{a_i}$ for $\gamma < i$. As $f_\gamma < g_\gamma$ we have $\bar f(x) < \bar g(x)$ and thus by induction hypothesis $\bar f(\w) < \bar g(\w)$. As choice of those was arbitrary we have $R_f < L_g$ so $f(\w) < g(\w)$.
+
+Tail property
+
+It is easy to see that statement holds for all $\gamma < \kappa < \alpha$ iff it holds for all $\gamma < \kappa \leq \alpha$.
+
+Case 1: $\alpha = \beta + 1$.
+
+Suppose we have $\gamma < \kappa < \alpha$, then $\gamma < \kappa \leq \beta$ and induction hypothesis applies.
+
+\begin{align*}
+	&\sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} = \\
+	&\brac{\sum_{i < \beta} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i}} + f_\alpha \w^{a_\alpha}
+\end{align*}
+
+Expression $\brac{\ldots}$ is $<< \w^{a_\gamma}$ by induction hypothesis. $f_\alpha \w^{a_\alpha} << \w^{a_\gamma}$ as $a_\alpha < a_\gamma$. Thus the entire sum is $<< \w^{a_\gamma}$ as needed.
+
+Case 2: $\alpha$ is a limit ordinal.
+
+As before rewrite definitions of $f(\w)$ using $\kappa$
+
+\begin{align*}
+  f(\w) &= \curly{L_f \mid R_f} \\
+  F(x) &= \sum_{i < \kappa} f_i x^{a_i}
+\end{align*}
+
+\begin{align*}
+  L_f &= \curly{F(\w) + \sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_f &= \curly{F(\w) + \sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
+\end{align*}
+
+As before it is cofinal in $L, R$ so we define the same number.
+
+Compute
+
+\begin{align*}
+  &\sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} = \\
+	= &f(\w) - F(\w) = \\
+	= &\curly{L_f - F(\w) \mid R_f - F(\w)}
+\end{align*}
+
+\begin{align*}
+  L_f - F(\w) &= \curly{\sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_f - F(\w) &= \curly{\sum_{\kappa \leq i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \kappa < \beta < \alpha, \epsilon \in \R^{>0}} \\
+\end{align*}
+
+By induction hypothesis all elements of $L_f - F(\w), R_f - F(\w)$ are $<< \w^\gamma$. Thus the element defined by their cut has to be $<< \w^\gamma$ as well.
+
+\end{document}
+
