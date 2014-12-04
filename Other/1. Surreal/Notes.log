@@ -149,7 +149,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] [3] [4]
+] [2] [3] [4] [5]
 ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\Notes.aux") ) 
 Here is how much of TeX's memory you used:
  1328 strings out of 493922
@@ -160,4 +160,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  27i,15n,26p,256b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Notes.dvi (4 pages, 18756 bytes).
+Output written on Notes.dvi (5 pages, 19236 bytes).
