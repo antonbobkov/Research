@@ -64,7 +64,7 @@ where $(a_i)_{i<\alpha}$ is strictly decreasing in $\No$, $\alpha$ ordinal and $
 	What is the relationship of what we are going to do with Kaplansky's results from valuation theory?
 \end{question}
 
-Define $\sum_{i < \alpha} f_i \w^{a_i} = f(\omega)$ recursively on $\alpha$: \\ 
+For $f(x) = \sum_{i < \alpha} f_i x^{a_i}$ define $\sum_{i < \alpha} f_i \w^{a_i} = f(\omega)$ recursively on $\alpha$: \\ 
 When $\alpha = \beta + 1$ is a successor:
 \begin{align*}
 	\sum_{i < \alpha} f_i \w^{a_i} = \paren{\sum_{i < \beta} f_i \omega^{a_i}} + f_\beta \w^{a_\beta}
@@ -79,7 +79,10 @@ When $\alpha$ is a limit ordinal:
 \end{align*}
 Simulataneously with this definition we prove the following statements by induction:
 \begin{enumerate}
-	\item $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+	\item For $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+	\begin{align*}
+		
+	\end{align*}
 	\item if $\gamma < \kappa < \alpha$, then (tail property)
 	\begin{align*}
 		\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
