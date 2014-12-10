@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1083
-NormalPos.bottom=595
+NormalPos.right=1289
+NormalPos.bottom=728
 Class=LaTeXView
 Document=Notes.tex
 
 [Frame0_View0,0]
-TopLine=136
-Cursor=4840
+TopLine=75
+Cursor=3105
 
 [SessionInfo]
 FrameCount=1
