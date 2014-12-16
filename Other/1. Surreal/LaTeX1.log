@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  15 DEC 2014 16:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  15 DEC 2014 17:54
 entering extended mode
 **LaTeX1.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.tex"
@@ -146,24 +146,94 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+! Undefined control sequence.
+<argument>  K &\arr 
+                    \No \\ f(x) &\mapsto f(\w ) 
+l.41 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("C:\Users\Anton\SparkleShare\Research\Other\1. Surr
-eal\LaTeX1.aux") ) 
+! Undefined control sequence.
+<argument>  K &\arr \No \\ f(x) &\mapsto f(\w 
+                                              ) 
+l.41 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  K &\arr 
+                    \No \\ f(x) &\mapsto f(\w ) 
+l.41 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  K &\arr \No \\ f(x) &\mapsto f(\w 
+                                              ) 
+l.41 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \w 
+              ^b
+l.47 ...\in \No$ such that $\brac{a} = \brac{\w^b}
+                                                  $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> s \in \R \colon s\w 
+                               ^b \leq a
+l.51 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> s \in \R \colon s\w 
+                               ^b \leq a
+l.51 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+] ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux") ) 
 Here is how much of TeX's memory you used:
- 1301 strings out of 493921
- 15152 string characters out of 3144875
- 61586 words of memory out of 3000000
- 4619 multiletter control sequences out of 15000+200000
- 9189 words of font info for 35 fonts, out of 3000000 for 9000
+ 1314 strings out of 493922
+ 15271 string characters out of 3144898
+ 62586 words of memory out of 3000000
+ 4629 multiletter control sequences out of 15000+200000
+ 11210 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,26p,222b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on LaTeX1.pdf (1 page, 45347 bytes).
-PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 27i,9n,26p,222b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on LaTeX1.dvi (1 page, 1640 bytes).
