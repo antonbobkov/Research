@@ -224,14 +224,14 @@ my insertion and my current dilemma will both disappear.
 
 ! Extra \right.
 <argument> ...ilon ) \w ^{a_\alpha } \mid \right .
-                                                  }\\ \left {\sum _{i < \alp...
+                                                  }\\ \left .{\sum _{i < \al...
 l.169 \end{align*}
                   
 I'm ignoring a \right that had no matching \left.
 
 ! Extra }, or forgotten $.
 <argument> ...lon ) \w ^{a_\alpha } \mid \right .}
-                                                  \\ \left {\sum _{i < \alph...
+                                                  \\ \left .{\sum _{i < \alp...
 l.169 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
@@ -248,18 +248,6 @@ l.169 \end{align*}
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.169 \end{align*}
-                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
 
 ! Missing } inserted.
 <inserted text> 
@@ -420,14 +408,14 @@ my insertion and my current dilemma will both disappear.
 
 ! Extra \right.
 <argument> ...ilon ) \w ^{a_\alpha } \mid \right .
-                                                  }\\ \left {\sum _{i < \alp...
+                                                  }\\ \left .{\sum _{i < \al...
 l.169 \end{align*}
                   
 I'm ignoring a \right that had no matching \left.
 
 ! Extra }, or forgotten $.
 <argument> ...lon ) \w ^{a_\alpha } \mid \right .}
-                                                  \\ \left {\sum _{i < \alph...
+                                                  \\ \left .{\sum _{i < \alp...
 l.169 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
@@ -477,18 +465,6 @@ l.169 \end{align*}
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   {
-l.169 \end{align*}
-                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
 
 ! Missing } inserted.
 <inserted text> 
