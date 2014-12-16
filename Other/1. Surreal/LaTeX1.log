@@ -125,24 +125,24 @@ Package: fullpage 1999/02/23 1.1 (PWD)
 \c@lem=\count103
 
 ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -150,18 +150,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ! Undefined control sequence.
 <argument>  K &\arr 
                     \No \\ f(x) &\mapsto f(\w ) 
-l.41 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  K &\arr \No \\ f(x) &\mapsto f(\w 
-                                              ) 
-l.41 \end{align*}
+l.48 \end{align*}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -172,51 +161,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  K &\arr 
                     \No \\ f(x) &\mapsto f(\w ) 
-l.41 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  K &\arr \No \\ f(x) &\mapsto f(\w 
-                                              ) 
-l.41 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \w 
-              ^b
-l.47 ...\in \No$ such that $\brac{a} = \brac{\w^b}
-                                                  $.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> s \in \R \colon s\w 
-                               ^b \leq a
-l.51 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> s \in \R \colon s\w 
-                               ^b \leq a
-l.51 \end{align*}
+l.48 \end{align*}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -228,12 +173,12 @@ and I'll forget about whatever was undefined.
 
 ] ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux") ) 
 Here is how much of TeX's memory you used:
- 1314 strings out of 493922
- 15271 string characters out of 3144898
+ 1318 strings out of 493922
+ 15287 string characters out of 3144898
  62586 words of memory out of 3000000
- 4629 multiletter control sequences out of 15000+200000
+ 4633 multiletter control sequences out of 15000+200000
  11210 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,9n,26p,222b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on LaTeX1.dvi (1 page, 1640 bytes).
+Output written on LaTeX1.dvi (1 page, 1656 bytes).
