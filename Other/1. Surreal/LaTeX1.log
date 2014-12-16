@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  15 DEC 2014 18:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  15 DEC 2014 21:12
 entering extended mode
 **LaTeX1.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.tex"
@@ -154,17 +154,33 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
- [1
 
-] [2]
-("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux") ) 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.87 \alpha
+            = \beta + 1
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.88 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[1
+
+] [2] ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux") ) 
 Here is how much of TeX's memory you used:
  1337 strings out of 493922
  15592 string characters out of 3144898
- 68586 words of memory out of 3000000
+ 67586 words of memory out of 3000000
  4649 multiletter control sequences out of 15000+200000
  11210 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,10n,26p,222b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on LaTeX1.dvi (2 pages, 5436 bytes).
+Output written on LaTeX1.dvi (2 pages, 6576 bytes).
