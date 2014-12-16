@@ -154,26 +154,10 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+ [1
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.87 \alpha
-            = \beta + 1
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.88 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[1
-
-] [2] ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux") ) 
+] [2]
+("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.aux") ) 
 Here is how much of TeX's memory you used:
  1337 strings out of 493922
  15592 string characters out of 3144898
