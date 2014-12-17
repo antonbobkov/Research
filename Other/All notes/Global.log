@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:27
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -124,20 +124,6 @@ Package: fullpage 1999/02/23 1.1 (PWD)
 \c@claim=\count102
 \c@lem=\count103
 
-
-! LaTeX Error: Command \concat already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...{\raisebox{1ex}{\scalebox{.7}{$\frown$}}}}
-                                                   %sequence concatenation
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux"
 
@@ -150,133 +136,33 @@ LaTeX Warning: Label `' multiply defined.
 LaTeX Warning: Label `' multiply defined.
 
 ) ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Try loading font information for U+msa on input line 43.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex"
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.65 		\item We define $a \concat
-                                  b$ to be the surreal number
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.73 			\end{align*}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.73 			\end{align*}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.75 			of $a$ in $b$, then $b = a \concat
-                                           c$).
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[2
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex" [2
 
 ]
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.174 	\end{align*}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.174 	\end{align*}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.184 		$(c \restriction \alpha_0 \concat
-                                          (-)) \not \geq
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.202 		\concat
-                (-) = (r \restriction \alpha_0) \concat (-)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \scalebox 
-                     {.7}{$\frown $}
-l.202 ...t (-) = (r \restriction \alpha_0) \concat
-                                                   (-)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 [3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 266.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -286,8 +172,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 266.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 274.
- [4] [5] [6]) [7]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex") [8
+ [4] [5]) [6]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex") [7
 
 
 ]
@@ -299,12 +185,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1379 strings out of 493922
- 17178 string characters out of 3144899
- 72957 words of memory out of 3000000
- 4668 multiletter control sequences out of 15000+200000
+ 1378 strings out of 493922
+ 17170 string characters out of 3144899
+ 72937 words of memory out of 3000000
+ 4667 multiletter control sequences out of 15000+200000
  14071 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,222b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (8 pages, 35620 bytes).
+Output written on Global.dvi (7 pages, 35424 bytes).
