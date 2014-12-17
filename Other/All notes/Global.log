@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:36
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -135,7 +135,9 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
-) ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux"))
+) ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
@@ -184,72 +186,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.tex" [12
 
 
-]
-! You can't use `macro parameter character #' in horizontal mode.
-l.80 #
-       $S$ is Noetherian.
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.81 #
-       Every final segment of $S$ is finitely generated.
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.82 #
-       $\mathcal{F}(S)$ has the ascending chain condition.
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.83 #
-       Every infinite sequence in $S$ contains an increasing finite subseque...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.84 #
-       Every infinite sequence in $S$ is good.
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.97 #
-       If there exists an increasing surjection $S \twoheadrightarrow T$ and...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.98 #
-       If there exists a quasi-embedding $S \rightarrow T$ and $T$ is noethe...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.99 #
-       If $S, T$ are noetherian, then so are $S \coprod T$ and $S \times T$....
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-[13]) [14] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
+] [13]) [14]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.aux")
@@ -259,12 +197,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1391 strings out of 493922
- 17860 string characters out of 3144899
- 77938 words of memory out of 3000000
- 4666 multiletter control sequences out of 15000+200000
+ 1397 strings out of 493922
+ 18166 string characters out of 3144899
+ 78566 words of memory out of 3000000
+ 4668 multiletter control sequences out of 15000+200000
  14071 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,731b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (14 pages, 87052 bytes).
+Output written on Global.dvi (14 pages, 87792 bytes).
