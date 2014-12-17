@@ -6,17 +6,17 @@
 A crucial concept for these lectures will be ''games''. These games where two players Left and Right alternate moves, and a player loses if she has no moves. The information of who goes first is not encoded into the game. Formally, a game $G$ consists of two sets of games, $G=\{G_L|G_R\}$, where the left side consists of the valid games which Left can move to, and similarly for the right side. (We use the "typical element" notation for sets, which carries over from the notation for surreal numbers.)
 
 ====Example====
-# $\{\emptyset|\emptyset\}$ is called the zero game (abbreviated 0). There are no legal moves for either player, and the first player to move loses.
-# $\{\emptyset|0\}$ is the game 1. In this game, Left has no legal moves, and Right can move to the 0 game, so Right has a winning strategy no matter who moves first.
-# $\{0|\emptyset\}$. Here Left has a winning strategy.
-# $\{0|0\}$ First player to move wins. This is a valid game which is not a surreal number as we defined in Week 2.
+* $\{\emptyset|\emptyset\}$ is called the zero game (abbreviated 0). There are no legal moves for either player, and the first player to move loses.
+* $\{\emptyset|0\}$ is the game 1. In this game, Left has no legal moves, and Right can move to the 0 game, so Right has a winning strategy no matter who moves first.
+* $\{0|\emptyset\}$. Here Left has a winning strategy.
+* $\{0|0\}$ First player to move wins. This is a valid game which is not a surreal number as we defined in Week 2.
 
 ====Definition 1====
-# $G>0$ if Left has a winning strategy.
-# $G<0$ if Right has a winning strategy.
-# $G\sim 0$ if the second player has a winning strategy. ($G$ is ''similar'' to $0$.)
-# $G\parallel 0$ if the first player has a winning strategy. ($G$ is ''fuzzy''.)
-# $G\ge 0$ means $G>0$ or $G\sim 0$.
+* $G>0$ if Left has a winning strategy.
+* $G<0$ if Right has a winning strategy.
+* $G\sim 0$ if the second player has a winning strategy. ($G$ is ''similar'' to $0$.)
+* $G\parallel 0$ if the first player has a winning strategy. ($G$ is ''fuzzy''.)
+* $G\ge 0$ means $G>0$ or $G\sim 0$.
 
 ====Lemma 2 (Determinacy)====
 For any game $G$, one of $G>0$, $G<0$, $G\sim 0$, or $G\parallel 0$ holds.
@@ -41,22 +41,22 @@ $$-G=\{-G_R|-G_L\}.$$
 Notice that these are the same definitions as for surreal numbers.
 
 ====Lemma 5 (Basic properties of $+$ and $-$)====
-# $-(G+H)=-G+-H$.
-# $--G=G$.
-# $G\sim 0$ iff $-G\sim 0$.
-# $G>0$ iff $-G<0$.
-# $G\parallel 0$ iff $-G\parallel 0$.
+* $-(G+H)=-G+-H$.
+* $--G=G$.
+* $G\sim 0$ iff $-G\sim 0$.
+* $G>0$ iff $-G<0$.
+* $G\parallel 0$ iff $-G\parallel 0$.
 
 We won't prove this lemma, but it is not difficult.
 
 ====Lemma 6====
 Let $H\sim 0$. Then:
-# If $G\sim 0$, then $G+H\sim 0$.
-# If $G>0$, then $G+H>0$.
-# If $G\parallel 0$, then $G+H\parallel 0$.
-# If $G+H\sim 0$, then $G\sim 0$.
-# If $G+H>0$, then $G>0$.
-# If $G+H\parallel 0$, then $G\parallel 0$.
+* If $G\sim 0$, then $G+H\sim 0$.
+* If $G>0$, then $G+H>0$.
+* If $G\parallel 0$, then $G+H\parallel 0$.
+* If $G+H\sim 0$, then $G\sim 0$.
+* If $G+H>0$, then $G>0$.
+* If $G+H\parallel 0$, then $G\parallel 0$.
 
 '''Proof:'''
 
@@ -71,8 +71,8 @@ For (2), the proof splits into cases. If Right moves first, either Right moves i
 The next three follow from the first three by using cases based on determinacy.
 
 ====Lemma 7====
-# $G+ -G\sim 0$.
-# If $G>0$ and $H>0$ then $G+H>0$.
+* $G+ -G\sim 0$.
+* If $G>0$ and $H>0$ then $G+H>0$.
 
 '''Proof:'''
 
@@ -80,5 +80,5 @@ The first assertion follows from the strategy of "playing Go on two boards again
 
 
 ====Definition 8====
-# $G\sim H$ if $G-H\sim 0$.
-# $G>H$ if $G-H>0$.
+* $G\sim H$ if $G-H\sim 0$.
+* $G>H$ if $G-H>0$.
