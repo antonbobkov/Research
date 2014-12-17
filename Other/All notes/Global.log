@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:57
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -221,28 +221,4 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 
 ] [26] [27] [28] [29]
 
-LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 195.
-
-[30]) [31] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/week_5.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/week_6.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.aux"))
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
-Here is how much of TeX's memory you used:
- 1514 strings out of 493922
- 21023 string characters out of 3144899
- 80367 words of memory out of 3000000
- 4745 multiletter control sequences out of 15000+200000
- 17201 words of font info for 66 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,16n,26p,731b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on Global.dvi (31 pages, 176940 bytes).
+LaTeX Warning: Th
