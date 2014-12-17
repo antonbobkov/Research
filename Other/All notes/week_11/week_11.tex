@@ -1,390 +1,84 @@
-== Week 6 ==
-
-Notes by Anton Bobkov
-
-===Monday, November 10, 2014===
-We define a map which will eventually be proven to be an ordered field isomorphism.
-
-\begin{align*}
-  K = \R((t^\No)) \overset{\sim}{\longrightarrow} \No
-\end{align*}
-
-We have an element written as 
-\begin{align*}
-	&f = \sum_{\gamma \in \No} f_\gamma t^\gamma \\
-	&\supp(f) = \{\gamma \colon f_\gamma \neq 0\}
-\end{align*}
-where $\supp(f)$ is a well-ordered sub''set''. Now let $x = t^{-1}$ and write
-\begin{align*}
-  f(x) = \sum_{i < \alpha} f_i x^{a_i}
-\end{align*}
-where $(a_i)_{i<\alpha}$ is strictly decreasing in $\No$, $\alpha$ ordinal and $f_i \in \R$ for $i < \alpha$. Also define $l(f(x))$ to be the order type of $\supp(f)$ (which may be smaller than $\alpha$ as we allow zero coefficients).
-
-==== Question ====
-	What is the relationship of what we are going to do with Kaplansky's results from valuation theory?
-
-==== Definition/Theorem ====
-For $f(x) = \sum_{i < \alpha} f_i x^{a_i}$ define $\sum_{i < \alpha} f_i \w^{a_i} = f(\omega)$ recursively on $\alpha$: \\ 
-When $\alpha = \beta + 1$ is a successor:
-\begin{align*}
-	\sum_{i < \alpha} f_i \w^{a_i} = \paren{\sum_{i < \beta} f_i \omega^{a_i}} + f_\beta \w^{a_\beta}
-\end{align*}
-When $\alpha$ is a limit ordinal:
-\begin{align*}
-	\sum_{i < \alpha} f_i \w^{a_i} &= \curly{L \mid R} \\
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
-Simultaneously with this definition we prove the following statements by induction:
-
-* '''Inequality:''' For \begin{align*}
-	f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
-	g(x) &= \sum_{i < \alpha} g_i x^{a_i}
-\end{align*} we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
-* '''Tail property:''' if $\gamma < \kappa < \alpha$
-\begin{align*}
-	\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
-\end{align*}
-
-'''Proof of inequality'''
-
-Suppose we have
-\begin{align*}
-  f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
-  g(x) &= \sum_{i < \alpha} g_i x^{a_i}
-\end{align*}
-
-with $f(x) < g(x)$
-
-Choose $\gamma$ smallest such that $f_\gamma \neq g_\gamma$.
-It has to be that $f_\gamma > g_\gamma$. Also $f(x)\midr\gamma = g(x)\midr\gamma$
-
-''Case 1'': $\alpha = \beta + 1$
-
-\begin{align*}
-  f(x) &= f(x)\midr\beta + f_\beta x^{a_\beta}\\
-  g(x) &= g(x)\midr\beta + g_\beta x^{a_\beta}
-\end{align*}
-
-Suppose $\gamma = \beta$.
-Then $\bar f(x) = \bar g(x)$, $\bar f(\w) = \bar g(\w)$, so compute
-\begin{align*}
-  f(\w) - g(\w) &= \\
-	&= f(\w)\midr\beta + f_\beta \w^{a_\beta} - g(\w)\midr\beta - g_\beta \w^{a_\beta} \\
-	&= f_\beta \w^{a_\beta} - g_\beta \w^{a_\beta} \\
-	&= \paren{f_\beta - g_\beta} \w^{a_\beta} > 0
-\end{align*}
-
-Now suppose $\gamma < \beta$.
-
-Group the terms
-\begin{align*}
-  f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f^* + f_\beta \w^{a_\beta} \\
-  g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g^* + g_\beta \w^{a_\beta}
-\end{align*}
-where
-\begin{align*}
-	h(\w) &= f(\w)\midr\gamma = g(\w)\midr\gamma \\
-	f^* &= f(\w)\midr\beta - f(\w)\midr{\gamma + 1} \\
-	g^* &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
-\end{align*}
-
-Then we have by tail property $f^* << x^{a_\gamma}$ and $g^* << x^{a_\gamma}$. Compute
-
-\begin{align*}
-  f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f* - g*) + (f_\beta - g_\beta) x^{a_\beta}
-\end{align*}
-
-We have $f_\gamma > g_\gamma$.
-All $f*$, $g*$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$.
-Thus $f(\w) - g(\w) > 0$ as needed.
+== Siddharth's extra lectures ==
 
-''Case 2'': $\alpha$ is a limit ordinal.
+===Part 1===
+''notes by Bill Chen''
 
-$f(\w)$ and $g(\w)$ are defined as 
+A crucial concept for these lectures will be ''games''. These games where two players Left and Right alternate moves, and a player loses if she has no moves. The information of who goes first is not encoded into the game. Formally, a game $G$ consists of two sets of games, $G=\{G_L|G_R\}$, where the left side consists of the valid games which Left can move to, and similarly for the right side. (We use the "typical element" notation for sets, which carries over from the notation for surreal numbers.)
 
-\begin{align*}
-  f(\w) &= \curly{L_f \mid R_f} \\
-  g(\w) &= \curly{L_g \mid R_g}
-\end{align*}
+====Example====
+# $\{\emptyset|\emptyset\}$ is called the zero game (abbreviated 0). There are no legal moves for either player, and the first player to move loses.
+# $\{\emptyset|0\}$ is the game 1. In this game, Left has no legal moves, and Right can move to the 0 game, so Right has a winning strategy no matter who moves first.
+# $\{0|\emptyset\}$. Here Left has a winning strategy.
+# $\{0|0\}$ First player to move wins. This is a valid game which is not a surreal number as we defined in Week 2.
 
-Recall that
+====Definition 1====
+# $G>0$ if Left has a winning strategy.
+# $G<0$ if Right has a winning strategy.
+# $G\sim 0$ if the second player has a winning strategy. ($G$ is ''similar'' to $0$.)
+# $G\parallel 0$ if the first player has a winning strategy. ($G$ is ''fuzzy''.)
+# $G\ge 0$ means $G>0$ or $G\sim 0$.
 
-\begin{align*}
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta + \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
+====Lemma 2 (Determinacy)====
+For any game $G$, one of $G>0$, $G<0$, $G\sim 0$, or $G\parallel 0$ holds.
 
-Pick any $\beta$ with $\gamma < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
-and pick limit elements $\bar f(\w) \in L_f$ and $\bar g(\w) \in R_g$ corresponding to $\beta, \epsilon$.
+'''Proof:'''
 
-Then $\bar f(x) < \bar g(x)$ as first coefficient where they differ is $x^{a_\gamma}$ and $f_\gamma > g_\gamma$.
-Thus by inductive hypothesis $\bar f(\w) < \bar g(\w)$.
-As choice of those was arbitrary we have $L_f < R_g$ so $f(\w) > g(\w)$.
+Let $A$ be the assertion that there is a $G_L$ with $G_L\ge 0$, and $B$ be the assertion that there is a $G_R$ with $G_R\le 0$.
 
-'''Proof of tail property'''
+Then one can check that $G>0$ iff $A\& \neg B$, $G<0$ iff $\neg A \& B$, $G\sim 0$ iff $\neg A \& \neg B$, and $G\parallel 0$ iff $A\& B$. For example, if $A \& B$ holds, then the first player can move to a game that is positive or similar $0$. In the first case, the first player clearly wins. In the second case, the first player becomes the second player of the new game similar to $0$, and hence wins.
 
-It is easy to see that statement holds for all $\gamma < \kappa < \alpha$ iff it holds for all $\gamma < \kappa \leq \alpha$.
+====Definition 3====
+If $G,H$ are games, the ''disjunctive sum'' $G+H$ is the game in which $G$ and $H$ are "played in parallel." Formally,
+$$G+H=\{G_L+H,G+H_L|G_R+H, G+H_R\}.$$
 
-''Case 1'': $\alpha = \beta + 1$.
-
-Suppose we have $\gamma < \kappa < \alpha$, then $\gamma < \kappa \leq \beta$ and induction hypothesis applies.
-
-\begin{align*}
-	&\sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} = \\
-	&\brac{\sum_{i < \beta} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i}} + f_\alpha \w^{a_\alpha}
-\end{align*}
+'''Remark:'''
+By induction, can prove that $+$ is associative and commutative. 
 
-Expression $\brac{\ldots}$ is $<< \w^{a_\gamma}$ by induction hypothesis. $f_\alpha \w^{a_\alpha} << \w^{a_\gamma}$ as $a_\alpha < a_\gamma$. Thus the entire sum is $<< \w^{a_\gamma}$ as needed.
+====Definition 4====
+If $G$ is a game, the ''negation'' $-G$ is the game obtained by switching the roles of Left and Right. Formally,
+$$-G=\{-G_R|-G_L\}.$$
 
-''Case 2'': $\alpha$ is a limit ordinal.
+Notice that these are the same definitions as for surreal numbers.
 
-Write definitions of $f(\w)$ using $\kappa$
-
-\begin{align*}
-  f(\w) &= \curly{L_f \mid R_f} \\
-  F(\w) &= f(\w)\midr\kappa = \sum_{i < \kappa} f_i \w^{a_i}
-\end{align*}
-
-\begin{align*}
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-\end{align*}
-
-Pick any $\beta$ with $\kappa < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
-and pick limit elements $\bar l(\w) \in L_f$ and $\bar r(\w) \in R_f$ corresponding to $\beta, \epsilon$.
-
-By induction hypothesis we have 
-\begin{align*}
-	\bar l(\w) - F(\w) &= \bar l(\w) - \bar l(\w)\midr\kappa \ <<  \w^{a_\kappa} \\
-	\bar r(\w) - F(\w) &= \bar r(\w) - \bar r(\w)\midr\kappa \ <<  \w^{a_\kappa}
-\end{align*}
-
-\begin{align*}
-	l(\w) \leq f(\w) \leq r(\w) \\
-\end{align*}
-\begin{align*}
-	l(\w) - F(\w) \leq f(\w) - F(\w) \leq r(\w) - F(\w)
-\end{align*}
- 
-Thus $f(\w) - F(\w) << \w^{a_\kappa}$ as it is between two elements that are $<<  \w^{a_\kappa}$.
-
-'''Proof of well-definiteness'''
-
-We also need to check that the function is well-defined. For $f(x)$ define its reduced form, where we only keep non-zero coefficients.
-
-\begin{align*}
-	f(x) &= \sum_{i < \alpha} f_i \w^{a_i} \\
-	\bar f(x) &= \sum_{j < \alpha'} f_j' \w^{a_j'}
-\end{align*}
-
-We need to check that $f(\w) = \bar f(\w)$
-
-''Case 1'': $\alpha = \beta + 1$
-
-\begin{align*}
-	f(\w) &= g(\w) + f_\beta \w^{a_\beta} \\
-	g(x) &= \sum_{i < \beta} f_i \w^{a_i} \\
-	g(\w) &= \bar g(\w)
-\end{align*}
-
-If $f_\beta = 0$ then $\bar f(x) = \bar g(x)$ and $f(\w) = g(\w)$ so $f(\w) = g(\w) = \bar g(\w) = \bar f(\w)$ as needed.
-
-Suppose $f_\beta \neq 0$. Then $\bar f(x) = \bar g(x) + f_\beta x^{a_\beta}$.
-\begin{align*}
-	f(\w) = g(\w) + f_\beta \w^{a_\beta} = \bar g(\w) + f_\beta \w^{a_\beta} = \bar f(\w)
-\end{align*}
-
-''Case 2'': $\alpha$ is a limit and non-zero coefficients are cofinal in $\alpha$.
-
-In this case both $f(x)$ and $\bar f(x)$ have limit ordinals in their definitions. Moreover 
-\begin{align*}
-	L_{\bar f} &\subseteq L_f \\
-	R_{\bar f} &\subseteq R_f
-\end{align*}
-and are cofinal. Thus $f(\w) = \bar f(\w)$.
-
-''Case 3'': $\alpha$ is a limit and for some $\gamma < \alpha$
-\begin{align*}
-	\gamma \leq \beta < \alpha \Rightarrow f_\beta = 0
-\end{align*}
-
-\begin{align*}
-	g(x) &= \sum_{i < \gamma} f_i x^{a_i} \\
-  L_f^* &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-	&= \curly{g(\w) - \epsilon \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f^* &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-	&= \curly{g(\w) + \epsilon \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
-
-We have
-\begin{align*}
-	L_f^* &\subseteq L_f \\
-	R_f^* &\subseteq R_f
-\end{align*}
-and are cofinal. $\curly{L_f^* - g(\w) \mid R_f^* - g(\w)} = 0$ as left side is negative and right side is positive.
-Thus $f(\w) = \curly{L_f^* \mid R_f^*} = g(\w)$. As $\gamma < \alpha$ this case is covered by induction.
-
-===Wednesday, November 12, 2014===
-
-==== Lemma 6.1 ====
-$l(f(\w)) \geq l(f(x))$
-
-'''Proof'''
-Suppose $\beta < \alpha$. Then the elements used to define $\sum_{i < \w\cdot\beta} (\ldots)$ also appear in the cut for $\sum_{i < \w\cdot\alpha} (\ldots) = f(\w)$. Thus by uniqueness of the normal form.
-\begin{align*}
-	l\paren{\sum_{i < \w\cdot\beta} (\ldots)} < l(f(\w))
-\end{align*}
-So the map $\phi(\beta) = l(\sum_{i < \w\cdot\beta} (\ldots))$ is strictly increasing.
-Any strictly increasing map $\phi$ on an initial segment of $\On$ satisfies $\phi(\beta) \geq \beta$.
-
-==== Lemma 6.2 ====
-The map
-
-\begin{align*}
-	K &\arr \No \\
-	f(x) &\mapsto f(\w)
-\end{align*}
-
-is onto.
-
-'''Proof'''
-
-Let $a \in \No, a \neq 0$. By (5.6) there is a unique $b \in \No$ such that $\brac{a} = \brac{\w^b}$.
-Put
-\begin{align*}
-	S = \curly{s \in \R \colon s\w^b \leq a}
-\end{align*}
-Then $S \neq \emptyset$ and bounded from above.
-Put $r = \sup S \in \R$.
-Then
-\begin{align*}
-	(r + \epsilon)\w^b > a > (r - \epsilon)\w^b
-\end{align*}
-for all $\epsilon \in \R^{>0}$
-thus
-\begin{align*}
-	\abs{a - r\w^b} << \w^b \tag{*}
-\end{align*}
-
-Note $r \neq 0$; $r,b$ subject to $(*)$ are unique.
-
-We set $\lt(a) = r\w^b$
-
-Towards a contradiction assume that $a$ is not in the image of $f(x) \mapsto f(\w)$.
-We shall inductively define a sequence $(a_i, f_i)_{i \in \On}$ where 
-
-*$a_i \in \No$ is strictly decreasing; $f_i \in \R - \{0\}$
-*$f_\alpha \w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha} f_i\w^{a_i}}$ for all $\alpha \in \On$
-
-''Case 1'': $\alpha = \beta + 1$
-
-Take $(a_\alpha, f_\alpha)$ so that
-\begin{align*}
-	f_\alpha\w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha}(\ldots)}
-\end{align*}
-
-By inductive hypothesis, if $\beta < \alpha$
-
-\begin{align*}
-	f_\beta\w^{a_\beta} &= \lt\paren{a - \sum_{i < \beta}(\ldots)} \\
-	\Rightarrow f_\alpha\w^{a_\alpha} &= \lt\paren{\paren{a - \sum_{i < \beta}(\ldots)} - f_\beta\w^{a_\beta}} \\
-	&<< \w^{a_\beta} \text{ by (*)} \\
-	\Rightarrow a_\alpha &< a_\beta
-\end{align*}
-
-''Case 2'': $\alpha$ limit
-
-Take $(a_\alpha, f_\alpha)$ as above.
-Let $\beta < \alpha$; to show $a_\alpha < a_\beta$.
-We have
-
-\begin{align*}
-	a - \sum_{i \leq \beta} f_i \w^{a_i} = \paren{a - \sum_{i < \beta} f_i\w^{a_i}} - f_\beta\w^{a_\beta} << \w^{a_\beta}
-\end{align*}
-
-By the tail property
-\begin{align*}
-	&\sum_{i < \alpha} (\ldots) - \sum_{i \leq \beta} (\ldots) << \w^{a_\beta} \\
-	\Rightarrow &a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta} \\
-	\Rightarrow &\lt\paren{a - \sum_{i < \alpha} (\ldots) } << \w^{a_\beta} \\
-	\Rightarrow &a_\alpha < a_\beta
-\end{align*}
-
-This completes the induction.
-Note that we showed that if $\alpha$ is a limit then $a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta}$ for all $\beta < \alpha$.
-
-So if $\curly{L \mid R}$ is the cut used to define $\sum_{i < \alpha} (\ldots)$ then $L < a < R$.
-Let $\alpha = \w \cdot \alpha'$.
-Hence 
-\begin{align*}
-	l(a) > l\paren{\sum_{i < \w\cdot\alpha'} (\ldots)} \geq \alpha'
-\end{align*}
-by (6.1).
-So $l(a)$ is bigger than all limits - contradiction.
-
-==== Lemma 6.4 ====
-Let $r \in \R, a \in \No$. Then 
-\begin{align*}
-	r\w^a = \{(r - \epsilon) \w^a \mid (r+\epsilon)\w^a\}
-\end{align*}
-where $\epsilon$ ranges over $\R^{>0}$.
-
-'''Proof'''
-\begin{align*}
-	r &= \{r - \epsilon \mid r + \epsilon\} \\
-	\w^a &= \curly{0, s\w^{a_L} \mid t\w^{a_R}} \text{ where } s,t \in \R^{>0}
-\end{align*}
-\begin{align*}
-	r\w^a = \{
-	&(r - \epsilon) \w^a, (r - \epsilon)\w^a + \epsilon s \w^{a_L}, \\
-	&(r + \epsilon) \w^a - \epsilon t \w^{a_R} \mid \\
-	&(r + \epsilon) \w^a, (r + \epsilon)\w^a - \epsilon s \w^{a_R}, \\
-	&(r - \epsilon) \w^a + \epsilon t \w^{a_L} \}
-\end{align*}
-Now use $\w^{a_L} << \w^a << \w^{a_R}$ and cofinality.
-
-===Friday, November 14, 2014===
-
-==== Corollary 6.5 ====
-\begin{align*}
-	\sum_{i \leq \alpha} f_i\w^{a_i} =
-	\curly{ \sum_{i < \alpha} f_i\w^{a_i} + (f_i - \epsilon) \w^{a_\alpha} \mid
-	\sum_{i < \alpha} f_i\w^{a_i} + (f_i + \epsilon) \w^{a_\alpha} }
-\end{align*}
-
-'''Proof'''
-
-''Case 1'': $\alpha$ is a limit
-\begin{align*}
-	&\sum_{i \leq \alpha} f_i\w^{a_i} = \sum_{i < \alpha} f_i\w^{a_i} + f_\alpha\w^{a_\alpha} = \\ \underset{(6.4)}{=}
-	&\curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon)\w^{a_\beta} \mid
-	\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon)\w^{a_\beta}}_{\beta < \alpha, \epsilon \in \R^{>0}}
-	+ \curly{(r - \epsilon) \w^\alpha \mid (r+\epsilon)\w^\alpha} = \\ =
-	&\curly{\sum_{i \leq \beta} f_i \w^{a_i} - \epsilon\w^{a_\beta} + f_\alpha\w^{a_\alpha},
-	\sum_{i < \alpha} f_i \w^{a_i} + (f_\alpha - \epsilon)\w^{a_\alpha} \mid \ldots} = \\ \underset{cofinality}{=}
-	&\curly{ \sum_{i < \alpha} f_i\w^{a_i} + (f_i - \epsilon) \w^{a_\alpha} \mid \ldots }
-\end{align*}
-
-''Case 2'': $\alpha + 1$
-
-\begin{align*}
-	&\sum_{i \leq \alpha + 1} f_i \w^{a_i} = \sum_{i \leq \alpha} f_i \w^{a_i} + f_{\alpha + 1} \w^{a_{\alpha + 1}} = \\
-	&\text{(by (6.4) and induction hypothesis)} \\
-	= &\curly{\sum_{i \leq \alpha} f_i \w^{a_i} + (f_{\alpha} - \epsilon) \w^{a_\alpha} \mid \ldots} +
-	\curly{(f_{\alpha + 1} - \epsilon) \w^{a_{\alpha + 1}} \mid \ldots} =  \\
-	= &\curly{\sum_{i < \alpha} f_i \w^{a_i} + (f_{\alpha} - \epsilon) \w^{a_\alpha} + f_{\alpha + 1} \w^{a_{\alpha + 1}},
-	\sum_{i \leq \alpha} f_i \w^{a_i} + (f_{\alpha + 1} - \epsilon) \w^{a_{\alpha + 1}} \mid \ldots}
-\end{align*}
-
-and again we are done by cofinality.
+====Lemma 5 (Basic properties of $+$ and $-$)====
+# $-(G+H)=-G+-H$.
+# $--G=G$.
+# $G\sim 0$ iff $-G\sim 0$.
+# $G>0$ iff $-G<0$.
+# $G\parallel 0$ iff $-G\parallel 0$.
+
+We won't prove this lemma, but it is not difficult.
+
+====Lemma 6====
+Let $H\sim 0$. Then:
+# If $G\sim 0$, then $G+H\sim 0$.
+# If $G>0$, then $G+H>0$.
+# If $G\parallel 0$, then $G+H\parallel 0$.
+# If $G+H\sim 0$, then $G\sim 0$.
+# If $G+H>0$, then $G>0$.
+# If $G+H\parallel 0$, then $G\parallel 0$.
+
+'''Proof:'''
+
+Formally, this is proved by induction. We just describe the strategies in words.
+
+For (1), if the second player has a winning strategy in $G$ and $H$, then the second player can use the winning strategy corresponding to the game in which the first player plays in.
+
+For (2), the proof splits into cases. If Right moves first, either Right moves in $H$, so Left can play according to the second player's strategy in the $H$ game, or Right moves in $G$, so Left can play according to his strategy in $G$. If Left moves first, he plays according to his strategy in $G$ and then according to the previous sentence against the subsequent moves of Right.
+
+(3), is a similar analysis.
+
+The next three follow from the first three by using cases based on determinacy.
+
+====Lemma 7====
+# $G+ -G\sim 0$.
+# If $G>0$ and $H>0$ then $G+H>0$.
+
+'''Proof:'''
+
+The first assertion follows from the strategy of "playing Go on two boards against the same person."
+
+
+====Definition 8====
+# $G\sim H$ if $G-H\sim 0$.
+# $G>H$ if $G-H>0$.
