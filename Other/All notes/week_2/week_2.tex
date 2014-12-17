@@ -225,8 +225,10 @@ The base case is clear, as $\langle \ \rangle = 0\in L^{-1}$ and $a\cdot 0 = 0 <
 For the induction, suppose $b\in L^{-1}\cup R^{-1}$ satisfying $(*)$ and $0\neq a' <_s a$. We show that $x = b\circ a'$ also satisfies $(*)$.
 
 Claim:
-# $x > b \Leftrightarrow 1 > ab$
-# $ax = 1 + (a-a')(x-b)$.
+\begin{enumerate}
+\item $x > b \Leftrightarrow 1 > ab$
+\item $ax = 1 + (a-a')(x-b)$.
+\end{enumerate}
 By definition, $x$ is the solution to $(a-a')b + a'x = 1$ and $ab = ab - a'b + a'b = (a-a')b + a'b$. These two equations yield $ab = 1 + a'(b-x)$. Both parts of the claim follow.
 
 Now suppose, $b\in L^{-1}, a'\in L$. Then $x\in R^{-1}$ so want to check $ax > 1$.
