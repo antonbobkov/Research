@@ -132,31 +132,6 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 Package amsthm Warning: Unknown theoremstyle `theorem' on input line 53.
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \\n
-        ewtheorem{corollary}[theorem]{Corollary}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \\n
-        ewtheorem{corollary}[theorem]{Corollary}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Package amsthm Warning: Unknown theoremstyle `empty' on input line 66.
 
 \c@namedtheorem=\count105
@@ -203,9 +178,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
- [1
-
-]
 LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -215,11 +187,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex" [3
+) [1
 
 ]
-[4]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex" [2
+
+]
+[3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 268.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -228,70 +202,43 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 276.
- [5] [6]) [7]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex" [8
+ [4] [5]) [6]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex" [7
 
 
-] [9] [10]) [11]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.tex") [12
+] [8] [9]) [10]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.tex") [11
 
 
 ]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.tex" [13
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.tex" [12
 
 
-] [14]) [15]
+] [13]) [14]
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/week_5.tex"
 Missing character: There is no ö in font cmr10!
- [16
+ [15
 
 
-] [17]) [18]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/week_6.tex" [19
+] [16]) [17]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/week_6.tex" [18
 
 
-] [20] [21] [22] [23] [24]) [25]
+] [19] [20] [21] [22] [23]) [24]
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.tex"
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 6.
 
 (C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\dstroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [26
+) [25
 
 
-] [27] [28] [29]
-
-! LaTeX Error: Environment corollary undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 \begin{corollary}
-                       \label{7.2} Let $K'$ be a subfield of a real closed f...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{corollary}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 ...ebraically closed in $K$. \end{corollary}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[30]
+] [26] [27] [28] [29]
 
 LaTeX Warning: The counter will not be printed.
              The label is: $\bullet $ on input line 195.
 
-[31]) [32] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
+[30]) [31] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.aux")
@@ -304,12 +251,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1513 strings out of 493922
- 21011 string characters out of 3144899
- 80442 words of memory out of 3000000
- 4744 multiletter control sequences out of 15000+200000
+ 1514 strings out of 493922
+ 21023 string characters out of 3144899
+ 80366 words of memory out of 3000000
+ 4745 multiletter control sequences out of 15000+200000
  17201 words of font info for 66 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,731b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (32 pages, 177120 bytes).
+Output written on Global.dvi (31 pages, 176940 bytes).
