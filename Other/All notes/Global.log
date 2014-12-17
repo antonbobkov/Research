@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:23
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -125,7 +125,8 @@ Package: fullpage 1999/02/23 1.1 (PWD)
 \c@lem=\count103
 
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.aux"))
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
@@ -150,23 +151,891 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.tex") [2
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex"
+! Undefined control sequence.
+l.39 \tikzset
+             {every tree node/.style={minimum width=2em,draw,circle},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...w, edge from parent path={(\tikzparentnode
+                                                  ) -- (\tikzchildnode)}},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...path={(\tikzparentnode) -- (\tikzchildnode
+                                                  )}},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (4.85704pt too wide) in paragraph at lines 33--44
+\OT1/cmr/m/n/10 blank/.style=draw=none, edge from par-ent/.style= draw, edge from par-ent path=() -- (), level dis-tance
+=1.5cm 
+ []
+
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<argument> ...cture}[sibling distance=40pt] \Tree 
+                                                  [.{} \edge [dashed]; [.\no...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ing distance=40pt] \Tree [.{} \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... \Tree [.{} \edge [dashed]; [.\node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{-}; \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]{-}; \edge [dashed]; [.\node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{+};] \edge [dashe...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...[dashed]; \node [dashed]{+};] \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ashed]{+};] \edge [dashed]; [.\node 
+                                                  [dashed]{+}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{+}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{+}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{+};] ] \edge [thi...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ashed]; \node [dashed]{+};] ] \edge 
+                                                  [thick]; [.\node [thick]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...shed]{+};] ] \edge [thick]; [.\node 
+                                                  [thick]{+}; \edge [thick];...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]; [.\node [thick]{+}; \edge 
+                                                  [thick]; [.\node [thick]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]{+}; \edge [thick]; [.\node 
+                                                  [thick]{-}; \edge [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]; [.\node [thick]{-}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...e [thick]{-}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [thick]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [thick]; \node [thick]{+};...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...e [dashed]{-}; \edge [thick]; \node 
+                                                  [thick]{+}; ] \edge [dashe...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]; \node [thick]{+}; ] \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...hick]{+}; ] \edge [dashed]; [.\node 
+                                                  [dashed]{+}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{+}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{+}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{+}; ] ] ] \end {t...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{align*} on input line 44 ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<argument> ...cture}[sibling distance=40pt] \Tree 
+                                                  [.{} \edge [dashed]; [.\no...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ing distance=40pt] \Tree [.{} \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... \Tree [.{} \edge [dashed]; [.\node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{-}; \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]{-}; \edge [dashed]; [.\node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{+};] \edge [dashe...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...[dashed]; \node [dashed]{+};] \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ashed]{+};] \edge [dashed]; [.\node 
+                                                  [dashed]{+}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{+}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{+}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{+};] ] \edge [thi...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ashed]; \node [dashed]{+};] ] \edge 
+                                                  [thick]; [.\node [thick]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...shed]{+};] ] \edge [thick]; [.\node 
+                                                  [thick]{+}; \edge [thick];...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]; [.\node [thick]{+}; \edge 
+                                                  [thick]; [.\node [thick]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]{+}; \edge [thick]; [.\node 
+                                                  [thick]{-}; \edge [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]; [.\node [thick]{-}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...e [thick]{-}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [thick]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [thick]; \node [thick]{+};...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...e [dashed]{-}; \edge [thick]; \node 
+                                                  [thick]{+}; ] \edge [dashe...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [thick]; \node [thick]{+}; ] \edge 
+                                                  [dashed]; [.\node [dashed]...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...hick]{+}; ] \edge [dashed]; [.\node 
+                                                  [dashed]{+}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dashed]; [.\node [dashed]{+}; \edge 
+                                                  [dashed]; \node [dashed]{-...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{+}; \edge [dashed]; \node 
+                                                  [dashed]{-}; \edge [dashed...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]; \node [dashed]{-}; \edge 
+                                                  [dashed]; \node [dashed]{+...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... [dashed]{-}; \edge [dashed]; \node 
+                                                  [dashed]{+}; ] ] ] \end {t...
+l.72 \end{align*}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{align*} on input line 44 ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (896.01854pt too wide) in paragraph at lines 72--72
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.99 		\item We define $a \concat
+                                  b$ to be the surreal number
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.107 			\end{align*}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.107 			\end{align*}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.109 			of $a$ in $b$, then $b = a \concat
+                                            c$).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2
 
 ]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex") [3
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.208 	\end{align*}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.208 	\end{align*}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.218 		$(c \restriction \alpha_0 \concat
+                                          (-)) \not \geq
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.236 		\concat
+                (-) = (r \restriction \alpha_0) \concat (-)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \scalebox 
+                     {.7}{$\frown $}
+l.236 ...t (-) = (r \restriction \alpha_0) \concat
+                                                   (-)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 300.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 300.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 308.
+
+
+LaTeX Warning: Reference `lemma_on_length_of_cuts' on page 4 undefined on input line 339.
+
+
+LaTeX Warning: Reference `cofinality_theorem' on page 4 undefined on input line 343.
+
+[4] [5]
+
+LaTeX Warning: Reference `defn_of_surreal_sum' on page 6 undefined on input line 472.
+
+
+LaTeX Warning: Reference `defn_of_surreal_sum' on page 6 undefined on input line 485.
+
+
+LaTeX Warning: Reference `defn_of_surreal_sum' on page 6 undefined on input line 495.
+
+
+LaTeX Warning: Reference `inverse_cofinality_theorem' on page 6 undefined on input line 522.
+
+[6]
+
+LaTeX Warning: Reference `cofinality_theorem' on page 7 undefined on input line 538.
+
+) [7] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex") [8
 
 
 ]
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")) ) 
-Here is how much of TeX's memory you used:
- 1341 strings out of 493922
- 16192 string characters out of 3144899
- 61586 words of memory out of 3000000
- 4639 multiletter control sequences out of 15000+200000
- 11815 words of font info for 46 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,9n,26p,242b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux"))
 
-Output written on Global.dvi (3 pages, 2600 bytes).
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1385 strings out of 493922
+ 17113 string characters out of 3144899
+ 72878 words of memory out of 3000000
+ 4673 multiletter control sequences out of 15000+200000
+ 14071 words of font info for 53 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,16n,26p,222b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Global.dvi (8 pages, 36496 bytes).
