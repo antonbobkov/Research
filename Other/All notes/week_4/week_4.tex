@@ -1,271 +1,126 @@
-== Week 2 ==
+== Week 4 ==
+Notes by Madeline Barnicle
+===Monday, October 27, 2014===
+We need to show that the ordered field of reals in $\mathbf{No}$ is Dedekind-complete.
 
-(Notes by John Lensmire)
+Let $S \neq \emptyset$ be a set of reals which is bounded from above. We need to show sup $S$ exists. We can assume $S$ has no maximum. Put $R=\{a \in \mathbb{D}: a>S\}, L=\mathbb{D} \setminus R$. Using (3.11), the density of $\mathbb{D}$, $L$ has no maximum. If $R$ has a minimum, then this value is the sup of $S$ and we are done. So suppose $R$ has a minimum, then $r=\{L|R\}$ is real.
 
-=== Monday 10-13-2014 ===
+Claim: $r=$ sup $S$. Suppose $s \in S$ satisfies $s>r$, take $d \in \mathbb{D}$ with $s>d>r$. Then $d \in L$, contradiction since $d>r$.
 
-Let $a,b\in \mathbf{No}$. Recall that $a + b = \{a_L + b, a + b_L | a_R + b, a + b_R \}$.
+So $r$ is an upper bound. If $L<r'<r$, $r'$ also real, take dyadic $d$ with $r'<d<r$. Then $d \in R$, contradiction.
 
-==== Theorem 2.5 ====
+====Corollary 3.13====
+Corollary to (3.8) and (3.12): Let $a \in \mathbb{R} \setminus \mathbb{D}$. Then $\lim_{n \to +\infty} a \restriction n =a$ in $\mathbb{R}$.
 
-$(\mathbf{No},+,<)$ is an ordered abelian group with $0 = () = \{\emptyset, \emptyset \}$ and $-a$ is obtained by reversing all signs in $a$.
+====Ordinals====
+We identify each $n \in \mathbf{On}$ wih $a_\alpha \in \mathbf{No}$, where $l(a_\alpha)=\alpha$ and $a_{\alpha}(\beta)=+$ (for all $\beta \leq \alpha$?) For all $\alpha, \beta \in \mathbf{On}, \alpha \leq \beta \rightarrow a_\alpha <\leq a_\beta$.
 
-'''Proof:'''
+The canonical representation of $a_\alpha$ is $a_\alpha = \{a_{\beta}, \beta \leq \alpha | \emptyset \}$.
 
-We have already proven that $\leq$ is translation invariant.
+If $H$ is any nonempty set of ordinals and $\alpha =$ sup$ H$, then $a_\alpha = \{a_{\beta}, \beta \in H | \emptyset \}$.
 
-Commutativity is clear from the symmetric nature of the definition.
+====Proposition 3.14====
+For all $\alpha, \beta \in \mathbf{On}, a_\alpha + a_\beta = a_{\alpha \oplus \beta}, a_\alpha * a_\beta = a_{\alpha \otimes \beta}$.
 
-We show by induction on $l(a)$ that $a+0 = a$. The base case is clear, and
-\begin{align*}
-a + 0 &= \{a_L + 0, a + 0_L | a_R + 0, a + 0_R \} \\
-&= \{a_L + 0 | a_R + 0\} \ (\text{as } 0_L = 0_R = \emptyset) \\
-&= \{a_L | a_R\} \ (\text{by induction}) \\
-&= a
-\end{align*}
-
-We next show the associative law by induction on $l(a)\oplus l(b)\oplus l(c)$.
-We have
-\begin{align*}
-(a+b)+c &= \{(a+b)_L + c, (a+b) + c_L | (a+b)_R + c, (a+b) + c_R \} \\
-&= \{(a_L+b) + c, (a+b_L) + c, (a+b) + c_L | (a_R+b) + c, (a+b_R) + c, (a+b) + c_R\}
-\end{align*}
-where the second equality holds because of uniformity.
-An identical calculation shows:
-\[
-a+(b+c) = \{a_L+ (b + c), a+ (b_L + c), a+ (b + c_L) | a_R+ (b + c), a+ (b_R + c), a+ (b + c_R)\}
-\]
-and hence $(a+b)+c = a+(b+c)$ holds by induction.
-
-To show $a + (-a) = 0$ first note:
-* $b <_s a \Rightarrow -b <_s -a$
-* $b < a \Rightarrow -b > -a$
-
-Hence, $-a = \{-a_R | -a_L\}$. Thus,
-\[
-a + (-a) = \{a_L + (-a), a + (-a_R) | a_R + (-a), a + (-a_L) \}
-\]
-By the induction hypothesis and the fact that $+$ is increasing we have the following:
-* $a_L + (-a) < a_L + (-a_L) = 0$
-* $a + (-a_R) < a_R + (-a_R) = 0$
-* $a_R + (-a) > a_R + (-a_R) = 0$
-* $a + (-a_L) > a_L + (-a_L) = 0$
-Thus, $0$ is a realization of the cut. Since $0$ has minimal length, we have $a+(-a) = 0$ as needed.
-
-==== Definition 2.6 ====
-
-For $a,b\in \mathbf{No}$ set
-\[
-a\cdot b = \{a_L\cdot b + a\cdot b_L - a_L\cdot b_L, a_R\cdot b + a\cdot b_R - a_R\cdot b_R | a_L\cdot b + a\cdot b_R - a_L\cdot b_R, a_R\cdot b + a\cdot b_L - a_R\cdot b_L \}
-\]
-As motivation for this definition, note that in any ordered field: if $a'<a,b'<b$ then $(a-a')(b-b')>0$ so in particular $a'b + ab' - a'b' < ab$.
-
-==== Lemma 2.7 ====
-
-Suppose for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) < \gamma$ we have defined $a\cdot b$ so that (2.6) holds, and for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $<\gamma$ $(*)$ holds, where
-$(*): a>b, c>d \Rightarrow ac-bc > ad-bd.$
-Then: (2.6) holds for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) \leq \gamma$ and $(*)$ holds for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $\leq \gamma$.
 
 '''Proof:'''
 
-Let $P(a,b,c,d)\Leftrightarrow ac - bc > ad - bd.$ Because the surreal numbers form an ordered abelian group, $P$ is  "transitive in the last two variables" (i.e. $P(a,b,c,d) \ \&\ P(a,b,d,e) \Rightarrow P(a,b,c,e)$) and similarly in the first two variables.
+By induction, $a_\alpha + a_\beta =$ sup $\{a_\alpha + a_{\beta'}, a_{\alpha'} + a_\beta | \alpha' \leq \alpha, \beta' \leq \beta \}  =$ by induction, sup $\{a_{\alpha' \oplus \beta}, a_{\alpha \oplus \beta'} | \alpha' \leq \alpha, \beta' \leq \beta \} = a_{\alpha \oplus \beta}$, stated earlier.
 
-Fix $a,b\in \mathbf{No}$. For $a' <_s a, b' <_s b$ we define $f(a',b') = a'b + ab' - a'b'$.
+For multiplication, using the result for addition, and the distributive laws for $+, \centerdot,$ on $\mathbf{No}$ and $\oplus, \otimes$ on $\mathbf{On}$, we reduce to the case $\alpha = \omega^r, \beta= \omega^s, r, s \in \mathbf{On}$. By definition, $a_\alpha * a_\beta = \{a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} : \delta \leq \omega^s, \gamma \leq \omega^r | \emptyset \}.$ In particular, $a_\alpha * a_\beta \in \mathbf{On}$ by (1.8). By inductive hypothesis and the first part, $a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} \leq a_{(\omega^r \otimes \delta) \oplus (\delta \otimes \omega^s)} < a_{\omega^{r \oplus s}}.$
 
-Claim:
-\begin{enumerate}
-	\item  $a' < a \Rightarrow b' \mapsto f(a',b')$ is an increasing function
-	\item  $a' > a \Rightarrow b' \mapsto f(a',b')$ is a decreasing function
-	\item  $b' < b \Rightarrow a' \mapsto f(a',b')$ is an increasing function
-	\item  $b' > b \Rightarrow a' \mapsto f(a',b')$ is a decreasing function
-\end{enumerate}
+And $l(a_\alpha * a_\beta) \leq l(\omega^{r \oplus s}) = \omega^{r \oplus s}$.
 
-We prove 1 (the rest are left as an exercise). Let $b'_1,b'_2 <_s b$ and $b'_1 < b'_2$. Then
-\begin{align*}
-f(a',b'_2) > f(a',b'_1) &\Leftrightarrow (a'b + ab'_2 - a'b'_2) > (a'b + ab'_1 - a'b'_1)  \\
-&\Leftrightarrow (ab'_2 - a'b'_2) > (ab'_1 - a'b'_1) \\
-&\Leftrightarrow P(a,a',b'_2,b'_1)
-\end{align*}
-and $P(a,a',b'_2,b'_1)$ holds by induction, proving 1.
+Now we show the $\geq$ direction.
 
-1-4 in the claim give us respectively:
-* $f(a_L, b_L) < f(a_L, b_R)$
-* $f(a_R, b_R) < f(a_R, b_L)$
-* $f(a_L, b_L) < f(a_R, b_R)$
-* $f(a_R, b_R) < f(a_L, b_L)$
+Let $r'<r$ and $n \in \mathbb{N}$, then $a_\alpha * a_\beta > a_{\omega^{r'}_n} * a_{\beta}=a_{\omega^{r'}_n} \otimes \beta$ by hypothesis $=a_{\omega^{r' \oplus s}_n}$. Similarly if $s'<s, n \in \mathbb{N}$, then $a_\alpha * a_\beta > a_{\omega^{r \oplus s'}_n}$. Therefore, $a_\alpha * a_\beta \geq$ sup $\{a_{\omega^{r' \oplus s}_n}, a_{\omega^{r \oplus s'}_n}  : r' <r, s' <s, n \in \mathbb{N} \} = a_{\omega^{r+s}}$. (See the definition of natural $\oplus$.)
 
-These facts exactly give us that $a\cdot b$ is well-defined.
+====Examples====
 
-We are left to show that $(*)$ continues to hold. We'll continue this on Wednesday.
+* $\omega -1 = \omega + (-1) = \{n|\emptyset \} + \{\emptyset|0\}=\{n-1|\omega + 0\}= \{n|\omega\} = (+++...-). (\omega$ +s).
+* $\omega - (m+1)$? By hypothesis, assume $w-m = (+++...---...-)$ ($\omega$ +s and $m$ -s). $\omega - (m+1)= \{n|\emptyset \} + \{\emptyset|-m\} = \{n-m-1|\omega -m\} = \{n|\omega-m\} = (+++...---...--)$ ($\omega$ +s and $m+1$ -s).
+* $\omega + \frac{1}{2} = \{n|\emptyset \} + \{0|1\} = \{n + \frac{1}{2}, \omega + 0 | \omega +1\} = \{\omega | \omega +1\}=(+++...+-)$ ($\omega$ +s.)
+* In general, if $r \in \mathbb{R}^{>0}, \omega + r = \{n|\emptyset \} + \{L|R\}$ (the canonical representation for $r$) = $\omega + L, n+r | \omega +R\} = \{\omega + L | \omega + R \}$. Inducting on the length of $r$, this equals $\omega \frown r$. This also works for negative, non-integer $r$ (we need $L$ to be nonempty for the argument to go through)--the full result holds for $r \in \mathbb{Z}^{<0}$ as well.
 
-=== Wednesday 10-15-2014 ===
+===Wednesday, October 29, 2014===
+* $\frac{1}{2} \omega = \{0|1\}*\{n|\emptyset \}=$ by the definition of multiplication, $\{\frac{1}{2} n + \omega * 0 - n*0 | \frac{1}{2} n + \omega * 1 - n*1\}=\{\frac{1}{2} n|\omega -\frac{1}{2} n\}=$ by cofinality $\{n|\omega -n\}= (+++...---...)$ ($\omega$ +s, $\omega$ -s).
+* $\frac{1}{\omega}= (+---...)$ ($\omega$ -s)? Call this number $\epsilon$. $0<\epsilon <r$ for all $r \in \mathbb{R}^{>0}$, i.e. $\epsilon$ is ''infinitesimal''. (It is the unique infinitesimal of length $\omega$.) Guess that $\epsilon = \frac{1}{\omega}$. Canonical representation of $\epsilon: \{0|\frac{1}{2^n}\}$.
 
-Recall the definition of multiplication from last time:
-\[
-a\cdot b = \{a_L\cdot b + a\cdot b_L - a_L\cdot b_L, a_R\cdot b + a\cdot b_R - a_R\cdot b_R | a_L\cdot b + a\cdot b_R - a_L\cdot b_R, a_R\cdot b + a\cdot b_L - a_R\cdot b_L \}
-\]
-and the statement $(*): a>b, c>d \Rightarrow ac-bc > ad-bd$. We'll also continue write $P(a,b,c,d)\Leftrightarrow ac - bc > ad - bd$.
+$\epsilon \omega = \{0|\frac{1}{2^n}\}*\{m|\emptyset \}=\{0|\frac{1}{n}\}*\{m|\emptyset \}$ by cofinality $=\{\epsilon *m +0*0-0*\omega|\epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m\}= \{\epsilon *m|\epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m\}.$
 
-Note we can rephrase the defining inequalities for $a\cdot b$ as
-\[
-(\Delta): P(a,a_L,b,b_L), P(a_R,a,b_R,b), P(a,a_L,b_R,b), P(a_R,a,b,b_L)
-\]
+Now $\epsilon *m$ is still infinitesimal, $\epsilon m <1.   1< \epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m$, as $\frac{1}{n}(\omega -n)$ is infinite. Since $0$ does not satisfy the cut, $\epsilon \omega =1$.
+*$r + \epsilon (r \in \mathbb{R})$. First assume $r \in \mathbb{D}$, so $r=\{r_L|r_R\}, r_L, r_R \in \mathbb{D}$. $r + \epsilon = \{r_L + r_R\} + \{0|\frac{1}{n}\}=\{r+0, r_L + \epsilon|r+\frac{1}{n}, r_R + \epsilon\}= \{r|r+\frac{1}{n}\}$ by cofinality = $\{r|\mathbb{D}^{>r}\}=r\frown(+)$, of length $\omega +1$.
+*What is $\lambda +r$, $\lambda$ a limit ordinal, $r \in \mathbb{R}$?
 
-To finish the proof of Lemma 2.7, suppose $a>b>c>d$ (of suitable lengths). We want to show $P(a,b,c,d)$.
+====Section 4: Combinatorics of Ordered Sets====
+Let $S$ be a set. An ''ordering'' $\leq$ on $S$ is an reflexive, transitive, antisymmetric, binary relation on $S$. Call $(S,\leq)$ an ''ordered set'' (partial or total).
 
-Case 1:  Suppose in each pair $\{a,b\}, \{c,d\}$ one of the elements is an initial segment of the other. Then note we are done by $(\Delta)$.
+We say $\leq$ is ''total'' if $x \leq y$ or $y \leq x$ for each $x, y \in S$.
 
-Case 2:  Suppose $a \not<_s b, b\not<_s a$ but $c <_s d$ or $d <_s c$. Then we have that $a > a\wedge b > b$ and by Case 1, $P(a,a\wedge b, c, d)$ and $P(a\wedge b, b, c, d)$. This implies (by transitivity of the first two variables) $P(a,b,c,d)$.
+Let $T$ be an ordered set, and $\phi: S \rightarrow T$ a map. Then $\phi$ is ''increasing'' if $x \leq y \rightarrow \phi(x) \leq \phi(y)$, ''strictly increasing'' if $x < y \rightarrow \phi(x) < \phi(y)$, a ''quasi-embedding'' if $\phi(x) \leq \phi(y) \rightarrow x \leq y$.
 
-Case 3:  Suppose $c \not<_s d, d\not<_s c$. Then by Case 1 and 2, $P(a,b,c,c\wedge d)$ and $P(a,b,c\wedge d, d)$, so (transitivity of the last two variables) $P(a,b,c,d)$ as needed. This completes the proof of Lemma 2.7.
+Examples: let $(S, \leq_S), (T, \leq_T)$ be ordered sets.
+*$S \coprod T$= disjoint union of $S$ and $T$ with the ordering $\leq_S \cup \leq_T$.
+*$S \times T$ can be equipped with the ''product ordering'' $(x,y)\leq(x',y') \leftrightarrow x \leq_S x'$ and $y \leq_T y'$, or the ''lexicographic ordering'' $(x,y) \leq_{lex} (x',y') \leftrightarrow x <_S x'$ or $(x=x'$ and $y \leq_T y')$. The lexicographic ordering extends the product ordering.
+*Let $S^*$ be the set of finite words on $S$. Define $x_{1}...x_{m} \leq^{*} y_{1}...y_{m}$ if there exists a strictly increasing $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for every $i=1...m$.
+*Let $S^\diamond$ be the set of "commutative" finite words on $S=S*/ \sim$, where $x_{1}...x_{m} \sim y_{1}...y_{m}$ if $m=n$ and there exists a permutation of $\{1...m\}$ such that $x_i = y_{\phi(i)}$ for all $i$. Define  $x_{1}...x_{m} \leq^{\diamond} y_{1}...y_{m} \leftrightarrow$ there exists an injective $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for $i=1...m$.
+*The natural surjective map $(S^*, \leq^*) \rightarrow (S^\diamond, \leq^\diamond)$ is increasing.
+*$\mathbb{N}^m=\mathbb{N} * \mathbb{N} * ...\mathbb{N}$ with the product ordering. $X=\{x_1...x_m\}$ distinct indeterminates with trivial ordering. The map $\mathbb{N}^m= \rightarrow X^\diamond, \nu(v_1...v_n)=X_{1}^{v_1}...X_{m}^{v_m}$ is an isomorphism of ordered sets. $\leq^\diamond$ is divisibility of monomials.
 
-==== Lemma 2.8 ====
+*Let $S$ be an ordered set. Call $F \subset S$ a ''final segment'' of $S$ if $x \leq y$ and $x \in F \rightarrow y \in F$ ($F$ is upward closed). Given $X \subset S$, define $(X) \subset F = \{y \in S|\exists x \in X, x \leq y\},$ the final segment of $S$ ''generated'' by $X$ (the notation corresponds to the ideal generated by monomials). Put $\mathcal{F}(S)=$ the set of all finite segments of $S$. Call $A \subset S$ an ''antichain'' if for $x, y \in A, x \neq y \rightarrow x \not\leq y$ and $y \not\leq x$. We say that $S$ is ''well-founded'' if there is no infinite sequence $x_{1}>x_{2}...$ in $S$.
 
-The uniformity property holds for multiplication.
+====Definition 4.1====
+$(S, \leq)$ is ''noetherian'' if it is well-founded and has no infinite antichains.
 
-'''Proof:'''
 
-Fix $a,b\in \mathbf{No}$. For any $a',b'\in \mathbf{No}$ we define (as last time) $f(a',b') = a'b + ab' - a'b'$. Using Lemma 2.7, we can extend the Claim from last time to hold in general:
-
-Claim:
-\begin{enumerate}
-\item $a' < a \Rightarrow f(a',-)$ is an increasing function
-\item $a' > a \Rightarrow f(a',-)$ is a decreasing function
-\item $b' < b \Rightarrow f(-,b')$ is an increasing function
-\item $b' > b \Rightarrow f(-,b')$ is a decreasing function
-\end{enumerate}
-
-Let $a = \{L|R\}, b = \{L'|R'\}$ be any representations of $a,b$. We want to verify the hypothesis of the Cofinality Theorem 1.10.
-
-Let $a_l, b_l$ range over $L,L'$. As an example, note
-\[
-f(a_l, b_l) < ab \Leftrightarrow 0 < ab - (a_lb + ab_l - a_lb_l) = (ab - a_lb) - (ab_l - a_lb_l)
-\Leftrightarrow P(a,a_l,b,b_l)
-\]
-which holds as $a_l<a, b_l<b$. Checking the other inequalities in a similar manner gives us the first assumption of Theorem 1.10.
-
-To get the second assumption (the cofinality hypothesis), let e.g. $f(a_L,b_L)$ in the left side of the representation of $ab$. By inverse cofinality, we get $a_l\in L, b_l\in L'$ with $a_l \geq a_L, b_l\geq b_L$.
-Then (using (3) and (1) respectively from the above claim): $f(a_l,b_l) \geq f(a_L,b_l)\geq f(a_L,b_L)$ as needed. Again, the other cases are similar.
-
-Therefore, both assumptions of Theorem 1.10 hold, giving us the uniformity property for multiplication as needed.
-
-==== Proposition 2.9 ====
-
-$(\mathbf{No},+,\cdot,\leq)$ is an ordered commutative ring, with multiplicative identity $1 = (+) = \{0 | \emptyset \}$.
+===Friday, October 31, 2014===
+Call an infinite sequence $(x_n)$ in $S$ ''good'' if $x_i \leq x_j$ for some $i<j$.
+====Proposition 4.2====
+The following are equivalent:
+# $S$ is Noetherian.
+# Every final segment of $S$ is finitely generated.
+# $\mathcal{F}(S)$ has the ascending chain condition.
+# Every infinite sequence in $S$ contains an increasing finite subsequence.
+# Every infinite sequence in $S$ is good.
 
 '''Proof:'''
 
-Commutativity is clear by the symmetry in the definition.
+$1 \rightarrow 2$: Let $F \in \mathcal{F}(S)$. Let $G$ be the set of minimal elements of $F$. Then $G$ is an antichain, hence finite. Suppose $x_i \in F \setminus (G)$, there is $x_2 \in F$ such that $x_1 > x_2, x_2 \ni (G)$. This yields an infinite sequence $x_1 > x_2...$, a contradiction.
 
-We show the distributative law by induction on $l(a) \oplus l(b) \oplus l(c)$ that $(a+b)\cdot c = a\cdot c + b\cdot c$.
+$2 \leftrightarrow 3$ is a standard argument.
 
-In general, the typical element in the cut for $(a+b)\cdot c$ is $(a+b)_* c + (a+b)_* c_* - (a+b)_*c_*$ (where $(a+b)_*$ is either $(a+b)_L$ or $(a+b)_R$ and similar for $c_*$). This element is less than $(a+b)c$ if and only if there are $0$ or $4$ $*'s$ equal to $R$.
+$3 \rightarrow 4$: Let $(x_i)$ be a sequence in $S$. We define a subsequence $x_{n_k}$ such that $x_{n_k} \leq x_{n_{k+1}} \forall k$, and there are infinitely many $n > n_k$ such that $x_n > x_{n_k}$. We let $n_1 = 1$. Inductively, suppose we have already defined $n_1...n_k$. Then the final segment $(x_n: n > n_k, x_n \geq x_{n_k})$ is finitely generated, so there is some $x_{n_{k+1}}$ such that for infinitely many $n>k$ with $x_n > x_{n_k}$ we have $x_n > x_{n_{k+1}}$.
 
-By uniformity, we can replace $(a+b)_*$ with $a_*+b,a+b_*$, so the typical terms become (using induction):
-\[
-(a_*+b)c + (a+b)c_* - (a_*+b)c_* = a_*c + bc + ac_* - a_*c_*
-\]
-or similarly
-\[
-(a+b_*)c + (a+b)c_* - (a+b_*)c_* = ac + b_*c + bc_* - b_*c_*
-\]
-On the other hand, the typical elements of $ac + bc$ are
-\[
-(ac)_* + bc = a_*c + ac_* - a_*c_* + bc \text{ or } ac + (bc)_* = ac + b_*c + bc_* - b_*c_*
-\]
-(note the same parity rule for $*$'s applies here.) A quick check shows that this matches a typical element of $(a+b)\cdot c$ we have $(a+b)c = ac+bc$ as needed.
+$4 \rightarrow 5$ is obvious, as is $5 \rightarrow 1$.
 
-Associativity is proven using a very similar argument (and is left as an exercise).
+====Corollary 4.3====
+# If there exists an increasing surjection $S \twoheadrightarrow T$ and $S$ is noetherian, then $T$ is noetherian. (Use condition 5.)
+# If there exists a quasi-embedding $S \rightarrow T$ and $T$ is noetherian, then $S$ is noetherian.
+# If $S, T$ are noetherian, then so are $S \coprod T$ and $S \times T$. (For the product case, take an infinite sequence and apply condition 4 to each component.)
 
-We are left to check the identity element. Note $a\cdot 0 = a\cdot (0+0) = a\cdot 0 + a\cdot 0$ which implies $a\cdot 0 = 0$.
+In particular, $\mathbb{N}^m$ is noetherian ("Dickson's Lemma").
+====Theorem 4.4 (Higman)====
+If $S$ is noetherian, then $S^*$ is noetherian, (and then so is $S^\diamond$ by (4.3 (1))).
 
-By definition:
-\[
-a\cdot 1 = \{a_L\cdot 1 + a\cdot 1_L - a_L\cdot 1_L, a_R\cdot 1 + a\cdot 1_R - a_R\cdot 1_R | a_L\cdot 1 + a \cdot 1_R - a_L\cdot 1_R, a_R \cdot 1 + a\cdot 1_L - a_R\cdot 1_L\}
-\]
-Using the fact that $1_R = \emptyset$ and multiplication by $0 = 1_L$ is zero, we have
-\[
-a\cdot 1 = \{a_L\cdot 1 | a_R \cdot 1\} = \{a_L | a_R\} = a
-\]
-by induction. This completes the proof.
+'''Proof''' (Nash-Williams)
 
-Our next goal is to define $1/a$ for $a>0$, i.e. find a solution to $a\cdot x = 1$.
-Note, the naive idea is to set $x = \{1/a_R | 1/a_L, (a_L\neq 0)\}$ but this does not work in general.
+Suppose $w_1, w_2...$ is a bad sequence for $\leq^*$. We may assume that each $w_n$ is of minimal length under the condition $w_n \ni (w_1...w_{n-1})$. Then $w_n \neq \epsilon$ (the empty word) for any $n$. So $w_n=s_{n}*u_{n}, s_n \in S, u_n  \in S^*$ (splitting off the first letter). Since S is noetherian, we can take an infinite subsequence $s_{n_1} \leq s_{n_2}...$ of $s_n$. By minimality, $w_1...w_{n_{1}-1}, u_{n_1}, u_{n_2}...$ is good. So $\exists i<j$ such that $u_{n_i} \leq^* u_{n_j}$. Then $s_{n_i}u_{n_i} \leq s_{n_j}u_{n_j}$, that is, $w_{n_i} \leq w_{n_j}$, contradiction.
 
-=== Friday 10-17-2014 ===
+Remark: suppose $\phi: S \rightarrow T$ is a ''strictly'' increasing map of ordered sets, where $S$ is noetherian. Then $\phi$ has finite fibers.
 
-==== Definition of Inverses ====
+Application: Let $\Gamma=(\Gamma, \leq, +)$ be a totally ordered abelian group.
 
-Let $a\in \mathbf{No}$ with $a>0$. Our aim is to define $1/a$. Let $a = \{L|R\}$ the canonical representation of $a$. Observe that $a'\geq 0$ for all $a'\in L$ (as $a' <_s a$).
+====Corollary 4.5====
+Let $A, B$ be subsets of $\Gamma$ which are well-ordered. Then $A \cup B$ is well-ordered, and the set $A+B=\{\alpha + \beta | \alpha \in A, \beta \in B\}$ is well-ordered, and for every $\gamma \in A+B$, there are only finitely many $(\alpha, \beta) \in A \times B$ with $\gamma = \alpha + \beta$.
 
-For every finite sequence $(a_1,\ldots,a_n)\in (L\cup R)\setminus \{0\}$ we define $\langle a_1,\ldots, a_n\rangle \in \mathbf{No}$ by induction on $n$. Set $\langle \ \rangle = 0$ and inductively set $\langle a_1,\ldots, a_n, a_{n+1}\rangle = \langle a_1,\ldots, a_n \rangle \circ a_{n+1}$.
-Here, for arbitrary $b\in \mathbf{No}$ and $a'\in (L\cup R)\setminus \{0\}$ let $b\circ a'$ be the unique solution to $(a-a')b + a'x = 1$, i.e.
-\[
-b\circ a' = [1-(a-a')b]/a'.
-\]
-This works as inductively we'll have already defined $1/a'$.
+See (4.3) (3) and take increasing maps from $A \times B \rightarrow (A+B)$.
 
-For example, $\langle a_1 \rangle = \langle \ \rangle \circ a_1 = 0 \circ a_1 = 1/a_1$.
+====Corollary 4.6====
+Let $A \subset \Gamma^{>0}$ be well-ordered. Then $<A>=\{\alpha_1+...\alpha_n: \alpha_i \in A\}$ is also well-ordered, and for each $\gamma \in <A>$ there are only finitely many $(n, \alpha_1...\alpha_n)$ with $n \in \mathbb{N}, \alpha_1...\alpha_n \in A$ such that $\gamma=\alpha_1+...\alpha_n$.
 
-Now set (as candidates for defining $1/a$)
-\begin{align*}
-L^{-1} &= \{ \langle a_1,\ldots, a_n \rangle | \text{ the number of } a_i \text{ in }L \text{ is even} \} \\
-R^{-1} &= \{ \langle a_1,\ldots, a_n \rangle | \text{ the number of } a_i \text{ in }L \text{ is odd} \}
-\end{align*}
-Note that this definition is an expansion of the naive idea presented at the end of last lecture.
+'''Proof''':
+We have the map $A^\diamond \rightarrow <A>, \alpha_1...\alpha_n \rightarrow \alpha_1+...\alpha_n$, onto and strictly increasing since all $\alpha_i >0$. Now use Higman's Theorem.
 
-We first show
-\[
-(*) x \in L^{-1} \Rightarrow ax < 1 \text{ and } x\in R^{-1} \Rightarrow ax > 1.
-\]
-by induction on $n$. In particular, this yields that $L^{-1} < R^{-1}$.
+====Hahn Fields====
 
-The base case is clear, as $\langle \ \rangle = 0\in L^{-1}$ and $a\cdot 0 = 0 < 1$.
-
-For the induction, suppose $b\in L^{-1}\cup R^{-1}$ satisfying $(*)$ and $0\neq a' <_s a$. We show that $x = b\circ a'$ also satisfies $(*)$.
-
-Claim:
-\begin{enumerate}
-\item $x > b \Leftrightarrow 1 > ab$
-\item $ax = 1 + (a-a')(x-b)$.
-\end{enumerate}
-By definition, $x$ is the solution to $(a-a')b + a'x = 1$ and $ab = ab - a'b + a'b = (a-a')b + a'b$. These two equations yield $ab = 1 + a'(b-x)$. Both parts of the claim follow.
-
-Now suppose, $b\in L^{-1}, a'\in L$. Then $x\in R^{-1}$ so want to check $ax > 1$.
-$b\in L^{-1}$ and $(*)$ implies that $ab < 1$ and hence Claim 1 tells us that $x > b$. Now by Claim 2, $ax = 1 + (a-a')(x-b)$ hence $ax > 1$ (because $a>a', x>b$) as needed.
-
-The other cases are similar, so $(*)$ holds in general.
-
-Thus, we can set $c = \{L^{-1} | R^{-1} \}$. We claim that $1/a = c$, that is, $ac = 1 = \{0 | \emptyset\}$.
-
-The typical element used to define $ac$ is $a'c + ac' - a'c'$ with $a'\in L\cup R, c'\in L^{-1}\cup R^{-1}$.
-
-We first show $\{\text{ lower elements for }ac\} < 1 < \{(\text{ upper elements for }ac \}$.
-
-Suppose that $a' = 0$, then we get an element $a'c + ac' - a'c' = ac'$ which is an upper element for $ac$ if and only if $c'\in R^{-1}$ by definition. However, by $(*)$ if $c'\in R^{-1}$ then $ac' = a'c + ac' - a'c' > 1$ (as needed since an upper element), else $c'\in L^{-1}$ and then $ac' = a'c + ac' - a'c' < 1$ (as needed since a lower element).
-
-If $a'\neq 0$, then $x = c'\circ a'$ is defined, lies in $L^{-1}\cup R^{-1}$, and obeys $(\Delta): (a-a')c' + a'x = 1$. Hence,
-\begin{align*}
-a'c + ac' - a'c' \text{ is a lower element for } ac &\Leftrightarrow a' \ \&\ c' \text{ are on the same side of } a \ \&\ \text{(respectively) } c \\
-&\Leftrightarrow x\in R^{-1} \Leftrightarrow x > c \\
-&\Leftrightarrow \text{a typical element } a'c + ac' - a'c' = (a-a')c' + a'c < 1
-\end{align*}
-where the last equivalence holds by $(\Delta)$ and $a'>0$.
-
-Since $1$ satisfies the cut for $ac$ (and $0$ does not) it is the minimial realization, so $ac = 1$ as needed.
-
-We have thus shown:
-
-==== Theorem 2.10 (Conway) ====
-
-$(\mathbf{No}, +, \cdot, \leq)$ is an ordered field.
-
-We'll now begin to focus on how to view real numbers and ordinals as surreal numbers.
-
-We have $0 = ()$ the additive identity of $\mathbf{No}$ and $1 = (+)$ the multiplicative identity of $\mathbf{No}$.
-
-We also have an embedding of ordered rings $\mathbb{Z} \hookrightarrow \mathbf{No}$ where $k\mapsto k\cdot 1$ (where $k\cdot 1$ is $k$ additions of $+1$ or $-1$).
-
-==== Lemma 3.1 ====
-
-For $n\in \mathbb{N}$, $n\cdot 1 = (+\cdots +)$ (i.e. $n$ $+$'s).
+Let $k$ be a field, $\Gamma$ an ordered abelian group. Define $K=k((t^\Gamma))$ to be the set of all formal series $f(t)=\sum_{\gamma \in \Gamma} f_\gamma t^\gamma (f_\gamma \in k)$, whose ''support'' supp$f=\{\gamma \in \Gamma: f_\gamma \neq 0\}$ is ''well-ordered''. Using (4.5), we can now define $f+g=\sum_{\gamma} (f_\gamma + g_\gamma)t^\gamma,$ and $f*g= \sum_{\gamma} (\sum_{\alpha+\beta=\gamma} f_\alpha * g_\beta)t^\gamma$. $K$ is an integral domain, and $k$ includes into $K$ by $a \rightarrow a*t^0$. We will show $K$ is actually a field.
