@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  16 DEC 2014 15:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  16 DEC 2014 16:00
 entering extended mode
 **LaTeX1.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\1. Surreal\LaTeX1.tex"
@@ -162,7 +162,7 @@ Runaway argument?
 ! Paragraph ended before \align* was complete.
 <to be read again> 
                    \par 
-l.198 
+l.199 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -171,7 +171,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.198 
+l.199 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -179,7 +179,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.198 
+l.199 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -190,7 +190,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \par 
-l.198 
+l.199 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -198,7 +198,7 @@ So I shall assume that you typed `$$' both times.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.199 \end{align*}
+l.200 \end{align*}
                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -209,7 +209,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.199 \end{align*}
+l.200 \end{align*}
                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -217,7 +217,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.199 \end{align*}
+l.200 \end{align*}
                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -225,7 +225,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.199 \end{align*}
+l.200 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -236,7 +236,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.199 \end{align*}
+l.200 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -247,7 +247,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.199 \end{align*}
+l.200 \end{align*}
                   
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -262,4 +262,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  27i,10n,26p,222b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on LaTeX1.dvi (3 pages, 13308 bytes).
+Output written on LaTeX1.dvi (3 pages, 13324 bytes).
