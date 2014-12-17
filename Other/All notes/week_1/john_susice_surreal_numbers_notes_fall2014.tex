@@ -36,40 +36,6 @@ This may be depicted in tree form as follows:
 %------------------------DO NOT ALTER IN ANY WAY------------------------------------
 %----------------------Violators WILL be prosecuted---------------------------------
 %----The above is not meant to exclude the possibility of extrajudical punishment--- 
-\tikzset{every tree node/.style={minimum width=2em,draw,circle},
-         blank/.style={draw=none},
-         edge from parent/.style=
-         {draw, edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
-         level distance=1.5cm}
-\begin{align*}
-\begin{tikzpicture}[sibling distance=40pt]
-\Tree
-[.{} 
-	\edge[dashed]; 
-	[.\node[dashed]{-};
-	\edge[dashed];
-	[.\node[dashed]{-}; 
-	\edge[dashed]; \node[dashed]{-}; 
-	\edge[dashed]; \node[dashed]{+};]
-	%[.\node[dashed]{+}; \node[dashed]{-}; \node[dashed]{+};]	
-	\edge[dashed]; [.\node[dashed]{+};
-	\edge[dashed]; \node[dashed]{-};
-	\edge[dashed]; \node[dashed]{+};]
-	]
-	\edge[thick];    
-    [.\node[thick]{+};  
-    \edge[thick]; [.\node[thick]{-};
-             \edge[dashed]; \node[dashed]{-};
-             \edge[thick]; \node[thick]{+};
-         ]
-	\edge[dashed]; [.\node[dashed]{+};
-	\edge[dashed]; \node[dashed]{-};
-	\edge[dashed]; \node[dashed]{+};
-	]
-    ]
-]
-\end{tikzpicture}
-\end{align*}
 %---------------------------------------------------------------------
 We will denote such a surreal number by $f=(+-+)$
 Another example is: 
