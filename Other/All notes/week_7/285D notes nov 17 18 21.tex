@@ -1,50 +1,8 @@
-\documentclass[12pt]{article}
-\RequirePackage[left=1.5in,right=1.5in,top=1.5in,bottom=1.5in]{geometry}   %margins
-\usepackage{amsmath}   %general math symbols
-
-\usepackage{fourier}   %Font
-\usepackage{amssymb}  %\textbf 
-%\usepackage{mathrsfs}  %\mathscr
-\usepackage{dsfont}     %\mathds
-\usepackage{bussproofs}
-%\usepackage{latexsym}
-\usepackage{multicol}
-
 % This is the "centered" symbol
 \def\fCenter{{\mbox{\Large{$\rightarrow$}}}}
 
 % Optional to turn on the short abbreviations
 \EnableBpAbbreviations
-
-\usepackage{tikz}      %commutative diagrams
-\usepackage{enumerate}    %lists
-
-\usepackage{amsthm}    
-\usepackage{bm}
-
-
-\swapnumbers
-\theoremstyle{theorem}            %bold title, italicized font
-\newtheorem{theorem}{Theorem}[section]
-
-\theoremstyle{definition}           %bold title, regular font
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{exercise}[theorem]{Exercise}
-\newtheorem*{problem}{Problem}
-\newtheorem{warning}[theorem]{Warning}
-\newtheorem*{solution}{Solution}
-\newtheorem*{remark}{Remark}
-
-\theoremstyle{empty}
-\newtheorem{namedtheorem}{}
-
-\newcommand{\customtheorem}[3]{\theoremstyle{theorem} \newtheorem{theorem#1}[theorem]{#1} \begin{theorem#1}[#2]#3 \end{theorem#1}}
-
-\newcommand{\customdefinition}[2]{\theoremstyle{definition} \newtheorem{definition#1}[theorem]{#1} \begin{definition#1}#2 \end{definition#1}}
 
 
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
@@ -53,15 +11,11 @@
 \renewcommand{\restriction}{\mathord{\upharpoonright}}
 
 \begin{document}
-\tikzset{node distance=2cm, auto}
 
 \begin{center} \begin{Large} Math 285D Notes: 11/17, 11/19, 11/21 \end{Large}\\
 \text{} \\
 \begin{large} Tyler Arant  \end{large}
 \end{center}
-
-
-
 
 \begin{lemma}[Associativity] \label{6.7} Let $\alpha, \beta \in \textbf{On}$, $(a_i)_{i<\alpha+\beta}$ be a strictly decreasing sequence in $\textbf{No}$ and $f_i\in \mathds{R}$ for $i<\alpha+\beta$.  Then,
 $$\sum_{i<\alpha+\beta} f_i\omega^{a_i}=\sum_{i<\alpha} f_i\omega^{a_i} + \sum_{j<\beta}f_{\alpha+j}\omega^{a_{\alpha+j}}.$$
