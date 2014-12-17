@@ -12,6 +12,7 @@
 \newtheorem{cor}{Corollary}
 \newtheorem{claim}{Claim}
 \newtheorem{lem}{Lemma}
+
 \newtheorem{lemma}{Lemma}
 
 \newcommand{\R}{\mathbb{R}}
@@ -40,6 +41,35 @@
 
 % This is the "centered" symbol
 \def\fCenter{{\mbox{\Large{$\rightarrow$}}}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\def\dotminus{\mathbin{\ooalign{\hss\raise1ex\hbox{.}\hss\cr\mathsurround=0pt$-$}}}
+
+\renewcommand{\restriction}{\mathord{\upharpoonright}}
+
+\swapnumbers
+\theoremstyle{theorem}            %bold title, italicized font
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}           %bold title, regular font
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem*{problem}{Problem}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{empty}
+\newtheorem{namedtheorem}{}
+
+\newcommand{\customtheorem}[3]{\theoremstyle{theorem} \newtheorem{theorem#1}[theorem]{#1} \begin{theorem#1}[#2]#3 \end{theorem#1}}
+
+\newcommand{\customdefinition}[2]{\theoremstyle{definition} \newtheorem{definition#1}[theorem]{#1} \begin{definition#1}#2 \end{definition#1}}
+
 
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
 \def\dotminus{\mathbin{\ooalign{\hss\raise1ex\hbox{.}\hss\cr\mathsurround=0pt$-$}}}
