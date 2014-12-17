@@ -221,4 +221,52 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 
 ] [26] [27] [28] [29]
 
-LaTeX Warning: Th
+LaTeX Warning: The counter will not be printed.
+             The label is: $\bullet $ on input line 195.
+
+[30]) [31] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/week_8.tex"
+LaTeX Font Info:    Try loading font information for U+euf on input line 60.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [32
+
+
+] [33]) [34]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/week_9.tex" [35
+
+
+]) [36]
+No file week_10/week_10.tex.
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.tex") [37
+
+
+
+
+]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/week_5.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/week_6.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/week_8.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/week_9.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_10/week_10.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.aux"))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1553 strings out of 493922
+ 22561 string characters out of 3144899
+ 80367 words of memory out of 3000000
+ 4752 multiletter control sequences out of 15000+200000
+ 17909 words of font info for 69 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,16n,26p,731b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Global.dvi (37 pages, 218668 bytes).
