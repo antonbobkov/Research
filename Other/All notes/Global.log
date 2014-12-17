@@ -151,7 +151,11 @@ LaTeX Warning: Label `' multiply defined.
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/week_5.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/week_6.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.aux"))
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/week_8.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/week_9.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_10/week_10.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
@@ -237,10 +241,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 
 ]) [36]
-No file week_10/week_10.tex.
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.tex") [37
-
-
 
 
 ]
@@ -254,17 +255,16 @@ No file week_10/week_10.tex.
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/week_8.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/week_9.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_10/week_10.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.aux"))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1553 strings out of 493922
- 22561 string characters out of 3144899
- 80367 words of memory out of 3000000
- 4752 multiletter control sequences out of 15000+200000
+ 1563 strings out of 493922
+ 23053 string characters out of 3144899
+ 81751 words of memory out of 3000000
+ 4756 multiletter control sequences out of 15000+200000
  17909 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,731b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
