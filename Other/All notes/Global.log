@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:20
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -125,7 +125,7 @@ Package: fullpage 1999/02/23 1.1 (PWD)
 \c@lem=\count103
 
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.tex.aux"))
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
@@ -156,12 +156,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/week_1.aux")) ) 
 Here is how much of TeX's memory you used:
- 1331 strings out of 493922
- 15816 string characters out of 3144899
+ 1334 strings out of 493922
+ 15839 string characters out of 3144899
  61586 words of memory out of 3000000
- 4636 multiletter control sequences out of 15000+200000
- 11210 words of font info for 44 fonts, out of 3000000 for 9000
+ 4639 multiletter control sequences out of 15000+200000
+ 11815 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,9n,26p,242b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (2 pages, 2040 bytes).
+Output written on Global.dvi (2 pages, 2108 bytes).
