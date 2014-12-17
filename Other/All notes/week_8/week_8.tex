@@ -1,390 +1,110 @@
-== Week 6 ==
-
-Notes by Anton Bobkov
-
-===Monday, November 10, 2014===
-We define a map which will eventually be proven to be an ordered field isomorphism.
-
-\begin{align*}
-  K = \R((t^\No)) \overset{\sim}{\longrightarrow} \No
-\end{align*}
-
-We have an element written as 
-\begin{align*}
-	&f = \sum_{\gamma \in \No} f_\gamma t^\gamma \\
-	&\supp(f) = \{\gamma \colon f_\gamma \neq 0\}
-\end{align*}
-where $\supp(f)$ is a well-ordered sub''set''. Now let $x = t^{-1}$ and write
-\begin{align*}
-  f(x) = \sum_{i < \alpha} f_i x^{a_i}
-\end{align*}
-where $(a_i)_{i<\alpha}$ is strictly decreasing in $\No$, $\alpha$ ordinal and $f_i \in \R$ for $i < \alpha$. Also define $l(f(x))$ to be the order type of $\supp(f)$ (which may be smaller than $\alpha$ as we allow zero coefficients).
-
-==== Question ====
-	What is the relationship of what we are going to do with Kaplansky's results from valuation theory?
-
-==== Definition/Theorem ====
-For $f(x) = \sum_{i < \alpha} f_i x^{a_i}$ define $\sum_{i < \alpha} f_i \w^{a_i} = f(\omega)$ recursively on $\alpha$: \\ 
-When $\alpha = \beta + 1$ is a successor:
-\begin{align*}
-	\sum_{i < \alpha} f_i \w^{a_i} = \paren{\sum_{i < \beta} f_i \omega^{a_i}} + f_\beta \w^{a_\beta}
-\end{align*}
-When $\alpha$ is a limit ordinal:
-\begin{align*}
-	\sum_{i < \alpha} f_i \w^{a_i} &= \curly{L \mid R} \\
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
-Simultaneously with this definition we prove the following statements by induction:
-
-* '''Inequality:''' For \begin{align*}
-	f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
-	g(x) &= \sum_{i < \alpha} g_i x^{a_i}
-\end{align*} we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
-* '''Tail property:''' if $\gamma < \kappa < \alpha$
-\begin{align*}
-	\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
-\end{align*}
-
-'''Proof of inequality'''
-
-Suppose we have
-\begin{align*}
-  f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
-  g(x) &= \sum_{i < \alpha} g_i x^{a_i}
-\end{align*}
-
-with $f(x) < g(x)$
-
-Choose $\gamma$ smallest such that $f_\gamma \neq g_\gamma$.
-It has to be that $f_\gamma > g_\gamma$. Also $f(x)\midr\gamma = g(x)\midr\gamma$
-
-''Case 1'': $\alpha = \beta + 1$
-
-\begin{align*}
-  f(x) &= f(x)\midr\beta + f_\beta x^{a_\beta}\\
-  g(x) &= g(x)\midr\beta + g_\beta x^{a_\beta}
-\end{align*}
-
-Suppose $\gamma = \beta$.
-Then $\bar f(x) = \bar g(x)$, $\bar f(\w) = \bar g(\w)$, so compute
-\begin{align*}
-  f(\w) - g(\w) &= \\
-	&= f(\w)\midr\beta + f_\beta \w^{a_\beta} - g(\w)\midr\beta - g_\beta \w^{a_\beta} \\
-	&= f_\beta \w^{a_\beta} - g_\beta \w^{a_\beta} \\
-	&= \paren{f_\beta - g_\beta} \w^{a_\beta} > 0
-\end{align*}
-
-Now suppose $\gamma < \beta$.
-
-Group the terms
-\begin{align*}
-  f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f^* + f_\beta \w^{a_\beta} \\
-  g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g^* + g_\beta \w^{a_\beta}
-\end{align*}
-where
-\begin{align*}
-	h(\w) &= f(\w)\midr\gamma = g(\w)\midr\gamma \\
-	f^* &= f(\w)\midr\beta - f(\w)\midr{\gamma + 1} \\
-	g^* &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
-\end{align*}
-
-Then we have by tail property $f^* << x^{a_\gamma}$ and $g^* << x^{a_\gamma}$. Compute
-
-\begin{align*}
-  f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f* - g*) + (f_\beta - g_\beta) x^{a_\beta}
-\end{align*}
-
-We have $f_\gamma > g_\gamma$.
-All $f*$, $g*$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$.
-Thus $f(\w) - g(\w) > 0$ as needed.
+== Week 8 ==
+===November 24, 2014===
+''Notes for today by Madeline Barnicle''
 
-''Case 2'': $\alpha$ is a limit ordinal.
+Write $x \in \mathbf{No}$ in normal form. Say all powers of $\omega$ are positive. Take an initial segment of $x$; the segment also has this property. The proof requires the ''sign sequence'' (chapter 5 of Gonshor), and we need this to delve into the exponential function. Instead, we will cover:
+====Section 8: Analytic functions on $\mathbf{No}$====
+Let $\Gamma$ be an ordered abelian group, $K = \mathbb{R}((t^{\Gamma})), x=t^{-1}$. Let $F: I \rightarrow \mathbb{R}$ ($I=(a, b), a<b \in \mathbb{R} \cup \{\pm \infty \})$. Suppose $F$ is analytic. Then $F$ extends to a function $F_K : I_K \rightarrow K$, where $I_K = \{f \in K: a<f<b\}$. To explain this, consider the $\mathbb{R}$-subspaces:
 
-$f(\w)$ and $g(\w)$ are defined as 
+$K^{\downarrow}=\{f \in K:$ supp$(f) \subset \Gamma^{> 0} \}$ (infinitesimals of $K$)
 
-\begin{align*}
-  f(\w) &= \curly{L_f \mid R_f} \\
-  g(\w) &= \curly{L_g \mid R_g}
-\end{align*}
+$K^{\uparrow}=\{f \in K:$ supp$(f) \subset \Gamma^{< 0} \}$ (the "purely infinite" elements of $K$)
 
-Recall that
+So $K=K^{\downarrow} \oplus \mathbb{R} \oplus K^{\uparrow}$. $O=K^{\downarrow} \oplus \mathbb{R}$. Then $I_K=\{c+\epsilon | c \in I \subset \mathbb{R}, \epsilon \in K^{\downarrow}\}$. Set $F_K (c+\epsilon)=\sum_{n=0}^{\infty} \frac{F^{(n)}(c)}{n!}\epsilon^{n} \in K$, which converges in $K$ by Neumann's lemma. For example, $c \rightarrow e^c: \mathbb{R} \rightarrow \mathbb{R}^{> 0}$ extends this way to $c+\epsilon \rightarrow e^{c+\epsilon}=e^c \sum_{n=0}^{\infty} \frac{\epsilon^n}{n!}, O \rightarrow K^{> 0}$.
 
-\begin{align*}
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta + \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
+Likewise, every analytic function $G: U \rightarrow \mathbb{R}$ where $U \subset \mathbb{R}^n$ is open extends to a $K$-valued function whose domain $U_k$ is the set of all points in $K^n$ of infinitesimal distance to a point in $U$.
 
-Pick any $\beta$ with $\gamma < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
-and pick limit elements $\bar f(\w) \in L_f$ and $\bar g(\w) \in R_g$ corresponding to $\beta, \epsilon$.
+'''Digression on exp for $\mathbf{No}$'''
 
-Then $\bar f(x) < \bar g(x)$ as first coefficient where they differ is $x^{a_\gamma}$ and $f_\gamma > g_\gamma$.
-Thus by inductive hypothesis $\bar f(\w) < \bar g(\w)$.
-As choice of those was arbitrary we have $L_f < R_g$ so $f(\w) > g(\w)$.
+An ''exponential function'' on $K$ is an isomorphism $(K, \leq, +) \rightarrow (K^{\geq 0}, \geq, \cdot).$
 
-'''Proof of tail property'''
+A negative result:
+'''Theorem''' (F.-V. and S. Kuhlmann, Shelah): If the underlying class of $\Gamma$ is a ''set'', and $\Gamma \neq \{0\}$, then there is ''no'' exponential function on $\mathbb{R}((t^{\Gamma}))$.
 
-It is easy to see that statement holds for all $\gamma < \kappa < \alpha$ iff it holds for all $\gamma < \kappa \leq \alpha$.
+Nevertheless, there is an exponential function on $\mathbf{No} \cong \mathbb{R}((t^{\mathbf{No}}))$ (Gonshor/Kruskal).
 
-''Case 1'': $\alpha = \beta + 1$.
-
-Suppose we have $\gamma < \kappa < \alpha$, then $\gamma < \kappa \leq \beta$ and induction hypothesis applies.
-
-\begin{align*}
-	&\sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} = \\
-	&\brac{\sum_{i < \beta} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i}} + f_\alpha \w^{a_\alpha}
-\end{align*}
+For the rest of the course we will focus on restricted analytic functions on $\mathbf{No}$.
 
-Expression $\brac{\ldots}$ is $<< \w^{a_\gamma}$ by induction hypothesis. $f_\alpha \w^{a_\alpha} << \w^{a_\gamma}$ as $a_\alpha < a_\gamma$. Thus the entire sum is $<< \w^{a_\gamma}$ as needed.
+Let $I=[-1,1] \subset \mathbb{R}$. A restricted analytic function is a function $F: \mathbb{R}^m \rightarrow \mathbb{R}$ such that $F(x)=0$ for $x \in \mathbb{R}^{m} \setminus I^m$, and $F \restriction I^m$ extends to an analytic function $U \rightarrow \mathbb{R}$ for some neighborhood $U$ of $I^m$.
 
-''Case 2'': $\alpha$ is a limit ordinal.
+Example: $F: \mathbb{R} \rightarrow \mathbb{R}$ given by $F(x)=0$ if $|x|>1, F(x)=e^x$ if $|x| \leq 1$. For each such $F$, we have a function $F_K: K^M \rightarrow K$ such that $F_K(x)=0$ if $x \in K^m \setminus {I_K}^M, F_K \restriction {I_K}^m$ extends to a function $G_K: U_K \rightarrow K$ where $G: U \rightarrow \mathbb{R}$ is an analytic extension of $F \restriction I^m$ to an open neighborhood $U$ of $I^m$.
 
-Write definitions of $f(\w)$ using $\kappa$
-
-\begin{align*}
-  f(\w) &= \curly{L_f \mid R_f} \\
-  F(\w) &= f(\w)\midr\kappa = \sum_{i < \kappa} f_i \w^{a_i}
-\end{align*}
-
-\begin{align*}
-  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
-\end{align*}
-
-Pick any $\beta$ with $\kappa < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
-and pick limit elements $\bar l(\w) \in L_f$ and $\bar r(\w) \in R_f$ corresponding to $\beta, \epsilon$.
-
-By induction hypothesis we have 
-\begin{align*}
-	\bar l(\w) - F(\w) &= \bar l(\w) - \bar l(\w)\midr\kappa \ <<  \w^{a_\kappa} \\
-	\bar r(\w) - F(\w) &= \bar r(\w) - \bar r(\w)\midr\kappa \ <<  \w^{a_\kappa}
-\end{align*}
-
-\begin{align*}
-	l(\w) \leq f(\w) \leq r(\w) \\
-\end{align*}
-\begin{align*}
-	l(\w) - F(\w) \leq f(\w) - F(\w) \leq r(\w) - F(\w)
-\end{align*}
- 
-Thus $f(\w) - F(\w) << \w^{a_\kappa}$ as it is between two elements that are $<<  \w^{a_\kappa}$.
-
-'''Proof of well-definiteness'''
-
-We also need to check that the function is well-defined. For $f(x)$ define its reduced form, where we only keep non-zero coefficients.
-
-\begin{align*}
-	f(x) &= \sum_{i < \alpha} f_i \w^{a_i} \\
-	\bar f(x) &= \sum_{j < \alpha'} f_j' \w^{a_j'}
-\end{align*}
-
-We need to check that $f(\w) = \bar f(\w)$
-
-''Case 1'': $\alpha = \beta + 1$
-
-\begin{align*}
-	f(\w) &= g(\w) + f_\beta \w^{a_\beta} \\
-	g(x) &= \sum_{i < \beta} f_i \w^{a_i} \\
-	g(\w) &= \bar g(\w)
-\end{align*}
-
-If $f_\beta = 0$ then $\bar f(x) = \bar g(x)$ and $f(\w) = g(\w)$ so $f(\w) = g(\w) = \bar g(\w) = \bar f(\w)$ as needed.
-
-Suppose $f_\beta \neq 0$. Then $\bar f(x) = \bar g(x) + f_\beta x^{a_\beta}$.
-\begin{align*}
-	f(\w) = g(\w) + f_\beta \w^{a_\beta} = \bar g(\w) + f_\beta \w^{a_\beta} = \bar f(\w)
-\end{align*}
-
-''Case 2'': $\alpha$ is a limit and non-zero coefficients are cofinal in $\alpha$.
-
-In this case both $f(x)$ and $\bar f(x)$ have limit ordinals in their definitions. Moreover 
-\begin{align*}
-	L_{\bar f} &\subseteq L_f \\
-	R_{\bar f} &\subseteq R_f
-\end{align*}
-and are cofinal. Thus $f(\w) = \bar f(\w)$.
-
-''Case 3'': $\alpha$ is a limit and for some $\gamma < \alpha$
-\begin{align*}
-	\gamma \leq \beta < \alpha \Rightarrow f_\beta = 0
-\end{align*}
-
-\begin{align*}
-	g(x) &= \sum_{i < \gamma} f_i x^{a_i} \\
-  L_f^* &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-	&= \curly{g(\w) - \epsilon \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-  R_f^* &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
-	&= \curly{g(\w) + \epsilon \w^{a_\beta}
-	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
-\end{align*}
-
-We have
-\begin{align*}
-	L_f^* &\subseteq L_f \\
-	R_f^* &\subseteq R_f
-\end{align*}
-and are cofinal. $\curly{L_f^* - g(\w) \mid R_f^* - g(\w)} = 0$ as left side is negative and right side is positive.
-Thus $f(\w) = \curly{L_f^* \mid R_f^*} = g(\w)$. As $\gamma < \alpha$ this case is covered by induction.
-
-===Wednesday, November 12, 2014===
-
-==== Lemma 6.1 ====
-$l(f(\w)) \geq l(f(x))$
-
-'''Proof'''
-Suppose $\beta < \alpha$. Then the elements used to define $\sum_{i < \w\cdot\beta} (\ldots)$ also appear in the cut for $\sum_{i < \w\cdot\alpha} (\ldots) = f(\w)$. Thus by uniqueness of the normal form.
-\begin{align*}
-	l\paren{\sum_{i < \w\cdot\beta} (\ldots)} < l(f(\w))
-\end{align*}
-So the map $\phi(\beta) = l(\sum_{i < \w\cdot\beta} (\ldots))$ is strictly increasing.
-Any strictly increasing map $\phi$ on an initial segment of $\On$ satisfies $\phi(\beta) \geq \beta$.
-
-==== Lemma 6.2 ====
-The map
-
-\begin{align*}
-	K &\arr \No \\
-	f(x) &\mapsto f(\w)
-\end{align*}
-
-is onto.
-
-'''Proof'''
-
-Let $a \in \No, a \neq 0$. By (5.6) there is a unique $b \in \No$ such that $\brac{a} = \brac{\w^b}$.
-Put
-\begin{align*}
-	S = \curly{s \in \R \colon s\w^b \leq a}
-\end{align*}
-Then $S \neq \emptyset$ and bounded from above.
-Put $r = \sup S \in \R$.
-Then
-\begin{align*}
-	(r + \epsilon)\w^b > a > (r - \epsilon)\w^b
-\end{align*}
-for all $\epsilon \in \R^{>0}$
-thus
-\begin{align*}
-	\abs{a - r\w^b} << \w^b \tag{*}
-\end{align*}
-
-Note $r \neq 0$; $r,b$ subject to $(*)$ are unique.
-
-We set $\lt(a) = r\w^b$
-
-Towards a contradiction assume that $a$ is not in the image of $f(x) \mapsto f(\w)$.
-We shall inductively define a sequence $(a_i, f_i)_{i \in \On}$ where 
-
-*$a_i \in \No$ is strictly decreasing; $f_i \in \R - \{0\}$
-*$f_\alpha \w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha} f_i\w^{a_i}}$ for all $\alpha \in \On$
-
-''Case 1'': $\alpha = \beta + 1$
-
-Take $(a_\alpha, f_\alpha)$ so that
-\begin{align*}
-	f_\alpha\w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha}(\ldots)}
-\end{align*}
-
-By inductive hypothesis, if $\beta < \alpha$
-
-\begin{align*}
-	f_\beta\w^{a_\beta} &= \lt\paren{a - \sum_{i < \beta}(\ldots)} \\
-	\Rightarrow f_\alpha\w^{a_\alpha} &= \lt\paren{\paren{a - \sum_{i < \beta}(\ldots)} - f_\beta\w^{a_\beta}} \\
-	&<< \w^{a_\beta} \text{ by (*)} \\
-	\Rightarrow a_\alpha &< a_\beta
-\end{align*}
-
-''Case 2'': $\alpha$ limit
-
-Take $(a_\alpha, f_\alpha)$ as above.
-Let $\beta < \alpha$; to show $a_\alpha < a_\beta$.
-We have
-
-\begin{align*}
-	a - \sum_{i \leq \beta} f_i \w^{a_i} = \paren{a - \sum_{i < \beta} f_i\w^{a_i}} - f_\beta\w^{a_\beta} << \w^{a_\beta}
-\end{align*}
-
-By the tail property
-\begin{align*}
-	&\sum_{i < \alpha} (\ldots) - \sum_{i \leq \beta} (\ldots) << \w^{a_\beta} \\
-	\Rightarrow &a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta} \\
-	\Rightarrow &\lt\paren{a - \sum_{i < \alpha} (\ldots) } << \w^{a_\beta} \\
-	\Rightarrow &a_\alpha < a_\beta
-\end{align*}
-
-This completes the induction.
-Note that we showed that if $\alpha$ is a limit then $a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta}$ for all $\beta < \alpha$.
-
-So if $\curly{L \mid R}$ is the cut used to define $\sum_{i < \alpha} (\ldots)$ then $L < a < R$.
-Let $\alpha = \w \cdot \alpha'$.
-Hence 
-\begin{align*}
-	l(a) > l\paren{\sum_{i < \w\cdot\alpha'} (\ldots)} \geq \alpha'
-\end{align*}
-by (6.1).
-So $l(a)$ is bigger than all limits - contradiction.
-
-==== Lemma 6.4 ====
-Let $r \in \R, a \in \No$. Then 
-\begin{align*}
-	r\w^a = \{(r - \epsilon) \w^a \mid (r+\epsilon)\w^a\}
-\end{align*}
-where $\epsilon$ ranges over $\R^{>0}$.
-
-'''Proof'''
-\begin{align*}
-	r &= \{r - \epsilon \mid r + \epsilon\} \\
-	\w^a &= \curly{0, s\w^{a_L} \mid t\w^{a_R}} \text{ where } s,t \in \R^{>0}
-\end{align*}
-\begin{align*}
-	r\w^a = \{
-	&(r - \epsilon) \w^a, (r - \epsilon)\w^a + \epsilon s \w^{a_L}, \\
-	&(r + \epsilon) \w^a - \epsilon t \w^{a_R} \mid \\
-	&(r + \epsilon) \w^a, (r + \epsilon)\w^a - \epsilon s \w^{a_R}, \\
-	&(r - \epsilon) \w^a + \epsilon t \w^{a_L} \}
-\end{align*}
-Now use $\w^{a_L} << \w^a << \w^{a_R}$ and cofinality.
-
-===Friday, November 14, 2014===
-
-==== Corollary 6.5 ====
-\begin{align*}
-	\sum_{i \leq \alpha} f_i\w^{a_i} =
-	\curly{ \sum_{i < \alpha} f_i\w^{a_i} + (f_i - \epsilon) \w^{a_\alpha} \mid
-	\sum_{i < \alpha} f_i\w^{a_i} + (f_i + \epsilon) \w^{a_\alpha} }
-\end{align*}
-
-'''Proof'''
-
-''Case 1'': $\alpha$ is a limit
-\begin{align*}
-	&\sum_{i \leq \alpha} f_i\w^{a_i} = \sum_{i < \alpha} f_i\w^{a_i} + f_\alpha\w^{a_\alpha} = \\ \underset{(6.4)}{=}
-	&\curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon)\w^{a_\beta} \mid
-	\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon)\w^{a_\beta}}_{\beta < \alpha, \epsilon \in \R^{>0}}
-	+ \curly{(r - \epsilon) \w^\alpha \mid (r+\epsilon)\w^\alpha} = \\ =
-	&\curly{\sum_{i \leq \beta} f_i \w^{a_i} - \epsilon\w^{a_\beta} + f_\alpha\w^{a_\alpha},
-	\sum_{i < \alpha} f_i \w^{a_i} + (f_\alpha - \epsilon)\w^{a_\alpha} \mid \ldots} = \\ \underset{cofinality}{=}
-	&\curly{ \sum_{i < \alpha} f_i\w^{a_i} + (f_i - \epsilon) \w^{a_\alpha} \mid \ldots }
-\end{align*}
-
-''Case 2'': $\alpha + 1$
-
-\begin{align*}
-	&\sum_{i \leq \alpha + 1} f_i \w^{a_i} = \sum_{i \leq \alpha} f_i \w^{a_i} + f_{\alpha + 1} \w^{a_{\alpha + 1}} = \\
-	&\text{(by (6.4) and induction hypothesis)} \\
-	= &\curly{\sum_{i \leq \alpha} f_i \w^{a_i} + (f_{\alpha} - \epsilon) \w^{a_\alpha} \mid \ldots} +
-	\curly{(f_{\alpha + 1} - \epsilon) \w^{a_{\alpha + 1}} \mid \ldots} =  \\
-	= &\curly{\sum_{i < \alpha} f_i \w^{a_i} + (f_{\alpha} - \epsilon) \w^{a_\alpha} + f_{\alpha + 1} \w^{a_{\alpha + 1}},
-	\sum_{i \leq \alpha} f_i \w^{a_i} + (f_{\alpha + 1} - \epsilon) \w^{a_{\alpha + 1}} \mid \ldots}
-\end{align*}
-
-and again we are done by cofinality.
+Example: for $F$ as before, $F_K(x)=0$ if $|x|>1$. $F_K(c+\epsilon)=e^{c}\sum_{n} \frac{\epsilon^n}{n!}$, for $x=c+\epsilon, |x| \leq 1$.
+
+Let $L_{an}$ be the language $\{0,+, -, \cdot, \leq\}$ of ordered rings, augmented by a function symbol for each restricted analytic $\mathbb{R}^m \rightarrow \mathbb{R}$ (as $m$ varies). Let $\mathbb{R}_{an} = \mathbb{R}$ with the natural $L_{an}$ structure, $K_{an}=\mathbb{R}((t^{\Gamma}))$ with the natural structure (extensions as above). $\mathbb{R}_{an} \leq K_{an}$.
+
+'''Theorem''' (van den Dries, Macintyre, Marker, extending Denef-van den Dries): If $\Gamma$ is divisible, then $R_{an} \prec K_{an}$ (elementary substructure). In particular, $\mathbb{R} \prec \mathbf{No}$.
+
+vd Dries and Ehrlich expanded this by adding the exponential function to both sides.
+
+====Section 9: Power series and Weierstrass Preparation====
+Let $A$ be a commutative ring with $1, X=(x_1...x_m)$ indeterminates. $A[|x|]=A[|x_1, ...x_m)|]=\{f=\sum_{i \in \mathbb{N}^m}f_i x^i, f_i \in A\}$, ''the ring of formal power series in $X$ over $A$.'' Here, $X^i= x_{1}^{i_1}...x_{m}^{i_m}$. These terms can be added or multiplied in the obvious way.
+
+$A \subset A[x] \subset A[|x|]$. For $i=(i_1...i_m ) \in \mathbb{N}^m$, put $|i|=i_1+...i_m$. For $f \in A[|x|]$, order $(f)=$min$\{|i|: f_i \neq 0\}$ if $f \neq 0$, or $\infty$ if $f=0$.
+
+order $(f+g) \geq$ min (ord($f$), ord($g$)). ord($fg$) $\geq$ ord ($f$) $+$ ord($g$), with equality if and only if $A$ is an integral domain. $A[|x|]$ is an integral domain if and only if $A$ is.
+
+Let $(f_j)_{j \in J}$ be a family in $A[|x|]$. If for all $d \in \mathbb{N}$ there are only finitely many $j \in J$ with ord($f_j$) $\leq d$, then we can make sense of $\sum_{j \in J}f_j \in A[|x|]$. We often write $f \in A[|x|]$ as $f=\sum_{d \in \mathbb{N}} f_d$ where $f_d=\sum_{|i|=d}f_i x^i$ is the degree-$d$ homogeneous part of $f$.
+
+=== November 26, 2014 ===
+Let $A$ be a commutative ring, $X$ a set of $m$ indeterminates $X_1,\ldots,X_m$. For $f=\sum f_i X^i \in A[[X]]$, the map $f: A[[X]]\rightarrow A$ given by $f\mapsto f_0$ (here $0$ is the multi-index $(0,0,\ldots,0)$) is a ring morphism sending $f$ to its ''constant term''. 
+
+====Lemma 9.1====
+Let $f\in A[[X]]$. Then $f$ is a unit in $A[[X]]$ if and only $f_0$ is a unit in $A$.
+
+'''Proof:'''
+
+The "if" direction is clear. For the converse, suppose $f_0g_0=1$, where $g_0\in A$. Then $fg_0=1-h$, where $\rm{ord}(h)\ge 1$. Now we can apply the usual geometric series trick: take $\sum_n h_n\in A[[X]]$, which is defined using the notion of infinite sum defined last time, and check that $g_0\cdot \sum_n h^n$ is an inverse for $f$. 
+
+
+Define $\mathfrak{o}=\{f\in A[[X]]:\rm{ord}(f)\ge 1\}=\{f:f_0=0\}$. This is an ideal of $A[[X]]$, and $A[[X]]=A\oplus \mathfrak{o}$ as additive groups. 
+
+Every $f\in \mathfrak{o}$ is of the form $f=x_1g_1+\cdots +x_mg_m$, where $g_i\in A[[X]]$ (of course, this representation is not unique). More generally, set $\mathfrak{o}^d:=$ the ideal of $A[[X]]$ generated by products $f_1,\ldots,f_d$ with $f_i\in \mathfrak{o}$. Equivalently, this is the ideal $\{f:\rm{ord}(f)\ge d\}$ or the ideal generated by monomials of the form $X^i$, where $|i|=d$. That these are indeed equivalent is a straightforward exercise.
+
+We will also need to define ''substitution''. Let $Y=(y_1,\ldots y_n)$ be another tuple of distinct indeterminates, and let $g_1\ldots, g_m\in A[[Y]]$ with constant term $0$. Define a ring morphism $A[[X]]\rightarrow A[[Y]]$ by $f\mapsto f(g_1,\ldots, g_m)=\sum_i f_i g^i$. In the usual applications of this definition, we'll have $X=Y$.
+
+Let's introduce some more basic definitions for working with several sets of indeterminates. Suppose that $X$ and $Y$ are sets of indeterminates $\{X_1,\ldots,X_m\}$ and $\{Y_1,\ldots,Y_n\}$ respectively, and that none of the indeterminates in $Y$ appears in $X$. Put $(X,Y):=(X_1,\ldots, X_m, Y_1,\ldots, Y_n)$. Then for $f\in A[[X,Y]]$, we can write 
+$$f= \sum_{i,j} f_{ij} X^iY^j.$$
+This can be rewritten as $\sum_j(\sum_i f_{ij}X^i)Y^j$ (the sums above are actually the infinite sums defined last time). This gives an identification of $A[[X,Y]]$ with $A[[X]][[Y]]$.
+
+The previous result can be sharpened somewhat.
+====Lemma 9.2==== Let $f\in A[[X,Y]]$. Then there are unique $g_1,\ldots, g_n\in A[[X,Y]]$ such that
+$$f(X,Y)=f(X)+X_1 g_1(X, Y_1)+\ldots + Y_n g_n(X, Y_1,\ldots Y_n)$$
+where $g_i\in A[[X,Y_1,\ldots, Y_i]]$. 
+
+The proof is an exercise.
+
+From now on, we will take $A$ to be a field $K$. Let $T$ be an indeterminate not among $X_1,\ldots, X_m$. We call $f(X,T)\in A[[X,T]]$ ''regular in $T$ of order $d$'' if 
+$$f(0,T)=cT^d+\textrm{ terms of order larger than }d$$
+where $c\in K-\{0\}$.
+
+Writing $f=\sum_{i\in\mathbb{N}} f_i(X)T^i$, this is also equivalent to either of the following:
+# $f_0(0)=\cdots =f_{d-1}(0)=0$ and $f_d(0)\neq 0$,
+# $f_0,\ldots, f_{d-1}\in \mathfrak{o}$, $f_d\in \mathfrak{o}$, $f_d\in K[[X]]^\times$.
+
+The reason for this definition is that there is a "Euclidean division" result which holds when dividing by regular power series.
+
+====Theorem 9.3 (Division with remainder)====
+Let $f\in K[[X,T]]$ be regular in $T$ of order $d$. Then for each $g\in K[[X,T]]$, there is a unique pair $(Q,R)$ where $Q\in K[[X,T]]$ and $R\in K[[X]][T]$ (so it is just a ''polynomial'' in $T$) such that $g=Qf+R$ and $\mathrm{deg}_TR<d$.
+
+'''Proof:'''
+
+We first reduce to the case $f=T^d+F$, where $F\in\mathfrak{o}[[T]]$. Here $\mathfrak{o}[[T]]$ is a notation for the set of power series in $T$ whose coefficients are in $\mathfrak{o}$. Write $f=\sum_i f_i(X) T^i$, where $f_0,\ldots, f_{d-1}\in\mathfrak{o}$, $f_d\in K[[X]]^\times$. Then set $u:=\sum_{i\ge d} f_i T^{i-d}$. Then $u^{-1}f= u^{-1}(\sum_{i<d} f_i(X)T^i)+T^d\in \mathfrak{o}[[T]]+T^d$.
+
+Now we prove uniqueness: if $g=Q_1f+R_1=Q_2f+R_2$ are both as in the conclusion of the theorem, then $qf=r$ where $q:=Q_1-Q_2$ and $r:=R_2-R_1$, so and $\rm{deg}_TR<d$. Suppose $q=\sum_i q_i T^i$. For each $i$, the coefficient of $T^{d+i}$ in $qf$ is 0 (since $qf=r$ has degree $<d$), which can be expressed as $0=q_if_d+\sum_{j<i}q_jf_{d+i-j}+\sum_{i<j\le i+d}q_jf_{d+i-j}$. Thus $q_i\in \mathfrak{o}$ for each $i$. Repeating this inductively, we see that each $q_i$ must be in $\mathfrak{o}^n$ for each $n\in \mathbb{N}$, so they must all be $0$. Hence $q=0$, and then $r=0$.
+
+Finally we show existence, the more interesting part of the proof. Define $K[[X]]$-linear maps $\tau,\lambda:K[[X,T]]\rightarrow K[[X,T]]$ and $\alpha:K[[X,T]]\rightarrow K[[X]][T]$ by 
+# $\tau(g):=\sum_i g_{i+d} T^i$ (the higher order part of $g$, divided out by $T^d$),
+# $\lambda(g):=-\tau(g)F$ (recalling that $F=f-T^d$ was the $\mathfrak{o}[[T]]$ part of $f$)
+# $\alpha(g):=g_0+g_1T+\cdots+g_{d-1}T^d$ (the lower degree terms of $g$).
+
+Notice that $g=\tau(g)T^d+\alpha(g)=\tau(g)f+\alpha(g)+\lambda(g)$. Informally, $\tau(g)$ is our first guess for the quotient part. Then $\alpha(g)$ collects the lower degree terms of the remainder, and $\lambda(g)$ is an extra part that we must work to refine. 
+
+We will do this by iterating the process above. For each $n$, applying the process above to $\lambda^n(g)$ we have $\lambda^n(g)=\tau(\lambda^n(g))f+\alpha(\lambda^n(g))+\lambda^{n+1}(g)$. (Let us denote this equation by $(\ast)_n$). If $g\in \mathfrak{o}^n[[T]]$, then $\tau(g),\alpha(g)\in\mathfrak{o}^n[[T]]$, and $\lambda(g)\in\mathfrak{o}^{n+1}[[T]]$, so the order always increases after applying $\lambda$ (this is a sign that we make some progress after applying $\lambda$). 
+
+Using $(\ast)_n$ to iterate the $\lambda$ away, we see that:
+$$g=\tau(g)f+\alpha(g)+\lambda(g)$$
+$$=\tau(g)f+\alpha(g)+\tau(\lambda(g))f+\alpha(\lambda(g))+\lambda^2(g)$$
+$$=\sum_n\tau(\lambda^n(g))f+\sum_n\alpha(\lambda^n(g)).$$
+
+We can take $Q:=\sum_n\tau(\lambda^n(g))$ and $R:=\sum_n\alpha(\lambda^n(g))$. These sums are defined since $\tau(\lambda^n(g))$ and $\alpha(\lambda^n(g))$ have order $n$.
