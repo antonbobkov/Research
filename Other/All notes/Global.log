@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  17 DEC 2014 14:30
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -173,11 +173,93 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 276.
  [4] [5]) [6]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex") [7
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.tex"
+! You can't use `macro parameter character #' in horizontal mode.
+l.76 #
+       $a' < a \Rightarrow b' \mapsto f(a',b')$ is an increasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.77 #
+       $a' > a \Rightarrow b' \mapsto f(a',b')$ is a decreasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.78 #
+       $b' < b \Rightarrow a' \mapsto f(a',b')$ is an increasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.79 #
+       $b' > b \Rightarrow a' \mapsto f(a',b')$ is a decreasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+[7
 
 
 ]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
+! You can't use `macro parameter character #' in horizontal mode.
+l.129 #
+        $a' < a \Rightarrow f(a',-)$ is an increasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.130 #
+        $a' > a \Rightarrow f(a',-)$ is a decreasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.131 #
+        $b' < b \Rightarrow f(-,b')$ is an increasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.132 #
+        $b' > b \Rightarrow f(-,b')$ is a decreasing function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+[8]
+! You can't use `macro parameter character #' in horizontal mode.
+l.224 #
+        $x > b \Leftrightarrow 1 > ab$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.225 #
+        $ax = 1 + (a-a')(x-b)$.
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+[9]) [10] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.aux"
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux"))
 
@@ -185,12 +267,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1378 strings out of 493922
- 17170 string characters out of 3144899
+ 1377 strings out of 493922
+ 17164 string characters out of 3144899
  72937 words of memory out of 3000000
- 4667 multiletter control sequences out of 15000+200000
+ 4666 multiletter control sequences out of 15000+200000
  14071 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,16n,26p,222b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,16n,26p,387b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (7 pages, 35584 bytes).
+Output written on Global.dvi (10 pages, 63768 bytes).
