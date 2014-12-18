@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{fullpage}
+
+\usepackage{dsfont}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{cor}{Corollary}
+\newtheorem{claim}{Claim}
+\newtheorem{lem}{Lemma}
+
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\concat}{\mathbin{\raisebox{1ex}{\scalebox{.7}{$\frown$}}}} %sequence concatenation
+\newcommand{\concat}{\frown} %sequence concatenation
+\newcommand{\dom}[1]{\operatorname{dom}\paren{#1}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\NBG}{\mathsf{NBG}}
+\newcommand{\coloneq}{\colonequals}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\No}{\mathbf{No}}
+\newcommand{\On}{\mathbf{On}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\rar}{\rightarrow}
+\newcommand{\arr}{\rightarrow}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\lt}{lt}
+
+\newcommand{\w}{\omega}
+\newcommand{\midr}[1]{\restriction_{#1}}
+
+% This is the "centered" symbol
+\def\fCenter{{\mbox{\Large{$\rightarrow$}}}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\def\dotminus{\mathbin{\ooalign{\hss\raise1ex\hbox{.}\hss\cr\mathsurround=0pt$-$}}}
+
+\swapnumbers
+\theoremstyle{theorem}            %bold title, italicized font
+
+\theoremstyle{definition}           %bold title, regular font
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem*{problem}{Problem}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{empty}
+\newtheorem{namedtheorem}{}
+
+\newcommand{\customtheorem}[3]{\theoremstyle{theorem} \newtheorem{theorem#1}[theorem]{#1} \begin{theorem#1}[#2]#3 \end{theorem#1}}
+
+\newcommand{\customdefinition}[2]{\theoremstyle{definition} \newtheorem{definition#1}[theorem]{#1} \begin{definition#1}#2 \end{definition#1}}
+
+
+\renewcommand{\restriction}{\mathord{\upharpoonright}}
+
+
+\title{Notes on Surreal Numbers \\ Math 285: Fall 2014}
+\author{Class Taught by Prof. Aschenbrenner}
+\date{\today}
+\begin{document}
+\maketitle{}
+
+\include{week_1/john_susice_surreal_numbers_notes_fall2014}
+\include{week_2/g_week_2}
+\include{week_3/zach}
+\include{week_4/g_week_4}
+\include{week_5/g_week_5}
+\include{week_6/g_week_6}
+\include{week_7/285D_notes_nov_17_18_21}
+\include{week_8/g_week_8}
+\include{week_9/g_week_9}
+%\include{week_6/week_6}
+\include{week_11/g_week_11}
+
+\end{document}
