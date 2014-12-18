@@ -38,22 +38,18 @@ a+(b+c) = \{a_L+ (b + c), a+ (b_L + c), a+ (b + c_L) | a_R+ (b + c), a+ (b_R + c
 and hence $(a+b)+c = a+(b+c)$ holds by induction.
 
 To show $a + (-a) = 0$ first note:
-\begin{enumerate}
-  \item  $b <_s a \Rightarrow -b <_s -a$
-  \item  $b < a \Rightarrow -b > -a$
-\end{enumerate}
+* $b <_s a \Rightarrow -b <_s -a$
+* $b < a \Rightarrow -b > -a$
 
 Hence, $-a = \{-a_R | -a_L\}$. Thus,
 \[
 a + (-a) = \{a_L + (-a), a + (-a_R) | a_R + (-a), a + (-a_L) \}
 \]
 By the induction hypothesis and the fact that $+$ is increasing we have the following:
-\begin{enumerate}
-  \item  $a_L + (-a) < a_L + (-a_L) = 0$
-  \item  $a + (-a_R) < a_R + (-a_R) = 0$
-  \item  $a_R + (-a) > a_R + (-a_R) = 0$
-  \item  $a + (-a_L) > a_L + (-a_L) = 0$
-\end{enumerate}
+* $a_L + (-a) < a_L + (-a_L) = 0$
+* $a + (-a_R) < a_R + (-a_R) = 0$
+* $a_R + (-a) > a_R + (-a_R) = 0$
+* $a + (-a_L) > a_L + (-a_L) = 0$
 Thus, $0$ is a realization of the cut. Since $0$ has minimal length, we have $a+(-a) = 0$ as needed.
 
 ==== Definition 2.6 ====
@@ -93,12 +89,10 @@ f(a',b'_2) > f(a',b'_1) &\Leftrightarrow (a'b + ab'_2 - a'b'_2) > (a'b + ab'_1 -
 and $P(a,a',b'_2,b'_1)$ holds by induction, proving 1.
 
 1-4 in the claim give us respectively:
-\begin{enumerate}
-  \item  $f(a_L, b_L) < f(a_L, b_R)$
-  \item  $f(a_R, b_R) < f(a_R, b_L)$
-  \item  $f(a_L, b_L) < f(a_R, b_R)$
-  \item  $f(a_R, b_R) < f(a_L, b_L)$
-\end{enumerate}
+* $f(a_L, b_L) < f(a_L, b_R)$
+* $f(a_R, b_R) < f(a_R, b_L)$
+* $f(a_L, b_L) < f(a_R, b_R)$
+* $f(a_R, b_R) < f(a_L, b_L)$
 
 These facts exactly give us that $a\cdot b$ is well-defined.
 

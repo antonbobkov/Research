@@ -37,26 +37,20 @@ Let $r'<r$ and $n \in \mathbb{N}$, then $a_\alpha * a_\beta > a_{\omega^{r'}_n} 
 
 ====Examples====
 
-\begin{enumerate}
-  \item  $\omega -1 = \omega + (-1) = \{n|\emptyset \} + \{\emptyset|0\}=\{n-1|\omega + 0\}= \{n|\omega\} = (+++...-). (\omega$ +s).
-  \item  $\omega - (m+1)$? By hypothesis, assume $w-m = (+++...---...-)$ ($\omega$ +s and $m$ -s). $\omega - (m+1)= \{n|\emptyset \} + \{\emptyset|-m\} = \{n-m-1|\omega -m\} = \{n|\omega-m\} = (+++...---...--)$ ($\omega$ +s and $m+1$ -s).
-  \item  $\omega + \frac{1}{2} = \{n|\emptyset \} + \{0|1\} = \{n + \frac{1}{2}, \omega + 0 | \omega +1\} = \{\omega | \omega +1\}=(+++...+-)$ ($\omega$ +s.)
-  \item  In general, if $r \in \mathbb{R}^{>0}, \omega + r = \{n|\emptyset \} + \{L|R\}$ (the canonical representation for $r$) = $\omega + L, n+r | \omega +R\} = \{\omega + L | \omega + R \}$. Inducting on the length of $r$, this equals $\omega \frown r$. This also works for negative, non-integer $r$ (we need $L$ to be nonempty for the argument to go through)--the full result holds for $r \in \mathbb{Z}^{<0}$ as well.
-\end{enumerate}
+* $\omega -1 = \omega + (-1) = \{n|\emptyset \} + \{\emptyset|0\}=\{n-1|\omega + 0\}= \{n|\omega\} = (+++...-). (\omega$ +s).
+* $\omega - (m+1)$? By hypothesis, assume $w-m = (+++...---...-)$ ($\omega$ +s and $m$ -s). $\omega - (m+1)= \{n|\emptyset \} + \{\emptyset|-m\} = \{n-m-1|\omega -m\} = \{n|\omega-m\} = (+++...---...--)$ ($\omega$ +s and $m+1$ -s).
+* $\omega + \frac{1}{2} = \{n|\emptyset \} + \{0|1\} = \{n + \frac{1}{2}, \omega + 0 | \omega +1\} = \{\omega | \omega +1\}=(+++...+-)$ ($\omega$ +s.)
+* In general, if $r \in \mathbb{R}^{>0}, \omega + r = \{n|\emptyset \} + \{L|R\}$ (the canonical representation for $r$) = $\omega + L, n+r | \omega +R\} = \{\omega + L | \omega + R \}$. Inducting on the length of $r$, this equals $\omega \frown r$. This also works for negative, non-integer $r$ (we need $L$ to be nonempty for the argument to go through)--the full result holds for $r \in \mathbb{Z}^{<0}$ as well.
 
 \WikiLevelThree{Wednesday, October 29, 2014}
-\begin{enumerate}
-  \item  $\frac{1}{2} \omega = \{0|1\}*\{n|\emptyset \}=$ by the definition of multiplication, $\{\frac{1}{2} n + \omega * 0 - n*0 | \frac{1}{2} n + \omega * 1 - n*1\}=\{\frac{1}{2} n|\omega -\frac{1}{2} n\}=$ by cofinality $\{n|\omega -n\}= (+++...---...)$ ($\omega$ +s, $\omega$ -s).
-  \item  $\frac{1}{\omega}= (+---...)$ ($\omega$ -s)? Call this number $\epsilon$. $0<\epsilon <r$ for all $r \in \mathbb{R}^{>0}$, i.e. $\epsilon$ is ''infinitesimal''. (It is the unique infinitesimal of length $\omega$.) Guess that $\epsilon = \frac{1}{\omega}$. Canonical representation of $\epsilon: \{0|\frac{1}{2^n}\}$.
-\end{enumerate}
+* $\frac{1}{2} \omega = \{0|1\}*\{n|\emptyset \}=$ by the definition of multiplication, $\{\frac{1}{2} n + \omega * 0 - n*0 | \frac{1}{2} n + \omega * 1 - n*1\}=\{\frac{1}{2} n|\omega -\frac{1}{2} n\}=$ by cofinality $\{n|\omega -n\}= (+++...---...)$ ($\omega$ +s, $\omega$ -s).
+* $\frac{1}{\omega}= (+---...)$ ($\omega$ -s)? Call this number $\epsilon$. $0<\epsilon <r$ for all $r \in \mathbb{R}^{>0}$, i.e. $\epsilon$ is ''infinitesimal''. (It is the unique infinitesimal of length $\omega$.) Guess that $\epsilon = \frac{1}{\omega}$. Canonical representation of $\epsilon: \{0|\frac{1}{2^n}\}$.
 
 $\epsilon \omega = \{0|\frac{1}{2^n}\}*\{m|\emptyset \}=\{0|\frac{1}{n}\}*\{m|\emptyset \}$ by cofinality $=\{\epsilon *m +0*0-0*\omega|\epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m\}= \{\epsilon *m|\epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m\}.$
 
 Now $\epsilon *m$ is still infinitesimal, $\epsilon m <1.   1< \epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m$, as $\frac{1}{n}(\omega -n)$ is infinite. Since $0$ does not satisfy the cut, $\epsilon \omega =1$.
-\begin{enumerate}
-  \item $r + \epsilon (r \in \mathbb{R})$. First assume $r \in \mathbb{D}$, so $r=\{r_L|r_R\}, r_L, r_R \in \mathbb{D}$. $r + \epsilon = \{r_L + r_R\} + \{0|\frac{1}{n}\}=\{r+0, r_L + \epsilon|r+\frac{1}{n}, r_R + \epsilon\}= \{r|r+\frac{1}{n}\}$ by cofinality = $\{r|\mathbb{D}^{>r}\}=r\frown(+)$, of length $\omega +1$.
-  \item What is $\lambda +r$, $\lambda$ a limit ordinal, $r \in \mathbb{R}$?
-\end{enumerate}
+*$r + \epsilon (r \in \mathbb{R})$. First assume $r \in \mathbb{D}$, so $r=\{r_L|r_R\}, r_L, r_R \in \mathbb{D}$. $r + \epsilon = \{r_L + r_R\} + \{0|\frac{1}{n}\}=\{r+0, r_L + \epsilon|r+\frac{1}{n}, r_R + \epsilon\}= \{r|r+\frac{1}{n}\}$ by cofinality = $\{r|\mathbb{D}^{>r}\}=r\frown(+)$, of length $\omega +1$.
+*What is $\lambda +r$, $\lambda$ a limit ordinal, $r \in \mathbb{R}$?
 
 \WikiLevelFour{Section 4: Combinatorics of Ordered Sets}
 Let $S$ be a set. An ''ordering'' $\leq$ on $S$ is an reflexive, transitive, antisymmetric, binary relation on $S$. Call $(S,\leq)$ an ''ordered set'' (partial or total).
@@ -66,17 +60,14 @@ We say $\leq$ is ''total'' if $x \leq y$ or $y \leq x$ for each $x, y \in S$.
 Let $T$ be an ordered set, and $\phi: S \rightarrow T$ a map. Then $\phi$ is ''increasing'' if $x \leq y \rightarrow \phi(x) \leq \phi(y)$, ''strictly increasing'' if $x < y \rightarrow \phi(x) < \phi(y)$, a ''quasi-embedding'' if $\phi(x) \leq \phi(y) \rightarrow x \leq y$.
 
 Examples: let $(S, \leq_S), (T, \leq_T)$ be ordered sets.
-\begin{enumerate}
-  \item $S \coprod T$= disjoint union of $S$ and $T$ with the ordering $\leq_S \cup \leq_T$.
-  \item $S \times T$ can be equipped with the ''product ordering'' $(x,y)\leq(x',y') \leftrightarrow x \leq_S x'$ and $y \leq_T y'$, or the ''lexicographic ordering'' $(x,y) \leq_{lex} (x',y') \leftrightarrow x <_S x'$ or $(x=x'$ and $y \leq_T y')$. The lexicographic ordering extends the product ordering.
-  \item Let $S^*$ be the set of finite words on $S$. Define $x_{1}...x_{m} \leq^{*} y_{1}...y_{m}$ if there exists a strictly increasing $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for every $i=1...m$.
-  \item Let $S^\diamond$ be the set of "commutative" finite words on $S=S*/ \sim$, where $x_{1}...x_{m} \sim y_{1}...y_{m}$ if $m=n$ and there exists a permutation of $\{1...m\}$ such that $x_i = y_{\phi(i)}$ for all $i$. Define  $x_{1}...x_{m} \leq^{\diamond} y_{1}...y_{m} \leftrightarrow$ there exists an injective $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for $i=1...m$.
-  \item The natural surjective map $(S^*, \leq^*) \rightarrow (S^\diamond, \leq^\diamond)$ is increasing.
-  \item $\mathbb{N}^m=\mathbb{N} * \mathbb{N} * ...\mathbb{N}$ with the product ordering. $X=\{x_1...x_m\}$ distinct indeterminates with trivial ordering. The map $\mathbb{N}^m= \rightarrow X^\diamond, \nu(v_1...v_n)=X_{1}^{v_1}...X_{m}^{v_m}$ is an isomorphism of ordered sets. $\leq^\diamond$ is divisibility of monomials.
-\end{enumerate}
+*$S \coprod T$= disjoint union of $S$ and $T$ with the ordering $\leq_S \cup \leq_T$.
+*$S \times T$ can be equipped with the ''product ordering'' $(x,y)\leq(x',y') \leftrightarrow x \leq_S x'$ and $y \leq_T y'$, or the ''lexicographic ordering'' $(x,y) \leq_{lex} (x',y') \leftrightarrow x <_S x'$ or $(x=x'$ and $y \leq_T y')$. The lexicographic ordering extends the product ordering.
+*Let $S^*$ be the set of finite words on $S$. Define $x_{1}...x_{m} \leq^{*} y_{1}...y_{m}$ if there exists a strictly increasing $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for every $i=1...m$.
+*Let $S^\diamond$ be the set of "commutative" finite words on $S=S*/ \sim$, where $x_{1}...x_{m} \sim y_{1}...y_{m}$ if $m=n$ and there exists a permutation of $\{1...m\}$ such that $x_i = y_{\phi(i)}$ for all $i$. Define  $x_{1}...x_{m} \leq^{\diamond} y_{1}...y_{m} \leftrightarrow$ there exists an injective $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for $i=1...m$.
+*The natural surjective map $(S^*, \leq^*) \rightarrow (S^\diamond, \leq^\diamond)$ is increasing.
+*$\mathbb{N}^m=\mathbb{N} * \mathbb{N} * ...\mathbb{N}$ with the product ordering. $X=\{x_1...x_m\}$ distinct indeterminates with trivial ordering. The map $\mathbb{N}^m= \rightarrow X^\diamond, \nu(v_1...v_n)=X_{1}^{v_1}...X_{m}^{v_m}$ is an isomorphism of ordered sets. $\leq^\diamond$ is divisibility of monomials.
 
-\WikiSigleStar Let $S$ be an ordered set. Call $F \subset S$ a ''final segment'' of $S$ if $x \leq y$ and $x \in F \rightarrow y \in F$ ($F$ is upward closed). Given $X \subset S$, define $(X) \subset F = \{y \in S|\exists x \in X, x \leq y\},$ the final segment of $S$ ''generated'' by $X$ (the notation corresponds to the ideal generated by monomials). Put $\mathcal{F}(S)=$ the set of all finite segments of $S$. Call $A \subset S$ an ''antichain'' if for $x, y \in A, x \neq y \rightarrow x \not\leq y$ and $y \not\leq x$. We say that $S$ is ''well-founded'' if there is no infinite sequence $x_{1}>x_{2}...$ in $S$.
-
+*Let $S$ be an ordered set. Call $F \subset S$ a ''final segment'' of $S$ if $x \leq y$ and $x \in F \rightarrow y \in F$ ($F$ is upward closed). Given $X \subset S$, define $(X) \subset F = \{y \in S|\exists x \in X, x \leq y\},$ the final segment of $S$ ''generated'' by $X$ (the notation corresponds to the ideal generated by monomials). Put $\mathcal{F}(S)=$ the set of all finite segments of $S$. Call $A \subset S$ an ''antichain'' if for $x, y \in A, x \neq y \rightarrow x \not\leq y$ and $y \not\leq x$. We say that $S$ is ''well-founded'' if there is no infinite sequence $x_{1}>x_{2}...$ in $S$.
 
 ====Definition 4.1====
 $(S, \leq)$ is ''noetherian'' if it is well-founded and has no infinite antichains.
