@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  17 DEC 2014 22:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  17 DEC 2014 22:46
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\zach_copy\Global.tex
@@ -154,7 +154,7 @@ LaTeX Warning: Label `' multiply defined.
 (C:\Users\Anton\SparkleShare\Research\Other\zach_copy\week_7/285D_notes_nov_17_18_21.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\zach_copy\week_8/g_week_8.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\zach_copy\week_9/g_week_9.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\zach_copy\week_11/week_11.aux))
+(C:\Users\Anton\SparkleShare\Research\Other\zach_copy\week_11/g_week_11.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
@@ -262,8 +262,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1565 strings out of 493922
- 22972 string characters out of 3144898
+ 1564 strings out of 493922
+ 22971 string characters out of 3144898
  77452 words of memory out of 3000000
  4762 multiletter control sequences out of 15000+200000
  17909 words of font info for 69 fonts, out of 3000000 for 9000
