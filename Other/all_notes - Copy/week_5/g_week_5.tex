@@ -1,0 +1,145 @@
+\WikiLevelTwo{ Week 5 }
+
+\WikiLevelThree{November 3, 2014 }
+We will now show that the Hahn field $K$ defined last time is in fact a field. Define $v:K\setminus \{0\}\rightarrow \Gamma$ by $$vF:=\min \mathrm{supp}(f).$$ We will use a profound but simple remark about the structure of $K$ due (probably?) to Neumann: if $vF>0$ (i.e., $\mathrm{supp}(f)\subseteq \Gamma^{>0}$), then $\sum_{n=0}^\infty f^n$ makes sense as an element of $K$. Why? By (4.6), for any $\gamma\in \Gamma$ there are finitely many $n$ such that $\gamma\in\mathrm{supp}(f^n)$. By definition of multiplication in $K$, any $\gamma\in \mathrm{supp}(f^n)$ is an element of $\langle \mathrm{supp}(f)\rangle$. By the second part of (4.6), there are only finitely many such $n$.
+
+Now write an arbitrary $g\in K\setminus \{0\}$ as $g=ct^\gamma(1-f)$ where $c\in K\setminus \{0\}$, $\gamma\in \Gamma$, and $vF=0$ (this is achieved by taking $\gamma$ to be $\min\mathrm{supp}(g)$). Then it can be checked that $g^{-1}=c^{-1}t^{-\gamma}\sum_{n=0}^\infty f^n$ works.
+
+\WikiLevelFour{ Section 5: The $\omega^-$ map }
+Let $(\Gamma, \le, +)$ be an ordered abelian group. Set $|\gamma|:=\max\{\gamma, -\gamma\}$ for $\gamma\in \Gamma$. We say $\alpha,\beta$ are \WikiItalic{archimedean equivalent} if there is some $n\ge 1$ such that $|\alpha|\le n|\beta|$ and $|\beta|\le n|\alpha|$. This is an equivalence relation on $\Gamma$, we write $\alpha\sim\beta$. Denote the equivalence classes $[\alpha]=\{\beta\in\Gamma:\beta\sim\alpha\}$. These equivalence classes $[\Gamma]=\{[\gamma]:\gamma\in\Gamma\}$ can be ordered by 
+$$[\alpha]<[\beta]\quad \textrm{if and only if} \quad \textrm{for all }n\ge 1, n|\alpha|<|\beta|.$$
+We also write $\alpha\ll\beta$ or $\alpha=o(\beta)$ instead of $[\alpha]<[\beta]$. This defines a total order on $[\Gamma]$ with smallest element $[0]$.
+
+This equivalence relation gives a coarse view of the ordered abelian group $\Gamma$.
+
+Some properties:
+\begin{enumerate}
+  \item  $[-\alpha]=[\alpha]$.
+  \item  $[\alpha+\beta]\le \max\{[\alpha],[\beta]\}$ and equality holds if $[\alpha]\neq [\beta]$.
+  \item  If $0\le \alpha\le \beta$, then $[\alpha]\le [\beta]$.
+\end{enumerate}
+
+
+We say that $\Gamma$ is \WikiItalic{archimedean} if $[\Gamma]\setminus \{[0]\}$ is a singleton.
+====Lemma 5.1 (H�lder): ====
+If $\Gamma$ is archimedean and $\epsilon\in \Gamma^{>0}$, then there is a unique embedding $(\Gamma,\le,+)\rightarrow (\mathbb{R},\le,+)$ with $\epsilon\mapsto 1$.
+
+The proof is easy, using Dedekind cuts.
+
+====Lemma 5.2:====
+
+Let $a\in \mathbf{No}$. Then there is a unique $x\in \mathbf{No}$ of minimal length with $a\sim x$.
+
+\WikiBold{Proof:}
+
+There is certainly an $x\in [a]$ of smallest length. Let $x\neq y$ with $x\sim a\sim y$. Put $z:=x\wedge y$. Then $z\sim x\sim y$ and $l(z)<l(x)$ or $l(z)<l(y)$.
+
+
+For each $b\in\mathbf{No}$, define a "canonical element" $\omega^b$ of "$b$th order of magnitude":
+
+==== Definition 5.3: ====
+Assuming that $\omega^c$ for $c<_s b$ has been defined already, set 
+$$\omega^b:=\{0,r\omega^{b_L}\mid s\omega^{b_R}\}$$
+where $r,s$ range over $\mathbb{R}^{>0}$ and $b=\{b_L\mid b_R\}$.
+
+
+==== Lemma 5.4: ====
+Suppose $\gamma\in \mathbf{On}$ and $\omega^b$ has been defined for all $b\in \mathbf{No}$ with $\ell(b)<\gamma$ such that:
+\begin{enumerate}
+  \item  $0<\omega^b$,
+  \item  $b<c \Rightarrow \omega^b\ll \omega^c.$
+\end{enumerate}
+Then (5.3) makes sense for $b\in \mathbf{No}$ with $l(b)\le \gamma$ and $(1),(2)$ above hold for all $b,c\in\mathbf{No}$ with $\ell(b),\ell(c)\le \gamma$. 
+
+\WikiBold{Proof}
+Suppose $\ell(b)=\gamma$. Then $\ell(b_L),\ell(b_R)<\gamma$, so $\omega^{b_L} \ll \omega^{b_R}$. Therefore $r\omega^{b_L}<s\omega^{b_R}$ for any $r,s\in \mathbb{R}^{>0}$. So $0<s\omega^{b_R}$ for any $s\in \mathbb{R}^{>0}$. Hence $\omega^b$ is defined (i.e., this is actually a cut) and $\omega^b>0$.
+
+Suppose $b<c$ with lengths $\le \gamma$. There are three cases: if $b<_s c$, then $b=c_L$, so $\omega^b\ll\omega^c$ by definition of $\omega^c$. If $c<_s b$, then $c=b_R$, so $\omega^b\ll\omega^c$ by definition of $\omega^b$. Otherwise, $b<b\wedge c<c$ and then by the two cases discussed before,
+$\omega^b\ll\omega^{b\wedge c}\ll\omega^c$.
+
+
+When it comes to surreal numbers, it seems that a good definition has invariance under different representations.
+==== Corollary 5.5: ====
+If $b=\{L\mid R\}$, then $\omega^b=\{0,\mathbb{R}^{>0}\cdot \omega^L\mid \mathbb{R}^{>0}\cdot \omega^R\}$.
+
+The proof is an exercise using cofinality and inverse cofinality theorems.
+
+====Lemma 5.6: ====
+
+Let $a\in \mathbf{No}$. Then $a=\omega^b$ for some $b\in\mathbf{No}$ if and only if $a$ is the element of minimal length of $[a]$.
+
+\WikiBold{Proof:}
+
+Suppose $a=\omega^b=\{0,r\omega^{b_L}\mid s\omega^{b_R}\}$. If $a\sim x$, then $r\omega^{b_L}<x<s\omega^{b_R}$ for some $r,s\in\mathbb{R}^{>0}$ so $a\le_s x$. This finishes one direction of the proof, the other will be done next time.
+
+\WikiLevelThree{November 7, 2014}
+No class on Wednesday. 
+
+To finish the other direction of Lemma 5.6, we show that each $a\in\mathbf{No}$, $a>0$, is $\sim$ to some element of the form $\omega^b$ by induction on $\ell(a)$. Suppose $a=\{L\mid R\}$, with $0\in L$. By induction hypothesis, every element of $L\cup R$ is $\sim$ to some $\omega^b$. Put
+$$F:=\{y\in\mathbf{No}:\exists a_L\in L:a_L\sim \omega^y\}$$
+$$G:=\{y\in\mathbf{No}:\exists a_R\in R:a_R\sim \omega^y\}.$$
+
+\WikiItalic{Case 1.} $F\cap G\neq \emptyset$. 
+
+Let $y\in F\cap G$. Then there are $a_L\in L$, $a_R\in R$ with $a_L\sim\omega^y\sim a_R$. Since $0<a_L<a<a_R$, we get $a\sim \omega^y$.
+
+\WikiItalic{Case 2.} $F\cap G=\emptyset$. 
+
+It is easy to see that $F<G$. Now put $z:=\{F\mid G\}$. Note that $F$ and $G$ are sets because the different $\omega^y$ are in different archimedean classes. We distinguish three cases:
+
+\WikiBold{Case 2a.} $[\omega^x]\ge [a]$ for some $x\in F$.
+
+Take $a_L\in L$ with $\omega^X\sim a_L$. Then $[a]=[\omega^x]$.
+
+\WikiBold{Case 2b.} $[\omega^x]\le [a]$ for some $x\in G$.
+
+Then also $[a]=[\omega^x]$.
+
+\WikiBold{Case 2c.} $[\omega^x]<[a]<[\omega^y]$ for all $x\in F$, $y\in G$.
+
+We claim that $a=\omega^z$. To show this we prove that $(\{0\}\cup \mathbb{R}^> \omega^F, \mathbb{R}^>\omega^G)$ is cofinal in $(L,R)$. Let $a_L \in L\setminus \{0\}$. Then by induction hypothesis, there is $x\in F$ with $a_L\sim \omega^x$. So there is some $r\in \mathbb{R}^>$ such that $r\omega^x\ge a_L$. Similarly for each $a_R\in R$ there is some $y\in G$ and $r\in \mathbb{R}^>$ s.t. $r\omega^y\le a_R$. $\Box$
+
+====Lemma 5.7:==== 
+The map $a\mapsto \omega^a$ is an embedding of ordered groups $(\mathbf{No},+,\le)\hookrightarrow (\mathbf{No}^>,\cdot,\le)$.
+
+\WikiBold{Proof:} 
+
+By definition, $\omega^0=\{0\mid \emptyset\}=1$. By induction on $\ell(a)\oplus \ell(b)$ we show that $\omega^a\omega^b=\omega^{a+b}$.
+
+Let $a=\{a_L\mid a_R\}$, $b=\{b_L\mid b_R\}$, so $\omega^a=\{0,r\omega^{a_L}\mid s\omega^{a_R}\}$ and $\omega^b=\{0,r'\omega^{b_L}\mid s'\omega^{b_R}\}$, where $r,s,r',s'$ range over $\mathbb{R}^>$. Then 
+$$\omega^{a+b}=\{0,r\omega^{a_L+b},r'\omega^{a+b_L}\mid s\omega^{a_R+b}, s'\omega^{a+b_R}\}.$$
+Using the definition of multiplication and induction hypothesis,
+$\omega^a\cdot\omega^b$ has left part
+$$\{0,r\omega^{a_L+b}, r'\omega^{b_L+a},r\omega^{a_L+b}+r'\omega^{b_L+a}-rr'\omega^{a_L+b_L},s\omega^{a_R+b}+s'\omega^{b_R+a}-ss'\omega^{a_R+b_R}\}$$
+and right part
+$$s\omega^{a_R+b},s'\omega^{b_R+a},r\omega^{a_L+b}+s'\omega^{b_R+a}-rs'\omega^{a_L+b_R},s\omega^{a_R+b}+r'\omega^{b_L+a}-r's\omega^{a_R+b_L}\}$$
+
+We will show that these two cuts are mutually cofinal, proving the lemma. Note that the elements defining $\omega^{a+b}$ also appear in the cut for $\omega^a\omega^b$.
+
+Also, 
+\begin{enumerate}
+  \item  $r\omega^{a_L+b}+r'\omega^{b_L+a}-rr'\omega^{a_L+b_L}\le (r+r')\omega^{\max(a_L+b,a+b_L)}$ (a term appearing in the cut for $\omega^{a+b}$).
+  \item  $s\omega^{a_R+b}+s'\omega^{a+b_R}-ss'\omega^{a_R+b_R}<0$. (The third term  of the LHS has the highest archimedean class.)
+  \item  $r\omega^{a_L+b}+s'\omega^{b_R+a}-rs'\omega^{a_L+b_R}>s''\omega^{b_R+a}$ for any $s''\in\mathbb{R}$ with $0<s''<s'$. (The second term of the LHS has the highest archimedean class.)
+  \item  $s\omega^{a_R+b}+r'\omega^{b_L+a}-r's\omega^{a_R+b_L}>s''\omega^{a_R+b}$ for any $0<s''<s$. (The first term of the LHS has the highest archimedean class.)
+\end{enumerate}
+
+That was messy, but nice because it all fell out of the definition of the $\omega^-$ map.
+
+We now check that ordinal exponentiation agrees with the $\omega^-$ map.
+
+====Lemma 5.8:====
+For $a\in\mathbf{On}$, $\omega^a\in\mathbf{No}$ is the same as the ordinal $\omega^a$ (ordinal exponentiation).
+
+\WikiBold{Proof:}
+
+Write $\omega\uparrow a$ for ordinal exponentiation. By induction on $a\in \mathbf{On}$, we show that $\omega^a=\omega\uparrow a$. The base case was already done. Let $a=\{a_L\mid \emptyset\}$. Then using the induction hypothesis,
+$$\omega^a=\{0,r\omega^{a_L}\mid \emptyset\}=\{0,r\omega\uparrow a_L\mid\emptyset\}$$
+$$=\omega\uparrow a,$$
+using the definition of ordinal exponentiation for the last equality.
+
+\WikiLevelFour{Section 6. The Normal Form}
+
+Let $K=\mathbb{R}((t^\mathbb{No}))$ be the Hahn field and set $x:=\frac{1}{t}$. We think of the elements of $K$ as formal series in $x$:
+$$f(x)=\sum_{i<\alpha}f_ix^{a_i}$$
+where $\alpha\in \mathbf{On}$, $(a_i)$ is a strictly decreasing sequence in $\mathbf{No}$, and $f_i\in \mathbb{R}\setminus \{0\}$. So $\alpha$ is the order-type of $\mathrm{supp}(f)$, which we will denote by $\ell(f)$ (the agreement of the choice of this notation with the length of a surreal number is not a coincidence). We turn $K$ into an ordered field such that $f>0$ iff $f\neq 0$ and $f_0>0$. We will define an ordered field isomorphism between $K$ and $\mathbf{No}$, which will give a normal form for elements of $\mathbf{No}$ generalizing the Cantor normal form.
