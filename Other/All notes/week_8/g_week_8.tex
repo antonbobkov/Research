@@ -1,9 +1,115 @@
+\WikiLevelTwo{ Week 8 }
+\WikiLevelThree{November 24, 2014}
+\WikiItalic{Notes for today by Madeline Barnicle}
+
+Write $x \in \mathbf{No}$ in normal form. Say all powers of $\omega$ are positive. Take an initial segment of $x$; the segment also has this property. The proof requires the \WikiItalic{sign sequence} (chapter 5 of Gonshor), and we need this to delve into the exponential function. Instead, we will cover:
+\WikiLevelFour{Section 8: Analytic functions on $\mathbf{No}$}
+Let $\Gamma$ be an ordered abelian group, $K = \mathbb{R}((t^{\Gamma})), x=t^{-1}$. Let $F: I \rightarrow \mathbb{R}$ ($I=(a, b), a<b \in \mathbb{R} \cup \{\pm \infty \})$. Suppose $F$ is analytic. Then $F$ extends to a function $F_K : I_K \rightarrow K$, where $I_K = \{f \in K: a<f<b\}$. To explain this, consider the $\mathbb{R}$-subspaces:
+
+$K^{\downarrow}=\{f \in K:$ supp$(f) \subset \Gamma^{> 0} \}$ (infinitesimals of $K$)
+
+$K^{\uparrow}=\{f \in K:$ supp$(f) \subset \Gamma^{< 0} \}$ (the "purely infinite" elements of $K$)
+
+So $K=K^{\downarrow} \oplus \mathbb{R} \oplus K^{\uparrow}$. $O=K^{\downarrow} \oplus \mathbb{R}$. Then $I_K=\{c+\epsilon | c \in I \subset \mathbb{R}, \epsilon \in K^{\downarrow}\}$. Set $F_K (c+\epsilon)=\sum_{n=0}^{\infty} \frac{F^{(n)}(c)}{n!}\epsilon^{n} \in K$, which converges in $K$ by Neumann's lemma. For example, $c \rightarrow e^c: \mathbb{R} \rightarrow \mathbb{R}^{> 0}$ extends this way to $c+\epsilon \rightarrow e^{c+\epsilon}=e^c \sum_{n=0}^{\infty} \frac{\epsilon^n}{n!}, O \rightarrow K^{> 0}$.
+
+Likewise, every analytic function $G: U \rightarrow \mathbb{R}$ where $U \subset \mathbb{R}^n$ is open extends to a $K$-valued function whose domain $U_k$ is the set of all points in $K^n$ of infinitesimal distance to a point in $U$.
+
+\WikiBold{Digression on exp for $\mathbf{No}$}
+
+An \WikiItalic{exponential function} on $K$ is an isomorphism $(K, \leq, +) \rightarrow (K^{\geq 0}, \geq, \cdot).$
+
+A negative result:
+\WikiBold{Theorem} (F.-V. and S. Kuhlmann, Shelah): If the underlying class of $\Gamma$ is a \WikiItalic{set}, and $\Gamma \neq \{0\}$, then there is \WikiItalic{no} exponential function on $\mathbb{R}((t^{\Gamma}))$.
+
+Nevertheless, there is an exponential function on $\mathbf{No} \cong \mathbb{R}((t^{\mathbf{No}}))$ (Gonshor/Kruskal).
+
+For the rest of the course we will focus on restricted analytic functions on $\mathbf{No}$.
+
+Let $I=[-1,1] \subset \mathbb{R}$. A restricted analytic function is a function $F: \mathbb{R}^m \rightarrow \mathbb{R}$ such that $F(x)=0$ for $x \in \mathbb{R}^{m} \setminus I^m$, and $F \restriction I^m$ extends to an analytic function $U \rightarrow \mathbb{R}$ for some neighborhood $U$ of $I^m$.
+
+Example: $F: \mathbb{R} \rightarrow \mathbb{R}$ given by $F(x)=0$ if $|x|>1, F(x)=e^x$ if $|x| \leq 1$. For each such $F$, we have a function $F_K: K^M \rightarrow K$ such that $F_K(x)=0$ if $x \in K^m \setminus {I_K}^M, F_K \restriction {I_K}^m$ extends to a function $G_K: U_K \rightarrow K$ where $G: U \rightarrow \mathbb{R}$ is an analytic extension of $F \restriction I^m$ to an open neighborhood $U$ of $I^m$.
+
+Example: for $F$ as before, $F_K(x)=0$ if $|x|>1$. $F_K(c+\epsilon)=e^{c}\sum_{n} \frac{\epsilon^n}{n!}$, for $x=c+\epsilon, |x| \leq 1$.
+
+Let $L_{an}$ be the language $\{0,+, -, \cdot, \leq\}$ of ordered rings, augmented by a function symbol for each restricted analytic $\mathbb{R}^m \rightarrow \mathbb{R}$ (as $m$ varies). Let $\mathbb{R}_{an} = \mathbb{R}$ with the natural $L_{an}$ structure, $K_{an}=\mathbb{R}((t^{\Gamma}))$ with the natural structure (extensions as above). $\mathbb{R}_{an} \leq K_{an}$.
+
+\WikiBold{Theorem} (van den Dries, Macintyre, Marker, extending Denef-van den Dries): If $\Gamma$ is divisible, then $R_{an} \prec K_{an}$ (elementary substructure). In particular, $\mathbb{R} \prec \mathbf{No}$.
+
+vd Dries and Ehrlich expanded this by adding the exponential function to both sides.
+
+\WikiLevelFour{Section 9: Power series and Weierstrass Preparation}
+Let $A$ be a commutative ring with $1, X=(x_1...x_m)$ indeterminates. $A[|x|]=A[|x_1, ...x_m)|]=\{f=\sum_{i \in \mathbb{N}^m}f_i x^i, f_i \in A\}$, \WikiItalic{the ring of formal power series in $X$ over $A$.} Here, $X^i= x_{1}^{i_1}...x_{m}^{i_m}$. These terms can be added or multiplied in the obvious way.
+
+$A \subset A[x] \subset A[|x|]$. For $i=(i_1...i_m ) \in \mathbb{N}^m$, put $|i|=i_1+...i_m$. For $f \in A[|x|]$, order $(f)=$min$\{|i|: f_i \neq 0\}$ if $f \neq 0$, or $\infty$ if $f=0$.
+
+order $(f+g) \geq$ min (ord($f$), ord($g$)). ord($fg$) $\geq$ ord ($f$) $+$ ord($g$), with equality if and only if $A$ is an integral domain. $A[|x|]$ is an integral domain if and only if $A$ is.
+
+Let $(f_j)_{j \in J}$ be a family in $A[|x|]$. If for all $d \in \mathbb{N}$ there are only finitely many $j \in J$ with ord($f_j$) $\leq d$, then we can make sense of $\sum_{j \in J}f_j \in A[|x|]$. We often write $f \in A[|x|]$ as $f=\sum_{d \in \mathbb{N}} f_d$ where $f_d=\sum_{|i|=d}f_i x^i$ is the degree-$d$ homogeneous part of $f$.
+
+\WikiLevelThree{ November 26, 2014 }
+Let $A$ be a commutative ring, $X$ a set of $m$ indeterminates $X_1,\ldots,X_m$. For $f=\sum f_i X^i \in A[[X]]$, the map $f: A[[X]]\rightarrow A$ given by $f\mapsto f_0$ (here $0$ is the multi-index $(0,0,\ldots,0)$) is a ring morphism sending $f$ to its \WikiItalic{constant term}. 
+
+====Lemma 9.1====
+Let $f\in A[[X]]$. Then $f$ is a unit in $A[[X]]$ if and only $f_0$ is a unit in $A$.
+
+\WikiBold{Proof:}
+
+The "if" direction is clear. For the converse, suppose $f_0g_0=1$, where $g_0\in A$. Then $fg_0=1-h$, where $\rm{ord}(h)\ge 1$. Now we can apply the usual geometric series trick: take $\sum_n h_n\in A[[X]]$, which is defined using the notion of infinite sum defined last time, and check that $g_0\cdot \sum_n h^n$ is an inverse for $f$. 
+
+
+Define $\mathfrak{o}=\{f\in A[[X]]:\rm{ord}(f)\ge 1\}=\{f:f_0=0\}$. This is an ideal of $A[[X]]$, and $A[[X]]=A\oplus \mathfrak{o}$ as additive groups. 
+
+Every $f\in \mathfrak{o}$ is of the form $f=x_1g_1+\cdots +x_mg_m$, where $g_i\in A[[X]]$ (of course, this representation is not unique). More generally, set $\mathfrak{o}^d:=$ the ideal of $A[[X]]$ generated by products $f_1,\ldots,f_d$ with $f_i\in \mathfrak{o}$. Equivalently, this is the ideal $\{f:\rm{ord}(f)\ge d\}$ or the ideal generated by monomials of the form $X^i$, where $|i|=d$. That these are indeed equivalent is a straightforward exercise.
+
+We will also need to define \WikiItalic{substitution}. Let $Y=(y_1,\ldots y_n)$ be another tuple of distinct indeterminates, and let $g_1\ldots, g_m\in A[[Y]]$ with constant term $0$. Define a ring morphism $A[[X]]\rightarrow A[[Y]]$ by $f\mapsto f(g_1,\ldots, g_m)=\sum_i f_i g^i$. In the usual applications of this definition, we'll have $X=Y$.
+
+Let's introduce some more basic definitions for working with several sets of indeterminates. Suppose that $X$ and $Y$ are sets of indeterminates $\{X_1,\ldots,X_m\}$ and $\{Y_1,\ldots,Y_n\}$ respectively, and that none of the indeterminates in $Y$ appears in $X$. Put $(X,Y):=(X_1,\ldots, X_m, Y_1,\ldots, Y_n)$. Then for $f\in A[[X,Y]]$, we can write 
+$$f= \sum_{i,j} f_{ij} X^iY^j.$$
+This can be rewritten as $\sum_j(\sum_i f_{ij}X^i)Y^j$ (the sums above are actually the infinite sums defined last time). This gives an identification of $A[[X,Y]]$ with $A[[X]][[Y]]$.
+
+The previous result can be sharpened somewhat.
+====Lemma 9.2==== Let $f\in A[[X,Y]]$. Then there are unique $g_1,\ldots, g_n\in A[[X,Y]]$ such that
+$$f(X,Y)=f(X)+X_1 g_1(X, Y_1)+\ldots + Y_n g_n(X, Y_1,\ldots Y_n)$$
+where $g_i\in A[[X,Y_1,\ldots, Y_i]]$. 
+
+The proof is an exercise.
+
+From now on, we will take $A$ to be a field $K$. Let $T$ be an indeterminate not among $X_1,\ldots, X_m$. We call $f(X,T)\in A[[X,T]]$ \WikiItalic{regular in $T$ of order $d$} if 
+$$f(0,T)=cT^d+\textrm{ terms of order larger than }d$$
+where $c\in K-\{0\}$.
+
+Writing $f=\sum_{i\in\mathbb{N}} f_i(X)T^i$, this is also equivalent to either of the following:
 \begin{enumerate}
   \item  $f_0(0)=\cdots =f_{d-1}(0)=0$ and $f_d(0)\neq 0$,
   \item  $f_0,\ldots, f_{d-1}\in \mathfrak{o}$, $f_d\in \mathfrak{o}$, $f_d\in K[[X]]^\times$.
 \end{enumerate}
+
+The reason for this definition is that there is a "Euclidean division" result which holds when dividing by regular power series.
+
+====Theorem 9.3 (Division with remainder)====
+Let $f\in K[[X,T]]$ be regular in $T$ of order $d$. Then for each $g\in K[[X,T]]$, there is a unique pair $(Q,R)$ where $Q\in K[[X,T]]$ and $R\in K[[X]][T]$ (so it is just a \WikiItalic{polynomial} in $T$) such that $g=Qf+R$ and $\mathrm{deg}_TR<d$.
+
+\WikiBold{Proof:}
+
+We first reduce to the case $f=T^d+F$, where $F\in\mathfrak{o}[[T]]$. Here $\mathfrak{o}[[T]]$ is a notation for the set of power series in $T$ whose coefficients are in $\mathfrak{o}$. Write $f=\sum_i f_i(X) T^i$, where $f_0,\ldots, f_{d-1}\in\mathfrak{o}$, $f_d\in K[[X]]^\times$. Then set $u:=\sum_{i\ge d} f_i T^{i-d}$. Then $u^{-1}f= u^{-1}(\sum_{i<d} f_i(X)T^i)+T^d\in \mathfrak{o}[[T]]+T^d$.
+
+Now we prove uniqueness: if $g=Q_1f+R_1=Q_2f+R_2$ are both as in the conclusion of the theorem, then $qf=r$ where $q:=Q_1-Q_2$ and $r:=R_2-R_1$, so and $\rm{deg}_TR<d$. Suppose $q=\sum_i q_i T^i$. For each $i$, the coefficient of $T^{d+i}$ in $qf$ is 0 (since $qf=r$ has degree $<d$), which can be expressed as $0=q_if_d+\sum_{j<i}q_jf_{d+i-j}+\sum_{i<j\le i+d}q_jf_{d+i-j}$. Thus $q_i\in \mathfrak{o}$ for each $i$. Repeating this inductively, we see that each $q_i$ must be in $\mathfrak{o}^n$ for each $n\in \mathbb{N}$, so they must all be $0$. Hence $q=0$, and then $r=0$.
+
+Finally we show existence, the more interesting part of the proof. Define $K[[X]]$-linear maps $\tau,\lambda:K[[X,T]]\rightarrow K[[X,T]]$ and $\alpha:K[[X,T]]\rightarrow K[[X]][T]$ by 
 \begin{enumerate}
   \item  $\tau(g):=\sum_i g_{i+d} T^i$ (the higher order part of $g$, divided out by $T^d$),
   \item  $\lambda(g):=-\tau(g)F$ (recalling that $F=f-T^d$ was the $\mathfrak{o}[[T]]$ part of $f$)
   \item  $\alpha(g):=g_0+g_1T+\cdots+g_{d-1}T^d$ (the lower degree terms of $g$).
 \end{enumerate}
+
+Notice that $g=\tau(g)T^d+\alpha(g)=\tau(g)f+\alpha(g)+\lambda(g)$. Informally, $\tau(g)$ is our first guess for the quotient part. Then $\alpha(g)$ collects the lower degree terms of the remainder, and $\lambda(g)$ is an extra part that we must work to refine. 
+
+We will do this by iterating the process above. For each $n$, applying the process above to $\lambda^n(g)$ we have $\lambda^n(g)=\tau(\lambda^n(g))f+\alpha(\lambda^n(g))+\lambda^{n+1}(g)$. (Let us denote this equation by $(\ast)_n$). If $g\in \mathfrak{o}^n[[T]]$, then $\tau(g),\alpha(g)\in\mathfrak{o}^n[[T]]$, and $\lambda(g)\in\mathfrak{o}^{n+1}[[T]]$, so the order always increases after applying $\lambda$ (this is a sign that we make some progress after applying $\lambda$). 
+
+Using $(\ast)_n$ to iterate the $\lambda$ away, we see that:
+$$g=\tau(g)f+\alpha(g)+\lambda(g)$$
+$$=\tau(g)f+\alpha(g)+\tau(\lambda(g))f+\alpha(\lambda(g))+\lambda^2(g)$$
+$$=\sum_n\tau(\lambda^n(g))f+\sum_n\alpha(\lambda^n(g)).$$
+
+We can take $Q:=\sum_n\tau(\lambda^n(g))$ and $R:=\sum_n\alpha(\lambda^n(g))$. These sums are defined since $\tau(\lambda^n(g))$ and $\alpha(\lambda^n(g))$ have order $n$.
+h

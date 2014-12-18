@@ -1,6 +1,392 @@
+\WikiLevelTwo{ Week 6 }
+
+Notes by Anton Bobkov
+
+\WikiLevelThree{Monday, November 10, 2014}
+We define a map which will eventually be proven to be an ordered field isomorphism.
+
+\begin{align*}
+  K = \R((t^\No)) \overset{\sim}{\longrightarrow} \No
+\end{align*}
+
+We have an element written as 
+\begin{align*}
+	&f = \sum_{\gamma \in \No} f_\gamma t^\gamma \\
+	&\supp(f) = \{\gamma \colon f_\gamma \neq 0\}
+\end{align*}
+where $\supp(f)$ is a well-ordered sub\WikiItalic{set}. Now let $x = t^{-1}$ and write
+\begin{align*}
+  f(x) = \sum_{i < \alpha} f_i x^{a_i}
+\end{align*}
+where $(a_i)_{i<\alpha}$ is strictly decreasing in $\No$, $\alpha$ ordinal and $f_i \in \R$ for $i < \alpha$. Also define $l(f(x))$ to be the order type of $\supp(f)$ (which may be smaller than $\alpha$ as we allow zero coefficients).
+
+==== Question ====
+	What is the relationship of what we are going to do with Kaplansky's results from valuation theory?
+
+==== Definition/Theorem ====
+For $f(x) = \sum_{i < \alpha} f_i x^{a_i}$ define $\sum_{i < \alpha} f_i \w^{a_i} = f(\omega)$ recursively on $\alpha$: \\ 
+When $\alpha = \beta + 1$ is a successor:
+\begin{align*}
+	\sum_{i < \alpha} f_i \w^{a_i} = \paren{\sum_{i < \beta} f_i \omega^{a_i}} + f_\beta \w^{a_\beta}
+\end{align*}
+When $\alpha$ is a limit ordinal:
+\begin{align*}
+	\sum_{i < \alpha} f_i \w^{a_i} &= \curly{L \mid R} \\
+  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}}
+\end{align*}
+Simultaneously with this definition we prove the following statements by induction:
+
 \WikiSigleStar  '''Inequality:''' For \begin{align*}
+	f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
+	g(x) &= \sum_{i < \alpha} g_i x^{a_i}
+\end{align*} we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
 \WikiSigleStar  '''Tail property:''' if $\gamma < \kappa < \alpha$
+\begin{align*}
+	\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
+\end{align*}
+
+\WikiBold{Proof of inequality}
+
+Suppose we have
+\begin{align*}
+  f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
+  g(x) &= \sum_{i < \alpha} g_i x^{a_i}
+\end{align*}
+
+with $f(x) < g(x)$
+
+Choose $\gamma$ smallest such that $f_\gamma \neq g_\gamma$.
+It has to be that $f_\gamma > g_\gamma$. Also $f(x)\midr\gamma = g(x)\midr\gamma$
+
+\WikiItalic{Case 1}: $\alpha = \beta + 1$
+
+\begin{align*}
+  f(x) &= f(x)\midr\beta + f_\beta x^{a_\beta}\\
+  g(x) &= g(x)\midr\beta + g_\beta x^{a_\beta}
+\end{align*}
+
+Suppose $\gamma = \beta$.
+Then $\bar f(x) = \bar g(x)$, $\bar f(\w) = \bar g(\w)$, so compute
+\begin{align*}
+  f(\w) - g(\w) &= \\
+	&= f(\w)\midr\beta + f_\beta \w^{a_\beta} - g(\w)\midr\beta - g_\beta \w^{a_\beta} \\
+	&= f_\beta \w^{a_\beta} - g_\beta \w^{a_\beta} \\
+	&= \paren{f_\beta - g_\beta} \w^{a_\beta} > 0
+\end{align*}
+
+Now suppose $\gamma < \beta$.
+
+Group the terms
+\begin{align*}
+  f(\w) &= h(\w) + f_\gamma \w^{a_\gamma} + f^* + f_\beta \w^{a_\beta} \\
+  g(\w) &= h(\w) + g_\gamma \w^{a_\gamma} + g^* + g_\beta \w^{a_\beta}
+\end{align*}
+where
+\begin{align*}
+	h(\w) &= f(\w)\midr\gamma = g(\w)\midr\gamma \\
+	f^* &= f(\w)\midr\beta - f(\w)\midr{\gamma + 1} \\
+	g^* &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
+\end{align*}
+
+Then we have by tail property $f^* << x^{a_\gamma}$ and $g^* << x^{a_\gamma}$. Compute
+
+\begin{align*}
+  f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f* - g*) + (f_\beta - g_\beta) x^{a_\beta}
+\end{align*}
+
+We have $f_\gamma > g_\gamma$.
+All $f*$, $g*$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$.
+Thus $f(\w) - g(\w) > 0$ as needed.
+
+\WikiItalic{Case 2}: $\alpha$ is a limit ordinal.
+
+$f(\w)$ and $g(\w)$ are defined as 
+
+\begin{align*}
+  f(\w) &= \curly{L_f \mid R_f} \\
+  g(\w) &= \curly{L_g \mid R_g}
+\end{align*}
+
+Recall that
+
+\begin{align*}
+  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_g &= \curly{\sum_{i < \beta} g_i \w^{a_i} + (g_\beta + \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}}
+\end{align*}
+
+Pick any $\beta$ with $\gamma < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
+and pick limit elements $\bar f(\w) \in L_f$ and $\bar g(\w) \in R_g$ corresponding to $\beta, \epsilon$.
+
+Then $\bar f(x) < \bar g(x)$ as first coefficient where they differ is $x^{a_\gamma}$ and $f_\gamma > g_\gamma$.
+Thus by inductive hypothesis $\bar f(\w) < \bar g(\w)$.
+As choice of those was arbitrary we have $L_f < R_g$ so $f(\w) > g(\w)$.
+
+\WikiBold{Proof of tail property}
+
+It is easy to see that statement holds for all $\gamma < \kappa < \alpha$ iff it holds for all $\gamma < \kappa \leq \alpha$.
+
+\WikiItalic{Case 1}: $\alpha = \beta + 1$.
+
+Suppose we have $\gamma < \kappa < \alpha$, then $\gamma < \kappa \leq \beta$ and induction hypothesis applies.
+
+\begin{align*}
+	&\sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} = \\
+	&\brac{\sum_{i < \beta} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i}} + f_\alpha \w^{a_\alpha}
+\end{align*}
+
+Expression $\brac{\ldots}$ is $<< \w^{a_\gamma}$ by induction hypothesis. $f_\alpha \w^{a_\alpha} << \w^{a_\gamma}$ as $a_\alpha < a_\gamma$. Thus the entire sum is $<< \w^{a_\gamma}$ as needed.
+
+\WikiItalic{Case 2}: $\alpha$ is a limit ordinal.
+
+Write definitions of $f(\w)$ using $\kappa$
+
+\begin{align*}
+  f(\w) &= \curly{L_f \mid R_f} \\
+  F(\w) &= f(\w)\midr\kappa = \sum_{i < \kappa} f_i \w^{a_i}
+\end{align*}
+
+\begin{align*}
+  L_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_f &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \beta < \alpha, \epsilon \in \R^{>0}} \\
+\end{align*}
+
+Pick any $\beta$ with $\kappa < \beta < \alpha$ and $\epsilon \in \R^{>0}$,
+and pick limit elements $\bar l(\w) \in L_f$ and $\bar r(\w) \in R_f$ corresponding to $\beta, \epsilon$.
+
+By induction hypothesis we have 
+\begin{align*}
+	\bar l(\w) - F(\w) &= \bar l(\w) - \bar l(\w)\midr\kappa \ <<  \w^{a_\kappa} \\
+	\bar r(\w) - F(\w) &= \bar r(\w) - \bar r(\w)\midr\kappa \ <<  \w^{a_\kappa}
+\end{align*}
+
+\begin{align*}
+	l(\w) \leq f(\w) \leq r(\w) \\
+\end{align*}
+\begin{align*}
+	l(\w) - F(\w) \leq f(\w) - F(\w) \leq r(\w) - F(\w)
+\end{align*}
+ 
+Thus $f(\w) - F(\w) << \w^{a_\kappa}$ as it is between two elements that are $<<  \w^{a_\kappa}$.
+
+\WikiBold{Proof of well-definiteness}
+
+We also need to check that the function is well-defined. For $f(x)$ define its reduced form, where we only keep non-zero coefficients.
+
+\begin{align*}
+	f(x) &= \sum_{i < \alpha} f_i \w^{a_i} \\
+	\bar f(x) &= \sum_{j < \alpha'} f_j' \w^{a_j'}
+\end{align*}
+
+We need to check that $f(\w) = \bar f(\w)$
+
+\WikiItalic{Case 1}: $\alpha = \beta + 1$
+
+\begin{align*}
+	f(\w) &= g(\w) + f_\beta \w^{a_\beta} \\
+	g(x) &= \sum_{i < \beta} f_i \w^{a_i} \\
+	g(\w) &= \bar g(\w)
+\end{align*}
+
+If $f_\beta = 0$ then $\bar f(x) = \bar g(x)$ and $f(\w) = g(\w)$ so $f(\w) = g(\w) = \bar g(\w) = \bar f(\w)$ as needed.
+
+Suppose $f_\beta \neq 0$. Then $\bar f(x) = \bar g(x) + f_\beta x^{a_\beta}$.
+\begin{align*}
+	f(\w) = g(\w) + f_\beta \w^{a_\beta} = \bar g(\w) + f_\beta \w^{a_\beta} = \bar f(\w)
+\end{align*}
+
+\WikiItalic{Case 2}: $\alpha$ is a limit and non-zero coefficients are cofinal in $\alpha$.
+
+In this case both $f(x)$ and $\bar f(x)$ have limit ordinals in their definitions. Moreover 
+\begin{align*}
+	L_{\bar f} &\subseteq L_f \\
+	R_{\bar f} &\subseteq R_f
+\end{align*}
+and are cofinal. Thus $f(\w) = \bar f(\w)$.
+
+\WikiItalic{Case 3}: $\alpha$ is a limit and for some $\gamma < \alpha$
+\begin{align*}
+	\gamma \leq \beta < \alpha \Rightarrow f_\beta = 0
+\end{align*}
+
+\begin{align*}
+	g(x) &= \sum_{i < \gamma} f_i x^{a_i} \\
+  L_f^* &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon) \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
+	&= \curly{g(\w) - \epsilon \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
+  R_f^* &= \curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon) \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}} \\
+	&= \curly{g(\w) + \epsilon \w^{a_\beta}
+	\colon \gamma < \beta < \alpha, \epsilon \in \R^{>0}}
+\end{align*}
+
+We have
+\begin{align*}
+	L_f^* &\subseteq L_f \\
+	R_f^* &\subseteq R_f
+\end{align*}
+and are cofinal. $\curly{L_f^* - g(\w) \mid R_f^* - g(\w)} = 0$ as left side is negative and right side is positive.
+Thus $f(\w) = \curly{L_f^* \mid R_f^*} = g(\w)$. As $\gamma < \alpha$ this case is covered by induction.
+
+\WikiLevelThree{Wednesday, November 12, 2014}
+
+==== Lemma 6.1 ====
+$l(f(\w)) \geq l(f(x))$
+
+\WikiBold{Proof}
+Suppose $\beta < \alpha$. Then the elements used to define $\sum_{i < \w\cdot\beta} (\ldots)$ also appear in the cut for $\sum_{i < \w\cdot\alpha} (\ldots) = f(\w)$. Thus by uniqueness of the normal form.
+\begin{align*}
+	l\paren{\sum_{i < \w\cdot\beta} (\ldots)} < l(f(\w))
+\end{align*}
+So the map $\phi(\beta) = l(\sum_{i < \w\cdot\beta} (\ldots))$ is strictly increasing.
+Any strictly increasing map $\phi$ on an initial segment of $\On$ satisfies $\phi(\beta) \geq \beta$.
+
+==== Lemma 6.2 ====
+The map
+
+\begin{align*}
+	K &\arr \No \\
+	f(x) &\mapsto f(\w)
+\end{align*}
+
+is onto.
+
+\WikiBold{Proof}
+
+Let $a \in \No, a \neq 0$. By (5.6) there is a unique $b \in \No$ such that $\brac{a} = \brac{\w^b}$.
+Put
+\begin{align*}
+	S = \curly{s \in \R \colon s\w^b \leq a}
+\end{align*}
+Then $S \neq \emptyset$ and bounded from above.
+Put $r = \sup S \in \R$.
+Then
+\begin{align*}
+	(r + \epsilon)\w^b > a > (r - \epsilon)\w^b
+\end{align*}
+for all $\epsilon \in \R^{>0}$
+thus
+\begin{align*}
+	\abs{a - r\w^b} << \w^b \tag{*}
+\end{align*}
+
+Note $r \neq 0$; $r,b$ subject to $(*)$ are unique.
+
+We set $\lt(a) = r\w^b$
+
+Towards a contradiction assume that $a$ is not in the image of $f(x) \mapsto f(\w)$.
+We shall inductively define a sequence $(a_i, f_i)_{i \in \On}$ where 
+
 \begin{enumerate}
   \item $a_i \in \No$ is strictly decreasing; $f_i \in \R - \{0\}$
   \item $f_\alpha \w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha} f_i\w^{a_i}}$ for all $\alpha \in \On$
 \end{enumerate}
+
+\WikiItalic{Case 1}: $\alpha = \beta + 1$
+
+Take $(a_\alpha, f_\alpha)$ so that
+\begin{align*}
+	f_\alpha\w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha}(\ldots)}
+\end{align*}
+
+By inductive hypothesis, if $\beta < \alpha$
+
+\begin{align*}
+	f_\beta\w^{a_\beta} &= \lt\paren{a - \sum_{i < \beta}(\ldots)} \\
+	\Rightarrow f_\alpha\w^{a_\alpha} &= \lt\paren{\paren{a - \sum_{i < \beta}(\ldots)} - f_\beta\w^{a_\beta}} \\
+	&<< \w^{a_\beta} \text{ by (*)} \\
+	\Rightarrow a_\alpha &< a_\beta
+\end{align*}
+
+\WikiItalic{Case 2}: $\alpha$ limit
+
+Take $(a_\alpha, f_\alpha)$ as above.
+Let $\beta < \alpha$; to show $a_\alpha < a_\beta$.
+We have
+
+\begin{align*}
+	a - \sum_{i \leq \beta} f_i \w^{a_i} = \paren{a - \sum_{i < \beta} f_i\w^{a_i}} - f_\beta\w^{a_\beta} << \w^{a_\beta}
+\end{align*}
+
+By the tail property
+\begin{align*}
+	&\sum_{i < \alpha} (\ldots) - \sum_{i \leq \beta} (\ldots) << \w^{a_\beta} \\
+	\Rightarrow &a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta} \\
+	\Rightarrow &\lt\paren{a - \sum_{i < \alpha} (\ldots) } << \w^{a_\beta} \\
+	\Rightarrow &a_\alpha < a_\beta
+\end{align*}
+
+This completes the induction.
+Note that we showed that if $\alpha$ is a limit then $a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta}$ for all $\beta < \alpha$.
+
+So if $\curly{L \mid R}$ is the cut used to define $\sum_{i < \alpha} (\ldots)$ then $L < a < R$.
+Let $\alpha = \w \cdot \alpha'$.
+Hence 
+\begin{align*}
+	l(a) > l\paren{\sum_{i < \w\cdot\alpha'} (\ldots)} \geq \alpha'
+\end{align*}
+by (6.1).
+So $l(a)$ is bigger than all limits - contradiction.
+
+==== Lemma 6.4 ====
+Let $r \in \R, a \in \No$. Then 
+\begin{align*}
+	r\w^a = \{(r - \epsilon) \w^a \mid (r+\epsilon)\w^a\}
+\end{align*}
+where $\epsilon$ ranges over $\R^{>0}$.
+
+\WikiBold{Proof}
+\begin{align*}
+	r &= \{r - \epsilon \mid r + \epsilon\} \\
+	\w^a &= \curly{0, s\w^{a_L} \mid t\w^{a_R}} \text{ where } s,t \in \R^{>0}
+\end{align*}
+\begin{align*}
+	r\w^a = \{
+	&(r - \epsilon) \w^a, (r - \epsilon)\w^a + \epsilon s \w^{a_L}, \\
+	&(r + \epsilon) \w^a - \epsilon t \w^{a_R} \mid \\
+	&(r + \epsilon) \w^a, (r + \epsilon)\w^a - \epsilon s \w^{a_R}, \\
+	&(r - \epsilon) \w^a + \epsilon t \w^{a_L} \}
+\end{align*}
+Now use $\w^{a_L} << \w^a << \w^{a_R}$ and cofinality.
+
+\WikiLevelThree{Friday, November 14, 2014}
+
+==== Corollary 6.5 ====
+\begin{align*}
+	\sum_{i \leq \alpha} f_i\w^{a_i} =
+	\curly{ \sum_{i < \alpha} f_i\w^{a_i} + (f_i - \epsilon) \w^{a_\alpha} \mid
+	\sum_{i < \alpha} f_i\w^{a_i} + (f_i + \epsilon) \w^{a_\alpha} }
+\end{align*}
+
+\WikiBold{Proof}
+
+\WikiItalic{Case 1}: $\alpha$ is a limit
+\begin{align*}
+	&\sum_{i \leq \alpha} f_i\w^{a_i} = \sum_{i < \alpha} f_i\w^{a_i} + f_\alpha\w^{a_\alpha} = \\ \underset{(6.4)}{=}
+	&\curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon)\w^{a_\beta} \mid
+	\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon)\w^{a_\beta}}_{\beta < \alpha, \epsilon \in \R^{>0}}
+	+ \curly{(r - \epsilon) \w^\alpha \mid (r+\epsilon)\w^\alpha} = \\ =
+	&\curly{\sum_{i \leq \beta} f_i \w^{a_i} - \epsilon\w^{a_\beta} + f_\alpha\w^{a_\alpha},
+	\sum_{i < \alpha} f_i \w^{a_i} + (f_\alpha - \epsilon)\w^{a_\alpha} \mid \ldots} = \\ \underset{cofinality}{=}
+	&\curly{ \sum_{i < \alpha} f_i\w^{a_i} + (f_i - \epsilon) \w^{a_\alpha} \mid \ldots }
+\end{align*}
+
+\WikiItalic{Case 2}: $\alpha + 1$
+
+\begin{align*}
+	&\sum_{i \leq \alpha + 1} f_i \w^{a_i} = \sum_{i \leq \alpha} f_i \w^{a_i} + f_{\alpha + 1} \w^{a_{\alpha + 1}} = \\
+	&\text{(by (6.4) and induction hypothesis)} \\
+	= &\curly{\sum_{i \leq \alpha} f_i \w^{a_i} + (f_{\alpha} - \epsilon) \w^{a_\alpha} \mid \ldots} +
+	\curly{(f_{\alpha + 1} - \epsilon) \w^{a_{\alpha + 1}} \mid \ldots} =  \\
+	= &\curly{\sum_{i < \alpha} f_i \w^{a_i} + (f_{\alpha} - \epsilon) \w^{a_\alpha} + f_{\alpha + 1} \w^{a_{\alpha + 1}},
+	\sum_{i \leq \alpha} f_i \w^{a_i} + (f_{\alpha + 1} - \epsilon) \w^{a_{\alpha + 1}} \mid \ldots}
+\end{align*}
+
+and again we are done by cofinality.
