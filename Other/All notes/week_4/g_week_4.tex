@@ -1,0 +1,126 @@
+\section{ Week 4 }
+Notes by Madeline Barnicle
+\subsection{Monday, October 27, 2014}
+We need to show that the ordered field of reals in $\mathbf{No}$ is Dedekind-complete.
+
+Let $S \neq \emptyset$ be a set of reals which is bounded from above. We need to show sup $S$ exists. We can assume $S$ has no maximum. Put $R=\{a \in \mathbb{D}: a>S\}, L=\mathbb{D} \setminus R$. Using (3.11), the density of $\mathbb{D}$, $L$ has no maximum. If $R$ has a minimum, then this value is the sup of $S$ and we are done. So suppose $R$ has a minimum, then $r=\{L|R\}$ is real.
+
+Claim: $r=$ sup $S$. Suppose $s \in S$ satisfies $s>r$, take $d \in \mathbb{D}$ with $s>d>r$. Then $d \in L$, contradiction since $d>r$.
+
+So $r$ is an upper bound. If $L<r'<r$, $r'$ also real, take dyadic $d$ with $r'<d<r$. Then $d \in R$, contradiction.
+
+====Corollary 3.13====
+Corollary to (3.8) and (3.12): Let $a \in \mathbb{R} \setminus \mathbb{D}$. Then $\lim_{n \to +\infty} a \restriction n =a$ in $\mathbb{R}$.
+
+====Ordinals====
+We identify each $n \in \mathbf{On}$ wih $a_\alpha \in \mathbf{No}$, where $l(a_\alpha)=\alpha$ and $a_{\alpha}(\beta)=+$ (for all $\beta \leq \alpha$?) For all $\alpha, \beta \in \mathbf{On}, \alpha \leq \beta \rightarrow a_\alpha <\leq a_\beta$.
+
+The canonical representation of $a_\alpha$ is $a_\alpha = \{a_{\beta}, \beta \leq \alpha | \emptyset \}$.
+
+If $H$ is any nonempty set of ordinals and $\alpha =$ sup$ H$, then $a_\alpha = \{a_{\beta}, \beta \in H | \emptyset \}$.
+
+====Proposition 3.14====
+For all $\alpha, \beta \in \mathbf{On}, a_\alpha + a_\beta = a_{\alpha \oplus \beta}, a_\alpha * a_\beta = a_{\alpha \otimes \beta}$.
+
+
+'''Proof:'''
+
+By induction, $a_\alpha + a_\beta =$ sup $\{a_\alpha + a_{\beta'}, a_{\alpha'} + a_\beta | \alpha' \leq \alpha, \beta' \leq \beta \}  =$ by induction, sup $\{a_{\alpha' \oplus \beta}, a_{\alpha \oplus \beta'} | \alpha' \leq \alpha, \beta' \leq \beta \} = a_{\alpha \oplus \beta}$, stated earlier.
+
+For multiplication, using the result for addition, and the distributive laws for $+, \centerdot,$ on $\mathbf{No}$ and $\oplus, \otimes$ on $\mathbf{On}$, we reduce to the case $\alpha = \omega^r, \beta= \omega^s, r, s \in \mathbf{On}$. By definition, $a_\alpha * a_\beta = \{a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} : \delta \leq \omega^s, \gamma \leq \omega^r | \emptyset \}.$ In particular, $a_\alpha * a_\beta \in \mathbf{On}$ by (1.8). By inductive hypothesis and the first part, $a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} \leq a_{(\omega^r \otimes \delta) \oplus (\delta \otimes \omega^s)} < a_{\omega^{r \oplus s}}.$
+
+And $l(a_\alpha * a_\beta) \leq l(\omega^{r \oplus s}) = \omega^{r \oplus s}$.
+
+Now we show the $\geq$ direction.
+
+Let $r'<r$ and $n \in \mathbb{N}$, then $a_\alpha * a_\beta > a_{\omega^{r'}_n} * a_{\beta}=a_{\omega^{r'}_n} \otimes \beta$ by hypothesis $=a_{\omega^{r' \oplus s}_n}$. Similarly if $s'<s, n \in \mathbb{N}$, then $a_\alpha * a_\beta > a_{\omega^{r \oplus s'}_n}$. Therefore, $a_\alpha * a_\beta \geq$ sup $\{a_{\omega^{r' \oplus s}_n}, a_{\omega^{r \oplus s'}_n}  : r' <r, s' <s, n \in \mathbb{N} \} = a_{\omega^{r+s}}$. (See the definition of natural $\oplus$.)
+
+====Examples====
+
+* $\omega -1 = \omega + (-1) = \{n|\emptyset \} + \{\emptyset|0\}=\{n-1|\omega + 0\}= \{n|\omega\} = (+++...-). (\omega$ +s).
+* $\omega - (m+1)$? By hypothesis, assume $w-m = (+++...---...-)$ ($\omega$ +s and $m$ -s). $\omega - (m+1)= \{n|\emptyset \} + \{\emptyset|-m\} = \{n-m-1|\omega -m\} = \{n|\omega-m\} = (+++...---...--)$ ($\omega$ +s and $m+1$ -s).
+* $\omega + \frac{1}{2} = \{n|\emptyset \} + \{0|1\} = \{n + \frac{1}{2}, \omega + 0 | \omega +1\} = \{\omega | \omega +1\}=(+++...+-)$ ($\omega$ +s.)
+* In general, if $r \in \mathbb{R}^{>0}, \omega + r = \{n|\emptyset \} + \{L|R\}$ (the canonical representation for $r$) = $\omega + L, n+r | \omega +R\} = \{\omega + L | \omega + R \}$. Inducting on the length of $r$, this equals $\omega \frown r$. This also works for negative, non-integer $r$ (we need $L$ to be nonempty for the argument to go through)--the full result holds for $r \in \mathbb{Z}^{<0}$ as well.
+
+\subsection{Wednesday, October 29, 2014}
+* $\frac{1}{2} \omega = \{0|1\}*\{n|\emptyset \}=$ by the definition of multiplication, $\{\frac{1}{2} n + \omega * 0 - n*0 | \frac{1}{2} n + \omega * 1 - n*1\}=\{\frac{1}{2} n|\omega -\frac{1}{2} n\}=$ by cofinality $\{n|\omega -n\}= (+++...---...)$ ($\omega$ +s, $\omega$ -s).
+* $\frac{1}{\omega}= (+---...)$ ($\omega$ -s)? Call this number $\epsilon$. $0<\epsilon <r$ for all $r \in \mathbb{R}^{>0}$, i.e. $\epsilon$ is ''infinitesimal''. (It is the unique infinitesimal of length $\omega$.) Guess that $\epsilon = \frac{1}{\omega}$. Canonical representation of $\epsilon: \{0|\frac{1}{2^n}\}$.
+
+$\epsilon \omega = \{0|\frac{1}{2^n}\}*\{m|\emptyset \}=\{0|\frac{1}{n}\}*\{m|\emptyset \}$ by cofinality $=\{\epsilon *m +0*0-0*\omega|\epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m\}= \{\epsilon *m|\epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m\}.$
+
+Now $\epsilon *m$ is still infinitesimal, $\epsilon m <1.   1< \epsilon *m+\frac{1}{n}\omega - \frac{1}{n}m$, as $\frac{1}{n}(\omega -n)$ is infinite. Since $0$ does not satisfy the cut, $\epsilon \omega =1$.
+*$r + \epsilon (r \in \mathbb{R})$. First assume $r \in \mathbb{D}$, so $r=\{r_L|r_R\}, r_L, r_R \in \mathbb{D}$. $r + \epsilon = \{r_L + r_R\} + \{0|\frac{1}{n}\}=\{r+0, r_L + \epsilon|r+\frac{1}{n}, r_R + \epsilon\}= \{r|r+\frac{1}{n}\}$ by cofinality = $\{r|\mathbb{D}^{>r}\}=r\frown(+)$, of length $\omega +1$.
+*What is $\lambda +r$, $\lambda$ a limit ordinal, $r \in \mathbb{R}$?
+
+\subsubsection{Section 4: Combinatorics of Ordered Sets}
+Let $S$ be a set. An ''ordering'' $\leq$ on $S$ is an reflexive, transitive, antisymmetric, binary relation on $S$. Call $(S,\leq)$ an ''ordered set'' (partial or total).
+
+We say $\leq$ is ''total'' if $x \leq y$ or $y \leq x$ for each $x, y \in S$.
+
+Let $T$ be an ordered set, and $\phi: S \rightarrow T$ a map. Then $\phi$ is ''increasing'' if $x \leq y \rightarrow \phi(x) \leq \phi(y)$, ''strictly increasing'' if $x < y \rightarrow \phi(x) < \phi(y)$, a ''quasi-embedding'' if $\phi(x) \leq \phi(y) \rightarrow x \leq y$.
+
+Examples: let $(S, \leq_S), (T, \leq_T)$ be ordered sets.
+*$S \coprod T$= disjoint union of $S$ and $T$ with the ordering $\leq_S \cup \leq_T$.
+*$S \times T$ can be equipped with the ''product ordering'' $(x,y)\leq(x',y') \leftrightarrow x \leq_S x'$ and $y \leq_T y'$, or the ''lexicographic ordering'' $(x,y) \leq_{lex} (x',y') \leftrightarrow x <_S x'$ or $(x=x'$ and $y \leq_T y')$. The lexicographic ordering extends the product ordering.
+*Let $S^*$ be the set of finite words on $S$. Define $x_{1}...x_{m} \leq^{*} y_{1}...y_{m}$ if there exists a strictly increasing $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for every $i=1...m$.
+*Let $S^\diamond$ be the set of "commutative" finite words on $S=S*/ \sim$, where $x_{1}...x_{m} \sim y_{1}...y_{m}$ if $m=n$ and there exists a permutation of $\{1...m\}$ such that $x_i = y_{\phi(i)}$ for all $i$. Define  $x_{1}...x_{m} \leq^{\diamond} y_{1}...y_{m} \leftrightarrow$ there exists an injective $\phi: \{1...m\} \rightarrow \{1...n\}$ such that $x_i \leq_S y_{\phi(i)}$ for $i=1...m$.
+*The natural surjective map $(S^*, \leq^*) \rightarrow (S^\diamond, \leq^\diamond)$ is increasing.
+*$\mathbb{N}^m=\mathbb{N} * \mathbb{N} * ...\mathbb{N}$ with the product ordering. $X=\{x_1...x_m\}$ distinct indeterminates with trivial ordering. The map $\mathbb{N}^m= \rightarrow X^\diamond, \nu(v_1...v_n)=X_{1}^{v_1}...X_{m}^{v_m}$ is an isomorphism of ordered sets. $\leq^\diamond$ is divisibility of monomials.
+
+*Let $S$ be an ordered set. Call $F \subset S$ a ''final segment'' of $S$ if $x \leq y$ and $x \in F \rightarrow y \in F$ ($F$ is upward closed). Given $X \subset S$, define $(X) \subset F = \{y \in S|\exists x \in X, x \leq y\},$ the final segment of $S$ ''generated'' by $X$ (the notation corresponds to the ideal generated by monomials). Put $\mathcal{F}(S)=$ the set of all finite segments of $S$. Call $A \subset S$ an ''antichain'' if for $x, y \in A, x \neq y \rightarrow x \not\leq y$ and $y \not\leq x$. We say that $S$ is ''well-founded'' if there is no infinite sequence $x_{1}>x_{2}...$ in $S$.
+
+====Definition 4.1====
+$(S, \leq)$ is ''noetherian'' if it is well-founded and has no infinite antichains.
+
+
+\subsection{Friday, October 31, 2014}
+Call an infinite sequence $(x_n)$ in $S$ ''good'' if $x_i \leq x_j$ for some $i<j$.
+====Proposition 4.2====
+The following are equivalent:
+\begin{enumerate}
+	\item  $S$ is Noetherian.
+	\item  Every final segment of $S$ is finitely generated.
+	\item  $\mathcal{F}(S)$ has the ascending chain condition.
+	\item  Every infinite sequence in $S$ contains an increasing finite subsequence.
+	\item  Every infinite sequence in $S$ is good.
+\end{enumerate}
+
+'''Proof:'''
+
+$1 \rightarrow 2$: Let $F \in \mathcal{F}(S)$. Let $G$ be the set of minimal elements of $F$. Then $G$ is an antichain, hence finite. Suppose $x_i \in F \setminus (G)$, there is $x_2 \in F$ such that $x_1 > x_2, x_2 \ni (G)$. This yields an infinite sequence $x_1 > x_2...$, a contradiction.
+
+$2 \leftrightarrow 3$ is a standard argument.
+
+$3 \rightarrow 4$: Let $(x_i)$ be a sequence in $S$. We define a subsequence $x_{n_k}$ such that $x_{n_k} \leq x_{n_{k+1}} \forall k$, and there are infinitely many $n > n_k$ such that $x_n > x_{n_k}$. We let $n_1 = 1$. Inductively, suppose we have already defined $n_1...n_k$. Then the final segment $(x_n: n > n_k, x_n \geq x_{n_k})$ is finitely generated, so there is some $x_{n_{k+1}}$ such that for infinitely many $n>k$ with $x_n > x_{n_k}$ we have $x_n > x_{n_{k+1}}$.
+
+$4 \rightarrow 5$ is obvious, as is $5 \rightarrow 1$.
+
+====Corollary 4.3====
+\begin{enumerate}
+	\item If there exists an increasing surjection $S \twoheadrightarrow T$ and $S$ is noetherian, then $T$ is noetherian. (Use condition 5.)
+	\item If there exists a quasi-embedding $S \rightarrow T$ and $T$ is noetherian, then $S$ is noetherian.
+	\item If $S, T$ are noetherian, then so are $S \coprod T$ and $S \times T$. (For the product case, take an infinite sequence and apply condition 4 to each component.)
+\end{enumerate}
+
+In particular, $\mathbb{N}^m$ is noetherian ("Dickson's Lemma").
+====Theorem 4.4 (Higman)====
+If $S$ is noetherian, then $S^*$ is noetherian, (and then so is $S^\diamond$ by (4.3 (1))).
+
+'''Proof''' (Nash-Williams)
+
+Suppose $w_1, w_2...$ is a bad sequence for $\leq^*$. We may assume that each $w_n$ is of minimal length under the condition $w_n \ni (w_1...w_{n-1})$. Then $w_n \neq \epsilon$ (the empty word) for any $n$. So $w_n=s_{n}*u_{n}, s_n \in S, u_n  \in S^*$ (splitting off the first letter). Since S is noetherian, we can take an infinite subsequence $s_{n_1} \leq s_{n_2}...$ of $s_n$. By minimality, $w_1...w_{n_{1}-1}, u_{n_1}, u_{n_2}...$ is good. So $\exists i<j$ such that $u_{n_i} \leq^* u_{n_j}$. Then $s_{n_i}u_{n_i} \leq s_{n_j}u_{n_j}$, that is, $w_{n_i} \leq w_{n_j}$, contradiction.
+
+Remark: suppose $\phi: S \rightarrow T$ is a ''strictly'' increasing map of ordered sets, where $S$ is noetherian. Then $\phi$ has finite fibers.
+
+Application: Let $\Gamma=(\Gamma, \leq, +)$ be a totally ordered abelian group.
+
+====Corollary 4.5====
+Let $A, B$ be subsets of $\Gamma$ which are well-ordered. Then $A \cup B$ is well-ordered, and the set $A+B=\{\alpha + \beta | \alpha \in A, \beta \in B\}$ is well-ordered, and for every $\gamma \in A+B$, there are only finitely many $(\alpha, \beta) \in A \times B$ with $\gamma = \alpha + \beta$.
+
+See (4.3) (3) and take increasing maps from $A \times B \rightarrow (A+B)$.
+
+====Corollary 4.6====
+Let $A \subset \Gamma^{>0}$ be well-ordered. Then $<A>=\{\alpha_1+...\alpha_n: \alpha_i \in A\}$ is also well-ordered, and for each $\gamma \in <A>$ there are only finitely many $(n, \alpha_1...\alpha_n)$ with $n \in \mathbb{N}, \alpha_1...\alpha_n \in A$ such that $\gamma=\alpha_1+...\alpha_n$.
+
+'''Proof''':
+We have the map $A^\diamond \rightarrow <A>, \alpha_1...\alpha_n \rightarrow \alpha_1+...\alpha_n$, onto and str
