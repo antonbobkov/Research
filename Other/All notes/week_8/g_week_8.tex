@@ -79,8 +79,10 @@ $$f(0,T)=cT^d+\textrm{ terms of order larger than }d$$
 where $c\in K-\{0\}$.
 
 Writing $f=\sum_{i\in\mathbb{N}} f_i(X)T^i$, this is also equivalent to either of the following:
-* $f_0(0)=\cdots =f_{d-1}(0)=0$ and $f_d(0)\neq 0$,
-* $f_0,\ldots, f_{d-1}\in \mathfrak{o}$, $f_d\in \mathfrak{o}$, $f_d\in K[[X]]^\times$.
+\begin{enumerate}
+  \item  $f_0(0)=\cdots =f_{d-1}(0)=0$ and $f_d(0)\neq 0$,
+  \item  $f_0,\ldots, f_{d-1}\in \mathfrak{o}$, $f_d\in \mathfrak{o}$, $f_d\in K[[X]]^\times$.
+\end{enumerate}
 
 The reason for this definition is that there is a "Euclidean division" result which holds when dividing by regular power series.
 
@@ -94,9 +96,11 @@ We first reduce to the case $f=T^d+F$, where $F\in\mathfrak{o}[[T]]$. Here $\mat
 Now we prove uniqueness: if $g=Q_1f+R_1=Q_2f+R_2$ are both as in the conclusion of the theorem, then $qf=r$ where $q:=Q_1-Q_2$ and $r:=R_2-R_1$, so and $\rm{deg}_TR<d$. Suppose $q=\sum_i q_i T^i$. For each $i$, the coefficient of $T^{d+i}$ in $qf$ is 0 (since $qf=r$ has degree $<d$), which can be expressed as $0=q_if_d+\sum_{j<i}q_jf_{d+i-j}+\sum_{i<j\le i+d}q_jf_{d+i-j}$. Thus $q_i\in \mathfrak{o}$ for each $i$. Repeating this inductively, we see that each $q_i$ must be in $\mathfrak{o}^n$ for each $n\in \mathbb{N}$, so they must all be $0$. Hence $q=0$, and then $r=0$.
 
 Finally we show existence, the more interesting part of the proof. Define $K[[X]]$-linear maps $\tau,\lambda:K[[X,T]]\rightarrow K[[X,T]]$ and $\alpha:K[[X,T]]\rightarrow K[[X]][T]$ by 
-* $\tau(g):=\sum_i g_{i+d} T^i$ (the higher order part of $g$, divided out by $T^d$),
-* $\lambda(g):=-\tau(g)F$ (recalling that $F=f-T^d$ was the $\mathfrak{o}[[T]]$ part of $f$)
-* $\alpha(g):=g_0+g_1T+\cdots+g_{d-1}T^d$ (the lower degree terms of $g$).
+\begin{enumerate}
+  \item  $\tau(g):=\sum_i g_{i+d} T^i$ (the higher order part of $g$, divided out by $T^d$),
+  \item  $\lambda(g):=-\tau(g)F$ (recalling that $F=f-T^d$ was the $\mathfrak{o}[[T]]$ part of $f$)
+  \item  $\alpha(g):=g_0+g_1T+\cdots+g_{d-1}T^d$ (the lower degree terms of $g$).
+\end{enumerate}
 
 Notice that $g=\tau(g)T^d+\alpha(g)=\tau(g)f+\alpha(g)+\lambda(g)$. Informally, $\tau(g)$ is our first guess for the quotient part. Then $\alpha(g)$ collects the lower degree terms of the remainder, and $\lambda(g)$ is an extra part that we must work to refine. 
 
