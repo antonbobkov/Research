@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  17 DEC 2014 21:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  17 DEC 2014 21:56
 entering extended mode
 **Global.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\Global.tex"
@@ -146,14 +146,14 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
-) ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/week_2.aux")
+) ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/g_week_2.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/week_4.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/week_5.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/week_6.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/g_week_4.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/g_week_5.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/g_week_6.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/week_8.aux")
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/week_9.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/g_week_8.aux")
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/g_week_9.aux")
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
@@ -195,41 +195,282 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_2/g_week_2.tex" [7
 
 
-] [8] [9]) [10]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.tex") [11
+] [8] [9] [10]) [11]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_3/zach.tex") [12
 
 
 ]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/g_week_4.tex" [12
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_4/g_week_4.tex" [13
 
 
-] [13]) [14]
+] [14]) [15]
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_5/g_week_5.tex"
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ½ in font cmr10!
- [15
+ [16
 
 
-] [16]) [17]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/g_week_6.tex" [18
+] [17]) [18]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_6/g_week_6.tex"
+
+! LaTeX Error: \begin{align*} on input line 43 ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{itemize}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.45 	g(x) &
+            = \sum_{i < \alpha} g_i x^{a_i}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.45 	g(x) &= \sum
+                  _{i < \alpha} g_i x^{a_i}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
-] [19] [20] [21] [22] [23]) [24]
+! LaTeX Error: \begin{itemize} on input line 42 ended by \end{align*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.46 \end{align*}
+                  we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 	\left
+           | \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i}...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.51 \end{align*}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.51 \end{align*}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{align*}
+                 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{align*}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.51 \end{align*}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.51 \end{align*}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Too many }'s.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.51 \end{align*}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: \begin{document} ended by \end{align*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{align*}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.51 \end{align*}
+                 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.51 \end{align*}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
+[19
+
+
+] [20] [21] [22] [23] [24]) [25]
 ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_7/285D_notes_nov_17_18_21.tex"
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [25
+) [26
 
 
-] [26] [27] [28] [29]
+] [27] [28] [29] [30]
 
 LaTeX Warning: The counter will not be printed.
              The label is: $\bullet $ on input line 195.
 
-[30]) [31] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/g_week_8.tex" [32
+[31]) [32] ("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_8/g_week_8.tex" [33
 
 
 ]
@@ -237,12 +478,12 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 60.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [33]) [34]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/g_week_9.tex" [35
+) [34]) [35]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_9/g_week_9.tex" [36
 
 
-]) [36]
-("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.tex") [37
+]) [37]
+("C:\Users\Anton\SparkleShare\Research\Other\All notes\week_11/week_11.tex") [38
 
 
 ]
@@ -262,12 +503,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1566 strings out of 493922
+ 1560 strings out of 493922
  22910 string characters out of 3144898
- 78429 words of memory out of 3000000
+ 77429 words of memory out of 3000000
  4758 multiletter control sequences out of 15000+200000
  17909 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,733b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (37 pages, 218396 bytes).
+Output written on Global.dvi (38 pages, 222900 bytes).
