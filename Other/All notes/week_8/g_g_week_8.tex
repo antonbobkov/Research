@@ -100,12 +100,4 @@ Finally we show existence, the more interesting part of the proof. Define $K[[X]
 
 Notice that $g=\tau(g)T^d+\alpha(g)=\tau(g)f+\alpha(g)+\lambda(g)$. Informally, $\tau(g)$ is our first guess for the quotient part. Then $\alpha(g)$ collects the lower degree terms of the remainder, and $\lambda(g)$ is an extra part that we must work to refine. 
 
-We will do this by iterating the process above. For each $n$, applying the process above to $\lambda^n(g)$ we have $\lambda^n(g)=\tau(\lambda^n(g))f+\alpha(\lambda^n(g))+\lambda^{n+1}(g)$. (Let us denote this equation by $(\ast)_n$). If $g\in \mathfrak{o}^n[[T]]$, then $\tau(g),\alpha(g)\in\mathfrak{o}^n[[T]]$, and $\lambda(g)\in\mathfrak{o}^{n+1}[[T]]$, so the order always increases after applying $\lambda$ (this is a sign that we make some progress after applying $\lambda$). 
-
-Using $(\ast)_n$ to iterate the $\lambda$ away, we see that:
-$$g=\tau(g)f+\alpha(g)+\lambda(g)$$
-$$=\tau(g)f+\alpha(g)+\tau(\lambda(g))f+\alpha(\lambda(g))+\lambda^2(g)$$
-$$=\sum_n\tau(\lambda^n(g))f+\sum_n\alpha(\lambda^n(g)).$$
-
-We can take $Q:=\sum_n\tau(\lambda^n(g))$ and $R:=\sum_n\alpha(\lambda^n(g))$. These sums are defined since $\tau(\lambda^n(g))$ and $\alpha(\lambda^n(g))$ have order $n$.
-h
+We will do this b

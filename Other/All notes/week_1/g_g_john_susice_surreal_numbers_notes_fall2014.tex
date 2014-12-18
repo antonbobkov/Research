@@ -472,37 +472,4 @@ we can take $b_L = c$ and get $a + b > a + c$. Similarly, if
 $b <_s c$, then we can take $c_R = b$ and also get $a + b > a + c$. 
 Suppose neither $c <_s b$ nor $b <_s c$ and put 
 $d \coloneq b \wedge c$. Then $l(d) < l(b), l(c)$ and 
-$b > d > c$. Hence by $(*)$, $a + b > a + d > a + c$. 
-
-We may show $b + a > c + a$ similarly. 
-\end{proof}
-\begin{lem}[``Uniformity'' of the Definition of $a$ and $b$]
-	Let $a = \curly{L \vert R}$ and $a' = \curly{L' \vert R'}$. 
-	Then
-	\begin{align*}
-		a + a' = 
-		\left\{ (L + a') \cup (a' + L) \vert 
-		(R + a') \cup (a + R') \right\}
-	\end{align*}
-\end{lem}
-\begin{proof}
-	Let $a = \curly{L_a \vert R_a}$ be the canonical 
-	representation. By Corollary \ref{inverse_cofinality_theorem}
-	$(L, R)$ is cofinal in $(L_a, R_a)$ and $(L', R')$ is 
-	cofinal in $(L_{a'}, R_{a'})$. Hence 
-	\begin{align*}
-		\paren{(L + a') \cup (a + L'), (R+a') \cup (a + R')}
-	\end{align*}
-	is cofinal in 
-	\begin{align*}
-		\paren{(L_a + a') \cup (a + L_{a'}), (R_a + a') \cup 
-		(a + R_{a'})}
-	\end{align*}
-	Moreover, 
-	\begin{align*}
-		(L + a') \cup (a + L') < a + a' < 
-		(R + a') \cup (a + R')
-	\end{align*}
-	Now use Theorem \ref{cofinality_theorem} to conclude the 
-	proof. 
-\end{proof}
+$b > d > c$. Hence by $(*)$, $a + b > a + d > a + c
