@@ -39,11 +39,12 @@ When $\alpha$ is a limit ordinal:
 \end{align*}
 Simultaneously with this definition we prove the following statements by induction:
 
- '''Inequality:''' For \begin{align*}
+* '''Inequality:''' For \begin{align*}
+	f(x) &= \sum_{i < \alpha} f_i x^{a_i} \\
 	g(x) &= \sum_{i < \alpha} g_i x^{a_i}
 \end{align*} we have $f(x) > g(x) \Rightarrow f(\w) > g(\w)$
- '''Inequality:''' For \begin{align*}
- '''Tail property:''' if $\gamma < \kappa < \alpha$
+* '''Tail property:''' if $\gamma < \kappa < \alpha$
+\begin{align*}
 	\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
 \end{align*}
 
@@ -283,10 +284,9 @@ We set $\lt(a) = r\w^b$
 Towards a contradiction assume that $a$ is not in the image of $f(x) \mapsto f(\w)$.
 We shall inductively define a sequence $(a_i, f_i)_{i \in \On}$ where 
 
-\begin{enumerate}
-  \item $a_i \in \No$ is strictly decreasing; $f_i \in \R - \{0\}$
-  \item $f_\alpha \w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha} f_i\w^{a_i}}$ for all $\alpha \in \On$
-\end{enumerate}
+*$a_i \in \No$ is strictly decreasing; $f_i \in \R - \{0\}$
+*$f_\alpha \w^{a_\alpha} = \lt\paren{a - \sum_{i < \alpha} f_i\w^{a_i}}$ for all $\alpha \in \On$
+
 ''Case 1'': $\alpha = \beta + 1$
 
 Take $(a_\alpha, f_\alpha)$ so that
