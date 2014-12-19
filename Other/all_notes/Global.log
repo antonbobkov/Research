@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 11:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 11:37
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -136,17 +136,7 @@ Package amsthm Warning: Unknown theoremstyle `empty' on input line 66.
 
 \c@namedtheorem=\count105
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-) (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
@@ -314,17 +304,14 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 1568 strings out of 493922
- 23009 string characters out of 3144898
- 77928 words of memory out of 3000000
- 4765 multiletter control sequences out of 15000+200000
+ 1557 strings out of 493922
+ 22540 string characters out of 3144898
+ 77503 words of memory out of 3000000
+ 4759 multiletter control sequences out of 15000+200000
  16097 words of font info for 63 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,15n,26p,733b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (39 pages, 226112 bytes).
+Output written on Global.dvi (39 pages, 226044 bytes).
