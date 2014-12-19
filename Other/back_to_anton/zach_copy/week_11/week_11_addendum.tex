@@ -1,0 +1,58 @@
+\begin{definition}
+\[ G \sim H \iff G - H = 0.\]
+\[ G > H \sim G - H > 0.\]
+\end{definition}
+
+\begin{lemma}
+${\sim}$ is an equivalence relation.
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item \[ G-H\sim 0 \iff -(G-H)\sim0 \iff -G+H\sim 0 \iff H-G\sim 0,\]
+so $G\sim H \iff H\sim G$.
+\item $G\sim G$ because $G-G\sim 0$.
+\item If $G\sim G'$ and $G'\sim H$ then $G\sim H$:
+\[ G\sim G'\sim 0 \text{ and } G'-H\sim 0 \Rightarrow G-G'+G'-H\sim 0 \Rightarrow G-H\sim 0.\]
+\end{enumerate}
+\end{proof}
+
+\begin{lemma}
+${<}$ is an order (i.e. a transitive antisymmetric relation).
+\end{lemma}
+\begin{proof}
+Similar to previous lemma.
+\end{proof}
+
+We want to show that the class of games modulo ${\sim}$ forms a partially ordered abelian group with identity $0$ (the ${\sim}$-class of $\{\emptyset | \emptyset\}$).
+That is, we want to show that if $G\sim G'$ and $H\sim H'$ then
+\begin{itemize}
+\item $G+H \sim G'+H'$
+\item $-G\sim -G'$
+\item $G>H \iff G'>H'$.
+\end{itemize}
+
+\begin{theorem}
+$\No$ forms an ordered abelian subgroup of the partially ordered abelian group $G$ of games.
+\end{theorem}
+
+\begin{proof}
+We define a map $\pi\colon\No\to G$ and prove that it's an injective group homomorphism:
+\begin{align*}
+\pi \colon& 0\mapsto 0 \\
+\pi\colon& \{L | R\} \mapsto \{\pi(L) | \pi(R) \}
+\end{align*}
+We leave it as an exercise to verify that $\pi$ is well-defined.
+
+It's clear from the definitions of $+$ for surreal numbers and games that $\pi$ is morphism of abelian groups.
+
+We claim that $a=0 \iff \pi(a)=0$ and $a<b\iff \pi(a)<\pi(b)$. The proof is by induction on $a$.
+
+Suppose that $\pi(a) = 0$, so $\{ \pi(a_L) | \pi(a_R) \} = 0$. So $\pi(a_L) < 0 < \pi(a_R)$ for all $a_L$ and $a_R$, and by
+induction $a_L < 0 < a_R$. So $a = \{ a_L | a_R \} = 0$.
+
+Suppose $\pi(a)<\pi(b)$, i.e., $\pi(b)-\pi(a)>0$. Recall
+\[ \pi(a)-\pi(b) = \{ \pi(b)_L - \pi(a), \, \pi(b) - \pi(a)_L \,|\, \pi(b)_R - \pi(a),\, \pi(b) - \pi(a)_R \}, \]
+using $\pi(b)_L = \pi(b_L)$.
+\[ \pi(a) - \pi(b) = \{ \pi(b_L-a),\pi(b-a_R) \,|\, \pi(b_R-a),\pi(b-a_L)\}>0.\]
+For all $b_R,a_L$, $b_R-a>0$ and $b-a_L>0$. Since $a_L<b$ and $a<b_R$, we conclude that $a<b$.
+\end{proof}

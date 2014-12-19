@@ -1,0 +1,287 @@
+\WikiLevelTwo{ Week 2 }
+
+(Notes by John Lensmire)
+
+\WikiLevelThree{ Monday 10-13-2014 }
+
+Let $a,b\in \mathbf{No}$. Recall that $a + b = \{a_L + b, a + b_L | a_R + b, a + b_R \}$.
+
+\begin{theorem} %==== Theorem 2.5 ====
+$(\mathbf{No},+,<)$ is an ordered abelian group with $0 = () = \{\emptyset, \emptyset \}$ and $-a$ is obtained by reversing all signs in $a$.
+\end{theorem}
+
+%\WikiBold{Proof:}
+
+\begin{proof}
+We have already proven that $\leq$ is translation invariant.
+
+Commutativity is clear from the symmetric nature of the definition.
+
+We show by induction on $l(a)$ that $a+0 = a$. The base case is clear, and
+\begin{align*}
+a + 0 &= \{a_L + 0, a + 0_L | a_R + 0, a + 0_R \} \\
+&= \{a_L + 0 | a_R + 0\} \ (\text{as } 0_L = 0_R = \emptyset) \\
+&= \{a_L | a_R\} \ (\text{by induction}) \\
+&= a
+\end{align*}
+
+We next show the associative law by induction on $l(a)\oplus l(b)\oplus l(c)$.
+We have
+\begin{align*}
+(a+b)+c &= \{(a+b)_L + c, (a+b) + c_L | (a+b)_R + c, (a+b) + c_R \} \\
+&= \{(a_L+b) + c, (a+b_L) + c, (a+b) + c_L | (a_R+b) + c, (a+b_R) + c, (a+b) + c_R\}
+\end{align*}
+where the second equality holds because of uniformity.
+An identical calculation shows:
+\[
+a+(b+c) = \{a_L+ (b + c), a+ (b_L + c), a+ (b + c_L) | a_R+ (b + c), a+ (b_R + c), a+ (b + c_R)\}
+\]
+and hence $(a+b)+c = a+(b+c)$ holds by induction.
+
+To show $a + (-a) = 0$ first note:
+\begin{enumerate}
+  \item  $b <_s a \Rightarrow -b <_s -a$
+  \item  $b < a \Rightarrow -b > -a$
+\end{enumerate}
+
+Hence, $-a = \{-a_R | -a_L\}$. Thus,
+\[
+a + (-a) = \{a_L + (-a), a + (-a_R) | a_R + (-a), a + (-a_L) \}
+\]
+By the induction hypothesis and the fact that $+$ is increasing we have the following:
+\begin{enumerate}
+  \item  $a_L + (-a) < a_L + (-a_L) = 0$
+  \item  $a + (-a_R) < a_R + (-a_R) = 0$
+  \item  $a_R + (-a) > a_R + (-a_R) = 0$
+  \item  $a + (-a_L) > a_L + (-a_L) = 0$
+\end{enumerate}
+Thus, $0$ is a realization of the cut. Since $0$ has minimal length, we have $a+(-a) = 0$ as needed.
+\end{proof}
+
+\begin{definition} %==== Definition 2.6 ====
+For $a,b\in \mathbf{No}$ set
+\[
+a\cdot b = \{a_L\cdot b + a\cdot b_L - a_L\cdot b_L, a_R\cdot b + a\cdot b_R - a_R\cdot b_R | a_L\cdot b + a\cdot b_R - a_L\cdot b_R, a_R\cdot b + a\cdot b_L - a_R\cdot b_L \}
+\]
+\end{definition}
+
+As motivation for this definition, note that in any ordered field: if $a'<a,b'<b$ then $(a-a')(b-b')>0$ so in particular $a'b + ab' - a'b' < ab$.
+
+\begin{lemma} % ==== Lemma 2.7 ==== 
+Suppose for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) < \gamma$ we have defined $a\cdot b$ so that (2.6) holds, and for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $<\gamma$ $(*)$ holds, where
+$(*): a>b, c>d \Rightarrow ac-bc > ad-bd.$
+Then: (2.6) holds for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) \leq \gamma$ and $(*)$ holds for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $\leq \gamma$.
+ \end{lemma}
+
+%\WikiBold{Proof:}
+\begin{proof}
+Let $P(a,b,c,d)\Leftrightarrow ac - bc > ad - bd.$ Because the surreal numbers form an ordered abelian group, $P$ is  "transitive in the last two variables" (i.e. $P(a,b,c,d) \ \&\ P(a,b,d,e) \Rightarrow P(a,b,c,e)$) and similarly in the first two variables.
+
+Fix $a,b\in \mathbf{No}$. For $a' <_s a, b' <_s b$ we define $f(a',b') = a'b + ab' - a'b'$.
+
+Claim:
+\begin{enumerate}
+	\item  $a' < a \Rightarrow b' \mapsto f(a',b')$ is an increasing function
+	\item  $a' > a \Rightarrow b' \mapsto f(a',b')$ is a decreasing function
+	\item  $b' < b \Rightarrow a' \mapsto f(a',b')$ is an increasing function
+	\item  $b' > b \Rightarrow a' \mapsto f(a',b')$ is a decreasing function
+\end{enumerate}
+
+We prove 1 (the rest are left as an exercise). Let $b'_1,b'_2 <_s b$ and $b'_1 < b'_2$. Then
+\begin{align*}
+f(a',b'_2) > f(a',b'_1) &\Leftrightarrow (a'b + ab'_2 - a'b'_2) > (a'b + ab'_1 - a'b'_1)  \\
+&\Leftrightarrow (ab'_2 - a'b'_2) > (ab'_1 - a'b'_1) \\
+&\Leftrightarrow P(a,a',b'_2,b'_1)
+\end{align*}
+and $P(a,a',b'_2,b'_1)$ holds by induction, proving 1.
+
+1-4 in the claim give us respectively:
+\begin{enumerate}
+  \item  $f(a_L, b_L) < f(a_L, b_R)$
+  \item  $f(a_R, b_R) < f(a_R, b_L)$
+  \item  $f(a_L, b_L) < f(a_R, b_R)$
+  \item  $f(a_R, b_R) < f(a_L, b_L)$
+\end{enumerate}
+
+These facts exactly give us that $a\cdot b$ is well-defined.
+
+We are left to show that $(*)$ continues to hold. We'll continue this on Wednesday.
+\end{proof}
+
+\WikiLevelThree{ Wednesday 10-15-2014 }
+
+Recall the definition of multiplication from last time:
+\[
+a\cdot b = \{a_L\cdot b + a\cdot b_L - a_L\cdot b_L, a_R\cdot b + a\cdot b_R - a_R\cdot b_R | a_L\cdot b + a\cdot b_R - a_L\cdot b_R, a_R\cdot b + a\cdot b_L - a_R\cdot b_L \}
+\]
+and the statement $(*): a>b, c>d \Rightarrow ac-bc > ad-bd$. We'll also continue write $P(a,b,c,d)\Leftrightarrow ac - bc > ad - bd$.
+
+Note we can rephrase the defining inequalities for $a\cdot b$ as
+\[
+(\Delta): P(a,a_L,b,b_L), P(a_R,a,b_R,b), P(a,a_L,b_R,b), P(a_R,a,b,b_L)
+\]
+
+To finish the proof of Lemma 2.7, suppose $a>b>c>d$ (of suitable lengths). We want to show $P(a,b,c,d)$.
+
+Case 1:  Suppose in each pair $\{a,b\}, \{c,d\}$ one of the elements is an initial segment of the other. Then note we are done by $(\Delta)$.
+
+Case 2:  Suppose $a \not<_s b, b\not<_s a$ but $c <_s d$ or $d <_s c$. Then we have that $a > a\wedge b > b$ and by Case 1, $P(a,a\wedge b, c, d)$ and $P(a\wedge b, b, c, d)$. This implies (by transitivity of the first two variables) $P(a,b,c,d)$.
+
+Case 3:  Suppose $c \not<_s d, d\not<_s c$. Then by Case 1 and 2, $P(a,b,c,c\wedge d)$ and $P(a,b,c\wedge d, d)$, so (transitivity of the last two variables) $P(a,b,c,d)$ as needed. This completes the proof of Lemma 2.7. \qed
+
+\begin{lemma} % ==== Lemma 2.8 ==== 
+The uniformity property holds for multiplication.
+ \end{lemma}
+
+%\WikiBold{Proof:}
+\begin{proof}
+Fix $a,b\in \mathbf{No}$. For any $a',b'\in \mathbf{No}$ we define (as last time) $f(a',b') = a'b + ab' - a'b'$. Using Lemma 2.7, we can extend the Claim from last time to hold in general:
+
+Claim:
+\begin{enumerate}
+\item $a' < a \Rightarrow f(a',-)$ is an increasing function
+\item $a' > a \Rightarrow f(a',-)$ is a decreasing function
+\item $b' < b \Rightarrow f(-,b')$ is an increasing function
+\item $b' > b \Rightarrow f(-,b')$ is a decreasing function
+\end{enumerate}
+
+Let $a = \{L|R\}, b = \{L'|R'\}$ be any representations of $a,b$. We want to verify the hypothesis of the Cofinality Theorem 1.10.
+
+Let $a_l, b_l$ range over $L,L'$. As an example, note
+\[
+f(a_l, b_l) < ab \Leftrightarrow 0 < ab - (a_lb + ab_l - a_lb_l) = (ab - a_lb) - (ab_l - a_lb_l)
+\Leftrightarrow P(a,a_l,b,b_l)
+\]
+which holds as $a_l<a, b_l<b$. Checking the other inequalities in a similar manner gives us the first assumption of Theorem 1.10.
+
+To get the second assumption (the cofinality hypothesis), let e.g. $f(a_L,b_L)$ in the left side of the representation of $ab$. By inverse cofinality, we get $a_l\in L, b_l\in L'$ with $a_l \geq a_L, b_l\geq b_L$.
+Then (using (3) and (1) respectively from the above claim): $f(a_l,b_l) \geq f(a_L,b_l)\geq f(a_L,b_L)$ as needed. Again, the other cases are similar.
+\end{proof}
+
+Therefore, both assumptions of Theorem 1.10 hold, giving us the uniformity property for multiplication as needed.
+
+\begin{proposition} % ==== Proposition 2.9 ==== 
+ \end{proposition}
+
+$(\mathbf{No},+,\cdot,\leq)$ is an ordered commutative ring, with multiplicative identity $1 = (+) = \{0 | \emptyset \}$.
+
+%\WikiBold{Proof:}
+
+\begin{proof}
+Commutativity is clear by the symmetry in the definition.
+
+We show the distributative law by induction on $l(a) \oplus l(b) \oplus l(c)$ that $(a+b)\cdot c = a\cdot c + b\cdot c$.
+
+In general, the typical element in the cut for $(a+b)\cdot c$ is $(a+b)_* c + (a+b)_* c_* - (a+b)_*c_*$ (where $(a+b)_*$ is either $(a+b)_L$ or $(a+b)_R$ and similar for $c_*$). This element is less than $(a+b)c$ if and only if there are $0$ or $4$ $*'s$ equal to $R$.
+
+By uniformity, we can replace $(a+b)_*$ with $a_*+b,a+b_*$, so the typical terms become (using induction):
+\[
+(a_*+b)c + (a+b)c_* - (a_*+b)c_* = a_*c + bc + ac_* - a_*c_*
+\]
+or similarly
+\[
+(a+b_*)c + (a+b)c_* - (a+b_*)c_* = ac + b_*c + bc_* - b_*c_*
+\]
+On the other hand, the typical elements of $ac + bc$ are
+\[
+(ac)_* + bc = a_*c + ac_* - a_*c_* + bc \text{ or } ac + (bc)_* = ac + b_*c + bc_* - b_*c_*
+\]
+(note the same parity rule for $*$'s applies here.) A quick check shows that this matches a typical element of $(a+b)\cdot c$ we have $(a+b)c = ac+bc$ as needed.
+
+Associativity is proven using a very similar argument (and is left as an exercise).
+
+We are left to check the identity element. Note $a\cdot 0 = a\cdot (0+0) = a\cdot 0 + a\cdot 0$ which implies $a\cdot 0 = 0$.
+
+By definition:
+\[
+a\cdot 1 = \{a_L\cdot 1 + a\cdot 1_L - a_L\cdot 1_L, a_R\cdot 1 + a\cdot 1_R - a_R\cdot 1_R | a_L\cdot 1 + a \cdot 1_R - a_L\cdot 1_R, a_R \cdot 1 + a\cdot 1_L - a_R\cdot 1_L\}
+\]
+Using the fact that $1_R = \emptyset$ and multiplication by $0 = 1_L$ is zero, we have
+\[
+a\cdot 1 = \{a_L\cdot 1 | a_R \cdot 1\} = \{a_L | a_R\} = a
+\]
+by induction. This completes the proof.
+\end{proof}
+
+Our next goal is to define $1/a$ for $a>0$, i.e. find a solution to $a\cdot x = 1$.
+Note, the naive idea is to set $x = \{1/a_R | 1/a_L, (a_L\neq 0)\}$ but this does not work in general.
+
+\WikiLevelThree{ Friday 10-17-2014 }
+
+\begin{definition} % ==== Definition of Inverses ==== 
+
+Let $a\in \mathbf{No}$ with $a>0$. Our aim is to define $1/a$. Let $a = \{L|R\}$ the canonical representation of $a$. Observe that $a'\geq 0$ for all $a'\in L$ (as $a' <_s a$).
+
+For every finite sequence $(a_1,\ldots,a_n)\in (L\cup R)\setminus \{0\}$ we define $\langle a_1,\ldots, a_n\rangle \in \mathbf{No}$ by induction on $n$. Set $\langle \ \rangle = 0$ and inductively set $\langle a_1,\ldots, a_n, a_{n+1}\rangle = \langle a_1,\ldots, a_n \rangle \circ a_{n+1}$.
+Here, for arbitrary $b\in \mathbf{No}$ and $a'\in (L\cup R)\setminus \{0\}$ let $b\circ a'$ be the unique solution to $(a-a')b + a'x = 1$, i.e.
+\[
+b\circ a' = [1-(a-a')b]/a'.
+\]
+This works as inductively we'll have already defined $1/a'$.
+ \end{definition}
+
+For example, $\langle a_1 \rangle = \langle \ \rangle \circ a_1 = 0 \circ a_1 = 1/a_1$.
+
+Now set (as candidates for defining $1/a$)
+\begin{align*}
+L^{-1} &= \{ \langle a_1,\ldots, a_n \rangle | \text{ the number of } a_i \text{ in }L \text{ is even} \} \\
+R^{-1} &= \{ \langle a_1,\ldots, a_n \rangle | \text{ the number of } a_i \text{ in }L \text{ is odd} \}
+\end{align*}
+Note that this definition is an expansion of the naive idea presented at the end of last lecture.
+
+We first show
+\[
+(*) x \in L^{-1} \Rightarrow ax < 1 \text{ and } x\in R^{-1} \Rightarrow ax > 1.
+\]
+by induction on $n$. In particular, this yields that $L^{-1} < R^{-1}$.
+
+The base case is clear, as $\langle \ \rangle = 0\in L^{-1}$ and $a\cdot 0 = 0 < 1$.
+
+For the induction, suppose $b\in L^{-1}\cup R^{-1}$ satisfying $(*)$ and $0\neq a' <_s a$. We show that $x = b\circ a'$ also satisfies $(*)$.
+
+Claim:
+\begin{enumerate}
+\item $x > b \Leftrightarrow 1 > ab$
+\item $ax = 1 + (a-a')(x-b)$.
+\end{enumerate}
+By definition, $x$ is the solution to $(a-a')b + a'x = 1$ and $ab = ab - a'b + a'b = (a-a')b + a'b$. These two equations yield $ab = 1 + a'(b-x)$. Both parts of the claim follow.
+
+Now suppose, $b\in L^{-1}, a'\in L$. Then $x\in R^{-1}$ so want to check $ax > 1$.
+$b\in L^{-1}$ and $(*)$ implies that $ab < 1$ and hence Claim 1 tells us that $x > b$. Now by Claim 2, $ax = 1 + (a-a')(x-b)$ hence $ax > 1$ (because $a>a', x>b$) as needed.
+
+The other cases are similar, so $(*)$ holds in general.
+
+Thus, we can set $c = \{L^{-1} | R^{-1} \}$. We claim that $1/a = c$, that is, $ac = 1 = \{0 | \emptyset\}$.
+
+The typical element used to define $ac$ is $a'c + ac' - a'c'$ with $a'\in L\cup R, c'\in L^{-1}\cup R^{-1}$.
+
+We first show $\{\text{ lower elements for }ac\} < 1 < \{(\text{ upper elements for }ac \}$.
+
+Suppose that $a' = 0$, then we get an element $a'c + ac' - a'c' = ac'$ which is an upper element for $ac$ if and only if $c'\in R^{-1}$ by definition. However, by $(*)$ if $c'\in R^{-1}$ then $ac' = a'c + ac' - a'c' > 1$ (as needed since an upper element), else $c'\in L^{-1}$ and then $ac' = a'c + ac' - a'c' < 1$ (as needed since a lower element).
+
+If $a'\neq 0$, then $x = c'\circ a'$ is defined, lies in $L^{-1}\cup R^{-1}$, and obeys $(\Delta): (a-a')c' + a'x = 1$. Hence,
+\begin{align*}
+a'c + ac' - a'c' \text{ is a lower element for } ac &\Leftrightarrow a' \ \&\ c' \text{ are on the same side of } a \ \&\ \text{(respectively) } c \\
+&\Leftrightarrow x\in R^{-1} \Leftrightarrow x > c \\
+&\Leftrightarrow \text{a typical element } a'c + ac' - a'c' = (a-a')c' + a'c < 1
+\end{align*}
+where the last equivalence holds by $(\Delta)$ and $a'>0$.
+
+Since $1$ satisfies the cut for $ac$ (and $0$ does not) it is the minimial realization, so $ac = 1$ as needed.
+
+We have thus shown:
+
+\begin{theorem} % ==== Theorem 2.10 (Conway) ==== 
+$(\mathbf{No}, +, \cdot, \leq)$ is an ordered field.
+ \end{theorem}
+
+We'll now begin to focus on how to view real numbers and ordinals as surreal numbers.
+
+We have $0 = ()$ the additive identity of $\mathbf{No}$ and $1 = (+)$ the multiplicative identity of $\mathbf{No}$.
+
+We also have an embedding of ordered rings $\mathbb{Z} \hookrightarrow \mathbf{No}$ where $k\mapsto k\cdot 1$ (where $k\cdot 1$ is $k$ additions of $+1$ or $-1$).
+
+\begin{lemma} % ==== Lemma 3.1 ==== 
+ For $n\in \mathbb{N}$, $n\cdot 1 = (+\cdots +)$ (i.e. $n$ $+$'s).
+\end{lemma}
+
