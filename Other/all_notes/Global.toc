@@ -1,4 +1,5 @@
 \contentsline {section}{\numberline {1}Basic Definitions and Existence Theorem}{2}
 \contentsline {section}{\numberline {2}Arithmetic Operators}{5}
 \contentsline {section}{\numberline {3}Real Numbers}{12}
-\contentsline {section}{\numberline {4}The Surreals as a Real Closed Field}{35}
+\contentsline {section}{\numberline {4}Combinatorics of Ordered Sets}{19}
+\contentsline {section}{\numberline {5}The Surreals as a Real Closed Field}{35}
