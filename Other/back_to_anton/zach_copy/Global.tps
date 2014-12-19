@@ -18,7 +18,7 @@ Document=Global.tex
 
 [Frame0_View0,0]
 TopLine=68
-Cursor=3141
+Cursor=3130
 
 [SessionInfo]
 FrameCount=1
