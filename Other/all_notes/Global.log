@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 11:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 11:40
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -136,7 +136,17 @@ Package amsthm Warning: Unknown theoremstyle `empty' on input line 66.
 
 \c@namedtheorem=\count105
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+) (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
@@ -167,46 +177,25 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 92.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+No file Global.toc.
+\tf@toc=\write3
+[1
+
+] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex [2
 
 ]
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex [2
-
-] [3]
+[3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 268.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 276.
- [4]
-
-LaTeX Warning: Reference `lemma_on_length_of_cuts' on page 5 undefined on input line 307.
-
-
-LaTeX Warning: Reference `cofinality_theorem' on page 5 undefined on input line 311.
-
-[5]
-
-LaTeX Warning: Reference `defn_of_surreal_sum' on page 6 undefined on input line 440.
-
-
-LaTeX Warning: Reference `defn_of_surreal_sum' on page 6 undefined on input line 453.
-
-
-LaTeX Warning: Reference `defn_of_surreal_sum' on page 6 undefined on input line 463.
-
-
-LaTeX Warning: Reference `inverse_cofinality_theorem' on page 6 undefined on input line 490.
-
-[6]
-
-LaTeX Warning: Reference `cofinality_theorem' on page 7 undefined on input line 506.
-
-) [7] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.tex [8
+ [4] [5] [6]) [7]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.tex [8
 
 
 ] [9] [10] [11]) [12]
@@ -335,16 +324,16 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1579 strings out of 493922
- 23289 string characters out of 3144898
- 77503 words of memory out of 3000000
- 4772 multiletter control sequences out of 15000+200000
+ 1583 strings out of 493922
+ 23557 string characters out of 3144898
+ 77934 words of memory out of 3000000
+ 4773 multiletter control sequences out of 15000+200000
  17909 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,733b,320s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (45 pages, 260516 bytes).
+Output written on Global.dvi (45 pages, 260484 bytes).
