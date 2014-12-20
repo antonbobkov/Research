@@ -30,7 +30,8 @@ For all $\alpha, \beta \in \mathbf{On}, a_\alpha + a_\beta = a_{\alpha \oplus \b
 
 By induction, $a_\alpha + a_\beta =$ sup $\{a_\alpha + a_{\beta'}, a_{\alpha'} + a_\beta | \alpha' \leq \alpha, \beta' \leq \beta \}  =$ by induction, sup $\{a_{\alpha' \oplus \beta}, a_{\alpha \oplus \beta'} | \alpha' \leq \alpha, \beta' \leq \beta \} = a_{\alpha \oplus \beta}$, stated earlier.
 
-For multiplication, using the result for addition, and the distributive laws for $+, \centerdot,$ on $\mathbf{No}$ and $\oplus, \otimes$ on $\mathbf{On}$, we reduce to the case $\alpha = \omega^r, \beta= \omega^s, r, s \in \mathbf{On}$. By definition, $a_\alpha * a_\beta = \{a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} : \delta \leq \omega^s, \gamma \leq \omega^r | \emptyset \}.$ In particular, $a_\alpha * a_\beta \in \mathbf{On}$ by (1.8). By inductive hypothesis and the first part, $a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} \leq a_{(\omega^r \otimes \delta) \oplus (\delta \otimes \omega^s)} < a_{\omega^{r \oplus s}}.$
+For multiplication, using the result for addition, and the distributive laws for $+, \centerdot,$ on $\mathbf{No}$ and $\oplus, \otimes$ on $\mathbf{On}$, we reduce to the case $\alpha = \omega^r, \beta= \omega^s, r, s \in \mathbf{On}$. By definition, $a_\alpha * a_\beta = \{a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} : \delta \leq \omega^s, \gamma \leq \omega^r | \emptyset \}.$ %In particular, $a_\alpha * a_\beta \in \mathbf{On}$ by (1.8). ???
+By inductive hypothesis and the first part, $a_{\omega^r} * a_\delta + a_{\gamma}*a_{\omega^s} - a_{\delta}*a_{\gamma} \leq a_{(\omega^r \otimes \delta) \oplus (\delta \otimes \omega^s)} < a_{\omega^{r \oplus s}}.$
 
 And $l(a_\alpha * a_\beta) \leq l(\omega^{r \oplus s}) = \omega^{r \oplus s}$.
 
