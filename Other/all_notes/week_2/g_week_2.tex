@@ -1,8 +1,7 @@
-\WikiLevelTwo{ Week 2 }
+\NotesBy{Notes by John Lensmire}
+\Week{ Week 2 }
 
-(Notes by John Lensmire)
-
-\WikiLevelThree{ Monday 10-13-2014 }
+\Day{ Monday 10-13-2014 }
 
 Let $a,b\in \mathbf{No}$. Recall that $a + b = \{a_L + b, a + b_L | a_R + b, a + b_R \}$.
 
@@ -58,7 +57,7 @@ By the induction hypothesis and the fact that $+$ is increasing we have the foll
 Thus, $0$ is a realization of the cut. Since $0$ has minimal length, we have $a+(-a) = 0$ as needed.
 \end{proof}
 
-\begin{definition} %==== Definition 2.6 ====
+\begin{definition} \label{d26}%==== Definition 2.6 ====
 For $a,b\in \mathbf{No}$ set
 \[
 a\cdot b = \{a_L\cdot b + a\cdot b_L - a_L\cdot b_L, a_R\cdot b + a\cdot b_R - a_R\cdot b_R | a_L\cdot b + a\cdot b_R - a_L\cdot b_R, a_R\cdot b + a\cdot b_L - a_R\cdot b_L \}
@@ -67,10 +66,10 @@ a\cdot b = \{a_L\cdot b + a\cdot b_L - a_L\cdot b_L, a_R\cdot b + a\cdot b_R - a
 
 As motivation for this definition, note that in any ordered field: if $a'<a,b'<b$ then $(a-a')(b-b')>0$ so in particular $a'b + ab' - a'b' < ab$.
 
-\begin{lemma} % ==== Lemma 2.7 ==== 
-Suppose for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) < \gamma$ we have defined $a\cdot b$ so that (2.6) holds, and for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $<\gamma$ $(*)$ holds, where
+\begin{lemma} \label{l27} % ==== Lemma 2.7 ==== 
+Suppose for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) < \gamma$ we have defined $a\cdot b$ so that (\ref{d26}) holds, and for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $<\gamma$ $(*)$ holds, where
 $(*): a>b, c>d \Rightarrow ac-bc > ad-bd.$
-Then: (2.6) holds for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) \leq \gamma$ and $(*)$ holds for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $\leq \gamma$.
+Then: (\ref{d26}) holds for all $a,b\in \mathbf{No}$ with $l(a)\oplus l(b) \leq \gamma$ and $(*)$ holds for all $a,b,c,d\in \mathbf{No}$ with the natural sum of the lengths of each factor is $\leq \gamma$.
  \end{lemma}
 
 %\WikiBold{Proof:}
@@ -108,7 +107,7 @@ These facts exactly give us that $a\cdot b$ is well-defined.
 We are left to show that $(*)$ continues to hold. We'll continue this on Wednesday.
 \end{proof}
 
-\WikiLevelThree{ Wednesday 10-15-2014 }
+\Day{ Wednesday 10-15-2014 }
 
 Recall the definition of multiplication from last time:
 \[
@@ -121,13 +120,13 @@ Note we can rephrase the defining inequalities for $a\cdot b$ as
 (\Delta): P(a,a_L,b,b_L), P(a_R,a,b_R,b), P(a,a_L,b_R,b), P(a_R,a,b,b_L)
 \]
 
-To finish the proof of Lemma 2.7, suppose $a>b>c>d$ (of suitable lengths). We want to show $P(a,b,c,d)$.
+To finish the proof of Lemma \ref{l27}, suppose $a>b>c>d$ (of suitable lengths). We want to show $P(a,b,c,d)$.
 
 Case 1:  Suppose in each pair $\{a,b\}, \{c,d\}$ one of the elements is an initial segment of the other. Then note we are done by $(\Delta)$.
 
 Case 2:  Suppose $a \not<_s b, b\not<_s a$ but $c <_s d$ or $d <_s c$. Then we have that $a > a\wedge b > b$ and by Case 1, $P(a,a\wedge b, c, d)$ and $P(a\wedge b, b, c, d)$. This implies (by transitivity of the first two variables) $P(a,b,c,d)$.
 
-Case 3:  Suppose $c \not<_s d, d\not<_s c$. Then by Case 1 and 2, $P(a,b,c,c\wedge d)$ and $P(a,b,c\wedge d, d)$, so (transitivity of the last two variables) $P(a,b,c,d)$ as needed. This completes the proof of Lemma 2.7. \qed
+Case 3:  Suppose $c \not<_s d, d\not<_s c$. Then by Case 1 and 2, $P(a,b,c,c\wedge d)$ and $P(a,b,c\wedge d, d)$, so (transitivity of the last two variables) $P(a,b,c,d)$ as needed. This completes the proof of \ref{l27}. \qed
 
 \begin{lemma} % ==== Lemma 2.8 ==== 
 The uniformity property holds for multiplication.
@@ -135,7 +134,7 @@ The uniformity property holds for multiplication.
 
 %\WikiBold{Proof:}
 \begin{proof}
-Fix $a,b\in \mathbf{No}$. For any $a',b'\in \mathbf{No}$ we define (as last time) $f(a',b') = a'b + ab' - a'b'$. Using Lemma 2.7, we can extend the Claim from last time to hold in general:
+Fix $a,b\in \mathbf{No}$. For any $a',b'\in \mathbf{No}$ we define (as last time) $f(a',b') = a'b + ab' - a'b'$. Using Lemma \ref{l27}, we can extend the Claim from last time to hold in general:
 
 Claim:
 \begin{enumerate}
@@ -145,20 +144,20 @@ Claim:
 \item $b' > b \Rightarrow f(-,b')$ is a decreasing function
 \end{enumerate}
 
-Let $a = \{L|R\}, b = \{L'|R'\}$ be any representations of $a,b$. We want to verify the hypothesis of the Cofinality Theorem 1.10.
+Let $a = \{L|R\}, b = \{L'|R'\}$ be any representations of $a,b$. We want to verify the hypothesis of the Cofinality Theorem \ref{cofinality_theorem}.
 
 Let $a_l, b_l$ range over $L,L'$. As an example, note
 \[
 f(a_l, b_l) < ab \Leftrightarrow 0 < ab - (a_lb + ab_l - a_lb_l) = (ab - a_lb) - (ab_l - a_lb_l)
 \Leftrightarrow P(a,a_l,b,b_l)
 \]
-which holds as $a_l<a, b_l<b$. Checking the other inequalities in a similar manner gives us the first assumption of Theorem 1.10.
+which holds as $a_l<a, b_l<b$. Checking the other inequalities in a similar manner gives us the first assumption of Theorem \ref{cofinality_theorem}.
 
 To get the second assumption (the cofinality hypothesis), let e.g. $f(a_L,b_L)$ in the left side of the representation of $ab$. By inverse cofinality, we get $a_l\in L, b_l\in L'$ with $a_l \geq a_L, b_l\geq b_L$.
 Then (using (3) and (1) respectively from the above claim): $f(a_l,b_l) \geq f(a_L,b_l)\geq f(a_L,b_L)$ as needed. Again, the other cases are similar.
 \end{proof}
 
-Therefore, both assumptions of Theorem 1.10 hold, giving us the uniformity property for multiplication as needed.
+Therefore, both assumptions of Theorem \ref{cofinality_theorem} hold, giving us the uniformity property for multiplication as needed.
 
 \begin{proposition} % ==== Proposition 2.9 ==== 
  \end{proposition}
@@ -206,7 +205,7 @@ by induction. This completes the proof.
 Our next goal is to define $1/a$ for $a>0$, i.e. find a solution to $a\cdot x = 1$.
 Note, the naive idea is to set $x = \{1/a_R | 1/a_L, (a_L\neq 0)\}$ but this does not work in general.
 
-\WikiLevelThree{ Friday 10-17-2014 }
+\Day{ Friday 10-17-2014 }
 
 \begin{definition} % ==== Definition of Inverses ==== 
 
@@ -255,7 +254,7 @@ Thus, we can set $c = \{L^{-1} | R^{-1} \}$. We claim that $1/a = c$, that is, $
 
 The typical element used to define $ac$ is $a'c + ac' - a'c'$ with $a'\in L\cup R, c'\in L^{-1}\cup R^{-1}$.
 
-We first show $\{\text{ lower elements for }ac\} < 1 < \{(\text{ upper elements for }ac \}$.
+We first show $\{\text{ lower elements for }ac\} < 1 < \{\text{ upper elements for }ac \}$.
 
 Suppose that $a' = 0$, then we get an element $a'c + ac' - a'c' = ac'$ which is an upper element for $ac$ if and only if $c'\in R^{-1}$ by definition. However, by $(*)$ if $c'\in R^{-1}$ then $ac' = a'c + ac' - a'c' > 1$ (as needed since an upper element), else $c'\in L^{-1}$ and then $ac' = a'c + ac' - a'c' < 1$ (as needed since a lower element).
 
@@ -274,16 +273,3 @@ We have thus shown:
 \begin{theorem} % ==== Theorem 2.10 (Conway) ==== 
 $(\mathbf{No}, +, \cdot, \leq)$ is an ordered field.
  \end{theorem}
-
-\section{Real Numbers}
-
-We'll now begin to focus on how to view real numbers and ordinals as surreal numbers.
-
-We have $0 = ()$ the additive identity of $\mathbf{No}$ and $1 = (+)$ the multiplicative identity of $\mathbf{No}$.
-
-We also have an embedding of ordered rings $\mathbb{Z} \hookrightarrow \mathbf{No}$ where $k\mapsto k\cdot 1$ (where $k\cdot 1$ is $k$ additions of $+1$ or $-1$).
-
-\begin{lemma} % ==== Lemma 3.1 ==== 
- For $n\in \mathbb{N}$, $n\cdot 1 = (+\cdots +)$ (i.e. $n$ $+$'s).
-\end{lemma}
-

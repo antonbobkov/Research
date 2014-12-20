@@ -19,16 +19,23 @@
 %
 %\begin{document}
 
-Notes by Zach.
+\NotesBy{Notes by Zach Norwood}
 
-\section*{October 20th}
+\Day{October 20th}
+\section{Real Numbers}
+
+We'll now begin to focus on how to view real numbers and ordinals as surreal numbers.
+
+We have $0 = ()$ the additive identity of $\mathbf{No}$ and $1 = (+)$ the multiplicative identity of $\mathbf{No}$.
+
+We also have an embedding of ordered rings $\mathbb{Z} \hookrightarrow \mathbf{No}$ where $k\mapsto k\cdot 1$ (where $k\cdot 1$ is $k$ additions of $+1$ or $-1$).
 
 \begin{lemma}
 For $n\in\N$, $n\cdot 1 = (\underbrace{++\cdots+}_{n\text{ times}})$.
 \label{3.1}
 \end{lemma}
 
-\begin{proof} (of 3.1)
+\begin{proof}
 By induction on $n$. The cases $n=0,1$ are obvious.
 Suppose that $n\ge 1$. We have
 \begin{align*}
@@ -75,19 +82,19 @@ $1 = \{ 0 \,|\, \emptyset \} = \{ 0 \,|\, 2 \}$. Apply the lemma with $a=0$, $b=
 So $\tfrac12 = \{0 \,|\, 1 \} = (+-)$. Taking $a=0$, $b=\tfrac12$, we get $\tfrac14 = (+--)$.
 \end{example}
 
-\begin{cor} (3.4)
+\begin{cor} %(3.4)
 Suppose $a + b = \{ 2a \,|\, 2b \}$. Then 
 \[ \frac{a+b}{2^{s+1}} = \left\{ \frac{a}{2^s} \,\bigg|\, \frac{b}{2^s} \right\}  \]
 for all $s\in\N$.
 \label{3.4}
 \end{cor}
 
-\begin{cor} (3.5)
+\begin{cor} %(3.5)
 For all $c\in\N$, $\frac{c}{2^s} + \frac{1}{2^{s+1}} = \left\{ \frac{c}{2^s} \,|\, \frac{c+1}{2^s} \right\}$.
 \label{3.5}
 \end{cor}
 
-\begin{proof} (Proof of 3.5)
+\begin{proof} %(Proof of 3.5)
 Take $a=c$, $b=c+1$. We have
 \begin{align*}
 a+b &= 2c+1 \\
@@ -97,12 +104,12 @@ a+b &= 2c+1 \\
 Apply Corollary \ref{3.4}.
 \end{proof}
 
-\begin{proposition} (3.6)
+\begin{proposition} %(3.6)
 Surreal numbers of finite length correspond to dyadic rationals.
 \label{3.6}
 \end{proposition}
 
-\begin{proof} (Proof of 3.6)
+\begin{proof} %(Proof of 3.6)
 Let $d\in\mathbf{No}$ have length $m+n$, where $d(0) = d(1) = \cdots = d(m-1) \ne d(m)$. We'll show that 
 $d\in\frac1{2^n}\Z$. Suppose $d(0) = d(m-1) = {+}$. (Similar if $d(0) = {-}$.) 
 \begin{description}
@@ -130,7 +137,7 @@ otherwise $e := \frac{c+1}{2^r} \wedge d$ will satisfy $d < e < \frac{e+1}{2^r} 
 Hence $\frac{c+1}{2^r}\in R$, so $\frac{c+1}{2^r}\ge y$.
 \end{proof}
 
-\section*{October 22nd}
+\Day{October 22nd}
 
 \textbf{Remark} (to \eqref{3.6}). Suppose $d\in\mathbf{No}$ has length $m+n$, where
 \begin{itemize}
@@ -151,7 +158,7 @@ A surreal is called {\em real} if it is either of finite length or has length $\
 Recall: An ordered field $k$ is {\em dedekind-complete} if every nonempty subset of $k$ that is bounded from above
 has a supremum. The ordered field $\R$ is up to (unique) isomorphism the only dedekind-complete ordered field.
 
-\begin{theorem}[Conway] (3.8)
+\begin{theorem}[Conway] \label{3.8}
 The real surreals form a dedekind-complete ordered subfield of $\mathbf{No}$. Let $a\in\mathbf{No}$, $\ell(a)=\omega$,
 with canonical representation $a = \{L \,|\, R\}$ then
 \[ a\text{ is real } \iff \begin{cases} L,R\neq\emptyset \\
@@ -162,12 +169,12 @@ R\text{ has no min}
 
 The direction ``$\Rightarrow$'' is an exercise. Now we prove the other direction.
 
-\begin{lemma} (3.9)
+\begin{lemma} \label{3.9}
 Let $L,R\subseteq\mathbb{D}$ be such that $L<R$ and $L$ has no max and $R$ has no min. Then $a = \{ L \,|\, R\}$ is real.
 \end{lemma}
 
 \begin{proof}
-By \eqref{1.9} we have $\ell(a)\le\omega$. Suppose $\ell(a) = \omega$ and $a(n) = +$ eventually. Note that there is some $n_0$ with $a(n_0) = {-}$, since $a<R\ne\emptyset$. We may assume that $a(n) = {+}$ for all $n>n_0$. Let $b = a\restriction n_0$. Then $b>a$ and $b<_s a$. Since $(L,R)$ is cofinal in the canonical representation of $a$, there is $d\le b$, $d\in R$. It follows that $d\in R$, since $R$ has no least element. We can choose $m$ such that $d\le b - \frac1{2^m}$. (Possible since both $b$ \& $d$ are dyadics.) We get $a<d\le b - \frac1{2^m}$. Next let $n>n_0$, $c = a\restriction n$. Then
+By \eqref{lemma_on_length_of_cuts} we have $\ell(a)\le\omega$. Suppose $\ell(a) = \omega$ and $a(n) = +$ eventually. Note that there is some $n_0$ with $a(n_0) = {-}$, since $a<R\ne\emptyset$. We may assume that $a(n) = {+}$ for all $n>n_0$. Let $b = a\restriction n_0$. Then $b>a$ and $b<_s a$. Since $(L,R)$ is cofinal in the canonical representation of $a$, there is $d\le b$, $d\in R$. It follows that $d\in R$, since $R$ has no least element. We can choose $m$ such that $d\le b - \frac1{2^m}$. (Possible since both $b$ \& $d$ are dyadics.) We get $a<d\le b - \frac1{2^m}$. Next let $n>n_0$, $c = a\restriction n$. Then
 $c<a$ and $c <_s a$, so by choosing $n$ sufficiently large we can achieve $c>b-\frac1{2^m}$. But then $a>c>b-\frac{1}{2^m}$, oops.
 
 (Why can we do this? Write
@@ -179,7 +186,7 @@ Then we get
 so just choose $n>l+m$.)
 \end{proof}
 
-\begin{lemma}
+\begin{lemma} \label{3.10}
 Let $a = \{L \,|\, R\}$. Suppose
 \begin{enumerate}
 \item $x\in L \Rightarrow \exists r\in \mathbb{D}^{>0}$, $y\in L$, $x+r\le y$. [``$L-\mathbb{D}^{>0}$ is cofinal in $L$'']
@@ -195,7 +202,7 @@ Then $a = \{ L' \,|\, R' \}$.
 Check that $(L',R')$ is cofinal in $(L,R)$ and use the cofinality theorem.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma} \label{3.11}
 $\mathbb{D}$ is dense in the ordered set of real surreals.
 \end{lemma}
 
@@ -205,7 +212,7 @@ $a < \frac{a+b}2 < b$. So suppose $b\notin \mathbb{D}$, with canonical represent
 and $L$ has no maximum, so we can find some dyadic element of $(a,b)$. Similar if $b <_s a$.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma} \label{3.12}
 Let $a = \{ L \,|\, R \}$ be the canonical representation of a real $a\notin \mathbb{D}$. Then for all $r\in \mathbb{D}^{>0}$ there are $a_L, a_R$ with $a_R-a_L\le r$. 
 \end{lemma}
 
@@ -213,7 +220,7 @@ Let $a = \{ L \,|\, R \}$ be the canonical representation of a real $a\notin \ma
 For each $n$ there are $a_L,a_R$ with $a_L\restriction n = a_R\restriction n$, and $a_R-a_L$ is bounded from above by some expression $\frac1{2^s} + \frac{1}{2^{s+1}}+\cdots$, and this can be made as small as necessary. (Exercise.)
 \end{proof}
 
-\section*{October 24th}
+\Day{October 24th}
 
 \begin{proof}[Proof of Theorem \ref{3.8}]
 Clearly $0,1$ are real. Let $a,b\in\mathbf{No}$ be real; we check that $a+b$, $a\cdot b$, $\frac1a$ (if $a\ne0$) are also real. (Note that $-a$ is obviously real.)
