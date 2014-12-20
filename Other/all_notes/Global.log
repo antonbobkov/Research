@@ -199,8 +199,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.tex [18
 
 
-] [19]) [20]
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.tex [21
+] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
+
+ []
+
+) [20] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.tex [21
 
 
 ] [22]) [23]
@@ -267,4 +271,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  27i,16n,26p,731b,320s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (45 pages, 261308 bytes).
+Output written on Global.dvi (45 pages, 261388 bytes).
