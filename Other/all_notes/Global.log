@@ -397,4 +397,114 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 
 ] [32] [33]pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}) has been already used, dupli
 cate ignored
-<to be read again>
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o...pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.6.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o...pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.6.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o...pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.6.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o... [34] [35]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: $\bullet $ on input line 195.
+
+[36]) [37] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+[38
+
+
+]
+LaTeX Font Info:    Try loading font information for U+euf on input line 66.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [39]) [40]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.tex [41
+
+
+]) [42]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.tex [43
+
+
+]) [44]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/week_11_addendum.tex) [45
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/week_11_addendum.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
+Package rerunfilecheck Info: File `Global.out' has not changed.
+(rerunfilecheck)             Checksum: 217DBD052216766EE746E4A630B529D3;677.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
+ ) 
+Here is how much of TeX's memory you used:
+ 6421 strings out of 493921
+ 95056 string characters out of 3144875
+ 179664 words of memory out of 3000000
+ 9269 multiletter control sequences out of 15000+200000
+ 19252 words of font info for 75 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 29i,16n,33p,733b,483s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\dstroke\dpi600\dsrom10.pk><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Global.pdf (45 pages, 568935 bytes).
+PDF statistics:
+ 694 PDF objects out of 1000 (max. 8388607)
+ 274 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+
