@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 21:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 21:13
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -209,7 +209,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 ] [25] [26] [27] [28] [29]) [30]
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.tex
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 6.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -219,7 +219,7 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ] [32] [33] [34] [35]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 195.
+             The label is: $\bullet $ on input line 194.
 
 [36]) [37] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.tex [38
 
@@ -259,12 +259,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1587 strings out of 493922
- 23742 string characters out of 3144898
+ 1586 strings out of 493922
+ 23734 string characters out of 3144898
  78572 words of memory out of 3000000
- 4773 multiletter control sequences out of 15000+200000
+ 4772 multiletter control sequences out of 15000+200000
  19559 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,16n,26p,748b,320s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (45 pages, 261672 bytes).
+Output written on Global.dvi (45 pages, 261680 bytes).
