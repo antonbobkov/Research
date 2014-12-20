@@ -47,7 +47,7 @@ For \begin{align*}
 
 \WikiBold{Tail property:} if $\gamma < \kappa < \alpha$
 \begin{align*}
-	\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| << \w^{a_\gamma}
+	\left| \sum_{i < \alpha} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i} \right| \ll \w^{a_\gamma}
 \end{align*}
 \end{theorem}
 
@@ -94,14 +94,14 @@ where
 	g^* &= g(\w)\midr\beta - g(\w)\midr{\gamma + 1}
 \end{align*}
 
-Then we have by tail property $f^* << x^{a_\gamma}$ and $g^* << x^{a_\gamma}$. Compute
+Then we have by tail property $f^* \ll x^{a_\gamma}$ and $g^* \ll x^{a_\gamma}$. Compute
 
 \begin{align*}
   f(\w) - g(\w) &= (f_\gamma - g_\gamma) x^{a_\gamma} + (f* - g*) + (f_\beta - g_\beta) x^{a_\beta}
 \end{align*}
 
 We have $f_\gamma > g_\gamma$.
-All $f*$, $g*$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $<< x^{a_\gamma}$.
+All $f*$, $g*$ and $(f_\beta - g_\beta) x^{a_\beta}$ are  $\ll x^{a_\gamma}$.
 Thus $f(\w) - g(\w) > 0$ as needed.
 
 \WikiItalic{Case 2}: $\alpha$ is a limit ordinal.
@@ -143,7 +143,7 @@ Suppose we have $\gamma < \kappa < \alpha$, then $\gamma < \kappa \leq \beta$ an
 	&\brac{\sum_{i < \beta} f_i \w^{a_i} - \sum_{i < \kappa} f_i \w^{a_i}} + f_\alpha \w^{a_\alpha}
 \end{align*}
 
-Expression $\brac{\ldots}$ is $<< \w^{a_\gamma}$ by induction hypothesis. $f_\alpha \w^{a_\alpha} << \w^{a_\gamma}$ as $a_\alpha < a_\gamma$. Thus the entire sum is $<< \w^{a_\gamma}$ as needed.
+Expression $\brac{\ldots}$ is $\ll \w^{a_\gamma}$ by induction hypothesis. $f_\alpha \w^{a_\alpha} \ll \w^{a_\gamma}$ as $a_\alpha < a_\gamma$. Thus the entire sum is $\ll \w^{a_\gamma}$ as needed.
 
 \WikiItalic{Case 2}: $\alpha$ is a limit ordinal.
 
@@ -166,8 +166,8 @@ and pick limit elements $\bar l(\w) \in L_f$ and $\bar r(\w) \in R_f$ correspond
 
 By induction hypothesis we have 
 \begin{align*}
-	\bar l(\w) - F(\w) &= \bar l(\w) - \bar l(\w)\midr\kappa \ <<  \w^{a_\kappa} \\
-	\bar r(\w) - F(\w) &= \bar r(\w) - \bar r(\w)\midr\kappa \ <<  \w^{a_\kappa}
+	\bar l(\w) - F(\w) &= \bar l(\w) - \bar l(\w)\midr\kappa \ \ll  \w^{a_\kappa} \\
+	\bar r(\w) - F(\w) &= \bar r(\w) - \bar r(\w)\midr\kappa \ \ll  \w^{a_\kappa}
 \end{align*}
 
 \begin{align*}
@@ -177,7 +177,7 @@ By induction hypothesis we have
 	l(\w) - F(\w) \leq f(\w) - F(\w) \leq r(\w) - F(\w)
 \end{align*}
  
-Thus $f(\w) - F(\w) << \w^{a_\kappa}$ as it is between two elements that are $<<  \w^{a_\kappa}$.
+Thus $f(\w) - F(\w) \ll \w^{a_\kappa}$ as it is between two elements that are $\ll  \w^{a_\kappa}$.
 
 \end{proof}
 
@@ -284,7 +284,7 @@ Then
 for all $\epsilon \in \R^{>0}$
 thus
 \begin{align*}
-	\abs{a - r\w^b} << \w^b \tag{*}
+	\abs{a - r\w^b} \ll \w^b \tag{*}
 \end{align*}
 
 Note $r \neq 0$; $r,b$ subject to $(*)$ are unique.
@@ -311,7 +311,7 @@ By inductive hypothesis, if $\beta < \alpha$
 \begin{align*}
 	f_\beta\w^{a_\beta} &= \lt\paren{a - \sum_{i < \beta}(\ldots)} \\
 	\Rightarrow f_\alpha\w^{a_\alpha} &= \lt\paren{\paren{a - \sum_{i < \beta}(\ldots)} - f_\beta\w^{a_\beta}} \\
-	&<< \w^{a_\beta} \text{ by (*)} \\
+	&\ll \w^{a_\beta} \text{ by (*)} \\
 	\Rightarrow a_\alpha &< a_\beta
 \end{align*}
 
@@ -322,19 +322,19 @@ Let $\beta < \alpha$; to show $a_\alpha < a_\beta$.
 We have
 
 \begin{align*}
-	a - \sum_{i \leq \beta} f_i \w^{a_i} = \paren{a - \sum_{i < \beta} f_i\w^{a_i}} - f_\beta\w^{a_\beta} << \w^{a_\beta}
+	a - \sum_{i \leq \beta} f_i \w^{a_i} = \paren{a - \sum_{i < \beta} f_i\w^{a_i}} - f_\beta\w^{a_\beta} \ll \w^{a_\beta}
 \end{align*}
 
 By the tail property
 \begin{align*}
-	&\sum_{i < \alpha} (\ldots) - \sum_{i \leq \beta} (\ldots) << \w^{a_\beta} \\
-	\Rightarrow &a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta} \\
-	\Rightarrow &\lt\paren{a - \sum_{i < \alpha} (\ldots) } << \w^{a_\beta} \\
+	&\sum_{i < \alpha} (\ldots) - \sum_{i \leq \beta} (\ldots) \ll \w^{a_\beta} \\
+	\Rightarrow &a - \sum_{i < \alpha} (\ldots) \ll \w^{a_\beta} \\
+	\Rightarrow &\lt\paren{a - \sum_{i < \alpha} (\ldots) } \ll \w^{a_\beta} \\
 	\Rightarrow &a_\alpha < a_\beta
 \end{align*}
 
 This completes the induction.
-Note that we showed that if $\alpha$ is a limit then $a - \sum_{i < \alpha} (\ldots) << \w^{a_\beta}$ for all $\beta < \alpha$.
+Note that we showed that if $\alpha$ is a limit then $a - \sum_{i < \alpha} (\ldots) \ll \w^{a_\beta}$ for all $\beta < \alpha$.
 
 So if $\curly{L \mid R}$ is the cut used to define $\sum_{i < \alpha} (\ldots)$ then $L < a < R$.
 Let $\alpha = \w \cdot \alpha'$.
@@ -366,7 +366,7 @@ where $\epsilon$ ranges over $\R^{>0}$.
 	&(r + \epsilon) \w^a, (r + \epsilon)\w^a - \epsilon s \w^{a_R}, \\
 	&(r - \epsilon) \w^a + \epsilon t \w^{a_L} \}
 \end{align*}
-Now use $\w^{a_L} << \w^a << \w^{a_R}$ and cofinality.
+Now use $\w^{a_L} \ll \w^a \ll \w^{a_R}$ and cofinality.
  \end{proof}
 
 \Day{Friday, November 14, 2014}
