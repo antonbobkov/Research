@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 DEC 2014 13:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 DEC 2014 13:26
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -535,16 +535,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
-[42]
-
-LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 157.
-
-
-LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 169.
-
-[43] [44]) [45] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.tex) [46
+[42] [43] [44]) [45] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.tex) [46
 
 
 ]
@@ -577,4 +568,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  63i,16n,76p,748b,906s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (49 pages, 321652 bytes).
+Output written on Global.dvi (49 pages, 321644 bytes).
