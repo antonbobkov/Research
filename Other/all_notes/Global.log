@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 20:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  19 DEC 2014 20:19
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -138,7 +138,7 @@ Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -150,7 +150,7 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO)
 Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
@@ -223,37 +223,29 @@ LaTeX Info: Redefining \pageref on input line 6369.
 \c@Hfootnote=\count106
 )
 
-Package hyperref Message: Driver (default): hdvips.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hdvips.def"
-File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pdfmark.def"
-File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks27
-\pdf@box=\box28
-\pdf@toks=\toks28
-\pdf@defaulttoks=\toks29
-\HyField@AnnotCount=\count107
-\Fld@listcount=\count108
-\c@bookmark@seq@number=\count109
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count107
+\c@bookmark@seq@number=\count108
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip50
-))
+)
 Package hyperref Info: Option `colorlinks' set `true' on input line 19.
 
 
 Package amsthm Warning: Unknown theoremstyle `theorem' on input line 54.
 
-\c@theorem=\count110
+\c@theorem=\count109
 
 Package amsthm Warning: Unknown theoremstyle `empty' on input line 79.
 
-\c@namedtheorem=\count111
+\c@namedtheorem=\count110
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
 
@@ -289,7 +281,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
-\AtBeginShipoutBox=\box29
+\AtBeginShipoutBox=\box28
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -297,23 +289,34 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 130.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvips.def"
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count111
+
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen116
+\scratchbox=\box29
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen117
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks28
+)))
 Package hyperref Info: Link coloring ON on input line 107.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count112
+\c@section@level=\count118
 )
 LaTeX Info: Redefining \ref on input line 107.
 LaTeX Info: Redefining \pageref on input line 107.
@@ -336,7 +339,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
  [1
 
-]
+{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex [2
 
 ] [3]
@@ -392,7 +395,27 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [31
 
 
-] [32] [33] [34] [35]
+] [32] [33]pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o...pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.6.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o...pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.6.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o...pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.6.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{equation}
+                       f(\omega)g(\omega)_{**} + f(\omega)_{*}g(\omega)-f(\o... [34] [35]
 
 LaTeX Warning: The counter will not be printed.
              The label is: $\bullet $ on input line 195.
@@ -441,7 +464,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/week_11_addendum.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 125.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
 Package rerunfilecheck Info: File `Global.out' has not changed.
 (rerunfilecheck)             Checksum: 217DBD052216766EE746E4A630B529D3;677.
@@ -452,12 +475,36 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
  ) 
 Here is how much of TeX's memory you used:
- 5878 strings out of 493922
- 89634 string characters out of 3144898
- 175506 words of memory out of 3000000
- 9001 multiletter control sequences out of 15000+200000
+ 6422 strings out of 493921
+ 95066 string characters out of 3144875
+ 179673 words of memory out of 3000000
+ 9270 multiletter control sequences out of 15000+200000
  19252 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,16n,33p,733b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,16n,33p,733b,483s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\dstroke\dpi600\dsrom10.pk><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Global.pdf (45 pages, 568779 bytes).
+PDF statistics:
+ 694 PDF objects out of 1000 (max. 8388607)
+ 274 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on Global.dvi (45 pages, 340272 bytes).
