@@ -993,15 +993,6 @@ Overfull \hbox (7.67015pt too wide) in paragraph at lines 14--16
 \OML/cmm/m/it/10 R$
  []
 
-! Undefined control sequence.
-l.17 \bftext
-            {Ordinals}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -1009,22 +1000,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 \bftext{O
-              rdinals}
+l.17 \textbf{Ordinals}
+                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no O in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
-[][] 
+Overfull \hbox (62.6678pt too wide) in paragraph at lines 17--18
+[][]\OT1/cmr/bx/n/10 Ordinals 
  []
 
 
@@ -8912,9 +8895,9 @@ Missing character: There is no . in font nullfont!
 Here is how much of TeX's memory you used:
  30 strings out of 493922
  496 string characters out of 3144898
- 74881 words of memory out of 3000000
+ 74889 words of memory out of 3000000
  3419 multiletter control sequences out of 15000+200000
  4567 words of font info for 17 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  18i,4n,16p,719b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on g_week_4.dvi (1 page, 4440 bytes).
+Output written on g_week_4.dvi (1 page, 4428 bytes).
