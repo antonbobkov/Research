@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\RequirePackage[left=1.5in,right=1.5in,top=1.5in,bottom=1.5in]{geometry}   %margins
+\usepackage{amsmath}   %general math symbols
+
+\usepackage{fourier}   %Font
+\usepackage{amssymb}  %\textbf 
+%\usepackage{mathrsfs}  %\mathscr
+\usepackage{dsfont}     %\mathds
+\usepackage{bussproofs}
+%\usepackage{latexsym}
+\usepackage{multicol}
+
+% This is the "centered" symbol
+\def\fCenter{{\mbox{\Large{$\rightarrow$}}}}
+
+% Optional to turn on the short abbreviations
+\EnableBpAbbreviations
+
+\usepackage{tikz}      %commutative diagrams
+\usepackage{enumerate}    %lists
+
+\usepackage{amsthm}    
+\usepackage{bm}
+
+
+\swapnumbers
+\theoremstyle{theorem}            %bold title, italicized font
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}           %bold title, regular font
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem*{problem}{Problem}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{empty}
+\newtheorem{namedtheorem}{}
+
+\newcommand{\customtheorem}[3]{\theoremstyle{theorem} \newtheorem{theorem#1}[theorem]{#1} \begin{theorem#1}[#2]#3 \end{theorem#1}}
+
+\newcommand{\customdefinition}[2]{\theoremstyle{definition} \newtheorem{definition#1}[theorem]{#1} \begin{definition#1}#2 \end{definition#1}}
+
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\def\dotminus{\mathbin{\ooalign{\hss\raise1ex\hbox{.}\hss\cr\mathsurround=0pt$-$}}}
+
+\renewcommand{\restriction}{\mathord{\upharpoonright}}
+
+\begin{document}
+\tikzset{node distance=2cm, auto}
+
+\begin{center} \begin{Large} Math 285D Notes: 12/5 \end{Large}\\
+\text{} \\
+\begin{large} Tyler Arant  \end{large}
+\end{center}
+
+\textbf{Correction for proof of Weierstrass Preparation.} We had $f, g\in \mathds{C}\{X, T\}$, $f$ regular of order $d$, and
+$$F=u^{-1}\sum_{i<d}f_iT^i, \quad u=f_d + f_{d+1}T+ \cdots \in \mathds{C}\{X, T\}^\times.$$
+Choose $(r', r_{m+1})\in (\mathds{R}^{>0})^{m+1}$ such that
+$$\|g\|_r, \|u^{-1}\|_r, \|f_0\|_{r'}, \dots, \|f_{d+1}\|_{r'}<\infty.$$
+Then, we can achieve
+$$\|F\|_r\leq \|u^{-1}\|\cdot \sum_{i<d}\|f_i\|_{r'}r^i_{m+1}<r^d_{m+1},$$
+since the $f_i$ vanish at $0$ we can make the norms as small as we want by choosing $r'$ small enough.\\
+
+Let $R\subset S$ be an extension of commutative rings.
+
+\begin{definition} $S$ is \textit{flat over} $R$ if each solution in $S$ to an equation
+\begin{equation} r_1x_1+\cdots + r_n x_n=0 \qquad (r_i\in R) \tag{$*$}\end{equation}
+is an $S$-linear combination of solutions in $R$. \end{definition}
+
+\begin{lemma} If $S$ free as an $R$-module, then $S$ is flat over $R$. \end{lemma}
+
+\begin{proof} Let $s=(s_1, \dots, s_n)\in S^n$ be a solution to $(*)$.  Take $R$-linearly independent $e_1, \dots, e_k\in S$ such that
+$$s_i=\sum_j w_{ij} e_j \qquad (w_{ij}\in R).$$
+Put $w_j=(w_{1j}, \dots, w_{nj})$.  Then $w_j$ is a solution to $(*)$ and $s=\sum_j e_jw_j.$
+\end{proof}
+
+We give some examples
+\begin{enumerate}[$\bullet$]
+\item If $R$ is a field, then each $S$ is flat over $R$.  
+\item $S=R[X_1, \dots, X_n]$ flat over $R$.
+\end{enumerate}
+
+\begin{lemma} Suppose $S$ is flat over $R$.  Then each solution in $S$ to a system
+$$r_{i1}x_1 + \cdots + r_{in}x_n=0 \qquad (i=1, \dots, m ; r_{ij}\in R)$$
+is an $S$-linear combination of solutions in $R$. \end{lemma}
+
+\begin{proof} By induction on $m$.  \end{proof}
+
+\begin{definition} We say that $S$ is \textit{faithfully flat} over $R$ if
+\begin{enumerate}[$\bullet$]
+\item $S$ is flat over $R$.
+\item Each equation 
+$$r_1x_1+\cdots +r_nx_n=1 \qquad (r_i\in R)$$
+that has a solution in $S$ has a solution in $R$. \end{enumerate}
+\end{definition}
+
+\begin{lemma} Suppose $S$ is flat over $R$.  The following are equivalent.
+\begin{enumerate}[(1)]
+\item $S$ is faithfully flat over $R$.
+\item For each maximal ideal $\mathfrak{m}$ of $R$, we have $\mathfrak{m}S\neq S$.
+\item Each system 
+\begin{equation} \sum_{j=1}^n r_{ij}x_j = t_i \qquad (i=1, \dots, m ; r_{ij}, t_i\in R) \tag{$*$} \end{equation}
+that has a solution in $S$ has a solution in $R$. 
+\end{enumerate} \end{lemma}
+
+$(1)\implies(2)$: Suppose, by means of contradiction, that $\mathfrak{m}S=S$.  Then, there are $r_i\in \mathfrak{m}$ and $s_i\in S$ such that
+$$r_1s_1+\cdots + r_n s_n = 1,$$
+i.e., $s=(s_1, \dots, s_n)$ is a solution to the equation
+$$r_1x_1 + \cdots + r_n x_n = 1.$$
+Since $S$ is faithfully flat over $R$, there is a solution $w=(w_1, \dots, w_n)$ so that
+$$1= r_1w_1+\cdots + r_n w_n \in \mathfrak{m},$$
+which is a contradiction. 
+
+$(2)\implies (1)$:  Suppose $S$ is not faithfully flat over $R$; then, there are $r_i\in R$ such that
+$$r_1x_1+\cdots + r_n x_n=1$$
+has a solution $s$ in $S$ but not a solution in $R$.  Then the ideal $\mathfrak{a}=(r_1, \dots, r_n)$ in $R$ is proper.  Let $\mathfrak{m}$ be an ideal in $R$ that contains $\mathfrak{a}$. Then, $\mathfrak{m}S=S$ since
+$$1=r_1s_1+\cdots r_n s_n \in \mathfrak{m}S.$$
+
+$(3)\implies (1)$ trivially.
+
+$(1)\implies (3)$: Suppose $(*)$ has a solution $s=(s_1, \dots, s_n)\in S^n$.  Then, $(1, s)= (1, s_1, \dots, s_n)$ is a solution to the homogenous system
+\begin{align*} -t_1x_0+\sum_{j=1}^n r_{1j}x_j &=  0  \\
+				&\vdots     \tag{$**$} \\
+		-t_mx_0 + \sum_{j=1}^n r_{mj}x_j  & =  0 \end{align*}
+Since $S$ is flat over $R$, $(1, s)$ is an $S$-linear combination of solutions $(u_1, v_1), \dots, (u_k, v_k)$ in $R^{1+n}$. So,
+$$(1, s) = w_1(u_1, v_1) + \cdots + w_k(u_k, v_k) \qquad (w_i\in S),$$
+hence
+$$1= w_1 u_1 + \cdots + w_k u_k.$$
+By $(1)$, there exists $\omega_1, \dots, \omega_k\in R$ such that
+$$1= \omega_1u_1 + \cdots + \omega_k u_k.$$
+Then, $\omega_1v_1+\cdots + \omega_k v_k\in R^n$ solves $(*)$. 
+
+
+
+\begin{theorem} $\mathds{C}[[X]]$ is faithfully flat over $\mathds{C}\{X\}$. \end{theorem}
+
+\begin{proof}[Proof sketch] We proceed by induction on the number of variable.  Consider
+\begin{equation}f_1y_1+\cdots + f_n y_n = 0 \qquad (f_i\in \mathds{C}\{X, T\}. \tag{$*$} \end{equation}
+We may assume that all $f_i$, if nonzero, are regular in $T$.  Then, apply Weierstass Preparation in $\mathds{C}\{X, T\}$ to the $f_i\neq 0$.  Then, we can assume that the $f_i\neq0$ are Weierstrass polynomials: $f_i\in \mathds{C}\{X\}[T]$ monic of some degree $d_i$.  Set
+$$z_2 = \left [ \begin{array}{c} f_2 \\ -f_1 \\ 0 \\ \vdots \\ 0 \end{array} \right ], z_3= \left [ \begin{array}{c} f_3 \\ 0 \\ -f_1 \\ 0 \\ \vdots \\ 0 \end{array} \right ], \cdots, z_n= \left [ \begin{array}{c} f_n \\ 0 \\ \vdots \\ 0 \\ -f_1\end{array} \right ],$$
+which together is a solution of $(*)$.  We have $y_i=q_if_1+r_i$, where $q_i\in \mathds{C}[[X, T]]$, and $r_i\in \mathds{C}[[X]][T]$ is of degree $<d_1$.  Then consider
+$$y+q_2z_2= \left [ \begin{array}{c} * \\ r_2 \\ y_3 \\ \vdots \\ y_n \end{array} \right ], \dots , y+q_2z_2+\cdots f_ny_n= \left [ \begin{array}{c} * \\ r_2\\ r_3 \\ \vdots \\ r_n \end{array} \right ],$$
+and conclude that we can assume $y_2, \dots, y_n\in \mathds{C}[[X]][T]$.   We have
+$$g:= f_1y_1 = -(f_2y_2+\cdots + f_ny_n)\in \mathds{C}\{X\}[T].$$
+We can find $h, r$ with $g=f_1h+r$ with $h, r\in \mathds{C}[[X]][T]$, $\deg r<d_1$.  So, $g=f_1y_1+0$ in $\mathds{C}[[X, T]]$, hence $r=0$ and $y_1=h\in \mathds{C}[[X]][T]$.  This reduces the proof to showing: $R\subset S$ flat $\implies R[T]\subset S[T]$ flat.
+\end{proof}
+
+\section{Restricted Analytic Functions}
+
+\begin{lemma}[Taylor expansion] Suppose $f\in \mathds{C}\{X\}_s$ and $b\in D_s(0)$, $j\in \mathds{N}^m$.  Then,
+\begin{enumerate}[(1)]
+\item $\partial^j f :=\left (\frac{\partial}{\partial X_1} \right )^{j_1} \cdots \left (\frac{\partial}{\partial X_m} \right )^{j_m}f\in \mathds{C}\{X\}_r$ for all $r<s$.
+\item $(\partial^jf)(b):= \sum_{i\geq j} f_i \frac{i!}{(i-j)!}b^{i-j}$ converges absolutely.  
+\item $\sum_j \frac{1}{j!} (\partial^jf)(b)X^j\in \mathds{C}\{X\}_{s(b)}$, where
+$$s(b)=(s_1-|b_1|, \dots, s_m-|b_m|),$$
+and
+$$f(x+b) = \sum_j\frac{1}{j!}(\partial^jf)(b)x^j \qquad (x\in \overline{D_{s(b)}}(0)).$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof} \begin{enumerate}[(1)]
+\item By induction on $|j|$.  The case $\frac{\partial}{\partial x+k}$ follows from Abel's Lemma: a finite bound on $|f_i|s^i$ gives a finite bound on $i_k|f_i|r^{i-e_k}$ (for given $r<s$, with $e_k$ is the $k^th$ standard basis vector).  
+\item Follows easily from $(1)$.
+\item Left as an exercise using $(2)$ and multivariate binomial theorem. 
+\end{enumerate}\end{proof}
+
+
+
+\end{document}
+
+
