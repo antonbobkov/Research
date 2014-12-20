@@ -8,4 +8,5 @@
 \contentsline {section}{\numberline {8}Analytic functions on $\mathbf {No}$}{38}
 \contentsline {section}{\numberline {9}Power series and Weierstrass Preparation}{38}
 \contentsline {section}{\numberline {10}Convergent Power Series }{41}
-\contentsline {section}{\numberline {11} Siddharth's extra lectures }{43}
+\contentsline {section}{\numberline {11}Restricted Analytic Functions}{45}
+\contentsline {section}{\numberline {12} Siddharth's extra lectures }{46}
