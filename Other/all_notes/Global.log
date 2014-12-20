@@ -110,3 +110,1447 @@ Package: amsthm 2004/08/06 v2.20
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks25
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\colonequals.sty"
+Package: colonequals 2006/08/01 v1.0 Colon equals symbols (HO)
+)
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip49
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\dsfont.sty"
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen112
+\Hy@linkcounter=\count99
+\Hy@pagecounter=\count100
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count101
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count102
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count103
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
+)
+
+Package hyperref Message: Driver (default): hdvips.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hdvips.def"
+File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pdfmark.def"
+File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks27
+\pdf@box=\box28
+\pdf@toks=\toks28
+\pdf@defaulttoks=\toks29
+\HyField@AnnotCount=\count107
+\Fld@listcount=\count108
+\c@bookmark@seq@number=\count109
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip50
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 19.
+
+
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 54.
+
+\c@theorem=\count110
+
+Package amsthm Warning: Unknown theoremstyle `empty' on input line 79.
+
+\c@namedtheorem=\count111
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+) (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/week_11_addendum.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+\AtBeginShipoutBox=\box29
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+Package hyperref Info: Link coloring ON on input line 107.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count112
+)
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
+\@outlinefile=\write3
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 108.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 108.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write4
+[1
+
+] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.tex [2
+
+]
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 268.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
+ [4]
+Runaway argument?
+{\@firstoffive }\fi  take $L < R$ such that $a = \curly {L \vert R}$ \ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.314 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[5]
+Runaway argument?
+{\@firstoffive }\fi  holds and \begin {align*} b > c \implies a + b >\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.476 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: \begin{lem} on input line 437 ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.478 \end{proof}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+Runaway argument?
+{\@firstoffive }\fi  $(L, R)$ is cofinal in $(L_a, R_a)$ and $(L', R'\ETC.
+! File ended while scanning use of \Hy@setref@link.
+<inserted text> 
+                \par 
+l.112 ...hn_susice_surreal_numbers_notes_fall2014}
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+[6]
+! Extra \else.
+\@include ...ediate \closeout \@partaux \fi \else 
+                                                  \deadcycles \z@ \@nameuse ...
+l.112 ...hn_susice_surreal_numbers_notes_fall2014}
+                                                  
+I'm ignoring this; it doesn't match any \if.
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.tex
+Runaway argument?
+{\@firstoffive }\fi ) holds, and for all $a,b,c,d\in \mathbf {No}$ wi\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.74 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[8
+
+
+]
+Runaway argument?
+{\@firstoffive }\fi , suppose $a>b>c>d$ (of suitable lengths). We wan\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.124 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+{\@firstoffive }\fi . \qed 
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.130 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+{\@firstoffive }\fi , we can extend the Claim from last time to hold \ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.138 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[9]
+Runaway argument?
+{\@firstoffive }\fi . 
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.148 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+{\@firstoffive }\fi . 
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.155 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+{\@firstoffive }\fi  hold, giving us the uniformity property for mult\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.161 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[10]) [11]
+! Extra \else.
+\@include ...ediate \closeout \@partaux \fi \else 
+                                                  \deadcycles \z@ \@nameuse ...
+l.113 \include{week_2/g_week_2}
+                               
+I'm ignoring this; it doesn't match any \if.
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.tex [13
+
+
+]
+Runaway argument?
+{\@firstoffive }\fi . \end {proof} 
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.106 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.116 \item $n=0$: follows by \eqref{3.1}
+                                         .
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.116 \item $n=0$: follows by \eqref{3.1}
+                                         .
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.117 ...ace{++\cdots+}_{m\ge1}-)$. By \eqref{3.5}
+                                                   with $c = m-1$, $s=0$, $m...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.117 ...ace{++\cdots+}_{m\ge1}-)$. By \eqref{3.5}
+                                                   with $c = m-1$, $s=0$, $m...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.125 ...y = \frac{c+1}{2^r}$, then by \eqref{3.5}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.125 ...y = \frac{c+1}{2^r}$, then by \eqref{3.5}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.142 \textbf{Remark} (to \eqref{3.6}
+                                     ). Suppose $d\in\mathbf{No}$ has length...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.142 \textbf{Remark} (to \eqref{3.6}
+                                     ). Suppose $d\in\mathbf{No}$ has length...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[14]
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.177 By \eqref{lemma_on_length_of_cuts}
+                                         we have $\ell(a)\le\omega$. Suppose...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.177 By \eqref{lemma_on_length_of_cuts}
+                                         we have $\ell(a)\le\omega$. Suppose...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[15]
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.225 \begin{proof}[Proof of Theorem \ref{3.8}]
+                                               
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \@addpunct {.}\color@endgroup 
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.225 \begin{proof}[Proof of Theorem \ref{3.8}]
+                                               
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.225 \begin{proof}[Proof of Theorem \ref{3.8}]
+                                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.228 \subsubsection
+                    *{$a+b$} Suppose $a\in\mathbb{D}$, $b\notin\mathbb{D}$. ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.228 \subsubsection
+                    *{$a+b$} Suppose $a\in\mathbb{D}$, $b\notin\mathbb{D}$. ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.228 \subsubsection*{$a+b$}
+                             Suppose $a\in\mathbb{D}$, $b\notin\mathbb{D}$. ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.228 \subsubsection*{$a+b$}
+                             Suppose $a\in\mathbb{D}$, $b\notin\mathbb{D}$. ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.228 ... \{a+b_L \,|\, a+b_R \}$. (By \eqref{3.9}
+                                                   this then gives $a+b$ rea...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.228 ... \{a+b_L \,|\, a+b_R \}$. (By \eqref{3.9}
+                                                   this then gives $a+b$ rea...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.229 ...in\mathbb{D}^{>0}$; hence by \eqref{3.12}
+                                                   there are $b_L,b_R$ such ...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.229 ...in\mathbb{D}^{>0}$; hence by \eqref{3.12}
+                                                   there are $b_L,b_R$ such ...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.231 ...has no min. So (1) \& (2) in \eqref{3.10}
+                                                   are satisfied for this cu...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.231 ...has no min. So (1) \& (2) in \eqref{3.10}
+                                                   are satisfied for this cu...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.232 $L' < a+b < R'$ and by \eqref{3.12}
+                                          $(L',R')$ satisfies (3) in \eqref{...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.232 $L' < a+b < R'$ and by \eqref{3.12}
+                                          $(L',R')$ satisfies (3) in \eqref{...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.232 ...} $(L',R')$ satisfies (3) in \eqref{3.10}
+                                                  . This means that $a+b = \...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.232 ...} $(L',R')$ satisfies (3) in \eqref{3.10}
+                                                  . This means that $a+b = \...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.232 ... $a+b = \{L' \,|\, R' \}$ by \eqref{3.10}
+                                                  , and this is real by \eqr...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.232 ... $a+b = \{L' \,|\, R' \}$ by \eqref{3.10}
+                                                  , and this is real by \eqr...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.232 ...ef{3.10}, and this is real by \eqref{3.9}
+                                                  .
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.232 ...ef{3.10}, and this is real by \eqref{3.9}
+                                                  .
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.234 \subsubsection
+                    *{$a\cdot b$} Suppose $a\notin\mathbb{D}$, $a,b>0$. The ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.234 \subsubsection
+                    *{$a\cdot b$} Suppose $a\notin\mathbb{D}$, $a,b>0$. The ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.235 ...b_*)$. Show that (1), (2) in \eqref{3.10}
+                                                   are satisfied by this cut...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.235 ...b_*)$. Show that (1), (2) in \eqref{3.10}
+                                                   are satisfied by this cut...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.237 ... - (a-a_L')(b-b_L)$. Then by \eqref{3.11}
+                                                   $x'-x = (a_L' - a_L)(b-b_...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.237 ... - (a-a_L')(b-b_L)$. Then by \eqref{3.11}
+                                                   $x'-x = (a_L' - a_L)(b-b_...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.237 ...^{>0}$. This verifies (1) of \eqref{3.10}
+                                                  . In the same way verify (...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.237 ...^{>0}$. This verifies (1) of \eqref{3.10}
+                                                  . In the same way verify (...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.242 ...\cdot b < R'$. We check that \eqref{3.10}
+                                                  (3) holds. Let $r\in \math...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.242 ...\cdot b < R'$. We check that \eqref{3.10}
+                                                  (3) holds. Let $r\in \math...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.243 ... that $a''b''-a'b'<r$, using \eqref{3.12}
+                                                  . Hence by \eqref{3.10} $a...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.243 ... that $a''b''-a'b'<r$, using \eqref{3.12}
+                                                  . Hence by \eqref{3.10} $a...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.243 ...using \eqref{3.12}. Hence by \eqref{3.10}
+                                                   $a\cdot b = \{ L' \,|\, R...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.243 ...using \eqref{3.12}. Hence by \eqref{3.10}
+                                                   $a\cdot b = \{ L' \,|\, R...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.243 ...\, R' \}$, so $ab$ is real by \eqref{3.9}
+                                                  .
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.243 ...\, R' \}$, so $ab$ is real by \eqref{3.9}
+                                                  .
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.245 \subsubsection
+                    *{$1/a$:} We may assume that $a>0$. Put
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.245 \subsubsection
+                    *{$1/a$:} We may assume that $a>0$. Put
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.250 ... $R\ne\emptyset$ because: by \eqref{3.11}
+                                                   take $m$ such that $a>\fr...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.250 ... $R\ne\emptyset$ because: by \eqref{3.11}
+                                                   take $m$ such that $a>\fr...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.255 \begin{proof}[Proof of Claim 1.]
+                                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.259 Hence by \eqref{3.9}
+                           $b:= \{L \,|\, R\}$ is real. We are going to show...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.259 Hence by \eqref{3.9}
+                           $b:= \{L \,|\, R\}$ is real. We are going to show...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \Hy@setref@link has an extra }.
+<inserted text> 
+                \par 
+l.259 ... is real, we get $ba-1=0$ by \eqref{3.11}
+                                                  .
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@firstoffive }\fi \unskip \@@italiccorr )
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.259 ... is real, we get $ba-1=0$ by \eqref{3.11}
+                                                  .
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[16]) [17]
+! Extra \else.
+\@include ...ediate \closeout \@partaux \fi \else 
+                                                  \deadcycles \z@ \@nameuse ...
+l.114 \include{week_3/zach}
+                           
+I'm ignoring this; it doesn't match any \if.
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.tex [18
+
+
+] [19]) [20]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\omega' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 8.
+
+[21
+
+
+] [22]) [23] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.tex [24
+
+
+] [25] [26] [27] [28]
+[29]) [30] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.tex
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 6.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [31
+
+
+]
+Runaway argument?
+{\@firstoffive }\fi )$ and the second equality uses the inductive hyp\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.50 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.50 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.50 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[32]
+Runaway argument?
+{\@firstoffive }\fi )$. Thus, we only need to consider the case where\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.122 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.122 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.122 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[33]
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.122 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{\@firstoffive }\fi )$. 
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.150 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.150 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.150 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.150 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{\@firstoffive }\fi )$ holds for $K'$. Since $K'$ is algebraically cl\ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.153 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.153 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{\@firstoffive }\fi )$, the algebraic closure of $\mathds {Q}$ in $\mathds \ETC.
+! Paragraph ended before \Hy@setref@link was complete.
+<to be read again> 
+                   \par 
+l.155 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.155 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.155 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.155 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[34]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: $\bullet $ on input line 195.
+
+[35]) [36]
+! Extra \else.
+\@include ...ediate \closeout \@partaux \fi \else 
+                                                  \deadcycles \z@ \@nameuse ...
+l.118 \include{week_7/285D_notes_nov_17_18_21}
+                                              
+I'm ignoring this; it doesn't match any \if.
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+[38
+
+
+]
+LaTeX Font Info:    Try loading font information for U+euf on input line 66.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [39]) [40]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.tex [41
+
+
+]) [42]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.tex [43
+
+
+]) [44]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/week_11_addendum.tex) [45
+
+
+]
+
+! LaTeX Error: \begin{proof} on input line 149 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/week_11_addendum.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 125.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
+
+
+Package rerunfilecheck Warning: File `Global.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Global.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  217DBD052216766EE746E4A630B529D3;677.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
+ )
+(\end occurred inside a group at level 5)
+
+### semi simple group (level 5) entered at line 149 (\begingroup)
+### semi simple group (level 4) entered at line 31 (\begingroup)
+### semi simple group (level 3) entered at line 97 (\begingroup)
+### semi simple group (level 2) entered at line 69 (\begingroup)
+### semi simple group (level 1) entered at line 488 (\begingroup)
+### bottom level
+(\end occurred when \ifx on line 149 was incomplete)
+(\end occurred when \ifx on line 103 was incomplete)
+(\end occurred when \ifx on line 46 was incomplete)
+(\end occurred when \iftrue on line 118 was incomplete)
+(\end occurred when \ifnum on line 118 was incomplete)
+(\end occurred when \ifmmode on line 250 was incomplete)
+(\end occurred when \ifmmode on line 243 was incomplete)
+(\end occurred when \ifmmode on line 243 was incomplete)
+(\end occurred when \ifmmode on line 243 was incomplete)
+(\end occurred when \ifmmode on line 242 was incomplete)
+(\end occurred when \ifmmode on line 237 was incomplete)
+(\end occurred when \ifmmode on line 237 was incomplete)
+(\end occurred when \ifmmode on line 235 was incomplete)
+(\end occurred when \ifmmode on line 232 was incomplete)
+(\end occurred when \ifmmode on line 232 was incomplete)
+(\end occurred when \ifmmode on line 232 was incomplete)
+(\end occurred when \ifmmode on line 232 was incomplete)
+(\end occurred when \ifmmode on line 231 was incomplete)
+(\end occurred when \ifmmode on line 229 was incomplete)
+(\end occurred when \ifmmode on line 228 was incomplete)
+(\end occurred when \ifx on line 225 was incomplete)
+(\end occurred when \ifmmode on line 177 was incomplete)
+(\end occurred when \ifmmode on line 142 was incomplete)
+(\end occurred when \ifmmode on line 125 was incomplete)
+(\end occurred when \ifmmode on line 117 was incomplete)
+(\end occurred when \ifmmode on line 116 was incomplete)
+(\end occurred when \ifx on line 104 was incomplete)
+(\end occurred when \iftrue on line 114 was incomplete)
+(\end occurred when \ifnum on line 114 was incomplete)
+(\end occurred when \ifx on line 147 was incomplete)
+(\end occurred when \ifx on line 137 was incomplete)
+(\end occurred when \ifx on line 129 was incomplete)
+(\end occurred when \ifx on line 123 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \iftrue on line 113 was incomplete)
+(\end occurred when \ifnum on line 113 was incomplete)
+(\end occurred when \ifx on line 307 was incomplete)
+(\end occurred when \iftrue on line 112 was incomplete)
+(\end occurred when \ifnum on line 112 was incomplete) 
+Here is how much of TeX's memory you used:
+ 5860 strings out of 493922
+ 89131 string characters out of 3144898
+ 174428 words of memory out of 3000000
+ 8989 multiletter control sequences out of 15000+200000
+ 19252 words of font info for 75 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 30i,16n,33p,733b,762s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Global.dvi (42 pages, 310792 bytes).
