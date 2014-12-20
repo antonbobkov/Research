@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {4}Combinatorics of Ordered Sets}{19}{section.4}
 \contentsline {section}{\numberline {5} The $\omega ^-$ map }{21}{section.5}
 \contentsline {section}{\numberline {6}The Normal Form}{23}{section.6}
-\contentsline {section}{\numberline {7}The Surreals as a Real Closed Field}{34}{section.7}
+\contentsline {section}{\numberline {7}The Surreals as a Real Closed Field}{35}{section.7}
 \contentsline {section}{\numberline {8}Analytic functions on $\mathbf {No}$}{38}{section.8}
 \contentsline {section}{\numberline {9}Power series and Weierstrass Preparation}{38}{section.9}
 \contentsline {section}{\numberline {10}Convergent Power Series }{41}{section.10}
