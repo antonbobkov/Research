@@ -346,7 +346,7 @@ by \eqref{6.1}.
 So $l(a)$ is bigger than all limits - contradiction.
 \end{proof}
 
-\begin{lemma} % ==== Lemma 6.4 ==== 
+\begin{lemma} \label{6.4}% ==== Lemma 6.4 ==== 
 Let $r \in \R, a \in \No$. Then 
 \begin{align*}
 	r\w^a = \{(r - \epsilon) \w^a \mid (r+\epsilon)\w^a\}
@@ -383,7 +383,7 @@ Now use $\w^{a_L} << \w^a << \w^{a_R}$ and cofinality.
 
 \WikiItalic{Case 1}: $\alpha$ is a limit
 \begin{align*}
-	&\sum_{i \leq \alpha} f_i\w^{a_i} = \sum_{i < \alpha} f_i\w^{a_i} + f_\alpha\w^{a_\alpha} = \\ \underset{(6.4)}{=}
+	&\sum_{i \leq \alpha} f_i\w^{a_i} = \sum_{i < \alpha} f_i\w^{a_i} + f_\alpha\w^{a_\alpha} = \\ \underset{\eqref{6.4}}{=}
 	&\curly{\sum_{i < \beta} f_i \w^{a_i} + (f_\beta - \epsilon)\w^{a_\beta} \mid
 	\sum_{i < \beta} f_i \w^{a_i} + (f_\beta + \epsilon)\w^{a_\beta}}_{\beta < \alpha, \epsilon \in \R^{>0}}
 	+ \curly{(r - \epsilon) \w^\alpha \mid (r+\epsilon)\w^\alpha} = \\ =
