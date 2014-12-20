@@ -135,7 +135,7 @@ Remark: suppose $\phi: S \rightarrow T$ is a \WikiItalic{strictly} increasing ma
 
 Application: Let $\Gamma=(\Gamma, \leq, +)$ be a totally ordered abelian group.
 
-\begin{corollary} % ====Corollary 4.5==== 
+\begin{corollary} \label{4.5} % ====Corollary 4.5==== 
 Let $A, B$ be subsets of $\Gamma$ which are well-ordered. Then $A \cup B$ is well-ordered, and the set $A+B=\{\alpha + \beta | \alpha \in A, \beta \in B\}$ is well-ordered, and for every $\gamma \in A+B$, there are only finitely many $(\alpha, \beta) \in A \times B$ with $\gamma = \alpha + \beta$.
  \end{corollary}
 
@@ -151,4 +151,4 @@ We have the map $A^\diamond \rightarrow <A>, \alpha_1...\alpha_n \rightarrow \al
 
 \subsection*{Hahn Fields}
 
-Let $k$ be a field, $\Gamma$ an ordered abelian group. Define $K=k((t^\Gamma))$ to be the set of all formal series $f(t)=\sum_{\gamma \in \Gamma} f_\gamma t^\gamma (f_\gamma \in k)$, whose \WikiItalic{support} supp$f=\{\gamma \in \Gamma: f_\gamma \neq 0\}$ is \WikiItalic{well-ordered}. Using (4.5), we can now define $f+g=\sum_{\gamma} (f_\gamma + g_\gamma)t^\gamma,$ and $f*g= \sum_{\gamma} (\sum_{\alpha+\beta=\gamma} f_\alpha * g_\beta)t^\gamma$. $K$ is an integral domain, and $k$ includes into $K$ by $a \rightarrow a*t^0$. We will show $K$ is actually a field.
+Let $k$ be a field, $\Gamma$ an ordered abelian group. Define $K=k((t^\Gamma))$ to be the set of all formal series $f(t)=\sum_{\gamma \in \Gamma} f_\gamma t^\gamma (f_\gamma \in k)$, whose \WikiItalic{support} supp$f=\{\gamma \in \Gamma: f_\gamma \neq 0\}$ is \WikiItalic{well-ordered}. Using \eqref{4.5}, we can now define $f+g=\sum_{\gamma} (f_\gamma + g_\gamma)t^\gamma,$ and $f*g= \sum_{\gamma} (\sum_{\alpha+\beta=\gamma} f_\alpha * g_\beta)t^\gamma$. $K$ is an integral domain, and $k$ includes into $K$ by $a \rightarrow a*t^0$. We will show $K$ is actually a field.
