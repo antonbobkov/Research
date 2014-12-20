@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 21:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  19 DEC 2014 21:38
 entering extended mode
 **285D_notes*12_5.tex
 ("C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9\285D_notes 12_5.tex"
@@ -710,7 +710,7 @@ Package amsthm Warning: Unknown theoremstyle `theorem' on input line 27.
 Package amsthm Warning: Unknown theoremstyle `empty' on input line 42.
 
 \c@namedtheorem=\count134
-No file 285D_notes*12_5.aux.
+("C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9\285D_notes 12_5.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
@@ -725,6 +725,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 55.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 55.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
@@ -854,8 +855,8 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 155.
  [4] ("C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9\285D_notes 12_5.aux") ) 
 Here is how much of TeX's memory you used:
- 11569 strings out of 493922
- 210116 string characters out of 3144898
+ 11571 strings out of 493922
+ 210274 string characters out of 3144898
  259011 words of memory out of 3000000
  14609 multiletter control sequences out of 15000+200000
  63418 words of font info for 59 fonts, out of 3000000 for 9000
