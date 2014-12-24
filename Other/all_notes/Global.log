@@ -388,4 +388,326 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
 (C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count115
-\pgfma
+\pgfmatrixcurrentcolumn=\count116
+\pgf@matrix@numberofcolumns=\count117
+)
+\tikz@expandcount=\count118
+
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\tikz-qtree\pgftree.sty
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\tikz-qtree\pgfsubpic.sty
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\generic\tikz-qtree\pgfsubpic.tex
+\pgf@subpicminx=\dimen160
+\pgf@subpicminy=\dimen161
+\pgf@subpicmaxx=\dimen162
+\pgf@subpicmaxy=\dimen163
+))
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\generic\tikz-qtree\pgftree.tex
+\levelsep=\dimen164
+\subtreesep=\dimen165
+\smuggle@levelsep=\dimen166
+\smuggle@subtreesep=\dimen167
+\this@levelsep=\dimen168
+\this@subtreesep=\dimen169
+\pgftree@childx=\dimen170
+\pgftree@savechildx=\dimen171
+\pgftree@childy=\dimen172
+\pgftree@savechildy=\dimen173
+\pgftree@childi=\count119
+\pgftree@savechildi=\count120
+\pgftree@level=\count121
+\pgftree@depth=\dimen174
+\pgf@subpic@hbox@children=\box39
+\pgf@subpic@minx@children=\dimen175
+\pgf@subpic@miny@children=\dimen176
+\pgf@subpic@maxx@children=\dimen177
+\pgf@subpic@maxy@children=\dimen178
+\pgftree@lastchildx=\dimen179
+\pgftree@lastchildy=\dimen180
+))
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\generic\tikz-qtree\tikz-qtree.tex
+\@result=\toks39
+\child@list=\toks40
+\root@node=\toks41
+))
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\dstroke\dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 49.
+
+\c@theorem=\count122
+
+Package amsthm Warning: Unknown theoremstyle `empty' on input line 74.
+
+\c@namedtheorem=\count123
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks42
+\inpenc@posthook=\toks43
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin9.def"
+File: latin9.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count124
+\Gm@cntv=\count125
+\c@Gm@tempcnt=\count126
+\Gm@bindingoffset=\dimen181
+\Gm@wd@mp=\dimen182
+\Gm@odd@mp=\dimen183
+\Gm@even@mp=\dimen184
+\Gm@layoutwidth=\dimen185
+\Gm@layoutheight=\dimen186
+\Gm@layouthoffset=\dimen187
+\Gm@layoutvoffset=\dimen188
+\Gm@dimlist=\toks44
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\units\units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip50
+\L@UnitsRaiseTextstyle=\skip51
+\L@UnitsRaiseScriptstyle=\skip52
+))
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\xargs\xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+\XKV@depth=\count127
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+\xargs@max=\count128
+\xargs@toksa=\toks47
+\xargs@toksb=\toks48
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+
+! Package babel Error: You haven't specified a language option.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...ry to proceed from here, type x to quit.}
+                                                  
+You need to specify a language, either as a global option
+or as an optional argument to the \usepackage command; 
+You shouldn't try to proceed from here, type x to quit.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count129
+\U@D=\dimen189
+))
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+
+! Package babel Error: You haven't loaded the option english yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language{english}
+                             
+You may proceed, but expect unexpected results
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+) (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+ ABD: EveryShipout initializing macros
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 19.0945pt and more to the right margin.
+
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=624.25346pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=13.08827pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+! Package babel Error: You haven't loaded the option english yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \begin{document}
+                      
+You may proceed, but expect unexpected results
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 137.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 137.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.toc
+
+! Package babel Error: You haven't loaded the option english yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \select@language {english}
+                              
+You may proceed, but expect unexpected results
+
+)
+\tf@toc=\write4
+ [1
+
+] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex [46
+
+
+
+
+
+
+
+
+
+
+]) [47]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+
+! Package babel Error: You haven't loaded the option english yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language{english}
+                             
+You may proceed, but expect unexpected results
+
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 13162 strings out of 493922
+ 257086 string characters out of 3144899
+ 310856 words of memory out of 3000000
+ 16079 multiletter control sequences out of 15000+200000
+ 17745 words of font info for 52 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 62i,11n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Global.dvi (3 pages, 22860 bytes).
