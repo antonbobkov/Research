@@ -48,24 +48,31 @@
 % \swapnumbers
 \theoremstyle{theorem}            %bold title, italicized font
 \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{thm*}[theorem]{\protect\theoremname}
 
 \newtheorem{claim}[theorem]{Claim}
+  \newtheorem{claim*}[theorem]{\protect\claimname}
 
 \newtheorem{lem}[theorem]{Lemma}
 \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{lem*}[theorem]{\protect\lemmaname}
 
 \theoremstyle{definition}           %bold title, regular font
 \newtheorem{example}[theorem]{Example}
 
 \newtheorem{defn}[theorem]{Definition}
 \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{defn*}[theorem]{\protect\definitionname}
 
 \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{prop*}[theorem]{\protect\propositionname}
 
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{cor}[theorem]{Corollary}
+  \newtheorem{cor*}[theorem]{\protect\corollaryname}
 
 \newtheorem{exercise}[theorem]{Exercise}
+  \newtheorem{xca*}[theorem]{\protect\exercisename}
 \newtheorem*{problem}{Problem}
 \newtheorem{warning}[theorem]{Warning}
 \newtheorem*{solution}{Solution}
@@ -110,20 +117,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 %\numberwithin{equation}{section}
 %\numberwithin{figure}{section}
-  \theoremstyle{definition}
-  \newtheorem{defn*}[theorem]{\protect\definitionname}
-  \theoremstyle{definition}
-  \newtheorem{xca*}[theorem]{\protect\exercisename}
-  \theoremstyle{plain}
-  \newtheorem{lem*}[theorem]{\protect\lemmaname}
-  \theoremstyle{plain}
-  \newtheorem{cor*}[theorem]{\protect\corollaryname}
-  \theoremstyle{plain}
-  \newtheorem{thm*}[theorem]{\protect\theoremname}
-  \theoremstyle{plain}
-  \newtheorem{prop*}[theorem]{\protect\propositionname}
-  \theoremstyle{remark}
-  \newtheorem{claim*}[theorem]{\protect\claimname}
+
 
 %\makeatother
 
