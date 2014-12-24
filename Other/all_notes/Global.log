@@ -535,28 +535,7 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-) (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
@@ -620,22 +599,810 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.toc)
 \tf@toc=\write4
  [1
-! I can't write on file `Global.dvi'.
-Please type another file name for output
-! Emergency stop.
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.141 ...hn_susice_surreal_numbers_notes_fall2014}
-                                                  
-*** (job aborted, file error in nonstop mode)
 
- 
+]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex [2
+
+
+
+
+
+
+
+
+
+
+]) [3]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.tex
+
+! LaTeX Error: Environment prop* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \begin{prop*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{prop*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 $S\left[T\right]$.\end{prop*}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<argument> \del 
+                f
+l.95 \frac{\del f}{\del x_{k}}
+                              \left(b\right)=\lim_{h\lto0}\frac{f\left(b+he_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \del 
+                x_{k}
+l.95 \frac{\del f}{\del x_{k}}
+                              \left(b\right)=\lim_{h\lto0}\frac{f\left(b+he_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4
+
+
+]
+! Undefined control sequence.
+<argument> \del 
+                ^{i}f
+l.106 ...{1}{i!}\left(\frac{\del^{i}f}{\del X^{i}}
+                                                  \right)\left(a\right)X^{i}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \del 
+                X^{i}
+l.106 ...{1}{i!}\left(\frac{\del^{i}f}{\del X^{i}}
+                                                  \right)\left(a\right)X^{i}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 112.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 112.
+
+! Undefined control sequence.
+<recently read> \an 
+                    
+l.117 $\an
+          \left(\u\right)$ has an $\R$-algebra structure. If $f\in\an\left(\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.117 ...as an $\R$-algebra structure. If $f\in\an
+                                                  \left(\u\right)$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \del 
+                f
+l.118 then $\frac{\del f}{\del X_{i}}
+                                     \in\an\left(\u\right).$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \del 
+                X_{i}
+l.118 then $\frac{\del f}{\del X_{i}}
+                                     \in\an\left(\u\right).$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.118 then $\frac{\del f}{\del X_{i}}\in\an
+                                           \left(\u\right).$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.122 \an
+         \left(\u\right) & \lto & \R\left\{ X\right\} .\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment prop* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 \begin{prop*}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \an 
+                    
+l.128 above is injective. In particular, $\an
+                                             \left(\u\right)$ is an integral
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{prop*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 domain.\end{prop*}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.131 (11.3) If $\u$ is connected, $f,g\in\an
+                                             \left(\u\right)$ agree on
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment prop* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.133 \begin{prop*}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.134 (11.4) Let $f_{1},...,f_{n}\in\an
+                                       \left(\u\right)$, $\v\subset\R^{n}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.137 Then for any $g\in\an
+                           \left(\v\right)$ we have $g\circ f\in\an\left(\u\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.137 ...n\left(\v\right)$ we have $g\circ f\in\an
+                                                  \left(\u\right)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{prop*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.143 \end{prop*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.144 (11.5) \uline
+                   {Notation}: For $x=\left(x_{1},...,x_{m}\right)\in\R^{m}$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Double superscript.
+l.175 ...t\{ f_{j}\left(X\right)\right\} _{j\in\N^
+                                                  {n}}$
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+[5]
+! Double superscript.
+l.183 ...llowing, $i$ ranges over elements of $\N^
+                                                  {n}$ s.t $\left|i\right|\l...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+! Double superscript.
+l.184 and $j$ over elements of $\N^
+                                   {n}$ s.t $\left|j\right|>d$. \\
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+
+! LaTeX Error: Environment claim* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 \begin{claim*}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{claim*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 with $f_{i},g_{ij}$.\end{claim*}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[6]
+
+! LaTeX Error: Environment claim* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.256 \begin{claim*}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{claim*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260 ...bda_{n-1}Y_{n},Y_{n}\right)$.\end{claim*}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \I 
+                   
+l.274 ...ver $I^{\Gamma\left(i\right)}$, where $\I
+                                                  =\left[-1,1\right]$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.277 \I
+        ^{\Gamma\left(i\right)}\subset\bigcup_{c\in C\left(i\right)}B_{\epsi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 323.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 326.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 330.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 330.
+
+Missing character: There is no Š in font cmr10!
+Missing character: There is no Š in font cmr10!
+[7]
+! Undefined control sequence.
+l.335 Call $f\colon\I
+                     ^{m}\lto\R$ analytic if it extends to an analytic
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \I 
+                   
+l.336 function on an open nbhd of $\I
+                                     ^{m}$. Let $\L_{a}$ be the language
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 336.
+
+Missing character: There is no Š in font cmr10!
+! Undefined control sequence.
+l.338 analytic $f\colon\I
+                         ^{m}\lto\R$ with $f\left(\I^{m}\right)\subset\I$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.338 ...tic $f\colon\I^{m}\lto\R$ with $f\left(\I
+                                                  ^{m}\right)\subset\I$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.338 ...to\R$ with $f\left(\I^{m}\right)\subset\I
+                                                  $.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \I 
+                   
+l.339 We consider $\I
+                     $ as an $\L_{a}$-structure.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 339.
+
+Missing character: There is no Š in font cmr10!
+! Undefined control sequence.
+<recently read> \D 
+                   
+l.340 Define $\D
+                \colon\I^{2}\lto\I$ by
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.340 Define $\D\colon\I
+                        ^{2}\lto\I$ by
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.340 Define $\D\colon\I^{2}\lto\I
+                                  $ by
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 347.
+
+! Undefined control sequence.
+l.347 Let $\L_{a,\D
+                   }=\L_{a}\cup\left\{ \D\right\} $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 347.
+
+! Undefined control sequence.
+l.347 Let $\L_{a,\D}=\L_{a}\cup\left\{ \D
+                                         \right\} $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr10!
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 349.
+
+! Undefined control sequence.
+l.349 (12.2) The $\L_{a,\D
+                          }$-structure $\I$ has $q.e.$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr10!
+! Undefined control sequence.
+<recently read> \I 
+                   
+l.349 (12.2) The $\L_{a,\D}$-structure $\I
+                                          $ has $q.e.$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 352.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 353.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 353.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 353.
+
+Missing character: There is no Š in font cmr10!
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 354.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 354.
+
+Missing character: There is no Š in font cmr10!
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 355.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 360.
+
+! Undefined control sequence.
+l.360 (e.g. $T=\mathrm{Th}_{\L_{a}}\left(\I
+                                           \right)$ and $T'=\mathrm{Th}_{\L_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr7!
+
+LaTeX Warning: Command \L invalid in math mode on input line 360.
+
+! Undefined control sequence.
+l.360 ...(\I\right)$ and $T'=\mathrm{Th}_{\L_{a,\D
+                                                  }}\left(\I\right)$.)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.360 ...$ and $T'=\mathrm{Th}_{\L_{a,\D}}\left(\I
+                                                  \right)$.)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr7!
+
+LaTeX Warning: Command \L invalid in math mode on input line 362.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 362.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 364.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 365.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 369.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 369.
+
+Missing character: There is no Š in font cmr10!
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 377.
+
+! Undefined control sequence.
+l.377 ...sfied for $T=\mathrm{Th}_{\L_{a}}\left(\I
+                                                  \right)$ and $T'=\mathrm{T...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr7!
+
+LaTeX Warning: Command \L invalid in math mode on input line 377.
+
+! Undefined control sequence.
+l.377 ...(\I\right)$ and $T'=\mathrm{Th}_{\L_{a,\D
+                                                  }}\left(\I\right)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.377 ...$ and $T'=\mathrm{Th}_{\L_{a,\D}}\left(\I
+                                                  \right)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr7!
+
+LaTeX Warning: Command \L invalid in math mode on input line 382.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 382.
+
+! Undefined control sequence.
+l.382 ...$-formula. Then there is a q.f. $\L_{a,\D
+                                                  }$-formula
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr10!
+! Undefined control sequence.
+<recently read> \I 
+                   
+l.386 \item $\I
+               \model\exists y\varphi\left(x,y\right)\longleftrightarrow\exi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \D 
+                   
+l.387 \item In $\hat{\varphi}$, $\D
+                                   $ is only applied to terms not involving
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 395.
+
+Missing character: There is no Š in font cmr10!
+! Undefined control sequence.
+l.395 ...L_{a}$-formula and $\left(a,b\right)\in\I
+                                                  ^{m+n}$, $\eta>0$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 409.
+
+Missing character: There is no Š in font cmr10!
+
+LaTeX Warning: Command \L invalid in math mode on input line 410.
+
+! Undefined control sequence.
+l.410 ...\in\left(0,1\right)$ and a q.f. $\L_{a,\D
+                                                  }$ formula
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr10!
+[8]
+! Undefined control sequence.
+<recently read> \I 
+                   
+l.413 \item $\I
+               \model\exists y\varphi_{\epsilon}\iff\exists z\left(\varphi_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \D 
+                   
+l.414 \item In $\varphi'$, the function symbol $\D
+                                                  $ is applied only to terms
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.421 $f\colon\I
+                ^{m}\lto\I$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.421 $f\colon\I^{m}\lto\I
+                          $.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \L invalid in math mode on input line 430.
+
+! Undefined control sequence.
+l.430 ...m For each $f$ in $\varphi$, an $\L_{a,\D
+                                                  }$-term $t_{\gamma,f}\left...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Š in font cmr10!
+! Undefined control sequence.
+<recently read> \D 
+                   
+l.432 \item $\D
+               $ is only applied to terms involving only $x$ within $t_{f,\g...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.442 \I
+        \model\exists y\varphi\left(\epsilon x,\epsilon y\right)\longleftrig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [9] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13126 strings out of 493922
- 255109 string characters out of 3144899
- 299299 words of memory out of 3000000
- 16071 multiletter control sequences out of 15000+200000
- 15525 words of font info for 49 fonts, out of 3000000 for 9000
+ 13183 strings out of 493922
+ 256055 string characters out of 3144899
+ 307470 words of memory out of 3000000
+ 16117 multiletter control sequences out of 15000+200000
+ 17594 words of font info for 50 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,6n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+ 62i,11n,56p,413b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Global.dvi (9 pages, 64468 bytes).
