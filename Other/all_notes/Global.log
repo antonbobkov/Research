@@ -569,18 +569,18 @@ LaTeX Warning: Label `' multiply defined.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
  ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -614,86 +614,4 @@ Package geometry Warning: The marginal notes overrun the paper.
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 144.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 144.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.toc)
-\tf@toc=\write4
- [1
-
-]
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex [46
-
-
-
-
-
-
-
-
-
-
-]
-
-LaTeX Warning: Reference `9.4' on page 47 undefined on input line 141.
-
-) [47] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.tex [48
-
-
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
- [49] [50] [51]
-Overfull \hbox (11.7525pt too wide) in paragraph at lines 392--396
-[]\T1/cmr/bx/n/10 Lemma 11.21. [][]\T1/cmr/m/it/10 Sup-pose that for each q.f. $\OMS/cmsy/m/n/10 L$\T1/cmr/m/it/10 -form
-ula $\OML/cmm/m/it/10 ' []$\T1/cmr/m/it/10 , $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\T1/cmr/m/it/10 , 
-there is a q.f. $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/it/10 -formula $\OML/cmm/m/it/10 '[]$$[]$
- []
-
-[52]) [53] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_4/g_week_4.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_5/g_week_5.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
-Here is how much of TeX's memory you used:
- 13331 strings out of 493922
- 259069 string characters out of 3144899
- 312697 words of memory out of 3000000
- 16230 multiletter control sequences out of 15000+200000
- 19555 words of font info for 57 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 62i,11n,56p,413b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on Global.dvi (9 pages, 66756 bytes).
+* \@t
