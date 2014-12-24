@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 18:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 18:59
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -462,6 +462,7 @@ LaTeX Warning: Label `' multiply defined.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
+No file week_9/December_3.tex.aux.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
@@ -489,55 +490,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.toc)
 \tf@toc=\write4
+ [1
 
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.108 \includeonly
-                  {week_9/December_3.tex}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.108 \includeonly{week_
-                        9/December_3.tex}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-l.108 \includeonly{week_9/December_3.tex}
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.109 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[1
-
-] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_6/g_week_6.tex [24
-
-
-
-
-
-
-] [25] [26] [27] [28] [29]) [30]
+]
+No file week_9/December_3.tex.tex.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
@@ -548,24 +504,20 @@ you left one out. Proceed, with fingers crossed.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
-No file week_9/December_3.tex.aux.
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 108 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 11722 strings out of 493922
- 237811 string characters out of 3144899
- 273555 words of memory out of 3000000
- 14704 multiletter control sequences out of 15000+200000
- 12520 words of font info for 48 fonts, out of 3000000 for 9000
+ 11716 strings out of 493922
+ 237746 string characters out of 3144899
+ 265561 words of memory out of 3000000
+ 14700 multiletter control sequences out of 15000+200000
+ 11815 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,15n,56p,413b,246s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,6n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (8 pages, 41804 bytes).
+Output written on Global.dvi (1 page, 7072 bytes).
