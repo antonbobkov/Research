@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 21:18
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -645,8 +645,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-]) [47]
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.tex [48
+]
+
+LaTeX Warning: Reference `9.4' on page 47 undefined on input line 141.
+
+) [47] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.tex [48
 
 
 ]
@@ -678,16 +681,19 @@ there is a q.f. $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/it/10 -formula $\OML/cmm/m/it/10
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13330 strings out of 493922
- 259064 string characters out of 3144899
+ 13331 strings out of 493922
+ 259069 string characters out of 3144899
  312697 words of memory out of 3000000
- 16229 multiletter control sequences out of 15000+200000
+ 16230 multiletter control sequences out of 15000+200000
  19555 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,11n,56p,413b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (9 pages, 66776 bytes).
+Output written on Global.dvi (9 pages, 66756 bytes).
