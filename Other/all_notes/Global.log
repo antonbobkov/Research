@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 21:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 21:37
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -695,10 +695,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--283
 
 ] [52] [53]
 [54]
-Overfull \hbox (11.7525pt too wide) in paragraph at lines 392--396
-[]\T1/cmr/bx/n/10 Lemma 11.12. [][]\T1/cmr/m/it/10 Sup-pose that for each q.f. $\OMS/cmsy/m/n/10 L$\T1/cmr/m/it/10 -form
-ula $\OML/cmm/m/it/10 ' []$\T1/cmr/m/it/10 , $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\T1/cmr/m/it/10 , 
-there is a q.f. $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/it/10 -formula $\OML/cmm/m/it/10 '[]$$[]$
+Overfull \hbox (6.0039pt too wide) in paragraph at lines 395--399
+[]\T1/cmr/bx/n/10 Lemma 12.4. [][]\T1/cmr/m/it/10 Sup-pose that for each q.f. $\OMS/cmsy/m/n/10 L$\T1/cmr/m/it/10 -formu
+la $\OML/cmm/m/it/10 ' []$\T1/cmr/m/it/10 , $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\T1/cmr/m/it/10 , t
+here is a q.f. $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/it/10 -formula $\OML/cmm/m/it/10 '[]$$[]$
  []
 
 [55]) [56] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.tex [57
@@ -722,12 +722,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13942 strings out of 493922
- 270798 string characters out of 3144899
- 330854 words of memory out of 3000000
- 16803 multiletter control sequences out of 15000+200000
- 32868 words of font info for 94 fonts, out of 3000000 for 9000
+ 13937 strings out of 493922
+ 270734 string characters out of 3144899
+ 330849 words of memory out of 3000000
+ 16798 multiletter control sequences out of 15000+200000
+ 31686 words of font info for 89 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,16n,76p,747b,945s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (59 pages, 385708 bytes).
+Output written on Global.dvi (59 pages, 386072 bytes).

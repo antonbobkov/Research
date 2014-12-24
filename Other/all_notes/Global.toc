@@ -10,4 +10,5 @@
 \contentsline {section}{\numberline {9}Power series and Weierstrass Preparation}{41}
 \contentsline {section}{\numberline {10}Convergent Power Series }{44}
 \contentsline {section}{\numberline {11}Restricted Analytic Functions}{50}
-\contentsline {section}{\numberline {12} Siddharth's extra lectures }{57}
+\contentsline {section}{\numberline {12}Quantifier elimination for $\mathbb {R}_{an}$.}{55}
+\contentsline {section}{\numberline {13} Siddharth's extra lectures }{57}
