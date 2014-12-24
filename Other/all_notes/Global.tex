@@ -96,6 +96,39 @@
 \newcommand{\WikiBold}[1]{\textbf{#1}}
 \newcommand{\WikiBoldItalic}[1]{\emph{#1}}
 
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=2cm,rmargin=2cm}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{units}
+\usepackage{xargs}[2008/03/08]
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+ \theoremstyle{definition}
+ \newtheorem*{defn*}{\protect\definitionname}
+  \theoremstyle{definition}
+  \newtheorem*{xca*}{\protect\exercisename}
+  \theoremstyle{plain}
+  \newtheorem*{lem*}{\protect\lemmaname}
+  \theoremstyle{plain}
+  \newtheorem*{cor*}{\protect\corollaryname}
+  \theoremstyle{plain}
+  \newtheorem*{thm*}{\protect\theoremname}
+
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\corollaryname}{Corollary}
+  \providecommand{\definitionname}{Definition}
+  \providecommand{\exercisename}{Exercise}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\theoremname}{Theorem}
+
 \includeonly{week_9/December_3}
 
 \title{Notes on Surreal Numbers \\ Math 285: Fall 2014}
