@@ -8,9 +8,14 @@ A level-1 auxiliary file: week_6/g_week_6.aux
 A level-1 auxiliary file: week_7/285D_notes_nov_17_18_21.aux
 A level-1 auxiliary file: week_8/g_week_8.aux
 A level-1 auxiliary file: week_9/g_week_9.aux
+I couldn't open auxiliary file week_9/December_3.tex.aux
+---line 11 of file Global.aux
+ : \@input{week_9/December_3.tex.aux
+ :                                  }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: week_10/g_week_10.aux
 A level-1 auxiliary file: week_11/g_week_11.aux
 I found no \citation commands---while reading file Global.aux
 I found no \bibdata command---while reading file Global.aux
 I found no \bibstyle command---while reading file Global.aux
-(There were 3 error messages)
+(There were 4 error messages)
