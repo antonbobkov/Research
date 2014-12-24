@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 18:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 19:00
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -462,7 +462,7 @@ LaTeX Warning: Label `' multiply defined.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
-No file week_9/December_3.tex.aux.
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
@@ -493,8 +493,1127 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 ]
-No file week_9/December_3.tex.tex.
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex
+
+! LaTeX Error: Environment defn* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{defn*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \C 
+                   
+l.2 (10.4) $\C
+              \left\{ X\right\} =\bigcup_{r}\C\left\{ X\right\} _{r}$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 (10.4) $\C\left\{ X\right\} =\bigcup_{r}\C
+                                              \left\{ X\right\} _{r}$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \C 
+                   
+l.3 $\C
+       \left\{ X\right\} $ is a subring of $\C\left[\left[X\right]\right]$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \C 
+                   
+l.3 $\C\left\{ X\right\} $ is a subring of $\C
+                                              \left[\left[X\right]\right]$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \C 
+                   
+l.4 containing $\C
+                  \left[X\right]$, called the ring of convergent power
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{defn*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 series in $X$.\end{defn*}
+                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment xca* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{xca*}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \C 
+                   
+l.8 in $\C
+          \left\{ X\right\} _{r}$ such that $\mathrm{ord}\left(f_{j}\right)\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.8 ...ch that $\mathrm{ord}\left(f_{j}\right)\lto
+                                                  \infty$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 so $\sum_{j\in J}\in\C
+                          \left[\left[X\right]\right]$ exists. Then $\left\V...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.10 ...ht\Vert <\infty$, then $\sum_{j}f_{j}\in\C
+                                                  \left\{ X\right\} _{r}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{xca*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 and\end{xca*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment lem* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \begin{lem*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.17 (10.6) (Abel) Let $f\in\C
+                              \left[\left[X\right]\right]$, $s\in\left(\R^{>...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 Then $f\in\C
+                 \left\{ X\right\} _{r}$ for all $r<s$.\end{lem*}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{lem*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...{ X\right\} _{r}$ for all $r<s$.\end{lem*}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.22 ..._{i}\right|s^{i}\prod_{k<m}\left(\nicefrac
+                                                  {r_{k}}{s_{k}}\right)^{i_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 ...}}\leq L\sum_{i}\prod_{k<m}\left(\nicefrac
+                                                  {r_{k}}{s_{k}}\right)^{i_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment cor* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{cor*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.26 (10.7) $f\in\C
+                   \left\{ X\right\} $ if and only if $\exists s,L$ s.t
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{cor*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 ...f_{i}\right|s^{i}\leq L\right)$.\end{cor*}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment lem* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \begin{lem*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.29 (10.8) Let $f\in\C
+                       \left\{ X\right\} $, f$\left(0\right)=0$ . Then
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \lto 
+                     
+l.30 ...rt f\right\Vert _{r}\overset{r\lto0}{\lto}
+                                                  0$.\end{lem*}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \lto 
+                
+l.30 ...rt f\right\Vert _{r}\overset{r\lto0}{\lto}
+                                                  0$.\end{lem*}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \lto 
+                
+l.30 ...rt f\right\Vert _{r}\overset{r\lto0}{\lto}
+                                                  0$.\end{lem*}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> r\lto 
+                 0
+l.30 ...rt f\right\Vert _{r}\overset{r\lto0}{\lto}
+                                                  0$.\end{lem*}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{lem*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 ...rt _{r}\overset{r\lto0}{\lto}0$.\end{lem*}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.33 $f\in\C
+            \left\{ X\right\} $). For $r<s$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \lto 
+                     
+l.35 ...r}{s}\right)^{i}}_{\underset{r\lto0}{\lto}
+                                                  0}\overset{r\lto0}{\lto}0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \lto 
+                
+l.35 ...r}{s}\right)^{i}}_{\underset{r\lto0}{\lto}
+                                                  0}\overset{r\lto0}{\lto}0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \lto 
+                
+l.35 ...r}{s}\right)^{i}}_{\underset{r\lto0}{\lto}
+                                                  0}\overset{r\lto0}{\lto}0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> r\lto 
+                 0
+l.35 ...r}{s}\right)^{i}}_{\underset{r\lto0}{\lto}
+                                                  0}\overset{r\lto0}{\lto}0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \lto 
+                     
+l.35 ...rset{r\lto0}{\lto}0}\overset{r\lto0}{\lto}
+                                                  0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \lto 
+                
+l.35 ...rset{r\lto0}{\lto}0}\overset{r\lto0}{\lto}
+                                                  0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \lto 
+                
+l.35 ...rset{r\lto0}{\lto}0}\overset{r\lto0}{\lto}
+                                                  0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> r\lto 
+                 0
+l.35 ...rset{r\lto0}{\lto}0}\overset{r\lto0}{\lto}
+                                                  0.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment cor* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \begin{cor*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \C 
+                   
+l.39 (10.9) $\C
+               \left\{ X\right\} ^{\times}=\left\{ f\in\C\left\{ X\right\} ;...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.39 ...\left\{ X\right\} ^{\times}=\left\{ f\in\C
+                                                  \left\{ X\right\} ;\, f\le...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{cor*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ... f\left(0\right)\neq0\right\} $.\end{cor*}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.41 ...t"$ is clear. For $"\supset"$, let $f\in\C
+                                                  \left\{ X\right\} $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.43 where $g\in\C
+                  \left\{ X\right\} $, $g\left(0\right)=0$. Then $h=1+g+g^{2...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.44 We have already seen that $h\in\C
+                                      \left[\left[X\right]\right]$ and
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.45 ...-1}$. So we only need to show that $h\in\C
+                                                  \left\{ X\right\} $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.46 By (10.8), for small enough $r$, $\norm
+                                            [g]_{r}<1$. So by (10.5),
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.47 $\norm
+           [h]_{r}\leq\sum_{k\neq0}^{\infty}\norm[g]_{r}^{k}<\infty$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 $\norm[h]_{r}\leq\sum_{k\neq0}^{\infty}\norm
+                                                 [g]_{r}^{k}<\infty$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 hence $h\in\C
+                  \left\{ X\right\} _{r}$.\end{proof}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment lem* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \begin{lem*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.50 (10.10) Let $g_{1},...,g_{n}\in\C
+                                      \left\{ Y\right\} $ have constant
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.51 term zero. Then for each $f\in\C
+                                     \left\{ X\right\} $ we have $f\left(g_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.51 ...e have $f\left(g_{1},...,g_{m}\right)\in\C
+                                                  \left\{ Y\right\} $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.52 Moreover, for $r,s$ small enough, $f\in\C
+                                              \left\{ X\right\} _{r}$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 $g_{j}\in\C
+                \left\{ Y\right\} _{s}$, for any $y\in\bar{D}_{s}\left(0\rig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{lem*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{lem*}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment thm* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \begin{thm*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.62 (10.11) Let $f,g\in\C
+                          \left\{ X,T\right\} $ with $f$ regular of order
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.63 $d$. Then $g=Qf+R$ with $Q\in\C
+                                    \left\{ X,T\right\} $ and $R\in\C\left\{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.63 ...h $Q\in\C\left\{ X,T\right\} $ and $R\in\C
+                                                  \left\{ X\right\} \left[T\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{thm*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 of degree $<d$.\end{thm*}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.70 ...d}f_{i}T^{i}$ (note that by (10.9) $u\in\C
+                                                  \left\{ X,T\right\} $).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.74 ...$r=\left(r_{1},...,r_{m+1}\right)$, $\norm
+                                                  [g]_{r}$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.75 $\norm
+           [u^{-1}]_{r}$, \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.76 $\norm
+           [f_{0}]_{r'}$,...,$\norm[f_{d-1}]_{r'}<\infty$. Thus
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.76 $\norm[f_{0}]_{r'}$,...,$\norm
+                                   [f_{d-1}]_{r'}<\infty$. Thus
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.78 \norm
+          [F]_{r}\leq\norm[u^{-1}]_{r}\sum_{i<d}\norm[f_{i}]_{r'}r_{m+1}^{i}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.78 \norm[F]_{r}\leq\norm
+                          [u^{-1}]_{r}\sum_{i<d}\norm[f_{i}]_{r'}r_{m+1}^{i}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.78 ...F]_{r}\leq\norm[u^{-1}]_{r}\sum_{i<d}\norm
+                                                  [f_{i}]_{r'}r_{m+1}^{i}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[46
+
+
+
+
+
+
+
+
+
+
+]
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.80 By (10.8), for each $i$, $\norm
+                                    [f_{i}]_{r'}\lto0$ as $r'\lto0$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.80 ...0.8), for each $i$, $\norm[f_{i}]_{r'}\lto
+                                                  0$ as $r'\lto0$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \lto 
+                     
+l.80 ...h $i$, $\norm[f_{i}]_{r'}\lto0$ as $r'\lto
+                                                  0$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.81 Also, $\norm
+                 [u^{-1}]_{r}$ can only decrease by decreasing $r'$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.82 Thus by decreasing $r'$ we can assume $\norm
+                                                 [F]_{r}\leq r_{m+1}^{d}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \norm 
+                 [F]_{r}
+l.83 ...$\epsilon=\frac{\norm[F]_{r}}{r_{m+1}^{d}}
+                                                  \in\left[0,1\right)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.91 \norm
+          [\tau\left(g\right)]_{r} & \leq & \sum_{i\geq d}\norm[g_{i}]_{r}r_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.91 ...g\right)]_{r} & \leq & \sum_{i\geq d}\norm
+                                                  [g_{i}]_{r}r_{m+1}^{i-d}<r...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.91 ...[g_{i}]_{r}r_{m+1}^{i-d}<r_{m+1}^{-d}\norm
+                                                  [g]_{r};\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.92 \norm
+          [\alpha\left(g\right)]_{r} & \leq & \norm[g]_{r};\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.92 ...m[\alpha\left(g\right)]_{r} & \leq & \norm
+                                                  [g]_{r};\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.93 \norm
+          [\lambda\left(g\right)]_{r} & \leq & \norm[\tau\left(g\right)]_{r}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 ...[\lambda\left(g\right)]_{r} & \leq & \norm
+                                                  [\tau\left(g\right)]_{r}\n...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 ... \leq & \norm[\tau\left(g\right)]_{r}\norm
+                                                  [F]_{r}\leq r_{m+1}^{-d}\n...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 ...ht)]_{r}\norm[F]_{r}\leq r_{m+1}^{-d}\norm
+                                                  [g]_{r}\norm[F]_{r}\leq\ep...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 ...m[F]_{r}\leq r_{m+1}^{-d}\norm[g]_{r}\norm
+                                                  [F]_{r}\leq\epsilon\norm[g...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 ...}\norm[g]_{r}\norm[F]_{r}\leq\epsilon\norm
+                                                  [g]_{r}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.99 Inductively, $\norm
+                        [\lambda^{n}\left(g\right)]_{r}\leq\epsilon^{n}\norm...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.99 ...n}\left(g\right)]_{r}\leq\epsilon^{n}\norm
+                                                  [g]_{r}$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.100 hence $\norm
+                  [\tau\left(\lambda^{n}\left(g\right)\right)]\leq\norm[g]\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.100 ...lambda^{n}\left(g\right)\right)]\leq\norm
+                                                  [g]\epsilon^{n}r_{m+1}^{-d}$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.101 $\norm
+            [\alpha\left(\lambda^{n}\left(g\right)\right)]_{r}\leq\norm[g]\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.101 ...da^{n}\left(g\right)\right)]_{r}\leq\norm
+                                                  [g]\epsilon^{n}$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.104 Furthermore $\norm
+                        [Q]_{r}\leq\sum_{n}\norm[\tau\left(\lambda^{n}\left(...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.104 Furthermore $\norm[Q]_{r}\leq\sum_{n}\norm
+                                                [\tau\left(\lambda^{n}\left(...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.104 ...da^{n}\left(g\right)\right)]_{r}\leq\norm
+                                                  [g]_{r}r_{m+1}^{-d}\sum_{n...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \norm 
+                      
+l.105 $\norm
+            [R]\leq\sum_{n}\norm[\alpha\left(\lambda^{n}\left(g\right)\right...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.105 $\norm[R]\leq\sum_{n}\norm
+                                [\alpha\left(\lambda^{n}\left(g\right)\right...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.105 ...lambda^{n}\left(g\right)\right)]\leq\norm
+                                                  [g]\sum\epsilon^{n}<\infty$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.107 Thus $Q,R\in\C
+                    \left\{ X,T\right\} $. Note that by definition $R\in\C\l...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.107 ...ight\} $. Note that by definition $R\in\C
+                                                  \left[\left[X\right]\right...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.108 is of degree $d$, hence $R\in\C
+                                     \left\{ X\right\} \left[T\right]$.\end{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment cor* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109 \begin{cor*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.112 Let $f\in\C
+                 \left\{ X,T\right\} $ be regular in $T$. Then $f=uW$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.113 where $u\in\C
+                   \left\{ X,T\right\} ^{\times}$ and $W\in\C\left\{ X\right...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.113 ...left\{ X,T\right\} ^{\times}$ and $W\in\C
+                                                  \left\{ X\right\} \left[T\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{cor*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 of degree $d$.\end{cor*}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [47] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
@@ -504,7 +1623,7 @@ No file week_9/December_3.tex.tex.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_7/285D_notes_nov_17_18_21.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex.aux)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
 
@@ -512,12 +1631,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 11716 strings out of 493922
- 237746 string characters out of 3144899
- 265561 words of memory out of 3000000
- 14700 multiletter control sequences out of 15000+200000
- 11815 words of font info for 46 fonts, out of 3000000 for 9000
+ 11736 strings out of 493922
+ 238161 string characters out of 3144899
+ 276848 words of memory out of 3000000
+ 14714 multiletter control sequences out of 15000+200000
+ 12161 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,6n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (1 page, 7072 bytes).
+Output written on Global.dvi (3 pages, 20816 bytes).
