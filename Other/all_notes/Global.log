@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:05
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -514,6 +514,18 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 \xargs@toksa=\toks47
 \xargs@toksb=\toks48
 )
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\ulem\ulem.sty
+\UL@box=\box40
+\UL@hyphenbox=\box41
+\UL@skip=\skip53
+\UL@hook=\toks49
+\UL@height=\dimen189
+\UL@pe=\count129
+\UL@pixel=\dimen190
+\ULC@box=\box42
+Package: ulem 2012/05/18
+\ULdepth=\dimen191
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
@@ -528,8 +540,8 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count129
-\U@D=\dimen189
+\babel@savecnt=\count130
+\U@D=\dimen192
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -557,18 +569,18 @@ LaTeX Warning: Label `' multiply defined.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
  ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -608,11 +620,11 @@ Package geometry Warning: The marginal notes overrun the paper.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 144.
+LaTeX Font Info:    Try loading font information for U+msa on input line 145.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 144.
+LaTeX Font Info:    Try loading font information for U+msb on input line 145.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -645,17 +657,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
-
-! Undefined control sequence.
-l.172 (11.5) \uline
-                   {Notation}: For $x=\left(x_{1},...,x_{m}\right)\in\R^{m}$,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[49] [50] [51]
+ [49] [50] [51]
 Overfull \hbox (12.13571pt too wide) in paragraph at lines 392--396
 []\T1/cmr/bx/n/10 Lemma. [][]\T1/cmr/m/it/10 (12.7) Sup-pose that for each q.f. $\OMS/cmsy/m/n/10 L$\T1/cmr/m/it/10 -for
 mula $\OML/cmm/m/it/10 ' []$\T1/cmr/m/it/10 , $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\T1/cmr/m/it/10 ,
@@ -680,12 +682,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13223 strings out of 493922
- 258079 string characters out of 3144899
- 311348 words of memory out of 3000000
- 16127 multiletter control sequences out of 15000+200000
- 19449 words of font info for 56 fonts, out of 3000000 for 9000
+ 13304 strings out of 493922
+ 258894 string characters out of 3144899
+ 312426 words of memory out of 3000000
+ 16203 multiletter control sequences out of 15000+200000
+ 19555 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,11n,56p,413b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (9 pages, 66716 bytes).
+Output written on Global.dvi (9 pages, 66748 bytes).
