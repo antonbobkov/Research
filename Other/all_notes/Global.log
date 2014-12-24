@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:25
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -526,6 +526,14 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 Package: ulem 2012/05/18
 \ULdepth=\dimen191
 )
+\c@defn*=\count130
+\c@xca*=\count131
+\c@lem*=\count132
+\c@cor*=\count133
+\c@thm*=\count134
+\c@prop*=\count135
+\c@claim*=\count136
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
@@ -540,7 +548,7 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count130
+\babel@savecnt=\count137
 \U@D=\dimen192
 )
 \l@canadian = a dialect from \language\l@american 
@@ -676,12 +684,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13323 strings out of 493922
- 259011 string characters out of 3144899
- 312578 words of memory out of 3000000
- 16222 multiletter control sequences out of 15000+200000
+ 13351 strings out of 493922
+ 259209 string characters out of 3144899
+ 312716 words of memory out of 3000000
+ 16250 multiletter control sequences out of 15000+200000
  19555 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,11n,56p,413b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,56p,413b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (9 pages, 66600 bytes).
+Output written on Global.dvi (9 pages, 66704 bytes).
