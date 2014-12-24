@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 19:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 19:45
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -555,8 +555,7 @@ LaTeX Warning: Label `' multiply defined.
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_8/g_week_8.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/g_week_9.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/g_week_10.aux)
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
@@ -2460,12 +2459,12 @@ l.122 \an\left(\u\right) & \lto &
                                   \R\left\{ X\right\} .\\
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 13165 strings out of 493922
- 255740 string characters out of 3144899
- 308281 words of memory out of 3000000
- 16100 multiletter control sequences out of 15000+200000
- 17745 words of font info for 52 fonts, out of 3000000 for 9000
+ 13149 strings out of 493922
+ 255392 string characters out of 3144899
+ 307698 words of memory out of 3000000
+ 16094 multiletter control sequences out of 15000+200000
+ 16042 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,22n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (2 pages, 16516 bytes).
+Output written on Global.dvi (2 pages, 14904 bytes).
