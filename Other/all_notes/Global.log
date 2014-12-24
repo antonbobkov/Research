@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 20:19
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -657,14 +657,8 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
- [49] [50] [51]
-Overfull \hbox (12.13571pt too wide) in paragraph at lines 392--396
-[]\T1/cmr/bx/n/10 Lemma. [][]\T1/cmr/m/it/10 (12.7) Sup-pose that for each q.f. $\OMS/cmsy/m/n/10 L$\T1/cmr/m/it/10 -for
-mula $\OML/cmm/m/it/10 ' []$\T1/cmr/m/it/10 , $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\T1/cmr/m/it/10 ,
- there is a q.f. $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/it/10 -formula $\OML/cmm/m/it/10 '[]$$[]$
- []
-
-[52]) [53] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
+ [49] [50] [51] [52]) [53]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
@@ -682,12 +676,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13304 strings out of 493922
- 258894 string characters out of 3144899
- 312426 words of memory out of 3000000
- 16203 multiletter control sequences out of 15000+200000
+ 13323 strings out of 493922
+ 259011 string characters out of 3144899
+ 312578 words of memory out of 3000000
+ 16222 multiletter control sequences out of 15000+200000
  19555 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,11n,56p,413b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (9 pages, 66748 bytes).
+Output written on Global.dvi (9 pages, 66592 bytes).
