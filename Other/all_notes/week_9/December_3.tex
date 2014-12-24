@@ -1,33 +1,33 @@
-\begin{definition*}
+\begin{definition}
 (10.4) $\C\left\{ X\right\} =\bigcup_{r}\C\left\{ X\right\} _{r}$.\\
 $\C\left\{ X\right\} $ is a subring of $\C\left[\left[X\right]\right]$
 containing $\C\left[X\right]$, called the ring of convergent power
-series in $X$.\end{definition*}
-\begin{exercise*}
+series in $X$.\end{definition}
+\begin{exercise}
 (10.5) Let $\left\langle f_{j}\right\rangle _{j\in J}$ be a family
 in $\C\left\{ X\right\} _{r}$ such that $\mathrm{ord}\left(f_{j}\right)\lto\infty$,
 so $\sum_{j\in J}\in\C\left[\left[X\right]\right]$ exists. Then $\left\Vert \sum_{j}f_{j}\right\Vert _{r}\leq\sum_{j}\left\Vert f_{j}\right\Vert _{r}$.
 Assume $\sum_{j}\left\Vert f_{j}\right\Vert <\infty$, then $\sum_{j}f_{j}\in\C\left\{ X\right\} _{r}$
-and\end{exercise*}
+and\end{exercise}
 \begin{enumerate}
 \item $\forall\epsilon>0\exists\textrm{finite }I_{\epsilon}\subset J$ s.t
 $\forall\textrm{finite }I_{\epsilon}\subset I\subset J$, $\left\Vert \sum_{j\in J}f_{j}-\sum_{j\in I}f_{j}\right\Vert _{r}<\epsilon$.
 \item $\forall x\in D_{r}\left(0\right)$, $\left(\sum_{j\in J}f_{j}\right)\left(x\right)=\sum_{j\in J}f_{j}\left(x\right)$.\end{enumerate}
-\begin{lemma*}
+\begin{lemma}
 (10.6) (Abel) Let $f\in\C\left[\left[X\right]\right]$, $s\in\left(\R^{>0}\right)^{m}$,
 $L\in\R^{>0}$, s.t $\left|f_{i}\right|s^{i}\leq L$ for all $i$.\\
-Then $f\in\C\left\{ X\right\} _{r}$ for all $r<s$.\end{lemma*}
+Then $f\in\C\left\{ X\right\} _{r}$ for all $r<s$.\end{lemma}
 \begin{proof}
 \[
 \sum_{i}\left|f_{i}\right|r^{i}=\sum_{i}\left|f_{i}\right|s^{i}\prod_{k<m}\left(\nicefrac{r_{k}}{s_{k}}\right)^{i_{k}}\leq L\sum_{i}\prod_{k<m}\left(\nicefrac{r_{k}}{s_{k}}\right)^{i_{k}}=L\prod_{k<m}\left(\underbrace{1+\frac{r_{k}}{s_{k}}+\left(\frac{r_{k}}{s_{k}}\right)^{2}+...}_{=1-\frac{r_{k}}{s_{k}}}\right)<\infty.
 \]
  \end{proof}
-\begin{cor*}
+\begin{cor}
 (10.7) $f\in\C\left\{ X\right\} $ if and only if $\exists s,L$ s.t
-$\forall i\left(\left|f_{i}\right|s^{i}\leq L\right)$.\end{cor*}
-\begin{lemma*}
+$\forall i\left(\left|f_{i}\right|s^{i}\leq L\right)$.\end{cor}
+\begin{lemma}
 (10.8) Let $f\in\C\left\{ X\right\} $, f$\left(0\right)=0$ . Then
-$\left\Vert f\right\Vert _{r}\overset{r\lto0}{\lto}0$.\end{lemma*}
+$\left\Vert f\right\Vert _{r}\overset{r\lto0}{\lto}0$.\end{lemma}
 \begin{proof}
 Take $s$ s.t $\left\Vert f\right\Vert _{s}<\infty$ (exists since
 $f\in\C\left\{ X\right\} $). For $r<s$, 
@@ -35,8 +35,8 @@ $f\in\C\left\{ X\right\} $). For $r<s$,
 \left\Vert f\right\Vert _{r}=\sum_{i\neq0}\left|f_{i}\right|r^{i}=\underbrace{\sum\left|f_{i}\right|s^{i}}_{=\left\Vert f\right\Vert _{s}}\underbrace{\left(\frac{r}{s}\right)^{i}}_{\underset{r\lto0}{\lto}0}\overset{r\lto0}{\lto}0.
 \]
 \end{proof}
-\begin{cor*}
-(10.9) $\C\left\{ X\right\} ^{\times}=\left\{ f\in\C\left\{ X\right\} ;\, f\left(0\right)\neq0\right\} $.\end{cor*}
+\begin{cor}
+(10.9) $\C\left\{ X\right\} ^{\times}=\left\{ f\in\C\left\{ X\right\} ;\, f\left(0\right)\neq0\right\} $.\end{cor}
 \begin{proof}
 $"\subset"$ is clear. For $"\supset"$, let $f\in\C\left\{ X\right\} $
 with $f\left(0\right)\neq0$. Write $f=f\left(0\right)\left(1-g\right)$
@@ -46,7 +46,7 @@ $h=\left(1-g\right)^{-1}$. So we only need to show that $h\in\C\left\{ X\right\}
 By (10.8), for small enough $r$, $\norm[g]_{r}<1$. So by (10.5),
 $\norm[h]_{r}\leq\sum_{k\neq0}^{\infty}\norm[g]_{r}^{k}<\infty$,
 hence $h\in\C\left\{ X\right\} _{r}$.\end{proof}
-\begin{lemma*}
+\begin{lemma}
 (10.10) Let $g_{1},...,g_{n}\in\C\left\{ Y\right\} $ have constant
 term zero. Then for each $f\in\C\left\{ X\right\} $ we have $f\left(g_{1},...,g_{m}\right)\in\C\left\{ Y\right\} $.
 Moreover, for $r,s$ small enough, $f\in\C\left\{ X\right\} _{r}$,
@@ -55,13 +55,13 @@ $g_{j}\left(y\right)\in\bar{D}_{r}\left(0\right)$ and
 \[
 f\left(g_{1},...,g_{m}\right)\left(y\right)=f\left(g_{1}\left(y\right),...,g_{m}\left(y\right)\right).
 \]
-\end{lemma*}
+\end{lemma}
 \begin{proof}
 Exercise.\end{proof}
-\begin{theorem*}
+\begin{theorem}
 (10.11) Let $f,g\in\C\left\{ X,T\right\} $ with $f$ regular of order
 $d$. Then $g=Qf+R$ with $Q\in\C\left\{ X,T\right\} $ and $R\in\C\left\{ X\right\} \left[T\right]$
-of degree $<d$.\end{theorem*}
+of degree $<d$.\end{theorem}
 \begin{proof}
 We repeat the Weierstrass division theorem, making sure that everything
 converges.\\
@@ -87,11 +87,11 @@ Recall that for
 \tau\left(g\right)=\sum_{i\geq d}g_{i}T^{i-d},\quad\alpha\left(g\right)=\sum_{i<d}g_{i}T^{i},\quad\lambda\left(g\right)=-\tau\left(g\right)F,
 \]
 we have $g=\tau\left(g\right)f+\alpha\left(g\right)+\lambda\left(g\right)$.
-\begin{align*}
+\begin{align}
 \norm[\tau\left(g\right)]_{r} & \leq & \sum_{i\geq d}\norm[g_{i}]_{r}r_{m+1}^{i-d}<r_{m+1}^{-d}\norm[g]_{r};\\
 \norm[\alpha\left(g\right)]_{r} & \leq & \norm[g]_{r};\\
 \norm[\lambda\left(g\right)]_{r} & \leq & \norm[\tau\left(g\right)]_{r}\norm[F]_{r}\leq r_{m+1}^{-d}\norm[g]_{r}\norm[F]_{r}\leq\epsilon\norm[g]_{r}.
-\end{align*}
+\end{align}
 Inductively define $\lambda^{n}\left(g\right)$ according to 
 \[
 \left(\ast\right)\quad\lambda^{n}\left(g\right)=\tau\left(\lambda^{n}\left(g\right)\right)f+\alpha\left(\lambda^{n}\left(g\right)\right)+\lambda^{n+1}\left(g\right).
@@ -106,12 +106,12 @@ $\norm[R]\leq\sum_{n}\norm[\alpha\left(\lambda^{n}\left(g\right)\right)]\leq\nor
 \\
 Thus $Q,R\in\C\left\{ X,T\right\} $. Note that by definition $R\in\C\left[\left[X\right]\right]\left[T\right]$
 is of degree $d$, hence $R\in\C\left\{ X\right\} \left[T\right]$.\end{proof}
-\begin{cor*}
+\begin{corollary}
 (10.12) (Weierstrass preparation)
 
 Let $f\in\C\left\{ X,T\right\} $ be regular in $T$. Then $f=uW$
 where $u\in\C\left\{ X,T\right\} ^{\times}$ and $W\in\C\left\{ X\right\} \left[T\right]$
-of degree $d$.\end{cor*}
+of degree $d$.\end{corollary}
 \begin{proof}
 Same as (9.4), using (10.11) instead of (9.3), so that everything
 converges.\end{proof}
