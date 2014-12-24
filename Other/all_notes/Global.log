@@ -694,11 +694,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--142
 [46] [47]) [48] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex [49
 
 
-]
-
-LaTeX Warning: Reference `9.4' on page 50 undefined on input line 141.
-
-) [50] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.tex [51
+]) [50]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.tex [51
 
 
 ] [52] [53] [54]
@@ -726,19 +723,16 @@ there is a q.f. $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/it/10 -formula $\OML/cmm/m/it/10
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_10/December_8_12.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_11/g_week_11.aux))
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  13950 strings out of 493922
  271272 string characters out of 3144899
- 331138 words of memory out of 3000000
+ 331149 words of memory out of 3000000
  16804 multiletter control sequences out of 15000+200000
  32868 words of font info for 94 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,16n,76p,747b,945s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Global.dvi (59 pages, 385824 bytes).
+Output written on Global.dvi (59 pages, 385892 bytes).
