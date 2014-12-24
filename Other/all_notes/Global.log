@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 19:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  23 DEC 2014 19:13
 entering extended mode
 **Global.tex
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.tex
@@ -523,36 +523,19 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-
-! Package babel Error: You haven't specified a language option.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.149 ...ry to proceed from here, type x to quit.}
-                                                  
-You need to specify a language, either as a global option
-or as an optional argument to the \usepackage command; 
-You shouldn't try to proceed from here, type x to quit.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count129
 \U@D=\dimen189
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 ))
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
-
-! Package babel Error: You haven't loaded the option english yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \select@language{english}
-                             
-You may proceed, but expect unexpected results
-
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux
 
 LaTeX Warning: Label `' multiply defined.
@@ -625,17 +608,6 @@ Package geometry Warning: The marginal notes overrun the paper.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-! Package babel Error: You haven't loaded the option english yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 \begin{document}
-                      
-You may proceed, but expect unexpected results
-
 LaTeX Font Info:    Try loading font information for U+msa on input line 137.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -645,23 +617,12 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 137.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.toc
-
-! Package babel Error: You haven't loaded the option english yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \select@language {english}
-                              
-You may proceed, but expect unexpected results
-
-)
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.toc)
 \tf@toc=\write4
  [1
 
-] (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex [46
+]
+(C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_9/December_3.tex [46
 
 
 
@@ -674,17 +635,6 @@ You may proceed, but expect unexpected results
 
 ]) [47]
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\Global.aux
-
-! Package babel Error: You haven't loaded the option english yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \select@language{english}
-                             
-You may proceed, but expect unexpected results
-
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_1/john_susice_surreal_numbers_notes_fall2014.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_2/g_week_2.aux)
 (C:\Users\Anton\SparkleShare\Research\Other\all_notes\week_3/zach.aux)
@@ -702,10 +652,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13162 strings out of 493922
- 257086 string characters out of 3144899
- 310856 words of memory out of 3000000
- 16079 multiletter control sequences out of 15000+200000
+ 13184 strings out of 493922
+ 257416 string characters out of 3144899
+ 311277 words of memory out of 3000000
+ 16097 multiletter control sequences out of 15000+200000
  17745 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,11n,56p,413b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
