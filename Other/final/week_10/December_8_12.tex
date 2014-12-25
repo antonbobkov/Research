@@ -1,0 +1,471 @@
+\global\long\def\N{\mathbb{N}}
+\global\long\def\Z{\mathbb{Z}}
+\global\long\def\Q{\mathbb{Q}}
+\global\long\def\R{\mathbb{R}}
+\global\long\def\lto{\longrightarrow}
+\global\long\def\es{\emptyset}
+\global\long\def\F{\mathcal{F}}
+\global\long\def\force{\Vdash}
+\global\long\def\dom{\textrm{dom}}
+\global\long\def\em{\prec}
+\global\long\def\cf{\textrm{cf}}
+\global\long\def\model{\vDash}
+\global\long\def\crit{\mathrm{crit}}
+\global\long\def\ult{\mathrm{Ult}}
+\global\long\def\inj{\hookrightarrow}
+\global\long\def\u{\mathcal{U}}
+\global\long\def\dprime{\prime\prime}
+\global\long\def\C{\mathbb{C}}
+\global\long\def\v{\mathcal{V}}
+\global\long\def\w{\mathcal{W}}
+\global\long\def\i{\imath}
+\global\long\def\P{\mathbb{P}}
+\global\long\def\del{\partial}
+\global\long\def\an{\mathrm{An}}
+\global\long\def\I{\mathrm{I}}
+\global\long\def\L{\mathcal{L}}
+\global\long\def\D{\mathcal{D}}
+
+\NotesBy{Notes by Asaaf Sahni}
+\Week{Week 10}
+
+Proving, after all, that $\C\left[\left[X\right]\right]$ is faithfully
+flat over $\C\left\{ X\right\} $.
+
+We do this by induction on the number of variables in $X$. We only
+show that $\C\left[\left[X,T\right]\right]$ is flat over $\C\left\{ X,T\right\} $.\\
+Assume that $\C\left[\left[X\right]\right]$ is flat over $\C\left\{ X\right\} $,
+and consider $\C\left[\left[X,T\right]\right]$ and $\C\left\{ X,T\right\} $.
+\\
+Consider the equation 
+\[
+\left(\ast\right)_{0}\qquad f_{1}y_{1}+...+f_{n}y_{n}=0,\qquad\textrm{where }f_{i}\in\C\left\{ X,T\right\} .
+\]
+We can assume that all $f_{i}$'s are non zero, and regular in $T$.
+\\
+Apply W.P to $f_{i}$ in $\C\left\{ X,T\right\} $, $f_{i}=u_{i}w_{i}$
+where $u_{i}\in\C\left\{ X,T\right\} ^{\times}$ and $w_{i}\in\C\left\{ X\right\} \left[T\right]$
+is monic of degree $d_{i}$. Note that if $\left(y_{1},...,y_{n}\right)$
+is a solution to $\left(\ast\right)_{0}$, then $\left(u_{1}^{-1}y_{1},...,u_{n}^{-1}y_{n}\right)$
+is a solution to 
+\[
+\left(\ast\right)\qquad w_{1}y_{1}+...+w_{n}y_{n}=0.
+\]
+So it is enough to show that each solution to $\left(\ast\right)$
+in $\C\left[\left[X,T\right]\right]$ is a linear combination of solutions
+from $\C\left\{ X,T\right\} $.\\
+Consider $z_{2}=\left(w_{2},-w_{1},0,...,0\right)$, $z_{3}=\left(w_{3},0,-w_{1},0,...,0\right)$,
+... $z_{n}=\left(w_{n},0,...,0,-w_{1}\right)$. Each $z_{i}$ is a
+solution to $\left(\ast\right)$ (and are in $\C\left\{ X,T\right\} $).\\
+Now suppose $y=\left(y_{1},...,y_{n}\right)$ is a solution to $\left(\ast\right)$
+in $\C\left[\left[X,T\right]\right]$. \\
+For each $i$, write $y_{i}=q_{i}w_{1}+r_{i}$ where $q_{i}\in\C\left[\left[X,T\right]\right]$
+and $r_{i}\in\C\left[\left[X\right]\right]\left[T\right]$ of degree
+$<d_{1}$. Note that
+\[
+y+q_{2}z_{2}=\left(\ast,r_{2},y_{3},...,y_{n}\right).
+\]
+Similarly,
+\[
+y+q_{2}z_{2}+...+q_{n}z_{n}=\left(r_{1},r_{2},r_{3},...,r_{n}\right),\textrm{ for some }r_{1}.
+\]
+Let $r=\left(r_{1},...,r_{n}\right)$. $r$ is a solution to $\left(\ast\right)$
+and it is enough to show that $r$ is a linear combination of solutions
+from $\C\left\{ X,T\right\} $.\\
+First we claim that $r_{1}$ is also in $\C\left[\left[X\right]\right]\left[T\right]$.\\
+By $\left(\ast\right)$, $w_{1}r_{1}=-\left(w_{2}r_{2}+...+w_{n}r_{n}\right)$,
+so $w_{1}r_{1}\in\C\left[\left[X\right]\right]\left[T\right]$. By
+division in the ring of polynomials $\C\left[\left[X\right]\right]\left[T\right]$,
+there are some $h,r\in\C\left[\left[X\right]\right]\left[T\right]$
+with $\deg r<d_{1}$ s.t 
+\[
+w_{1}r_{1}=w_{1}h+r.
+\]
+In $\C\left[\left[X,T\right]\right]$, we have
+\[
+w_{1}r_{1}=w_{1}r_{1}+0.
+\]
+Thus by uniqueness of Weierstrass division, we have $r=0$ and $r_{1}=h\in\C\left[\left[X\right]\right]\left[T\right]$. 
+
+So $r\in\left(\C\left[\left[X\right]\right]\left[T\right]\right)^{n}$
+is a solution to $\left(\ast\right)$, and we need to show that $r$
+is a linear combination (over $\C\left[\left[X,T\right]\right]$)
+of solutions from $\C\left\{ X,T\right\} $. We claim that in fact
+$r$ is a linear combination in $\C\left[\left[X\right]\right]\left[T\right]$
+of solutions from $\C\left\{ X\right\} \left[T\right]$. \\
+Recall that, by the inductive hypothesis, $\C\left[\left[X\right]\right]$
+is flat over $\C\left\{ X\right\} $. Thus we have reduced the theorem
+to the following:
+\begin{prop*}
+Suppose $R$ is flat over $S$, then $R\left[T\right]$ is flat over
+$S\left[T\right]$.\end{prop*}
+\begin{proof}
+Consider a homogenous linear equation $f_{1}x_{1}+...+f_{n}x_{n}=0$
+with $f_{i}\in S\left[T\right]$, and suppose $\left(x_{1},...,x_{n}\right)\in R\left[T\right]$
+is a solution. \\
+Take some $d\in\N$ s.t $\deg f_{i},\deg x_{i}<d$ for all $i$. Write
+$x_{i}=\sum_{j=0}^{d-1}x_{ij}T^{j}$ and $f_{i}=\sum_{j=0}^{d-1}f_{ij}T^{j}$.
+By multiplying the polynomials, and equating the coefficients of each
+degree of $T$ to $0$, we get a system of (at most $d^{2}-1$) homogenous
+linear equations involving the $x_{ij}$'s and $f_{ij}$'s. Then $\left\{ x_{ij}\right\} $
+is a solution to a system of homogenous linear equations over $S$.
+Since $R$ is flat over $S$, $\left\{ x_{ij}\right\} $ is a linear
+combinations of solutions in $S$. That is, for some $\left\{ y_{ij}^{s}\right\} $,
+$\alpha_{s}\in R$, $s=1,...,k$, we have $x_{ij}=\sum_{s}\alpha_{s}y_{ij}^{s}$
+and $y_{ij}^{s}\in S$.\\
+Now take $y_{i}^{s}=\sum_{j=0}^{d-1}y_{ij}T^{j}$. Then $x_{i}=\sum_{s}\alpha_{s}y_{i}^{s}$
+where $\left(y_{1}^{s},...,y_{n}^{s}\right)$ are solutions in $S\left[T\right]$
+to the original equation.
+\end{proof}
+
+As a consequence of \eqref{11.1} , 
+\[
+\frac{\del f}{\del x_{k}}\left(b\right)=\lim_{h\lto0}\frac{f\left(b+he_{k}\right)-f\left(b\right)}{h},\quad\textrm{where }e_{k}=\left(0,...,1,...,0\right)\in\C^{m}.
+\]
+Let $\u\subset\R^{m}$ be open. A function $f\colon\u\lto\R$ is analytic
+if for each $a\in\u$, there is some $r$ and $f_{a}\in\R\left\{ X\right\} _{r}$
+s.t 
+\[
+f\left(X\right)=f_{a}\left(X-a\right),
+\]
+for $X$ close to $a$. Note that then $f$ is $C^{\infty}$ on $\u$
+and 
+\[
+f_{a}\left(X\right)=\sum_{i}\frac{1}{i!}\left(\frac{\del^{i}f}{\del X^{i}}\right)\left(a\right)X^{i}.
+\]
+Also, $f\left(a+X\right)=f_{a}\left(X\right)$ for small $x$.
+
+Examples:
+\begin{itemize}
+\item Polynomials.
+\item $\exp$, $\sin$, $\cos$, on $\R$.
+\item $\log$, $x^{a}$ (for $a\in\R$), on $\R^{>0}$.
+\end{itemize}
+Let $\mathrm{An}\left(\u\right)$ be all analytic functions on $\u$.
+$\an\left(\u\right)$ has an $\R$-algebra structure. If $f\in\an\left(\u\right)$,
+then $\frac{\del f}{\del X_{i}}\in\an\left(\u\right).$
+
+For each $a\in\u$ there is a map of $\R$-algebras:
+\begin{eqnarray*}
+\an\left(\u\right) & \lto & \R\left\{ X\right\} .\\
+f & \mapsto & f_{a}
+\end{eqnarray*}
+
+\begin{prop*}
+\label{11.2} (Analytic continuation) If $\u$ is connected, then the map
+above is injective. In particular, $\an\left(\u\right)$ is an integral
+domain.\end{prop*}
+\begin{cor*}
+\label{11.3} If $\u$ is connected, $f,g\in\an\left(\u\right)$ agree on
+a non empty open subset of $\u$, then $f=g$.\end{cor*}
+\begin{prop*}
+\label{11.4} Let $f_{1},...,f_{n}\in\an\left(\u\right)$, $\v\subset\R^{n}$
+open s.t $f\left(\u\right)\subset V$, where $f=\left(f_{1},...,f_{n}\right)\colon\u\lto\R^{n}$.
+
+Then for any $g\in\an\left(\v\right)$ we have $g\circ f\in\an\left(\u\right)$
+and 
+\[
+\left(g\circ f\right)_{a}=g_{f\left(a\right)}\left(f_{a}-f\left(a\right)\right).
+\]
+
+\end{prop*}
+\label{11.5} \uline{Notation}: For $x=\left(x_{1},...,x_{m}\right)\in\R^{m}$,
+$\left|x\right|=\max\left\{ \left|x\right|_{1},...,\left|x_{m}\right|\right\} $.
+\\
+For $\delta>0$, let $\delta=\left(\delta,...,\delta\right)$ and
+$\R\left\{ X\right\} _{\delta^{+}}=\bigcup_{r>\delta}\R\left\{ X\right\} _{r}$.\\
+Each $f\in\R\left\{ X\right\} _{\delta^{+}}$ gives rise to a function
+$x\mapsto f\left(x\right)\colon\bar{B}_{\delta}\left(0\right)\lto\R$
+which extendes to an analytic function on an open nbhd of $\bar{B}_{\delta}$.
+
+Let $Y=\left(Y_{1},...,Y_{n}\right)$, $n\geq1$. Fix $f=f\left(X,Y\right)\in\R\left\{ X,Y\right\} $.
+Then for small $x$ we have $f\left(x,Y\right)\in\R\left\{ Y\right\} $.\\
+Consider the following question: How does W.P for $f\left(x,Y\right)$
+depend on $x$, for small $x$?\\
+We will show that for some $\epsilon>0$, $\bar{B}_{\epsilon}\subset\R^{m}$
+can be covered by finitely many ``special sets'', on each of which
+W.P is uniform in $x$.
+\begin{defn*}
+\label{11.6} A special subset of $\bar{B}_{\epsilon}$ is a finite union
+of sets of the following form 
+\[
+\left\{ x\in\bar{B}_{\epsilon};\, f\left(x\right)=0,\, g_{1}\left(x\right)>0,\,...,\, g_{k}\left(x\right)>0\right\} ,
+\]
+where $f,g_{1},...,g_{k}\in\R\left\{ X\right\} _{\epsilon^{+}}$.
+\end{defn*}
+We first show that $\mathrm{ord}\left(f\left(x,Y\right)\right)$ takes
+only finitely many values as $x$ ranges over a neighbourhood of $0\in\R^{m}$.
+Write
+\[
+f\left(X,Y\right)=\sum_{j}f_{j}\left(X\right)Y^{j},
+\]
+where $f_{j}\left(X\right)\in\R\left\{ X\right\} $. Since $\R\left\{ X\right\} $
+is neotherian, the ideal generated by $\left\{ f_{j}\left(X\right)\right\} _{j\in\N^{n}}$
+is finitely generated, hence is generated by $\left\{ f_{j}\left(X\right)\right\} _{\left|j\right|<d}$
+for some $d\in\N$. \\
+Thus there are $g_{ij}\in\R\left\{ X\right\} $ such that for every
+$\left|j\right|>d$,
+\[
+f_{j}\left(X\right)=\sum_{\left|i\right|\leq d}g_{ij}f_{i}.
+\]
+In the following, $i$ ranges over elements of $\N^{n}$ s.t $\left|i\right|\leq d$
+and $j$ over elements of $\N^{n}$ s.t $\left|j\right|>d$. \\
+Substituting the above, we get 
+\[
+\left(1\right)\qquad f\left(X,Y\right)=\sum_{i}f_{i}\left(X,Y\right)\left(Y^{i}+\sum_{j}g_{ij}\left(X\right)Y^{j}\right),
+\]
+in $\R\left[\left[X,Y\right]\right]$. Note that for each $i,j$,
+$g_{ij}\in\R\left\{ X\right\} $, and so there is some $\delta$ s.t
+$g_{ij}\in\R\left\{ X\right\} _{\delta}$. However, in order to have
+equation $\left(1\right)$ as an equality in $\R\left\{ X\right\} $,
+we need to find a uniform $\delta$ that works for all $i,j$.
+\begin{claim*}
+$\exists\delta\in\left(0,1\right]$ and there are $f_{i},\, g_{ij}\in\R\left\{ X\right\} _{\delta^{+}}$
+(maybe different than above) such that $\sum_{j}g_{ij}\left(X\right)Y^{j}\in\R\left\{ X,Y\right\} _{\delta^{+}}$
+and $\left(1\right)$ holds in $\R\left\{ X\right\} _{\delta^{+}}$
+with $f_{i},g_{ij}$.\end{claim*}
+\begin{proof}
+Consider the linear equation 
+\[
+f=\sum_{i}f_{i}\left(Y^{i}+\sum_{\left|j\right|=d+1}Z_{ij}Y^{j}\right).
+\]
+By $\left(1\right)$ above, there is a solution $\left\{ Z_{ij};\,\left|i\right|\leq d,\,\left|j\right|=d+1\right\} $
+in $\R\left[\left[X,Y\right]\right]$ (all the higher terms, $Y^{j}$
+for $\left|j\right|>d+1$, are inside the $Z_{ij}$'s). Since $\R\left[\left[X,Y\right]\right]$
+is f.f. over $\R\left\{ X,Y\right\} $, there is a solution $\left\{ Z_{ij}\right\} $
+in $\R\left\{ X,Y\right\} $. Take $\delta$ for all $i,j$, $Z_{ij}\in\R\left\{ X,Y\right\} _{\delta^{+}}$.
+Now write $Z_{ij}$ as power series in $Y$ with coefficients in $\R\left\{ X\right\} $
+to get $\left(1\right)$ with $g_{ij}\left(X\right)\in\R\left\{ X\right\} _{\delta^{+}}$
+for all $\left|i\right|\leq d$, $\left|j\right|>d$.
+\end{proof}
+We work with equation $\left(1\right)$ in $\R\left\{ X,Y\right\} _{\delta^{+}}$
+as given by the claim above. For $\left|x\right|\leq\delta$,
+\[
+f\left(x,Y\right)=0\iff\forall i\left(f_{i}\left(x\right)=0\right).
+\]
+Also, if $f_{i}\left(x\right)\neq0$, then $\mathrm{ord}\left(f\left(x,Y\right)\right)\leq\left|i\right|$.
+So
+\[
+f\left(x,Y\right)\neq0\implies\mathrm{ord}\left(f\left(x,Y\right)\right)\leq d.
+\]
+Define 
+\begin{eqnarray*}
+Z_{\delta} & = & \left\{ x\in\bar{B}_{\delta};\,\forall i\, f_{i}\left(x\right)=0\right\} .\\
+S_{i} & = & \left\{ x\in\bar{B}_{\delta};\, f_{i}\left(x\right)\neq0\wedge\forall i'\neq i\left(\left|f_{i}\left(x\right)\right|\geq\left|f_{i'}\left(x\right)\right|\right)\right\} .
+\end{eqnarray*}
+Note that $\bar{B}_{\delta}=Z_{\delta}\cup\bigcup_{i}S_{i}$.\\
+Fix some $i$, formally divide the expression for $f$ in $\left(1\right)$
+by $f_{i}$, and introduce new variables $V_{i,i'}$ for the quotients
+$\nicefrac{f_{i}}{f_{i'}}$, for $i\neq i'$. Let $V_{i}=\left(V_{ii'}\right)_{i'\neq i}$.
+Define
+\[
+F_{i}=Y^{i}+\sum_{j}g_{ij}Y^{j}+\sum_{i'\neq i}V_{ii'}\left(Y^{i'}+\sum_{j}g_{i'j}Y^{j}\right)\in\R\left\{ X,V_{i},Y\right\} .
+\]
+For $x\in S_{i}$, let $v_{i}\left(x\right)=\left(\nicefrac{f_{i'}\left(x\right)}{f_{i}\left(x\right)}\right)_{i'\neq i}$.
+Then for $x\in S_{i}$, $\left|v_{i}\left(x\right)\right|\leq1$,
+and 
+\[
+\left(2\right)\qquad f\left(x,Y\right)=f_{i}\left(x\right)F_{i}\left(x,v_{i}\left(x\right),Y\right).
+\]
+
+
+Idea: apply W.P to $F_{i}$'s locally around every point $X=0$, $V_{i}=c$,
+$Y=0$. \\
+For $c=\left(c_{i'}\right)_{i'\neq i}$ with $\left|c\right|\leq1$,
+put 
+\[
+F_{i,c}=F_{i}\left(X,c+V_{i},Y\right).
+\]
+Then for $x\in S_{i}$,
+\[
+f\left(x,Y\right)=f_{i}\left(x\right)F_{i,c}\left(x,v_{i}\left(x\right)-c,Y\right).
+\]
+
+\begin{claim*}
+For each $c$ there is $\lambda=\lambda\left(c\right)\in\R^{n-1}$
+with $\left|\lambda\right|\leq1$ such that $F_{i,c}\left(X,V_{i},\lambda\left(Y\right)\right)$
+is regular in $Y_{n}$ of order$\leq\left|i\right|$, where for $Y=\left(Y_{1},...,Y_{n}\right)$,
+$\lambda\left(Y\right)=\left(Y_{1}+\lambda Y_{n},...,Y_{n-1}+\lambda_{n-1}Y_{n},Y_{n}\right)$.\end{claim*}
+\begin{proof}
+Exercise.
+\end{proof}
+By W.P., for such $\lambda$,
+\[
+\left(3\right)\qquad F_{i,c}\left(X,V_{i},\lambda\left(Y\right)\right)=\u_{i,c}\w_{i,c},\quad\u_{i,c}\in\R\left\{ X,V_{i},Y\right\} ^{\ast},\:\w_{i,c}\in\R\left\{ X,V_{i},Y_{1},...,Y_{n-1}\right\} \left[Y_{n}\right].
+\]
+Take $\epsilon\left(i,c\right)\in\left(0,\delta\right]$ s.t 
+\begin{itemize}
+\item $\u_{i,c}\in\R\left\{ X,V_{i},Y\right\} _{\epsilon\left(i,c\right)^{+}}^{\ast}$.
+\item $\w_{i,c}\in\R\left\{ X,V_{i},Y\right\} _{\epsilon\left(i,c\right)^{+}}.$
+\end{itemize}
+Let $\Gamma\left(i\right)=\left\{ i';\, i'\neq i\right\} $. Note
+that our $c$'s vary over $I^{\Gamma\left(i\right)}$, where $\I=\left[-1,1\right]$.
+By compactness, there is a finite set $C\left(i\right)$ s.t
+\[
+\I^{\Gamma\left(i\right)}\subset\bigcup_{c\in C\left(i\right)}B_{\epsilon\left(i,c\right)}\left(c\right).
+\]
+Now consider the finite set $\Gamma=\left\{ \left(i,c\right);\,\left|i\right|\leq d,\, d\in C\left(i\right)\right\} $.\\
+Take $\epsilon>0$ s.t $\epsilon\leq\frac{\epsilon\left(i,c\right)}{4}$
+for all $\left(i,c\right)\in\Gamma.$ For $\gamma=\left(i,c\right)\in\Gamma$,
+let 
+\[
+S_{\gamma}=\left\{ x\in S_{i};\,\left|x\right|\leq\epsilon,\,\left|v_{i}\left(x\right)-c\right|<\epsilon\left(i,c\right)\right\} .
+\]
+Then $S_{i}\cap\bar{B}_{\epsilon}=\bigcup\left\{ S_{\gamma};\,\gamma=\left(i,c\right),\, c\in C\left(i\right)\right\} $.
+\\
+So $\bar{B}_{\epsilon}=\left(\underbrace{Z_{\delta}\cap\bar{B}_{\epsilon}}_{\equiv Z}\right)\cup\bigcup_{\gamma}S_{\gamma}$.\\
+For $\gamma=\left(i,c\right)\in\Gamma$, by $\left(2\right)$ and
+$\left(3\right)$,
+\[
+f\left(x,\lambda\left(Y\right)\right)=f_{i}\left(x\right)\u_{\gamma}\left(x,v_{i}\left(x\right),Y\right)W_{\gamma}\left(x,v_{i}\left(x\right),Y\right).
+\]
+Note: $\u_{\gamma}$ does not change sign on $\bar{B}_{\epsilon\left(\gamma\right)}$.
+Therefore there is $\sigma\left(\gamma\right)\in\left\{ \pm1\right\} $
+s.t
+\[
+\mathrm{sign}\left(f\left(x,\lambda\left(y\right)\right)\right)=\sigma\left(\gamma\right)\mathrm{sign}\left(f_{i}\left(x\right)\w_{\gamma}\left(x,v_{i}\left(x\right),y\right)\right)
+\]
+for $x\in S_{\gamma}$ and $\left|y\right|\leq2\epsilon$. Note that
+$f\left(x,\lambda\left(y\right)\right)$ is defined since $\left|\lambda\right|\leq1$,
+so $\left|\lambda\left(y\right)\right|\leq4\epsilon\leq\delta$.\\
+For $\left|y\right|\leq\epsilon$, $\left|\left(-\lambda\right)\left(y\right)\right|\leq2\epsilon$.
+Also, $\lambda\left(\left(-\lambda\right)\left(y\right)\right)=y$.
+Thus for $\left|y\right|\leq\epsilon$
+\[
+\mathrm{sign}\left(f\left(x,y\right)\right)=\sigma\left(\gamma\right)\mathrm{sign}\left(f_{i}\left(x\right)\w_{\gamma}\left(x,v_{i}\left(x\right),\left(-\lambda\right)\left(y\right)\right)\right).
+\]
+Let $Z=\left(Z_{1},...,Z_{n}\right)$ be new variables and 
+\[
+\hat{\w}_{\gamma}\left(X,V_{i},Z\right)=f_{i}\left(\epsilon X\right)\w_{\gamma}\left(\epsilon X,\epsilon\left(\gamma\right)V_{\gamma},2\epsilon Z\right)\in\R\left\{ X,V_{i},Z\right\} _{1^{+}}.
+\]
+Then if $\left(x,y\right)\in I^{m+n}$ and $\epsilon x\in S_{\gamma}$,
+then 
+\[
+\mathrm{sign}f\left(x,y\right)=\sigma\left(\gamma\right)\hat{\w}_{\gamma}\left(x,\nicefrac{v_{i}\left(\epsilon x\right)}{\epsilon\left(\gamma\right)},\nicefrac{\left(-\lambda\right)\left(y\right)}{2}\right).
+\]
+
+\section{Quantifier elimination for $\R_{an}$.}
+
+Recall that $\L_{an}$ is the language $\left\{ 0,1,+,-,\cdot,\leq\right\} $
+of ordered rings augmented by a function symbol for every restricted
+analytic function $\R^{m}\lto\R$. \\
+Let $\R_{an}$ be the ordered field of reals as an $\L_{an}$-structure
+together with the map $^{-1}\colon\R\lto\R$ defined as $x^{-1}=\begin{cases}
+\frac{1}{x} & x\neq0\\
+x=0 & 0
+\end{cases}$. Let $\L_{an}\left(^{-1}\right)=\L_{an}\cup\left\{ ^{-1}\right\} $.
+\begin{thm*}
+\label{12.1} (Denef-v. d. Dries 1988) $\left(\R_{an},\,^{-1}\right)$ has
+quantifier elimination.
+\end{thm*}
+Call $f\colon\I^{m}\lto\R$ analytic if it extends to an analytic
+function on an open nbhd of $\I^{m}$. Let $\L_{a}$ be the language
+$\left\{ <\right\} $ expanded by $m$-ary function symbols for each
+analytic $f\colon\I^{m}\lto\R$ with $f\left(\I^{m}\right)\subset\I$.\\
+We consider $\I$ as an $\L_{a}$-structure.\\
+Define $\D\colon\I^{2}\lto\I$ by
+\[
+D\left(x,y\right)=\begin{cases}
+\nicefrac{x}{y} & \textrm{if }\left|x\right|\leq\left|y\right|\textrm{ and }y\neq0,\\
+0 & \textrm{otherwise.}
+\end{cases}
+\]
+Let $\L_{a,\D}=\L_{a}\cup\left\{ \D\right\} $.
+\begin{thm*}
+\label{12.2} The $\L_{a,\D}$-structure $\I$ has $q.e.$
+\end{thm*}
+Some general logical considerations:\\
+Let $T$ be an $\L$-theory, and $T'$ be a definitional expansion
+of $T$ to an $\L'$-theory. Assume further that $\L'\setminus\L$
+consists only of function symbols, and for each $f\in\L'\setminus\L$
+there is an existential $\L$-formula $\delta_{f}\left(x,y\right)$
+s.t 
+\[
+T'\vdash f\left(x\right)=y\longleftrightarrow\delta_{f}\left(x,y\right).
+\]
+(e.g. $T=\mathrm{Th}_{\L_{a}}\left(\I\right)$ and $T'=\mathrm{Th}_{\L_{a,\D}}\left(\I\right)$.)
+\begin{lem*}
+\label{12.6} Every $\exists\L'$-formula is $T'$-equivalent to an $\exists\L$-formula.
+\begin{lem*}
+\label{12.7} Suppose that for each q.f. $\L$-formula $\varphi\left(x,y_{1},...,y_{n}\right)$,
+$n\geq1$, there is a q.f. $\L'$-formula $\varphi'$$\left(x,z_{1},...,z_{n-1}\right)$
+such that 
+\begin{enumerate}
+\item $T'\vdash\exists y\varphi\left(x,y\right)\longleftrightarrow\exists z\varphi'\left(x,z\right)$.
+\item The function symbols in $\L'\setminus\L$ are only applied in $\varphi'$
+to terms involving only $x$.
+\end{enumerate}
+\end{lem*}
+Then $T'$ has $q.e$. (So by \eqref{12.6}, $T$ is model
+complete).
+\end{lem*}
+We now verify that the conditions in lemma \eqref{12.7} are
+satisfied for $T=\mathrm{Th}_{\L_{a}}\left(\I\right)$ and $T'=\mathrm{Th}_{\L_{a,\D}}\left(\I\right)$.
+\begin{lem*}
+\label{12.8} Basic Lemma.
+
+Let $\varphi\left(x,y\right)=\varphi\left(x_{1},...,x_{m},y_{1},...,y_{n}\right)$,
+$n\geq1$ be a q.f. $\L_{a}$-formula. Then there is a q.f. $\L_{a,\D}$-formula
+$\hat{\varphi}\left(x,z\right)$, $z=\left(z_{1},...,z_{n}\right)$
+such that
+\begin{enumerate}
+\item $\I\model\exists y\varphi\left(x,y\right)\longleftrightarrow\exists z\hat{\varphi}\left(x,z\right)$.
+\item In $\hat{\varphi}$, $\D$ is only applied to terms not involving
+$z$, and $z_{n}$ only appears polynomially in $\hat{\varphi}$.
+\end{enumerate}
+\end{lem*}
+Given the Basic Lemma, we can use Tarsky's quantifier elimination
+for $\R$ (as an ordered ring) to eliminate $\exists z_{n}$ and produce
+$\varphi'$ satisfying the hypothesis of \eqref{12.7}.
+
+For an $\L_{a}$-formula and $\left(a,b\right)\in\I^{m+n}$, $\eta>0$,
+consider the formula 
+\[
+\varphi_{a,b,\eta}=\varphi\wedge``\left|\left(x,y\right)-\left(a,b\right)\right|<\eta",
+\]
+where $``"$ means the formal sentence for that phrase. By compactness
+of $I^{m+n}$, it is enough to show that for any $\left(a,b\right)$,
+there is $\eta>0$ such that the Basic Lemma holds for the formula
+$\varphi_{a,b,\eta}$. Using an affine transformation, it is enough
+to consider only $\left(a,b\right)=\left(0,0\right)$. Let $\varphi_{\eta}=\varphi_{0,0,\eta}$.
+Thus the lemma is reduced to the following:
+\begin{lem*}
+\label{12.9} Local Basic Lemma. 
+
+Let $\varphi\left(x,y\right)$ be a q.f. $\L_{a}$-formula . Then
+there is $\epsilon\in\left(0,1\right)$ and a q.f. $\L_{a,\D}$ formula
+$\varphi'\left(x,z\right)$, $z=\left(z_{1},...,z_{n}\right)$, s.t 
+\begin{enumerate}
+\item $\I\model\exists y\varphi_{\epsilon}\iff\exists z\left(\varphi_{\epsilon}^{\prime}\right)$.
+\item In $\varphi'$, the function symbol $\D$ is applied only to terms
+not involving $z$, and $z_{n}$ appears only polynomially.
+\end{enumerate}
+\end{lem*}
+\begin{proof}
+We may assume that all atomic subformulae of $\varphi$ are of the
+form $f\left(x,y\right)>0$ or $f\left(x,y\right)=0$ for some analytic
+$f\colon\I^{m}\lto\I$.\\
+Apply uniform W.P. to the Taylor series at $0$ of all such $f$.
+We get \end{proof}
+\begin{itemize}
+\item $\epsilon\in\left(0,1\right)$,
+\item Finite cover $S_{\gamma}$ of $B_{\epsilon}\subset\R^{m}$ by special
+sets.
+\item For each $\gamma$, a $\lambda=\lambda\left(\gamma\right)\in\R^{n-1}$
+with $\left|\lambda\right|\leq1$.
+\item For each $f$ in $\varphi$, an $\L_{a,\D}$-term $t_{\gamma,f}\left(x,z\right)$;
+\item $t_{f,\gamma}$ is polynomial in $z_{n}$,
+\item $\D$ is only applied to terms involving only $x$ within $t_{f,\gamma}$.
+\item $\forall x\in I^{m+n}$ with $\epsilon x\in S_{\gamma}$,
+\[
+f\left(\epsilon x,\epsilon y\right)\geq0\iff t_{f,\gamma}\left(x,\nicefrac{\left(-\lambda\right)\left(y\right)}{2}\right)\geq0.
+\]
+
+\end{itemize}
+Replace $f\left(x,y\right)$ by $t_{f,\gamma}$ in $\varphi$ to get
+$\varphi_{\gamma}$. Then 
+\[
+\I\model\exists y\varphi\left(\epsilon x,\epsilon y\right)\longleftrightarrow\exists z\left(\bigvee_{\gamma}x\in S_{\gamma}\wedge\varphi_{\gamma}\left(x,z\right)\wedge\left|\lambda\left(z\right)\right|\leq\frac{1}{2}\right).
+\]
+Finally we can convert this to a formula $\varphi'$ satisfying $\left(1\right)$
+and $\left(2\right)$ of the Local Basic Lemma.

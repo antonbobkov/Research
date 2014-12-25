@@ -1,0 +1,274 @@
+%\documentclass{article}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{amsthm}
+%
+%\newcommand{\N}{\mathbb{N}}
+%\newcommand{\Z}{\mathbb{Z}}
+%\newcommand{\Q}{\mathbb{Q}}
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\concat}{\mathrel{\hat{\ }}}
+%
+%\theoremstyle{definition}
+%\newtheorem{cor}{Corollary}
+%\newtheorem{example}{Example}
+%\newtheorem{proposition}{Proposition}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{defn}{Definition}
+%\newtheorem{theorem}{Theorem}
+%
+%\begin{document}
+
+\NotesBy{Notes by Zach Norwood}
+\Week{Week 3}
+
+\Day{October 20th}
+\section{Real Numbers}
+
+We'll now begin to focus on how to view real numbers and ordinals as surreal numbers.
+
+We have $0 = ()$ the additive identity of $\mathbf{No}$ and $1 = (+)$ the multiplicative identity of $\mathbf{No}$.
+
+We also have an embedding of ordered rings $\mathbb{Z} \hookrightarrow \mathbf{No}$ where $k\mapsto k\cdot 1$ (where $k\cdot 1$ is $k$ additions of $+1$ or $-1$).
+
+\begin{lemma}
+For $n\in\N$, $n\cdot 1 = (\underbrace{++\cdots+}_{n\text{ times}})$.
+\label{3.1}
+\end{lemma}
+
+\begin{proof}
+By induction on $n$. The cases $n=0,1$ are obvious.
+Suppose that $n\ge 1$. We have
+\begin{align*}
+(n+1)\cdot 1 &= n\cdot 1 + 1 \\
+&= (++\cdots +)+(+) \\
+&= \{ (\underbrace{+\cdots+}_{n-1}) \,|\, \emptyset \} + \{ 0 \,|\, \emptyset \} \\
+&= \{ (n-1)\cdot1 \,|\, \emptyset \} + \{ 0 \,|\, \emptyset \} \\
+&= \{(n-1)\cdot 1 + 1,\, n\cdot 1 + 0 \,|\, \emptyset \} \\
+&= \{ n\cdot 1 \,|\, \emptyset \} \\
+&= \{ (\underbrace{++\cdots + }_{n}) \,|\, \emptyset \} \\
+&= (\underbrace{++\cdots +}_{n+1}).
+\end{align*}
+\end{proof}
+
+\begin{cor}
+For $n\in\N$, $-n\cdot 1 = (\underbrace{- - \cdots -}_{n\text{ times}})$.
+\end{cor}
+
+An ordered field $k$ is {\em archimedean} if for all $a,b>0$ in $k$ there is $n\in\N$ such that $na>b$.
+
+Note: $\mathbf{No}$ is not archimedean, since $\omega := (++\cdots)$ (with $\omega$ many $+$s) satisfies $\omega>(\underbrace{+\cdots + }_{n})=n\cdot 1$.
+
+From now on we identify $\Z$ as a subring of $\mathbf{No}$.
+
+Q: How to identify $\Q\subseteq \mathbf{No}$?
+
+Idea: $0 = () < (+-) < (+) = 1$. Is $(+-)=\tfrac12$?
+
+Finite sequences of $+$s and $-$s correspond to dyadic rationals, i.e., rationals of the form $\frac{a}{2^s}$ ($a\in\Z$, $s\in\N$). We might conjecture that $\Q$ corresponds to finite sequences in $\mathbf{No}$.
+
+\begin{lemma}
+Suppose $a+b = \{2a \,|\, 2b \}$. Then $\frac{a+b}2 = \{a \,|\, b \}$.
+\end{lemma}
+
+\begin{proof}
+Put $c := \{a \,|\, b\}$. Then $2\cdot c = c+ c = \{a+c \,|\, b+c \}$, and we show that this equals $a+b$:
+\[ a+c < a+b < b+c, \text{ since } a< c < b, \text{ and } \]
+\[ 2a < a+c, \; 2b > b+c \text{ because } a<c < b. \]
+Now the result follows by the uniformity of the definition of $+$: since we assumed $a+b = \{2a \,|\, 2b \}$, we get the claim by cofinality.
+\end{proof}
+
+\begin{example}
+$1 = \{ 0 \,|\, \emptyset \} = \{ 0 \,|\, 2 \}$. Apply the lemma with $a=0$, $b=1$.
+So $\tfrac12 = \{0 \,|\, 1 \} = (+-)$. Taking $a=0$, $b=\tfrac12$, we get $\tfrac14 = (+--)$.
+\end{example}
+
+\begin{cor} %(3.4)
+Suppose $a + b = \{ 2a \,|\, 2b \}$. Then 
+\[ \frac{a+b}{2^{s+1}} = \left\{ \frac{a}{2^s} \,\bigg|\, \frac{b}{2^s} \right\}  \]
+for all $s\in\N$.
+\label{3.4}
+\end{cor}
+
+\begin{cor} %(3.5)
+For all $c\in\N$, $\frac{c}{2^s} + \frac{1}{2^{s+1}} = \left\{ \frac{c}{2^s} \,|\, \frac{c+1}{2^s} \right\}$.
+\label{3.5}
+\end{cor}
+
+\begin{proof} %(Proof of 3.5)
+Take $a=c$, $b=c+1$. We have
+\begin{align*}
+a+b &= 2c+1 \\
+&= \{ 2c \,|\, 2c+2 \} \\
+&= \{ 2a \,|\, 2b \}.
+\end{align*}
+Apply Corollary \ref{3.4}.
+\end{proof}
+
+\begin{proposition} %(3.6)
+Surreal numbers of finite length correspond to dyadic rationals.
+\label{3.6}
+\end{proposition}
+
+\begin{proof} %(Proof of 3.6)
+Let $d\in\mathbf{No}$ have length $m+n$, where $d(0) = d(1) = \cdots = d(m-1) \ne d(m)$. We'll show that 
+$d\in\frac1{2^n}\Z$. Suppose $d(0) = d(m-1) = {+}$. (Similar if $d(0) = {-}$.) 
+\begin{description}
+\item $n=0$: follows by \eqref{3.1}.
+\item $n=1$: Then $d = (\underbrace{++\cdots+}_{m\ge1}-)$. By \eqref{3.5} with $c = m-1$, $s=0$, $m-\frac12 = \frac{m-1}{2^0} + \frac{1}{2^1} = \{m-1 \,|\, m\}$. Clearly $\{m-1 \,|\, m\} = d$.
+\end{description}
+Now suppose we've shown the claim for all $n\ge r$, and let $n = r+1$; suppose $r\ge 1$. Let $d' = d\restriction (m+r)$.
+Either $d = d'\concat (+)$ or $d=d'\concat (-)$; suppose wlog that $d = d'\concat (+)$. So $d' = (\underbrace{++\cdots+}_{m}-\cdots)$. Let $d = \{L \,|\, R\}$ be the canonical representation.
+Taking $x=\max L$, $y = \min R$, we have $d = \{x \,|\, y\}$ by cofinality. Note $x = d'$. We don't know much about $y$ 
+except that
+\[ d = (\underbrace{++\cdots +}_{m}-\cdots -)\le (\underbrace{++\cdots+}_{m}) = m, \]
+so $y\le m$. By inductive hypothesis, $x,y\in \frac1{2^r}\Z$. So $d' = x = \frac{c}{2^r}$ for some $c\in\N$. 
+If we can show $y = \frac{c+1}{2^r}$, then by \eqref{3.5} 
+\[ d = \{x \,|\, y \} = \frac{c}{2^r} + \frac{1}{2^{r+1}} \in \frac1{2^{r+1}}\Z, \]
+as required.
+
+Note 
+\[m-1<x = d' = \frac{c}{2^r} < \frac{c+1}{2^r} \le y \le m. \]
+Put $H := \{ h\in\mathbf{No} \,:\, \ell(h)\le m+ r \,\&\, h\restriction(m+1) = (++\cdots+-)\}$.
+We have $|H| = 1+2+2^2+\cdots + 2^{r-1} = 2^r - 1$. By inductive hypothesis every $h\in H$ belongs to $\frac1{2^r}\N$,
+and $m-1<h<m$. But there are exactly $2^r - 1$ many dyadic rationals satisfying both of these conditions. 
+In particular, $\frac{c+1}{2^r}\in H$ or $\frac{c+1}{2^r}=m$. Either way, $\ell(\frac{c+1}{2^r})\le m+r$.
+Since $\frac{c+1}{2^r} > d'$, this implies $\frac{c+1}{2^r} > d$. We have $\frac{c+1}{2^r} <_s d$:
+otherwise $e := \frac{c+1}{2^r} \wedge d$ will satisfy $d < e < \frac{e+1}{2^r} \le y$, contradiction to choice of $y$.
+Hence $\frac{c+1}{2^r}\in R$, so $\frac{c+1}{2^r}\ge y$.
+\end{proof}
+
+\Day{October 22nd}
+
+\textbf{Remark} (to \eqref{3.6}). Suppose $d\in\mathbf{No}$ has length $m+n$, where
+\begin{itemize}
+\item $d(0) = \cdots = d(m-1)$, and
+\item $d(m-1)\ne d(m)$.
+\end{itemize}
+Define
+\[ b(i) := \begin{cases} \pm 1 & \text{if } i< m, \quad d(i)=\pm \\
+\pm \frac{1}{2^{i-m+1}} & \text{if } i \ge m, \quad d(i) = \pm.
+\end{cases} \]
+Then $d = b(0) + b(1) + \cdots + b(m+n-1)$. (Exercise.) Also, every dyadic rational arises in this way. (Exercise.)
+We now let $\mathbb{D}$ be the set of dyadic rationals $\Z[\frac12]\subseteq\Q$.
+
+\begin{defn}
+A surreal is called {\em real} if it is either of finite length or has length $\omega$ and is not ultimately constant.
+\end{defn}
+
+Recall: An ordered field $k$ is {\em dedekind-complete} if every nonempty subset of $k$ that is bounded from above
+has a supremum. The ordered field $\R$ is up to (unique) isomorphism the only dedekind-complete ordered field.
+
+\begin{theorem}[Conway] \label{3.8}
+The real surreals form a dedekind-complete ordered subfield of $\mathbf{No}$. Let $a\in\mathbf{No}$, $\ell(a)=\omega$,
+with canonical representation $a = \{L \,|\, R\}$ then
+\[ a\text{ is real } \iff \begin{cases} L,R\neq\emptyset \\
+L\text{ has no max} \\
+R\text{ has no min}
+\end{cases}.\]
+\end{theorem}
+
+The direction ``$\Rightarrow$'' is an exercise. Now we prove the other direction.
+
+\begin{lemma} \label{3.9}
+Let $L,R\subseteq\mathbb{D}$ be such that $L<R$ and $L$ has no max and $R$ has no min. Then $a = \{ L \,|\, R\}$ is real.
+\end{lemma}
+
+\begin{proof}
+By \eqref{lemma_on_length_of_cuts} we have $\ell(a)\le\omega$. Suppose $\ell(a) = \omega$ and $a(n) = +$ eventually. Note that there is some $n_0$ with $a(n_0) = {-}$, since $a<R\ne\emptyset$. We may assume that $a(n) = {+}$ for all $n>n_0$. Let $b = a\restriction n_0$. Then $b>a$ and $b<_s a$. Since $(L,R)$ is cofinal in the canonical representation of $a$, there is $d\le b$, $d\in R$. It follows that $d\in R$, since $R$ has no least element. We can choose $m$ such that $d\le b - \frac1{2^m}$. (Possible since both $b$ \& $d$ are dyadics.) We get $a<d\le b - \frac1{2^m}$. Next let $n>n_0$, $c = a\restriction n$. Then
+$c<a$ and $c <_s a$, so by choosing $n$ sufficiently large we can achieve $c>b-\frac1{2^m}$. But then $a>c>b-\frac{1}{2^m}$, oops.
+
+(Why can we do this? Write
+\[ c = k + \sum_{i= l}^{n-1} \pm\frac{1}{2^{i-l+1}}\]
+and
+\[ b = k + \sum_{i=l}^{n_0-1} \pm\frac{1}{2^{i-l+1}}. \]
+Then we get
+\[ c-b = -\frac{1}{2^{n_0-l+1}} + \frac{1}{2^{n_0-l+2}} + \cdots + \frac{1}{2^{n-l}} = -\frac{1}{2^{n_0-l+1}} + \left( \frac{1}{2^{n_0-l+1}} - \frac{1}{2^{n-l}} \right) = \frac{-1}{2^{n-l}}, \]
+so just choose $n>l+m$.)
+\end{proof}
+
+\begin{lemma} \label{3.10}
+Let $a = \{L \,|\, R\}$. Suppose
+\begin{enumerate}
+\item $x\in L \Rightarrow \exists r\in \mathbb{D}^{>0}$, $y\in L$, $x+r\le y$. [``$L-\mathbb{D}^{>0}$ is cofinal in $L$'']
+\item $x\in R \Rightarrow \exists r\in \mathbb{D}^{>0}$, $y\in R$, $y\le x-r$. [``$R+\mathbb{D}^{>0}$ is coinitial in $R$.'']
+
+and also $L' < a < R'$ such that
+\item $(\forall r\in \mathbb{D}^{>0})(\exists x'\in L')(\exists y'\in R') y'-x'\le r$. [``$R'-L'$ is coinitial in $\mathbb{D}^{>0}$'']
+\end{enumerate}
+Then $a = \{ L' \,|\, R' \}$. 
+\end{lemma}
+
+\begin{proof}
+Check that $(L',R')$ is cofinal in $(L,R)$ and use the cofinality theorem.
+\end{proof}
+
+\begin{lemma} \label{3.11}
+$\mathbb{D}$ is dense in the ordered set of real surreals.
+\end{lemma}
+
+\begin{proof}
+Let $a<b$ be reals. If neither $a <_s b$ nor $b <_s a$ then $a < a\wedge b < b$. (Note $a\wedge b$ is finite, so it's in $\mathbb{D}$.) So suppose that $a <_s b$. Then $a\in \mathbb{D}$. If also $b\in\mathbb{D}$, then we're done:
+$a < \frac{a+b}2 < b$. So suppose $b\notin \mathbb{D}$, with canonical representation $b = \{ L \,|\, R\}$. Then $a\in L$,
+and $L$ has no maximum, so we can find some dyadic element of $(a,b)$. Similar if $b <_s a$.
+\end{proof}
+
+\begin{lemma} \label{3.12}
+Let $a = \{ L \,|\, R \}$ be the canonical representation of a real $a\notin \mathbb{D}$. Then for all $r\in \mathbb{D}^{>0}$ there are $a_L, a_R$ with $a_R-a_L\le r$. 
+\end{lemma}
+
+\begin{proof}
+For each $n$ there are $a_L,a_R$ with $a_L\restriction n = a_R\restriction n$, and $a_R-a_L$ is bounded from above by some expression $\frac1{2^s} + \frac{1}{2^{s+1}}+\cdots$, and this can be made as small as necessary. (Exercise.)
+\end{proof}
+
+\Day{October 24th}
+
+\begin{proof}[Proof of Theorem \ref{3.8}]
+Clearly $0,1$ are real. Let $a,b\in\mathbf{No}$ be real; we check that $a+b$, $a\cdot b$, $\frac1a$ (if $a\ne0$) are also real. (Note that $-a$ is obviously real.)
+
+\subsubsection*{$a+b$} Suppose $a\in\mathbb{D}$, $b\notin\mathbb{D}$. Let $a = \{ L \,|\, R\}$ be the canonical representation. So $a + b = \{ a_L + b,a+b_L \,|\, a_R+b,a+b_R\}$. We claim that $a+b = \{a+b_L \,|\, a+b_R \}$. (By \eqref{3.9} this then gives $a+b$ real, since $b_L$, $b_R$ dyadic.)
+We have $a,a_L\in\mathbb{D}$, so $a-a_L\in\mathbb{D}^{>0}$; hence by \eqref{3.12} there are $b_L,b_R$ such that $b_R-b_L\le a-a_L$. It follows that $a+b_L\ge a_L+b_R \ge a_L+b$. Now use cofinality. (Similar argument for the other side.)
+
+Now suppose that $a,b\notin\mathbb{D}$. Then in the representation of $a+b$ the LHS has no max and the RHS has no min. So (1) \& (2) in \eqref{3.10} are satisfied for this cut. Let $L' := \{a_L+b_L\}$, $R' := \{a_R+b_R\}$. Then
+$L' < a+b < R'$ and by \eqref{3.12} $(L',R')$ satisfies (3) in \eqref{3.10}. This means that $a+b = \{L' \,|\, R' \}$ by \eqref{3.10}, and this is real by \eqref{3.9}.
+
+\subsubsection*{$a\cdot b$} Suppose $a\notin\mathbb{D}$, $a,b>0$. The typical element in the representation of 
+$a\cdot b$ is $ab-(a-a_*)(b-b_*)$. Show that (1), (2) in \eqref{3.10} are satisfied by this cut. For example,
+\[ x = ab - (a-a_L)(b-b_L).\]
+Take $a_L'$ with $a_L < a_L' < a$ and set $x' = ab - (a-a_L')(b-b_L)$. Then by \eqref{3.11} $x'-x = (a_L' - a_L)(b-b_L)$ is greater than some element of $\mathbb{D}^{>0}$. This verifies (1) of \eqref{3.10}. In the same way verify (2). Now set
+\begin{align*}
+L' &:= \{ a'b' \,:\, a',b'\in\mathbb{D},\, 0\le a' < a, \, 0\le b' < b\}, \\
+R' &:= \{ a''b'' \,:\, a'',b''\in\mathbb{D}, \, a'' > a, \, b'' > b \}.
+\end{align*}
+Then $L' < a\cdot b < R'$. We check that \eqref{3.10}(3) holds. Let $r\in \mathbb{D}^{>0}$ be given. Then the same 
+argument as proving the limit law for multiplication in calculus gives elements $a',b',a'',b''$ such that $a''b''-a'b'<r$, using \eqref{3.12}. Hence by \eqref{3.10} $a\cdot b = \{ L' \,|\, R' \}$, so $ab$ is real by \eqref{3.9}.
+
+\subsubsection*{$1/a$:} We may assume that $a>0$. Put
+\begin{align*}
+L &:= \{ d\in \mathbb{D} \,:\, d\concat a < 1 \} \\
+R &:= \{ d\in \mathbb{D} \,:\, d\concat a > 1 \}.
+\end{align*}
+Then $L<R$, $0\in L$, and $R\ne\emptyset$ because: by \eqref{3.11} take $m$ such that $a>\frac1{2^m}$, so that $2^ma>1$. So $2^m\in R$.
+
+\noindent{\bf Claim 1.}
+$L$ has no max; $R$ has no min.
+
+\begin{proof}[Proof of Claim 1.]
+Let $d\in L$. Then $1-da>0$ is real. So there is some $m$ such that $1-da> \frac1{2^m}$. Also can take $n$ such that $a< 2^n$. Then $\frac{1}{2^{m+n}}a < \frac1{2^m} < 1-da$, so $a(\frac{1}{2^{m+n}} + d) < 1$.
+\end{proof}
+
+Hence by \eqref{3.9} $b:= \{L \,|\, R\}$ is real. We are going to show that $|ba-1|<r$ for every $r\in\mathbb{D}^{>0}$. Since $ba-1$ is real, we get $ba-1=0$ by \eqref{3.11}.
+
+\noindent{\bf Claim 2.}
+For each $n$ there is $c\in R$ such that $ca\le 1 + \frac1{2^n}$, and there is $c'\in L$ such that $c'a\ge 1  - \frac{1}{2^n}$. 
+
+(Obviously this suffices.)
+
+\begin{proof}[Proof of Claim 2.]
+Choose $m$ such that $2^m>a$. Put $S := \{ r\in\N \,:\, (\frac{r}{2^{m+n}})a>1 \}$. Then $S\ne\emptyset$; take $s = \min S$. Then $\frac{s}{2^{m+n}}\in R$, but $(\frac{s-1}{2^{m+n}})a\le 1$. So
+\[ \frac{s}{2^{m+n}} a \le 1 + \frac{a}{2^m2^n} \le 1 + \frac1{2^n}.\qedhere \]
+\end{proof}
+This completes the proof.
+\end{proof}
+
+%\end{document}

@@ -1,0 +1,153 @@
+\documentclass[english]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{fullpage}
+\usepackage{tikz-qtree}
+
+\usepackage{dsfont}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=blue,filecolor=blue,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\concat}{\mathbin{\raisebox{1ex}{\scalebox{.7}{$\frown$}}}} %sequence concatenation
+\newcommand{\concat}{\frown} %sequence concatenation
+\newcommand{\dom}[1]{\operatorname{dom}\paren{#1}}
+\newcommand{\ZFC}{\mathsf{ZFC}}
+\newcommand{\NBG}{\mathsf{NBG}}
+\newcommand{\coloneq}{\colonequals}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\No}{\mathbf{No}}
+\newcommand{\On}{\mathbf{On}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\rar}{\rightarrow}
+\newcommand{\arr}{\rightarrow}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\lt}{lt}
+
+\newcommand{\w}{\omega}
+\newcommand{\midr}[1]{\restriction_{#1}}
+
+% This is the "centered" symbol
+\def\fCenter{{\mbox{\Large{$\rightarrow$}}}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\def\dotminus{\mathbin{\ooalign{\hss\raise1ex\hbox{.}\hss\cr\mathsurround=0pt$-$}}}
+
+% \swapnumbers
+\theoremstyle{theorem}            %bold title, italicized font
+\newtheorem{theorem}{Theorem}[section]
+  \newtheorem{thm*}[theorem]{\protect\theoremname}
+
+\newtheorem{claim}[theorem]{Claim}
+  \newtheorem{claim*}[theorem]{\protect\claimname}
+
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{lem*}[theorem]{\protect\lemmaname}
+
+\newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{prop*}[theorem]{\protect\propositionname}
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{cor}[theorem]{Corollary}
+  \newtheorem{cor*}[theorem]{\protect\corollaryname}
+
+\theoremstyle{definition}           %bold title, regular font
+\newtheorem{example}[theorem]{Example}
+
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{definition}[theorem]{Definition}
+  \newtheorem{defn*}[theorem]{\protect\definitionname}
+
+\newtheorem{exercise}[theorem]{Exercise}
+  \newtheorem{xca*}[theorem]{\protect\exercisename}
+\newtheorem*{problem}{Problem}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{empty}
+\newtheorem{namedtheorem}{}
+
+\newcommand{\customtheorem}[3]{\theoremstyle{theorem} \newtheorem{theorem#1}[theorem]{#1} \begin{theorem#1}[#2]#3 \end{theorem#1}}
+
+\newcommand{\customdefinition}[2]{\theoremstyle{definition} \newtheorem{definition#1}[theorem]{#1} \begin{definition#1}#2 \end{definition#1}}
+
+
+\renewcommand{\restriction}{\mathord{\upharpoonright}}
+ 
+%\newcommand{\WikiLevelTwo}[1]{\section*{#1}}
+%\newcommand{\WikiLevelTwo}[1]{\begin{center} \begin{Large} #1 \end{Large} \end{center}}
+%\newcommand{\WikiLevelThree}[1]{\begin{center} \textbf{#1} \end{center}}
+%\newcommand{\WikiLevelFour}[1]{\begin{center} \textit{#1} \end{center}}
+
+\newcommand{\Week}[1]{\begin{center} \begin{Large} #1 \end{Large} \end{center}}
+\newcommand{\Day}[1]{\begin{center} \textbf{#1} \end{center}}
+\newcommand{\NotesBy}[1]{\begin{flushright} \textit{#1} \end{flushright}}
+
+\newcommand{\WikiSigleStar}{}
+
+\newcommand{\WikiItalic}[1]{\textbf{#1}}
+\newcommand{\WikiBold}[1]{\textbf{#1}}
+\newcommand{\WikiBoldItalic}[1]{\emph{#1}}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=2cm,rmargin=2cm}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{units}
+\usepackage{xargs}[2008/03/08]
+\usepackage{ulem}
+
+%\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+
+
+%\makeatother
+
+\usepackage{babel}
+  \providecommand{\corollaryname}{Corollary}
+  \providecommand{\definitionname}{Definition}
+  \providecommand{\exercisename}{Exercise}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\theoremname}{Theorem}
+  \providecommand{\claimname}{Claim}
+  \providecommand{\propositionname}{Proposition}
+	
+\title{Math 285: Surreal Numbers}
+\author{Class Taught by Prof. Aschenbrenner}
+\date{Fall 2014}
+\begin{document} 
+\maketitle{}
+
+\tableofcontents
+
+\include{week_1/john_susice_surreal_numbers_notes_fall2014}
+\include{week_2/g_week_2}
+\include{week_3/zach}
+\include{week_4/g_week_4}
+\include{week_5/g_week_5}
+\include{week_6/g_week_6}
+\include{week_7/285D_notes_nov_17_18_21}
+\include{week_8/g_week_8}
+\include{week_9/g_week_9}
+\include{week_10/December_8_12}
+\include{week_11/g_week_11}
+
+\end{document}

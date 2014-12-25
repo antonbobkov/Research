@@ -1,0 +1,159 @@
+%\WikiLevelTwo{ Siddharth's extra lectures }
+\section{ Siddharth's extra lectures }
+\NotesBy{notes by Bill Chen}
+
+A crucial concept for these lectures will be \WikiItalic{games}. These games where two players Left and Right alternate moves, and a player loses if she has no moves. The information of who goes first is not encoded into the game. Formally, a game $G$ consists of two sets of games, $G=\{G_L|G_R\}$, where the left side consists of the valid games which Left can move to, and similarly for the right side. (We use the "typical element" notation for sets, which carries over from the notation for surreal numbers.)
+
+\begin{example}\ %====Example====
+\begin{enumerate}
+  \item  $\{\emptyset|\emptyset\}$ is called the zero game (abbreviated 0). There are no legal moves for either player, and the first player to move loses.
+  \item  $\{\emptyset|0\}$ is the game 1. In this game, Left has no legal moves, and Right can move to the 0 game, so Right has a winning strategy no matter who moves first.
+  \item  $\{0|\emptyset\}$. Here Left has a winning strategy.
+  \item  $\{0|0\}$ First player to move wins. This is a valid game which is not a surreal number as we defined in Week 2.
+\end{enumerate}
+\end{example}
+
+\begin{definition}\ % ====Definition 1==== 
+\begin{enumerate}
+  \item  $G>0$ if Left has a winning strategy.
+  \item  $G<0$ if Right has a winning strategy.
+  \item  $G\sim 0$ if the second player has a winning strategy. ($G$ is ''similar'' to $0$.)
+  \item  $G\parallel 0$ if the first player has a winning strategy. ($G$ is ''fuzzy''.)
+  \item  $G\ge 0$ means $G>0$ or $G\sim 0$.
+\end{enumerate}
+ \end{definition}
+
+\begin{lemma} % ====Lemma 2 (Determinacy)==== 
+For any game $G$, one of $G>0$, $G<0$, $G\sim 0$, or $G\parallel 0$ holds.
+ \end{lemma}
+
+\begin{proof} %\WikiBold{Proof:} 
+Let $A$ be the assertion that there is a $G_L$ with $G_L\ge 0$, and $B$ be the assertion that there is a $G_R$ with $G_R\le 0$.
+
+Then one can check that $G>0$ iff $A\& \neg B$, $G<0$ iff $\neg A \& B$, $G\sim 0$ iff $\neg A \& \neg B$, and $G\parallel 0$ iff $A\& B$. For example, if $A \& B$ holds, then the first player can move to a game that is positive or similar $0$. In the first case, the first player clearly wins. In the second case, the first player becomes the second player of the new game similar to $0$, and hence wins.
+ \end{proof}
+
+\begin{definition} % ====Definition 3==== 
+ \end{definition}
+If $G,H$ are games, the \WikiItalic{disjunctive sum} $G+H$ is the game in which $G$ and $H$ are "played in parallel." Formally,
+$$G+H=\{G_L+H,G+H_L|G_R+H, G+H_R\}.$$
+
+\begin{remark} %\WikiBold{Remark:}
+By induction, can prove that $+$ is associative and commutative. 
+\end{remark}
+
+\begin{definition} % ====Definition 4==== 
+If $G$ is a game, the \WikiItalic{negation} $-G$ is the game obtained by switching the roles of Left and Right. Formally,
+$$-G=\{-G_R|-G_L\}.$$
+ \end{definition}
+
+Notice that these are the same definitions as for surreal numbers.
+
+\begin{lemma} % ====Lemma 5 (Basic properties of $+$ and $-$)==== 
+\begin{enumerate}
+  \item  $-(G+H)=-G+-H$.
+  \item  $--G=G$.
+  \item  $G\sim 0$ iff $-G\sim 0$.
+  \item  $G>0$ iff $-G<0$.
+  \item  $G\parallel 0$ iff $-G\parallel 0$.
+\end{enumerate}
+ \end{lemma}
+
+We won't prove this lemma, but it is not difficult.
+
+\begin{lemma} % ====Lemma 6==== 
+Let $H\sim 0$. Then:
+\begin{enumerate}
+  \item  If $G\sim 0$, then $G+H\sim 0$.
+  \item  If $G>0$, then $G+H>0$.
+  \item  If $G\parallel 0$, then $G+H\parallel 0$.
+  \item  If $G+H\sim 0$, then $G\sim 0$.
+  \item  If $G+H>0$, then $G>0$.
+  \item  If $G+H\parallel 0$, then $G\parallel 0$.
+\end{enumerate}
+ \end{lemma}
+
+\begin{proof} %\WikiBold{Proof:} 
+
+Formally, this is proved by induction. We just describe the strategies in words.
+
+For (1), if the second player has a winning strategy in $G$ and $H$, then the second player can use the winning strategy corresponding to the game in which the first player plays in.
+
+For (2), the proof splits into cases. If Right moves first, either Right moves in $H$, so Left can play according to the second player's strategy in the $H$ game, or Right moves in $G$, so Left can play according to his strategy in $G$. If Left moves first, he plays according to his strategy in $G$ and then according to the previous sentence against the subsequent moves of Right.
+
+(3), is a similar analysis.
+ \end{proof}
+
+The next three follow from the first three by using cases based on determinacy.
+
+\begin{lemma}\ % ====Lemma 7==== 
+\begin{enumerate}
+  \item  $G+ -G\sim 0$.
+  \item  If $G>0$ and $H>0$ then $G+H>0$.
+\end{enumerate}
+ \end{lemma}
+
+\begin{proof} %\WikiBold{Proof:} 
+
+The first assertion follows from the strategy of "playing Go on two boards against the same person."
+ \end{proof}
+
+\NotesBy{notes by Zach Norwood}
+\begin{definition}
+\[ G \sim H \iff G - H = 0.\]
+\[ G > H \sim G - H > 0.\]
+\end{definition}
+
+\begin{lemma}
+${\sim}$ is an equivalence relation.
+\end{lemma}
+\begin{proof} \ 
+\begin{enumerate}
+\item \[ G-H\sim 0 \iff -(G-H)\sim0 \iff -G+H\sim 0 \iff H-G\sim 0,\]
+so $G\sim H \iff H\sim G$.
+\item $G\sim G$ because $G-G\sim 0$.
+\item If $G\sim G'$ and $G'\sim H$ then $G\sim H$:
+\[ G\sim G'\sim 0 \text{ and } G'-H\sim 0 \Rightarrow G-G'+G'-H\sim 0 \Rightarrow G-H\sim 0.\]
+\end{enumerate}
+\end{proof}
+
+\begin{lemma}
+${<}$ is an order (i.e. a transitive antisymmetric relation).
+\end{lemma}
+\begin{proof}
+Similar to previous lemma.
+\end{proof}
+
+We want to show that the class of games modulo ${\sim}$ forms a partially ordered abelian group with identity $0$ (the ${\sim}$-class of $\{\emptyset | \emptyset\}$).
+That is, we want to show that if $G\sim G'$ and $H\sim H'$ then
+\begin{itemize}
+\item $G+H \sim G'+H'$
+\item $-G\sim -G'$
+\item $G>H \iff G'>H'$.
+\end{itemize}
+
+\begin{theorem}
+$\No$ forms an ordered abelian subgroup of the partially ordered abelian group $G$ of games.
+\end{theorem}
+
+\begin{proof}
+We define a map $\pi\colon\No\to G$ and prove that it's an injective group homomorphism:
+\begin{align*}
+\pi \colon& 0\mapsto 0 \\
+\pi\colon& \{L | R\} \mapsto \{\pi(L) | \pi(R) \}
+\end{align*}
+We leave it as an exercise to verify that $\pi$ is well-defined.
+
+It's clear from the definitions of $+$ for surreal numbers and games that $\pi$ is morphism of abelian groups.
+
+We claim that $a=0 \iff \pi(a)=0$ and $a<b\iff \pi(a)<\pi(b)$. The proof is by induction on $a$.
+
+Suppose that $\pi(a) = 0$, so $\{ \pi(a_L) | \pi(a_R) \} = 0$. So $\pi(a_L) < 0 < \pi(a_R)$ for all $a_L$ and $a_R$, and by
+induction $a_L < 0 < a_R$. So $a = \{ a_L | a_R \} = 0$.
+
+Suppose $\pi(a)<\pi(b)$, i.e., $\pi(b)-\pi(a)>0$. Recall
+\[ \pi(a)-\pi(b) = \{ \pi(b)_L - \pi(a), \, \pi(b) - \pi(a)_L \,|\, \pi(b)_R - \pi(a),\, \pi(b) - \pi(a)_R \}, \]
+using $\pi(b)_L = \pi(b_L)$.
+\[ \pi(a) - \pi(b) = \{ \pi(b_L-a),\pi(b-a_R) \,|\, \pi(b_R-a),\pi(b-a_L)\}>0.\]
+For all $b_R,a_L$, $b_R-a>0$ and $b-a_L>0$. Since $a_L<b$ and $a<b_R$, we conclude that $a<b$.
+\end{proof}
