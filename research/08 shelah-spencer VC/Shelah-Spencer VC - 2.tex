@@ -33,12 +33,14 @@ Fix a formula $\phi(x, y)$ that is a minimal extension $M/\curly{x,y}$.
 	\item there are no edges between $x$.
 \end{itemize}
 
-Let $n$ be such that $n\epsilon < \dim(y)$ but $(n+1)\epsilon > \dim(y)$.
+Let $Y = \dim (y)$
+
+Let $n$ be such that $n\epsilon < Y$ but $(n+1)\epsilon > Y$.
 Fix a parameter set $A$, strongly embedded and disconnected (thus indiscernible).
 
 \section{Lower bound}
 
-Consider the graph $x \cup y$. If $y/x$ is not a proper extension, then $\phi$ has no realizations over $A$. If it is, fix a realization of $y$, label it by $b$. Fix arbitrary disjoint subsets of $A$, label them $a_i$ for $i=[0..n]$, with each $|a_i| = |x|$. Abstractly adjoin $M_i/\curly{a_i, b} = M/\curly{x,y}$ for each $i$. Let $\bar M = \cup$. Consider $d = \dim{\bar M / A}$. We have $d = 1 - n \epsilon > 0$, moreover ever
+Consider the graph $x \cup y$. If $y/x$ is not a proper extension, then $\phi$ has no realizations over $A$. If it is, fix a realization of $y$, label it by $b$. Fix arbitrary disjoint subsets of $A$, label them $a_i$ for $i=[0..n]$, with each $|a_i| = |x|$. Abstractly adjoin $M_i/\curly{a_i, b} = M/\curly{x,y}$ for each $i$. Let $\bar M = \cup$. Consider $d = \dim{\bar M / A}$. We have $d = Y - n \epsilon > 0$, moreover every subextension is positive as well. Thus $A \leq \bar M$ so we can embed $\bar M$ into the ambient model. This witnesses the trace on
 
 
 
