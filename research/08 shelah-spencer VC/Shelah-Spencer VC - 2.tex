@@ -70,7 +70,7 @@ Pick $B' \subset B$, ordered $B' = \{a_1, \ldots\}$ such that
 	a_i \cap \bigcup_{j \neq i} a_j \neq \emptyset
 \end{align*}
 This is always possible by starting with $B$ and taking away elements one by one.
-Call such a set a generating set of $B$.
+Call such a set a \emph{generating set} of $B$.
 
 Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$.
 Let $\bar M = \bigcup M_i$.
@@ -88,6 +88,11 @@ Apply the key lemma to see that making it disjoint would reduce dimension contra
 Thus as $A$ is strong we need $|B'| \epsilon < Y$.
 This gives us $|B'| \leq n$.
 Finally we need to relate $|B'|$ to $|B|$.
+
+Suppose we have $C \subset A^{|x|}$, finite with $|C| = N$.
+A generating set for a trace has to have size $\leq n$.
+Thus there are ${N \choose n} \leq N^n$ choices 
+
 Take $A' = \bigcup B' = \subset A$.
 Note that $\bigcup B' = \bigcup B$, so all elements in $B$ have to have components from some elements of $B'$.
 $|A'| \leq n|x|$, thus the size of $B$ is at most $(n|x|)^|x|$.
