@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  25 JAN 2015 13:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  25 JAN 2015 15:06
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -116,49 +116,94 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty) (C:\Users\Anton\SparkleShare\Research\research\Thm.sty)
+
+! LaTeX Error: Command \vc already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23   \DeclareMathOperator{\vc}{vc}
+                                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1]
+)
+
+! LaTeX Error: Environment Claim undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \begin{Claim}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{Claim}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \end{Claim}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 116.
+(amsmath)                 on input line 128.
 
 
-Overfull \hbox (3.71208pt too wide) in paragraph at lines 131--133
+Overfull \hbox (3.71208pt too wide) in paragraph at lines 143--145
 [][]\OT1/cmr/m/n/10 Suppose we have a set $\OML/cmm/m/it/10 B$ \OT1/cmr/m/n/10 and a min-i-mal pair $(\OML/cmm/m/it/10 M
 ; A\OT1/cmr/m/n/10 )$ with $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 and $[](\OML/cmm/m
 /it/10 M=A\OT1/cmr/m/n/10 ) =
  []
 
-[2] [3] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
+[2] [3] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1681 strings out of 493922
- 18980 string characters out of 3144898
- 72869 words of memory out of 3000000
- 4841 multiletter control sequences out of 15000+200000
+ 1684 strings out of 493922
+ 18999 string characters out of 3144898
+ 73869 words of memory out of 3000000
+ 4844 multiletter control sequences out of 15000+200000
  9914 words of font info for 39 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,9n,31p,258b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,9n,31p,258b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (3 pages, 13116 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (3 pages, 13608 bytes).
