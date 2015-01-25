@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  25 JAN 2015 13:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  25 JAN 2015 13:05
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -117,32 +117,6 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty) (C:\Users\Anton\SparkleShare\Research\research\Thm.sty
 
-! LaTeX Error: Command \Lemma already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \newtheorem{Lemma}
-                      [theorem]{Lemma}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \newtheorem{Lemma}[
-                       theorem]{Lemma}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 ! LaTeX Error: Command \Corollary already defined.
                Or name \end... illegal, see p.192 of the manual.
 
@@ -155,6 +129,18 @@ l.6 \newtheorem{Corollary}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \newtheorem{Corollary}[
+                           theorem]{Corollary}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 ! LaTeX Error: Command \Theorem already defined.
@@ -198,52 +184,37 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (85.50017pt too wide) in paragraph at lines 5--10
-[][]\OT1/cmr/m/n/10 [theorem]Lemma
+Overfull \hbox (94.02797pt too wide) in paragraph at lines 6--10
+[][]\OT1/cmr/m/n/10 [theorem]Corollary
  []
 
 
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 5--10
-\OT1/cmr/m/n/10 [the-
- []
-
-
-Overfull \hbox (8.33334pt too wide) in paragraph at lines 5--10
-\OT1/cmr/m/n/10 o-
- []
-
-
-Overfull \hbox (60.36125pt too wide) in paragraph at lines 5--10
-\OT1/cmr/m/n/10 rem]Corollary
- []
-
-
-Overfull \hbox (20.55557pt too wide) in paragraph at lines 5--10
+Overfull \hbox (20.55557pt too wide) in paragraph at lines 6--10
 \OT1/cmr/m/n/10 The-
  []
 
 
-Overfull \hbox (8.33334pt too wide) in paragraph at lines 5--10
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 6--10
 \OT1/cmr/m/n/10 o-
  []
 
 
-Overfull \hbox (52.30565pt too wide) in paragraph at lines 5--10
+Overfull \hbox (52.30565pt too wide) in paragraph at lines 6--10
 \OT1/cmr/m/n/10 rem[section]
  []
 
 
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 5--10
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 6--10
 \OT1/cmr/m/n/10 [the-
  []
 
 
-Overfull \hbox (8.33334pt too wide) in paragraph at lines 5--10
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 6--10
 \OT1/cmr/m/n/10 o-
  []
 
 
-Overfull \hbox (69.9724pt too wide) in paragraph at lines 5--10
+Overfull \hbox (69.9724pt too wide) in paragraph at lines 6--10
 \OT1/cmr/m/n/10 rem]Proposition
  []
 
@@ -489,7 +460,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 113.
 
 
-Overfull \vbox (387.39156pt too high) has occurred while \output is active []
+Overfull \vbox (398.91171pt too high) has occurred while \output is active []
 
  [1]
 Overfull \hbox (3.71208pt too wide) in paragraph at lines 128--130
@@ -508,4 +479,4 @@ Here is how much of TeX's memory you used:
  1002 hyphenation exceptions out of 8191
  34i,9n,31p,258b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (2 pages, 12628 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (2 pages, 12592 bytes).
