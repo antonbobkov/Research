@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  25 JAN 2015 12:34
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  25 JAN 2015 13:03
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -116,8 +116,322 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty) (C:\Users\Anton\SparkleShare\Research\research\Thm.sty
-\c@theorem=\count100
+
+! LaTeX Error: Command \Lemma already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \newtheorem{Lemma}
+                      [theorem]{Lemma}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \newtheorem{Lemma}[
+                       theorem]{Lemma}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Command \Corollary already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \newtheorem{Corollary}
+                          [theorem]{Corollary}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \Theorem already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \newtheorem{Theorem}
+                        {Theorem}[section]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \Proposition already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \newtheorem{Proposition}
+                            [theorem]{Proposition}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: No counter 'theorem' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \newtheorem{Claim}[theorem]{Claim}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (85.50017pt too wide) in paragraph at lines 5--10
+[][]\OT1/cmr/m/n/10 [theorem]Lemma
+ []
+
+
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 [the-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 o-
+ []
+
+
+Overfull \hbox (60.36125pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 rem]Corollary
+ []
+
+
+Overfull \hbox (20.55557pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 The-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 o-
+ []
+
+
+Overfull \hbox (52.30565pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 rem[section]
+ []
+
+
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 [the-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 o-
+ []
+
+
+Overfull \hbox (69.9724pt too wide) in paragraph at lines 5--10
+\OT1/cmr/m/n/10 rem]Proposition
+ []
+
+
+Package amsthm Warning: Unknown theoremstyle `Definition' on input line 11.
+
+
+! LaTeX Error: Command \Problem already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \newtheorem*{Problem}
+                          {Problem}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \newtheorem*{Problem}{P
+                            roblem}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Command \Definition already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \newtheorem{Definition}
+                            [theorem]{Definition}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: No counter 'theorem' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \newtheorem{Exercise}[theorem]{Exercise}
+                                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: No counter 'theorem' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \newtheorem{Question}[theorem]{Question}
+                                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \Note already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \newtheorem{Note}
+                      {Solution}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \Remark already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \newtheorem{Remark}
+                        {Remark}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@Fact=\count100
+
+! LaTeX Error: Command \Example already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \newtheorem{Example}
+                         [theorem]{Example}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: No counter 'theorem' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \newtheorem{Warning}[theorem]{Warning}
+                                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 )
+Overfull \hbox (48.83342pt too wide) in paragraph at lines 12--6
+[][]\OT1/cmr/m/n/10 Problem
+ []
+
+
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 [the-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 o-
+ []
+
+
+Overfull \hbox (62.66681pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 rem]Definition
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 So-
+ []
+
+
+Overfull \hbox (11.66669pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 lu-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (15.13889pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 Re-
+ []
+
+
+Overfull \hbox (22.52785pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 mark
+ []
+
+
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 [the-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 o-
+ []
+
+
+Overfull \hbox (57.66681pt too wide) in paragraph at lines 12--6
+\OT1/cmr/m/n/10 rem]Example
+ []
+
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
@@ -140,14 +454,45 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1]
+)
+! Undefined control sequence.
+<argument> \shorttitle 
+                       
+l.26 \maketitle
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: NO \title GIVEN.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \maketitle
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (60.41756pt too wide) in paragraph at lines 28--31
+[][]\OT1/cmr/m/n/10 Some vc-density com-pu-ta-tions in Shelah-Spencer graphs An-ton Bobkov bobkov@math.ucla.edu 
+ []
+
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 112.
+(amsmath)                 on input line 113.
 
 
-Overfull \hbox (3.71208pt too wide) in paragraph at lines 127--129
+Overfull \vbox (387.39156pt too high) has occurred while \output is active []
+
+ [1]
+Overfull \hbox (3.71208pt too wide) in paragraph at lines 128--130
 [][]\OT1/cmr/m/n/10 Suppose we have a set $\OML/cmm/m/it/10 B$ \OT1/cmr/m/n/10 and a min-i-mal pair $(\OML/cmm/m/it/10 M
 ; A\OT1/cmr/m/n/10 )$ with $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 and $[](\OML/cmm/m
 /it/10 M=A\OT1/cmr/m/n/10 ) =
@@ -155,12 +500,12 @@ Overfull \hbox (3.71208pt too wide) in paragraph at lines 127--129
 
 [2] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
- 1715 strings out of 493922
- 19299 string characters out of 3144898
- 73869 words of memory out of 3000000
- 4876 multiletter control sequences out of 15000+200000
- 9606 words of font info for 38 fonts, out of 3000000 for 9000
+ 1695 strings out of 493922
+ 19088 string characters out of 3144898
+ 75869 words of memory out of 3000000
+ 4857 multiletter control sequences out of 15000+200000
+ 9394 words of font info for 37 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,9n,31p,258b,164s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,9n,31p,258b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (2 pages, 12176 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (2 pages, 12628 bytes).
