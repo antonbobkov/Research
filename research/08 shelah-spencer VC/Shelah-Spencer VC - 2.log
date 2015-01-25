@@ -115,8 +115,21 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 \c@Theorem=\count99
 )
-(C:\Users\Anton\SparkleShare\Research\research\Research.sty) (C:\Users\Anton\SparkleShare\Research\research\Thm.sty)
-("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
+(C:\Users\Anton\SparkleShare\Research\research\Research.sty) (C:\Users\Anton\SparkleShare\Research\research\Thm.sty
+
+! LaTeX Error: No counter 'theorem' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \newtheorem{Claim}[theorem]{Claim}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
@@ -180,10 +193,10 @@ Overfull \hbox (3.71208pt too wide) in paragraph at lines 141--143
 
 [2] [3] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
- 1684 strings out of 493922
- 19000 string characters out of 3144898
+ 1685 strings out of 493922
+ 19009 string characters out of 3144898
  73869 words of memory out of 3000000
- 4844 multiletter control sequences out of 15000+200000
+ 4845 multiletter control sequences out of 15000+200000
  9914 words of font info for 39 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,9n,31p,258b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
