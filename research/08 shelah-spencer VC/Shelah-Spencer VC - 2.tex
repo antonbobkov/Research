@@ -97,6 +97,7 @@ There are two cases
 \begin{enumerate}
 	\item $M_j \subset \bar M' \cup \{a_j\}$.
 	In this case there are edges between $\{a_j\}$ and $M_j$ that contribute to dimension less than $-\epsilon$.
+	\item Otherwise $M_j$ adds extra dimension 
 \end{enumerate}
 
 Apply the key lemma to see that making it disjoint would reduce dimension contradicting minimality.
@@ -123,7 +124,7 @@ This bounds the vc-density by $n$.
 Lemma
 
 Suppose we have a set $B$ and a minimal pair $(M, A)$ with $A \subset M$ and $\dim(M/A) = -\epsilon$.
-Then either $M \subseteq B$ or $\dim((M \cup B)/B) \leq -\epsilon$.
+Then either $M \subseteq B$ or $\dim((M \cup B)/B) < -\epsilon$.
 
 Proof
 
@@ -146,7 +147,7 @@ Lemma
 
 Suppose we have a set $B$ and a minimal chain $M_n$ with $M_0 \subset B$ and dimensions $-\epsilon_i$.
 Let $\epsilon$ be the minimal of $\epsilon_i$.
-Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) \leq -\epsilon$.
+Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) < -\epsilon$.
 
 Proof
 
