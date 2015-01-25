@@ -116,11 +116,9 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@Theorem=\count99
 )
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty) (C:\Users\Anton\SparkleShare\Research\research\Thm.sty
-
-Package amsthm Warning: Unknown theoremstyle `theorem' on input line 3.
-
 \c@theorem=\count100
-) ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
+)
+("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
@@ -157,10 +155,10 @@ Overfull \hbox (3.71208pt too wide) in paragraph at lines 127--129
 
 [2] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
- 1716 strings out of 493922
- 19309 string characters out of 3144898
+ 1715 strings out of 493922
+ 19299 string characters out of 3144898
  73869 words of memory out of 3000000
- 4877 multiletter control sequences out of 15000+200000
+ 4876 multiletter control sequences out of 15000+200000
  9606 words of font info for 38 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,9n,31p,258b,164s stack positions out of 5000i,500n,10000p,200000b,50000s
