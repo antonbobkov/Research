@@ -94,8 +94,14 @@ Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$.
 Let $\bar M = \bigcup M_i$.
 Consider $\bar M / A$.
 
+Pick $\bar M$ such that $\dim(\bar M / A)$ is maximized.
+
 Let $\bar M_j = \bigcup_{i \leq j} M_i$.
 Let $\bar A = A - \curly{a_i}_{i \leq j}$.
+Suppose $\bar A \cap \bar M \neq \emptyset$.
+Then we can abstractly reembed $\M$ over $A$ such that $\bar A \cap \bar M = \emptyset$.
+This would increase the dimension, contradicting maximality.
+Thus we can assume $A \cap \bar M = \{a_i\}_{i \in I}$
 
 
 
