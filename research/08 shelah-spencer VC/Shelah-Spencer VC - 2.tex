@@ -96,18 +96,6 @@ Consider $\bar M / A$.
 
 Pick $\bar M$ such that $\dim(\bar M / A)$ is maximized.
 
-Let $\bar M_j = \bigcup_{i \leq j} M_i$.
-Let $\bar A = A - \curly{a_i}_{i \leq j}$.
-Suppose $\bar A \cap \bar M \neq \emptyset$.
-Then we can abstractly reembed $\M$ over $A$ such that $\bar A \cap \bar M = \emptyset$.
-This would increase the dimension, contradicting maximality.
-Thus we can assume $A \cap \bar M = \{a_i\}_{i \in I}$
-
-
-
-Claim: $\dim(\bar M / A)$ is maximized when all $M_i$ are disjoint.
-Suppose not.
-
 $\bar M \cap A \leq \bar M$ as $A$ is strong. (Make sure $M$ is not too big!)
 Let $\bar A = A - \curly{a_i}_{i \in I}$.
 Suppose $\bar A \cap \bar M \neq \emptyset$.
@@ -126,9 +114,10 @@ There are two cases
 \begin{enumerate}
 	\item $M_j \subset \bar M' \cup \{a_j\}$.
 	In this case there are edges between $\{a_j\}$ and $M_j$ that contribute to dimension less than $-\epsilon$.
-	\item Otherwise $M_j$ adds extra dimension less than $-\epsilon$
+	\item Otherwise $M_j$ adds extra dimension less than $-\epsilon_U$
 \end{enumerate}
-In either case replacing $M_j$ by an isomorphic copy disjoint from $\bar M'$ would increase dimension, contradicting minimality.
+
+Adding it all up $\dim(\bar M / A) \leq -\epsilon_U N$ yielding the upper bound. S
 
 Thus as $A$ is strong we need $|B'| \epsilon < Y$.
 This gives us $|B'| \leq n$.
