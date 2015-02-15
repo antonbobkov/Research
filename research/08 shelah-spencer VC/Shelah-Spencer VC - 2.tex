@@ -104,9 +104,11 @@ This would increase the dimension, contradicting maximality.
 Thus we can assume $A \cap \bar M = \{a_i\}_{i \in I}$
 
 Let $\bar M_j = \bigcup_{i < j} M_i$.
-Inductively estimate $\dim(\bar M_j / A) < j \epsilon_U$
+Inductively estimate $\dim(\bar M_j / A) < j \epsilon_U$.
 
-Apply lemma to $\bar M_j \cup \{a_j\}$ and $M_j / \{a_j, b\}$.
+Base case is clear.
+
+For induction case apply lemma to $\bar M_j \cup \{a_j\}$ and $M_j / \{a_j, b\}$.
 There are two cases
 \begin{enumerate}
 	\item $M_j \subset \bar M' \cup \{a_j\}$.
