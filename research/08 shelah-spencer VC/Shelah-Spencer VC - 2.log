@@ -123,20 +123,6 @@ Package amsthm Warning: Unknown theoremstyle `theorem' on input line 3.
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-
-! LaTeX Error: Command \AA already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11   \newcommand{\AA}{\mathscr A}
-                                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
@@ -180,4 +166,4 @@ Here is how much of TeX's memory you used:
  1002 hyphenation exceptions out of 8191
  34i,9n,31p,258b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (3 pages, 14856 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (3 pages, 14892 bytes).
