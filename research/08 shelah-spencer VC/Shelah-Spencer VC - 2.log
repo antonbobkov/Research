@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 FEB 2015 13:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  20 FEB 2015 13:11
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -119,42 +119,68 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 Package amsthm Warning: Unknown theoremstyle `theorem' on input line 3.
 
-) ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1]
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 34.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.50 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[1]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 135.
+(amsmath)                 on input line 141.
 
 [2] [3] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
- 1686 strings out of 493922
- 19016 string characters out of 3144898
+ 1712 strings out of 493922
+ 19592 string characters out of 3144898
  73869 words of memory out of 3000000
- 4846 multiletter control sequences out of 15000+200000
- 9914 words of font info for 39 fonts, out of 3000000 for 9000
+ 4862 multiletter control sequences out of 15000+200000
+ 10738 words of font info for 44 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,9n,31p,258b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (3 pages, 14228 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (3 pages, 14712 bytes).
