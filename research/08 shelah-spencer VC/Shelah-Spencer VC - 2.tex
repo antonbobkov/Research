@@ -116,7 +116,6 @@ This shows that vc function is infinite in Shelah-Spencer random graphs.
 Let $n$ be the integer such that $n \epsilon_U < Y$ and $(n+1) \epsilon_U > Y$.
 
 Pick a trace of $\phi(x,y)$ on $A^{|x|}$ by a parameter $b$.
-After throwing away at most $|A|$ many traces we may assume $b \notin A$.
 
 \begin{align*}
 	B = \curly{a \in A^{|x|} \mid \phi(a, b)}
@@ -189,6 +188,78 @@ This bounds the vc-density by $n$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Upper bound}
 
+Let $n$ be the integer such that $n \epsilon_U < Y$ and $(n+1) \epsilon_U > Y$.
+
+Pick a trace of $\phi(x,y)$ on $A^{|x|}$ by a parameter $b$.
+After throwing away at most $|A|$ many traces we may assume $b \notin A$.
+
+\begin{align*}
+	B = \curly{a \in A^{|x|} \mid \phi(a, b)}
+\end{align*}
+
+Pick $B' \subset B$, ordered $B' = \{a_i\}_{i \in I}$ such that
+\begin{align*}
+	%a_i \cap \bigcup_{j \neq i} a_j \neq \emptyset
+	a_i \cap \bigcup_{j < i} a_j \neq \emptyset
+\end{align*}
+This is always possible by starting with $B$ and taking away elements one by one.
+Call such a set a \emph{generating set} of $B$.
+
+Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \in I$.
+Let $\bar M = \bigcup M_i$.
+Consider $\bar M / A$.
+
+Pick $\bar M$ such that $\dim(\bar M / A)$ is maximized.
+
+$\bar M \cap A \leq \bar M$ as $A$ is strong. (Make sure $M$ is not too big!)
+Let $\bar A = A - \curly{a_i}_{i \in I}$.
+Suppose $\bar A \cap \bar M \neq \emptyset$.
+Then we can abstractly reembed $\M$ over $A$ such that $\bar A \cap \bar M = \emptyset$.
+This would increase the dimension, contradicting maximality.
+Thus we can assume $A \cap \bar M = \{a_i\}_{i \in I}$
+
+Let $\bar M_j = \bigcup_{i < j} M_i$.
+
+\begin{Lemma}
+	$\dim(\bar M_j / A) \leq j \cdot \epsilon_U$
+\end{Lemma}
+\begin{proof}
+	Proceed by induction.
+	Base case is clear.
+
+	For induction case apply lemma to $\bar M_j \cup \{a_j\}$ and $M_j / \{a_j, b\}$.
+	There are two cases
+	\begin{enumerate}
+		\item $M_j \subset \bar M' \cup \{a_j\}$.
+		In this case there are edges between $\{a_j\}$ and $M_j$ that contribute to dimension less than $-\epsilon_U$.
+		\item Otherwise $M_j$ adds extra dimension less than $-\epsilon_U$
+	\end{enumerate}
+\end{proof}
+
+Thus we have $\dim(\bar M / A) = \dim(\bar M_n / A) \leq -\epsilon_U n$.
+
+Thus as $A$ is strong we need $|B'| \epsilon_U < Y$.
+This gives us $|B'| \leq n$.
+Finally we need to relate $|B'|$ to $|B|$.
+
+Suppose we have $C \subset A^{|x|}$, finite with $|C| = N$.
+A generating set for a trace has to have size $\leq n$.
+Thus there are ${N \choose n} \leq N^n$ choices for a generating set.
+A set generated from set of size $n$ can have at most $(x|n|)^{|x|}$ elements.
+Thus a given set of size $n$ can generate at most
+\begin{align*}
+	2^{(x|n|)^{|x|}}
+\end{align*}
+sets.
+Thus the number of possible traces on $C$ is bounded above by
+\begin{align*}
+  2^{(x|n|)^{|x|}} \cdot N^n = O(N^n)
+\end{align*}
+This bounds the vc-density by $n$.
+
+\begin{align*}
+	\vc_\AA(\phi) \geq \floor{\frac{Y}{\epsilon_U}}
+\end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Technical Lemmas}
