@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  21 FEB 2015 12:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  21 FEB 2015 13:03
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -160,10 +160,10 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 Here is how much of TeX's memory you used:
  1712 strings out of 493922
  19592 string characters out of 3144898
- 73869 words of memory out of 3000000
+ 74869 words of memory out of 3000000
  4862 multiletter control sequences out of 15000+200000
  10738 words of font info for 44 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,11n,31p,258b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,11n,31p,258b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (4 pages, 20540 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (4 pages, 21576 bytes).
