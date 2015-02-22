@@ -231,8 +231,10 @@ Let $\bar M_i = \bigcup_{j < i} M_j$.
 	Second proposition is clear.
 	For the first proposition base case is clear.
 	
-	For induction step, if $\bar M_j = \bar M_{j+1}$ then $m_i = m_{i+1}$ and the quantities don't change.
-	Thus assume $\bar M_j \neq \bar M_{j+1}$.
+	Induction step.
+	Suppose $\bar M_j \cap A = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
+	Then $m_i = m_{i+1}$ and the quantities don't change.
+	Thus assume at least one of these equalities fails.
 	
 	Apply Lemma (NUMBER!) to $\bar M_j \cup A$ and $(M_{j+1}, a_{j+1})$.
 	There are two options
