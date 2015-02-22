@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  21 FEB 2015 13:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  22 FEB 2015 13:38
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -156,14 +156,71 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 171.
 
-[2] [3] [4] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
+[2]
+Runaway argument?
+ m_i = |{j < i \mid \bar &M_j \cap A \neq \bar M_{j-1} \cap A \text {\ETC.
+! Paragraph ended before \align* was complete.
+<to be read again> 
+                   \par 
+l.220 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.220 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.220 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.220 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[3]
+
+! LaTeX Error: \begin{align*} on input line 215 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.330 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 215 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
  1712 strings out of 493922
  19592 string characters out of 3144898
- 74869 words of memory out of 3000000
+ 73869 words of memory out of 3000000
  4862 multiletter control sequences out of 15000+200000
  10738 words of font info for 44 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,31p,258b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,31p,258b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (4 pages, 22132 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (4 pages, 21904 bytes).
