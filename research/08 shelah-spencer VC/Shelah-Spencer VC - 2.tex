@@ -71,12 +71,13 @@ Pick parameter set
 \end{align*}
 
 a disjoint union where each $b_i$ is an ordered tuple of size $|x|$ connected according to $\phi$.
+We also require $A$ to be strong.
 
 Consider the graph $y$.
 If $y$ is not positive, then $\phi$ has no realizations.
 Otherwise, take an abstract realization of $y$, and label it by $b$.
 
-Fix $n$ arbitrary elements out of $a_i$, label them $a_i$, with each $|a_i| = |x|$.
+Fix $n$ arbitrary elements out of $b_i$, label them $a_i$.
 Abstractly adjoin $M_i/\curly{a_i, b} = M/\curly{x,y}$ for each $i$.
 Let $\bar M = \bigcup M_i$ (disjointly).
 
@@ -88,7 +89,7 @@ Let $\bar M = \bigcup M_i$ (disjointly).
 \end{proof}
 
 Thus a copy of $\bar M$ can be embedded over $A$ into our ambient model.
-Choice of elements of $B$ was arbitrary, thus showing that any $n$ elements can be traced out.
+Our choice of $b_i$ was arbitrary, so we get{N \choose n}
 Thus we have $O(|B|^n)$ many traces showing $\vc$-density of at least $n$.
 
 \begin{align*}
