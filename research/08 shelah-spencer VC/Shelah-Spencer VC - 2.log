@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  4 MAR 2015 12:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  6 MAR 2015 12:16
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -156,7 +156,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 92.
 
-[1] [2] [3] [4] [5] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
+[1] [2] [3] [4] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -168,6 +168,6 @@ Here is how much of TeX's memory you used:
  4863 multiletter control sequences out of 15000+200000
  10738 words of font info for 44 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,31p,258b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,31p,258b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (5 pages, 24424 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (4 pages, 23400 bytes).
