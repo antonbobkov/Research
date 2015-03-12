@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[margin, 10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+%\usepackage{graphicx}
+
+%\setlength{\textwidth}{5.1in} % Text width of the document
+\setlength{\textwidth}{5.5in} % Text width of the document
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\moveleft.5\hoffset\centerline{\large\bf Anton Bobkov}
+%\\ % Your name at the top
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
+\section{\textsc{Contact Information}}
+\begin{tabular}{l|l}
+Graduate Student & {\it E-mail:}\\
+Department of Mathematics & \href{mailto:antongml@gmail.com}{antongml@gmail.com}\\
+University of California, Los Angeles & \href{mailto:bobkov@math.ucla.edu}{bobkov@math.ucla.edu}\\
+Los Angeles, CA 90095-1555 USA & {\it Website:}\\
+\phantom{lots of text that takes up a bit of space blah blah blah} & \url{www.math.ucla.edu/~bobkov/}\\
+\phantom{lots of text that takes up a bit of space blah blah blah} & {\it Phone:} (408)813-6331
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\textsc{Education}}
+
+\textbf{University of California, Los Angeles} {\sl (graduate)}\hfill \textbf{Fall 2011 to present}\\
+{\sl PhD,} Mathematics (in progress)
+
+{\sl Advisor}: Matthias Aschenbrenner \\
+{\sl Research interests}: Mathematical logic, model theory, NIP theories, vc-density
+
+\textbf{University of California, Los Angeles} {\sl (undergraduate)}\hfill \textbf{Graduated Spring 2011}
+
+\begin{itemize}
+	\item {\sl B.S.} in Mathematics, {\sl B.A.} in Physics
+	\item Sherwood Prize
+	\item Departmental Highest Honors in Mathematics, College Honors
+	\item GPA: 3.82 (Magna Cum Laude)
+	\item William Lowell Putnam Mathematics Competition
+		\begin{itemize}
+			\item 2008 - score 30
+			\item 2009 - score 19
+		\end{itemize}
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	Undergraduate Research
+%----------------------------------------------------------------------------------------
+ 
+\section{\textsc{Undergraduate Research}}
+
+\textbf{Cryptography REU at Northern Kentucky University} \hfill \textbf{Summer 2009}\\
+Implemented a variant of MXL algorithm in computational algebra system MAGMA \\
+
+\textbf{Research assistant for Vladimir Vassiliev} \hfill \textbf{2008 - 2011}\\
+I did various numerical simulations in C++ for AGIS gamma-ray telescope. This included forward and inverse kinematics for Stewart platform, ray casting focusing simulations, and laser calibration. I have also worked on network interfacing with Gumstix boards using CORBA as well as installing and configuring a custom linux kernel. 
+
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+ 
+\section{\textsc{Teaching}}
+
+Intermediate C++ Programming, Linear Algebra, Calculus
+
+%----------------------------------------------------------------------------------------
+%	PAPERS
+%----------------------------------------------------------------------------------------
+ 
+\section{\textsc{Papers}}
+
+Bobkov, A. {\it VC-density for trees}, in preparation
+
+
+%----------------------------------------------------------------------------------------
+%	Software
+%----------------------------------------------------------------------------------------
+ 
+\section{\textsc{Software Experience}}
+
+\textbf{Unix-like systems}\\
+I am comfortable working in command line environment, including tasks such as
+\begin{itemize}
+	\item installing and managing web-server, repository server, ssh server
+	\item code building, editing, and version control
+\end{itemize}
+
+\begin{tabular}{ll}
+\textbf{Languages} & C++, C\#, bash, Java, php, MAGMA \\
+\textbf{Code management} & CMake, Makefile, git, subversion, Visual Studio, Unity3D \\
+\textbf{Standards} & TCP/IP, .NET, CORBA  \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+ 
+\section{\textsc{Independent Projects}}
+
+\textbf{Burn and Turn} \hfill \textbf{2008 - 2011}\\
+
+\textbf{Self Balancing Robot} \hfill \textbf{Summer 2012}\\
+
+\textbf{UCLA Graduate Student Wiki} \hfill \textbf{Summer 2014}\\
+
+\textbf{Decentralized Networking Online Game} \hfill \textbf{Fall 2014 - Present}\\
+
+
+\end{resume}
+
+\end{document}
