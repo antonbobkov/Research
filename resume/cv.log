@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  13 MAR 2015 21:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  13 MAR 2015 21:21
 entering extended mode
 **cv.tex
 (C:\Users\Anton\SparkleShare\Research\resume\cv.tex
@@ -313,7 +313,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
 Here is how much of TeX's memory you used:
  5743 strings out of 493921
  83832 string characters out of 3144875
- 161634 words of memory out of 3000000
+ 161628 words of memory out of 3000000
  9007 multiletter control sequences out of 15000+200000
  10925 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -324,7 +324,7 @@ nappen\ec\dpi600\ectt1000.pk> <C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\
 C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Anton\AppData\Local\Mi
 KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1000.pk> <C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
 en\ec\dpi600\ecbx1200.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on cv.pdf (2 pages, 86264 bytes).
+Output written on cv.pdf (2 pages, 86262 bytes).
 PDF statistics:
  267 PDF objects out of 1000 (max. 8388607)
  3 named destinations out of 1000 (max. 500000)
