@@ -39,18 +39,21 @@
 
 \maketitle
 
-Fix a formula $\phi(x, y)$ that is a minimal chain extension $\curly{M_i}_{i \in [0..k]}$ with $M_0 = \{x, y\}$ with
-\begin{itemize}
-	\item $\phi(x, y)$ determines edges and non-edges on $\curly{x, y}$.
-	\item there are no edges between $x$ and $y$.
-	%\item there are no edges between $x$.
-	\item Let $\dim \paren{M_i/M_{i-1}} = -\epsilon_i$.
-	\item Let $\epsilon_L = \sum_{[1..k]} \epsilon_i$.
-	\item Let $\epsilon_U = \min_{[1..k]} \epsilon_i$.
-	\item Let $Y = \dim (y)$ considering $y$ as a graph.
-	In particular if $\{y\}$ are disconnected then $Y = |y|$.
-	\item We also require that all elements of $y$ that are connected to $M_k - \{x,y\}$.
-\end{itemize}
+\begin{Definition}
+	A formula $\phi(x, y)$ is called \emph{basic} if
+	\begin{itemize}
+		\item $\phi(x, y)$ is a minimal chain extension $\curly{M_i}_{i \in [0..k]}$ with $M_0 = \{x, y\}$
+		\item $\phi(x, y)$ determines edges and non-edges on $\curly{x, y}$.
+		\item there are no edges between $x$ and $y$.
+		%\item there are no edges between $x$.
+		\item Let $\dim \paren{M_i/M_{i-1}} = -\epsilon_i$.
+		\item Let $\epsilon_L = \sum_{[1..k]} \epsilon_i$.
+		\item Let $\epsilon_U = \min_{[1..k]} \epsilon_i$.
+		\item Let $Y = \dim (y)$ considering $y$ as a graph.
+		In particular if $\{y\}$ are disconnected then $Y = |y|$.
+		\item We also require that all elements of $y$ that are connected to $M_k - \{x,y\}$.
+	\end{itemize}
+\end{Definition}
 
 \begin{Note}
 	We add the final condition to simplify our analysis. Similar techniques can be used to acquire bounds on formulas not subject to that condition.
