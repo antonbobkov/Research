@@ -74,7 +74,7 @@ We work with formulas that are boolean combinations of basic formulas written in
 	\epsilon_L(\neg \phi) &= \epsilon_L(\phi) \\
 	\epsilon_U(\neg \phi) &= \epsilon_U(\phi) \\
 	\epsilon_L(\phi \wedge \psi) &= \epsilon_L(\phi) + \epsilon_L(\psi) \\
-	\epsilon_U(\phi \wedge \psi) &= \min(\epsilon_L(\phi), \epsilon_L(\psi)) \\
+	\epsilon_U(\phi \wedge \psi) &= \min(\epsilon_U(\phi), \epsilon_U(\psi)) \\
 	\epsilon_L(\phi \vee \psi) &= \min(\epsilon_L(\phi), \epsilon_L(\psi)) \\
 	\epsilon_U(\phi \vee \psi) &= \min(\epsilon_U(\phi), \epsilon_U(\psi)) 
 \end{align*}
