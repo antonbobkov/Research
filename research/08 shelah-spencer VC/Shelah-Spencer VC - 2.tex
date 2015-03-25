@@ -46,7 +46,7 @@
 		\item $\phi(x, y)$ determines edges and non-edges on $\curly{x, y}$.
 		\item there are no edges between $x$ and $y$.
 		%\item there are no edges between $x$.
-		\item graph $y$ is positive
+		%\item graph $y$ is positive
 		\item all elements of $y$ that are connected to $M_k - \{x,y\}$. (see note \ref{note_special})
 	\end{itemize}
 \end{Definition}
@@ -61,14 +61,11 @@
 	We add the final condition to simplify our analysis. Similar techniques can be used to acquire bounds on formulas not subject to that condition.
 \end{Note}
 
-\begin{Note}
-	If graph of $y$ wasn't positive, the formula would have no realizations.
-\end{Note}
-
 \begin{Definition}
 	For a basic formula $\phi(x, y)$ let
 	\begin{itemize}
 		\item $\dim \paren{M_i/M_{i-1}} = -\epsilon_i(\phi)$.
+		\item if $x$ or $y$ aren't positiv, then $\epsilon_L(\phi) = \epsilon_U(\phi) = \infty$. Otherwise
 		\item $\epsilon_L(\phi) = \sum_{[1..k]} \epsilon_i(\phi)$.
 		\item $\epsilon_U(\phi) = \min_{[1..k]} \epsilon_i(\phi)$.
 		\item Let $Y(\phi) = \dim (y)$ considering $y$ as a graph.
