@@ -52,6 +52,8 @@
 
 % issue: multiple possible chain decompositions?
 
+% note positivity of x and y
+
 \begin{Note} \label{note_special}
 	We add the final condition to simplify our analysis. Similar techniques can be used to acquire bounds on formulas not subject to that condition.
 \end{Note}
@@ -98,9 +100,13 @@ Consider a formula in conjunctive-disjunctive form. Look at individual conjuncti
 Given a disjunction of formulas, choose one with the smallest $\epsilon_L$.
 Assume that our formula is conjunction of positive instances of basic formulas and we will consider the negative case later.
 
+\begin{align*}
+	\psi = \bigwedge \phi_i
+\end{align*}
+
 Let $n$ be the integer such that $n \epsilon_L < Y$ and $(n+1) \epsilon_L > Y$.
 
-Fix an individual formula 
+Fix an individual formula $\phi_i$
 
 Consider the graph $x$.
 If $x$ is not positive, then $\phi$ has no realizations.
