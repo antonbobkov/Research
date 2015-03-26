@@ -255,9 +255,12 @@ Consider $\bar M / A$.
 Let $\bar M_i = \bigcup_{j < i} M_j$.
 
 \begin{Definition}
-	$(i, i+1)$ is called a \emph{jump} if some of the following conditions happen
+	$(j-1, j)$ is called a \emph{jump} if some of the following conditions happen
 	\begin{itemize}
-		\item 
+		\item New vertices are added outside of $A$ i.e.
+		\begin{align*}
+			\bar M_j - A \neq \bar M_{j-1} - A
+		\end{align*}
 	\end{itemize}
 \end{Definition}
 
