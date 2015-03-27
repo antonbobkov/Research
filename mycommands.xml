@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<lxCollection version="1" xmlns:txclxp="http://schemas.ToolsCenter.org/TeXnicCenter/LaTeXCommands.xsd">
+	<lxPackage name="Custom" 
+		path="" 
+		desc="my math commands" 
+	>
+		
+
+
+
+	<lxEnvironment name="Lemma"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Lemma}"
+        expbefore="\begin{"/>
+
+    
+    <lxEnvironment name="Corollary"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Corollary}"
+        expbefore="\begin{"/>
+    
+    <lxEnvironment name="Theorem"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Theorem}"
+        expbefore="\begin{"/>
+    
+    <lxEnvironment name="Proposition"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Proposition}"
+        expbefore="\begin{"/>
+						
+		<lxEnvironment name="Claim"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Claim}"
+        expbefore="\begin{"/>
+						
+	<lxEnvironment name="Problem" 
+			parameters="1" 
+			desc="Math environment"
+			icon="math.bmp"
+			index="10"
+			expafter="}&#xA;&#xA;\end{Problem}" 
+			expbefore="\begin{"/>
+
+    <lxEnvironment name="Definition"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Definition}"
+        expbefore="\begin{"/>
+
+	<lxEnvironment name="Exercise"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Exercise}"
+        expbefore="\begin{"/>
+						
+		<lxEnvironment name="Question"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Question}"
+        expbefore="\begin{"/>
+						
+        expbefore="\begin{"/>
+						
+		<lxEnvironment name="Solution"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Solution}"
+        expbefore="\begin{"/>
+
+    <lxEnvironment name="Note"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Note}"
+        expbefore="\begin{"/>
+
+    <lxEnvironment name="Remark"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Remark}"
+        expbefore="\begin{"/>
+
+    <lxEnvironment name="Fact"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Fact}"
+        expbefore="\begin{"/>
+
+    <lxEnvironment name="Example"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Example}"
+        expbefore="\begin{"/>
+
+    <lxEnvironment name="Warning"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{Warning}"
+        expbefore="\begin{"/>
+
+	<lxEnvironment name="proof"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{proof}"/>
+
+	<lxEnvironment name="align*"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{align*}"
+        expbefore="\begin{"/>
+
+    <lxEnvironment name="diagram"
+        parameters="1"
+        desc="Math environment"
+        icon="math.bmp"
+        index="10"
+        expafter="}&#xA;&#xA;\end{diagram}"
+        expbefore="\begin{"/>
+
+  </lxPackage>
+</lxCollection>
