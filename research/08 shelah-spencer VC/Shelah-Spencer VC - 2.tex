@@ -290,7 +290,7 @@ Let $\bar M_i = \bigcup_{j < i} M_j$.
 	For the first proposition base case is clear.
 	
 	Induction step.
-	Suppose $\bar M_j \cap A = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
+	Suppose $\bar M_j \cap (A \cup b) = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
 	Then $m_i = m_{i+1}$ and the quantities don't change.
 	Thus assume at least one of these equalities fails.
 	
@@ -298,7 +298,7 @@ Let $\bar M_i = \bigcup_{j < i} M_j$.
 	There are two options
 	
 	\begin{itemize}
-		\item $\dim(\bar M_{j+1} \cup A / \bar M_i \cup A) \leq -\epsilon_U$.
+		\item $\dim(\bar M_{j+1} \cup (A \cup b) / \bar M_i \cup (A \cup b)) \leq -\epsilon_U$.
 		This implies the proposition.
 		\item $M_{j+1} \subset \bar M_j \cup A$.
 		Then by our assumption it has to be $\partial(\bar M_j, A) \neq \partial(\bar M_{j+1}, A)$.
