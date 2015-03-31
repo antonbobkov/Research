@@ -156,42 +156,19 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 187.
 
-[2]
-! Undefined control sequence.
-<argument>  \psi = \bivee 
-                          \bigwedge \phi _{ij} 
-l.248 	\end{align*}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  \psi = \bivee 
-                          \bigwedge \phi _{ij} 
-l.248 	\end{align*}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[3]
+[2] [3]
 Overfull \hbox (6.92484pt too wide) in paragraph at lines 310--310
 [] 
  []
 
 [4] [5] [6] [7] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
- 1715 strings out of 493922
- 19624 string characters out of 3144899
+ 1714 strings out of 493922
+ 19619 string characters out of 3144899
  75869 words of memory out of 3000000
- 4865 multiletter control sequences out of 15000+200000
+ 4864 multiletter control sequences out of 15000+200000
  10738 words of font info for 44 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  34i,14n,31p,377b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 35452 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 35468 bytes).
