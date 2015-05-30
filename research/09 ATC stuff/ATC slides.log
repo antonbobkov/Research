@@ -883,7 +883,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
 Here is how much of TeX's memory you used:
  15535 strings out of 493921
  292673 string characters out of 3144875
- 359792 words of memory out of 3000000
+ 360792 words of memory out of 3000000
  18447 multiletter control sequences out of 15000+200000
  11430 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -893,7 +893,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
 /amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on "ATC slides.pdf" (3 pages, 73536 bytes).
+Output written on "ATC slides.pdf" (3 pages, 73534 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
