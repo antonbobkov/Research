@@ -64,16 +64,13 @@ We define that to be a shatter function.
 \end{Theorem}
 
 \begin{Definition}
-	Families of sets with polynomially bounded shatter functions are said to have a finite VC-dimension.
-\end{Definition}
-
-\begin{Definition}
-	Suppose $\F$ has a finite VC-dimension.
-	Let $k$ be the smallest real such that 
+	Suppose growth of shatter function for $\F$ is polynomial.
+	Let $r$ be the smallest real such that 
 	\begin{align*}
-		\pi_\F(n) = O(n^k)
+		\pi_\F(n) = O(n^r)
 	\end{align*}
-	We define such $k$ to be the vc-density of $\F$.
+	We define such $r$ to be the vc-density of $\F$.
+	If shatter function grows exponentially, we let vc-density to be infinite.
 \end{Definition}
 
 \section{Model Theory}
