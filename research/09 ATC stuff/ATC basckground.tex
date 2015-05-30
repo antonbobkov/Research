@@ -6,7 +6,7 @@
 \newcommand{\F}{\mathcal F}
 \newcommand{\curly}[1]{\left\{ #1 \right\}}
 
-\DeclareMathOperator{\cx}{Complexity}
+\DeclareMathOperator{\vc}{vc}
 
 \begin{document}
 
@@ -130,14 +130,14 @@ Uniformly definable families offer more interesting behavior.
 
 A model is said to be NIP if all uniformly definable families have finite vc-density.
 
-For a given model $M$, let vc function of $n$ to be the largest vc-density achieved by $n$-dimensional families of uniformly definable sets.
+For a given model $M$, let \vc function of $n$ to be the largest \vc-density achieved by $n$-dimensional families of uniformly definable sets.
 
 \begin{align*}
-	vc_M(n) = max \curly{ vc(\phi) \mid \phi(\vec x, \vec y) \text{ with } |\vec x| = n}
+	\vc_M(n) = max \curly{ \vc(\phi) \mid \phi(\vec x, \vec y) \text{ with } |\vec x| = n}
 \end{align*}
 
 Open questions about vc functions.
 
-Is $vc_M(n) = n vc_M(1)$? If not, is there a linear relationship?
+Is $\vc_M(n) = n \vc_M(1)$? If not, is there a linear relationship?
 
 \end{document}
