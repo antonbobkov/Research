@@ -861,56 +861,7 @@ Overfull \hbox (3.2445pt too wide) in paragraph at lines 40--40
 
 [3
 
- <C:/Users/Anton/SparkleShare/Research/research/09 ATC stuff/circle.png>]
-! Misplaced alignment tab character &.
-\beamer@doifinframe ...ls on a line $\pi _\F (n) &
-                                                  = 2n$ \item Half-planes on...
-l.53 \end{frame}
-                
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\beamer@doifinframe ...s on a plane $\pi _\F (n) &
-                                                  = n(n+1)/2 + 1$ \item Fini...
-l.53 \end{frame}
-                
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\beamer@doifinframe ...ets of $\N $ $\pi _\F (n) &
-                                                  = 2^n$ \item Polygons in a...
-l.53 \end{frame}
-                
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-\beamer@doifinframe ...s in a plane $\pi _\F (n) &
-                                                  = 2^n$ \end {enumerate} \e...
-l.53 \end{frame}
-                
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[4
+ <C:/Users/Anton/SparkleShare/Research/research/09 ATC stuff/circle.png>] [4
 
 ]
 \tf@nav=\write6
@@ -918,7 +869,8 @@ might try typing `S' now just to see what is salvageable.
 \tf@snm=\write8
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
- ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.aux")
+
+("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
 Package rerunfilecheck Info: File `ATC*slides.out' has not changed.
