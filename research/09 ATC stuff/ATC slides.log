@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  30 MAY 2015 15:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 13:39
 entering extended mode
 **ATC*slides.tex
 ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.tex"
@@ -909,10 +909,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 15691 strings out of 493921
- 295978 string characters out of 3144875
+ 15699 strings out of 493921
+ 296042 string characters out of 3144875
  361792 words of memory out of 3000000
- 18576 multiletter control sequences out of 15000+200000
+ 18584 multiletter control sequences out of 15000+200000
  14547 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,15n,55p,400b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
