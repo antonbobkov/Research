@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 22:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 22:20
 entering extended mode
 **ATC*slides.tex
 ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.tex"
@@ -892,30 +892,7 @@ Missing character: There is no – in font cmss10!
 
 ] [16
 
-]
-! Undefined control sequence.
-<argument>  \tp (a), \tp (b) \proves 
-                                     \tp (ab) 
-l.191 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  \tp (a), \tp (b) \proves 
-                                     \tp (ab) 
-l.191 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[17
+] [17
 
 ] [18
 
@@ -942,10 +919,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 15680 strings out of 493921
- 295211 string characters out of 3144875
+ 15679 strings out of 493921
+ 295205 string characters out of 3144875
  361799 words of memory out of 3000000
- 18557 multiletter control sequences out of 15000+200000
+ 18556 multiletter control sequences out of 15000+200000
  12093 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,15n,55p,579b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -958,7 +935,7 @@ cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on "ATC slides.pdf" (20 pages, 225279 bytes).
+Output written on "ATC slides.pdf" (20 pages, 225405 bytes).
 PDF statistics:
  605 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
