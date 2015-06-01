@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 13:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 22:17
 entering extended mode
 **ATC*slides.tex
 ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.tex"
@@ -869,7 +869,9 @@ Overfull \hbox (3.2445pt too wide) in paragraph at lines 40--40
 Missing character: There is no – in font cmss10!
  [6
 
-] [7
+]
+Missing character: There is no – in font cmss10!
+ [7
 
 ] [8
 
@@ -891,14 +893,45 @@ Missing character: There is no – in font cmss10!
 ] [16
 
 ]
+! Undefined control sequence.
+<argument>  \tp (a), \tp (b) \proves 
+                                     \tp (ab) 
+l.192 \end{frame}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \tp (a), \tp (b) \proves 
+                                     \tp (ab) 
+l.192 \end{frame}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[17
+
+] [18
+
+] [19
+
+] [20
+
+]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
  ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `ATC*slides.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
@@ -906,30 +939,28 @@ Package rerunfilecheck Info: File `ATC*slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 15699 strings out of 493921
- 296042 string characters out of 3144875
- 361792 words of memory out of 3000000
- 18584 multiletter control sequences out of 15000+200000
- 14547 words of font info for 53 fonts, out of 3000000 for 9000
+ 15672 strings out of 493921
+ 295147 string characters out of 3144875
+ 361799 words of memory out of 3000000
+ 18549 multiletter control sequences out of 15000+200000
+ 12093 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,15n,55p,400b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\modeless\public\sansmathaccent\dpi600\mathkerncmssi10.pk> <C:\Users
-\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\modeless\public\sansmathaccent\dpi525\mathkerncmssi8.pk> <C:\Users\Anton\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\modeless\public\sansmathaccent\dpi600\mathkerncmssi8.pk> <C:\Users\Anton\AppData\Local\MiKTe
-X\2.9\fonts\pk\modeless\public\sansmathaccent\dpi657\mathkerncmssi10.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
-sam7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "ATC slides.pdf" (16 pages, 209539 bytes).
+ 56i,15n,55p,579b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Anton\AppData\Local\MiKTeX\2.9\fonts\pk\modeless\public\sansmathaccent\dpi600\mathkerncmssi8.pk> <C:\Users\
+Anton\AppData\Local\MiKTeX\2.9\fonts\pk\modeless\public\sansmathaccent\dpi657\mathkerncmssi10.pk><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on "ATC slides.pdf" (20 pages, 225279 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
