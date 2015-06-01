@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 22:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.19)  31 MAY 2015 22:18
 entering extended mode
 **ATC*slides.tex
 ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.tex"
@@ -668,6 +668,20 @@ Package: beamerinnerthemedefault 2013/10/15  (rcs-revision 65cb471f9634)
 Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )))
 (C:\Users\Anton\SparkleShare\Research\research\Research.sty)
+
+! LaTeX Error: Command \tp already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \DeclareMathOperator{\tp}{tp}
+                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ("C:\Users\Anton\SparkleShare\Research\research\09 ATC stuff\ATC slides.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -942,10 +956,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 15672 strings out of 493921
- 295147 string characters out of 3144875
+ 15680 strings out of 493921
+ 295211 string characters out of 3144875
  361799 words of memory out of 3000000
- 18549 multiletter control sequences out of 15000+200000
+ 18557 multiletter control sequences out of 15000+200000
  12093 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,15n,55p,579b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
