@@ -192,6 +192,24 @@ More examples: \\
 \end{frame}
 
 \begin{frame}
+\begin{Definition}
+	\begin{itemize}
+		\item To a finite graph $A$ assign a dimension $\delta(A) = |V| - \alpha |E|$.
+		\item $B/A$ is called a positive extension if quantity $\delta(A) = |V_B/V_A| - \alpha |E_B/E_A|$ is positive.
+		\item $B/A$ is called minimal if its dimension is negative, but every subextension is positive.
+		\item $(A_0, \ldots A_n)$ is a minimal chain if each $A_{i + 1}/A_i$ is minimal.
+	\end{itemize}
+\end{Definition}
+	For $B/A$ define
+	\begin{align*}
+		\phi_{A,B}(\vec x) = \exists \vec y \text { such that $\vec y/\vec x$ is isomorphic to $B/A$}
+	\end{align*}
+	\begin{Theorem} [quantifier elimination]
+		In Shelah-Spencer graph every definable set can be defined by a boolean combination of formulas $\phi_{A_i, B_i(\vec x, \vec y)}$.
+	\end{Theorem}
+\end{frame}
+
+\begin{frame}
 	\frametitle{Future work}
 	\begin{itemize}
 		\item $(\Q_p, 0, 1, +, \cdot, \mid)$
@@ -224,20 +242,3 @@ More examples: \\
 	Any 
 \end{frame}
 
-\begin{frame}
-\begin{Definition}
-	\begin{itemize}
-		\item To a finite graph $A$ assign a dimension $\delta(A) = |V| - \alpha |E|$.
-		\item $B/A$ is called a positive extension if quantity $\delta(A) = |V_B/V_A| - \alpha |E_B/E_A|$ is positive.
-		\item $B/A$ is called minimal if its dimension is negative, but every subextension is positive.
-		\item $(A_0, \ldots A_n)$ is a minimal chain if each $A_{i + 1}/A_i$ is minimal.
-	\end{itemize}
-\end{Definition}
-	For $B/A$ define
-	\begin{align*}
-		\phi_{A,B}(\vec x) = \exists \vec y \text { such that $\vec y/\vec x$ is isomorphic to $B/A$}
-	\end{align*}
-	\begin{Theorem} [quantifier elimination]
-		In Shelah-Spencer graph every definable set can be defined by a boolean combination of formulas $\phi_{A_i, B_i(\vec x, \vec y)}$.
-	\end{Theorem}
-\end{frame}
