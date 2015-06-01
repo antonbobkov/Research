@@ -669,23 +669,10 @@ Package: beamercolorthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )
 (C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\themes\inner\beamerinnerthemedefault.sty
 Package: beamerinnerthemedefault 2014/06/30  (rcs-revision 580088513a67)
-
-! I can't write on file `"ATC slides.pdf"'.
-Please type another file name for output
-! Emergency stop.
-\pgfsys@defineimage ...astform }\else {\pdfximage 
-                                                  \pgf@imageheight \pgf@imag...
-l.17 ...ight=12pt]{beamericonbook}{beamericonbook}
-                                                  
-*** (job aborted, file error in nonstop mode)
-
- 
-Here is how much of TeX's memory you used:
- 15013 strings out of 493921
- 284904 string characters out of 3144876
- 353229 words of memory out of 3000000
- 18017 multiletter control sequences out of 15000+200000
- 4245 words of font info for 16 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 56i,0n,55p,391b,277s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+\beamer@dima=\dimen186
+\beamer@dimb=\dimen187
+)
+(C:\Users\Anton\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\themes\outer\beamerouterthemedefault.sty
+Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
+)))
+(C:\Users\Anton\SparkleShar
