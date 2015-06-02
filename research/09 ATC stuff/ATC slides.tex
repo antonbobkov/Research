@@ -68,7 +68,7 @@ More examples: \\
 \begin{frame}
 	\frametitle{Applications}
 	\begin{itemize}
-		\item NIP theories
+		\item Model Theory (NIP theories)
 		\item VC-Theorem in probability (Vapnik-Chervonenkis '71)
 		\item Computational learning theory (PAC learning)
 		\item Computational geometry
@@ -93,7 +93,7 @@ More examples: \\
 		(\Q, 0, 1, +, \cdot, \leq)
 	\end{align*}
 	\begin{align*}
-		\phi(x) = \exists y \ y \cdot y = x
+		\phi(x) := \exists y \ y \cdot y = x
 	\end{align*}
 	$\phi(\Q)$ defines the set of rationals that are a square.
 \end{frame}
@@ -103,7 +103,7 @@ More examples: \\
 		(\R, 0, 1, +, \cdot, \leq)
 	\end{align*}
 	\begin{align*}
-		\phi(x) = \exists y \ y \cdot y = x
+		\phi(x) := \exists y \ y \cdot y = x
 	\end{align*}
 	$\phi(\R)$ defines the set $[0, \infty)$.
 \end{frame}
@@ -113,7 +113,7 @@ More examples: \\
 		(\R, 0, 1, +, \cdot, \leq)
 	\end{align*}
 	\begin{align*}
-		\psi(x_1, x_2) = (x_1 \cdot x_1 + x_2 \cdot x_2 \leq 1.5) \wedge (x_1^2 \leq x_2)
+		\psi(x_1, x_2) := (x_1 \cdot x_1 + x_2 \cdot x_2 \leq 1.5) \wedge (x_1^2 \leq x_2)
 	\end{align*}
 	$\phi(\R^2)$ defines the set in $\R^2$ that is an intersection of a disc with an inside of a parabola.
 \end{frame}
@@ -130,7 +130,7 @@ More examples: \\
 
 \begin{frame}
 	\begin{align*}
-		\phi(x_1, x_2, y_1, y_2, y_3) = (x_1 - y_1)^2 + (x_2 - y_2)^2 \leq y_3^2
+		\phi(x_1, x_2, y_1, y_2, y_3) := (x_1 - y_1)^2 + (x_2 - y_2)^2 \leq y_3^2
 	\end{align*}
 	In structure $(\R, 0, 1 +, \cdot, \leq)$ given $a,b,r \in \R$ the formula $\phi(x_1, x_2, a, b, r)$ defines a disk in $\R^2$ with radius $r$ with center $(a,b)$.
 	Thus $\F^\R_\phi$ is a collection of all disks in $\R^2$.
