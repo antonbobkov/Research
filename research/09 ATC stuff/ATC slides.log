@@ -857,7 +857,7 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/mat
 ) [2
 
 ]
-<lines.png, id=72, 323.70938pt x 112.16907pt>
+<lines.png, id=73, 323.70938pt x 112.16907pt>
 File: lines.png Graphic file (type png)
  <use lines.png>
 Package pdftex.def Info: lines.png used on input line 40.
@@ -922,7 +922,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
 Here is how much of TeX's memory you used:
  16534 strings out of 493921
  319138 string characters out of 3144876
- 379620 words of memory out of 3000000
+ 380620 words of memory out of 3000000
  19402 multiletter control sequences out of 15000+200000
  12093 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -935,7 +935,7 @@ ic/amsfonts/cm/cmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 ts/cm/cmssi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "ATC slides.pdf" (21 pages, 238732 bytes).
+Output written on "ATC slides.pdf" (21 pages, 238749 bytes).
 PDF statistics:
  606 PDF objects out of 1000 (max. 8388607)
  43 named destinations out of 1000 (max. 500000)
