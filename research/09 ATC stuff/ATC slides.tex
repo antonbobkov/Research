@@ -144,7 +144,7 @@ More examples: \\
 \end{frame}
 
 \begin{frame}
-	For a given structure $M$, Shelah ('78) classified possible numbers of isomorphism classes for structures elementarily equivalent to it.
+	For a given structure $M$, possible numbers of isomorphism classes for structures elementarily equivalent to it were classified by Shelah ('78).
 	This classification involved defining important dividing lines describing complexity of structures.
 	One of those diving lines is whether the structure is NIP or not.
 	\begin{Definition}
@@ -162,14 +162,17 @@ More examples: \\
 \end{frame}
 
 \begin{frame}
-	Given an NIP structure $M$ we define a vc-function of $n$ to be the largest $\vc$-density achieved by families of uniformly definable sets in $M^n$.
+	Given an NIP structure $M$ we define a vc-function of $n$ to be the largest $\vc$-density achieved by uniformly definable families in $M^n$.
 	\begin{align*}
-		\vc^M(n) = max \curly{ \vc^M(\phi) \mid \phi(\vec x, \vec y) \text{ with } |\vec x| = n}
+		\vc^M(n) = \sup \curly{ \vc^M(\phi) \mid \phi(\vec x, \vec y) \text{ with } |\vec x| = n}
 	\end{align*}
-	Easy to show $\vc^M(n) \geq n \vc^M(1) \geq n$ \\
+	Easy to show:
+	\begin{align*}
+		\vc^M(n) \geq n \cdot \vc^M(1) \geq n
+	\end{align*}
 
-	Open Question: If $M$ is NIP, is it possible for $\vc^M(\phi)$ to be irrational?
-	Open Question: Is $\vc^M(n) = n \vc^M(1)$? If not, is there a linear relationship? If $\vc(1) < \infty$ do we have $\vc(2) < \infty$?
+	\textbf{Open Question}: If $M$ is NIP, is it possible for $\vc^M(\phi)$ to be irrational? \\
+	\textbf{Open Question}: Is $\vc^M(n) = n \vc^M(1)$? If not, is there a linear relationship? If $\vc(1) < \infty$ do we have $\vc(2) < \infty$?
 \end{frame}
 
 \begin{frame}
