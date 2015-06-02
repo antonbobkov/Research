@@ -205,7 +205,7 @@ More examples: \\
 
 \begin{frame}
 	\frametitle{Shelah-Spencer graphs}
-	Let $\alpha$ irrational $\in (0,1)$. Consider a random graph on $n$ vertices where the probability of any given two vertices having an edge is $n^{-\alpha}$. Shelah-Spencer ('88) showed that 0-1 law holds for first-order sentences. A structure satisfying those axioms is called a Shelh-Spencer graph.
+	Let $\alpha$ irrational $\in (0,1)$. Consider a random graph on $n$ vertices where the probability of any given two vertices having an edge is $n^{-\alpha}$. Shelah-Spencer ('88) showed that 0-1 law holds for first-order sentences. An (infinite) structure satisfying those axioms is called a Shelah-Spencer graph.
 	\begin{itemize}
 		\item Shelah-Spencer graphs are stable (Baldwin-Shi '96, Baldwin-Shelah '97)
 		\item Quantifier elimination (Laskowski '06)
@@ -216,8 +216,10 @@ More examples: \\
 	\frametitle{Background}
 \begin{Definition}
 	\begin{itemize}
-		\item To a finite graph $A$ assign a dimension $\delta(A) = |V| - \alpha |E|$.
-		\item $B/A$ is called a positive extension if quantity $\delta(B/A) = |V_B/V_A| - \alpha |E_B/E_A|$ is positive.
+		\item $B/A$ is called an defn{extension}
+		\item To a finite graph $A$ assign a \defn{dimension} $\delta(A) = |V| - \alpha |E|$.
+		\item Extension $B/A$ is positive if its dimension is positive.
+		%quantity $\delta(B/A) = |V_B/V_A| - \alpha |E_B/E_A|$ is positive.
 		\item $B/A$ is called minimal if its dimension is negative, but every subextension is positive.
 		\item $(A_0, \ldots A_n)$ is a minimal chain if each $A_{i + 1}/A_i$ is minimal.
 	\end{itemize}
