@@ -192,31 +192,31 @@ Overfull \hbox (3.61118pt too wide) in paragraph at lines 27--27
 <circle.png, id=1, 414.04688pt x 120.45pt>
 File: circle.png Graphic file (type png)
  <use circle.png>
-Package pdftex.def Info: circle.png used on input line 33.
+Package pdftex.def Info: circle.png used on input line 34.
 (pdftex.def)             Requested size: 310.53438pt x 90.33727pt.
  <lines.png, id=2, 323.70938pt x 112.16907pt>
 File: lines.png Graphic file (type png)
 
 <use lines.png>
-Package pdftex.def Info: lines.png used on input line 45.
+Package pdftex.def Info: lines.png used on input line 48.
 (pdftex.def)             Requested size: 242.78143pt x 84.12657pt.
  [1{C:/Users/Anton/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
@@ -229,7 +229,7 @@ Here is how much of TeX's memory you used:
  5697 multiletter control sequences out of 15000+200000
  9394 words of font info for 37 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,31p,272b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,31p,272b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
@@ -238,7 +238,7 @@ amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "ATC background.pdf" (4 pages, 132066 bytes).
+Output written on "ATC background.pdf" (4 pages, 132334 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
