@@ -109,12 +109,12 @@ Define dimensions for those inductively.
 
 \begin{Definition}[Conjunction]
 	Take a collection of formulas $\phi_i(x, y)$ where each $\phi_i$ is positive or negative basic formula.
-	If both positive and negative formulas are present then $\epsilon_L(\phi) = \epsilon_U(\phi) = \infty$.
-	If different formulas define graphs for $x$ differently then $\epsilon_L(\phi) = \epsilon_U(\phi) = \infty$.
+	If both positive and negative formulas are present then $\epsilon_L(\phi) = \infty$.
+	If different formulas define graphs for $x$ differently then $\epsilon_L(\phi) = \infty$.
+	% upper bound - how are the $x$ connected?
 	Otherwise
 	\begin{align*}
-		\epsilon_L(\bigwedge \phi_i) &= \sum \epsilon_L(\phi_i) \\
-		\epsilon_U(\bigwedge \phi_i) &= \min \epsilon_U(\phi_i)
+		\epsilon_L(\bigwedge \phi_i) &= \sum \epsilon_L(\phi_i)
 	\end{align*}
 \end{Definition}
 
