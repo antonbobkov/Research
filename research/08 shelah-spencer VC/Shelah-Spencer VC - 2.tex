@@ -76,13 +76,34 @@
 	\end{itemize}
 \end{Definition}
 
+%\begin{Definition}
+%\begin{align*}
+	%\epsilon_L(\neg \phi) &= \epsilon_L(\phi) \\
+	%\epsilon_U(\neg \phi) &= \epsilon_U(\phi) \\
+	%\epsilon_L(\phi \wedge \psi) &= \epsilon_L(\phi) + \epsilon_L(\psi) \\
+	%\epsilon_U(\phi \wedge \psi) &= \min(\epsilon_U(\phi), \epsilon_U(\psi)) \\
+	%\epsilon_L(\phi \vee \psi) &= \min(\epsilon_L(\phi), \epsilon_L(\psi)) \\
+	%\epsilon_U(\phi \vee \psi) &= \min(\epsilon_U(\phi), \epsilon_U(\psi)) 
+%\end{align*}
+%\end{Definition}
+
+Some of our results only apply to a special family of parameter sets
+\begin{Definition}
+	\begin{align*}
+		\AA = \curly{A \subset \U^{y} \mid \text{finite, disconnected, strongly embedded}}
+	\end{align*}
+\end{Definition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Lower bound}
+
 We work with formulas that are boolean combinations of basic formulas written in disjunctive-conjunctive form.
 Define dimensions for those inductively.
 
 \begin{Definition}[Negation]
-	If $\phi$ is a basic formula, then (with $* = \{L, U\}$)
+	If $\phi$ is a basic formula, then
 	\begin{align*}
-		\epsilon_*(\neg \phi) &= \epsilon_*(\phi)
+		\epsilon_L(\neg \phi) &= \epsilon_L(\phi)
 	\end{align*}
 \end{Definition}
 
@@ -104,27 +125,6 @@ Define dimensions for those inductively.
 		\epsilon_*(\bigvee \psi_i) &= \min \epsilon_*(\psi_i)
 	\end{align*}
 \end{Definition}
-
-%\begin{Definition}
-%\begin{align*}
-	%\epsilon_L(\neg \phi) &= \epsilon_L(\phi) \\
-	%\epsilon_U(\neg \phi) &= \epsilon_U(\phi) \\
-	%\epsilon_L(\phi \wedge \psi) &= \epsilon_L(\phi) + \epsilon_L(\psi) \\
-	%\epsilon_U(\phi \wedge \psi) &= \min(\epsilon_U(\phi), \epsilon_U(\psi)) \\
-	%\epsilon_L(\phi \vee \psi) &= \min(\epsilon_L(\phi), \epsilon_L(\psi)) \\
-	%\epsilon_U(\phi \vee \psi) &= \min(\epsilon_U(\phi), \epsilon_U(\psi)) 
-%\end{align*}
-%\end{Definition}
-
-Some of our results only apply to a special family of parameter sets
-\begin{Definition}
-	\begin{align*}
-		\AA = \curly{A \subset \U^{y} \mid \text{finite, disconnected, strongly embedded}}
-	\end{align*}
-\end{Definition}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Lower bound}
 
 Here we show that for a formula $\phi$ we have 
 \begin{align*}
