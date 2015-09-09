@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  4 SEP 2015 10:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  8 SEP 2015 20:25
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -154,21 +154,21 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 187.
+(amsmath)                 on input line 188.
 
 [2] [3]
-Overfull \hbox (6.92484pt too wide) in paragraph at lines 310--310
+Overfull \hbox (6.92484pt too wide) in paragraph at lines 313--313
 [] 
  []
 
-[4] [5] [6] [7] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
+[4] [5] [6] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
  1714 strings out of 493922
  19619 string characters out of 3144898
- 75869 words of memory out of 3000000
+ 76869 words of memory out of 3000000
  4864 multiletter control sequences out of 15000+200000
  10738 words of font info for 44 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,31p,377b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,31p,378b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 35456 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (6 pages, 34964 bytes).
