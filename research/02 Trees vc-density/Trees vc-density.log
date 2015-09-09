@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  8 SEP 2015 20:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  8 SEP 2015 20:38
 entering extended mode
 **Trees*vc-density.tex
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.tex"
@@ -401,7 +401,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ABD: EveryShipout initializing macros [1] [2]
+) ABD: EveryShipout initializing macros
+
+LaTeX Warning: Citation `parigot_trees' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `simon_dp_min' on page 1 undefined on input line 38.
+
+[1] [2]
 Overfull \hbox (2.62808pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/10 those com-po-nents $(\OML/cmm/m/it/10 C[]; \OMS/cmsy/m/n/10 \OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )$, $(
 \OML/cmm/m/it/10 C[]; \OMS/cmsy/m/n/10 \OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )$ in-ter-preted as sub-struc-tures form a 
@@ -413,22 +420,21 @@ proper
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")
 ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\vc-trees-fig_1.tex")) [4] [5] [6] [7] [8] [9]
-[10] [11]
-Missing character: There is no â in font cmr8!
-Missing character: There is no € in font cmr8!
-Missing character: There is no “ in font cmr8!
- [12] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux")
+[10] [11] [12] ("C:\Users\Anton\SparkleShare\Research\research\02 Trees vc-density\Trees vc-density.aux")
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 11172 strings out of 493922
- 213741 string characters out of 3144898
- 378133 words of memory out of 3000000
+ 11171 strings out of 493922
+ 213730 string characters out of 3144898
+ 378166 words of memory out of 3000000
  14101 multiletter control sequences out of 15000+200000
- 13671 words of font info for 51 fonts, out of 3000000 for 9000
+ 13362 words of font info for 50 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  64i,19n,75p,807b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Trees vc-density.dvi" (12 pages, 182540 bytes).
+Output written on "Trees vc-density.dvi" (12 pages, 182680 bytes).
