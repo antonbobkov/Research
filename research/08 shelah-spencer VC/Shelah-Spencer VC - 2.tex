@@ -85,7 +85,7 @@ In this paper, we investigate vc-density of definable sets in Shelah-Spencer str
 	For a basic formula $\phi(x, y)$ let
 	\begin{itemize}
 		\item $\epsilon_i(\phi) = -\dim \paren{M_i/M_{i-1}}$.
-		\item if $x$ or $y$ aren't positive, then $\epsilon_L(\phi) = \epsilon_U(\phi) = \infty$. Otherwise
+		%\item if $x$ or $y$ aren't positive, then $\epsilon_L(\phi) = \epsilon_U(\phi) = \infty$. Otherwise
 		\item $\epsilon_L(\phi) = \sum_{[1..k]} \epsilon_i(\phi)$.
 		\item $\epsilon_U(\phi) = \min_{[1..k]} \epsilon_i(\phi)$.
 		\item Let $Y(\phi) = \dim (y)$ considering $y$ as a graph.
@@ -120,7 +120,9 @@ Define dimensions for those inductively.
 \begin{Definition}[Conjunction]
 	Take a collection of formulas $\phi_i(x, y)$ where each $\phi_i$ is positive or negative basic formula.
 	If both positive and negative formulas are present then $\epsilon_L(\phi) = \infty$.
+	We don't have a lower bound for that case.
 	If different formulas define graphs for $x$ differently then $\epsilon_L(\phi) = \infty$.
+	In that case the conflicting definitions would make the formula have no realizations.
 	% upper bound - how are the $x$ connected?
 	Otherwise
 	\begin{align*}
