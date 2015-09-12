@@ -236,36 +236,36 @@ This shows that vc function is infinite in Shelah-Spencer random graphs.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Upper bound}
 
-We compute an upper bound on a collection of formulas $\{\phi_i\}$. This would automatically bound any boolean combinations of such formulas. 
+We compute an upper bound on a collection of formulas $\{\phi_i\}$. This would automatically bound any boolean combinations of such formulas. % explain!
 
 We define a parameter controlling an upper bound on the vc-density of the formula.
 It is defined inductively.
 
 \begin{Definition}
 	Let $\phi$ be a basic formula with $M_i$ a minimal chain,
-	with $\epsilon_i$ corresponding dimensions,
-	and $M$ it's total size.
+	$\epsilon_i$ its corresponding dimensions,
+	and $M$ its total size.
 	\begin{align*}
 		U_\phi = \frac{M}{\min \epsilon_i}
 	\end{align*}
 \end{Definition}
 
-\begin{Definition} [Negation]
-	Let $\phi$ be basic
-	\begin{align*}
-		U_{\neg \phi} = U_{\phi}
-	\end{align*}
-\end{Definition}
-
-\begin{Definition} [Conjunction and Disjunction]
-	Let $\phi_{ij}$ be basic or a negation of a basic formula.
-	\begin{align*}
-		\psi = \bigvee \bigwedge \phi_{ij}
-	\end{align*}
-	\begin{align*}
-		U_\psi = \max U_{\phi_{ij}}
-	\end{align*}
-\end{Definition}
+%\begin{Definition} [Negation]
+	%Let $\phi$ be basic
+	%\begin{align*}
+		%U_{\neg \phi} = U_{\phi}
+	%\end{align*}
+%\end{Definition}
+%
+%\begin{Definition} [Conjunction and Disjunction]
+	%Let $\phi_{ij}$ be basic or a negation of a basic formula.
+	%\begin{align*}
+		%\psi = \bigvee \bigwedge \phi_{ij}
+	%\end{align*}
+	%\begin{align*}
+		%U_\psi = \max U_{\phi_{ij}}
+	%\end{align*}
+%\end{Definition}
 
 %Let $n$ be the integer such that $n \epsilon_U < Y$ and $(n+1) \epsilon_U > Y$.
 
