@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  12 SEP 2015 12:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.10.19)  17 SEP 2015 18:39
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
-ian, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
+ian, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
  kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
--x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
+-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
 ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
 elsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsart.cls"
@@ -154,10 +154,10 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 194.
+(amsmath)                 on input line 197.
 
 [2] [3]
-Overfull \hbox (6.92484pt too wide) in paragraph at lines 321--321
+Overfull \hbox (6.92484pt too wide) in paragraph at lines 326--326
 [] 
  []
 
@@ -165,14 +165,18 @@ Overfull \hbox (6.92484pt too wide) in paragraph at lines 321--321
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
- [7] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
+ [7] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  1718 strings out of 493922
- 19661 string characters out of 3144899
- 74869 words of memory out of 3000000
+ 19661 string characters out of 3144898
+ 75869 words of memory out of 3000000
  4867 multiletter control sequences out of 15000+200000
  11047 words of font info for 45 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,32p,378b,297s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,32p,378b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 36996 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 36328 bytes).
