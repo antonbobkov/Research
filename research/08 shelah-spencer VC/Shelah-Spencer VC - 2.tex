@@ -289,6 +289,10 @@ Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
 
 Let $\bar A = A \cup b$.
 Pick a witness for each $\phi(a_i, b), i \in I$.
+Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.
+Let $\bar M = \bigcup M_i$.
+Consider $\bar M / A$.
+Let $\bar M_i = \bigcup_{j < i} M_j$.
 Let $\bar M$ be a union of all these witnesses.		% uniqueness?
 We consider several quantities.
 
@@ -316,15 +320,9 @@ Then we claim
 	\end{align*}
 \end{Claim}
 
-Thus as we consider $\bar M$ as an increasing union of witnesses to chain-minimal extensions, we see the extension with the largest ratio can contribute most to the boundary.
+%Thus as we consider $\bar M$ as an increasing union of witnesses to chain-minimal extensions, we see the extension with the largest ratio can contribute most to the boundary.
 Thus is our upper bound for the boundary.
 
-Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.
-Let $\bar M = \bigcup M_i$.
-Consider $\bar M / A$.
-
-
-Let $\bar M_i = \bigcup_{j < i} M_j$.
 
 \begin{Definition}
 	$(j-1, j)$ is called a \emph{jump} if some of the following conditions happen
