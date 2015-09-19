@@ -287,10 +287,17 @@ Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
 	A \emph{witness} of $\phi(a_i, b)$ is a realization of the existential formula together with ${a_i, b}$.
 \end{Definition}
 
-Let $\bar A = A \cup b$
+Let $\bar A = A \cup b$.
 Pick a witness for each $\phi(a_i, b), i \in I$.
 Let $\bar M$ be a union of all these witnesses.		% uniqueness?
 We consider several quantities.
+
+\begin{Definition}
+	Define the boundary of $C$ over $A \cup b$
+	\begin{align*}
+		\partial(C, A \cup b) = \curly{a \in (A \cup b) \mid \text{there is an edge between $a$ and element of $D - (A \cup b)$}}
+	\end{align*}
+\end{Definition}
 
 \begin{Definition}
 	\begin{align*}
@@ -316,12 +323,6 @@ Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.
 Let $\bar M = \bigcup M_i$.
 Consider $\bar M / A$.
 
-\begin{Definition}
-	Define the boundary of $C$ over $A \cup b$
-	\begin{align*}
-		\partial(C, A \cup b) = \curly{a \in (A \cup b) \mid \text{there is an edge between $a$ and element of $D - (A \cup b)$}}
-	\end{align*}
-\end{Definition}
 
 Let $\bar M_i = \bigcup_{j < i} M_j$.
 
