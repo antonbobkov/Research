@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Shelah-Spencer VC - 2.tex
 
 [Frame0_View0,0]
-TopLine=48
-Cursor=8714
+TopLine=276
+Cursor=10002
 
 [SessionInfo]
 FrameCount=1
