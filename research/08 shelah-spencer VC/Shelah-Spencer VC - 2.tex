@@ -328,6 +328,12 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 	Let $\bar M_i = \bigcup_{j < i} M_j$.
 	Let $\bar M = \bigcup M_i$, a witness of $A_b$
 	
+	\begin{Claim}
+		\begin{align*}
+			&\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| \\
+			&\dim(M_i M \bar A / M \bar A) > -\epsilon_U
+		\end{align*}
+	\end{Claim}
 	
 \end{proof}
 
@@ -335,20 +341,14 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 
 
-\begin{Definition}
-	\begin{align*}
-		d &= \dim \bar M / \bar A \\
-		s &= |\bar M - \bar A| \\
-		b &= |\partial(\bar M, \bar A)|
-	\end{align*}
-\end{Definition}
+%\begin{Definition}
+	%\begin{align*}
+		%d &= \dim \bar M / \bar A \\
+		%s &= |\bar M - \bar A| \\
+		%b &= |\partial(\bar M, \bar A)|
+	%\end{align*}
+%\end{Definition}
 
-\begin{Claim}
-	\begin{align*}
-		&\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| \\
-		&\dim(M_i M \bar A / M \bar A) > -\epsilon_U
-	\end{align*}
-\end{Claim}
 
 %Thus as we consider $\bar M$ as an increasing union of witnesses to chain-minimal extensions, we see the extension with the largest ratio can contribute most to the boundary.
 %Thus is our upper bound for the boundary.
