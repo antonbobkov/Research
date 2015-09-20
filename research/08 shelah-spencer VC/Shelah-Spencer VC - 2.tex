@@ -321,12 +321,16 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 	\end{align*}
 \end{Theorem}
 
-Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
+\begin{proof}
+	Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
+
+	Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.	%uniqueness
+	Let $\bar M_i = \bigcup_{j < i} M_j$.
+	Let $\bar M = \bigcup M_i$.
+\end{proof}
 
 
-Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.	%uniqueness
-Let $\bar M_i = \bigcup_{j < i} M_j$.
-Let $\bar M = \bigcup M_i$.
+
 
 
 \begin{Definition}
