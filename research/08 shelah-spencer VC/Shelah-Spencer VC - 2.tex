@@ -386,7 +386,14 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 			There are edges between $M_{j+1} \cap (\partial(\bar M_{j+1}, A) - \partial(\bar M_j, A))$ so they contribute some negative dimension $\leq \epsilon_U$.
 		\end{itemize}
 	\end{proof}
-
+	Let $m = m_I$.
+	Thus we have $\dim(\bar M / \bar A) = \leq -m \cdot \epsilon_U $.
+	Thus as $A$ is strong we need $m_I \cdot \epsilon_U < Y$.
+	Let $W = \frac{|M|Y}{\epsilon_U}$.
+	\begin{align*}
+		|\partial(\bar M, A)| &\leq m \cdot |M| \leq W \\
+		|\bar M \cap A| &\leq m \cdot |M| \leq W
+	\end{align*}
 \end{proof}
 
 
@@ -409,14 +416,6 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 
 
-Let $m = m_I$.
-Thus we have $\dim(\bar M / \bar A) = \leq -m \cdot \epsilon_U $.
-Thus as $A$ is strong we need $m_I \cdot \epsilon_U < Y$.
-Let $W = \frac{|M|Y}{\epsilon_U}$.
-\begin{align*}
-	|\partial(\bar M, A)| &\leq m \cdot |M| \leq W \\
-	|\bar M \cap A| &\leq m \cdot |M| \leq W
-\end{align*}
 
 Now, classify every trace by the isomorphism class of $\bar M - A \cup \partial(\bar M, A)$ and by $\partial(\bar M, A)$.
 \begin{Lemma}
