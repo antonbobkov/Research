@@ -365,6 +365,28 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 		\end{align*}
 	\end{Lemma}
 
+	\begin{proof}
+		Proceed by induction.
+		Second and third propositions are clear.
+		For the first proposition base case is clear.
+		
+		Induction step.
+		Suppose $\bar M_j \cap (A \cup b) = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
+		Then $m_i = m_{i+1}$ and the quantities don't change.
+		Thus assume at least one of these equalities fails.
+		
+		Apply Lemma \ref{chain_lemma} to $\bar M_j \cup (A \cup b)$ and $(M_{j+1}, a_{j+1}b)$.
+		There are two options
+		
+		\begin{itemize}
+			\item $\dim(\bar M_{j+1} \cup (A \cup b) / \bar M_i \cup (A \cup b)) \leq -\epsilon_U$.
+			This implies the proposition.
+			\item $M_{j+1} \subset \bar M_j \cup (A \cup b)$.
+			Then by our assumption it has to be $\partial(\bar M_j, A) \neq \partial(\bar M_{j+1}, A)$.
+			There are edges between $M_{j+1} \cap (\partial(\bar M_{j+1}, A) - \partial(\bar M_j, A))$ so they contribute some negative dimension $\leq \epsilon_U$.
+		\end{itemize}
+	\end{proof}
+
 \end{proof}
 
 
@@ -386,27 +408,6 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 
 
-\begin{proof}
-	Proceed by induction.
-	Second and third propositions are clear.
-	For the first proposition base case is clear.
-	
-	Induction step.
-	Suppose $\bar M_j \cap (A \cup b) = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
-	Then $m_i = m_{i+1}$ and the quantities don't change.
-	Thus assume at least one of these equalities fails.
-	
-	Apply Lemma \ref{chain_lemma} to $\bar M_j \cup (A \cup b)$ and $(M_{j+1}, a_{j+1}b)$.
-	There are two options
-	
-	\begin{itemize}
-		\item $\dim(\bar M_{j+1} \cup (A \cup b) / \bar M_i \cup (A \cup b)) \leq -\epsilon_U$.
-		This implies the proposition.
-		\item $M_{j+1} \subset \bar M_j \cup (A \cup b)$.
-		Then by our assumption it has to be $\partial(\bar M_j, A) \neq \partial(\bar M_{j+1}, A)$.
-		There are edges between $M_{j+1} \cap (\partial(\bar M_{j+1}, A) - \partial(\bar M_j, A))$ so they contribute some negative dimension $\leq \epsilon_U$.
-	\end{itemize}
-\end{proof}
 
 Let $m = m_I$.
 Thus we have $\dim(\bar M / \bar A) = \leq -m \cdot \epsilon_U $.
