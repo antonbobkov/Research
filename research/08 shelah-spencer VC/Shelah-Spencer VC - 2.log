@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  19 SEP 2015 15:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  20 SEP 2015 13:45
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -156,18 +156,41 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 197.
 
-[2] [3] [4] [5] [6]
+[2] [3]
+! Undefined control sequence.
+<argument> ...ac {Y}{\epsilon _\phi }\\ |\parital 
+                                                  _b| &\leq K_\phi \frac {Y}...
+l.321 	\end{align*}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ac {Y}{\epsilon _\phi }\\ |\parital 
+                                                  _b| &\leq K_\phi \frac {Y}...
+l.321 	\end{align*}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4] [5] [6]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
  [7] ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.aux") ) 
 Here is how much of TeX's memory you used:
- 1721 strings out of 493922
- 19694 string characters out of 3144899
- 76869 words of memory out of 3000000
- 4869 multiletter control sequences out of 15000+200000
+ 1722 strings out of 493922
+ 19701 string characters out of 3144899
+ 75869 words of memory out of 3000000
+ 4870 multiletter control sequences out of 15000+200000
  11745 words of font info for 47 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,32p,378b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,32p,378b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 35196 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 37216 bytes).
