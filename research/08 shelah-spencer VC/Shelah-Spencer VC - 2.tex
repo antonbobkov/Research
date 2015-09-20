@@ -294,11 +294,16 @@ Let $\bar A = A \cup b$.
 	\end{align*}
 \end{Definition}
 
-Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
+\begin{Definition}
+	A \emph{witness} of $\phi(a, b)$ is a realization of the existential formula together with ${a_i, b}$.
+\end{Definition}
 
 \begin{Definition}
-	A \emph{witness} of $\phi(a_i, b)$ is a realization of the existential formula together with ${a_i, b}$.
+	For a trace $A_b = \{a_1, \ldots, a_I\}$ for each $\phi(a_i, b)$ pick a witness and then take a union of all those witnesses. Call this a witness of the trace $A_b$.
 \end{Definition}
+
+Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
+
 
 Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.	%uniqueness
 Let $\bar M_i = \bigcup_{j < i} M_j$.
