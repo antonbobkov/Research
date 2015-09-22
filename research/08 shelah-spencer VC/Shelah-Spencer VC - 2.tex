@@ -433,32 +433,32 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 
 
-Now, classify every trace by the isomorphism class of $\bar M - A \cup \partial(\bar M, A)$ and by $\partial(\bar M, A)$.
-\begin{Lemma}
-	Suppose we have traces $b_1, b_2$ with the same components as above.
-	Then $A_{b_1} = A_{b_2}$.
-\end{Lemma}
-
-Consider $\bar M - A \cup \partial(\bar M, A)$.
-Number of vertices is $\leq (2W)^2$.
-Thus number of isomorphism classes $\leq 2^{(2W)^2}$.
-
-Consider $\partial(\bar M, A)$.
-Let $N = |A|$.
-Order matters, so the total number of choices for it is
-\begin{align*}
-	N \cdot (N-1) \cdot \ldots \cdot (N - W + 1) = \frac{N!}{(N-W)!}
-\end{align*}
-
-Thus the number of possible different traces is bounded by 
-\begin{align*}
-	2^{(2W)^2} \cdot \frac{N!}{(N-W)!} = O(N^W)
-\end{align*}
-
-Since choice of $A$ was arbitrary, this gives
-\begin{align*}
-	\vc{\phi} \leq W = \frac{|M|Y}{\epsilon_U}
-\end{align*}
+%Now, classify every trace by the isomorphism class of $\bar M - A \cup \partial(\bar M, A)$ and by $\partial(\bar M, A)$.
+%\begin{Lemma}
+	%Suppose we have traces $b_1, b_2$ with the same components as above.
+	%Then $A_{b_1} = A_{b_2}$.
+%\end{Lemma}
+%
+%Consider $\bar M - A \cup \partial(\bar M, A)$.
+%Number of vertices is $\leq (2W)^2$.
+%Thus number of isomorphism classes $\leq 2^{(2W)^2}$.
+%
+%Consider $\partial(\bar M, A)$.
+%Let $N = |A|$.
+%Order matters, so the total number of choices for it is
+%\begin{align*}
+	%N \cdot (N-1) \cdot \ldots \cdot (N - W + 1) = \frac{N!}{(N-W)!}
+%\end{align*}
+%
+%Thus the number of possible different traces is bounded by 
+%\begin{align*}
+	%2^{(2W)^2} \cdot \frac{N!}{(N-W)!} = O(N^W)
+%\end{align*}
+%
+%Since choice of $A$ was arbitrary, this gives
+%\begin{align*}
+	%\vc{\phi} \leq W = \frac{|M|Y}{\epsilon_U}
+%\end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Technical Lemmas}
