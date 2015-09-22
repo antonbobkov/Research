@@ -323,19 +323,19 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 \begin{Theorem} \label{main_bound}
 	\begin{align*}
-		|I_b| &\leq K(\phi) \frac{Y}{\epsilon_\phi}\\
-		|\partial_b| &\leq K(\phi) \frac{Y}{\epsilon_\phi}
+		|I_b| &\leq K(\phi) \frac{Y(\phi)}{\epsilon_\phi}\\
+		|\partial_b| &\leq K(\phi) \frac{Y(\phi)}{\epsilon_\phi}
 	\end{align*}
 \end{Theorem}
 
 \begin{Corollary}
 	\begin{align*}
-		\vc(\phi) \leq K(\phi) \frac{Y}{\epsilon_\phi}
+		\vc(\phi) \leq K(\phi) \frac{Y(\phi)}{\epsilon_\phi}
 	\end{align*}
 \end{Corollary}
 
 \begin{proof}
-		Let $W = K(\phi) \frac{Y}{\epsilon_\phi}$.
+		Let $W = K(\phi) \frac{Y(\phi)}{\epsilon_\phi}$.
 		Then the number of possible isomorphism classes of size $\leq W$ is $\leq 2^{W^2}$.
 		If the parameter set $A$ is of size $N$ then there are $N \choose W$ choices for boundary.
 		Using lemma \ref{bound_trace} this bounds the number of traces by $O(N^W)$.
@@ -429,7 +429,7 @@ Formula with the largest quantity $\frac{K(\phi)}{\epsilon_\phi}$ contributes th
 Thus we have
 \begin{align*}
 	\Phi &= \{\phi_i\}_{i \in I} \\
-	\vc(\Phi) &= Y \max_{i \in I} \frac{K_{\phi_i}}{\epsilon_{\phi_i}}
+	\vc(\Phi) &=  \max_{i \in I} Y(\phi) \frac{K_{\phi_i}}{\epsilon_{\phi_i}}
 \end{align*}
 
 %\begin{Definition}
