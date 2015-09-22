@@ -283,7 +283,7 @@ a parameter set $A^{|x|}$, with $A \subset \text{\textit{ambient model}}$.
 Consider a case of a single basic formula $\phi(\vec x, \vec y)$.
 
 Suppose it defines a minimal chain extension $\{C_i\}$ over $\{x, y\}$. 
-Record the size of that extension as $K_\phi$ and its total dimension $\epsilon_\phi$.
+Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon_\phi = \epsilon_U(\phi)$.
 
 \begin{Definition}
 	Define a $b$-trace of $\phi$ on $A$
@@ -323,19 +323,19 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 \begin{Theorem} \label{main_bound}
 	\begin{align*}
-		|I_b| &\leq K_\phi \frac{Y}{\epsilon_\phi}\\
-		|\partial_b| &\leq K_\phi \frac{Y}{\epsilon_\phi}
+		|I_b| &\leq K(\phi) \frac{Y}{\epsilon_\phi}\\
+		|\partial_b| &\leq K(\phi) \frac{Y}{\epsilon_\phi}
 	\end{align*}
 \end{Theorem}
 
 \begin{Corollary}
 	\begin{align*}
-		\vc(\phi) \leq K_\phi \frac{Y}{\epsilon_\phi}
+		\vc(\phi) \leq K(\phi) \frac{Y}{\epsilon_\phi}
 	\end{align*}
 \end{Corollary}
 
 \begin{proof}
-		Let $W = K_\phi \frac{Y}{\epsilon_\phi}$.
+		Let $W = K(\phi) \frac{Y}{\epsilon_\phi}$.
 		Then the number of possible isomorphism classes of size $\leq W$ is $\leq 2^{W^2}$.
 		If the parameter set $A$ is of size $N$ then there are $N \choose W$ choices for boundary.
 		Using lemma \ref{bound_trace} this bounds the number of traces by $O(N^W)$.
@@ -351,7 +351,7 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 	
 	\begin{Claim}
 		\begin{align*}
-			&\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| = K_\phi\\
+			&\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| = K(\phi)\\
 			&\dim(M_i M \bar A / M \bar A) > -\epsilon_\phi
 		\end{align*}
 	\end{Claim}
@@ -381,8 +381,8 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 	\begin{Lemma} \label{ub_lemma}
 		\begin{align*}
 			\dim(\bar M_i / \bar A) &\leq -m_i \cdot \epsilon_\phi \\
-			|\partial(\bar M_i, \bar A)| &\leq m_i \cdot K_\phi \\
-			|\bar M_j - \bar A| &\leq m_i \cdot K_\phi
+			|\partial(\bar M_i, \bar A)| &\leq m_i \cdot K(\phi) \\
+			|\bar M_j - \bar A| &\leq m_i \cdot K(\phi)
 		\end{align*}
 	\end{Lemma}
 
@@ -425,7 +425,7 @@ So far we have computed an upper bound for a single basic formula $\phi$.
 In general we work with a collection of basic formulas $\{\phi_i\}_{i \in I}$.
 The proof generalizes in a straightforward manner.
 Instead of $A^{|x|}$ we now work with $A^{|x|} \times I$ separating traces of different formulas.
-Formula with the largest quantity $\frac{K_\phi}{\epsilon_\phi}$ contributes the most to the vc-density.
+Formula with the largest quantity $\frac{K(\phi)}{\epsilon_\phi}$ contributes the most to the vc-density.
 Thus we have
 \begin{align*}
 	\Phi &= \{\phi_i\}_{i \in I} \\
