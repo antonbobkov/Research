@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  24 SEP 2015 16:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.9.14)  24 SEP 2015 16:51
 entering extended mode
 **Shelah-Spencer*VC*-*2.tex
 ("C:\Users\Anton\SparkleShare\Research\research\08 shelah-spencer VC\Shelah-Spencer VC - 2.tex"
@@ -151,19 +151,19 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 38.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (18.90549pt too wide) in paragraph at lines 63--64
+Overfull \hbox (18.90549pt too wide) in paragraph at lines 68--69
 [][]$\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )$ de-ter-mines edges and non-edges on its 
 vari-ables $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]; [] x[]\OMS/cmsy/m/n/10 g [ f\OML/cmm/m/it/10 y[]; [] y[]\OMS/cmsy/m/
 n/10 g$\OT1/cmr/m/n/10 . 
  []
 
-[1]
+[1] [2]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 207.
+(amsmath)                 on input line 212.
 
-[2] [3] [4] [5] [6]
+[3] [4] [5] [6]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
@@ -175,6 +175,6 @@ Here is how much of TeX's memory you used:
  4876 multiletter control sequences out of 15000+200000
  12364 words of font info for 49 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,14n,32p,378b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,32p,378b,308s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 38068 bytes).
+Output written on "Shelah-Spencer VC - 2.dvi" (7 pages, 39240 bytes).
