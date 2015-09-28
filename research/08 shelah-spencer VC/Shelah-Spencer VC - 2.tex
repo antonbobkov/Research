@@ -371,7 +371,7 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 	\begin{Claim}
 		\begin{align*}
 			&\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| = K(\phi)\\
-			&\dim(M_i M \bar A / M \bar A) > -\epsilon_\phi
+			&\dim(M_i M \bar A / M \bar A) > -\epsilon(\phi)
 		\end{align*}
 	\end{Claim}
 	
@@ -399,7 +399,7 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 	\begin{Lemma} \label{ub_lemma}
 		\begin{align*}
-			\dim(\bar M_i / \bar A) &\leq -m_i \cdot \epsilon_\phi \\
+			\dim(\bar M_i / \bar A) &\leq -m_i \cdot \epsilon(\phi) \\
 			|\partial(\bar M_i, \bar A)| &\leq m_i \cdot K(\phi) \\
 			|\bar M_j - \bar A| &\leq m_i \cdot K(\phi)
 		\end{align*}
@@ -448,7 +448,7 @@ It suffices to bound vc-density for collection of formulas $\{\phi_i\}$ to obtai
 In general work with a collection of basic formulas $\{\phi_i\}_{i \in I}$.
 The proof generalizes in a straightforward manner.
 Instead of $A^{|x|}$ we now work with $A^{|x|} \times I$ separating traces of different formulas.
-Formula with the largest quantity $Y(\phi)\frac{K(\phi)}{\epsilon_\phi}$ contributes the most to the vc-density.
+Formula with the largest quantity $Y(\phi)\frac{K(\phi)}{\epsilon(\phi)}$ contributes the most to the vc-density.
 Thus we have
 \begin{align*}
 	\Phi &= \{\phi_i\}_{i \in I} \\
