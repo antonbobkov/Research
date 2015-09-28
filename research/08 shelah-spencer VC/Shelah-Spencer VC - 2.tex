@@ -440,6 +440,9 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 So far we have computed an upper bound for a single basic formula $\phi$.
 
+To bound an arbitrary formula, write it as a boolean combination of basic formulas $\phi_i$.
+Now 
+
 In general we work with a collection of basic formulas $\{\phi_i\}_{i \in I}$.
 The proof generalizes in a straightforward manner.
 Instead of $A^{|x|}$ we now work with $A^{|x|} \times I$ separating traces of different formulas.
@@ -450,7 +453,6 @@ Thus we have
 	\vc(\Phi) &=  \max_{i \in I} Y(\phi_i) \frac{K(\phi_i)}{\epsilon_{\phi_i}}
 \end{align*}
 
-To bound a formulas which is a boolean combination of basic formulas, it suffices to bound 
 
 %\begin{Definition}
 	%\begin{align*}
