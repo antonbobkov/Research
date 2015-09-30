@@ -370,8 +370,11 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 			W \times 2^{(2W)^2}
 		\end{align*}
 		configurations up to graph isomorphism.
-		Then the number of possible isomorphism classes of size $\leq W$ is $\leq 2^{W^2}$.
-		Using lemma \ref{bound_trace} this bounds the number of traces by $O(N^W)$.
+		In total this gives us 
+		\begin{align*}
+			N \choose W \times W \times 2^{(2W)^2} = O(N^W)
+		\end{align*}
+		
 		Thus the vc-density of $\phi$ is $W$ as needed.
 \end{proof}
 
