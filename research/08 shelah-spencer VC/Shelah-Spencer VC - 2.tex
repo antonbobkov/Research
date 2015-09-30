@@ -343,7 +343,7 @@ Let $\bar A = A \cup b$. % what about A \cap b???
 	Fix witnesses $\bar M_{b_1}, \bar M_{b_2}$.
 	Suppose we have $\phi(a, b_1)$ for some $a$.
 	Pick its witness $M_1 \subset \bar M_{b_1}$.
-	This gives us a witness $M_2$ via the $\delta$-isomorphism.
+	This gives us a witness $M_2$ via the $\partial$-isomorphism.
 \end{proof}
 
 Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_b$.
@@ -363,7 +363,7 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 
 \begin{proof}
 		Let $W = K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}$.
-		If the parameter set $A$ is of size $N$ then there are $N \choose W$ choices for boundary.
+		If the parameter set $A$ is of size $N$ then there are $N \choose W$ choices for boundary \partial_b.
 		Then the number of possible isomorphism classes of size $\leq W$ is $\leq 2^{W^2}$.
 		Using lemma \ref{bound_trace} this bounds the number of traces by $O(N^W)$.
 		Thus the vc-density of $\phi$ is $W$ as needed.
