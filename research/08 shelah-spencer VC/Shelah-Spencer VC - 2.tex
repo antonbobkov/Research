@@ -367,8 +367,9 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
 		On top of the boundary there are at most $W$ extra vertices and $(2W)^2$ extra edges.
 		Thus there are at most
 		\begin{align*}
-			
+			W \times 2^{(2W)^2}
 		\end{align*}
+		configurations up to graph isomorphism.
 		Then the number of possible isomorphism classes of size $\leq W$ is $\leq 2^{W^2}$.
 		Using lemma \ref{bound_trace} this bounds the number of traces by $O(N^W)$.
 		Thus the vc-density of $\phi$ is $W$ as needed.
