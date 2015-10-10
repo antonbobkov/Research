@@ -212,7 +212,7 @@ As a simplification for our lower bound computation we assume that all the basic
 		Let $B_i = B \cap M_i \subseteq M_i$.
 		Then $B_i$'s are disjoint over $\bar A = A \cup b$.
 		In particular $\dim B / \bar A = \sum \dim B_i / \bar A$.
-		$\dim B_i / \bar A$ \geq -\epsilon_L(\phi)
+		$\dim B_i / \bar A$ \geq -\epsilon_L(\phi)& by Lemma \ref{chain_intersect}.
 		%If all $B_i = M_i$, then $B = \bar M$ and its dimension is 
 		
 		
@@ -578,12 +578,13 @@ Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) < -\epsilon$.
 	Apply previous lemma.
 \end{proof}
 
-\begin{Lemma}
+\begin{Lemma} \label{chain_intersect}
 	Suppose we have a minimal chain $M_n$ with dimensions $-\epsilon_i$.
 	Let $\epsilon$ be the sum of all $\epsilon_i$.
 	Suppose we have some $B$ with $M_0 \subseteq B \subseteq M_n$.
 	Then $\dim B / M_0 \geq -\epsilon$
 \end{Lemma}
+
 \begin{proof}
 	Insert proof here
 \end{proof}
