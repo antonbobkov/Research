@@ -1,0 +1,286 @@
+\documentclass{amsart}
+
+\usepackage{../AMC_style}	
+\usepackage{../Research}
+\usepackage{../Thm}
+
+\usepackage{mathrsfs}
+
+
+
+\renewcommand{\AA}{\mathscr A}
+  \newcommand{\II}{\mathscr I}
+  \newcommand{\MM}{\mathscr M}
+
+  \newcommand{\A}{\mathcal A}
+  \newcommand{\B}{\mathcal B}
+\renewcommand{\C}{\mathcal C}
+  \newcommand{\D}{\mathcal D}
+\renewcommand{\H}{\mathcal H}
+  \newcommand{\G}{\mathcal G}
+  \newcommand{\M}{\mathcal M}
+
+  \newcommand{\U}{\mathcal U}	
+
+  \newcommand{\K}{\boldface K_\alpha}
+\renewcommand{\S}{S_\alpha}
+
+\newcommand{\curly}[1]{\left\{#1\right\}}
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+
+\DeclareMathOperator{\Sg}{Sg}
+\DeclareMathOperator{\Bt}{Bt}
+\DeclareMathOperator{\Pt}{Pt}
+\DeclareMathOperator{\Ct}{Ct}
+\DeclareMathOperator{\vecspan}{span}
+\DeclareMathOperator{\val}{val}
+
+\title{reduct}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+
+\begin{document}
+
+\maketitle
+
+%\begin{Definition}
+	%\begin{itemize}
+		%\item For $a \in \Q_p$ and $\alpha < \beta \in \Z$ we denote $a \midr [\alpha, \beta]$ the part of the $p$-adic restricted to $[\alpha, \beta]$
+		%\item By $a \midr \alpha$ we mean $a \midr (-\infty, \alpha)$.
+		%\item By $a = b \ (\midr \alpha)$ we mean $a \midr \alpha = b \midr \alpha$.
+	%\end{itemize}
+%\end{Definition}
+%
+%\begin{Claim}
+	%\begin{itemize}
+		%\item If $a = b \ (\midr \alpha)$ and $c = d \ (\midr \alpha)$ then $a + c = b + d \ (\midr \alpha)$.
+		%\item If $a = b \ (\midr \alpha)$ and $v(c) = 0$ then $ca = cb \ (\midr \alpha)$
+		%\item More generally if $a = b \ (\midr \alpha)$ then $ca = cb \ (\midr \alpha + v(c))$
+	%\end{itemize}
+%\end{Claim}
+
+%\begin{Claim}
+	%Suppose we have a system 
+	%\begin{align*}
+		%\curly{ \sum \alpha_{ij} x_i }_{j \in J}
+	%\end{align*}
+	%with $j \in J$. There exists $\gamma$ with the following property.
+	%Pick any subset $J' \subset J$ of equations and $\alpha$. Suppose we are given
+	%\begin{align*}
+		%\curly{ \sum \alpha_{ij} x_i = c_j \ (\midr \alpha)}_{j \in J'}
+	%\end{align*}
+	%and suppose those equations are enough to determine $\sum \alpha_{ij'} x_i$ for some $j' \in J$.
+	%That is writing $\vec v_j = (\alpha_{1j}, \ldots, \alpha_{Ij})$ we have
+	%that $v_{j'}$ is a linear combination of vectors $\{v_j\}_{j \in J'}$
+	%Then $\sum \alpha_{ij'} x_i$ is determined up to $\alpha - \gamma$
+%\end{Claim}
+
+\begin{Claim}
+	Suppose we have a collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^m$.
+	Pick a subset $J \subset I$ and $j \in I$ such that
+	\begin{align*}
+		\vec p_j \in \vecspan \curly{\vec p_i}_{i \in J}
+	\end{align*}
+	Suppose we have $\vec x \in \Q_p^m, \alpha \in \Z$ with
+	\begin{align*}
+		\val(\vec p_i \cdot \vec x) > \alpha \text{ for all } i \in J
+	\end{align*}
+	Then
+	\begin{align*}
+		\val(\vec p_j \cdot \vec x) > \alpha - \gamma
+	\end{align*}
+	for some $\gamma \in \Z^{\geq 0}$.
+	Moreover $\gamma$ can be chosen independent of choice of $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
+\end{Claim}
+
+Suppose we have a finite $T \subset \Q_p, V \subset \Z$.
+We view it as a tree $(T, V)$ as follows.
+Branches through the tree are elements of $T$.
+Branching points are defined by open balls as follows.
+Branching points is $(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
+Branching point is also $(t, v)$ for all $t \in T, v \in V$.
+An interval is two balls $(t_1, v_1) \supset (t_2, v_2)$ with no balls in between.
+There are at most $2|T| \cdot |V|$ different intervals.
+
+We work with a collection of formulas $\Psi(\bar x, \vec y)$ of the form
+
+\begin{align*}
+	\vec p_i \cdot \bar x + c_i(\vec y) &\in \lambda_i Q_i \\
+	\val(\vec p_i \cdot \bar x + c_i(\bar y)) \; &\square_i \; v_i
+\end{align*}
+
+for $i \leq I$ with $|\bar x| = m$ with $Q_i = Q_{n_i, m_i}$ for some $n_i, m_i$.
+We work with a parameter set $B$ of size $N$.
+Consider a tree $(T, V)$
+
+\begin{align*}
+	T &= \curly{c_i(b) \mid b \in B, i \leq I} \\
+	V &= \curly{v_i \mid i \leq I}
+\end{align*}
+This tree has at most $O(N) = N \cdot I \cdot I$ many intervals.
+
+For some $x, x' \in \M$ we say they have the same $\Psi$-type if they have the same $\Psi$ type over $B$.
+
+For some $x, x' \in \M$ we say they have the same $Q$-type if
+\begin{itemize}
+	\item $x + c_i(b)$ is in the same $Q^i$-coset as $x' + c_i(b)$ for all $i \leq I, b \in B$
+	\item $\val(x + c_i(b)) \square_i \; v_i$ iff $\val(x' + c_i(b)) \square_i \; v_i$ for all $i \leq I, b \in B$
+\end{itemize}
+ 
+\begin{Lemma}
+	$c, c' \in \M^m$ have the same $\Psi$-type if all $p_i(c), p_i(c')$ have the same $Q^i$-type
+\end{Lemma}
+
+\begin{Lemma}
+	For any $Q = Q_{n,m}$ there exists $\theta_Q$ such that for all $\theta \geq \theta_Q$ the following holds.
+	Suppose we have $x,y,c \in \M$ such that
+	\begin{align*}
+		\val(x-y) - \theta > \val(x-c) = \val(y-c)
+	\end{align*}
+	Then $x-c$ and $y-c$ lie in the same coset of $Q$.
+\end{Lemma}
+
+\begin{Lemma}
+	Fix $\theta$ sufficiently large to satisfy previous lemma for all $Q_i$. Define an enumeration of near balls
+	\begin{align*}
+		B_1(c, \alpha), B_2(c, \alpha), \ldots B_{N_\theta}(c, \alpha)
+	\end{align*}
+\end{Lemma}
+
+\begin{Definition}
+	Let $c \in \M$.
+	It lies in our tree between $(c_L, \alpha_L)$ and $(c_U, \alpha_U)$.
+	Suppose $c$ lies in one of the near balls in a branching point above or below it.
+	Then define its interval type to be the index of that near ball.
+	Otherwise define its interval type to be the coset of $c - c_U$ of $Q_i$ for all $i \in I$.
+	Denote the space of all the possible branch types $\Bt$.
+	We have
+	\begin{align*}
+		|\Bt| = N_\theta + \prod_{i \leq I} \paren{\text {number of cosets of $Q_i$}}
+	\end{align*}
+	depends only on $\Psi$, independent from $B$.
+	
+\end{Definition}
+
+\begin{Lemma}
+	If $c, c'$ are in the same interval and have the same interval type then they have the same $Q$-type.
+\end{Lemma}
+
+\begin{Definition}
+	For $c \in \M$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \Z_p^{\beta - \alpha}$ be the record of coefficients of $c$ for valuations between $\alpha, \beta$. More precisely write $c$ in its power series form
+	\begin{align*}
+		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z_p
+	\end{align*}
+	Then $c \midr [\alpha, \beta]$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_\beta)$.
+\end{Definition}
+
+For any $c$ define $F(c)$, the floor of $c$ to be the valuation of the largest branching point below $c$.
+
+Let $f: \M^n \arr \M^I$ with $f(\bar c) = (p_i(\bar c))_{i \leq I}$.
+Define segment space $\Sg$ to be the image of $f$.
+
+For some element $(a_i)$ in segment space look at floors $F(a_i)$.
+Partition the segment space by order type of $\{F(a_i)\}$.
+Work in a fixed partition $\Sg'$.
+After relabeling we may assume that
+\begin{align*}
+	F(a_1) \geq F(a_2) \geq \ldots 
+\end{align*}
+
+Consider (relabeled) sequence of vectors $\vec p_1, \vec p_2, \ldots, \vec p_I$.
+Choose the unique subset of linearly independent vectors $J \subset I$.
+For any index $i \in I$ we call it independent if $i \in J$ and we call it dependent otherwise.
+
+For all $a_i$ record its interval type.
+
+For $a_i$ with $i$ independent, record the interval of $a_i$.
+
+Pick $a_i$ with $i$ dependent.
+Let $j$ be the largest independent index with $j < i$.
+Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
+
+Combining all the records defines a function
+\begin{align*}
+	g: \Sg' \arr \Bt^I \times \Pt^m \times \Ct^I
+\end{align*}
+
+We claim that for $\bar a, \bar a' \in \Sg'$ if we have $g(\bar a) = g(\bar a')$ then all $a_i, a_i'$ have the same $Q$-type.
+
+\begin{proof}
+	Suppose we have $\bar a, \bar a' \in \Sg'$ that map to the same image by $g$.
+	Suppose $i$ is independent.
+	Then by construction, $a_i, a_i'$ map to the same interval of the tree and have the same interval type.
+	Thus they have the same $Q$-type.
+	Otherwise, suppose $i$ is dependent.
+	Pick largest $j < i$ such that $j$ is independent.
+	We have $F(a_i) \leq F(a_j)$ and $F(a_i') \leq F(a_j')$.
+	Moreover $F(a_j) = F(a_j')$ as they are mapped to the same interval (as $j$ is independent).
+	
+	\begin{Claim}
+		$\val(a_i - a_i') > F(a_j) - \gamma$
+	\end{Claim}
+	\begin{proof}
+		Let $\bar x, \bar x' \in \Q_p^m$ be some elements with
+		\begin{align*}
+			\vec p_k &\cdot \bar x = a_k \\
+			\vec p_k &\cdot \bar x' = a_k' \text { for all } k \leq I
+		\end{align*}
+		Let $J$ be the set of independent indices less than $i$.
+		We have 
+		\begin{align*}
+			\val(a_k - a_k') > F(a_k) \text { for all } k \leq J
+		\end{align*}
+		as for independent indices $a_k, a_k'$ lie in the same interval.
+		\begin{align*}
+			&\val(a_k - a_k') > F(a_j) \text { for all } k \leq J \text{ by monotonicity of $F(a_k)$} \\
+			&\val(\vec p_k \cdot \bar x - \vec p_k \cdot \bar x') > F(a_j) \text { for all } k \leq J \\
+			&\val(\vec p_k \cdot (\bar x - \bar x')) > F(a_j) \text { for all } k \leq J \\
+		\end{align*}
+		$J$ and $i$ match the requirements of the claim above by independence so we conclude
+		\begin{align*}
+			&\val(\vec p_i \cdot (\bar x - \bar x')) > F(a_j) - \gamma \\
+			&\val(\vec p_i \cdot \bar x - \vec p_i \cdot \bar x') > F(a_j) - \gamma \\
+			&\val(a_i - a_i')) > F(a_j) - \gamma
+		\end{align*}
+		as needed.
+	\end{proof}
+	
+	By record of continuations (which $a_i, a_i'$ agree on) we have
+	\begin{align*}
+		a_i = a_i' \midr F(a_j)
+	\end{align*}
+	As $F(a_i) \leq F(a_j)$, $a_i, a_i'$ have to lie in the same interval.
+	They also agree on interval type.
+	Thus they have the same $Q$-type.
+	
+\end{proof}
+
+Now suppose we have $c, c' \in \M^m$ such that $g(f(c)) = g(f(c'))$.
+Then $f(c)$ components have the same $Q$-type as $f(c')$ components.
+Then $c, c'$ have the same $\Psi$-type.
+Thus the number of possible $\Psi$-types is bound by the size of the range of $g$.
+
+\begin{align*}
+	|\Ct| &= p^\gamma \\
+	|\Pt| &\leq N \cdot I^2 \text { (the only component dependent on $N$)}
+\end{align*}
+Moreover we need at most $I!$ many partitions of $\Sg$. This gives us
+
+\begin{align*}
+	I! \cdot |Bt|^I \cdot (N \cdot I^2)^m \cdot p^{\gamma I} = O(N^m)
+\end{align*}
+
+upper bound for the possible number of $\Psi$-types.
+
+\end{document}
+
+
+
+
+
+
+
+

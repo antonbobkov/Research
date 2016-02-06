@@ -19,8 +19,9 @@
 \renewcommand{\H}{\mathcal H}
   \newcommand{\G}{\mathcal G}
   \newcommand{\M}{\mathcal M}
-
   \newcommand{\U}{\mathcal U}	
+  \newcommand{\X}{\mathcal X}
+  \newcommand{\Y}{\mathcal Y}
 
   \newcommand{\K}{\boldface K_\alpha}
 \renewcommand{\S}{S_\alpha}
@@ -28,6 +29,7 @@
 \newcommand{\curly}[1]{\left\{#1\right\}}
 \newcommand{\paren}[1]{\left(#1\right)}
 \newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\agl}[1]{\left\langle #1 \right\rangle}
 
 \providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
 
@@ -57,54 +59,108 @@ We follow notations in \cite{laskowski}.
 In this paper we work with limit of random structure $G(n, n^{-\alpha})$ for $\alpha \in (0,1)$, irrational.
 This structure is axiomatized by $S_\alpha$.
 Our ambient model is $\MM$.
-Notations we use are $\delta(\A), \delta(\A/\B), \A \leq \B$ as well as notions of strong substructure, minimal extension, chain minimal extension.
+Notations we use are $\delta(\A), \delta(\A/\B), \A \leq \B$ as well as notions of $N$-strong substructure, minimal extension, chain minimal extension, minimal pair, and $N$-strong closure.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Graph Combinatorics}
+
+We denote graph by $\A$, set of its vertices by $A$.
+When we say $\A \subseteq \B$ we mean that $A \subseteq B$ and edges of $\A$ are also edges of $\B$.
+However $\B$ may add new edges between vertices of $\A$.
+
+Fix $\alpha \in (0,1)$, irrational.
+For a finite graph $\A$ let
+\begin{align*}
+	\delta(\A) = |A| - \alpha e(\A)
+\end{align*}
+
+where $e(\A)$ is the number of edges in $\A$.
+
+For finite $\A,\B$ with $\A \subseteq \B$ define $\delta(\B/\A) = \delta(\B) - \delta(\A)$.
+We say that $\A \leq \B$ if $\A \subseteq \B$ and $\delta(\A'/\B) > 0$ for all $\A \subseteq \A' \subsetneq \B$.
+
+We say that finite $\A$ is positive if for all $\A' \subseteq \A$ we have $\delta(\A') \geq 0$.
+
+\begin{Definition}
+	We work in theory $S_\alpha$ axiomatized by
+	\begin{itemize}
+		\item Every finite substructure is positive
+		\item For a model $\MM$ given $\A \leq \B$ every embedding $f : \A \arr \MM$ extends to $g: \B \arr \MM$.
+	\end{itemize}
+\end{Definition}
+
+For $\A, \B$ positive, $(\A, \B)$ is called a minimal pair if $\A \subseteq \B$, $\delta(\B/\A) < 0$ but $\delta(\A'/\A) \geq 0$ for all proper $\A \subseteq \A' \subsetneq \B$.
+
+$\agl{\A_i}_{i \leq m}$ is called a minimal chain if $(\A_i, \A_i+1)$ is a minimal pair (for all $i < m$).
+
+For a positive $\A$ let $\delta_\A(\bar x)$ be the atomic diagram of $\A$. For positive $\A \subset \B$ let 
+
+\begin{align*}
+	\Psi_{\A,\B}(\bar x) = \delta_\A(\bar x) \wedge \exists \bar y \; \delta_\B(\bar x, \bar y)
+\end{align*}
+
+Such formula is called chain-minimal extension formula if in addition we have that there is a minimal chain starting at $\A$ and ending in $\B$. Denote such formulas as $\Psi_{\agl{\M_i}}$
+
+\begin{Theorem} [5.6 in \cite{laskowski}]
+	$S_\alpha$ admits quantifier elimination down to boolean combination of chain-minimal extension formulas.
+\end{Theorem}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Definitions}
 
-\begin{Definition}
-	Let $x = (x_1, \ldots x_n), y = (y_1, \ldots, y_m)$ be variable tuples.
-	We call a formula $\phi(x, y)$ \emph{basic} when
-	\begin{itemize}
-		\item $\phi(x, y)$ is a minimal chain extension, denoted by $\curly{M_i}_{i \in [0..k]}$ with $M_0 = \{x, y\}$.
-		\item $\phi(x, y)$ determines edges and non-edges on its variables $\{x_1, \ldots x_n\} \cup \{y_1, \ldots y_m\}$.
-		\item there is no edge between $x_i$ and $y_j$ for all $i,j$. (see note \ref{note_edges})
-		\item Define $\mathbf x$ to be the graph on vertices $\{x_i\}$ with edges as defined by $\phi$.
-		Similarly define $\mathbf y$.
-		We require $\mathbf x$ and $\mathbf y$ to be positive. (see note \ref{note_positive})\
-		%\item all elements of $y$ that are connected to $M_k - \{x,y\}$. (see note \ref{note_special})
-	\end{itemize}
-\end{Definition}
+%\begin{Definition}
+	%Let $x = (x_1, \ldots x_n), y = (y_1, \ldots, y_m)$ be variable tuples.
+	%We call a formula $\phi(x, y)$ \emph{basic} when
+	%\begin{itemize}
+		%\item $\phi(x, y)$ is a minimal chain extension, denoted by $\curly{M_i}_{i \in [0..k]}$ with $M_0 = \{x, y\}$.
+		%\item $\phi(x, y)$ determines edges and non-edges on its variables $\{x_1, \ldots x_n\} \cup \{y_1, \ldots y_m\}$.
+		%\item there is no edge between $x_i$ and $y_j$ for all $i,j$. (see note \ref{note_edges})
+		%\item Define $\mathbf x$ to be the graph on vertices $\{x_i\}$ with edges as defined by $\phi$.
+		%Similarly define $\mathbf y$.
+		%We require $\mathbf x$ and $\mathbf y$ to be positive. (see note \ref{note_positive})\
+		%%\item all elements of $y$ that are connected to $M_k - \{x,y\}$. (see note \ref{note_special})
+	%\end{itemize}
+%\end{Definition}
 
 % issue: multiple possible chain decompositions?
 
-% address strength
+Fix tuples $x = (x_1, \ldots x_n), y = (y_1, \ldots, y_m)$.
+We refer to chain-minimal extension formulas as basic formulas.
+Let $\phi_{\agl{\M_i}}(x, y)$ be a basic formula.
 
-% address edges between x and y
+\begin{Definition}
+	Define $\X$ to be the graph on vertices $\{x_i\}$ with edges as defined by $\phi_{\agl{\M_i}}$.
+	Similarly define $\Y$.
+	We define those abstractly, i.e. on a new set of vertices disjoint from $\MM$.
+\end{Definition}
+
+Note that $\X$, $\Y$ are positive as they are subgraphs of $\M_0$.
+As usual $X, Y$ will refer to vertices of those graphs.
+
+We restrict our attention to formulas that define no edges between $X$ and $Y$.
 
 \begin{Note} \label{note_edges}
-	We handle edges between $x$ and $y$ as separate elements of the minimal chain extension.
+	We can handle edges between $x$ and $y$ as separate elements of the minimal chain extension.
 \end{Note}
 
-\begin{Note} \label{note_positive}
-	If either graph $\mathbf x$ or $\mathbf y$ is negative, then the formula would have no realizations as negative graphs cannot be embedded into our ambient model.
-\end{Note}
+%\begin{Note} \label{note_positive}
+	%If either graph $\mathbf x$ or $\mathbf y$ is negative, then the formula would have no realizations as negative graphs cannot be embedded into our ambient model.
+%\end{Note}
 
 %\begin{Note} \label{note_special}
 	%We add the final condition to simplify our analysis. Similar techniques can be used to acquire bounds on formulas not subject to that condition.
 %\end{Note}
 
 \begin{Definition} \label{def_basic}
-	For a basic formula $\phi(x, y)$ let
+	For a basic formula $\phi = \phi_{\agl{\M_i}_{i \leq k}}(x, y)$ let
 	\begin{itemize}
 		\item $\epsilon_i(\phi) = -\dim \paren{M_i/M_{i-1}}$.
-		%\item if $x$ or $y$ aren't positive, then $\epsilon_L(\phi) = \epsilon_U(\phi) = \infty$. Otherwise
 		\item $\epsilon_L(\phi) = \sum_{[1..k]} \epsilon_i(\phi)$.
 		\item $\epsilon_U(\phi) = \min_{[1..k]} \epsilon_i(\phi)$.
-		\item Let $\mathbf y'$ be a subgraph of $\mathbf y$ induced by elements of $\{y_i\}$ that are connected to $M_k - (\{x_i\} \cup \{y_j\})$.
-		\item Let $Y(\phi) = \dim (\mathbf y')$.
-		In particular if $\mathbf y = \mathbf y'$ and $\mathbf y$ is disconnected then $Y$ is arity of $y$.
+		\item Let $\Y'$ be a subgraph of $\Y$ induced by vertices of $\Y$ that are connected to $M_k - (X \cup Y)$.
+		\item Let $Y(\phi) = \dim (\Y')$.
+		In particular if $\Y = \Y'$ and $\Y$ is disconnected then $Y(\phi)$ is just the arity of the tuple $y$.
 	\end{itemize}
 \end{Definition}
 
@@ -122,14 +178,13 @@ Notations we use are $\delta(\A), \delta(\A/\B), \A \leq \B$ as well as notions 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lower bound}
 
-We work with formulas that are boolean combinations of basic formulas written in disjunctive-conjunctive form.
-Define dimensions for those inductively.
+As a simplification for our lower bound computation we assume that all the basic formulas involved we have $\Y' = \Y$ (see Definition \ref{def_basic}).
 
-%For simplicity we assume that for all basic formulas in our collection all elements of $y$ that are connected to $M_k - \{x,y\}$. This simplifies our analysis.
-As a simplification for our lower bound computation we assume that all the basic formulas involved we have $\mathbf y' = \mathbf y$ (see Definition \ref{def_basic}).
+We work with formulas that are boolean combinations of basic formulas written in disjunctive-conjunctive form.
+First, we extend our definition of $\epsilon$.
 
 \begin{Definition}[Negation]
-	If $\phi$ is a basic formula, then
+	If $\phi$ is a basic formula, then define
 	\begin{align*}
 		\epsilon_L(\neg \phi) &= \epsilon_L(\phi)
 	\end{align*}
@@ -139,8 +194,8 @@ As a simplification for our lower bound computation we assume that all the basic
 	Take a collection of formulas $\phi_i(x, y)$ where each $\phi_i$ is positive or negative basic formula.
 	If both positive and negative formulas are present then $\epsilon_L(\phi) = \infty$.
 	We don't have a lower bound for that case.
-	If different formulas define graphs for $x$ or $y$ differently then $\epsilon_L(\phi) = \infty$.
-	In that case the conflicting definitions would make the formula have no realizations.
+	If different formulas define $\X$ or $\Y$ differently then $\epsilon_L(\phi) = \infty$.
+	In that case of the conflicting definitions would make the formula have no realizations.
 	Otherwise
 	\begin{align*}
 		\epsilon_L(\bigwedge \phi_i) &= \sum \epsilon_L(\phi_i)
@@ -148,7 +203,7 @@ As a simplification for our lower bound computation we assume that all the basic
 \end{Definition}
 
 \begin{Definition} [Disjunction]
-	Take a collection of formulas $\psi_i$ where each instance is a conjunction of positive and negative instances of basic formulas.
+	Take a collection of formulas $\psi_i$ where each instance is a conjunction of positive and negative instances of basic formulas that agree on $\X$ and $\Y$. % can generalize?
 	\begin{align*}
 		\epsilon_L(\bigvee \psi_i) &= \min \epsilon_L(\psi_i)
 	\end{align*}
@@ -159,67 +214,61 @@ As a simplification for our lower bound computation we assume that all the basic
 	\begin{align*}
 		\vc \phi \geq \floor{\frac{Y(\phi)}{\epsilon_L(\phi)}}
 	\end{align*}
+	where $Y(\phi)$ is $Y(\psi)$ for $\psi$ one the basic components of $\phi$ (all basic componenets agree on $\Y$).
 \end{Theorem}
-
-%First we discuss some cases with $\epsilon_L$ infinite.
-
-%If $x$ or $y$ are not positive, then the formula doesn't have any realizations.
-
-%Consider a formula in conjunctive-disjunctive form. Look at individual conjunctive components. If there are positive and negative components, then the formula has no realizations over sufficiently large parameter sets, as will be shown later. So we only consider only components where all the formulas are positive or all the formulas are negative.
-
-%Each basic formula has to describe graph of $x$.
-%If there are two formulas in the conjunct that disagree on that, then there are no realizations of the conjunction.
 
 \begin{proof}
 	First work with a formula that is a conjunction of positive basic formulas.
 
 	\begin{align*}
-		\psi = \bigwedge \phi_j
+		\psi = \bigwedge_{j \leq J} \phi_j
 	\end{align*}
 	Then as we defined above
 	\begin{align*}
 		\epsilon_L(\psi) = \sum \epsilon_L(\phi_j)
 	\end{align*}
+	
+	Let $\phi$ be one of the basic formulas in $\psi$ with a chain $\agl{M_i}_{i \leq k}$.
+	Let $K_\phi = |M_k|$ i.e. the size of the extension.
+	Let $K$ be the largest such size among all $\phi_i$.
 
 	Let $n$ be the integer such that $n \epsilon_L(\psi) < Y$ and $(n+1) \epsilon_L(\psi) > Y$.
 
-	Take an abstract realization of $y$ as dictated by $\psi$, and label it by $b$.
+	%Take an abstract realization of $y$ as dictated by $\psi$, and label it by $b$ ($b \in \MM$)
+	Label $\Y$ by an tuple $b$.
 
-	Pick parameter set 
+	Pick parameter set $A \subset \MM$ such that 
 
 	\begin{align*}
 		A = \bigcup_{i<N} b_i
 	\end{align*}
 
 	a disjoint union where each $b_i$ is an ordered tuple of size $|x|$ connected according to $\psi$.
-	We also require $A$ to be strong.
+	We also require $A$ to be $N \cdot I \cdot K$-strong.
 
-	Fix $n$ arbitrary elements out of $b_i$, label them $a_i$.
+	Fix $n$ arbitrary elements out of $A$, label them $a_j$.
 
-	Fix an individual formula $\phi \in \Phi$, with minimal sequence $M_i$.
-
-	Abstractly adjoin $M_i/\curly{a_i, b} = M/\curly{x,y}$ for each $i$.
-	Let $\bar M_\phi = \bigcup M_i$ (disjointly).
-
-	We can join those for all $\phi \in \Phi$.
-	Let $\bar M = \bigcup M_\phi$ (disjointly).
+	For each $\phi_i$, $a_j$ pick an abstract realization $M_{ij}$ of $\phi_i$ over $(a_j, b)$
+	(abstract meaning disjoint from $\MM$).
+	
+	Let $\bar M$ be an abstract disjoint union of all those realizations.
 
 	\begin{Claim}
 		$(A \cap \bar M) \leq \bar M$.
 	\end{Claim}
 	\begin{proof}
 		Consider some $(A \cap \bar M) \subseteq B \subseteq \bar M$.
-		Let $B_i = B \cap M_i \subseteq M_i$.
-		Then $B_i$'s are disjoint over $\bar A = A \cup b$.
-		In particular $\dim B / \bar A = \sum \dim B_i / \bar A$.
-		$\dim B_i / \bar A$ \geq -\epsilon_L(\phi)& by Lemma \ref{chain_intersect}.
-		%If all $B_i = M_i$, then $B = \bar M$ and its dimension is 
-		
-		
-		%Its total dimension is $Y - n\epsilon_L(\psi) > 0$ and all its subextensions are positive as well.
+		Let $B_{ij} = B \cap M_{ij} \subseteq M_{ij}$.
+		Then $B_{ij}$'s are disjoint over $\bar A = A \cup b$.
+		In particular $\dim B / (\bar A \cap B) = \sum \dim B_{ij} / (\bar A \cap B_{ij})$.
+		$\dim B_{ij} / \bar A \geq -\epsilon_L(\phi_i)$ by Lemma \ref{chain_intersect}.
+		Thus $\dim B / (\bar A \cap B) \geq -n\epsilon(\psi)$.
+		Thus $\dim B / (A \cap B) \geq \dim(B) - n\epsilon(\psi)$.
+		By construction we have $Y - n\epsilon_L(\psi) > 0$ as needed.
 	\end{proof}
 
-	Thus a copy of $\bar M$ can be embedded over $A$ into our ambient model.
+	$|\bar M| \leq N \cdot I \cdot K$ and $A$ is $\leq N \cdot I \cdot K$-strong.
+	Thus a copy of $\bar M$ can be embedded over $A$ into our ambient model $\MM$.
 	Our choice of $b_i$'s was arbitrary, so we get ${N \choose n}$ choices out of $N|x|$ many elements.
 	Thus we have $O(|A|^n)$ many traces.
 
@@ -228,7 +277,7 @@ As a simplification for our lower bound computation we assume that all the basic
 	\end{Lemma}
 	
 	\begin{proof}
-		\textit{proof goes here}
+		\textit{proof goes here. use lemma in laskoswki paper}
 	\end{proof}
 
 	This shows
@@ -250,12 +299,19 @@ As a simplification for our lower bound computation we assume that all the basic
 	Then over $b$ the same construction gives trace $(A - X)$ for $\psi$. Thus we get as many traces.
 	
 	Finally consider a formula which is a disjunction of formulas considered above.
-	Choose the one with the smallest $\epsilon_L$, this yields the lower bound for the entire formula. %explain!
+	Choose the one with the smallest $\epsilon_L$, this yields the lower bound for the entire formula.
+	%explain! non-trivial. thing of disjunction of two formulas
+	% also! what if disjunction has formulas disagreeing on x and y
+	% aslo! what if disjuction where one of the formulas is mixed positive/negative formulas
 \end{proof}
 
 \begin{Claim}
 	We can find a minimal extension $M / \{x, y\}$ with arbitrarily small dimension.
 \end{Claim}
+
+\begin{proof}
+	Put proof in here. Follow construction in Laskowski paper.
+\end{proof}
 
 This shows that vc function is infinite in Shelah-Spencer random graphs.
 
@@ -581,12 +637,14 @@ Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) < -\epsilon$.
 \begin{Lemma} \label{chain_intersect}
 	Suppose we have a minimal chain $M_n$ with dimensions $-\epsilon_i$.
 	Let $\epsilon$ be the sum of all $\epsilon_i$.
-	Suppose we have some $B$ with $M_0 \subseteq B \subseteq M_n$.
-	Then $\dim B / M_0 \geq -\epsilon$
+	Suppose we have some $B$ with $B \subseteq M_n$.
+	Then $\dim B / (M_0 \cap B) \geq -\epsilon$.
 \end{Lemma}
 
 \begin{proof}
-	Insert proof here
+	Let $B_i = B \cap M_i$.
+	We have $\dim B_{i+1}/B_i \geq \dim M_{i+1}/M_i$ by minimality.
+	$\dim B / (M_0 \cap B) = \dim B_n / B_0 = \sum \dim B_{i+1}/B_i \geq -\epsilon$.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -691,7 +749,7 @@ This bounds the vc-density by $n$.
 	
 \bibitem{laskowski}
   Michael C. Laskowski, \textit{A simpler axiomatization of the Shelah-Spencer almost sure theories},
-  Israel J. Math. \textbf{161} (2007), 157–186. MR MR2350161	
+  Israel J. Math. \textbf{161} (2007), 157–186. MR MR2}350161	
 
 \end{thebibliography}
 	
