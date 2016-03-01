@@ -1,0 +1,39 @@
+Timeline:
+
+I propose a start date of October 2016.
+
+March through September 2016
+
+I will prepare and submit papers on my results for trees and Shelah-Spencer graphs. I will research families of flat graphs to see which of my techniques apply in that setting. I will generalize my result for valued fields from one dimension to multiple dimensions. I will also use this time to attend conferences to discuss my results with other mathematicians and get advice on further applications of my research.
+
+October 2016
+
+I will research p-adic number reducts and RV sorts to see if my valued field techniques apply.
+
+November 2016
+
+I will prepare and submit a paper containing my results for p-adic numbers and valued fields. I will continue exploring other valued field constructions to see if my techniques would apply to those as well.
+
+December 2016
+
+I will write an introduction to my thesis, defining VC-density and summarizing known results and computations.
+
+January 2017
+
+I will write the first chapter of my thesis on Shelah-Spencer graphs.
+
+February 2017
+
+I will write the second chapter of my thesis on trees and flat graphs.
+
+March 2017
+
+I will write the third and final chapter of my thesis on p-adic numbers and valued fields. At the end of the month I will submit the thesis to my advisor.
+
+April 2017
+
+I will make revisions to my thesis suggested by my advisor and submit the thesis to my committee. I will start preparing for the defense.
+
+May 2017
+
+I will implement revisions to my thesis given by my committee and resubmit the final version. I will complete the defense.
