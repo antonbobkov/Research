@@ -38,13 +38,47 @@
 \DeclareMathOperator{\vecspan}{span}
 \DeclareMathOperator{\val}{val}
 
-\title{reduct}
+\title{VC-density in an additive reduct of p-adic numbers}
 \author{Anton Bobkov}
 \email{bobkov@math.ucla.edu}
 
 \begin{document}
 
+\begin{abstract}
+	\cite{density} computed a bound $2n+1$ for the VC function in p-adic numbers, but it is not known to be optimal.
+	I investigate a C-minimal additive reduct of p-adic numbers and using techniques of \cite{reduct} I compute an optimal bound $n$ for that structure.
+\end{abstract}
+
+
 \maketitle
+
+VC density was introduced in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
+In a NIP theory we can define the VC function
+
+\begin{align*}
+	\vc : \N \arr \N
+\end{align*}
+
+Where $vc(n)$ measures complexity of definable sets in an $n$-dimensional space.
+Simplest possible behavior is $\vc(n) = n$ for all $n$.
+\cite{density} computes an upper bound for this function to be $2n+1$, and it's not known whether it's optimal.
+This same bound would hold in any reduct of p-adic numbers, so one may hope that the simplified structure of the reduct would allow a better bound.
+In \cite{reduct}, Leenknegt provides a cell decomposition result for the C-minimal additive reduct of p-adic numbers.
+Using that I'm able to improve the bound for the VC function, showing that $\vc(n) = n$.
+
+\section{Cell Decomposition}
+We work with the reduct of p-adic numbers in the language $\L = \curly{\Q_p, Q_{n,m}, +, -, \curly{\bar c}_{c \in K} }$,
+where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predicate
+
+\begin{align*}
+	Q_{n,m} = \curly{\bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) }
+\end{align*}
+
+
+
+\begin{align*}
+	\curly{(x, t) \in D \times K \midr \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
+\end{align*}
 
 %\begin{Definition}
 	%\begin{itemize}
@@ -274,6 +308,14 @@ Moreover we need at most $I!$ many partitions of $\Sg$. This gives us
 \end{align*}
 
 upper bound for the possible number of $\Psi$-types.
+
+\begin{thebibliography}{9}
+	\bibitem{density}
+		M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+		\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+	\bibitem{reduct}
+		insert citation
+\end{thebibliography}
 
 \end{document}
 
