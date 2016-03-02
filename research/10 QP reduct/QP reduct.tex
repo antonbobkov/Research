@@ -74,10 +74,20 @@ where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predi
 	Q_{n,m} = \curly{\bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) }
 \end{align*}
 
-
+\cite{reject} provides a cell decomposition result for this structure.
+Any formula $\phi(t, x)$  with $t$  singleton decomposes as the union of the following cells:
 
 \begin{align*}
 	\curly{(x, t) \in D \times K \midr \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
+\end{align*}
+
+where $D$ is a cell of a smaller dimension, $a_1, a_2, c$ are linear polynomials in  $x$, $\square$ is $<$ or no condition, $\lambda  \in\Q_p$.
+
+We analyze a formula $\phi(x; y)$ to find an upper bound of its VC-density. 
+Using cell decomposition, without loss of generality we may assume that we only need to bound the following family of formulas
+
+\begin{align*}
+	p_i(x; y)
 \end{align*}
 
 %\begin{Definition}
