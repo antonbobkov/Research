@@ -87,8 +87,11 @@ We analyze a formula $\phi(x; y)$ to find an upper bound of its VC-density.
 Using cell decomposition, without loss of generality we may assume that we only need to bound the following family of formulas
 
 \begin{align*}
-	p_i(x; y)
+	&\val p_i(x; y) \square_{ij} \val p_j(x; y) & i, j \in I \\
+	&\val p_i(x; y) \in \lambda_i Q & i \in I 
 \end{align*}
+
+where $\square_{ij} $  is $<$ or no condition.
 
 %\begin{Definition}
 	%\begin{itemize}
