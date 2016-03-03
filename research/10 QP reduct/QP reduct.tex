@@ -74,7 +74,7 @@ where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predi
 	Q_{n,m} = \curly{\bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) }
 \end{align*}
 
-\cite{reject} provides a cell decomposition result for this structure.
+\cite{reduct} provides a cell decomposition result for this structure.
 Any formula $\phi(t, x)$  with $t$  singleton decomposes as the union of the following cells:
 
 \begin{align*}
@@ -87,11 +87,18 @@ We analyze a formula $\phi(x; y)$ to find an upper bound of its VC-density.
 Using cell decomposition, without loss of generality we may assume that we only need to bound the following family of formulas
 
 \begin{align*}
-	&\val p_i(x; y) \square_{ij} \val p_j(x; y) & i, j \in I \\
-	&\val p_i(x; y) \in \lambda_i Q & i \in I 
+	&\val p_i(x) - q_i(y) < \val p_j(x) - q_j(y) & i, j \in I \\
+	&\val p_i(x) - q_i(y) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
-where $\square_{ij} $  is $<$ or no condition.
+where $I, K$ some finite index sets, $p_i$ is linear in $x$, $q_i$ is a linear polynomial in $y$, $\lambda_k \in \Q_p$, and $Q = Q_{n,m}$ for some $n',m'$.
+
+To see that apply cell decomposition theorem to $\phi(x_1, \bar x; y)$.
+Extract from the cells all the polynomials $a_1(\bar x, y), a_2(\bar x, y), x_1 - c(\bar x, y)$, and separate $x$ and $y$ parts into $p_i(x) - q_i(y)$.
+Choose $n',m'$ large enough to cover all $n,m$ that come up in the cells.
+Finally choose $\lambda_k$ to go over all cosets of $Q$.
+
+Then $(x,y),(x',y')$ agreeing on this family of formulas, will agree on being contained in those cells, and thus will agree on satisfying $\phi$.
 
 %\begin{Definition}
 	%\begin{itemize}
