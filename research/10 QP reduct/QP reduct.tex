@@ -66,7 +66,13 @@ This same bound would hold in any reduct of p-adic numbers, so one may hope that
 In \cite{reduct}, Leenknegt provides a cell decomposition result for the C-minimal additive reduct of p-adic numbers.
 Using that I'm able to improve the bound for the VC function, showing that $\vc(n) = n$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Cell Decomposition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 We work with the reduct of p-adic numbers in the language $\L = \curly{\Q_p, Q_{n,m}, +, -, \curly{\bar c}_{c \in K} }$,
 where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predicate
 
@@ -78,27 +84,27 @@ where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predi
 Any formula $\phi(t, x)$  with $t$  singleton decomposes as the union of the following cells:
 
 \begin{align*}
-	\curly{(x, t) \in D \times K \midr \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
+	\curly{(x, t) \in D \times K \mid \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
 \end{align*}
 
 where $D$ is a cell of a smaller dimension, $a_1, a_2, c$ are linear polynomials in  $x$, $\square$ is $<$ or no condition, $\lambda  \in\Q_p$.
 
 We analyze a formula $\phi(x; y)$ to find an upper bound of its VC-density. 
-Using cell decomposition, without loss of generality we may assume that we only need to bound the following family of formulas
+Using cell decomposition, without loss of generality we may assume that we only need to bound the following family of formulas $\Psi (x,y)$
 
 \begin{align*}
-	&\val p_i(x) - q_i(y) < \val p_j(x) - q_j(y) & i, j \in I \\
-	&\val p_i(x) - q_i(y) \in \lambda_k Q & i \in I , k \in K
+	&\val p_i(x) - c_i(y) < \val p_j(x) - c_j(y) & i, j \in I \\
+	&\val p_i(x) - c_i(y) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
-where $I, K$ some finite index sets, $p_i$ is linear in $x$, $q_i$ is a linear polynomial in $y$, $\lambda_k \in \Q_p$, and $Q = Q_{n,m}$ for some $n',m'$.
+where $I, K$ some finite index sets, $p_i$ is linear in $x$, $c_i$ is a linear polynomial in $y$, $\lambda_k \in \Q_p$, and $Q = Q_{n,m}$ for some $n',m'$.
 
 To see that apply cell decomposition theorem to $\phi(x_1, \bar x; y)$.
-Extract from the cells all the polynomials $a_1(\bar x, y), a_2(\bar x, y), x_1 - c(\bar x, y)$, and separate $x$ and $y$ parts into $p_i(x) - q_i(y)$.
+Extract from the cells all the polynomials $a_1(\bar x, y), a_2(\bar x, y), x_1 - c(\bar x, y)$, and separate $x$ and $y$ parts into $p_i(x) - c_i(y)$.
 Choose $n',m'$ large enough to cover all $n,m$ that come up in the cells.
 Finally choose $\lambda_k$ to go over all cosets of $Q$.
 
-Then $(x,y),(x',y')$ agreeing on this family of formulas, will agree on being contained in those cells, and thus will agree on satisfying $\phi$.
+Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those cells, and thus will agree on satisfying $\phi$.
 
 %\begin{Definition}
 	%\begin{itemize}
@@ -132,11 +138,20 @@ Then $(x,y),(x',y')$ agreeing on this family of formulas, will agree on being co
 	%Then $\sum \alpha_{ij'} x_i$ is determined up to $\alpha - \gamma$
 %\end{Claim}
 
-\begin{Claim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Key Lemmas and Definitions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Definition}
+	A tuple $p \in  \Q_p^m$ can be viewed as a vector $\vec p$, treating $\Q_p^m$ as a vector space over $\Q_p$.
+\end{Definition}
+
+\begin{Lemma}	
 	Suppose we have a collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^m$.
 	Pick a subset $J \subset I$ and $j \in I$ such that
 	\begin{align*}
-		\vec p_j \in \vecspan \curly{\vec p_i}_{i \in J}
+		\vec p_j \in \vecspan \curly{\vec p_i}_{i \in J} 
 	\end{align*}
 	Suppose we have $\vec x \in \Q_p^m, \alpha \in \Z$ with
 	\begin{align*}
@@ -148,49 +163,54 @@ Then $(x,y),(x',y')$ agreeing on this family of formulas, will agree on being co
 	\end{align*}
 	for some $\gamma \in \Z^{\geq 0}$.
 	Moreover $\gamma$ can be chosen independent of choice of $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
-\end{Claim}
+\end{Lemma}
 
-Suppose we have a finite $T \subset \Q_p, V \subset \Z$.
-We view it as a tree $(T, V)$ as follows.
+The following lemma is an adaptation of lemma 7.4 in \cite{density}.
+
+\begin{Lemma}
+	For $n,m$ there exists $D = D(n,m) \in \Z$ such that for any $x,y,a \in \Q_p$ if
+	\begin{align*}
+		\val x - a = \val y - a < \val (x - y) - D
+	\end{align*}
+	then $x - a, y - a$ are in the same coset of $Q_{n,m}$.
+\end{Lemma}
+
+Suppose we have a finite $T \subset \Q_p$.
+We view it as a tree as follows.
 Branches through the tree are elements of $T$.
-Branching points are defined by open balls as follows.
-Branching points is $(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
-Branching point is also $(t, v)$ for all $t \in T, v \in V$.
+With this tree we associate open balls $(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
 An interval is two balls $(t_1, v_1) \supset (t_2, v_2)$ with no balls in between.
-There are at most $2|T| \cdot |V|$ different intervals.
+An element $a \in \Q_p$ belongs to this interval if $a \in (t_1, v_1) - (t_2, v_2)$.
+There are at most $2|T|$ different intervals.
 
-We work with a collection of formulas $\Psi(\bar x, \vec y)$ of the form
+We may rewrite our collection of formulas $\Psi(x, y)$ as
 
 \begin{align*}
-	\vec p_i \cdot \bar x + c_i(\vec y) &\in \lambda_i Q_i \\
-	\val(\vec p_i \cdot \bar x + c_i(\bar y)) \; &\square_i \; v_i
+	&\val \vec p_i \cdot \vec x - c_i(y) < \val \vec p_j \cdot \vec x - c_j(y) & i, j \in I \\
+	&\val \vec p_i \cdot \vec x - c_i(y) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
-for $i \leq I$ with $|\bar x| = m$ with $Q_i = Q_{n_i, m_i}$ for some $n_i, m_i$.
 We work with a parameter set $B$ of size $N$.
-Consider a tree $(T, V)$
 
-\begin{align*}
-	T &= \curly{c_i(b) \mid b \in B, i \leq I} \\
-	V &= \curly{v_i \mid i \leq I}
-\end{align*}
-This tree has at most $O(N) = N \cdot I \cdot I$ many intervals.
+Consider a tree $T = \curly{c_i(b) \mid b \in B, i \in I}$
+It has at most $O(N) = N \cdot |I|$ many intervals.
 
-For some $x, x' \in \M$ we say they have the same $\Psi$-type if they have the same $\Psi$ type over $B$.
+For some $c, c' \in \Q_p^m$ we say they have the same $\Psi$-type if they have the same $\Psi$ type over $B$.
 
-For some $x, x' \in \M$ we say they have the same $Q$-type if
+For some $x, x' \in \Q_p$ we say they have the same tree type if
 \begin{itemize}
-	\item $x + c_i(b)$ is in the same $Q^i$-coset as $x' + c_i(b)$ for all $i \leq I, b \in B$
-	\item $\val(x + c_i(b)) \square_i \; v_i$ iff $\val(x' + c_i(b)) \square_i \; v_i$ for all $i \leq I, b \in B$
+	\item $x + c_i(b)$ is in the same $Q$-coset as $x' + c_i(b)$ for all $i \in I, b \in B$
+	\item $\val(x + c_i(b)) < \val(x + c_j(b))$ iff $\val(x' + c_i(b)) < \val(x' + c_j(b))$ for all $i,j \in I, b \in B$
 \end{itemize}
  
 \begin{Lemma}
-	$c, c' \in \M^m$ have the same $\Psi$-type if all $p_i(c), p_i(c')$ have the same $Q^i$-type
+	Let $c, c' \in \Q_p^m$.
+	If $p_i(c), p_i(c')$ have the same tree type for all $i \in I$, then $c, c'$ have the same $\Psi$-type.
 \end{Lemma}
 
 \begin{Lemma}
 	For any $Q = Q_{n,m}$ there exists $\theta_Q$ such that for all $\theta \geq \theta_Q$ the following holds.
-	Suppose we have $x,y,c \in \M$ such that
+	Suppose we have $x,y,c \in \Q_p$ such that
 	\begin{align*}
 		\val(x-y) - \theta > \val(x-c) = \val(y-c)
 	\end{align*}
@@ -205,7 +225,7 @@ For some $x, x' \in \M$ we say they have the same $Q$-type if
 \end{Lemma}
 
 \begin{Definition}
-	Let $c \in \M$.
+	Let $c \in \Q_p$.
 	It lies in our tree between $(c_L, \alpha_L)$ and $(c_U, \alpha_U)$.
 	Suppose $c$ lies in one of the near balls in a branching point above or below it.
 	Then define its interval type to be the index of that near ball.
@@ -213,18 +233,18 @@ For some $x, x' \in \M$ we say they have the same $Q$-type if
 	Denote the space of all the possible branch types $\Bt$.
 	We have
 	\begin{align*}
-		|\Bt| = N_\theta + \prod_{i \leq I} \paren{\text {number of cosets of $Q_i$}}
+		|\Bt| = N_\theta + \prod_{i \in I} \paren{\text {number of cosets of $Q_i$}}
 	\end{align*}
 	depends only on $\Psi$, independent from $B$.
 	
 \end{Definition}
 
 \begin{Lemma}
-	If $c, c'$ are in the same interval and have the same interval type then they have the same $Q$-type.
+	If $c, c'$ are in the same interval and have the same interval type then they have the same tree type.
 \end{Lemma}
 
 \begin{Definition}
-	For $c \in \M$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \Z_p^{\beta - \alpha}$ be the record of coefficients of $c$ for valuations between $\alpha, \beta$. More precisely write $c$ in its power series form
+	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \Z_p^{\beta - \alpha}$ be the record of coefficients of $c$ for valuations between $\alpha, \beta$. More precisely write $c$ in its power series form
 	\begin{align*}
 		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z_p
 	\end{align*}
@@ -233,7 +253,7 @@ For some $x, x' \in \M$ we say they have the same $Q$-type if
 
 For any $c$ define $F(c)$, the floor of $c$ to be the valuation of the largest branching point below $c$.
 
-Let $f: \M^n \arr \M^I$ with $f(\bar c) = (p_i(\bar c))_{i \leq I}$.
+Let $f: \Q_p^n \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
 Define segment space $\Sg$ to be the image of $f$.
 
 For some element $(a_i)$ in segment space look at floors $F(a_i)$.
@@ -261,13 +281,13 @@ Combining all the records defines a function
 	g: \Sg' \arr \Bt^I \times \Pt^m \times \Ct^I
 \end{align*}
 
-We claim that for $\bar a, \bar a' \in \Sg'$ if we have $g(\bar a) = g(\bar a')$ then all $a_i, a_i'$ have the same $Q$-type.
+We claim that for $\bar a, \bar a' \in \Sg'$ if we have $g(\bar a) = g(\bar a')$ then all $a_i, a_i'$ have the same tree type.
 
 \begin{proof}
 	Suppose we have $\bar a, \bar a' \in \Sg'$ that map to the same image by $g$.
 	Suppose $i$ is independent.
 	Then by construction, $a_i, a_i'$ map to the same interval of the tree and have the same interval type.
-	Thus they have the same $Q$-type.
+	Thus they have the same tree type.
 	Otherwise, suppose $i$ is dependent.
 	Pick largest $j < i$ such that $j$ is independent.
 	We have $F(a_i) \leq F(a_j)$ and $F(a_i') \leq F(a_j')$.
@@ -280,7 +300,7 @@ We claim that for $\bar a, \bar a' \in \Sg'$ if we have $g(\bar a) = g(\bar a')$
 		Let $\bar x, \bar x' \in \Q_p^m$ be some elements with
 		\begin{align*}
 			\vec p_k &\cdot \bar x = a_k \\
-			\vec p_k &\cdot \bar x' = a_k' \text { for all } k \leq I
+			\vec p_k &\cdot \bar x' = a_k' \text { for all } k \in I
 		\end{align*}
 		Let $J$ be the set of independent indices less than $i$.
 		We have 
@@ -308,12 +328,12 @@ We claim that for $\bar a, \bar a' \in \Sg'$ if we have $g(\bar a) = g(\bar a')$
 	\end{align*}
 	As $F(a_i) \leq F(a_j)$, $a_i, a_i'$ have to lie in the same interval.
 	They also agree on interval type.
-	Thus they have the same $Q$-type.
+	Thus they have the same tree type.
 	
 \end{proof}
 
-Now suppose we have $c, c' \in \M^m$ such that $g(f(c)) = g(f(c'))$.
-Then $f(c)$ components have the same $Q$-type as $f(c')$ components.
+Now suppose we have $c, c' \in \Q_p^m$ such that $g(f(c)) = g(f(c'))$.
+Then $f(c)$ components have the same tree type as $f(c')$ components.
 Then $c, c'$ have the same $\Psi$-type.
 Thus the number of possible $\Psi$-types is bound by the size of the range of $g$.
 
