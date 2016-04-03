@@ -6,7 +6,10 @@
 
 \usepackage{mathrsfs}
 
+\usepackage[margin=1in]{geometry}
 
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}
 
 \renewcommand{\AA}{\mathscr A}
   \newcommand{\II}{\mathscr I}
@@ -37,6 +40,8 @@
 \DeclareMathOperator{\Ct}{Ct}
 \DeclareMathOperator{\vecspan}{span}
 \DeclareMathOperator{\val}{val}
+
+
 
 \title{VC-density in an additive reduct of p-adic numbers}
 \author{Anton Bobkov}
@@ -175,13 +180,20 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
 	then $x - a, y - a$ are in the same coset of $Q_{n,m}$.
 \end{Lemma}
 
+\begin{Definition}
+	For $c \in \Q_p, \alpha \in \Z$ we define an open ball 
+	\begin{align*}
+		B(c, \alpha) = \curly{c' \in \Q_p \mid \val \paren{c' - c} \leq \alpha}
+	\end{align*}
+\end{Definition}
+
 Suppose we have a finite $T \subset \Q_p$.
 We view it as a tree as follows.
 Branches through the tree are elements of $T$.
-With this tree we associate open balls $(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
-An interval is two balls $(t_1, v_1) \supset (t_2, v_2)$ with no balls in between.
-An element $a \in \Q_p$ belongs to this interval if $a \in (t_1, v_1) - (t_2, v_2)$.
-There are at most $2|T|$ different intervals.
+With this tree we associate open balls $B(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
+An interval is two balls $B(t_1, v_1) \supset B(t_2, v_2)$ with no balls in between.
+An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
+There are at most $2|T|$ different intervals and they partition the entire space.
 
 We may rewrite our collection of formulas $\Psi(x, y)$ as
 
@@ -190,10 +202,11 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 	&\val \vec p_i \cdot \vec x - c_i(y) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
-We work with a parameter set $B$ of size $N$.
+Fix a parameter set $B$ of size $N$.
 
 Consider a tree $T = \curly{c_i(b) \mid b \in B, i \in I}$
 It has at most $O(N) = N \cdot |I|$ many intervals.
+For the remainder of the paper we work with this tree.
 
 For some $c, c' \in \Q_p^m$ we say they have the same $\Psi$-type if they have the same $\Psi$ type over $B$.
 
@@ -217,6 +230,9 @@ For some $x, x' \in \Q_p$ we say they have the same tree type if
 	Then $x-c$ and $y-c$ lie in the same coset of $Q$.
 \end{Lemma}
 
+
+Next lemma is along the lines of lemma 7.5 of \cite{density}.
+
 \begin{Lemma}
 	Fix $\theta$ sufficiently large to satisfy previous lemma for all $Q_i$. Define an enumeration of near balls
 	\begin{align*}
@@ -226,16 +242,16 @@ For some $x, x' \in \Q_p$ we say they have the same tree type if
 
 \begin{Definition}
 	Let $c \in \Q_p$.
-	It lies in our tree between $(c_L, \alpha_L)$ and $(c_U, \alpha_U)$.
-	Suppose $c$ lies in one of the near balls in a branching point above or below it.
+	It lies in our tree in one of the intervals $B(c_L, \alpha_L) \backslash B(c_U, \alpha_U)$.
+	Suppose $c$ lies in one of the near balls corresponding to $B(c_L, \alpha_L)$ or $B(c_U, \alpha_U)$.
 	Then define its interval type to be the index of that near ball.
-	Otherwise define its interval type to be the coset of $c - c_U$ of $Q_i$ for all $i \in I$.
+	Otherwise define its interval type to be the coset of $c - c_U$ of $Q$.
 	Denote the space of all the possible branch types $\Bt$.
 	We have
 	\begin{align*}
-		|\Bt| = N_\theta + \prod_{i \in I} \paren{\text {number of cosets of $Q_i$}}
+		|\Bt| = N_\theta + \text {number of cosets of $Q$}
 	\end{align*}
-	depends only on $\Psi$, independent from $B$.
+	depending only on $\Psi$, independent from $B$.
 	
 \end{Definition}
 
@@ -246,12 +262,15 @@ For some $x, x' \in \Q_p$ we say they have the same tree type if
 \begin{Definition}
 	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \Z_p^{\beta - \alpha}$ be the record of coefficients of $c$ for valuations between $\alpha, \beta$. More precisely write $c$ in its power series form
 	\begin{align*}
-		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z_p
+		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
 	\end{align*}
 	Then $c \midr [\alpha, \beta]$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_\beta)$.
 \end{Definition}
-
-For any $c$ define $F(c)$, the floor of $c$ to be the valuation of the largest branching point below $c$.
+\begin{Definition}
+	Let $c \in \Q_p$.
+	It lies in our tree in one of the intervals $B(c_L, \alpha_L) \backslash B(c_U, \alpha_U)$.
+	Define $F(c)$, the floor of $c$ to be $\alpha_L$.
+\end{Definition}
 
 Let $f: \Q_p^n \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
 Define segment space $\Sg$ to be the image of $f$.
