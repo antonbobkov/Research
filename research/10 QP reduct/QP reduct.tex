@@ -170,15 +170,6 @@ Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those 
 	Moreover $\gamma$ can be chosen independent of choice of $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
 \end{Lemma}
 
-The following lemma is an adaptation of lemma 7.4 in \cite{density}.
-
-\begin{Lemma}
-	For $n,m$ there exists $D = D(n,m) \in \Z$ such that for any $x,y,a \in \Q_p$ if
-	\begin{align*}
-		\val x - a = \val y - a < \val (x - y) - D
-	\end{align*}
-	then $x - a, y - a$ are in the same coset of $Q_{n,m}$.
-\end{Lemma}
 
 \begin{Definition}
 	For $c \in \Q_p, \alpha \in \Z$ we define an open ball 
@@ -198,8 +189,8 @@ There are at most $2|T|$ different intervals and they partition the entire space
 We may rewrite our collection of formulas $\Psi(x, y)$ as
 
 \begin{align*}
-	&\val \vec p_i \cdot \vec x - c_i(y) < \val \vec p_j \cdot \vec x - c_j(y) & i, j \in I \\
-	&\val \vec p_i \cdot \vec x - c_i(y) \in \lambda_k Q & i \in I , k \in K
+	&\val (\vec p_i \cdot \vec x) - c_i(y) < \val (\vec p_j \cdot \vec x) - c_j(y) & i, j \in I \\
+	&\val (\vec p_i \cdot \vec x) - c_i(y) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
 Fix a parameter set $B$ of size $N$.
@@ -208,35 +199,39 @@ Consider a tree $T = \curly{c_i(b) \mid b \in B, i \in I}$
 It has at most $O(N) = N \cdot |I|$ many intervals.
 For the remainder of the paper we work with this tree.
 
-For some $c, c' \in \Q_p^m$ we say they have the same $\Psi$-type if they have the same $\Psi$ type over $B$.
+\begin{Definition}
+	$a, a' \in \Q_p^m$ have the same $\Psi$-type if they have the same $\Psi$ type over $B$.	
+\end{Definition}
 
-For some $x, x' \in \Q_p$ we say they have the same tree type if
-\begin{itemize}
-	\item $x + c_i(b)$ is in the same $Q$-coset as $x' + c_i(b)$ for all $i \in I, b \in B$
-	\item $\val(x + c_i(b)) < \val(x + c_j(b))$ iff $\val(x' + c_i(b)) < \val(x' + c_j(b))$ for all $i,j \in I, b \in B$
-\end{itemize}
+\begin{Definition}
+	$x, x' \in \Q_p$ have the same tree type if
+	\begin{itemize}
+		\item $x + c_i(b)$ is in the same $Q$-coset as $x' + c_i(b)$ for all $i \in I, b \in B$
+		\item $\val(x + c_i(b)) < \val(x + c_j(b))$ iff $\val(x' + c_i(b)) < \val(x' + c_j(b))$ for all $i,j \in I, b \in B$
+	\end{itemize}
+\end{Definition}
  
 \begin{Lemma}
-	Let $c, c' \in \Q_p^m$.
-	If $p_i(c), p_i(c')$ have the same tree type for all $i \in I$, then $c, c'$ have the same $\Psi$-type.
+	Let $a, a' \in \Q_p^m$.
+	If $p_i(a), p_i(a')$ have the same tree type for all $i \in I$, then $a, a'$ have the same $\Psi$-type.
 \end{Lemma}
+
+The following lemma is an adaptation of lemma 7.4 in \cite{density}.
 
 \begin{Lemma}
-	For any $Q = Q_{n,m}$ there exists $\theta_Q$ such that for all $\theta \geq \theta_Q$ the following holds.
-	Suppose we have $x,y,c \in \Q_p$ such that
+	For $n,m$ there exists $D = D(n,m) \in \Z$ such that for any $x,y,a \in \Q_p$ if
 	\begin{align*}
-		\val(x-y) - \theta > \val(x-c) = \val(y-c)
+		\val (x - a) = \val (y - a) < \val (x - y) - D
 	\end{align*}
-	Then $x-c$ and $y-c$ lie in the same coset of $Q$.
+	then $x - a, y - a$ are in the same coset of $Q_{n,m}$.
 \end{Lemma}
-
 
 Next lemma is along the lines of lemma 7.5 of \cite{density}.
 
 \begin{Lemma}
-	Fix $\theta$ sufficiently large to satisfy previous lemma for all $Q_i$. Define an enumeration of near balls
+	Using $D$ from the previous lemma define an enumeration of near balls
 	\begin{align*}
-		B_1(c, \alpha), B_2(c, \alpha), \ldots B_{N_\theta}(c, \alpha)
+		B_1(c, \alpha), B_2(c, \alpha), \ldots B_{N_D}(c, \alpha)
 	\end{align*}
 \end{Lemma}
 
@@ -249,7 +244,7 @@ Next lemma is along the lines of lemma 7.5 of \cite{density}.
 	Denote the space of all the possible branch types $\Bt$.
 	We have
 	\begin{align*}
-		|\Bt| = N_\theta + \text {number of cosets of $Q$}
+		|\Bt| = N_D + \text {number of cosets of $Q$}
 	\end{align*}
 	depending only on $\Psi$, independent from $B$.
 	
