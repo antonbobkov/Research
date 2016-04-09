@@ -152,7 +152,14 @@ Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those 
 	A tuple $p \in  \Q_p^m$ can be viewed as a vector $\vec p$, treating $\Q_p^m$ as a vector space over $\Q_p$.
 \end{Definition}
 
-\begin{Lemma}	
+We may rewrite our collection of formulas $\Psi(x, y)$ as
+
+\begin{align*}
+	&\val (\vec p_i \cdot \vec x) - c_i(y) < \val (\vec p_j \cdot \vec x) - c_j(y) & i, j \in I \\
+	&\val (\vec p_i \cdot \vec x) - c_i(y) \in \lambda_k Q & i \in I , k \in K
+\end{align*}
+
+\begin{Lemma}	 \label{gamma}
 	Suppose we have a collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^m$.
 	Pick a subset $J \subset I$ and $j \in I$ such that
 	\begin{align*}
@@ -167,7 +174,7 @@ Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those 
 		\val(\vec p_j \cdot \vec x) > \alpha - \gamma
 	\end{align*}
 	for some $\gamma \in \Z^{\geq 0}$.
-	Moreover $\gamma$ can be chosen independent of choice of $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
+	Moreover $\gamma$ can be chosen independent of choice of $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$ independent of their order.
 \end{Lemma}
 
 
@@ -178,26 +185,23 @@ Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those 
 	\end{align*}
 \end{Definition}
 
-Suppose we have a finite $T \subset \Q_p$.
-We view it as a tree as follows.
-Branches through the tree are elements of $T$.
-With this tree we associate open balls $B(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
-An interval is two balls $B(t_1, v_1) \supset B(t_2, v_2)$ with no balls in between.
-An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
-There are at most $2|T|$ different intervals and they partition the entire space.
+\begin{Definition}
+	Suppose we have a finite $T \subset \Q_p$.
+	We view it as a tree as follows.
+	Branches through the tree are elements of $T$.
+	With this tree we associate open balls $B(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
+	An interval is two balls $B(t_1, v_1) \supset B(t_2, v_2)$ with no balls in between.
+	An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
+	There are at most $2|T|$ different intervals and they partition the entire space.
+	
+	Fix a parameter set $B$ of size $N$.
+	
+	Consider a tree $T = \curly{c_i(b) \mid b \in B, i \in I}$
+	It has at most $O(N) = N \cdot |I|$ many intervals.
+	Denote the set of all intervals as $\Pt$.
+	For the remainder of the paper we work with this tree.	
+\end{Definition}
 
-We may rewrite our collection of formulas $\Psi(x, y)$ as
-
-\begin{align*}
-	&\val (\vec p_i \cdot \vec x) - c_i(y) < \val (\vec p_j \cdot \vec x) - c_j(y) & i, j \in I \\
-	&\val (\vec p_i \cdot \vec x) - c_i(y) \in \lambda_k Q & i \in I , k \in K
-\end{align*}
-
-Fix a parameter set $B$ of size $N$.
-
-Consider a tree $T = \curly{c_i(b) \mid b \in B, i \in I}$
-It has at most $O(N) = N \cdot |I|$ many intervals.
-For the remainder of the paper we work with this tree.
 
 \begin{Definition}
 	$a, a' \in \Q_p^m$ have the same $\Psi$-type if they have the same $\Psi$ type over $B$.	
@@ -255,7 +259,7 @@ Next lemma is along the lines of lemma 7.5 of \cite{density}.
 \end{Lemma}
 
 \begin{Definition}
-	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \Z_p^{\beta - \alpha}$ be the record of coefficients of $c$ for valuations between $\alpha, \beta$. More precisely write $c$ in its power series form
+	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \Z/p\Z^{\beta - \alpha}$ be the record of coefficients of $c$ for valuations between $\alpha, \beta$. More precisely write $c$ in its power series form
 	\begin{align*}
 		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
 	\end{align*}
@@ -266,11 +270,25 @@ Next lemma is along the lines of lemma 7.5 of \cite{density}.
 	It lies in our tree in one of the intervals $B(c_L, \alpha_L) \backslash B(c_U, \alpha_U)$.
 	Define $F(c)$, the floor of $c$ to be $\alpha_L$.
 \end{Definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let $f: \Q_p^n \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
-Define segment space $\Sg$ to be the image of $f$.
+\section{Main Proof}
 
-For some element $(a_i)$ in segment space look at floors $F(a_i)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Fix $\gamma$ corresponding to $\curly{\vec p_i}_{i \in I}$ according to Lemma \ref{gamma}.
+
+\begin{Definition}
+	Denote $\Z/p\Z^\gamma$ as $\Ct$.
+\end{Definition}
+
+\begin{Definition}
+	Let $f: \Q_p^n \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
+	Define segment space $\Sg$ to be the image of $f$.	
+\end{Definition}
+
+
+Given a tuple $(a_i)_{i\in I}$ in segment space look at corresponding floors $\curly{F(a_i)}_{i\in I}$.
+Those are ordered as elements of $\Z$
 Partition the segment space by order type of $\{F(a_i)\}$.
 Work in a fixed partition $\Sg'$.
 After relabeling we may assume that
@@ -279,23 +297,32 @@ After relabeling we may assume that
 \end{align*}
 
 Consider (relabeled) sequence of vectors $\vec p_1, \vec p_2, \ldots, \vec p_I$.
-Choose the unique subset of linearly independent vectors $J \subset I$.
+There is a unique subset $J \subset I$ such that all vectors with indices in $J$ are linearly independent, and all vectors with indices outside of $J$ are a linear combination of preceding vectors.
 For any index $i \in I$ we call it independent if $i \in J$ and we call it dependent otherwise.
+%Let $m = |J|$.
 
-For all $a_i$ record its interval type.
+Now, we define the following function
+\begin{align*}
+	g: \Sg' \arr \Bt^I \times \Pt^J \times \Ct^{I - J}
+\end{align*}
 
-For $a_i$ with $i$ independent, record the interval of $a_i$.
+Let $\bar a = (a_i)_{i\in I} \in \Sg'$.
+To define $g(\bar a)$ we need to specify where it is taking in each individual component of the product.
 
+For all $a_i$ record its interval type $\in \Bt$ giving the first component.
+
+For $a_j$ with $j \in J$, record the interval of $a_j$ giving the second component.
+
+For the third component to the following computation.
 Pick $a_i$ with $i$ dependent.
 Let $j$ be the largest independent index with $j < i$.
 Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 
-Combining all the records defines a function
-\begin{align*}
-	g: \Sg' \arr \Bt^I \times \Pt^m \times \Ct^I
-\end{align*}
 
-We claim that for $\bar a, \bar a' \in \Sg'$ if we have $g(\bar a) = g(\bar a')$ then all $a_i, a_i'$ have the same tree type.
+
+\begin{Lemma}
+	For $\bar a, \bar a' \in \Sg'$ if $g(\bar a) = g(\bar a')$ then $a_i, a_i'$ have the same tree type for all $i \in I$.	
+\end{Lemma}
 
 \begin{proof}
 	Suppose we have $\bar a, \bar a' \in \Sg'$ that map to the same image by $g$.
