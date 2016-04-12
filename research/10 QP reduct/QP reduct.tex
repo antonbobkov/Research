@@ -215,7 +215,7 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 	\end{itemize}
 \end{Definition}
  
-\begin{Lemma}
+\begin{Lemma} \label{sigh}
 	Let $a, a' \in \Q_p^m$.
 	If $p_i(a), p_i(a')$ have the same tree type for all $i \in I$, then $a, a'$ have the same $\Psi$-type.
 \end{Lemma}
@@ -254,7 +254,7 @@ Next lemma is along the lines of lemma 7.5 of \cite{density}.
 	
 \end{Definition}
 
-\begin{Lemma}
+\begin{Lemma} \label{interval}
 	If $c, c'$ are in the same interval and have the same interval type then they have the same tree type.
 \end{Lemma}
 
@@ -313,7 +313,7 @@ For all $a_i$ record its interval type $\in \Bt$ giving the first component.
 
 For $a_j$ with $j \in J$, record the interval of $a_j$ giving the second component.
 
-For the third component to the following computation.
+For the third component do the following computation.
 Pick $a_i$ with $i$ dependent.
 Let $j$ be the largest independent index with $j < i$.
 Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
@@ -325,68 +325,77 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 \end{Lemma}
 
 \begin{proof}
-	Suppose we have $\bar a, \bar a' \in \Sg'$ that map to the same image by $g$.
-	Suppose $i$ is independent.
-	Then by construction, $a_i, a_i'$ map to the same interval of the tree and have the same interval type.
-	Thus they have the same tree type.
-	Otherwise, suppose $i$ is dependent.
+	For each $i$ we show that $a_i, a_i'$ are in the same interval and have the same interval type, so the conclusion follows by Lemma \ref{interval}.
+	$\Bt$ records interval type of each element, so if $g(\bar a) = g(\bar a')$ then $a_i, a_i'$ have the same interval type for all $i \in I$.
+	Thus it remains to show that $a_i, a_i'$ lie in the same interval for all $i \in I$.
+	Suppose $i$ is an independent index.
+	Then by construction, $\Pt$ records interval for $a_i, a_i'$, so those have to belong to the same interval.
+	Now suppose $i$ is dependent.
 	Pick largest $j < i$ such that $j$ is independent.
 	We have $F(a_i) \leq F(a_j)$ and $F(a_i') \leq F(a_j')$.
-	Moreover $F(a_j) = F(a_j')$ as they are mapped to the same interval (as $j$ is independent).
+	Moreover $F(a_j) = F(a_j')$ as they are mapped to the same interval (using the earlier part of the argument as $j$ is independent).
 	
 	\begin{Claim}
 		$\val(a_i - a_i') > F(a_j) - \gamma$
 	\end{Claim}
 	\begin{proof}
-		Let $\bar x, \bar x' \in \Q_p^m$ be some elements with
+		Let $\vec x, \vec x' \in \Q_p^m$ be some elements with
 		\begin{align*}
-			\vec p_k &\cdot \bar x = a_k \\
-			\vec p_k &\cdot \bar x' = a_k' \text { for all } k \in I
+			\vec p_k &\cdot \vec x = a_k \\
+			\vec p_k &\cdot \vec x' = a_k' \text { for all } k \in I
 		\end{align*}
-		Let $J$ be the set of independent indices less than $i$.
+		It is always possible to do that as $\bar a, \bar a' \in \Sg'$. 
+		Let $J'$ be the set of independent indices less than $i$.
 		We have 
 		\begin{align*}
-			\val(a_k - a_k') > F(a_k) \text { for all } k \leq J
+			\val(a_k - a_k') > F(a_k) \text { for all } k \in J'
 		\end{align*}
 		as for independent indices $a_k, a_k'$ lie in the same interval.
 		\begin{align*}
-			&\val(a_k - a_k') > F(a_j) \text { for all } k \leq J \text{ by monotonicity of $F(a_k)$} \\
-			&\val(\vec p_k \cdot \bar x - \vec p_k \cdot \bar x') > F(a_j) \text { for all } k \leq J \\
-			&\val(\vec p_k \cdot (\bar x - \bar x')) > F(a_j) \text { for all } k \leq J \\
+			&\val(a_k - a_k') > F(a_j) \text { for all } k \in J' \text{ by monotonicity of $F(a_k)$} \\
+			&\val(\vec p_k \cdot \vec x - \vec p_k \cdot \vec x') > F(a_j) \text { for all } k \in J' \\
+			&\val(\vec p_k \cdot (\vec x - \vec x')) > F(a_j) \text { for all } k \in J' \\
 		\end{align*}
-		$J$ and $i$ match the requirements of the claim above by independence so we conclude
+		$J'$ and $i$ match the requirements of Lemma \ref {gamma} so we conclude
 		\begin{align*}
-			&\val(\vec p_i \cdot (\bar x - \bar x')) > F(a_j) - \gamma \\
-			&\val(\vec p_i \cdot \bar x - \vec p_i \cdot \bar x') > F(a_j) - \gamma \\
+			&\val(\vec p_i \cdot (\vec x - \vec x')) > F(a_j) - \gamma \\
+			&\val(\vec p_i \cdot \vec x - \vec p_i \cdot \vec x') > F(a_j) - \gamma \\
 			&\val(a_i - a_i')) > F(a_j) - \gamma
 		\end{align*}
 		as needed.
-	\end{proof}
-	
-	By record of continuations (which $a_i, a_i'$ agree on) we have
+	\end{proof}	
+	moreover because $a_i, a_i'$ have the same image in $\Ct$component under $g$ we can conclude that
 	\begin{align*}
-		a_i = a_i' \midr F(a_j)
+		\val(a_i - a_i')) > F(a_j) 
 	\end{align*}
-	As $F(a_i) \leq F(a_j)$, $a_i, a_i'$ have to lie in the same interval.
-	They also agree on interval type.
-	Thus they have the same tree type.
-	
+	As $F(a_i) \leq F(a_j)$, $a_i, a_i'$ have to lie in the same interval.	
 \end{proof}
 
-Now suppose we have $c, c' \in \Q_p^m$ such that $g(f(c)) = g(f(c'))$.
-Then $f(c)$ components have the same tree type as $f(c')$ components.
-Then $c, c'$ have the same $\Psi$-type.
-Thus the number of possible $\Psi$-types is bound by the size of the range of $g$.
+\begin{Corollary}
+	$\Psi(x,y)$ has dual VC-density $\leq |x|$
+\end{Corollary}
 
-\begin{align*}
-	|\Ct| &= p^\gamma \\
-	|\Pt| &\leq N \cdot I^2 \text { (the only component dependent on $N$)}
-\end{align*}
-Moreover we need at most $I!$ many partitions of $\Sg$. This gives us
+\begin{proof}
+	Suppose we have $c, c' \in \Q_p^m$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
+	Then by the previous lemma $p_i(c)$ has the same tree type as $p_i(c')$ for all $i\in I$.
+	Then by Lemma \ref{sigh} $c, c'$ have the same $\Psi$-type.
+	Thus the number of possible $\Psi$-types is bound by the size of the range of $g$ times the number of possible partitions.
+	
+	\begin{align*}
+		|\Ct| &= p^\gamma \\
+		|\Pt| &\leq N \cdot I^2 \text { (the only component dependent on $N$)}
+	\end{align*}
+	Moreover we need at most ${|I|}!$ many partitions of $\Sg$. This gives us
+	
+	\begin{align*}
+		{|I|}! \cdot |Bt|^{|I|} \cdot (N \cdot {|I|}^2)^{|J|} \cdot p^{\gamma {|I-J|}} = O(N^{|J|})
+	\end{align*}	
+	
+	Every $p_i$ is an element of a $|x|$-dimensional vector space, so there can be at most $|x|$ many independent vectors.
+	Thus we have $|J| \leq |x|$ as needed.
+\end{proof}
 
-\begin{align*}
-	I! \cdot |Bt|^I \cdot (N \cdot I^2)^m \cdot p^{\gamma I} = O(N^m)
-\end{align*}
+
 
 upper bound for the possible number of $\Psi$-types.
 
