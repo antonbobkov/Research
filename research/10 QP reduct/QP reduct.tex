@@ -78,7 +78,7 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-We work with the reduct of p-adic numbers in the language $\L = \curly{\Q_p, Q_{n,m}, +, -, \curly{\bar c}_{c \in K} }$,
+We work with the reduct of p-adic numbers in the language $\L = \curly{\Q_p, \curly{Q_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in K} }$,
 where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predicate
 
 \begin{align*}
@@ -149,7 +149,7 @@ Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{Definition}
-	A tuple $p \in  \Q_p^m$ can be viewed as a vector $\vec p$, treating $\Q_p^m$ as a vector space over $\Q_p$.
+	A tuple $p \in  \Q_p^{|x|}$ can be viewed as a vector $\vec p$, treating $\Q_p^{|x|}$ as a vector space over $\Q_p$.
 \end{Definition}
 
 We may rewrite our collection of formulas $\Psi(x, y)$ as
@@ -160,12 +160,12 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 \end{align*}
 
 \begin{Lemma}	 \label{gamma}
-	Suppose we have a collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^m$.
+	Suppose we have a collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^{|x|}$.
 	Pick a subset $J \subset I$ and $j \in I$ such that
 	\begin{align*}
 		\vec p_j \in \vecspan \curly{\vec p_i}_{i \in J} 
 	\end{align*}
-	Suppose we have $\vec x \in \Q_p^m, \alpha \in \Z$ with
+	Suppose we have $\vec x \in \Q_p^{|x|}, \alpha \in \Z$ with
 	\begin{align*}
 		\val(\vec p_i \cdot \vec x) > \alpha \text{ for all } i \in J
 	\end{align*}
@@ -204,7 +204,7 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 
 
 \begin{Definition}
-	$a, a' \in \Q_p^m$ have the same $\Psi$-type if they have the same $\Psi$ type over $B$.	
+	$a, a' \in \Q_p^{|x|}$ have the same $\Psi$-type if they have the same $\Psi$ type over $B$.	
 \end{Definition}
 
 \begin{Definition}
@@ -216,7 +216,7 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 \end{Definition}
  
 \begin{Lemma} \label{sigh}
-	Let $a, a' \in \Q_p^m$.
+	Let $a, a' \in \Q_p^{|x|}$.
 	If $p_i(a), p_i(a')$ have the same tree type for all $i \in I$, then $a, a'$ have the same $\Psi$-type.
 \end{Lemma}
 
@@ -282,7 +282,7 @@ Fix $\gamma$ corresponding to $\curly{\vec p_i}_{i \in I}$ according to Lemma \r
 \end{Definition}
 
 \begin{Definition}
-	Let $f: \Q_p^n \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
+	Let $f: \Q_p^{|x|} \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
 	Define segment space $\Sg$ to be the image of $f$.	
 \end{Definition}
 
@@ -339,7 +339,7 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 		$\val(a_i - a_i') > F(a_j) - \gamma$
 	\end{Claim}
 	\begin{proof}
-		Let $\vec x, \vec x' \in \Q_p^m$ be some elements with
+		Let $\vec x, \vec x' \in \Q_p^{|x|}$ be some elements with
 		\begin{align*}
 			\vec p_k &\cdot \vec x = a_k \\
 			\vec p_k &\cdot \vec x' = a_k' \text { for all } k \in I
@@ -372,11 +372,11 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 \end{proof}
 
 \begin{Corollary}
-	$\Psi(x,y)$ has dual VC-density $\leq |x|$
+	$\Psi(x,y)$ has VC-density $\leq |x|$
 \end{Corollary}
 
 \begin{proof}
-	Suppose we have $c, c' \in \Q_p^m$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
+	Suppose we have $c, c' \in \Q_p^{|x|}$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
 	Then by the previous lemma $p_i(c)$ has the same tree type as $p_i(c')$ for all $i\in I$.
 	Then by Lemma \ref{sigh} $c, c'$ have the same $\Psi$-type.
 	Thus the number of possible $\Psi$-types is bound by the size of the range of $g$ times the number of possible partitions.
@@ -395,9 +395,14 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 	Thus we have $|J| \leq |x|$ as needed.
 \end{proof}
 
+\begin{Corollary}
+	In the language $\L$ we have $\vc(n) = n$.
+\end{Corollary}
 
-
-upper bound for the possible number of $\Psi$-types.
+\begin{proof}
+	Previous lemma implies that $\vc(\phi) \leq \vc(\Phi) \leq |x|$.
+	As choice of $\phi$ was arbitrary, this implies that VC-density of any formula is bounded by the arity of $x$.
+\end{proof}
 
 \begin{thebibliography}{9}
 	\bibitem{density}
