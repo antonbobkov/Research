@@ -16,12 +16,13 @@
   \newcommand{\MM}{\mathscr M}
 
   \newcommand{\A}{\mathcal A}
-  \newcommand{\B}{\mathcal B}
+  \newcommand{\B}{\mathcal B} 
 \renewcommand{\C}{\mathcal C}
   \newcommand{\D}{\mathcal D}
 \renewcommand{\H}{\mathcal H}
   \newcommand{\G}{\mathcal G}
-  \newcommand{\M}{\mathcal M}
+\renewcommand{\LL}{\mathcal L}
+	\newcommand{\M}{\mathcal M}
 
   \newcommand{\U}{\mathcal U}	
 
@@ -78,7 +79,7 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-We work with the reduct of p-adic numbers in the language $\L = \curly{\Q_p, \curly{Q_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in K} }$,
+We work with the reduct of p-adic numbers in the language $\LL_R = \curly{\Q_p, \curly{Q_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in K} }$,
 where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predicate
 
 \begin{align*}
@@ -89,59 +90,61 @@ where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predi
 Any formula $\phi(t, x)$  with $t$  singleton decomposes as the union of the following cells:
 
 \begin{align*}
-	\curly{(x, t) \in D \times K \mid \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
+	\curly{(t, x) \in K \times D \mid \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
 \end{align*}
 
 where $D$ is a cell of a smaller dimension, $a_1, a_2, c$ are linear polynomials in  $x$, $\square$ is $<$ or no condition, $\lambda  \in\Q_p$.
 
-We analyze a formula $\phi(x; y)$ to find an upper bound of its VC-density. 
-Using cell decomposition, without loss of generality we may assume that we only need to bound the following family of formulas $\Psi (x,y)$
+\begin{Lemma}
+	For a formula $\phi(x)$ with $x = (t, \bar x)$ there exists a family of formulas $\Psi'(x)$
+	\begin{align*}
+		&\val \paren{q_i(x)} < \val \paren{q_j(x)} & i, j \in I \\
+		&\val \paren{q_i(x)} \in \lambda_k Q_{n,m} & i \in I , k \in K \\
+		&\bar x \in D_l & l \in L
+	\end{align*}
+	with $I, K, L$ finite,
+	$D_l$ cells,
+	$q_i$ linear polynomials,
+	$\lambda_k \in \Q_p$, and
+	$Q = Q_{n,m}$ for some $n,m$.
+	Moreover we have that if $a, a' \in Q_p^{|x|}$ agree on all formulas from $\Psi'$ then they agree on $\phi$.
+\end{Lemma}
+
+\begin{proof}
+	To see that apply cell decomposition theorem to $\phi(t, \bar x)$.
+	Let $q_i$ enumerate all of the following polynomials $a_1(\bar x), a_2(\bar x), t - c(\bar x)$ that show up in the cells
+	Let $D_l$ be the smaller cells for $\bar x$ component that appear in the cells.
+	Choose $n,m$ large enough to cover all $n', m'$ that come up in the cells for $Q_{n',m'}$.
+	Choose $\lambda_k$ to go over all cosets of $Q_{n,m}$.
+\end{proof}
+
+Applying this lemma inductively to smaller cells that appear we obtain a family $\Psi(x)$
+\begin{align*}
+		&\val \paren{q_i(x)} < \val \paren{q_j(x)} & i, j \in I \\
+		&\val \paren{q_i(x)} \in \lambda_k Q_{n,m} & i \in I , k \in K
+\end{align*}
+with $I, K$ finite,
+$q_i$ linear polynomials,
+$\lambda_k \in \Q_p$, and
+$Q = Q_{n,m}$ for some $n,m$.
+Moreover whenever $a, a' \in Q_p^{|x|}$ agree on all formulas from $\Psi$ then they agree on $\phi$.
+
+Now fix a formula $\phi(x; y)$ for finding an upper bound of its VC-density.
+Using the result above we can construct a family of formulas $\Psi(x; y)$ which can be now written as
 
 \begin{align*}
 	&\val p_i(x) - c_i(y) < \val p_j(x) - c_j(y) & i, j \in I \\
 	&\val p_i(x) - c_i(y) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
-where $I, K$ some finite index sets, $p_i$ is linear in $x$, $c_i$ is a linear polynomial in $y$, $\lambda_k \in \Q_p$, and $Q = Q_{n,m}$ for some $n',m'$.
-
-To see that apply cell decomposition theorem to $\phi(x_1, \bar x; y)$.
-Extract from the cells all the polynomials $a_1(\bar x, y), a_2(\bar x, y), x_1 - c(\bar x, y)$, and separate $x$ and $y$ parts into $p_i(x) - c_i(y)$.
-Choose $n',m'$ large enough to cover all $n,m$ that come up in the cells.
-Finally choose $\lambda_k$ to go over all cosets of $Q$.
-
-Then $(x,y),(x',y')$ agreeing on $\Psi$, will agree on being contained in those cells, and thus will agree on satisfying $\phi$.
-
-%\begin{Definition}
-	%\begin{itemize}
-		%\item For $a \in \Q_p$ and $\alpha < \beta \in \Z$ we denote $a \midr [\alpha, \beta]$ the part of the $p$-adic restricted to $[\alpha, \beta]$
-		%\item By $a \midr \alpha$ we mean $a \midr (-\infty, \alpha)$.
-		%\item By $a = b \ (\midr \alpha)$ we mean $a \midr \alpha = b \midr \alpha$.
-	%\end{itemize}
-%\end{Definition}
-%
-%\begin{Claim}
-	%\begin{itemize}
-		%\item If $a = b \ (\midr \alpha)$ and $c = d \ (\midr \alpha)$ then $a + c = b + d \ (\midr \alpha)$.
-		%\item If $a = b \ (\midr \alpha)$ and $v(c) = 0$ then $ca = cb \ (\midr \alpha)$
-		%\item More generally if $a = b \ (\midr \alpha)$ then $ca = cb \ (\midr \alpha + v(c))$
-	%\end{itemize}
-%\end{Claim}
-
-%\begin{Claim}
-	%Suppose we have a system 
-	%\begin{align*}
-		%\curly{ \sum \alpha_{ij} x_i }_{j \in J}
-	%\end{align*}
-	%with $j \in J$. There exists $\gamma$ with the following property.
-	%Pick any subset $J' \subset J$ of equations and $\alpha$. Suppose we are given
-	%\begin{align*}
-		%\curly{ \sum \alpha_{ij} x_i = c_j \ (\midr \alpha)}_{j \in J'}
-	%\end{align*}
-	%and suppose those equations are enough to determine $\sum \alpha_{ij'} x_i$ for some $j' \in J$.
-	%That is writing $\vec v_j = (\alpha_{1j}, \ldots, \alpha_{Ij})$ we have
-	%that $v_{j'}$ is a linear combination of vectors $\{v_j\}_{j \in J'}$
-	%Then $\sum \alpha_{ij'} x_i$ is determined up to $\alpha - \gamma$
-%\end{Claim}
+where $I, K$ finite,
+$p_i$ a homogeneous linear polynomials in $x$,
+$c_i$ is a linear polynomial in $y$,
+$\lambda_k \in \Q_p$, and
+$Q = Q_{n,m}$ for some $n,m$
+(to do this we simply split polynomials $q_i$ into its $x$ part and into its $y$ part including the constant term).
+Now for any parameter set $B$ we have that if $a, a'$ have the same $\Psi$-type then they have the same $\phi$-type.
+Thus it suffices to bound VC-density for $\Psi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -396,7 +399,7 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 \end{proof}
 
 \begin{Corollary}
-	In the language $\L$ we have $\vc(n) = n$.
+	In the language $\LL_R$ we have $\vc(n) = n$.
 \end{Corollary}
 
 \begin{proof}
