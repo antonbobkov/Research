@@ -9,7 +9,7 @@
 %\usepackage{setspace}
 %\doublespacing
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=.75in]{geometry}
 
 \usepackage{pgfpages}
 \pgfpagesuselayout{2 on 1}
@@ -136,8 +136,8 @@ Now fix a formula $\phi(x; y)$ for finding an upper bound of its VC-density.
 Using the result above we can construct a family of formulas $\Psi(x; y)$ which can be now written as
 
 \begin{align*}
-	&\val p_i(x) - c_i(y) < \val p_j(x) - c_j(y) & i, j \in I \\
-	&\val p_i(x) - c_i(y) \in \lambda_k Q & i \in I , k \in K
+	&\val (p_i(x) - c_i(y)) < \val (p_j(x) - c_j(y)) & i, j \in I \\
+	&\val (p_i(x) - c_i(y)) \in \lambda_k Q & i \in I , k \in K
 \end{align*}
 
 where $I, K$ finite,
@@ -183,7 +183,25 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 	Moreover $\gamma$ can be chosen independently from $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$, independent of their order.
 \end{Lemma}
 \begin{proof}
-	INSERT PROOF HERE
+	Fix some $i, J$.
+	For some $c_i$
+	\begin{align*}
+		\vec p_j &= \sum_{i \in J} c_i \vec p_i \\
+		\vec p_j \cdot \vec x &= \sum_{i \in J} c_i \vec p_i \cdot \vec x
+	\end{align*}
+	We have
+	\begin{align*}
+		\val \paren{c_i \vec p_i \cdot \vec x} = \val \paren{c_i} + \val \paren{\vec p_i \cdot \vec x} > \val \paren{c_i} + \alpha
+	\end{align*}
+	Pick $\gamma = -\max \val \paren{c_i}$ or $0$ if all those values are positive.
+	Then we have 
+	\begin{align*}
+		&\val \paren{c_i \vec p_i \cdot \vec x} > \alpha - \gamma &\text{ for all $i \in J$}\\
+		&\sum_{i \in J} c_i \vec p_i \cdot \vec x > \alpha - \gamma
+	\end{align*}
+	This shows that we can pick such $\gamma$ for a given choice of $i, J$, but independent from $\alpha, \vec x$.
+	To get a choice independent from $i, J$, go over all such eligible choices (of which there are finitely many as $I$ is finite),
+	pick $\gamma$ for each, and then take the maximum of those values.
 \end{proof}
 
 \begin{Definition}
@@ -224,8 +242,8 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 \begin{Definition}
 	We say $x, x' \in \Q_p$ have the same tree type if
 	\begin{itemize}
+		\item $\val(x - c_i(b)) < \val(x - c_j(b))$ iff $\val(x' - c_i(b)) < \val(x' - c_j(b))$ for all $i,j \in I, b \in B$
 		\item $x + c_i(b)$ is in the same $Q$-coset as $x' + c_i(b)$ for all $i \in I, b \in B$
-		\item $\val(x + c_i(b)) < \val(x + c_j(b))$ iff $\val(x' + c_i(b)) < \val(x' + c_j(b))$ for all $i,j \in I, b \in B$
 	\end{itemize}
 \end{Definition}
  
@@ -234,21 +252,40 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 	If $p_i(a), p_i(a')$ have the same tree type for all $i \in I$, then $a, a'$ have the same $\Psi$-type.
 \end{Lemma}
 \begin{proof}
-	INSERT PROOF HERE
+	Clear from the construction.
 \end{proof}
+
+\begin{Definition}
+	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \paren{\Z/p\Z}^{\beta - \alpha}$ be the record of coefficients of $c$ for the valuations between $\alpha, \beta$.
+	More precisely write $c$ in its power series form
+	\begin{align*}
+		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
+	\end{align*}
+	Then $c \midr [\alpha, \beta]$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_\beta)$.
+\end{Definition}
 
 The following lemma is an adaptation of lemma 7.4 in \cite{density}.
 
-\begin{Lemma}
+\begin{Lemma} \label{distance}
 	For $n,m$ there exists $D = D(n,m) \in \Z$ such that for any $x,y,a \in \Q_p$ if
 	\begin{align*}
-		\val (x - a) = \val (y - a) < \val (x - y) - D
+		\val (x - c) = \val (y - c) < \val (x - y) - D
 	\end{align*}
-	then $x - a, y - a$ are in the same coset of $Q_{n,m}$.
+	then $x - c, y - c$ are in the same coset of $Q_{n,m}$.
 \end{Lemma}
 \begin{proof}
-	INSERT PROOF HERE
-\end{proof}
+	Define that $a,b \in \Q_p$ are similar if $\val a = \val b$ and
+	\begin{align*}
+		a \midr [\val a, \val a + (m + n)] = b \midr [\val b, \val b + (m + n)]
+	\end{align*}
+	If $a,b$ are similar then
+	\begin{align*}
+		Q_{n,m} a \leftrightarrow Q_{n,m} b
+	\end{align*}
+	Moreover for any $\lambda \in \Q_p$, if $a,b$ are similar we would also have $a/\lambda, b/\lambda$ are similar.
+	Thus if $a,b$ are similar, then they belong in the same coset of $Q_{n,m}$.
+	If we pick $D = n + m$ then conditions of the lemma force $x - c, y - c$ to be similar.
+\end{proof} 
 
 Next definition is along the lines of lemma 7.5 of \cite{density}.
 
@@ -275,20 +312,51 @@ Next definition is along the lines of lemma 7.5 of \cite{density}.
 \end{Definition}
 
 \begin{Lemma} \label{interval}
-	If $c, c'$ are in the same interval and have the same interval type then they have the same tree type.
+	If $a, a'$ are in the same interval and have the same interval type then they have the same tree type.
 \end{Lemma}
 \begin{proof}
-	INSERT PROOF HERE
+	First part of the tree type definition is satisfied as $a, a'$ are in the same interval,
+	so we only need to demonstrate that the corresponding $Q$-cosets match.
+	Pick any element of our tree $c_i(b)$.
+	We want to show that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
+		
+	Suppose $a$ is in one of the near balls.
+	As $a'$ has the same interval type, it has to be in the same near ball.
+	By definition of the near ball we then have $\val(a - c_i(b)) = \val(a' - c_i(b)) < \val(a - a') - D$.
+	Thus by Lemma \ref{distance} we have $a - c_i(b), a' - c_i(b)$ in the same $Q$-coset.
+	
+	Now, suppose both $a, a'$ aren't in any near balls.
+	Label their interval as $B(c_L, \alpha_L) \backslash B(c_U, \alpha_U)$.
+	Then we have 
+	\begin{align*}
+		\alpha_L + D < &\val (a - c_U) < \alpha_U - D \\
+		\alpha_L + D < &\val (a' - c_U) < \alpha_U - D
+	\end{align*}
+	as otherwise one (both) of them would be in one of the near balls.
+	We have either $\val(c_U - c_i(b)) \geq \alpha_U$ or $\val(c_U - c_i(b)) \leq \alpha_L$
+	as otherwise it would contradict the definition of an interval.
+	
+	Suppose it is the first case $\val(c_U - c_i(b)) \geq \alpha_U$.
+	Then
+	\begin{align*}
+		 \val(a - c_i(b)) = \val(a - c_U) < \alpha_U - D \leq \val(c_U - c_i(b)) - D
+	\end{align*}
+	so by Lemma \ref{distance} we have $a - c_i(b), a - c_U$ are in the same $Q$-coset.
+	By a parallel argument we have $a' - c_i(b), a' - c_U$ are in the same $Q$-coset.
+	As we are assuming $a, a'$ have the same tree type it implies that $a - c_U, a' - c_U$ are in the same $Q$-coset.
+	Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
+	
+	For the second case, suppose $\val(c_U - c_i(b)) \leq \alpha_L$.
+	Then
+	\begin{align*}
+		\val(a - c_i(b)) = \val(c_U - c_i(b)) \leq \alpha_L < \val(a - c_U) - D
+	\end{align*}
+	so by Lemma \ref{distance} we have $a - c_i(b), c_U - c_i(b)$ are in the same $Q$-coset.
+	By a parallel argument we have $a' - c_i(b), c_U - c_i(b)$ are in the same $Q$-coset.
+	Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
 \end{proof}
 
-\begin{Definition}
-	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ let $c \midr [\alpha, \beta] \in \paren{\Z/p\Z}^{\beta - \alpha}$ be the record of coefficients of $c$ for the valuations between $\alpha, \beta$.
-	More precisely write $c$ in its power series form
-	\begin{align*}
-		c = \sum_{\gamma \in Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
-	\end{align*}
-	Then $c \midr [\alpha, \beta]$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_\beta)$.
-\end{Definition}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Main Proof}
