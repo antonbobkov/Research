@@ -287,10 +287,13 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
 	If we pick $D = n + m$ then conditions of the lemma force $x - c, y - c$ to be similar.
 \end{proof} 
 
-Next definition is along the lines of lemma 7.5 of \cite{density}.
+The following construction is along the lines of lemma 7.5 of \cite{density}.
 
 \begin{Definition}
-	Using $D$ from the previous lemma define an enumeration of near balls
+	Let the distance between two balls $B(a, \alpha), B(b, \beta)$ be $|\alpha - \beta|$.
+	In $\Q_p$ value group is discrete and residue field is finite, so there are finitely many balls at a fixed distance from a given ball.
+	Near balls of $B(a, \alpha)$ are defined to be balls with distance $\leq D$ from $B(a, \alpha)$.
+	Enumerate those as:
 	\begin{align*}
 		B_1(c, \alpha), B_2(c, \alpha), \ldots B_{N_D}(c, \alpha)
 	\end{align*}
@@ -299,7 +302,7 @@ Next definition is along the lines of lemma 7.5 of \cite{density}.
 \begin{Definition}
 	Let $c \in \Q_p$.
 	It lies in our tree in one of the intervals $B(c_L, \alpha_L) \backslash B(c_U, \alpha_U)$.
-	Suppose $c$ lies in one of the near balls corresponding to $B(c_L, \alpha_L)$ or $B(c_U, \alpha_U)$.
+	Suppose $c$ lies in one of the near balls of $B(c_L, \alpha_L)$ or $B(c_U, \alpha_U)$.
 	Then define its interval type to be the index of that near ball.
 	Otherwise define its interval type to be the coset of $c - c_U$ of $Q$.
 	Denote the space of all the possible branch types $\Bt$.
@@ -307,7 +310,7 @@ Next definition is along the lines of lemma 7.5 of \cite{density}.
 	\begin{align*}
 		|\Bt| = N_D + \text {number of cosets of $Q$}
 	\end{align*}
-	depending only on $\Psi$, independent from $B$.
+	finite, depending only on $\Psi$, independent from $B$.
 	
 \end{Definition}
 
