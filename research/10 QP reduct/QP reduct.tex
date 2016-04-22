@@ -81,15 +81,22 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{Definition}
+	Let
+	\begin{align*}
+		Q_{n,m} = \curly{\bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) }
+	\end{align*}
+	It is a multiplicative subgroup of $\Q_p^\times$ with finitely many cosets.
+\end{Definition}
 
-We work with the reduct of p-adic numbers in the language $\LL = \curly{\Q_p, \curly{Q_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in K} }$,
-where $\bar c$ is a scalar multiplication by $c$, and $Q_{n,m}$ is a unary predicate.
-
+We work with the reduct of p-adic numbers in the language $\LL = \curly{\Q_p, \curly{R_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in K} }$,
+where $\bar c$ is a scalar multiplication by $c$, and $R_{n,m}$ is a predicate
 \begin{align*}
-	Q_{n,m} = \curly{\bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) }
+	R_{n,m} (a, b, c) \Leftrightarrow a - b \in c Q_{n,m}
 \end{align*}
 
-\cite{reduct} provides a cell decomposition result for this structure.
+
+In \cite{reduct}, Leenknegt provides a cell decomposition result for this structure.
 Any formula $\phi(t, x)$  with $t$  singleton decomposes as the union of the following cells:
 
 \begin{align*}
@@ -503,7 +510,7 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 		M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
 		\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
 	\bibitem{reduct}
-		insert citation
+		E. Leenknegt. \textit{Reducts of $p$-adically closed fields}, Archive for Mathematical logic, 53(3):285-306, 2014
 \end{thebibliography}
 
 \end{document}
