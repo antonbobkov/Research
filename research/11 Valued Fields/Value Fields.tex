@@ -1,0 +1,139 @@
+\documentclass{amsart}
+
+\usepackage{../AMC_style}	
+\usepackage{../Research}
+\usepackage{../Thm}
+
+\usepackage{mathrsfs}
+
+%\usepackage{setspace}
+%\doublespacing
+
+\usepackage[margin=.75in]{geometry}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}
+
+\renewcommand{\AA}{\mathscr A}
+  \newcommand{\II}{\mathscr I}
+  \newcommand{\MM}{\mathscr M}
+
+  \newcommand{\A}{\mathcal A}
+  \newcommand{\B}{\mathcal B} 
+\renewcommand{\C}{\mathcal C}
+  \newcommand{\D}{\mathcal D}
+\renewcommand{\H}{\mathcal H}
+  \newcommand{\G}{\mathcal G}
+\renewcommand{\LL}{\mathcal L_{aff}}
+	\newcommand{\M}{\mathcal M}
+
+  \newcommand{\U}{\mathcal U}	
+
+  \newcommand{\K}{\boldface K_\alpha}
+\renewcommand{\S}{S_\alpha}
+
+\newcommand{\curly}[1]{\left\{#1\right\}}
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+
+\DeclareMathOperator{\Sg}{Sg}
+\DeclareMathOperator{\Bt}{Bt}
+\DeclareMathOperator{\Pt}{Pt}
+\DeclareMathOperator{\Ct}{Ct}
+\DeclareMathOperator{\vecspan}{span}
+\DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\ac}{ac}
+
+
+
+\title{todo}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+
+\begin{document}
+
+\begin{abstract}
+	todo
+\end{abstract}
+
+
+\maketitle
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{One}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We work in three-sorts $K, \gamma, k$.
+By quantifier elimination any formula $\theta(x,y)$ is a boolean combination of the following family of formulas $\Psi(x, y)$
+\begin{align*}
+	&\phi_i^\gamma (\val(p_j(x, y))) \ i \in I, j \in J \\
+	&\phi_i^k (\ac(p_j(x, y))) \ i \in I, j \in J
+\end{align*}
+where $I,J$ finite, $p_j$ is a polynomial over $K$,
+$\phi_i^\gamma$ is a formula in the language of ordered groups,
+and $\phi_i^k$ is a formula in the language of fields.
+
+
+We aim to find an upper bound for the number of types of $\theta(x, y)$ over some finite parameter set $B$.
+
+Assume $|x| = 1$.
+Suppose all polynomials are of degree at most $D$.
+Let $N = |B|$.
+
+It is sufficient to bound $\Psi$-types over $B$.
+Moreover, let 
+\begin{align*}
+	&\Psi^\gamma = \curly{ \phi_i^\gamma (\val(p_j(x, y))) \ i \in I, j \in J } \\
+	&\Psi^k = \curly{ \phi_i^k (\ac(p_j(x, y))) \ i \in I, j \in J }
+\end{align*}
+
+Then the number of $\Psi$-types over $B$ is bounded by the product of $\Psi^\gamma$-types and $\Psi^k$-types over $B$.
+
+First look at $\Psi^\Gamma$-types.
+
+Consider $p_j(x, b)$ in partition $p$.
+There is $c = c(j, p, b)$ such that
+\begin{align*}
+	p_j(x - c, b) = \sum_{k \leq D} \beta_k x^k
+\end{align*}
+
+Define
+\begin{align*}
+	f \colon J \times P \times B &\arr \Gamma^(D+1) \\
+	(j, p, b) \mapsto (\val \beta_0, \ldots, \val \beta_D)
+\end{align*}
+
+Let $B^\Gamma \subset \Gamma^(D+1)$ be the image of $f$.
+We have $|B^\Gamma| \leq |B| \cdot |J| \cdot |P| = O(N)$.
+
+Define
+\begin{align*}
+	\gamma(x, y_0, \ldots, y_D) = \min_i \curly{x + i \cdot y_i}
+\end{align*}
+a formula in the language of value group.
+
+We claim that $\gamma$-types over $B^\Gamma$ determine $\Psi^\Gamma$-types over $B$.
+
+Consider 
+
+\begin{thebibliography}{9}
+	\bibitem{density}
+		M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+		\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+\end{thebibliography}
+
+\end{document}
+
+
+
+
+
+
+
+
