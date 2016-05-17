@@ -24,7 +24,7 @@
   \newcommand{\D}{\mathcal D}
 \renewcommand{\H}{\mathcal H}
   \newcommand{\G}{\mathcal G}
-\renewcommand{\LL}{\mathcal L_R}
+\renewcommand{\LL}{\mathcal L_{aff}}
 	\newcommand{\M}{\mathcal M}
 
   \newcommand{\U}{\mathcal U}	
@@ -89,10 +89,10 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 	It is a multiplicative subgroup of $\Q_p^\times$ with finitely many cosets.
 \end{Definition}
 
-We work with the reduct of p-adic numbers in the language $\LL = \curly{\Q_p, \curly{R_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in K} }$,
-where $\bar c$ is a scalar multiplication by $c$, and $R_{n,m}$ is a predicate
+We work with the reduct of p-adic numbers in the language $\LL = \curly{\Q_p, \curly{R_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in \Q_p} }$,
+where $\bar c$ is a scalar multiplication by $c$, and $R_{n,m}$ is a predicate for cosets of $Q_{n,m}$
 \begin{align*}
-	R_{n,m} (a, b, c) \Leftrightarrow a - b \in c Q_{n,m}
+	R_{n,m} (a, b) \Leftrightarrow a \in b Q_{n,m}
 \end{align*}
 
 
@@ -100,7 +100,7 @@ In \cite{reduct}, Leenknegt provides a cell decomposition result for this struct
 Any formula $\phi(t, x)$  with $t$  singleton decomposes as the union of the following cells:
 
 \begin{align*}
-	\curly{(t, x) \in K \times D \mid \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
+	\curly{(t, x) \in K \times D \mid \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n',m'} }
 \end{align*}
 
 where $D$ is a cell of a smaller dimension, $a_1, a_2, c$ are linear polynomials in  $x$, $\square$ is $<$ or no condition, $\lambda  \in\Q_p$.
@@ -123,7 +123,7 @@ where $D$ is a cell of a smaller dimension, $a_1, a_2, c$ are linear polynomials
 \begin{proof}
 	To see that, apply cell decomposition theorem to $\phi(t, \bar x)$.
 	Let $q_i$ enumerate all of the polynomials $a_1(\bar x), a_2(\bar x), t - c(\bar x)$ that show up in the cells.
-	Let $D_l$ be the smaller cells for the $\bar x$components that appear in the cells.
+	Let $D_l$ be the smaller cells for the $\bar x$ components that appear in the cells.
 	Choose $n,m$ large enough to cover all $n', m'$ that come up in the cells for $Q_{n',m'}$.
 	Choose $\lambda_k$ to go over all the cosets of $Q_{n,m}$.
 \end{proof}
@@ -241,11 +241,6 @@ We may rewrite our collection of formulas $\Psi(x, y)$ as
 	Define $F(c)$, the floor of $c$ to be $\alpha_L$.
 \end{Definition}
 
-
-\begin{Definition}
-	We say $a, a' \in \Q_p^{|x|}$ have the same $\Psi$-type if they have the same $\Psi$ type over $B$.	
-\end{Definition}
-
 \begin{Definition}
 	We say $x, x' \in \Q_p$ have the same tree type if
 	\begin{itemize}
@@ -287,22 +282,27 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
 	\end{align*}
 	If $a,b$ are similar then
 	\begin{align*}
-		Q_{n,m} a \leftrightarrow Q_{n,m} b
+		a \in Q_{n,m} \leftrightarrow b \in Q_{n,m}
 	\end{align*}
 	Moreover for any $\lambda \in \Q_p$, if $a,b$ are similar we would also have $a/\lambda, b/\lambda$ are similar.
 	Thus if $a,b$ are similar, then they belong in the same coset of $Q_{n,m}$.
 	If we pick $D = n + m$ then conditions of the lemma force $x - c, y - c$ to be similar.
 \end{proof} 
 
-The following construction is along the lines of lemma 7.5 of \cite{density}.
+The following construction is along the lines of lemmas 7.3, 7.5 of \cite{density}.
 
 \begin{Definition}
-	Let the distance between two balls $B(a, \alpha), B(b, \beta)$ be $|\alpha - \beta|$.
+	For two balls $B(a, \alpha), B(b, \beta)$ let $\gamma = \min(\alpha, \beta, \val(a - b))$.
+	Define the distance between those two balls to be $|\alpha - \gamma| + |\beta - \gamma|$.
 	In $\Q_p$ value group is discrete and residue field is finite, so there are finitely many balls at a fixed distance from a given ball.
-	Near balls of $B(a, \alpha)$ are defined to be balls with distance $\leq D$ from $B(a, \alpha)$.
+	Near balls of $B(a, \alpha)$ are defined to be balls with distance $\D$ from $B(a, \alpha)$.
 	Enumerate those as:
 	\begin{align*}
-		B_1(c, \alpha), B_2(c, \alpha), \ldots B_{N_D}(c, \alpha)
+		B_1(a, \alpha), B_2(c, \alpha), \ldots B_{N_D}(a, \alpha)
+	\end{align*}
+	Near balls partition the space
+	\begin{align*}
+		\curly{b \in \Q_p \mid |\val(a - b) - \alpha| \leq D}
 	\end{align*}
 \end{Definition}
 
@@ -313,12 +313,6 @@ The following construction is along the lines of lemma 7.5 of \cite{density}.
 	Then define its interval type to be the index of that near ball.
 	Otherwise define its interval type to be the coset of $c - c_U$ of $Q$.
 	Denote the space of all the possible branch types $\Bt$.
-	We have
-	\begin{align*}
-		|\Bt| = N_D + \text {number of cosets of $Q$}
-	\end{align*}
-	finite, depending only on $\Psi$, independent from $B$.
-	
 \end{Definition}
 
 \begin{Lemma} \label{interval}
@@ -485,6 +479,7 @@ Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
 	We have
 	
 	\begin{align*}
+		|\Bt| = N_D + \text {number of cosets of $Q$}
 		|\Pt| &\leq N \cdot I^2 \text { (the only component dependent on $N$)} \\
 		|\Ct| &= p^\gamma 
 	\end{align*}
