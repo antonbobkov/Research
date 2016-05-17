@@ -356,15 +356,18 @@ This shows that vc function is infinite in Shelah-Spencer random graphs.
 
 %Consider a formula which is a conjunction of positive basic formulas.
 
-Consider a case of a single basic formula $\phi(\vec x, \vec y)$.
+%Consider a case of a single basic formula $\phi(\vec x, \vec y)$.
 
+We bound the number of types of some finite collection of formulas $\Psi(\vec x, \vec y)$ over a parameter set $B$ of size $N$.
+
+Fix a formula $\phi$ from our collection.
 Suppose it defines a minimal chain extension over $\{x, y\}$. 
 Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon(\phi) = \epsilon_U(\phi)$.
 
-In general we have parameter set $A \subset \MM^{|x|}$, however without loss of generality we may work with
-a parameter set $A^{|x|}$, with $A \subset \MM$.
+In general we have parameter set $B \subset \MM^{|y|}$, however without loss of generality we may work with
+a parameter set $B^{|y|}$, with $B \subset \MM$.
 
-Let $S = \floor{\frac{K(\phi)Y(\phi)}{\epsilon(\phi)}}$ (dependent only on $\phi$).
+Let $S = |\vec y| \cdot \min \floor{\frac{K(\phi)}{\epsilon(\phi)}}$ (dependent only on $\phi$).
 
 For our proof to work we also need $A$ to be $S$-strong.
 We can achieve this by taking (the unique) $S$-strong closure of $A$.
