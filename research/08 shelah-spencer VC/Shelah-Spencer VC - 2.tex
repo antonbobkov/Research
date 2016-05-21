@@ -358,7 +358,8 @@ This shows that vc function is infinite in Shelah-Spencer random graphs.
 
 %Consider a case of a single basic formula $\phi(\vec x, \vec y)$.
 
-We bound the number of types of some finite collection of formulas $\Psi(\vec x, \vec y)$ over a parameter set $B$ of size $N$.
+We bound the number of types of some finite collection of formulas $\Psi(\vec x, \vec y) = \curly{\phi_i(\vec x, \vec y)}_{i\in I}$ over a parameter set $B$ of size $N$,
+where $\phi_i$ is a basic formula.
 
 Fix a formula $\phi$ from our collection.
 Suppose it defines a minimal chain extension over $\{x, y\}$. 
@@ -367,39 +368,31 @@ Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon
 In general we have parameter set $B \subset \MM^{|y|}$, however without loss of generality we may work with
 a parameter set $B^{|y|}$, with $B \subset \MM$.
 
-Let $S = |\vec y| \cdot \min \floor{\frac{K(\phi)}{\epsilon(\phi)}}$ (dependent only on $\phi$).
+Let $S = |\vec y| \cdot \max_{i \in I} \floor{\frac{K(\phi_i)}{\epsilon(\phi_i)}}$.
 
-For our proof to work we also need $A$ to be $S$-strong.
-We can achieve this by taking (the unique) $S$-strong closure of $A$.
-If size of $A$ is $N$ then the size of its closure is $O(N)$.	%elaborate
-So without loss of generality we can assume that $A$ is $S$-strong.
+For our proof to work we also need $B$ to be $S$-strong.
+We can achieve this by taking (the unique) $S$-strong closure of $B$.
+If size of $B$ is $N$ then the size of its closure is $O(N)$.	%elaborate
+So without loss of generality we can assume that $B$ is $S$-strong.
 
 \begin{Definition}
-	Define a $b$-trace of $\phi$ on $A$
+	A \emph{witness} of $a$ is a union of realizations of the existential formulas $\phi_i(a, b)$ for all $i, b$ so that the formula holds.
+\end{Definition}
+
+
+ % what about A \cap b???
+
+\begin{Definition}
+	For sets $C, A$ define the boundary of $C$ over $A$
 	\begin{align*}
-		A_b = \phi(A, b) = \curly{a \in A^{|x|} \mid \phi(a, b)}
+		\partial(C, A) = \curly{a \in A \mid \text{there is an edge between $a$ and element of $C - A$}}
 	\end{align*}
 \end{Definition}
 
-Let $\bar A = A \cup b$. % what about A \cap b???
-
 \begin{Definition}
-	For a set $C$ define the boundary of $C$ over $\bar A$
-	\begin{align*}
-		\partial(C, \bar A) = \curly{a \in \bar A \mid \text{there is an edge between $a$ and element of $C - \bar A$}}
-	\end{align*}
-\end{Definition}
-
-\begin{Definition}
-	A \emph{witness} of $\phi(a, b)$ is a realization of the existential formula together with ${a_i, b}$.
-\end{Definition}
-
-\begin{Definition}
-	For a trace $A_b = \{a_1, \ldots, a_I\}$ for each $\phi(a_i, b)$ pick a witness and then take a union of all those witnesses. Call this a witness of the trace $A_b$.	%uniqueness
-\end{Definition}
-
-\begin{Definition}
-	For each $b$ pick some $\bar M_b$ to be a witness of $A_b$. Define two quantities
+	For each $b$ pick some $\bar M_b$ to be a witness of $A_b$.
+	Let $\bar A = A \cup b$.
+	Define two quantities
 	\begin{itemize}
 		\item $\partial_b$ is the boundary $\partial(\bar M_b, \bar A)$
 		\item Call $f \colon G_1 \arr G_2$ a $\partial$-isomorphism if it is a graph isomorphism and $f$ and $f^{-1}$ are constant on $\bar A$.
