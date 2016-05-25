@@ -383,32 +383,34 @@ So without loss of generality we can assume that $B$ is $S$-strong.
  % what about A \cap b???
 
 \begin{Definition}
-	For sets $C, A$ define the boundary of $C$ over $A$
+	For sets $C, B$ define the boundary of $C$ over $B$
 	\begin{align*}
-		\partial(C, A) = \curly{a \in A \mid \text{there is an edge between $a$ and element of $C - A$}}
+		\partial(C, B) = \curly{b \in B \mid \text{there is an edge between $b$ and element of $C - B$}}
 	\end{align*}
 \end{Definition}
 
 \begin{Definition}
-	For each $b$ pick some $\bar M_b$ to be a witness of $A_b$.
-	Let $\bar A = A \cup b$.
+	For each $a$ pick some $\bar M_a$ to be its witness.
 	Define two quantities
 	\begin{itemize}
-		\item $\partial_b$ is the boundary $\partial(\bar M_b, \bar A)$
-		\item Call $f \colon G_1 \arr G_2$ a $\partial$-isomorphism if it is a graph isomorphism and $f$ and $f^{-1}$ are constant on $\bar A$.
-		Define $\II_b$ as the $\partial$-isomorphism class of the graph induced on vertices $(\bar M_b - \bar A) \cup \partial_b$. %depends on witness choice
+		\item $\partial_a$ is the boundary $\partial(\bar M_a, B \cup a)$
+		\item Suppose $G_1, G_2$ are some subgraphs of our model and $a_1 \subset G_1, a_2 \subset G_2$ finite tuples of vertices.
+		Call $f \colon (G_1, a_1) \arr (G_2, a_2)$ a $\partial$-isomorphism if it is a graph isomorphism,
+		$f$ and $f^{-1}$ are constant on $B$, and
+		$f(a_1) = a_2$.
+		\item Define $\II_a$ as the $\partial$-isomorphism class of $(\bar M_a, a)$.
 	\end{itemize}
 \end{Definition}
 
 \begin{Lemma} \label {bound_trace}
-	If $\II_{b_1} = \II_{b_2}$ then $A_{b_1} = A_{b_2}$.
+	If $\II_{a_1} = \II_{a_2}$ then $a_1, a_2$ have the same $\Psi$-type over $B$.
 \end{Lemma}
 
 \begin{proof}
-	Fix witnesses $\bar M_{b_1}, \bar M_{b_2}$.
-	Suppose we have $\phi(a, b_1)$ for some $a$.
-	Pick its witness $M_1 \subset \bar M_{b_1}$.
-	This gives us a witness $M_2$ via the $\partial$-isomorphism.
+	Fix a $\partial$-isomorphism $f \colon (\bar M_{a_1}, a_1) \arr (\bar M_{a_1}, a_2)$.
+	Suppose we have $\phi(a_1, b)$ for some $b \in B$.
+	Pick witness of this existential formula $M_1 \subset \bar M_{a_1}$.
+	Then $f(M_1)$ is a witness for  $\phi(a_2, b)$.
 \end{proof}
 
 Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_b$.
