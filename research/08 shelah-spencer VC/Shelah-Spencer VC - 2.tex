@@ -364,11 +364,13 @@ where $\phi_i$ is a basic formula.
 Fix a formula $\phi$ from our collection.
 Suppose it defines a minimal chain extension over $\{x, y\}$. 
 Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon(\phi) = \epsilon_U(\phi)$.
+Define dimension of that formula $D(\phi) = |\vec y| \frac{K(\phi)}{\epsilon(\phi)}$
+Define dimension of the entire collection as $D(\Psi) = \max_{i \in I} D(\phi_i)$
 
 In general we have parameter set $B \subset \MM^{|y|}$, however without loss of generality we may work with
 a parameter set $B^{|y|}$, with $B \subset \MM$.
 
-Let $S = |\vec y| \cdot \max_{i \in I} \floor{\frac{K(\phi_i)}{\epsilon(\phi_i)}}$.
+Let $S = \floor{D(\Psi)}$.
 
 For our proof to work we also need $B$ to be $S$-strong.
 We can achieve this by taking (the unique) $S$-strong closure of $B$.
@@ -413,12 +415,12 @@ So without loss of generality we can assume that $B$ is $S$-strong.
 	Then $f(M_1)$ is a witness for  $\phi(a_2, b)$.
 \end{proof}
 
-Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_b$.
+Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_a$.
 
 \begin{Theorem} \label{main_bound}
 	\begin{align*}
-		|\partial_b| &\leq K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}\\
-		|\bar M_b - \bar A| &\leq K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}
+		|\partial_a| &\leq D(\Psi) \\ 
+		|\bar M_b - \bar A| &\leq D(\Psi)
 	\end{align*}
 \end{Theorem}
 
@@ -748,7 +750,7 @@ This bounds the vc-density by $n$.
 	
 \bibitem{laskowski}
   Michael C. Laskowski, \textit{A simpler axiomatization of the Shelah-Spencer almost sure theories},
-  Israel J. Math. \textbf{161} (2007), 157–186. MR MR2}350161	
+  Israel J. Math. \textbf{161} (2007), 157–186. MR MR2350161	
 
 \end{thebibliography}
 	
