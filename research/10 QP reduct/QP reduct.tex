@@ -47,21 +47,21 @@
 
 
 
-\title{VC-density in an additive reduct of p-adic numbers}
+\title{VC-density in an additive reduct of $p$-adic numbers}
 \author{Anton Bobkov}
 \email{bobkov@math.ucla.edu}
 
 \begin{document}
 
 \begin{abstract}
-	\cite{density} computed a bound $2n+1$ for the VC function in p-adic numbers, but it is not known to be optimal.
-	I investigate a C-minimal additive reduct of p-adic numbers and using techniques of \cite{reduct} I compute an optimal bound $n$ for that structure.
+	Aschenbrenner et. al. computed a bound $2n+1$ for the VC density function in the field of $p$-adic numbers, but it is not known to be optimal.
+	I investigate a certain P-minimal additive reduct of the field of $p$-adic numbers and using a cell decomposition result of Leenknegt I compute an optimal bound $n$ for that structure.
 \end{abstract}
 
 
 \maketitle
 
-VC density was introduced in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
+VC density was introduced into model theory in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
 In a NIP theory we can define the VC function
 
 \begin{align*}
@@ -71,8 +71,8 @@ In a NIP theory we can define the VC function
 where $vc(n)$ measures complexity of the definable sets in an $n$-dimensional space.
 The simplest possible behavior is $\vc(n) = n$ for all $n$.
 \cite{density} computes an upper bound for this function to be $2n+1$, and it is not known whether it is optimal.
-This same bound would hold in any reduct of p-adic numbers, so one may hope that the simplified structure of the reduct would allow a better bound.
-In \cite{reduct}, Leenknegt provides a cell decomposition result for the C-minimal additive reduct of p-adic numbers.
+This same bound would hold in any reduct of $p$-adic numbers, so one may hope that the simplified structure of the reduct would allow a better bound.
+In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain P-minimal additive reduct of $p$-adic numbers.
 Using that I'm able to improve the bound for the VC function, showing that $\vc(n) = n$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,12 +84,12 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 \begin{Definition}
 	Let
 	\begin{align*}
-		Q_{n,m} = \curly{\bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) }
+		Q_{n,m} = \bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) 
 	\end{align*}
-	It is a multiplicative subgroup of $\Q_p^\times$ with finitely many cosets.
+	It is a subgroup of the multiplicative group of $\Q_p$safe home with finitely many cosets.
 \end{Definition}
 
-We work with the reduct of p-adic numbers in the language $\LL = \curly{\Q_p, \curly{R_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in \Q_p} }$,
+We work with the reduct of $p$-adic numbers in the language $\LL = \curly{\Q_p, \curly{R_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in \Q_p} }$,
 where $\bar c$ is a scalar multiplication by $c$, and $R_{n,m}$ is a predicate for cosets of $Q_{n,m}$
 \begin{align*}
 	R_{n,m} (a, b) \Leftrightarrow a \in b Q_{n,m}
