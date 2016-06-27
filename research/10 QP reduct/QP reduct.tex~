@@ -92,7 +92,7 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 We work with the reduct of $p$-adic numbers in the language $\LL = \curly{\Q_p, \curly{R_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in \Q_p} }$,
 where $\bar c$ is a scalar multiplication by $c$, and $R_{n,m}$ is a predicate for cosets of $Q_{n,m}$
 \begin{align*}
-	R_{n,m} (a, b) \Leftrightarrow a \in b Q_{n,m}
+    Q_{n,m} = \bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p) 
 \end{align*}
 
 

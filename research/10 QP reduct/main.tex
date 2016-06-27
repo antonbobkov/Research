@@ -1,0 +1,370 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jacobs Landscape Poster
+% LaTeX Template
+% Version 1.1 (14/06/14)
+%
+% Created by:
+% Computational Physics and Biophysics Group, Jacobs University
+% https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
+% 
+% Further modified by:
+% Nathaniel Johnston (nathaniel@njohnston.ca)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[final]{beamer}
+
+\usepackage[scale=1.24]{beamerposter} % Use the beamerposter package for laying out the poster
+
+\usepackage{../Research}
+
+\newcommand{\F}{\mathcal F}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\defn}{\underline}
+
+\DeclareMathOperator{\tval}{T-val}
+%\usetheme{confposter} % Use the confposter theme supplied with this template
+
+%% \setbeamercolor{block title}{fg=ngreen,bg=white} % Colors of the block titles
+%% \setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
+%% \setbeamercolor{block alerted title}{fg=white,bg=dblue!70} % Colors of the highlighted block titles
+%% \setbeamercolor{block alerted body}{fg=black,bg=dblue!10} % Colors of the body of highlighted blocks
+
+% Many more colors are available for use in beamerthemeconfposter.sty
+
+%-----------------------------------------------------------
+% Define the column widths and overall poster size
+% To set effective sepwid, onecolwid and twocolwid values, first choose how many columns you want and how much separation you want between columns
+% In this template, the separation width chosen is 0.024 of the paper width and a 4-column layout
+% onecolwid should therefore be (1-(# of columns+1)*sepwid)/# of columns e.g. (1-(4+1)*0.024)/4 = 0.22
+% Set twocolwid to be (2*onecolwid)+sepwid = 0.464
+% Set threecolwid to be (3*onecolwid)+2*sepwid = 0.708
+
+\newlength{\sepwid}
+\newlength{\onecolwid}
+\newlength{\twocolwid}
+\setlength{\paperwidth}{36in} % A0 width: 46.8in
+\setlength{\paperheight}{48in} % A0 height: 33.1in
+\setlength{\sepwid}{0.5in} % Separation width (white space) between columns
+\setlength{\onecolwid}{8in} % Width of one column
+\setlength{\twocolwid}{17in} % Width of two columns
+\setlength{\topmargin}{-0.5in} % Reduce the top margin size
+%-----------------------------------------------------------
+
+\usepackage{graphicx}  % Required for including images
+
+\usepackage{booktabs} % Top and bottom rules for tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\title{Unnecessarily Complicated Research Title} % Poster title
+
+\author{John Smith, James Smith and Jane Smith} % Author(s)
+
+\institute{Department and University Name} % Institution(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+\addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+
+\setlength{\belowcaptionskip}{2ex} % White space under figures
+\setlength\belowdisplayshortskip{2ex} % White space under equations
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of three major columns, the second of which is split into two columns twice - the [t] option aligns each column's content to the top
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+%% \begin{column}{\onecolwid} % The first column
+
+%% %----------------------------------------------------------------------------------------
+%% %	OBJECTIVES
+%% %----------------------------------------------------------------------------------------
+
+%% \begin{alertblock}{Objectives}
+
+%% Lorem ipsum dolor sit amet, consectetur, nunc tellus pulvinar tortor, commodo eleifend risus arcu sed odio:
+%% \begin{itemize}
+%% \item Mollis dignissim, magna augue tincidunt dolor, interdum vestibulum urna
+%% \item Sed aliquet luctus lectus, eget aliquet leo ullamcorper consequat. Vivamus eros sem, iaculis ut euismod non, sollicitudin vel orci.
+%% \item Nascetur ridiculus mus.  
+%% \item Euismod non erat. Nam ultricies pellentesque nunc, ultrices volutpat nisl ultrices a.
+%% \end{itemize}
+
+%% \end{alertblock}
+
+%% %----------------------------------------------------------------------------------------
+%% %	INTRODUCTION
+%% %----------------------------------------------------------------------------------------
+
+%% \begin{block}{Introduction}
+
+%% Lorem ipsum dolor \textbf{sit amet}, consectetur adipiscing elit. Sed commodo molestie porta. Sed ultrices scelerisque sapien ac commodo. Donec ut volutpat elit. Sed laoreet accumsan mattis. Integer sapien tellus, auctor ac blandit eget, sollicitudin vitae lorem. Praesent dictum tempor pulvinar. Suspendisse potenti. Sed tincidunt varius ipsum, et porta nulla suscipit et. Etiam congue bibendum felis, ac dictum augue cursus a. \textbf{Donec} magna eros, iaculis sit amet placerat quis, laoreet id est. In ut orci purus, interdum ornare nibh. Pellentesque pulvinar, nibh ac malesuada accumsan, urna nunc convallis tortor, ac vehicula nulla tellus eget nulla. Nullam lectus tortor, \textit{consequat tempor hendrerit} quis, vestibulum in diam. Maecenas sed diam augue.
+
+%% % This statement requires citation \cite{Smith:2012qr}.
+
+%% \end{block}
+
+%% %------------------------------------------------
+
+%% %% \begin{figure}
+%% %% \includegraphics[width=0.8\linewidth]{placeholder.jpg}
+%% %% \caption{Figure caption}
+%% %% \end{figure}
+
+%% %----------------------------------------------------------------------------------------
+
+%% \end{column} % End of the first column
+
+%% \begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
+
+    Consider a finite family of formulas $\Psi(x; y) = \curly{\phi_i(x; y)} $ in the language of a model $M$.
+    We define the \defn{shatter function} $\pi^M_\Psi \colon \N \arr \N$ of $\Psi$ as
+
+    \begin{align*}
+        \pi^M_\Psi(n) = \max \{ \text {number of $\Psi$-types over $B_0$ } \mid B_0 \subset M^{|y|} \text{ with } |B_0| = n\}.
+    \end{align*}
+    For a single formula $\phi$ we define $\vc(\phi)$ as VC-density of a one element collection $\curly{\phi}$.
+    Shatter function only depends on the theory of $M$.
+    The following theorem is an important result concerning dichotomy of shatter function growth.
+    \begin{Theorem} [Sauer-Shelah '72]
+        The shatter function either grows exponentially or is bounded by a polynomial.
+    \end{Theorem}
+    In fact, formula $\phi(x; y)$ is NIP precisely when its shatter function grows polynomially.
+    From now on we restrict our attention to NIP theories, that is all formulas will have shatter functions that grow polynomially.
+    The following definition captures the degree of polynomial growth.
+    \begin{Definition}
+        For a formula $\phi(x; y)$ in model $M$ let $\vc^M(\phi)$ be the infimum of all positive reals $r$ such that
+        \begin{align*}
+            \pi^M_\phi(n) = O(n^r)
+        \end{align*}
+        Call $\vc^M(\phi)$ the \defn{vc-density} of $\phi$.
+    \end{Definition}
+    This allows formula by formula analysis of the growth rate for the shatter function.
+    More generally, we look at bounds of VC-density for all the formulas in a given structure.
+    \begin{Definition}
+        Define \defn{vc-function} $\vc^M \colon \N \arr \N$ to be the largest $\vc$-density achieved by uniformly definable families in $M^n$.
+        \begin{align*}
+            \vc^M(n) = \sup \curly{ \vc^M(\phi) \mid \phi(x, y) \text{ with } |x| = n}
+        \end{align*}        
+    \end{Definition}
+    As before this only depends on the theory of $M$.
+    There is a simple lower bound $\vc^M(n) \geq n$.
+    More generally $\vc^M(n) \geq n\vc^M(1)$, and it is not known whether strict inequality can hold.
+
+    
+    A common example of a non-stable NIP structure are p-adic numbers $\Q_p$ in the language of fields.
+    Aschenbrenner et. al show that p-adic numbers have $\vc(n) \leq 2n - 1$.
+    My work improves that bound in a reduct of the full structure.
+
+In \cite{reduct}, Leenknegt analyzes the reduct of $p$-adic numbers to the language
+\begin{align*}
+    \LL_{aff}  = \curly{\curly{Q_{n,m}}_{n,m\in \N}, +, -, \curly{\bar c}_{c \in \Q_p}, | }
+\end{align*}
+where $\bar c$ is a scalar multiplication by $c$,
+$a | b$ stands for $\val a \leq \val b$,
+and $Q_{n,m}$ is a unary predicate
+\begin{align*}
+    Q_{n,m} = \bigcup_{k \in \Z} p^{kn} (1 + p^m\Z_p).
+\end{align*}
+One can check that the extra relation symbols are definable in the full structure.
+Moreover \cite{reduct} shows it is a $P$-minimal reduct,
+that is one-dimensional definable sets coincide with one-dimensional definable sets in the full structure.
+\begin{Theorem} [B.]
+    In $\LL_{aff}$, $\Q_p$ has $\vc(n) = n$.
+\end{Theorem}
+
+
+\cite{reduct} provides the following cell decomposition result
+\begin{Theorem}
+    Any formula $\phi(t, x)$  with $t$  singleton decomposes into the union of the following cells:
+    \begin{align*}
+            \curly{(t, x) \in K \times D \mid \val a_1(x) \square_1 \val (t - c(x)) \square_2 \val a_2(x), t - c(x) \in \lambda Q_{n,m} }
+    \end{align*}
+    where $D$ is a cell of a smaller dimension, $a_1, a_2, c$ are linear polynomials in  $x$, $\square$ is $<$ or no condition, $\lambda  \in\Q_p$.    
+\end{Theorem}
+
+This can be adapted into a quantifier elimination result
+\begin{Corollary}
+    Any formula $\phi(x; y)$ can be written as a boolean combination of formulas from the following two collections of formulas
+    \begin{align*}
+            &\Psi_1(x; y) = \curly{\val (p_i(x) - c_i(y)) < \val (p_j(x) - c_j(y))}_{i, j \in I} \\
+            &\Psi_2(x; y) = \curly{\val (p_i(x) - c_i(y)) \in \lambda_k Q_{n,m}}_{i \in I , k \in K}
+    \end{align*}
+    where $I, K$ are finite index sets,
+    $p_i$ is a linear polynomial in $x$ without a constant term,
+    $c_i$ is a linear polynomial in $y$, and
+    $\lambda_k \in \Q_p$.
+\end{Corollary}
+Letting $\Psi = \Psi_1 \cup \Psi_2$ it is easy to show that $\vc(\phi) \leq \vc(\Psi)$.
+Therefore to show that $\vc(n) = n$ it suffices to bound $\vc(\Psi) \leq |x|$ for any such collection.
+More precisely, we would like to show that if we have a parameter set $B$ of size $N$ then the number of $\Psi$-types over $B$ is $O(N^{|x|})$.
+
+\begin{Definition}
+	For $c \in \Q_p, \alpha \in \Z$ we define a ball 
+	\begin{align*}
+		B(c, \alpha) = \curly{c' \in \Q_p \mid \val \paren{c' - c} \leq \alpha}
+	\end{align*}
+\end{Definition}
+
+\begin{Definition}
+	Suppose we have a finite $T \subset \Q_p$.
+	We view it as a tree as follows.
+	Branches through the tree are elements of $T$.
+	With this tree we associate balls $B(t_1, \val(t_1 - t_2))$ for all $t_1, t_2 \in T$.
+	An interval is two balls $B(t_1, v_1) \supset B(t_2, v_2)$ with no balls in between.
+	An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
+	There are at most $2|T|$ different intervals and they partition the entire space.
+	
+	Fix a parameter set $B$ of size $N$.
+	
+	Consider a tree $T = \curly{c_i(b) \mid b \in B, i \in I}$
+	It has at most $O(N) = N \cdot |I|$ many intervals.
+\end{Definition}
+
+\begin{Definition}
+	Suppose $a \in \Q_p$ lies in an interval $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
+	Define \defn{T-valuation} $\tval(a) = \val(a - t_U)$.    
+\end{Definition}
+	
+
+\begin{Definition}
+    Suppose $a_1, a_2 \in \Q_p$ lie in our tree in the same interval $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
+    We say that $a_i$ is \defn{close to boundary} if $|\val(a_i - t_U) - \alpha_L| \leq m$ or $|\val(a_i - t_U) - \alpha_U| \leq m$.
+    Otherwise we say that it is \defn{far from boundary}.
+    Say that $a_1, a_2$ have the same \defn{interval type} if one of the following holds:
+    \begin{itemize}
+        \item Both $a_1, a_2$ are far from boundary and $a_1 - t_U, a_2 - t_U$ are in the same $Q_{n,m}$ coset.
+        \item Both $a_1, a_2$ are close to boundary and $\val(a_1 - a_2) > \tval(a_1) + m = \tval(a_2) + m$.
+    \end{itemize}      
+\end{Definition}
+
+\begin{Lemma}
+    For each interval there are at most $M = M(\Psi, Q_{n,m})$ many interval types with $M$ not dependent on $B$, or the interval.
+\end{Lemma}  
+
+\begin{Lemma}
+        Suppose we have $c_1, c_2 \in \Q_p^{|x|}$ and the following three conditions hold
+        \begin{itemize}
+            \item For all $i \in I$ $p_i(c_1)$ and $p_i(c_2)$ are in the same interval.
+            \item For all $i \in I$ $p_i(c_1)$ and $p_i(c_2)$ have the same interval type.
+            \item For all $i,j \in I$, $\tval(p_i(c_1)) > \tval(p_j(c_1))$ iff $\tval(p_i(c_2)) > \tval(p_j(c_2))$.
+        \end{itemize}
+	Then $c_1, c_2$ have the same $\Psi$-type over $B$
+\end{Lemma}
+
+This gives us an upper bound on the number of types - there are $I!$ many choices for order of $\tval$,
+$O(N)$ many choices for interval for each $p_i$,
+and $M$ many choices for interval type for each $p_i$,
+giving a total of
+
+\begin{align*}
+    O(N^I) \cdot M^I \cdot I! = O(N^I)    
+\end{align*}  
+	
+\end{column} % End of the second column
+
+%\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\twocolwid} % The third column
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Conclusion}
+
+Nunc tempus venenatis facilisis. \textbf{Curabitur suscipit} consequat eros non porttitor. Sed a massa dolor, id ornare enim. Fusce quis massa dictum tortor \textbf{tincidunt mattis}. Donec quam est, lobortis quis pretium at, laoreet scelerisque lacus. Nam quis odio enim, in molestie libero. Vivamus cursus mi at \textit{nulla elementum sollicitudin}.
+
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Additional Information}
+
+Maecenas ultricies feugiat velit non mattis. Fusce tempus arcu id ligula varius dictum. 
+\begin{itemize}
+\item Curabitur pellentesque dignissim
+\item Eu facilisis est tempus quis
+\item Duis porta consequat lorem
+\end{itemize}
+
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{block}{References}
+
+\nocite{*} % Insert publications even if they are not cited in the poster
+\small{\bibliographystyle{unsrt}
+\bibliography{sample}\vspace{0.75in}}
+
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
+
+\begin{block}{Acknowledgements}
+
+\small{\rmfamily{Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.}} \\
+
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{block alerted title}{fg=black,bg=norange} % Change the alert block title colors
+\setbeamercolor{block alerted body}{fg=black,bg=white} % Change the alert block body colors
+
+\begin{alertblock}{Contact Information}
+
+\begin{itemize}
+\item Web: \href{http://www.university.edu/smithlab}{http://www.university.edu/smithlab}
+\item Email: \href{mailto:john@smith.com}{john@smith.com}
+\item Phone: +1 (000) 111 1111
+\end{itemize}
+
+\end{alertblock}
+
+%% \begin{center}
+%% \begin{tabular}{ccc}
+%% \includegraphics[width=0.4\linewidth]{logo.png} & \hfill & \includegraphics[width=0.4\linewidth]{logo.png}
+%% \end{tabular}
+%% \end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of the third column
+
+\end{columns} % End of all the columns in the poster
+
+\end{frame} % End of the enclosing frame
+
+\end{document}
