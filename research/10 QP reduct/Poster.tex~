@@ -4,9 +4,11 @@
 
 \documentclass[final]{beamer}
 
-\usepackage[scale=1]{beamerposter} % Use the beamerposter package for laying out the poster
+%\usepackage[orientation=landscape,size=a1,scale=0.65,debug]{beamerposter} % Use the beamerposter package for laying out the poster
+\usepackage[scale=0.9]{beamerposter} % Use the beamerposter package for laying out the poster
 
 \usepackage{../Research}
+\usepackage{color}
 
 \newcommand{\F}{\mathcal F}
 \newcommand{\curly}[1]{\left\{ #1 \right\}}
@@ -14,7 +16,7 @@
 \newcommand{\defn}{\underline}
 
 \DeclareMathOperator{\Sg}{Sg}
-\DeclareMathOperator{\Bt}{Bt}
+\DeclareMathOperator{\Bt}{It}
 \DeclareMathOperator{\Pt}{Pt}
 \DeclareMathOperator{\Ct}{Ct}
 \DeclareMathOperator{\vecspan}{span}
@@ -40,9 +42,14 @@
 
 \newlength{\sepwid}
 \newlength{\onecolwid}
+%\setlength{\paperwidth}{54in} % A0 width: 46.8in
 \setlength{\paperwidth}{48in} % A0 width: 46.8in
-\setlength{\paperheight}{36in} % A0 height: 33.1in
+\setlength{\paperheight}{32in} % A0 height: 33.1in
+%\setlength{\paperheight}{36in} % A0 height: 33.1in
+%% \setlength{\paperwidth}{36in} % A0 width: 46.8in
+%% \setlength{\paperheight}{24in} % A0 height: 33.1in
 
+%\setlength{\sepwid}{0in} % Separation width (white space) between columns
 \setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
 \setlength{\onecolwid}{0.3\paperwidth} % Width of one column
 %% \setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
@@ -71,7 +78,7 @@
 \addtobeamertemplate{alertblock alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) alertblocks
 
 \setlength{\belowcaptionskip}{2ex} % White space under figures
-\setlength\belowdisplayshortskip{2ex} % White space under equations
+\setlength{\belowdisplayshortskip}{2ex} % White space under equations
 
 \begin{frame}[t] % The whole poster is enclosed in one beamer frame
 
@@ -82,25 +89,25 @@
 \begin{column}{\onecolwid} % The first column
 
     \begin{block}{Abstract}
-            Aschenbrenner et. al. computed a bound $\vc(n) = 2n - 1$ for the vc-density function in the field of $p$-adic numbers,
+            Aschenbrenner et. al. computed a bound $\vc(n) \leq 2n - 1$ for the vc-density function in the field of $p$-adic numbers,
             but it is not known to be optimal.
             I investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
-            using a cell decomposition result of Leenknegt I compute an optimal bound $\vc(n) = n$ for that structure.
+            compute an optimal bound $\vc(n) = n$ for it using a cell decomposition result of Leenknegt.
     \end{block}
     \begin{block}{VC-density}
-	Let $M$ be a model and $\Psi(x; y) = \curly{\phi_i(x; y)}$ a finite collection of formulas in $L(M)$.
+	Let $M$ be a structure and $\Psi(x; y) = \curly{\phi_i(x; y)}$ a finite collection of formulas in $L(M)$.
         Define the \defn{shatter function} $\pi^M_\Psi \colon \N \arr \N$ of $\Psi$ as
         \begin{align*}
-            \pi^M_\Psi(n) = \max &\{ \text {number of $\Psi$-types over $B$ }  \\
-            &\mid B \subset M^{|y|} \text{ with } |B| = n\}.
+            \pi^M_\Psi(n) = \max \{ \text {number of $\Psi$-types over $B$ }
+            \mid B \subset M^{|y|} \text{ with } |B| = n\}.
         \end{align*}
         Define the shatter function of a single formula $\phi$ as the shatter function of a one element collection $\curly{\phi}$.
-        Shatter function only depends on the theory of $M$.
-        The following theorem is an important result concerning dichotomy of shatter function growth.
+        The shatter function only depends on the theory of $M$.
+        The following theorem is an important result concerning a dichotomy for the growth of the shatter function.
         \begin{alertblock}{Theorem (Sauer-Shelah '72)}
             The shatter function either grows exponentially or is bounded by a polynomial.
         \end{alertblock}
-        In fact, formula $\phi(x; y)$ is NIP precisely when its shatter function grows polynomially.
+        In fact, a formula $\phi(x; y)$ is NIP precisely when its shatter function grows polynomially.
         From now on work with NIP theories, that is all formulas will have shatter functions that grow polynomially.
         The following definition captures the degree of polynomial growth.
 
@@ -109,11 +116,12 @@
                 \pi^M_\Psi(n) = O(n^r)
             \end{align*}
             Call $\vc^M(\Psi)$ the \defn{vc-density} of $\Psi$.
-        As before for a single formula $\phi$ define $\vc(\phi)$ as VC-density of a one element collection $\curly{\phi}$.
+        As before for a single formula $\phi$ define $\vc(\phi)$ as the vc-density of a one element collection $\curly{\phi}$.
         This allows formula by formula analysis of the growth rate for the shatter function.
-        More generally, look at bounds of VC-density for all the formulas in a given structure.
+        More generally, we look at the bounds of vc-density for all the formulas in a given structure.
 
-            Define \defn{vc-function} $\vc^M \colon \N \arr \N$ to be the largest $\vc$-density achieved by formulas defining subsets of $M^n$.
+        Define the \defn{vc-function} $\vc^M \colon \N \arr \N$ to be the largest $\vc$-density achieved by formulas
+        that define subsets of $M^n$.
             \begin{align*}
                 \vc^M(n) = \sup \curly{ \vc^M(\phi) \mid \phi(x, y) \text{ with } |x| = n}
             \end{align*}        
@@ -124,7 +132,7 @@
     \end{block}
 
     \begin{block}{Application to $p$-adic numbers}
-        A common example of a non-stable NIP structure is $p$-adic numbers $\Q_p$ in the language of fields.
+        A common example of a non-stable NIP structure is the field $\Q_p$ of $p$-adic numbers.
 	In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that this structure has $\vc(n) \leq 2n - 1$.
         My work improves that bound in a reduct of the full structure.
         In \cite{reduct}, Leenknegt analyzes the reduct of $p$-adic numbers to the language
@@ -137,8 +145,9 @@
         \begin{align*}
             Q_{m,n} = \bigcup_{k \in \Z} p^{km} (1 + p^n\Z_p).
         \end{align*}
+	Note that $Q_{m,n}$ is a subgroup of the multiplicative group of $\Q_p$ with finitely many cosets.
         One can check that the extra relation symbols are definable in the full structure.
-        Moreover \cite{reduct} shows it is a $P$-minimal reduct,
+        Moreover, \cite{reduct} shows that $(\Q_p, \LL_{aff})$ is a $P$-minimal reduct,
         that is one-dimensional definable sets coincide with one-dimensional definable sets in the full structure.
         \begin{alertblock} {Theorem (B.)}
             $(\Q_p, \LL_{aff})$ has $\vc(n) = n$.
@@ -151,21 +160,22 @@
 
 \begin{column}{\onecolwid}
      
-    %% \cite{reduct} provides the following cell decomposition result
-    %% \begin{Theorem}
-    %%     Any formula $\phi(t, x)$  with $t$  singleton decomposes into the union of the following cells:
-    %%     \begin{align*}
-    %%             \curly{(t, x) \in K \times D \mid \vval a_1(x) \square_1 \vval (t - c(x)) \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
-    %%     \end{align*}
-    %%     where $D$ is a cell of a smaller dimension,
-    %%     $a_1, a_2, c$ are linear polynomials in  $x$,
-    %%     $\square$ is $<$ or no condition,
-    %%     $\lambda  \in\Q_p$.    
-    %% \end{Theorem}
     \begin{block}{Proof outline}
-        \cite{reduct} gives a cell decomposition result that can be used to eliminate quantifiers
+        \cite{reduct} provides the following cell decomposition result
         \begin{alertblock} {Theorem}
-            Any formula $\phi(x; y)$ can be written as a boolean combination of formulas from the following collection
+            Any formula $\phi(t, x)$  with $t$  singleton decomposes into the union of the following cells:
+            \begin{align*}
+                    \curly{(t, x) \in K \times D \mid \vval a_1(x) \square_1 \vval (t - c(x)) \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
+            \end{align*}
+            where $D$ is a cell of a smaller dimension,
+            $a_1, a_2, c$ are linear polynomials in  $x$,
+            $\square$ is $<$ or no condition,
+            $\lambda  \in\Q_p$.    
+        \end{alertblock}
+        This can be used to eliminate quantifiers in the following way:
+        % There is a cell decomposition result in \cite{reduct} that can be used to eliminate quantifiers
+        \begin{alertblock} {Corollary}%{Theorem}
+            Any formula $\phi(x; y)$ in $(\Q_p, \LL_{aff})$ can be written as a boolean combination of formulas from the following collection
             \begin{align*}
                     \Psi(x; y) = &\curly{\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))}_{i, j \in I} \cup \\
                     &\curly{p_i(x) - c_i(y) \in \lambda_k Q_{m,n}}_{i \in I , k \in K}
@@ -190,6 +200,7 @@
                 An \defn{interval} is two balls $B(t_1, v_1) \supset B(t_2, v_2)$ with no balls in between.
                 An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
                 There are at most $2|T| = 2 N |I| = O(N)$ different intervals and they partition $\Q_p$.
+                (See {\color{blue}Figure 1}).
 
                 Suppose $a \in \Q_p$ lies in an interval $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
                 Define \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t_U)$.    
@@ -198,15 +209,13 @@
             Suppose $a_1, a_2 \in \Q_p$ lie in our tree in the same interval $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
             We say that $a_i$ is \defn{close to boundary} if $|\tval(a_i) - \alpha_L| \leq m$ or $|\tval(a_i) - \alpha_U| \leq m$.
             Otherwise we say that it is \defn{far from boundary}.
-            We say $a_1, a_2$ have the same \defn{interval type} if one of the following holds:
+            We say $a_1, a_2$ have the same \defn{interval type} if one of the following holds (see {\color{blue}Figure 2}):
             \begin{itemize}
                 \item Both $a_1, a_2$ are far from boundary and $a_1 - t_U, a_2 - t_U$ are in the same $Q_{m,n}$ coset.
                 \item Both $a_1, a_2$ are close to boundary and $\vval(a_1 - a_2) > \tval(a_1) + n = \tval(a_2) + n$.
             \end{itemize}      
 
-        \begin{alertblock}{Lemma}
-                For each interval there are at most $M = M(\Psi, Q_{m,n})$ many interval types (with $M$ not dependent on $B$, or the interval).
-        \end{alertblock}
+        One can check that for each interval there are at most $K = K(\Psi, Q_{m,n})$ many interval types (with $K$ not dependent on $B$ or the interval).
 
         \begin{alertblock}{Lemma}
                 Suppose $c_1, c_2 \in \Q_p^{|x|}$ satisfy the follwing three conditions 
@@ -224,21 +233,21 @@
 
 \begin{column}{\onecolwid}
 
-    This gives us an upper bound on the number of types - there are $|I|!$ many choices for order of $\tval$,
-    $O(N)$ many choices for interval for each $p_i$,
-    and $M$ many choices for interval type for each $p_i$,
-    giving a total of $O(N^{|I|}) \cdot M^{|I|} \cdot |I|! = O(N^{|I|})$ many types.
-    This gives $\vc(\Psi) \leq |I|$.
-    The biggest contribution to this bound is choice among the $O(N)$ many intervals for each $p_i$ with $i \in I$.
+    This gives us an upper bound on the number of types - there are at most $|I|!$ many choices for the order of $\tval$,
+    $O(N)$ many choices for the interval for each $p_i$,
+    and $K$ many choices for the interval type for each $p_i$,
+    giving a total of $O(N^{|I|}) \cdot K^{|I|} \cdot |I|! = O(N^{|I|})$ many types (see {\color{blue}Figure 3}).
+    This implies $\vc(\Psi) \leq |I|$.
+    The biggest contribution to this bound are the choices among the $O(N)$ many intervals for each $p_i$ with $i \in I$.
     Are all of those choices realized?
-    Intuition is that there are $|x|$ many variables and $|I|$ many equations,
-    so once we choose an interval for $|x|$ many $p_i$, the interval for the rest should be determined.
+    Intuitively there are $|x|$ many variables and $|I|$ many equations,
+    so once we choose an interval for $|x|$ many $p_i$'s, the interval for the rest should be determined.
     This would give the required $\vc(\Psi) \leq |x|$ bound.
     The remainder of the poster is a more formal outline of this idea.
 
     \begin{block}{Reduction from $|I|$ to $|x|$}
         For $c \in \Q_p$ and $\alpha, \beta \in \Z$ define $c \midr [\alpha, \beta] \in \paren{\Z/p\Z}^{\beta - \alpha + 1}$
-        to be the record of coefficients of $c$ for the valuations between $\alpha, \beta$.
+        to be the record of the coefficients of $c$ for the valuations between $\alpha, \beta$.
 	More precisely write $c$ in its power series form
 	\begin{align*}
 		c = \sum_{\gamma \in \Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
@@ -258,24 +267,24 @@
             for some $\gamma \in \N$.
             Moreover $\gamma$ can be chosen independently from $J, j, \vec x, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
         \end{alertblock}          
-        Let $f: \Q_p^{|x|} \arr \Q_p^I$ with $f(\bar c) = (p_i(\bar c))_{i \in I}$.
+        Let $f: \Q_p^{|x|} \arr \Q_p^I$ with $f(c) = (p_i(c))_{i \in I}$.
         Define the segment space $\Sg$ to be the image of $f$.
         Given a tuple $(a_i)_{i\in I}$ in the segment space,
         look at the corresponding floors $\curly{F(a_i)}_{i\in I}$ and T-valuations $\curly{\tval(a_i)}_{i\in I}$.
-        Partition the segment space by order types of $\{F(a_i)\}$ and $\curly{\tval(a_i)}$ (as subsets of $\Z$).
+        Partition the segment space by the order types of $\{F(a_i)\}$ and $\curly{\tval(a_i)}$ (as subsets of $\Z$).
         Work in a fixed partition $\Sg'$.
         After relabeling we may assume that $F(a_1) \geq F(a_2) \geq \ldots$.
         Consider the (relabeled) sequence of vectors $\vec p_1, \vec p_2, \ldots, \vec p_I$.
         There is a unique subset $J \subset I$ such that all vectors with indices in $J$ are linearly independent,
-        and all vectors with indices outside of $J$ are a linear combination of preceding vectors.
+        and all vectors with indices outside of $J$ are a linear combination of the preceding vectors.
         For any index $i \in I$ we call it independent if $i \in J$ and we call it dependent otherwise.
 
         Now, we define the following function
                 $g_{\Sg'}: \Sg' \arr \Bt^I \times \Pt^J \times \Ct^{I - J}$.
         Let $a = (a_i)_{i\in I} \in \Sg'$.
-        To define $g_{\Sg'}(a)$ we need to specify where it maps $\bar a$ in each individual component of the product.
+        To define $g_{\Sg'}(a)$ we need to specify where it maps $a$ in each individual component of the product.
 
-        For all $a_i$ record its interval type $\in \Bt$, giving the first component.
+        For all $a_i$ record its interval type, giving the first component.
 
         For $a_j$ with $j \in J$, record the interval of $a_j$, giving the second component.
 
@@ -286,8 +295,8 @@
 
         Combine $g_{\Sg'}$ for all the partitions to get a function $g: \Sg \arr \Bt^I \times \Pt^J \times \Ct^{I - J}$.
         \begin{alertblock}{Lemma}
-            Suppose we have $c, c' \in \Q_p^{|x|}$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
-            Then $c, c'$ have the same $\Psi$-type over $B$.
+            Suppose we have $c_1, c_2 \in \Q_p^{|x|}$ such that $f(c_1), f(c_2)$ are in the same partition and $g(f(c_1)) = g(f(c_2))$.
+            Then $c_1, c_2$ have the same $\Psi$-type over $B$.
         \end{alertblock}          
         To get the desired bound one checks that the number of partitions multiplied by the size of the range of $g$ is $O(N^{|x|})$.
     \end{block}

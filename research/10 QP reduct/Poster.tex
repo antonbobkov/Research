@@ -8,6 +8,7 @@
 \usepackage[scale=0.9]{beamerposter} % Use the beamerposter package for laying out the poster
 
 \usepackage{../Research}
+\usepackage{color}
 
 \newcommand{\F}{\mathcal F}
 \newcommand{\curly}[1]{\left\{ #1 \right\}}
@@ -115,9 +116,9 @@
                 \pi^M_\Psi(n) = O(n^r)
             \end{align*}
             Call $\vc^M(\Psi)$ the \defn{vc-density} of $\Psi$.
-        As before for a single formula $\phi$ define $\vc(\phi)$ as the VC-density of a one element collection $\curly{\phi}$.
+        As before for a single formula $\phi$ define $\vc(\phi)$ as the vc-density of a one element collection $\curly{\phi}$.
         This allows formula by formula analysis of the growth rate for the shatter function.
-        More generally, we look at the bounds of VC-density for all the formulas in a given structure.
+        More generally, we look at the bounds of vc-density for all the formulas in a given structure.
 
         Define the \defn{vc-function} $\vc^M \colon \N \arr \N$ to be the largest $\vc$-density achieved by formulas
         that define subsets of $M^n$.
@@ -159,20 +160,21 @@
 
 \begin{column}{\onecolwid}
      
-    %% \cite{reduct} provides the following cell decomposition result
-    %% \begin{Theorem}
-    %%     Any formula $\phi(t, x)$  with $t$  singleton decomposes into the union of the following cells:
-    %%     \begin{align*}
-    %%             \curly{(t, x) \in K \times D \mid \vval a_1(x) \square_1 \vval (t - c(x)) \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
-    %%     \end{align*}
-    %%     where $D$ is a cell of a smaller dimension,
-    %%     $a_1, a_2, c$ are linear polynomials in  $x$,
-    %%     $\square$ is $<$ or no condition,
-    %%     $\lambda  \in\Q_p$.    
-    %% \end{Theorem}
     \begin{block}{Proof outline}
-        There is a cell decomposition result in \cite{reduct} that can be used to eliminate quantifiers
-        \begin{alertblock} {Theorem}
+        In \cite{reduct}, Leenknegt provides the following cell decomposition result
+        \begin{alertblock} {Theorem (Leenknegt '12)}
+            Any formula $\phi(t, x)$ in $(\Q_p, \LL_{aff})$ with $t$ singleton decomposes into the union of the following cells:
+            \begin{align*}
+                    \curly{(t, x) \in K \times D \mid \vval a_1(x) \ \square_1 \vval (t - c(x)) \ \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
+            \end{align*}
+            where $D$ is a cell of a smaller dimension,
+            $a_1(x), a_2(x), c(x)$ are linear polynomials,
+            $\square$ is $<$ or no condition, and
+            $\lambda  \in\Q_p$.    
+        \end{alertblock}
+        This can be used to eliminate quantifiers in the following way:
+        % There is a cell decomposition result in \cite{reduct} that can be used to eliminate quantifiers
+        \begin{alertblock} {Corollary}%{Theorem}
             Any formula $\phi(x; y)$ in $(\Q_p, \LL_{aff})$ can be written as a boolean combination of formulas from the following collection
             \begin{align*}
                     \Psi(x; y) = &\curly{\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))}_{i, j \in I} \cup \\
@@ -198,7 +200,7 @@
                 An \defn{interval} is two balls $B(t_1, v_1) \supset B(t_2, v_2)$ with no balls in between.
                 An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
                 There are at most $2|T| = 2 N |I| = O(N)$ different intervals and they partition $\Q_p$.
-                (See Figure 1).
+                (See {\color{blue}Figure 1}).
 
                 Suppose $a \in \Q_p$ lies in an interval $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
                 Define \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t_U)$.    
@@ -207,7 +209,7 @@
             Suppose $a_1, a_2 \in \Q_p$ lie in our tree in the same interval $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
             We say that $a_i$ is \defn{close to boundary} if $|\tval(a_i) - \alpha_L| \leq m$ or $|\tval(a_i) - \alpha_U| \leq m$.
             Otherwise we say that it is \defn{far from boundary}.
-            We say $a_1, a_2$ have the same \defn{interval type} if one of the following holds (see Figure 2):
+            We say $a_1, a_2$ have the same \defn{interval type} if one of the following holds (see {\color{blue}Figure 2}):
             \begin{itemize}
                 \item Both $a_1, a_2$ are far from boundary and $a_1 - t_U, a_2 - t_U$ are in the same $Q_{m,n}$ coset.
                 \item Both $a_1, a_2$ are close to boundary and $\vval(a_1 - a_2) > \tval(a_1) + n = \tval(a_2) + n$.
@@ -234,7 +236,7 @@
     This gives us an upper bound on the number of types - there are at most $|I|!$ many choices for the order of $\tval$,
     $O(N)$ many choices for the interval for each $p_i$,
     and $K$ many choices for the interval type for each $p_i$,
-    giving a total of $O(N^{|I|}) \cdot K^{|I|} \cdot |I|! = O(N^{|I|})$ many types (see Figure 3).
+    giving a total of $O(N^{|I|}) \cdot K^{|I|} \cdot |I|! = O(N^{|I|})$ many types (see {\color{blue}Figure 3}).
     This implies $\vc(\Psi) \leq |I|$.
     The biggest contribution to this bound are the choices among the $O(N)$ many intervals for each $p_i$ with $i \in I$.
     Are all of those choices realized?
