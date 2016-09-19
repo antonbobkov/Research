@@ -1,4 +1,10 @@
 \newcommand{\Contradiction}{\ensuremath{\downlsquigarrow}}
+%\newcommand{\Contradiction}{\ensuremath{\Rightarrow\Leftarrow}}
+%\newcommand{\Contradiction}{\ensuremath{\bot}}
+%\newcommand{\Contradiction}{\ensuremath{\nleftrightarrow}}
+%\newcommand{\Contradiction}{\textreferencemark}
+%\newcommand{\Contradiction}{\ensuremath{\rightleftarrows}}
+%\newcommand{\Contradiction}{\blitza}
 
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
@@ -30,6 +36,53 @@
 \newcommand{\Gl}[2]{\mbox{GL}_{#1}(#2)}
 \newcommand{\GL}{\Gl}
 
+\newcommand{\chs}[2]
+{
+	\left (
+		\begin{array}{c}
+		#1 \\
+		#2
+		\end{array}
+	\right)
+}
+
+\newcommand{\img}[1]
+{
+	\begin{center}
+	\includegraphics[scale=1.75]{#1}
+	\end{center}
+}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4
+		\end{array}
+	\right.
+}
+
+\newcommand{\twopartdefotw}[3]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{otherwise}
+		\end{array}
+	\right.
+}
+
+\newcommand{\threepartdef}[6]
+{
+	\left\{
+		\begin{array}{lll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{if } #6
+		\end{array}
+	\right.
+}
 
 
 \newcommand{\LL}{\mathcal L}

@@ -45,6 +45,9 @@
 \DeclareMathOperator{\Ct}{Ct}
 \DeclareMathOperator{\vecspan}{span}
 \DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\vval}{val}
+
+\newcommand{\defn}{\underline}
 
 
 
@@ -84,21 +87,25 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Throughout this section we work with a collection $\F$ of subsets of $X$.
-We call it a \defn{set system} $(X, \F)$.
+
 
 \begin{Definition}
+  Throughout this section we work with a collection $\F$ of subsets of $X$.
   \begin{itemize}
-    \item $A \cap \F = \curly{A \cap F}_{F\in \F}$.
+    \item Call it a \defn{set system} $(X, \F)$.
+    \item Define intersection $A \cap \F = \curly{A \cap F}_{F\in \F}$.
     \item For $A \subset X$ we say that $\F$ \defn{shatters} $A$ if $A \cap \F = \PP(A)$.
   \end{itemize}    
 \end{Definition}  
 
 \begin{Definition}
   We say $(X, \F)$ has VC-dimension $n$ if the largest set it shatters is of size $n$.
-  If it can shatter arbitrarily large set we say that it has infinite VC-dimension.
+  If it can shatter arbitrarily large sets we say that it has infinite VC-dimension.
 \end{Definition}  
 
+This distinguishes between nice set systems of finite VC-dimension which tend to have good combinatorial properties and bad set systems with infinite VC dimension.
+
+Another natural combinatorial notion is of a dual system:
 \begin{Definition}
   For $a \in X$ define $X_a = \curly{F \in \F \mid a \in F}$.
   Let $X^* = \curly{X_a}_{a \in X}$.
@@ -106,9 +113,12 @@ We call it a \defn{set system} $(X, \F)$.
   VC-dimension of a dual system is referred to as \defn{dual VC-dimension}.
 \end{Definition}  
 
-
 \begin{Lemma}
     A set system has finite VC-dimension if and only if its dual has finite VC-dimension.
+    More precisely
+    \begin{align*}
+      
+    \end{align*}
 \end{Lemma}  
 
 \begin{Definition}
@@ -149,18 +159,30 @@ We now adapt VC-dimension and VC-density to model theoretic context.
 
 \begin{Definition}
   Work in a structure $M$.
-  Let $\phi(x, y) \in \LL(M)$, $A \subseteq M^{|x|}$ and $B \subseteq M^{|y|}$.
+  Let $\phi(x, y) \in \LL(M)$.
+
   \begin{itemize}
-          \item Let $\phi(A, b) = \{a \in A \mid \phi(a, b)\} \subseteq A$.
-          \item Let $\phi(A, B) = \{\phi(A, b) \mid b \in B\} \subseteq \PP(A)$.
-          \item Let $\F_\phi = \phi(M, M)$.
-          \item Define \defn{VC-dimension} of $\phi$ to be dual VC-dimension of $\F_\phi$.
-	  \item Define \defn{VC-density} of $\phi$, $\vc(\phi)$ to be dual VC-density of $\F_\phi$.
+  \item For $b \in M$ let $\phi(M, b) = \{a \in M^{|x|} \mid \phi(a, b)\} \subseteq M^{|x|}$.
   \end{itemize}
+
+  Now fix a finite collection of formulas $\Psi(x, y) = \curly{\phi_i(x, y)}$.
+
+  \begin{itemize}
+  \item Let $\Psi(M, M)= \{\phi_i(M, b) \mid \phi_i \in \Psi, b \in M^{|y|}\} \subseteq \PP(M^{|x|})$.
+  \item Let $\F_\Psi = \Psi(M, M)$ forming a set system $(M^{|x|}, \F_\Psi)$.
+  \item Define \defn{VC-dimension} of $\Psi$ to be the dual VC-dimension of $(M^{|x|}, \F_\Psi)$.
+  \item Define \defn{VC-density} of $\Psi$, $\vc(\Psi)$ to be the dual VC-density of $(M^{|x|}, \F_\Psi)$.
+  \end{itemize}
+
+  We will also refer to the VC-density and VC-dimension of a single formula $\phi$
+  viewing it as a one element collection $\curly{\phi}$.
 \end{Definition}
 
+Counting atoms of a Boolean algebra in model theoretic setting corresponds to counting types,
+so it is instructive to rewrite shatter function in terms of number of types.
+
 One can check that VC-dimension and VC-density of a formula are elementary notions,
-so they only depend on the first-order theory.
+so they only depend on the first-order theory of the structure.
 
 \begin{Lemma}
     $\phi$ is NIP if and only if it has finite VC-dimension. 
@@ -197,7 +219,7 @@ $P$-adic numbers are often studied in the language of Macintyre $\LLM$% = \curly
 which is a language of fields together with unary predicates $\curly{P_n}_{n \in \N}$ interpreted by
 
 \begin{align*}
-  P_n x \leftrightarrow \exist y \; y^n = x
+  P_n x \leftrightarrow \exists y \; y^n = x
 \end{align*}  
 
 Note that $P_n$ is a multiplicative subgroup of $\Q_p$ with finitely many cosets.

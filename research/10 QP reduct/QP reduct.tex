@@ -45,6 +45,9 @@
 \DeclareMathOperator{\Ct}{Ct}
 \DeclareMathOperator{\vecspan}{span}
 \DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\vval}{val}
+
+\newcommand{\defn}{\underline}
 
 
 
@@ -84,33 +87,42 @@ Using that I'm able to improve the bound for the VC function, showing that $\vc(
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Throughout this section we work with a collection $\F$ of subsets of $X$.
-We call it a \defn{set system} $(X, \F)$.
+
 
 \begin{Definition}
+  Throughout this section we work with a collection $\F$ of subsets of $X$.
   \begin{itemize}
-    \item $A \cap \F = \curly{A \cap F}_{F\in \F}$.
+    \item Call it a \defn{set system} $(X, \F)$.
+    \item Define intersection $A \cap \F = \curly{A \cap F}_{F\in \F}$.
     \item For $A \subset X$ we say that $\F$ \defn{shatters} $A$ if $A \cap \F = \PP(A)$.
   \end{itemize}    
 \end{Definition}  
 
 \begin{Definition}
   We say $(X, \F)$ has VC-dimension $n$ if the largest set it shatters is of size $n$.
-  If it can shatter arbitrarily large set we say that it has infinite VC-dimension.
+  If it can shatter arbitrarily large sets we say that it has infinite VC-dimension.
+  Denote it by $\VC(\F)$.
 \end{Definition}  
 
+This distinguishes between nice set systems of finite VC-dimension which tend to have good combinatorial properties and bad set systems with infinite VC dimension.
+
+Another natural combinatorial notion is of a dual system:
 \begin{Definition}
   For $a \in X$ define $X_a = \curly{F \in \F \mid a \in F}$.
   Let $X^* = \curly{X_a}_{a \in X}$.
   We define $(\F, X^*)$ as the \defn{dual system} of $(X, \F)$.
-  VC-dimension of a dual system is referred to as \defn{dual VC-dimension}.
+  VC-dimension of a dual system is referred to as \defn{dual VC-dimension} and denoted by $\VC^*(\F)$.
 \end{Definition}  
 
-
-\begin{Lemma}
+\begin{Lemma}[Lemma 2.5 in \cite{density}]
     A set system has finite VC-dimension if and only if its dual has finite VC-dimension.
-\end{Lemma}  
+    More precisely
+    \begin{align*}
+      \VC^*(\F) \leq 2^{1+\VC(\F)}
+    \end{align*}
+\end{Lemma}
 
+For a more refined notion we look at traces of our family on finite sets:
 \begin{Definition}
     Suppose we have a collection $\F$ of subsets of $X$.
     We define a \defn{shatter function} $\pi_\F(n)$ and \defn{dual shatter function} $\pi^*_\F(n)$
@@ -122,14 +134,13 @@ We call it a \defn{set system} $(X, \F)$.
 \end{Definition}  
 
 A simple upper bound is $\pi_\F(n) \leq 2^n$ (same for the dual).
-In fact, if VC-dimension is infinite then $\pi_F(n) = 2^n$.
-
-\begin{Theorem} [Sauer-Shelah]
-  If the set system $(X, \F)$ has finite VC-dimension $d$ then $\pi_\F(n) \leq \choose{n}{d}$.    
+If VC-dimension is infinite then clearly $\pi_F(n) = 2^n$. Conversely:
+\begin{Theorem} [Sauer-Shelah '72]
+  If the set system $(X, \F)$ has finite VC-dimension $d$ then $\pi_\F(n) \leq {n}\choose {\leq d}$.    
 \end{Theorem}
 
 Thus systems where shatter function grows polynomially are precisely the systems of finite VC-dimension.
-For set systems that grow polynomially we define VC-density as the degree of that polynomial.
+For such systems we define VC-density to be the degree of that polynomial.
 More formally
 
 \begin{Definition}
@@ -140,8 +151,8 @@ More formally
   \end{align*}
 \end{Definition}
 
-In general, VC-density can be an arbitrary real number $\geq 1$.
-Also note that shatter function that is bounded by polynomial doesn't have to be a polynomial.
+In general combinatorial context, VC-density can be any real number in  $0 \cup [1, \infty)$.
+Also note that shatter function that is bounded by polynomial doesn't itself have to be a polynomial.
 There is an example of shatter function that grows like $n \log n$ (it has VC-density $1$).
 
 So far the notions that we have defined are purely combinatorial.
@@ -149,15 +160,10 @@ We now adapt VC-dimension and VC-density to model theoretic context.
 
 \begin{Definition}
   Work in a structure $M$.
-  Let $\phi(x, y) \in \LL(M)$.
+  Fix a finite collection of formulas $\Psi(x, y) = \curly{\phi_i(x, y)}$.
 
   \begin{itemize}
-  \item For $b \in M$ let $\phi(M, b) = \{a \in M^{|x|} \mid \phi(a, b)\} \subseteq M^{|x|}$.
-  \end{itemize}
-
-  Now fix a finite collection of formulas $\Psi(x, y) = \curly{\phi_i(x, y)}$.
-
-  \begin{itemize}
+  \item For $\phi(x, y) \in \LL(M)$ and $b \in M$ let $\phi(M, b) = \{a \in M^{|x|} \mid \phi(a, b)\} \subseteq M^{|x|}$.
   \item Let $\Psi(M, M)= \{\phi_i(M, b) \mid \phi_i \in \Psi, b \in M^{|y|}\} \subseteq \PP(M^{|x|})$.
   \item Let $\F_\Psi = \Psi(M, M)$ forming a set system $(M^{|x|}, \F_\Psi)$.
   \item Define \defn{VC-dimension} of $\Psi$ to be the dual VC-dimension of $(M^{|x|}, \F_\Psi)$.
@@ -171,6 +177,13 @@ We now adapt VC-dimension and VC-density to model theoretic context.
 Counting atoms of a Boolean algebra in model theoretic setting corresponds to counting types,
 so it is instructive to rewrite shatter function in terms of number of types.
 
+\begin{Definition}
+  \begin{align*}
+    \pi_\Psi(n) &= \max \curly{\text{number of $\Psi$-types over B} \mid B \subset M, |B| = n} \\
+    \vc(\Psi) &= \limsup_{n \to \infty}\frac{\log \pi_\Psi}{\log n}
+  \end{align*}
+\end{Definition}  
+
 One can check that VC-dimension and VC-density of a formula are elementary notions,
 so they only depend on the first-order theory of the structure.
 
@@ -179,10 +192,11 @@ so they only depend on the first-order theory of the structure.
 \end{Lemma}
 
 NIP theories thus are a natural context for study of VC-density.
+
 There are examples of formulas having non-integer VC-density in an NIP theory,
 however it is open whether one can have an irrational VC-density for a formula in an NIP theory.
-In general, instead of working with a theory formula by formula we can look for uniform bounds:
 
+In general, instead of working with a theory formula by formula, we can look for a uniform bound for all formulas:
 \begin{Definition}
   For a given NIP structure $M$, define \defn{vc-function}
   \begin{align*}
@@ -191,11 +205,13 @@ In general, instead of working with a theory formula by formula we can look for 
 \end{Definition}
 
 As before this definition is elementary, so it only depends on the theory of $M$.
-One can easily check the following bounds
-\begin{align*}
-  \vc(1) &\geq 1 \\
-  \vc(n) &\geq n\vc(1)
-\end{align*}
+One can easily check the following bounds:
+\begin{Lemma}
+  \begin{align*}
+    \vc(1) &\geq 1 \\
+    \vc(n) &\geq n\vc(1)
+  \end{align*}  
+\end{Lemma}
 
 However, it is not known whether the second inequality can be strict or whether $\vc(1) < \infty$ implies $\vc(n) < \infty$.
 
@@ -209,7 +225,7 @@ $P$-adic numbers are often studied in the language of Macintyre $\LLM$% = \curly
 which is a language of fields together with unary predicates $\curly{P_n}_{n \in \N}$ interpreted by
 
 \begin{align*}
-  P_n x \leftrightarrow \exist y \; y^n = x
+  P_n x \leftrightarrow \exists y \; y^n = x
 \end{align*}  
 
 Note that $P_n$ is a multiplicative subgroup of $\Q_p$ with finitely many cosets.
