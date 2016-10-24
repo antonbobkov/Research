@@ -161,15 +161,15 @@
 \begin{column}{\onecolwid}
      
     \begin{block}{Proof outline}
-        \cite{reduct} provides the following cell decomposition result
-        \begin{alertblock} {Theorem}
-            Any formula $\phi(t, x)$  with $t$  singleton decomposes into the union of the following cells:
+        In \cite{reduct}, Leenknegt provides the following cell decomposition result
+        \begin{alertblock} {Theorem (Leenknegt '12)}
+            Any formula $\phi(t, x)$ in $(\Q_p, \LL_{aff})$ with $t$ singleton decomposes into the union of the following cells:
             \begin{align*}
-                    \curly{(t, x) \in K \times D \mid \vval a_1(x) \square_1 \vval (t - c(x)) \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
+                    \curly{(t, x) \in K \times D \mid \vval a_1(x) \ \square_1 \vval (t - c(x)) \ \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
             \end{align*}
             where $D$ is a cell of a smaller dimension,
-            $a_1, a_2, c$ are linear polynomials in  $x$,
-            $\square$ is $<$ or no condition,
+            $a_1(x), a_2(x), c(x)$ are linear polynomials,
+            $\square$ is $<$ or no condition, and
             $\lambda  \in\Q_p$.    
         \end{alertblock}
         This can be used to eliminate quantifiers in the following way:
