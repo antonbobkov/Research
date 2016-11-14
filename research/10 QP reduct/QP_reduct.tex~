@@ -598,21 +598,11 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
   If $p_j(d), p_j(d')$ are close to boundary,
   then $\tval(p_j(d)) = \tval(p_j(d'))$ and \ref{order_equation} clearly holds.
   Suppose then that $p_j(d), p_j(d')$ are far from boundary.
-  Suppose that $p_j(d), p_j(d')$ lie in the sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
+  Suppose that $p_j(d), p_j(d')$ lie in then sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
   Then $\tval(p_j(d)), \tval(p_j(d)') \in (\alpha_L, \alpha_U)$ (as an interval in $\Z$)
   and $\vval(\tbr(p_i(d)) - c_i(b))$ lies outside of $(\alpha_L, \alpha_U)$ by definition of sub-interval.
   Therefore \ref{order_equation} has to hold.
-  (Note that we always have $\tval(p_j(d)), \tval(p_j(d)') \in (\alpha_L, \alpha_U]$,
-  we need the far from boundary condition to avoid equality to $\alpha_U$.)
-
-  Case 4:
-  \begin{align*}
-    &\vval (p_i(d) - c_i(b)) = \tval(p_i(d)) \text{ and } \vval (p_i(d') - c_i(b)) = \tval(p_i(d')) \\
-    &\vval (p_j(d) - c_j(b)) = \vval (p_j(d') - c_j(b)) = \vval(\tbr(p_j(d)) - c_j(b)) \\
-  \end{align*}
-  Similar to case 3.
 \end{proof}
-
 
 
 \begin{Note}
@@ -803,12 +793,10 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
   \end{proof}	
   Additionally $a_i, a_i'$ have the same image in $\Ct$ component, so we have
   \begin{align*}
-    \val(a_i - a_i') > F(a_j) 
+    \val(a_i - a_i') \geq F(a_j) 
   \end{align*}
   As $F(a_i) \leq F(a_j)$, $a_i, a_i'$ have to lie in the same sub-interval.	
   TO DO: PROVE THE PREVIOUS SENTENCE FORMALLY
-  Suppose that $a_i$ lies in the sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$
-  and that $a_i'$ lies in the sub-interval $\paren{B(t_L', \alpha_L'),  B(t_U', \alpha_U')}$.
 \end{proof}
 
 \begin{Corollary}
