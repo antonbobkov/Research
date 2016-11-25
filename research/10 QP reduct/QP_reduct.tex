@@ -8,8 +8,8 @@
 \usepackage{pgfpages}
 \usepackage{setspace}
 
-% \doublespacing
-\usepackage[margin=.75in]{geometry}
+\doublespacing
+% \usepackage[margin=.75in]{geometry}
 % \pgfpagesuselayout{2 on 1}
 
 \renewcommand{\AA}{\mathscr A}
@@ -567,9 +567,10 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
   (see Lemma \ref{quantifier_elimination}).
   Fix $i,j \in I, b \in B$.
   We would like to show that 
-  \begin{align*} \label {order_equation}
+
+  \begin{equation} \label {eq:order_equation}
     \vval (p_i(d) - c_i(b)) < \vval (p_j(d) - c_j(b))  \iff \vval (p_i(d') - c_i(b)) < \vval (p_j(d') - c_j(b))
-  \end{align*}
+  \end{equation}
 
   For the following argument we will need more notation.
   Suppose $a \in \Q_p$ lies in an interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
@@ -581,7 +582,7 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
     &\vval (p_i(d) - c_i(b)) = \vval (p_i(d') - c_i(b)) = \vval(\tbr(p_i(d)) - c_i(b)) \\
     &\vval (p_j(d) - c_j(b)) = \vval (p_j(d') - c_j(b)) = \vval(\tbr(p_j(d)) - c_j(b))  \\
   \end{align*}
-  Then it is clear that \ref{order_equation} holds.
+  Then it is clear that \eqref{eq:order_equation} holds.
 
   Case 2:
   \begin{align*}
@@ -596,12 +597,12 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
     &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d')) \\
   \end{align*}
   If $p_j(d), p_j(d')$ are close to boundary,
-  then $\tval(p_j(d)) = \tval(p_j(d'))$ and \ref{order_equation} clearly holds.
+  then $\tval(p_j(d)) = \tval(p_j(d'))$ and \eqref{eq:order_equation} clearly holds.
   Suppose then that $p_j(d), p_j(d')$ are far from boundary.
   Suppose that $p_j(d), p_j(d')$ lie in the sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
   Then $\tval(p_j(d)), \tval(p_j(d)') \in (\alpha_L, \alpha_U)$ (as an interval in $\Z$)
   and $\vval(\tbr(p_i(d)) - c_i(b))$ lies outside of $(\alpha_L, \alpha_U)$ by definition of sub-interval.
-  Therefore \ref{order_equation} has to hold.
+  Therefore \eqref{eq:order_equation} has to hold.
   (Note that we always have $\tval(p_j(d)), \tval(p_j(d)') \in (\alpha_L, \alpha_U]$,
   we need the far from boundary condition to avoid equality to $\alpha_U$.)
 

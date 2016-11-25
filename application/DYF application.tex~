@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%\usepackage{mathrsfs}
+
+\usepackage{setspace}
+
+\doublespacing
+\rhead{Anton Bobkov}
+
+\lhead{Proposed Plan for Completing the Dissertation}
+
+
+
+
+\begin{document}
+
+\subsection*{Abstract}
+
+In 2013, Aschenbrenner et al. investigated and developed a notion of VC-density for NIP structures, an analog of geometric dimension in an abstract setting \cite{density}. Their applications included a bound for p-adic numbers, an object of great interest and a very active area of research in mathematics. My research concentrates on improving and expanding techniques of that paper to improve the known bounds as well as computing VC-density for other NIP structures of interest. I am able to obtain new bounds for the additive reduct of p-adic numbers, Henselian valued fields, and certain families of graphs. Recent research by Chernikov and Starchenko in 2015 \cite{regularity} suggests that having good bounds on VC-density in p-adic numbers opens a path for applications to incidence combinatorics (e.g. Szemeredi-Trotter theorem).
+
+\subsection*{Introduction}
+
+The concept of VC-dimension was first introduced in 1971 by Vapnik and Chervonenkis for set systems in a probabilistic setting (see \cite{density}). The theory grew rapidly and found wide use in geometric combinatorics, computational learning theory, and machine learning. Around the same time Shelah was developing the notion of NIP ("not having the independence property"), a natural tameness property of (complete theories of) structures in model theory. In 1992 Laskowski noticed the connection between the two: theories where all uniformly definable families of sets have finite VC-dimension are exactly NIP theories. It is a wide class of theories including algebraically closed fields, differentially closed fields, modules, free groups, o-minimal structures, and ordered abelian groups. A variety of valued fields fall into this category as well, including the p-adic numbers.
+
+P-adic numbers were first introduced by Hensel in 1897, and over the following century a powerful theory was developed around them with numerous applications across a variety of disciplines, primarily in number theory, but also in physics and computer science. In 1965 Ax, Kochen and Ershov axiomatized the theory of p-adic numbers and proved a quantifier elimination result. A key insight was to connect properties of the value group and residue field to the properties of the valued field itself. In 1984 Denef proved a cell decomposition result for more general valued fields. This result was soon generalized to p-adic subanalytic and rigid analytic extensions, allowing for the later development of a more powerful technique of motivic integration. The conjunction of those model theoretic results allowed to solve a number of outstanding open problems in number theory (e.g., Artin's Conjecture on p-adic homogeneous forms).
+
+In 1997, Karpinski and Macintyre computed VC-density bounds for o-minimal structures and asked about similar bounds for p-adic numbers. VC-density is a concept closely related to VC-dimension. It comes up naturally in combinatorics with relation to packings, Hamming metric, entropic dimension and discrepancy.  VC-density is also the decisive parameter in the Epsilon-Approximation Theorem, which is one of the crucial tools for applying VC theory in computational geometry. In a model theoretic setting it is computed for families of uniformly definable sets.  In 2013, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko computed a bound for VC-density in p-adic numbers and a number of other NIP structures \cite{density}. They observed connections to dp-rank and dp-minimality, notions first introduced by Shelah. In well behaved NIP structures families of uniformly definable sets tend to have VC-density bounded by a multiple of their dimension, a simple linear behavior. In a lot of cases including p-adic numbers this bound is not known to be optimal. My research concentrates on improving those bounds and adapting those techniques to compute VC-density in other common NIP structures of interest to mathematicians.
+
+Some of the other well behaved NIP structures are Shelah-Spencer graphs and flat graphs. Shelah-Spencer graphs are limit structures for random graphs arising naturally in a combinatorial context. Their model theory was studied by Baldwin, Shi, and Shelah in 1997, and later work of Laskowski in 2006 \cite{graph} have provided a quantifier simplification result.  Flat graphs were first studied by Podewski-Ziegler in 1978, showing that those are stable \cite{stable}, and later results gave a criterion for super stability. Flat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}. %Shelah-Spencer graphs and flat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
+
+\subsection*{Past Results and Future Work}
+
+I have studied properties of VC-densoty in Shelah-Spencer graphs. 
+I have shown that they have infinite dp-rank, so they are poorly behaved as NIP structures. I have also shown that one can obtain arbitrarily high VC-density when looking at uniformly definable families in a fixed dimension. However I'm able to bound VC-density of individual formulas in terms of edge density of the graphs they define.
+This indicates that there is potentially a notion more refined than VC-density that captures combinatorial behavior of definable sets in Shelah-Spencer graphs.
+
+I have answered an open question from \cite{density}, computing VC-density for trees viewed as a partial order. The main idea is to adapt a technique of Parigot \cite{trees} to partition trees into weakly interacting parts, with simple bounds of VC-density on each. Similar partitions come up in the Podewski-Ziegler analysis of flat graphs \cite {stable}. I am able to use that technique to show that flat graphs are dp-minimal, an important first step before establishing bounds on VC-density. I hope that I can adapt it further to compute VC-density bounds explicitly for specific families of flat graphs.
+
+The rest of my work so far deals with p-adic numbers and valued fields.
+My goal is to improve the bound $vc(n) \leq 2n - 1$ in \cite{density}.
+I was able to do so in an cerain additive reduct of p-adic numbers using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduce}.
+I will explore other reducts described in that paper, to see if my techniques apply to those as well. I have also shown that a Henselian valued field of equi-characteristic zero has linear one-dimensional VC-density if its value group and its residue field have that property. This is along the lines of the results of Ax-Kochen mentioned before. The second of my remaining research goals is to adapt those techniques to higher dimensions, as well as applying them to RV sorts introduced by Flenner in 2011 \cite{value}.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{density}
+	M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+	\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+
+\bibitem{regularity}
+Artem Chernikov, Sergei Starchenko, \textit{Regularity lemma for distal structures}, 	arXiv:1507.01482
+
+\bibitem{value}
+Joseph Flenner. \textit{Relative decidability and definability in Henselian valued fields.} The
+Journal of Symbolic Logic, 76(04):1240–1260, 2011.
+	
+\bibitem{graph}
+  Michael C. Laskowski, \textit{A simpler axiomatization of the Shelah-Spencer almost sure theories},
+  Israel J. Math. \textbf{161} (2007), 157â€“186. MR MR2 350161	
+
+\bibitem{reduce}
+E. Leenknegt. \textit{Reducts of p-adically closed fields}, Archive for Mathematical Logic \textbf{20 pp.}
+
+\bibitem{nowhere}
+J. Nesetril and P. Ossona de Mendez. \textit{On nowhere dense graphs.} European Journal of
+Combinatorics, 32(4):600–617, 2011
+
+\bibitem{trees}
+	Michel Parigot.
+	Th\'eories d'arbres.
+	\textit{Journal of Symbolic Logic}, 47, 1982. 
+
+
+\bibitem{stable}
+	Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
+
+\end{thebibliography}
+	
+\end{document}
+
+% Include edges between y as a chain minimal extension

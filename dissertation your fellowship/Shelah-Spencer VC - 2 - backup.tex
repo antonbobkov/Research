@@ -1,0 +1,244 @@
+\documentclass{amsart}
+
+\usepackage{../AMC_style}	
+\usepackage{../Research}
+\usepackage{../Thm}
+
+\usepackage{mathrsfs}
+
+
+
+\renewcommand{\AA}{\mathscr A}
+
+  \newcommand{\A}{\mathcal A}
+  \newcommand{\B}{\mathcal B}
+\renewcommand{\C}{\mathcal C}
+  \newcommand{\D}{\mathcal D}
+\renewcommand{\H}{\mathcal H}
+  \newcommand{\G}{\mathcal G}
+  \newcommand{\M}{\mathcal M}
+
+  \newcommand{\U}{\mathcal U}	
+
+  \newcommand{\K}{\boldface K_\alpha}
+\renewcommand{\S}{S_\alpha}
+
+\newcommand{\curly}[1]{\left\{#1\right\}}
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+
+%\DeclareMathOperator{\dim}{dim}
+
+\title{Some vc-density computations in Shelah-Spencer graphs}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+
+\begin{document}
+
+\maketitle
+
+Fix a formula $\phi(x, y)$ that is a minimal chain extension $\curly{M_i}_{i \in [0..k]}$ with $M_0 = \{x, y\}$ with
+\begin{itemize}
+	\item $\phi(x, y)$ determines edges and non-edges on $\curly{x, y}$.
+	\item there are no edges between $x$ and $y$.
+	\item there are no edges between $x$.
+	\item Let $\dim \paren{M_i/M_{i-1}} = -\epsilon_i$.
+	\item Let $\epsilon_L = \sum_{[1..k]} \epsilon_i$.
+	\item Let $\epsilon_U = \min_{[1..k]} \epsilon_i$.
+	\item Let $Y = \dim (y)$ considering $y$ as a graph. If $\{y\}$ are disconnected then $Y = |y|$.
+\end{itemize}
+
+We work in special family of parameter sets
+\begin{align*}
+	\AA = \curly{A \subset \U^{y} \mid \text{finite, disconnected, strongly embedded}}
+\end{align*}
+
+We estimate $\vc_\AA(\phi)$, VC-density of $\phi$ restricted to parameter sets from $\AA$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Lower bound on $\AA$}
+
+Let $n$ be the integer such that $n \epsilon_L < Y$ and $(n+1) \epsilon_L > Y$.
+
+Pick a finite $B \subset A^{|x|}$.
+
+Consider the graph $y$.
+If $y$ is not positive, then $\phi$ has no realizations over $B$.
+Otherwise, take an abstract realization of $y$, and label it by $b$.
+
+Fix $n$ arbitrary elements of $B$, label them $a_i$, with each $|a_i| = |x|$.
+Abstractly adjoin $M_i/\curly{a_i, b} = M/\curly{x,y}$ for each $i$.
+Let $\bar M = \bigcup M_i$ (disjointly).
+
+\begin{Claim}
+	$(A \cap \bar M) \leq \bar M$.
+\end{Claim}
+\begin{proof}
+	It's total dimension is $Y - n\epsilon_L > 0$ and all subextensions are positive as well.
+\end{proof}
+
+Thus a copy of $\bar M$ can be embedded over $A$ into our ambient model.
+Choice of elements of $B$ was arbitrary, thus showing that any $n$ elements can be traced out.
+Thus we have $O(|B|^n)$ many traces showing $\vc$-density of at least $n$.
+
+\begin{align*}
+	\vc_\AA(\phi) \geq \floor{\frac{Y}{\epsilon_L}}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Lower bound}
+
+\begin{Claim}
+	In any random graph we can find arbitrarily large parameter set that belongs to $A$.
+\end{Claim}
+
+This shows that
+
+\begin{align*}
+	\vc(\phi) \geq \vc_\AA(\phi) \geq \floor{\frac{Y}{\epsilon_L}}
+\end{align*}
+
+\begin{Claim}
+	We can find a minimal extension $M / \{x, y\}$ with arbitrarily small dimension.
+\end{Claim}
+
+This shows that vc function is infinite in Shelah-Spencer random graphs.
+
+\begin{align*}
+	\vc(n) = \infty
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Upper bound on $\AA$}
+
+Let $n$ be the integer such that $n \epsilon_U < Y$ and $(n+1) \epsilon_U > Y$.
+
+Pick a trace of $\phi(x,y)$ on $A^{|x|}$ by a parameter $b$.
+
+\begin{align*}
+	B = \curly{a \in A^{|x|} \mid \phi(a, b)}
+\end{align*}
+
+Pick $B' \subset B$, ordered $B' = \{a_i\}_{i \in I}$ such that
+\begin{align*}
+	%a_i \cap \bigcup_{j \neq i} a_j \neq \emptyset
+	a_i \cap \bigcup_{j < i} a_j \neq \emptyset
+\end{align*}
+This is always possible by starting with $B$ and taking away elements one by one.
+Call such a set a \emph{generating set} of $B$.
+
+Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \in I$.
+Let $\bar M = \bigcup M_i$.
+Consider $\bar M / A$.
+
+Pick $\bar M$ such that $\dim(\bar M / A)$ is maximized.
+
+$\bar M \cap A \leq \bar M$ as $A$ is strong. (Make sure $M$ is not too big!)
+Let $\bar A = A - \curly{a_i}_{i \in I}$.
+Suppose $\bar A \cap \bar M \neq \emptyset$.
+Then we can abstractly reembed $\M$ over $A$ such that $\bar A \cap \bar M = \emptyset$.
+This would increase the dimension, contradicting maximality.
+Thus we can assume $A \cap \bar M = \{a_i\}_{i \in I}$
+
+Let $\bar M_j = \bigcup_{i < j} M_i$.
+
+\begin{Lemma}
+	$\dim(\bar M_j / A) \leq j \cdot \epsilon_U$
+\end{Lemma}
+\begin{proof}
+	Proceed by induction.
+	Base case is clear.
+
+	For induction case apply lemma to $\bar M_j \cup \{a_j\}$ and $M_j / \{a_j, b\}$.
+	There are two cases
+	\begin{enumerate}
+		\item $M_j \subset \bar M' \cup \{a_j\}$.
+		In this case there are edges between $\{a_j\}$ and $M_j$ that contribute to dimension less than $-\epsilon_U$.
+		\item Otherwise $M_j$ adds extra dimension less than $-\epsilon_U$
+	\end{enumerate}
+\end{proof}
+
+Thus we have $\dim(\bar M / A) = \dim(\bar M_n / A) \leq -\epsilon_U n$.
+
+Thus as $A$ is strong we need $|B'| \epsilon_U < Y$.
+This gives us $|B'| \leq n$.
+Finally we need to relate $|B'|$ to $|B|$.
+
+Suppose we have $C \subset A^{|x|}$, finite with $|C| = N$.
+A generating set for a trace has to have size $\leq n$.
+Thus there are ${N \choose n} \leq N^n$ choices for a generating set.
+A set generated from set of size $n$ can have at most $(x|n|)^{|x|}$ elements.
+Thus a given set of size $n$ can generate at most
+\begin{align*}
+	2^{(x|n|)^{|x|}}
+\end{align*}
+sets.
+Thus the number of possible traces on $C$ is bounded above by
+\begin{align*}
+  2^{(x|n|)^{|x|}} \cdot N^n = O(N^n)
+\end{align*}
+This bounds the vc-density by $n$.
+
+\begin{align*}
+	\vc_\AA(\phi) \geq \floor{\frac{Y}{\epsilon_U}}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Technical Lemmas}
+
+\begin{Lemma}
+	Suppose we have a set $B$ and a minimal pair $(M, A)$ with $A \subset B$ and $\dim(M/A) = -\epsilon$.
+Then either $M \subseteq B$ or $\dim((M \cup B)/B) < -\epsilon$.
+\end{Lemma}
+
+\begin{proof}
+	By diamond construction
+
+	\begin{align*}
+		\dim((M \cup B)/B) \leq \dim(M / (M \cap B))
+	\end{align*}
+
+	and 
+
+	\begin{align*}
+		\dim(M / (M \cap B)) &= \dim (M/A) - \dim(M / (M \cap B)) \\
+		\dim (M/A) &= -\epsilon \\
+		\dim(M / (M \cap B)) &> 0
+	\end{align*}
+\end{proof}
+
+
+
+\begin{Lemma}
+	Suppose we have a set $B$ and a minimal chain $M_n$ with $M_0 \subset B$ and dimensions $-\epsilon_i$.
+Let $\epsilon$ be the minimal of $\epsilon_i$.
+Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) < -\epsilon$.
+\end{Lemma}
+
+
+\begin{proof}
+	Let $\bar M_i = M_i \cup B$
+
+	\begin{align*}
+		\dim(\bar M_n/B) = \dim(\bar M_n/\bar M_{n-1}) + \ldots + \dim(\bar M_2/\bar M_1) + \dim(\bar M_1/B)
+	\end{align*}
+
+	Either $M_n \subseteq B$ or one of the summands above is nonzero.
+	Apply previous lemma.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Counterexamples}
+
+% Add complete graph counterexample
+% where we have a bunch of minimal extensions intersecting in a tiny way
+
+% \AA is indiscernible
+% example of indiscernible sequence that is not strong
+% example with non-strong embedding on every n-tuple of vertices?
+
+\end{document}
+
+% Include edges between y as a chain minimal extension

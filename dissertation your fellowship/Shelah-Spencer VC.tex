@@ -1,0 +1,140 @@
+\documentclass{amsart}
+
+\usepackage{../AMC_style}	
+\usepackage{../Research}
+
+\usepackage{diagrams}
+
+  \newcommand{\A}{\mathcal A}
+  \newcommand{\B}{\mathcal B}
+\renewcommand{\C}{\mathcal C}
+  \newcommand{\D}{\mathcal D}
+\renewcommand{\H}{\mathcal H}
+  \newcommand{\G}{\mathcal G}
+  \newcommand{\M}{\mathcal M}
+
+  \newcommand{\K}{\boldface K_\alpha}
+\renewcommand{\S}{S_\alpha}
+
+\begin{document}
+
+\title{Some vc-density computations in Shelah-Spencer graphs}
+\author{Anton Bobkov}
+\email{bobkov@math.ucla.edu}
+
+\begin{abstract}
+	We compute vc-densities of minimal extension formulas in Shelah-Spencer random graphs.
+\end{abstract}
+
+\maketitle
+
+We fix the density of the graph $\alpha$.
+
+\begin{Lemma}
+	For any $\A \in \K$ and $\epsilon > 0$ there exists an $\B$ such that $(\A, \B)$ is minimal and $\delta(\B/\A) < \epsilon$.
+\end{Lemma}
+
+\begin{proof}
+	Let $m$ be an integer such that $m\alpha < 1 < (m+1)\alpha$. Suppose $\A$ has less than $m+1$ vertices. Make a construction $\A_0 = \A$ and $\A_{i+1}$ is $\A_i$ with one extra vertex connected to every single vertex of $A_i$. Stop when the total number of vertices is $m+1$. Proceed as in \cite{Laskowski} 4.1. Resulting construction is still minimal.
+\end{proof}
+
+\begin{Lemma}
+	Let $\A_1 \subset \B_1$ and $\A_2 \subset \B_2$ be $\K$ structures with $(\A_2, \B_2)$ a minimal pair with $\epsilon = \delta (\B_2/\A_2)$. Let $M$ be some ambient structure. Fix embeddings of $\A_1, \B_1, \A_2$ into $M$. Assume that it is not that case that $\A_2 \subset \B_2$ and $\A_1$ is disjoint from $\A_2$ (No!). Now consider all possible embeddings $f \colon \B_2 \to M$ over $\A_1$.  Let $\A = \A_1 \cup \A_2$ and $\B_f = \B_1 \cup f(\B_2)$ with $\delta_f = \delta(\B_f/\A)$. Then $\delta_f$ is at most $\delta(\B_1 \cup \A/\A) + \epsilon$
+\end{Lemma}
+
+Fix an embedding $f$. It induces the following substructure diagram in $M$. Denote 
+\begin{align*}
+	\A &= \A_1 \cup \A_2 \\
+	\B_f^* &= \B_1 \cup f(\B_2) \\
+	\B_1^* &= \B_1 \cup \A \\
+	\B_2^* &= f(\B_2) \cup \A \\
+	\B^* &= \B_1^* \cap \B_2^*
+\end{align*}
+
+\begin{diagram}
+								&							&\B_f		\\
+								&\ruLine    	&										&\luLine	\\
+	\B_1^*      	&           	&										&					&\B_2^* \\
+								&\luLine			&										&\ruLine	\\
+								&							&\B^* \\
+								&							&\uLine \\
+								&							&\A\\
+\end{diagram}
+
+From the diagram we see that
+\begin{align*}
+	\delta(\B_f/\A) \leq \delta(\B_1^*/\A) + \delta(\B_2^*/\B^*)
+\end{align*}
+Thus all we need to do is to verify that
+\begin{align*}
+	\delta(\B_2^*/\B^*) \leq \epsilon
+\end{align*}
+Let $\B'$ denote graph induced on all the vertices in $(f(B_2) / B_1) \cup A_2$.
+Then $\B'$ is a substructure of $\B_2$ over $\A_2$. By minimality we get that $\delta(\B'/\A_2) \leq \epsilon$.
+We need to show $\delta(\B_2^*/\B^*) \leq \delta(\B'/\A_2)$.
+Do the vertex computation
+\begin{align*}
+	B_2^* - B^* &= \\
+	f(B_2) - (B_1 \cap f(B_2)) - A &= \\
+	f(B_2) - B_1 - A &= \\
+	f(B_2) - B_1 - A_2
+\end{align*}
+and
+\begin{align*}
+	B' - A_2 &=	
+	f(B_2) - B_1 - A_2
+\end{align*}
+
+So the sets of the extra vertices in the extension are the same. The base $\B_2^*/\B^*$ is larger so we can introduce some extra edges but no new vertices. This means that $\delta(\B_2^*/\B^*) \leq \delta(\B'/\A_2)$ giving us the original statement.
+
+
+Let $\phi(x,y)$ be a formula in a random graph with $|x|=|y|=1$ saying that there exists $\D$ over $\C = \{x,y\}$ such that $(\D, \C)$ is minimal with relative dimension $\epsilon$. Let $N$ be such that $N\epsilon < 1 < (N+1)\epsilon$. Then we argue that $vc(\phi) = N$.
+
+Fix a $m$-strong (for any $m > |D|$) set of non-connected vertices $A$. Fix some $a*$. We invesitgate the trace of $\phi(x, a*)$ on $A$. Suppose we have $a_1, \ldots, a_k$ satisfying $\phi(a_i, a^*)$ as witnessed by $D_i / \{a_i, a*\}$. Let $\D^* = \bigcap \D_i$ and $\C^*$
+
+Call $\M$ $n$-composite embedding if there are distinct vertices $a_1, \ldots a_n$ and $a*$ in $M$ and there are an embeddings $\D \arr \M$ with $\C$ going to $\{a_i, a^*\}$. Image of $i$-th embedding is denoted $\D_i$. Note that images of embeddings can intersect each other or $a_j$'s. Consider $\D^* = \bigcap \D_i$ and $\C^* = \{a_1, \ldots a_n, a^*\}$. Dimension of $M$ is $\delta(\D^*/\C^*)$.
+
+Lemma: Dimension of $n$-composite embedding is at most $-n\epsilon$.
+
+Note: if $\D_i$ are disjoint over $\C^*$ then the dimension is exactly $-n\epsilon$.
+
+Take $n$-composite embedding with maximal dimension. Suppose it is larger than $-n\epsilon$.
+Without loss of generality we may assume $\D_n$ intersects with $\D_1 \cup \ldots \cup \D_{n-1}$ over $\C^*$.
+Consider two cases.
+First, suppose that there is some element in $\D_n$ outside of $\D_1 \cup \ldots \cup \D_{n-1}$.
+Let $\B_1 = \D_1 \cup \ldots \cup \D_{n-1}$.
+Let $\A_1 = \{a_1, \ldots a_{n-1}\} \cup \{a*\}$.
+Let $\B_2 = \D_n$.
+Let $\A_2 = \{a_n, a*\}$.
+
+Lemma applies to the above. Above dimension is minimized when $\D_n$ is disjoint. Contradiction.
+
+Second, suppose that $\D_n \subseteq \B_1$. In particular $a_n \in \B_1$. Consider
+
+Consider sets $\B_1 \ldots \B_n$ with 
+\begin{enumerate}
+	\item $a_i \in \B_i$
+	\item $a_i \in A$
+	\item $a_i \neq a_j$
+	\item $a* \in \bigcap \B_i$
+\end{enumerate}
+ and  s.t. $\B_i / \{a*, a_i\}$ is isomorphic to $\B/\A$. We look at all the possible embeddings with those properties. We argue that a disjoint configuration minimizes total dimension of the whole construction.
+
+We argue by induction on $n$. Fix an embedding $\B_1, \ldots \B_n$ and consider possible choices for $\B_{n+1}, a_{n+1}$. We can pick $a_n$ to be an element of $A$ not used so far and embed $\B_{n+1}$ over $\{a*, a_i\}$ disjoint from the entire construction. On the other hand suppose it is embedded such that there is an intersection. We set up to apply the previous lemma. Let
+\begin{align*}
+	\B_1 &= \bigcup_{1..n} \B_i \\
+	\A_1 &= \{a_1, \ldots a_n\} \\
+	\B_2 &= \B_{n+1} \\
+	\A_2 &= \{a^*, a_{n+1}\}
+\end{align*}
+Applying the lemma say that the extra dimension cannot be larger then $\epsilon$.
+
+\begin{thebibliography}{9}
+
+\bibitem{Laskowski}
+	Michael C. Laskowski, \textsl{A simpler axiomatization of the Shelah-Spencer almost sure theories,}
+	Israel J. Math. \textbf{161} (2007), 157-186. MR MR2350161
+
+\end{thebibliography}
+
+\end{document}

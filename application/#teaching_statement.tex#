@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%\usepackage{mathrsfs}
+
+\usepackage{setspace}
+
+\doublespacing
+\rhead{Anton Bobkov}
+
+\lhead{Teaching Statement}
+
+
+
+
+\begin{document}
+
+As UCLA student I had a wide variety of teaching experience, 
+having taught in first-year calculus classes, advanced undergraduate classes, programming courses
+as well as mentoring independent projects and reading courses for undergraduate students.
+I was a recipient of UCLA's 2016 Departmental Teaching Award.
+I have also engaged in private tutoring as well as volunteering to assist math instructors in local high schools.
+
+When I teach, my primary goal is to have students interacting with the material as soon as possible.
+Instead of waiting for them to first engage with the material only when they start their homework,
+I give out worksheets as soon as a given topic as covered.
+This way they get familiar with the basics faster which allows me to move on to harder topics and
+give more abstract explanations sooner.
+Having a class work on an assignment right away also allows me to gauge where all the students are at in their understanding of the material.
+I encourage group work when possible.
+This empahsizes a social aspect of learning and allows students to interact with their peers to explain ideas and help each other to work trough harder parts of the material.
+
+I believe that mathematics is best explained with the use of visual aid.
+I make sure to include plenty of diagrams, pictures, and graphs in my teaching.
+When possible I try to illustrate common mathematical or physical concepts using props.
+For example, as a part of explanation of sorting algorithms I use a deck of cards,
+or when explaining hyperbolic function I use a hanging rope as an illustration of catenoid.
+This helps students to visualize explained concepts as well as creating a link to the real world application of the presented abstract concepts.
+
+When teaching I strive to get as much student feedback as possible.
+For example, I always ask students attending office hours what they think of the direction the class is going and what they would like to see more.
+I also ask them to fill out an anonymous survey at several points throughout the class where they can voice criticisms and suggestions.
+I do my best to respond and adapt my teaching style according to this feedback - it has greatly helped me to form my teaching style.
+
+I have volunteered to be an independent study mentor for several students.
+They were working on a variety of projects
+
+At UCLA, I worked as a mentor for students doing independent study.
+This has encompassed a wide variety of projects.
+I have worked with students both informally and formally for university credit,
+over short periods like one quarter as well as on more serious year long projects.
+The projects' topics included pure and applied math, data analysis, computer science, and finance.
+All the projects had a strong programming component, so students always had a working program to show at the end.
+
+My main focus as a mentor was to balance encouraging students to explore on their own versus providing a structure with concrete goals and expectations.
+On one hand I would let students learn different aspects of the material, experiment with it, and see what direction they want to take their project.
+Given complexity and range of the material, however, it is easy for the students to feel overwhelmed.
+To counter that I would introduce concrete weekly goals and would often check in to talk about long term direction of the project.
+This way even if the material is dense and frustrating to get through, the student would always feel accomplished having a concrete weekly progress as well as a feel for project's overall progress.
+
+For example, one of the projects was doing image recognition of digits using neural networks.
+The student didn't have any prior experience in this area, so we started really slowly by following tutorials online.
+I would instruct to get a tutorial working, make minor changes to it, and research what other algorithms there are.
+As we progressed, the student became more familiar with the language and the code involved, gaining confidence to work on more advanced topics.
+Originally we have planned to write an algorithm recognizing chineese characters,
+but as we got through the basics, I have talked to the student and we have determined that it would be more interesting to try to adapt symbol recognition algorithm to recognizing sounds
+I value this flexibility a lot - it allows the project to evolve naturally in accord with the student's interest and their comfort with the material studied.
+
+\begin{thebibliography}{9}
+
+\bibitem{density}
+	M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+	\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+
+\bibitem{regularity}
+Artem Chernikov, Sergei Starchenko, \textit{Regularity lemma for distal structures}, 	arXiv:1507.01482
+
+\bibitem{value}
+Joseph Flenner. \textit{Relative decidability and definability in Henselian valued fields.} The
+Journal of Symbolic Logic, 76(04):1240–1260, 2011.
+	
+\bibitem{graph}
+  Michael C. Laskowski, \textit{A simpler axiomatization of the Shelah-Spencer almost sure theories},
+  Israel J. Math. \textbf{161} (2007), 157â€“186. MR MR2 350161	
+
+\bibitem{reduce}
+E. Leenknegt. \textit{Reducts of p-adically closed fields}, Archive for Mathematical Logic \textbf{20 pp.}
+
+\bibitem{nowhere}
+J. Nesetril and P. Ossona de Mendez. \textit{On nowhere dense graphs.} European Journal of
+Combinatorics, 32(4):600–617, 2011
+
+\bibitem{trees}
+	Michel Parigot.
+	Th\'eories d'arbres.
+	\textit{Journal of Symbolic Logic}, 47, 1982. 
+
+
+\bibitem{stable}
+	Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
+
+\end{thebibliography}
+	
+\end{document}
+
+% Include edges between y as a chain minimal extension
