@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{amsfonts,amsmath,amsthm,amssymb, url}
+
+\textwidth 6.5in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+\usepackage{fancyhdr}
+\textheight 9in
+\topmargin -.5in
+\pagestyle{fancy}
+\lhead{Research Statement}
+\chead{Jaclyn Lang}
+\rhead{November 2015}
+
+\usepackage[OT2,T1]{fontenc}
+\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathalpha}{cyrletters}{"58}
+
+\usepackage{titlesec}
+\titleformat{\section}
+	{\centering\normalfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+	{\centering\normalfont\itshape}{\thesubsection}{1em}{}
+
+\usepackage{color}
+\newcommand{\qtn}[1]{\textcolor{red}{#1}}
+
+\newcommand{\Aa}{\mathfrak{a}}
+\newcommand{\cc}{\mathfrak{c}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\aL}{\mathcal{L}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\OK}{\ensuremath{\mathcal{O}}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\Pp}{\mathfrak{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem{conj}{Conjecture}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\GSp}{GSp}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\MT}{MT}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\section*{Overview}
+My research is in the area of algebraic number theory.  Primarily I study modular forms, the Galois representations associated to them, and $p$-adic families of such objects.  I am also interested in the arithmetic of elliptic curves.  The main result of my thesis is that, in a qualitative sense, the Galois representation associated to an ordinary $p$-adic family of modular forms has ``large'' image.  My future research plans include improving the result to a quantitative form and obtaining a complete description of the images of such Galois representations.  
+
+%Galois representations are fundamental objects of study in modern number theory.  They are the only known tools for systematically studying the absolute Galois group of the rational numbers, $G_\Q$, and geometric Galois representations are one side of the celebrated Langlands correspondence.  A Galois representation is a continuous homomorphism $\rho : G_\Q \to \GL_2(A)$ for a topological ring $A$.  Most known examples of Galois representations arise from an action of $G_\Q$ on the cohomology of varieties defined over $\Q$, or by putting such representations into $p$-adic families.  
+
+A fundamental problem is to determine the image of a given Galois representation.  This was first done by Serre \cite{Serre68} for the $p$-adic Galois representations $\rho_{E, p}$ associated to an elliptic curve $E_{/\Q}$.  He showed that if $E$ does not have complex multiplication (CM) then $\rho_{E, p}$ is surjective for all but finitely many primes $p$.  Furthermore the image of $\rho_{E, p}$ is open for all $p$.  Serre's result is an example of a general pattern governing the expected behavior of images of Galois representations.
+
+\begin{heuristic}
+The image of a Galois representation should be as large as possible, subject to the symmetries of the geometric object from which it arose.
+\end{heuristic}
+
+The notion of ``symmetry'' is vague and depends on the situation.  In the case of elliptic curves, the relevant symmetry is complex multiplication.  In the 1980s, Ribet and Momose determined, up to finite error, the image of a Galois representation coming from a classical modular form without CM and thus showed that such images are ``large'' \cite{Momose81, Ribet83}.  Their proof introduced new symmetries of modular forms known as ``conjugate self-twists''.  Indeed, if $\rho: G_\Q \to \GL_2(\OK)$ arises from a modular form, then one can talk about the subring $\OK_0$ of $\OK$ fixed by all conjugate self-twists.  Ribet and Momose proved that the intersection of $\im \rho$ with $\SL_2(\OK_0)$ is open in $\SL_2(\OK_0)$.    
+
+In the 1980s, Hida developed his theory of $p$-adic families of (ordinary) modular forms.  To such a family $F$, Hida associated a Galois representation $\rho_F : G_\Q \to \GL_2(\I)$ for a certain ring $\I$.  From $\rho_F$ one obtains a mod $p$ representation $\bar{\rho}_F$.  One can consider conjugate self-twists of $F$ and form the ring $\I_0$ fixed by all such twists.  The following theorem is the main result of my thesis \cite{Lang15}.
+
+\begin{theorem}[Lang \cite{Lang15}]\label{thesis}
+Let $F$ be a non-CM Hida family.  Assume that $\bar{\rho}_F$ is absolutely irreducible and satisfies a technical but mild regularity condition.  Then there is a nonzero $\I_0$-ideal $\Aa_0$ such that the image of $\rho_F$ contains all matrices in $\SL_2(\I_0)$ that are congruent to the identity modulo $\Aa_0$.
+\end{theorem}
+
+I have a secondary interest in the arithmetic of elliptic curves.  My group at the Women in Numbers 3 workshop studied shadow lines of elliptic curves, an invariant first defined by Mazur and Rubin \cite{MazurRubin03}.  Using explicit class field theory, we developed an algorithm to compute the shadow line of a triple $(E, K, p)$, where $E_{/\Q}$ is an elliptic curve, $K$ is an imaginary quadratic field, and $p$ is a rational prime of good reduction for $E$ that splits in $K$.  We implemented our algorithm in Sage \cite{SAGE} and computed the first examples of shadow lines.  The resulting paper will appear in the proceedings volume \cite{BCLMN15}.  
+
+\section*{Thesis}
+\noindent \textit{\textbf{Background.}}  I now give some definitions and notation to make the statement of Theorem~\ref{thesis} more precise.  Fix a prime $p$, and assume for simplicity that $p \geq 5$.  Let $\Lambda = \Z_p[[T]]$ and $\I$ be an integral domain that is finite flat over $\Lambda$.  Fix embeddings of an algebraic closure $\overline{\Q}$ of $\Q$ into $\C$ and $\overline{\Q}_p$.   
+
+\begin{definition}[Hida \cite{Hida86a}, Wiles \cite{Wiles88}]
+\sloppy{A formal power series $F = \sum_{n = 1}^\infty A_nq^n \in \I[[q]]$ is a \textit{Hida family} if $A_p \in \I^\times$ and for every integer $k \geq 2$ and every prime ideal $\Pp$ of $\I$ lying over ${(1+T-(1+p)^k)\Lambda}$, we have:}
+\begin{itemize}
+\item $A_n \bmod \Pp$ is in $\overline{\Q}$ (rather than just $\overline{\Q}_p$), and
+\item $f_\Pp := \sum_{n = 1}^\infty (A_n \bmod \Pp)q^n$ gives the $q$-expansion of a classical modular form of weight $k$.
+\end{itemize}
+\end{definition}
+
+Hida showed that every $p$-ordinary classical modular form of weight at least $2$ arises from a unique such family \cite{Hida86a}.  Furthermore, there is a Galois representation $\rho_F : G_\Q \to \GL_2(\I)$ that is unramified almost everywhere.  For all primes $\ell$ at which $\rho_F$ is unramified, $\tr \rho_F(\Frob_\ell) = A_\ell$, where $\Frob_\ell$ is the conjugacy class of a Frobenius element at $\ell$ \cite{Hida86b}.
+
+\begin{definition}
+\sloppy{An automorphism $\sigma$ of $\I$ is a \textit{conjugate self-twist} of a Hida family ${F = \sum_{n = 1}^\infty A_nq^n \in \I[[q]]}$ if there exists a non-trivial Dirichlet character $\eta_\sigma$ such that}
+\[
+\sigma(A_\ell) = \eta_\sigma(\ell)A_\ell
+\]
+for almost all primes $\ell$.  We say $F$ has \textit{complex multiplication (CM)} if the identity automorphism is a conjugate self-twist of $F$.
+\end{definition}
+
+\noindent \textit{\textbf{Ideas in the Proof of Theorem~\ref{thesis}.}}  The key result is a lifting theorem showing when a conjugate self-twist of an arithmetic specialization $f_\Pp$ of $F$ can be lifted to a conjugate self-twist of the entire family $F$.  The ideas that go into the lifting theorem will be briefly explained in the next paragraph.  Using the lifting theorem, there is a series of reduction steps to conclude that the theorem of Ribet and Momose is sufficient to prove Theorem~\ref{thesis}.  An important tool in these reduction steps is a $\Z_p$-Lie algebra of Pink \cite{Pink93} that is associated to $\im \rho_F$, which allows us to reduce our problem to linear algebra.  Hida observed that the ordinarity of $\rho_F$ can be used to give Pink's Lie algebra a $\Lambda$-algebra structure \cite{Hida15}, and this structure is critical to the proof.
+
+I now give a brief outline of the proof of the lifting theorem.  A conjugate self-twist $\sigma$ of an arithmetic specialization $f_\Pp$ of $F$ induces an automorphism $\bar{\sigma}$ of the residue field $\F$.  Using deformation theory, I lift $\bar{\sigma}$ to an automorphism $\Sigma$ of the entire universal deformation ring $R_{\bar{\rho}_F}$ of $\bar{\rho}_F$ and show that $\Sigma$ satisfies certain properties.  Using automorphic methods I show that $\Sigma$ preserves a certain Hecke algebra, $\T$.  Since $\Spec \I$ is an irreducible component of $\Spec \T$, we see that $\Sigma$ must send $\Spec \I$ to another irreducible component $\Sigma^* \Spec \I$ of $\Spec \T$.  The properties of $\Sigma$ force the two components $\Spec \I$ and $\Sigma^*\Spec \I$ to intersect at an arithmetic point.  Since the Hecke algebra is \'etale over $\Lambda$ at arithmetic points, $\Sigma$ must descend to an automorphism of $\I$, as desired.  
+
+\section*{Future work}
+\textit{\textbf{Determining the $\I_0$-level and relation to $p$-adic $L$-functions.}}  Theorem~\ref{thesis} guarantees that there is a non-zero $\I_0$-ideal $\Aa_0$ such that the image of $\rho_F$ contains all determinant $1$ matrices that are congruent to the identity modulo $\Aa_0$.  The largest such ideal is called the \textit{$\I_0$-level} of $\rho_F$ and is denoted $\cc_{0,F}$.  A natural question is to determine the $\I_0$-level.  I plan to prove the following conjecture, which is a generalization of Hida's Theorem II in \cite{Hida15}.  
+
+\begin{conj}\label{level}
+Let $F$ and $p$ be as in Theorem~\ref{thesis}.  
+\begin{enumerate}
+\item\label{full} If $\im \rho_F \supseteq \SL_2(\F_p)$, then $\cc_{0,F} = \I_0$.  That is, $\im \rho_F \supseteq \SL_2(\I_0)$.
+\item\label{Katz} Suppose that $\bar{\rho}_F$ is absolutely irreducible and $\bar{\rho}_F \cong \Ind_M^\Q \bar{\psi}$ for an imaginary quadratic field $M$ in which $p$ splits and a character $\bar{\psi} : \Gal(\overline{\Q}/M) \to \overline{\F}_p^\times$.  Assume $M$ is the only such quadratic field.  Under minor conditions on the tame level of $F$, there is a product $\aL_0$ of anticyclotomic Katz $p$-adic $L$-functions such that $\cc_{0, F}$ is a factor of $\aL_0$.  Furthermore, every prime factor of $\aL_0$ is a factor of $\cc_{0, F}$ for some $F$.  
+\end{enumerate}
+\end{conj}
+
+Note that even when $\I = \Lambda$, Conjecture \ref{level} is stronger than Hida's Theorem II \cite{Hida15}.  Furthermore, Conjecture \ref{level}.\ref{full} is a natural extension of the work of  Mazur-Wiles \cite{MazurWiles86} and Fischman \cite{Fischman02}.
+
+In proving case (\ref{full}) of the conjecture, I will make use of Manoharmayum's recent work that shows $\im \rho_F \supseteq \SL_2(W)$ for a finite unramified extension $W$ of $\Z_p$ \cite{Manoharmayum15}.  This will be combined with the $\Lambda$-module structure on the Pink Lie algebra associated to $\im \rho_F$ that was used in the proof of Theorem~\ref{thesis} to get the desired result.
+
+In proving case (\ref{Katz}), I will relate the $\I_0$-level to the congruence ideal of $F$ as in Hida's proof of Theorem II \cite{Hida15}.  The connection to Katz $p$-adic $L$-functions is then obtained by relating the congruence ideal to the $p$-adic $L$-function through known cases of the Main Conjecture of Iwasawa Theory.  The idea is that replacing the $\Lambda$-level in Hida's work with the more precise $\I_0$-level will allow me to remove the ambiguity of the square factors that show up in Theorem II \cite{Hida15}.
+
+Proving Conjecture \ref{level} would yield refined information about the images of Galois representations attached to Hida families.  It is the first step in completely determining the images of such representations.  
+
+%\textit{\textbf{Computing $\OK_0$-levels of classical Galois representations.}}  The goal of this project is to compute the level of Galois representations coming from classical modular forms and thus completely determine the image of such a representation.  Let $f$ be a non-CM classical Hecke eigenform, $\p$ a prime of the ring of integers of the field generated by the Fourier coefficients of $f$, and $\rho_{f, \p} : G_\Q \to \GL_2(\OK)$ the associated $p$-adic representation.  Let $\pi$ be a uniformizer of the subring $\OK_0$ of $\OK$ fixed by all conjugate self-twists.  By the work of Ribet \cite{Ribet83} and Momose \cite{Momose81}, there is a minimal non-negative integer $c(f, \p)$ such that $\im \rho_f$ contains all matrices of determinant $1$ that are congruent to the identity modulo $\pi^{c(f, \p)}$.  Their work shows that $c(f, \p) = 0$ for all but finitely many primes $\p$.  However, relatively little is known about the case when $c(f, \p)$ is positive and the weight of $f$ is greater than $2$.  I plan to study how $c(f, \p)$ changes as $f$ varies over the classical specializations of a non-CM Hida family that is congruent to a CM family.
+
+%This project will have both theoretical and computational components.  First, I will establish a relationship between $c(f, \p)$ and the congruence number of $f$, which should also be related to values of the Katz $p$-adic $L$-function, as suggested by the proof of Theorem II in \cite{Hida15}.  Once this is established, I will create a method in the open source software Sage \cite{SAGE} to compute $c(f, \p)$ by computing the congruence number of $f$.  This should be relatively straightforward since Sage can already compute congruence numbers.  Using the new functionality, I will create a large  data set of levels of classical Galois representations in Hida families, which will likely lead to new conjectures to be studied theoretically.  I have experience working with Sage from my Women in Numbers 3 project \cite{BCLMN15} and from leading a project at Sage Days 69.  Indeed, my Sage Days project consisted of writing a method to test whether a modular form is CM, a first step in the eventual program to compute $c(f, \p)$.  I hope to involve undergradutes in the computational aspects of the project.  The programming should be straightforward and would be a good way for them to learn about modular forms.
+
+\textit{\textbf{Analogue of the Mumford-Tate Conjecture in $p$-adic families.}}  Another way to describe the work of Ribet and Momose is that they proved the Mumford-Tate Conjecture for compatible systems of Galois representations associated to classical modular forms.  Hida has proposed an analogue of the Mumford-Tate Conjecture for $p$-adic families of Galois representations.  For an arithmetic prime $\Pp$ of $\I$, write $\MT_\Pp$ for the Mumford-Tate group of the compatible system containing $\rho_{f_\Pp}$, so $\MT_\Pp$ is an algebraic group over $\Q$.  Let $\kappa(\Pp) = \I_\Pp/\Pp_\Pp$, and write $G_\Pp$ for the Zariski closure of $\im \rho_{f_\Pp}$ in $\GL_2(\kappa(\Pp))$.  Let $G_\Pp^\circ$ be the connected component of the identity of $G_\Pp$ and $G_\Pp'$ the (closed) derived subgroup of $G_\Pp$.  Finally, let $\Gamma_F$ denote the group generated by the conjugate self-twists of a non-CM Hida family $F$.
+
+\begin{conj}[Hida]\label{p-adic MT}
+Assume $F$ is non-CM.  There is a simple algebraic group $G'$, defined over $\Q_p$, such that for all arithmetic primes $\Pp$ of $\I$ one has $G_\Pp' \cong G' \times_{\Q_p} \kappa(\Pp)$ and $\Res_{\Q_p}^{\kappa(\Pp)} G_\Pp$ is (the ordinary factor of) $\MT_\Pp \times_\Q \Q_p$.  Furthermore, the component group $G_\Pp/G_\Pp^0$ is canonically isomorphic to the Pontryagin dual of the decomposition group of $\Pp$ in $\Gamma_F$.
+\end{conj} 
+
+By obtaining a sufficiently precise understanding of images of Galois representations attached to Hida families through the first project, I plan to prove results along the lines of Conjecture \ref{p-adic MT}.  I have some preliminary results relating the Pontryagin dual of $\Gamma_F$ to the quotient $(\im \rho_F)/(\im \rho_F|_H)$ for a certain finite index normal subgroup $H$ of $G_\Q$.
+
+Completing this research objective, or even any preliminary results in this direction, would reveal that the images of classical specializations of the Galois representation attached to a Hida family are even more related to one another than previously thought.  Not only would they arise as specializations of some group in $\GL_2(\I)$, they could all be found simply by base change from a single group, at least up to abelian error.
+
+%\textit{\textbf{Other settings.}}  The above projects can be studied in more general settings than Hida families for $\GL_2$.  Hida and Tilouine proved an analogue of Hida's Theorem II \cite{Hida15} for $\GSp_4$-representations associated to Hida families of Seigel modular forms \cite{HidaTilouine15}.  There are two main difficulties they overcome in their work: the types of symmetries are much more complicated than CM versus non-CM, and Pink's theory of Lie algebras is only valid for $\SL_2$.  The tools they developed to overcome these problems could be applied to study analogues of the above questions for bigger groups.  
+
+%Tilouine and his collaborators proved an analogue of Theorem~\ref{thesis} in the non-ordinary $\GL_2$-setting \cite{CIT15} by building on the ideas in my thesis.  They introduce the relative Sen operator to create a $\Lambda$-algebra structure on the Lie algebra of $\im \rho_F$ as their representation is not ordinary.  This idea will be useful in studying the above questions in the non-ordinary setting. 
+
+\bibliography{RSLibrary}{}
+\bibliographystyle{acm}
+
+\end{document}

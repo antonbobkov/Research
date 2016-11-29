@@ -1,0 +1,336 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{fullpage}
+%\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{oldgerm}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{bbm}
+%\usepackage{hyperref}
+%\usepackage{pstricks}
+%\usepackage{showkeys}
+\usepackage{ulem}
+
+%\headsep=0.05cm
+%\oddsidemargin=0.26cm
+%\textwidth 13cm
+%\textheight 19cm
+%\voffset -1cm
+ 
+\def \ooverline #1#2#3%
+{\mkern #1mu \overline{\mkern -#1mu #3 \mkern -#2mu }\mkern #2mu }
+
+\def \Kbar {\ooverline40K{\mkern 1mu}{}}
+\def \Rbar {\ooverline40R{\mkern 1mu}{}}
+\def \Mbar {\ooverline40M{\mkern 1mu}{}}
+\def \Nbar {\ooverline40N{\mkern 1mu}{}}
+\def \Rhat {\widehat{\mkern -3mu \vrule height 1.9ex width 0pt \smash{R}}}
+\def \Rbarhat {\widehat{\mkern -3mu \vrule height 1.9ex width 0pt \smash{\Rbar}}}
+\def \Kbarhat {\widehat{\mkern -3mu \vrule height 1.9ex width 0pt \smash{\Kbar}}}
+
+\DeclareMathOperator{\GG}{\mathbf{G}} \DeclareMathOperator{\ZZ}{\mathbf{Z}} \DeclareMathOperator{\QQ}{\mathbf{Q}} \DeclareMathOperator{\FF}{\mathbf{F}}
+\DeclareMathOperator{\NN}{\mathbf{N}} \DeclareMathOperator{\RR}{\mathbf{R}} \DeclareMathOperator{\CC}{\mathbf{C}}
+
+\DeclareMathOperator{\Frac}{Frac} \DeclareMathOperator{\Gal}{Gal} \DeclareMathOperator{\rg}{rg} \DeclareMathOperator{\et}{\textrm{\'et}} \DeclareMathOperator{\cris}{cris} \DeclareMathOperator{\HT}{HT} \DeclareMathOperator{\rig}{rig} \DeclareMathOperator{\lcris}{log-cris}
+\DeclareMathOperator{\dR}{dR} \DeclareMathOperator{\ldR}{log-dR} \DeclareMathOperator{\f}{f} \DeclareMathOperator{\Isom}{Isom} \DeclareMathOperator{\T}{T}
+
+\DeclareMathOperator{\End}{\mathsf{End}} \DeclareMathOperator{\Hom}{\mathsf{Hom}} \DeclareMathOperator{\Aut}{\mathsf{Aut}}
+\DeclareMathOperator{\Ker}{Ker} \DeclareMathOperator{\im}{Im} \DeclareMathOperator{\Coker}{Coker} \DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\I}{I}
+\DeclareMathOperator{\isomto}{\overset{\sim}{\to}} \DeclareMathOperator{\from}{\leftarrow} \DeclareMathOperator{\dual}{\mathtt{D}}
+\DeclareMathOperator{\Tor}{Tor} \DeclareMathOperator{\Ext}{Ext} \renewcommand{\H}{\mathrm{H}}
+
+\DeclareMathOperator{\Spec}{Spec} \DeclareMathOperator{\Spf}{Spf} \DeclareMathOperator{\Spm}{Spm} \DeclareMathOperator{\D}{D} \DeclareMathOperator{\Fil}{Fil}
+
+\DeclareMathOperator{\W}{W} \DeclareMathOperator{\A}{A} \DeclareMathOperator{\dd}{d} \DeclareMathOperator{\Hdg}{Hdg} \DeclareMathOperator{\Lie}{Lie}
+
+\DeclareMathOperator{\bV}{\mathbf{V}} \DeclareMathOperator{\bL}{\mathbf{L}} \DeclareMathOperator{\bT}{\mathbf{T}}
+
+\DeclareMathOperator{\Mat}{\mathsf{M}} \DeclareMathOperator{\GL}{\mathsf{GL}} \DeclareMathOperator{\GSp}{\mathsf{GSp}} \DeclareMathOperator{\Sp}{\mathsf{Sp}} 
+
+\DeclareMathOperator{\Tr}{Tr} \DeclareMathOperator{\Int}{Int}
+
+\newcommand{\loccit}{\textit{loc. cit.}}
+\newcommand{\cf}{\textit{cf }}
+\newcommand{\ie}{\textit{i.e. }}
+\newcommand{\idem}{\textit{idem }}
+\newcommand{\ops}{\textit{on peut supposer }}
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bH}{\mathbb{H}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\BbV}{\mathbb{V}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\lU}{{}_U}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bfV}{\mathbf{V}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cA}{\mathcal{A}}
+%%%%%% gothic fonts
+
+%\font\twelvefrak=eufm10 at 12pt
+%\font\tenfrak=eufm10
+%\font\sevenfrak=eufm7
+%\font\fivefrak=eufm5
+%\newfam\frakfam
+%\textfont\frakfam=\twelvefrak
+%\scriptfont\frakfam=\sevenfrak
+%\scriptscriptfont\frakfam=\fivefrak
+%\def\frak{\fam\frakfam\twelvefrak}
+
+
+%%%%%% Bbb fonts
+
+%\font\twelveBbb=msbm10 at 12pt
+%\font\tenBbb=msbm10
+%\font\sevenBbb=msbm7
+%\font\fiveBbb=msbm5
+%\newfam\Bbbfam
+%\textfont\Bbbfam=\twelveBbb
+%\scriptfont\Bbbfam=\sevenBbb
+%\scriptscriptfont\Bbbfam=\fiveBbb
+%\def\Bbb{\fam\Bbbfam\twelveBbb}
+
+
+%%%%%% Theorem-like environments
+
+
+
+\def\pf{{\it Proof. }}
+
+
+%%%%%% Math symbols
+
+
+
+\def\im{\mathop{\rm Im }}
+\def\ker{\mathop{\rm Ker}}
+\def\dist{{\rm Dist}}
+\def\haut{{\rm ht}}
+
+\def\al{\alpha}
+\def\lam{\lambda}
+\def\om{\omega}
+\def\vep{\varepsilon}
+
+\def\S{{\frak S}}
+\def\M{{\frak M}}
+%\def\T{{\frak T}}
+\def\a{{\frak a}}
+\def\p{{\frak p}}
+\def\g{{\frak g}}
+\def\t{{\frak t}}
+\def\h{{\frak h}}
+%\def\f{{\frak f}}
+\def\q{{\frak q}}
+\def\z{{\frak z}}
+\def\b{{\frak b}}
+\def\n{{\frak n}}
+\def\u{{\frak u}}
+\def\l{{\frak l}}
+\def\U{{\cal U}}
+\def\cZ{{\cal Z}}
+\def\w{{\bf w}}
+\def\C{{\Bbb C}}
+\def\m{{\frak m}}
+\def\s{{\frak s}}
+\def\bW{\bf W}
+\def\N{{\Bbb N}}
+%\def\A{{\Bbb A}}
+\def\Z{{\Bbb Z}}
+\def\Zp{{{\Bbb Z}_p}}
+\def\Q{{\Bbb Q}}
+\def\e{{\bf e}}
+\def\R{{\Bbb R}}
+\def\C{{\Bbb C}}
+\def\F{{{\Bbb F}}}
+\def\P{{{\Bbb P}}}
+\def\S{{{\Bbb S}}}
+\def\barX{{\overline{X}}}
+\def\X{{{\Bbb X}}}
+\def\G{{{\Bbb G}}}
+\def\barF{{\overline{F}}}
+\def\sp{\mbox{\bf spin}} 
+\def\adots{\mathinner{\mkern2mu\raise1pt\hbox{.}\mkern3mu\raise4pt\hbox{.}\mkern1mu\raise7pt\hbox{.}}}
+
+ 
+\newtheorem{thm}{Th\'eor\`eme}
+\newtheorem{cor}{Corollaire}
+\newtheorem{pro}{Proposition}
+\newtheorem{lem}{Lemme}
+\newtheorem{sublem}{Sous-Lemme}
+\newtheorem{de}{D\'efinition}
+
+\newtheorem{theo}[subsection]{Th\'eor\`eme}
+\newtheorem{lemm}[subsection]{Lemme}
+\newtheorem{coro}[subsection]{Corollaire}
+\newtheorem{prop}[subsection]{Proposition}
+\theoremstyle{definition}
+\newtheorem{rema}[subsection]{Remarque}
+\theoremstyle{definition}
+\newtheorem{defi}[subsection]{D\'efinition}
+\newenvironment{nota}{\textbf{Notation. }}{}
+\theoremstyle{definition}
+\newtheorem{para}[subsection]{}
+\theoremstyle{definition}
+\newtheorem{exam}[subsection]{Example}
+\theoremstyle{definition}
+\newtheorem{rapp}[subsection]{Rappel}
+
+\usepackage{color}
+\newcommand{\change}[1]{\textcolor{red}{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Letter in support of  J. Lang's visit at U. Paris 13}
+\author{J. Tilouine, Professor of Mathematics, Universit\'e Paris 13\\ 99 av. J.-B. Cl\'ement, 93430 Villetaneuse, FRANCE\\ email : \MakeLowercase{jacques.tilouine@free.fr}, phone: +33-1-49 40 40 87}
+\date{September 23, 2015}
+\begin{document}
+\maketitle
+
+\vskip 5mm
+
+I met Dr. Lang several times, either during visits at UCLA, or on the occasion of various conferences, at MSRI (in Fall 2014), 
+and most recently in Montreal in March 2015. Her energy and her seriousness in research struck me from the beginning. 
+So, when she talked to me about a possibility of spending a couple of years in Paris in our group, I was really delighted.
+
+Her subject of research is the study of the image of Galois representations associated to $p$-adic families of automorphic forms,
+ inside their Mumford-Tate group. This study, initiated by Hida, consists in two parts: a qualitative one, whose goal is to establish 
+the existence of a maximal principal congruence subgroup of the Mumford-Tate group inside the Galois image (up to suitable conjugation), 
+and a quantitative one, which consists in determining the level of this congruence sugroup 
+-called the Galois level, in terms of a congruence ideal (or a $p$-adic $L$ function, when these two objects are related) 
+between the given family and other, more degenerate, families. 
+This intuition of Hida proved remarkably accurate. He found,  in a beautiful paper (Compos. Math. 2015), 
+that these two ideals are indeed closely related in the $GL(2)/\QQ$ case . The hope is that after suitable reformulation, they might be equal. 
+The contribution of Dr. Lang is a key step towards this reformulation. Indeed, in her thesis, she established
+ a $\Lambda$-adic version of theorems by  Ribet and Momose. They showed that the image of Galois for  a given modular form
+ is open (modulo center) in an inner form of $GL(2)$ 
+over an explicit subring of the Hecke ring, called the conjugate self-twist Hecke subring (note that in the ordinary case, this inner form is 
+$GL(2)$ itself). She treated the case of 
+Hida families for $GL(2)$. Her main result concerns the definition and properties 
+of a Galois representation defined over the $\Lambda$-adic analogue of the self-twist Hecke subring,
+based on deformation theory. In a work in progress, Dr. Lang found another definition of this ring 
+as the trace ring of the adjoint representation,
+using an old paper by R. Pink (Compact subgroups of linear algebraic groups), as suggested  by Hida.  
+This reformulation allows generalizations to Hida families over larger groups. 
+
+In fact, in a joint paper
+ (to appear in the Proc. of a Conf. on Serre's Conjecture, Hausdorff Institute, Bonn 2013)
+Hida and myself found generalizations of Hida's results to several variable Hida families over larger groups, but
+we needed to assume that the
+$\Lambda$-adic  Hecke ring coincides with the (several variable) Iwasawa algebra, because 
+we didn't tackle the problem of  conjugate self twist Hecke rings. 
+
+
+Moreover, in a recent preprint ArXiv with my student A. Conti and A. Iovita, we proved, in the case of $GL(2)$, 
+but in the non ordinary, 
+finite slope case, qualitative and quantitative results similar to Hida's. 
+In this paper, instead of using directly Hida's aforementioned paper, we chose to use Dr. Lang's thesis, because of its excellent lisibility and
+the great degree of generality of the statements which make them easily applicable to our situation, 
+despite our different setting.
+
+It should also be mentioned that I have another PhD student, Huan Chen, at Paris 13 who
+ is studying the image of Galois representations associated to  (ordinary) Hida families for higher rank unitary groups
+(constructed in Geraghty's thesis). These families must be congruent to, but not equal to, families coming  from smaller unitary groups
+by automorphic induction ( as studied by Arthur-Clozel, Harris-Labesse and Labesse). He studies also
+ Hida families on symplectic groups containing subfamilies of automorphic symmetric power lifts,
+ as constructed by Kim-Shahidi and Clozel-Thorne. I recommended him too 
+to read J. Lang's thesis, because of the clarity of her formulations and proofs.
+
+These studies do obviously fit in the new technology provided by Dr. Lang's thesis and project. I do hope that 
+concrete interaction (and even joint works) with my students will result from Dr. Lang's stay at Paris 13.
+I will be present at Paris 13 in 2016-2018, most of the time.
+
+In our group, we usually conduct two activities weekly: an open seminar and semester-long workshops about  important recent results 
+(more or less democratically chosen). On these days, people have lunch together and we then have informal discussions.
+But besides these two meetings, we feel that a visitor does not owe daily presence at our university
+(although we'll provide her of course with office, computer and access to electronic and physical library).
+So during her stay, she will be encouraged, besides,  to attend whatever seminar she likes, in Paris, Orsay or IHES, 
+and to interact with whomever she wishes. It is to be noted that in our group, besides my students and myself, 
+interesting interlocutors for her include 
+
+-P. Boyer, an expert in 
+the cohomology of Shimura varieties, 
+
+-A. Mokrane, an expert in $p$-adic Hodge theory,
+
+-B. Stroh, an expert in arithmetic and rigid geometry of Shimura varieties 
+especially for applications to $p$-adic automorphic forms, 
+
+-F. Brumley,  an expert in automorphic forms and harmonic analysis
+on locally symmetric domains
+
+Our new project with Hida deals with applications of $R=T$ theorems to the relation between Galois level and congruence ideals in the
+$Sym^3\colon GL_2\to GSp(4)$ case for instance. While it won't interfere directly with Dr. Lang's current projects, it may
+also help to give them some impetus. 
+
+In conclusion, I consider that  Dr. Lang's results and research program fit very well 
+with the research themes of our group at Paris 13.
+ I therefore expect a very fruitful stay for her, with great benefit for both parties. 
+I totally support her application to visit us in 2016-2018.
+
+\vskip 2cm
+
+\hfill{Jacques Tilouine}
+
+\hfill{Professor of Mathematics}
+
+\hfill{Universit\'e de Paris 13}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

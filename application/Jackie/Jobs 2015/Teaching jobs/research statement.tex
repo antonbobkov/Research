@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{amsfonts,amsmath,amsthm,amssymb, url}
+
+\textwidth 6.5in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+\usepackage{fancyhdr}
+\textheight 9in
+\topmargin -.5in
+\pagestyle{fancy}
+\lhead{Research Statement}
+\chead{Jaclyn Lang}
+\rhead{December 2015}
+
+\usepackage[OT2,T1]{fontenc}
+\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathalpha}{cyrletters}{"58}
+
+\usepackage{titlesec}
+\titleformat{\section}
+	{\centering\normalfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+	{\centering\normalfont\itshape}{\thesubsection}{1em}{}
+
+\usepackage{color}
+\newcommand{\qtn}[1]{\textcolor{red}{#1}}
+
+\newcommand{\Aa}{\mathfrak{a}}
+\newcommand{\cc}{\mathfrak{c}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\aL}{\mathcal{L}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\OK}{\ensuremath{\mathcal{O}}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\Pp}{\mathfrak{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem{conj}{Conjecture}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\GSp}{GSp}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\MT}{MT}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\section*{Introduction}
+My research is in the area of algebraic number theory.  I study modular forms, Galois representations, $p$-adic families of such objects, and elliptic curves.  The main result of my thesis is that, in a qualitative sense, the Galois representation associated to an ordinary $p$-adic family of modular forms has ``large'' image.  My future research plans include improving the result to a quantitative form and obtaining a complete description of the images of such Galois representations.  Part of this project will require explicit computations using the open source software Sage, a task in which I am excited to involve undergraduate researchers.    
+
+Galois representations are fundamental objects of study in modern number theory.  The philosophy behind the study of Galois representations comes from a universal theme in mathematics: linearization. Namely, there is a complicated mysterious object that we want to understand because it encodes lots of interesting information.  In our case it is the group $G_\Q$, the absolute Galois group of the rational numbers, $\Q$.  Just as a geometer studies the tangent space of a complicated manifold or an applied mathematician uses linear approximations to study a non-linear partial differential equation, we want to study $G_\Q$ using one of the most powerful tools in mathematics: linear algebra.  This is what representations do; they allow us to study a complicated group like $G_\Q$ through its action on certain vector spaces.  Thus we end up studying a collection of matrices known as the \textit{image of the representation}, a kind of ``shadow'' of $G_\Q$ inside matrices, which are more concrete objects.  
+
+More formally, recall that a \textit{ring} is a collection of elements that can be added and multiplied together, like the integers.  For a ring $A$, write $\GL_n(A)$ for the collection of all invertible $(n \times n)$-matrices with entries in $A$ and $\SL_n(A)$ for the collection of matrices in $\GL_n(A)$ that have determinant $1$.  A \textit{Galois representation} is a (continuous) homomorphism $\rho : G_\Q \to \GL_n(A)$, and the image of $\rho$ is the image of this function.  One of the first examples of Galois representations arises from elliptic curves defined over $\Q$.  If $E$ is such an elliptic curve, then for each prime $p$ there is a Galois representation $\rho_{E, p} : G_\Q \to \GL_2(\Z_p)$, where $\Z_p$ is the \textit{$p$-adic integers}.   
+
+A fundamental problem is to determine the image of a given Galois representation.  After all, we could always take $\rho$ to be the trivial representation, which sends every element of $G_\Q$ to the identity matrix.  This does not tell us anything about $G_\Q$ because its image (the set consisting of the identity matrix) is so small.  The larger the image of a Galois representation, the more information we can recover about $G_\Q$.  The following definition quantifies what it means for a representation to have large image.  Given a representation $\rho : G_\Q \to \GL_n(A)$ and a subring $A_0$ of $A$, we say $\rho$ is \textit{$A_0$-full} if there is a non-zero $A_0$-ideal $\Aa$ such that the image of $\rho$ contains all elements of $\SL_n(A_0)$ that are congruent to the identity modulo $\Aa$.  In the 1960s, Serre studied the images of Galois representations associated to elliptic curves.  His work implies that, in the generic case (when $E$ does not have something called  \textit{complex multiplication (CM)}), $\rho_{E, p}$ is $\Z_p$-full \cite{Serre68}.  Serre's result is an example of a general pattern governing the expected behavior of images of Galois representations that arise from geometry.
+
+\begin{heuristic}
+The image of a Galois representation should be as large as possible, subject to the symmetries of the geometric object from which it arose.
+\end{heuristic}
+
+\section*{Past Work}
+
+The notion of ``symmetry'' in the above heuristic depends on the geometric object.  The relevant symmetry for an elliptic curve $E$ is CM, a condition that means that $E$ has extra symmetries.  In the 1980s, Ribet and Momose determined, up to finite error, the image of a Galois representation $\rho: G_\Q \to \GL_2(\OK)$ associated to a classical modular form without CM \cite{Momose81, Ribet83}.  They showed that $\rho$ is $\OK_0$-full for a certain subring $\OK_0$ of $\OK$ cut out by new symmetries of modular forms known as ``conjugate self-twists''.  
+
+In the 1980s, Hida developed his theory of $p$-adic families of (ordinary) modular forms \cite{Hida86a}.  To such a family $F$, Hida associated a Galois representation $\rho_F : G_\Q \to \GL_2(\I)$ for a certain ring $\I$ \cite{Hida86b}.  From $\rho_F$ one obtains a mod $p$ representation $\bar{\rho}_F$.  One can consider conjugate self-twists of $F$ and form the ring $\I_0$ cut out by such twists.  The following theorem is the main result of my thesis.
+
+\begin{theorem}[Lang \cite{Lang15}]\label{thesis}
+Let $F$ be a non-CM Hida family.  Under mild conditions on $\overline{\rho}_F$, $\rho_F$ is $\I_0$-full.
+\end{theorem}
+
+I have also worked on the arithmetic of elliptic curves.  With my collaborators, I studied shadow lines of elliptic curves, an invariant first defined by Mazur and Rubin \cite{MazurRubin03}.  Using explicit class field theory, we developed an algorithm to compute the shadow line of a triple $(E, K, p)$, where $E$ is an elliptic curve over $\Q$, $K$ is an imaginary quadratic field, and $p$ is a rational prime that satisfy certain mild properties.  We implemented our algorithm in Sage \cite{SAGE} to compute the first examples of shadow lines.  Our paper will appear in a conference proceedings \cite{BCLMN15}.  
+
+\section*{Future work}
+\textit{\textbf{Determining the $\I_0$-level and relation to $p$-adic $L$-functions.}}  Theorem~\ref{thesis} guarantees that there is a non-zero $\I_0$-ideal $\Aa_0$ such that the image of $\rho_F$ contains all determinant $1$ matrices that are congruent to the identity modulo $\Aa_0$.  The largest such ideal is called the \textit{$\I_0$-level} of $\rho_F$ and is denoted $\cc_{0,F}$.  A natural question is to determine the $\I_0$-level.  I plan to prove the following conjecture, which is a generalization of Hida's Theorem II in \cite{Hida15}, with the help of undergraduate researchers.
+
+\begin{conj}\label{level}
+Let $F$ and $p$ be as in Theorem~\ref{thesis}.  
+\begin{enumerate}
+\item\label{full} If $\im \rho_F \supseteq \SL_2(\F_p)$, then $\cc_{0,F} = \I_0$.  That is, $\im \rho_F \supseteq \SL_2(\I_0)$.
+\item\label{Katz} Suppose that $\bar{\rho}_F$ is absolutely irreducible and induced from a character $\bar{\psi} : \Gal(\overline{\Q}/M) \to \overline{\F}_p^\times$ for an imaginary quadratic field $M$.  Under some technical conditions, there is a product $\aL_0$ of anticyclotomic Katz $p$-adic $L$-functions such that $\cc_{0, F}$ is a factor of $\aL_0$.  Furthermore, every prime factor of $\aL_0$ is a factor of $\cc_{0, F}$ for some $F$.  
+\end{enumerate}
+\end{conj}
+
+Even when $\I = \Lambda$, Conjecture \ref{level} is stronger than Hida's Theorem II \cite{Hida15}.  Furthermore, Conjecture \ref{level}.\ref{full} is a natural extension of the work of  Mazur-Wiles \cite{MazurWiles86} and Fischman \cite{Fischman02}.  Proving Conjecture \ref{level} would yield refined information about the images of Galois representations attached to Hida families.  It is the first step in completely determining the images of such representations.  
+
+In proving case (\ref{full}) of the conjecture, I will make use of Manoharmayum's recent work that shows $\im \rho_F \supseteq \SL_2(W)$ for a finite unramified extension $W$ of $\Z_p$ \cite{Manoharmayum15}.  This will be combined with some techniques that I developed in the proof of Theorem \ref{thesis} to get the desired result.  Some of the techniques in my thesis involve carefully manipulating certain $(2 \times 2)$-matrices to make a certain Lie algebra large.  These techniques are accessible to an undergraduate with some background in abstract algebra, so I plan to facilitate undergraduate research through this project. 
+
+In proving case (\ref{Katz}), I will relate the $\I_0$-level to the congruence ideal of $F$ as in Hida's proof of Theorem II \cite{Hida15}.  The connection to Katz $p$-adic $L$-functions is then obtained by relating the congruence ideal to the $p$-adic $L$-function through known cases of the Main Conjecture of Iwasawa Theory.  The idea is that replacing the $\Lambda$-level in Hida's work with the more precise $\I_0$-level will allow me to remove the ambiguity of the square factors that show up in Theorem II \cite{Hida15}.
+
+\textit{\textbf{Computing $\OK_0$-levels of classical Galois representations.}}  The goal of this project is to compute the level of Galois representations coming from classical modular forms and thus completely determine the image of such a representation.  Let $f$ a classical modular form and $\p$ an embedding of a fixed algebraic closure of $\Q$ into a fixed algebraic closure of the $p$-adic numbers.  Under certain conditions, one can associate to the pair $(f, \p)$ a Galois representation $\rho_{f, \p} : G_\Q \to \GL_2(\OK)$ for a certain ring $\OK$.  As discussed above, Ribet \cite{Ribet83} and Momose \cite{Momose81} found a subring $\OK_0$ of $\OK$ such that $\im \rho_{f, \p}$ is $\OK_0$-full.  The ring theory of $\OK_0$ is particularly simple; there one ideal $\pi$ such that all other non-zero ideals of $\OK_0$ are powers of $\pi$.  Ribet and Momose show that, under certain conditions, there is a minimal non-negative integer $c(f, \p)$ such that $\im \rho_{f, \p}$ contains all matrices of determinant $1$ that are congruent to the identity modulo $\pi^{c(f, \p)}$.  Their work further shows that $c(f, \p) = 0$ for all but finitely many primes $\p$.  However, relatively little is known about the case when $c(f, \p)$ is positive and the weight of $f$ is greater than $2$.  I plan to study how $c(f, \p)$ changes as $f$ varies over certain families of modular forms.
+
+This project will have both theoretical and computational components.  First, I will establish a relationship between $c(f, \p)$ and the congruence number of $f$, which should also be related to values of the Katz $p$-adic $L$-function, as suggested by the proof of Theorem II in \cite{Hida15}.  Once this is established, I will guide my undergraduate research students to create a method in the open source software Sage \cite{SAGE} to compute $c(f, \p)$ by computing the congruence number of $f$.  Sage can already compute congruence numbers, making the scope of this project manageable  even for math majors who are new to research and programming.  Using the new functionality, we will create a large data set of levels of classical Galois representations in Hida families, which will likely lead to new conjectures to be studied theoretically.  I have experience working with Sage from my Women in Numbers 3 project \cite{BCLMN15} and from leading a project at Sage Days 69.  Indeed, my Sage Days project consisted of writing a method to test whether a modular form is CM, a first step in the eventual program to compute $c(f, \p)$.  
+
+\textit{\textbf{Other settings.}}  The above projects can be studied in more general settings than representations valued in $(2 \times 2)$-matrices.  Hida and Tilouine proved an analogue of Hida's Theorem II \cite{Hida15} for representations valued in $(4 \times 4)$-matrices \cite{HidaTilouine15}.  There are two main difficulties they overcome in their work: the types of symmetries are much more complicated than CM versus non-CM, and a certain theory of Lie algebras is only valid for $\SL_2$.  I hope to use the tools they developed to overcome these problems to study analogues of the above questions for larger matrices.  
+
+Tilouine and his collaborators proved an analogue of Theorem~\ref{thesis} in the non-ordinary $\GL_2$-setting \cite{CIT15} by building on the ideas in my thesis.  They introduce the relative Sen operator to avoid my assumption that the representation is ordinary.  This idea will be useful in studying the above questions in the non-ordinary setting. 
+
+\bibliography{RSLibrary}{}
+\bibliographystyle{acm}
+
+\end{document}

@@ -1,0 +1,59 @@
+\def\position{{a postdoctoral fellowship or similar junior faculty position in your department}}
+
+\def\mathjobs{{, as posted on the MathJobs website.}}
+
+\def\website{{, as posted on your website.}}
+
+\def\nopost{{. Although I have not seen any posted advertisements for such a position on
+your website or elsewhere, I am submitting my name for consideration should
+such a position become available.}}
+
+\newcommand{\notopol}[1]{{. Although I am aware that your posted advertisement
+emphasizes #1, I am submitting my name for consideration should a position in
+topology become available.}}
+
+\newcommand{\workwith}[2]{{I would be excited to work with the topologists at #1,
+including #2.}}
+
+\def\generic {{the AMS cover sheet, my curriculum vitae, a list of publications, and my research and teaching statements}}
+
+\def\nopublications{{the AMS cover sheet, my curriculum vitae, and my research and teaching statements}}
+
+\def\noteaching {{the AMS cover sheet, my curriculum vitae, a list of publications, and my research statement}}
+
+
+
+
+\newcommand{\coverletter}[7]
+{
+\begin{letter}{#1} % #1= Address, taken from places file.
+
+\opening{#2} % #2= Dear so-and so:
+
+I am a Ph.D. student in algebraic number theory at UCLA. I will graduate in June 2016 and would like to apply for #3 beginning in the Fall
+of 2016#4  As an undergraduate at Bryn Mawr, my professors embodied the teacher-scholar ideal.  They were my role models through graduate school as I developed my research program while honing my teaching skills to address the diverse undergraduate student body at UCLA.
+
+
+%#3 = name of position, or \position for generic
+%#4 = \mathjobs, \website, \nopost, \notopol{field}, or something else beginning with a punctuation mark.
+
+
+My research is in the area of algebraic number theory.  The main result of my thesis, which concerns the size of images of certain Galois representations, is under review at \textit{Algebra and Number Theory}.  Furthermore, as part of the Women in Numbers 3 Workshop my collaborators and I developed an algorithm that to compute the first examples of “shadow lines” - a certain invariant associated to elliptic curves.  Our paper will appear in the peer-reviewed conference proceedings.  One of my future research projects will combine computation and Galois representations, a project on which I would like to work with undergraduate researchers.  
+
+#5 %\workwith{School}{Topologists} or more specific information.
+
+I am committed to advocating for and supporting underrepresented minorities in mathematics through my teaching and mentoring.  In 2012 I was a teaching assistant and mentor for the Summer Program for Women in Mathematics at George Washington University, a program for undergraduate women majoring in math from around the country.  I was honored to receive the 2014 Distinguished Teaching Award from the UCLA Mathematics Department.  As a Teaching Assistant Consultant at UCLA, I developed curriculum to teach new TAs about pedagogy, including a guest lecture on stereotype threat from a professor of social psychology.  
+#6
+
+%#7 = list of contents. \generic, \genericplusapp, \genericpluspreprints
+My application consists of #7. In addition, it includes letters of reference
+from my advisor, Haruzo Hida, and from Jacques Tilouine, Chandrashekhar Khare, and Olga Radko.  Dr.~Radko's letter addresses my teaching experience.
+
+Please let me know if any of these items is not accessible or if I can provide
+any further information.  Thank you for your time and consideration.  I look forward to talking with you.
+
+%\closing{Sincerely,\\ \includegraphics{signature.pdf}}
+\closing{Sincerely, \\[0.0in] \includegraphics{signature.png}\\ Jaclyn Lang}
+
+\end{letter}
+}

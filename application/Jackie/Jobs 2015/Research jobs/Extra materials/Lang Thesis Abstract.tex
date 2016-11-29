@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{amsfonts,amsmath,amsthm,amssymb,url}
+
+\textwidth 6.5in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+\usepackage{fancyhdr}
+\pagestyle{plain}
+\textheight 9in
+\topmargin -.5in
+
+\usepackage{setspace}
+%\doublespacing
+
+\usepackage[OT2,T1]{fontenc}
+\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathalpha}{cyrletters}{"58}
+
+\newcommand{\Aa}{\mathfrak{a}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\OK}{\ensuremath{\mathcal{O}}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Pp}{\mathfrak{P}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{heuristic}{Heuristic}
+
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\GSp}{GSp}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\MT}{MT}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\tr}{tr}
+
+\pagestyle{fancy}\lhead{Thesis Abstract}
+\rhead{Jaclyn Lang}
+
+\begin{document}
+My research is in the area of algebraic number theory.  I study modular forms, Galois representations, $p$-adic families of such objects, and elliptic curves.  The main result of my thesis is that the Galois representation associated to an ordinary $p$-adic family of modular forms has ``large'' image.  
+
+The philosophy behind the study of Galois representations comes from a universal theme in mathematics: linearization. Namely, there is a complicated object that we want to understand; in our case it is the group $G_\Q$, the absolute Galois group of $\Q$ (the rational numbers).  Just as one studies the tangent space of a complicated manifold or uses linear approximations to study a non-linear partial differential equation, representations allow us to study $G_\Q$ through its action on certain vector spaces.  Thus we end up studying a collection of matrices known as the \textit{image of the representation}, a kind of ``shadow'' of $G_\Q$ inside matrices, which are more concrete objects.  
+
+More formally, if $A$ is a ring, write $\GL_n(A)$ for the collection of all invertible $(n \times n)$-matrices with entries in $A$ and $\SL_n(A)$ for the collection of matrices in $\GL_n(A)$ that have determinant $1$.  A \textit{Galois representation} is a (continuous) homomorphism $\rho : G_\Q \to \GL_n(A)$.  The \textit{image} of $\rho$ is all matrices in $\GL_n(A)$ of the form $\rho(\sigma)$ for $\sigma \in G_\Q$.  Elliptic curves defined over $\Q$ give rise to interesting Galois representations.  If $E$ is such an elliptic curve, then for each prime $p$ there is a Galois representation $\rho_{E, p} : G_\Q \to \GL_2(\Z_p)$, where $\Z_p$ is the \textit{$p$-adic integers}.   
+
+The larger the image of a Galois representation, the more information we can recover about $G_\Q$.  The following definition quantifies what it means for a representation to have large image.  Given a representation $\rho : G_\Q \to \GL_2(A)$ and a subring $A_0$ of $A$, we say $\rho$ is \textit{$A_0$-full} if there is a non-zero $A_0$-ideal $\Aa$ such that the image of $\rho$ contains all elements of $\SL_2(A_0)$ that are congruent to the identity modulo $\Aa$.  In the 1960s, Serre studied the images of Galois representations associated to elliptic curves.  His work implies that, in the generic case (when $E$ does not have something called  \textit{complex multiplication (CM)}), $\rho_{E, p}$ is $\Z_p$-full.  Serre's result is an example of a general pattern governing the expected behavior of images of Galois representations that arise from geometry.
+
+\begin{heuristic}
+The image of a Galois representation should be as large as possible, subject to the symmetries of the geometric object from which it arose.
+\end{heuristic}
+
+The notion of ``symmetry'' depends on the geometric object.  The relevant symmetry for an elliptic curve $E$ is CM, a condition that means that $E$ has extra symmetries.  In the 1980s, Ribet and Momose determined, up to finite error, the image of a Galois representation $\rho: G_\Q \to \GL_2(\OK)$ associated to a classical modular form without CM.  They showed that $\rho$ is $\OK_0$-full for a certain subring $\OK_0$ of $\OK$ cut out by new symmetries of modular forms known as ``conjugate self-twists''.  
+
+In the 1980s Hida developed his theory of $p$-adic families of (ordinary) modular forms.  To such a family $F$, Hida associated a Galois representation $\rho_F : G_\Q \to \GL_2(\I)$ for a certain ring $\I$.  From $\rho_F$ one obtains a mod $p$ representation $\bar{\rho}_F$.  One can consider conjugate self-twists of $F$ and form the ring $\I_0$ cut out by such twists.  The following theorem is the main result of my thesis.
+
+\begin{theorem}[Lang]\label{thesis}
+Let $F$ be a non-CM Hida family.  Under mild conditions on $\overline{\rho}_F$, $\rho_F$ is $\I_0$-full.
+\end{theorem}
+
+%I have also worked on the arithmetic of elliptic curves.  With my collaborators, I studied shadow lines of elliptic curves, an invariant first defined by Mazur and Rubin.  Using explicit class field theory, we developed an algorithm to compute the shadow line of a triple $(E, K, p)$, where $E$ is an elliptic curve over $\Q$, $K$ is an imaginary quadratic field, and $p$ is a rational prime that satisfy certain mild properties.  We implemented our algorithm in Sage to compute the first examples of shadow lines.  Our paper will appear in a conference proceedings.  
+\end{document}

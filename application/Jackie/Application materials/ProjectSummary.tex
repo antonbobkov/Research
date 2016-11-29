@@ -1,0 +1,109 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath, amsthm, amssymb, amsopn, amsfonts, amscd, fullpage, url}
+\usepackage{delarray}
+\usepackage{enumerate}
+
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{heuristic*}{Heuristic}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{case}{Case}
+\newtheorem{question}{Question}
+\newtheorem{heuristic}{Heuristic}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{ex}{Example}
+\newtheorem{exnum}{Example}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+
+\newcommand{\on}{\operatorname}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\nin}{\noindent}
+\newcommand{\Ker}{\ker}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\MT}{MT}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\tr}{tr}
+
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\sep}{\mathrm{sep}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\odd}{\mathrm{odd}}
+\newcommand{\Alex}{\mathrm{Alex}}
+\newcommand{\Arith}{\mathrm{Arith}}
+
+\def\Aa{\mathfrak{a}}
+\def\cc{\mathfrak{c}}
+\def\F{\mathbb{F}}
+\def\I{\mathbb{I}}
+\def\aL{\mathcal{L}}
+\def\m{\mathfrak{m}}
+\def\OK{\mathcal{O}}
+\def\p{\mathfrak{p}}
+\def\Pp{\mathfrak{P}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+
+\DeclareMathOperator{\Can}{Can}
+\DeclareMathOperator{\red}{red}
+
+\newcommand{\tensor}{\otimes}
+\newcommand{\XXX}{}
+\newcommand{\mult}{^\times}
+\newcommand{\ideal}[1]{\mathfrak{#1}}
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\GSp}{GSp}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\const}{const}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
+
+\usepackage{color}
+\newcommand{\qtn}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+\section*{Project Summary--Jaclyn Lang}
+\subsection*{Overview}
+The Principal Investigator (PI) proposes to study the images of Galois representations attached to modular forms and $p$-adic families of such objects.  Of particular interest are representations associated to Hida families.  The PI has already proved a qualitative result showing that, in the non-CM case, such representations have large images.  In particular, her previous work identifies a ring $\I_0$, cut out by certain symmetries of the $p$-adic family, such that the image of the Galois representations contains the kernel of reduction modulo some $\I_0$-ideal $\Aa_0$.  The \textbf{first research objective} of the proposed project is to quantitatively study $\Aa_0$ and obtain a precise description of $\Aa_0$ based on the shape of the residual representation.  This is expected to yield a relationship between images and Katz $p$-adic $L$-functions.
+
+The \textbf{second research objective} is to quantitatively study the images of Galois representations associated to classical modular forms by computing the extent to which they fail to contain $\SL_2$ of an appropriate ring.  This will be done by relating the image of such representations to the congruence number of the corresponding modular form and then using Sage \cite{SAGE} to compute congruence numbers.  The congruence number is expected to be related to certain values of the Katz $p$-adic $L$-function.  
+
+The \textbf{third research objective} is to prove a $p$-adic analogue of the Mumford-Tate Conjecture for Hida families.  Let $\rho$ be the Galois representation of a non-CM Hida family.  Hida has conjectured that there is a simple algebraic group $G$, defined over $\Q_p$, such that the image of each $p$-adic specialization of $\rho$ can be obtained from $G$ through an appropriate base change, at least up to abelian error.  The group $G$ plays a role analogous to the Mumford-Tate group for compatible systems of Galois representations.  The goal of this project is to show that $G$ exists and give a precise description of $G$.  It is expected that the finer information about the images of Galois representations attached to Hida families in the first objective will be useful in achieving this goal.
+
+The \textbf{fourth research objective} is to study the above questions in the non-ordinary setting and for representations valued in groups bigger than $\GL_2$.  This line of inquiry has already been started in two of the Sponsoring Scientist Tilouine's collaborations \cite{CIT15, HidaTilouine15}.  
+
+\subsection*{Intellectual Merit}
+Completion of the proposed objectives will give number theorists a precise understanding of the images of Galois representations associated to Hida families while also relating those images important objects such as $p$-adic $L$-functions and congruence numbers.  The second objective will provide the first significant computations of images of classical modular Galois representations that do not come from elliptic curves.  The third research objective will prove a heretofore unknown uniformity among images of classical Galois representations in a Hida family.  In particular, it will provide a $p$-adic uniformity of images of Galois representations in a Hida family analogous to the uniformity of images of Galois representations in a compatible system given by the classical Mumford-Tate Conjecture.  Finally, the fourth objective will begin to investigate the generality of the phenomena discovered through the first three objectives.
+
+\subsection*{Broader Impacts}
+Knowledge of the images of Galois representations has been useful for various methods in number theory including the construction of Euler systems \cite{LLZ14, Loeffler14} and solutions to the inverse Galois problem \cite{Yun14, Zywina15a}.  The PI hopes to engage undergraduate and masters students in the coding aspects of the second research objective.  Furthermore, the programs developed in the second research objective, along with the data they generate, will be made publicly available.  
+
+The PI has an extensive record of mentoring underrepresented minorities and women in STEM disciplines as well as sharing her research with a wide variety of audiences.  She plans to continue her mentoring as a postdoc and hopes to work with the European Women in Mathematics to organize conferences for women in mathematics in Paris.  She is acquiring the French language skills needed for her to share her research with both young students and current researchers. 
+\newpage
+
+\cite{Serre68}, \cite{Deligne71}, \cite{Ribet83}, \cite{Momose81}, \cite{Hida86a}, \cite{MazurWiles86}, \cite{Hida86b}, \cite{Fischman02}, \cite{Hida15}, \cite{Lang15}, \cite{Pink93}, \cite{HidaGME}, \cite{Manoharmayum15}, \cite{BCLMN15}, \cite{RouseZureickBrown15}, \cite{Sutherland15}, \cite{Zywina15b}, \cite{Zywina15a}, \cite{HidaTilouine15}, \cite{CIT15}, \cite{LLZ14}, \cite{Loeffler14}, \cite{Yun14}, \cite{Ribet77}, \cite{LMFDB}
+
+\bibliography{NSFbib}{}
+\bibliographystyle{plain}
+\end{document}

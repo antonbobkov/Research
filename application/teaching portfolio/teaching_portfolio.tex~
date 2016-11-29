@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[margin, 10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+%\usepackage{graphicx}
+
+%\setlength{\textwidth}{5.1in} % Text width of the document
+\setlength{\textwidth}{5.5in} % Text width of the document
+
+\hypersetup{
+     colorlinks   = true,
+     urlcolor  = blue
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\moveleft.5\hoffset\centerline{\large\bf Anton Bobkov}
+%\\ % Your name at the top{Control+Shift+F7}{Control+Shift+F5}
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
+\section{\textsc{Contact Information}}
+\begin{tabular}{l|l}
+Graduate Student & {\it E-mail:}\\
+Department of Mathematics & \href{mailto:antongml@gmail.com}{antongml@gmail.com}\\
+University of California, Los Angeles & \href{mailto:bobkov@math.ucla.edu}{bobkov@math.ucla.edu}\\
+Los Angeles, CA 90095-1555 USA & {\it Website:}\\
+\phantom{lots of text that takes up a bit of space blah blah blah} & \url{www.math.ucla.edu/~bobkov/}\\
+\phantom{lots of text that takes up a bit of space blah blah blah} & {\it Phone:} (408)813-6331
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+
+
+\section{\textsc{teaching philosophy}}
+When I teach my priority is to let the students develop a deep connection to the material that they can carry outside of the classroom.
+I achieve this by empasizing interaction with the material and effective ways of communicating the material.
+I make sure to incorporate demostrations and interactive activities in my teaching when possible.
+I also rely heavily on visual aid and online tools for communicating mathematical ideas.
+I relate the material to its real world applications to empasize its importance and to present it as a part of a bigger picture.
+When working with students individually, I encourage independent work and exploration while providing concrete tasks and goals.
+
+\section{\textsc{honors and awards}}
+\textit{2016 Departmental Teaching Award} \\
+Award given to Teaching Assistants in the mathematics department with excellent teaching records.
+
+\section{\textsc{teaching experience}}
+Instructor \hfill \textbf{2016 - 2017} 
+  \begin{itemize}
+  \item Math 31B: Integration and Infinite Series 
+  \item Math 32BH: Calculus of Several Variables (Honors) 
+  \end{itemize}
+Teacher Assistant \hfill \textbf{2012 - 2017} 
+  \begin{itemize}
+  \item Math 31B: Integration and Infinite Series %\hfill \textbf{2012 - 2013} 
+  \item Math 33A: Linear Algebra and Applications %\hfill \textbf{2012 - 2013} 
+  \item PIC 10B: Intermediate Programming %\hfill \textbf{2015} 
+  \item PIC 20A: Principles of Java Language with Applications %\hfill \textbf{Spring 2015} 
+  \item PIC 40A: Introduction to Programming for Internet %\hfill \textbf{Fall 2015} 
+  \item Math 115B: Linear Algebra %\hfill \textbf{Winter 2016} 
+  \item Math 174E: Mathematics of Finance %\hfill \textbf{2016} 
+  % \item Math 174E: Mathematics of Finance for Mathematics/Economics Students \hfill \textbf{Spring 2016, Fall 2016} \\
+  \end{itemize}
+Undergraduate Projects Mentor \hfill \textbf{2016 - 2017} 
+  \begin{itemize}
+  \item Conway's game of life variations with C++/SDL graphics library %\hfill \textbf{Winter 2016} 
+  \item App development platform with Typescript 2 %\hfill \textbf{Winter 2016} 
+  \item Internet browsing data/trends visualization with Python %\hfill \textbf{2016} 
+  \item Optical character recognition via neural nets with Python %\hfill \textbf{2016} 
+  \item Discrete signal processing with Matlab %\hfill \textbf{Fall 2017} 
+  \end{itemize}
+
+\section{\textsc{also included}}
+\textit{Student Evaluations}
+  \begin{itemize}
+  \item Math 33A: Linear Algebra and Applications %\hfill \textbf{2012 - 2013} 
+  \item PIC 10B: Intermediate Programming %\hfill \textbf{2015} 
+  \item Math 31B: Integration and Infinite Series %\hfill \textbf{2012 - 2013} 
+  \end{itemize}
+\end{resume}
+
+\textit{Practice Problems}
+A set of practice problems for the first midterm in Math 31B: Integration and Infinite Series.
+
+\textit{Midterm}
+The first midterm for Math 31B: Integration and Infinite Series.
+
+\textit{Worksheets}
+Two in-class assignments for Math 115B: Linear Algebra and PIC 10B: Intermediate Programming.
+
+\textit{Research Project Summary}
+Final report summarizing an independent project involving Conway's game of life variations.
+\end{document}

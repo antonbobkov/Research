@@ -1,0 +1,56 @@
+\def\position{{a postdoctoral fellowship or similar junior faculty position in your department}}
+
+\def\mathjobs{{, as posted on the MathJobs website.}}
+
+\def\website{{, as posted on your website.}}
+
+\def\nopost{{. Although I have not seen any posted advertisements for such a position on
+your website or elsewhere, I am submitting my name for consideration should
+such a position become available.}}
+
+\newcommand{\notopol}[1]{{. Although I am aware that your posted advertisement
+emphasizes #1, I am submitting my name for consideration should a position in
+topology become available.}}
+
+\newcommand{\workwith}[2]{{I would be excited to work with the number theorists at #1,
+particularly #2.}}
+
+\def\generic {{the AMS cover sheet, my curriculum vitae, a list of publications, and my research and teaching statements}}
+
+\def\nopublications{{the AMS cover sheet, my curriculum vitae, and my research and teaching statements}}
+
+\def\noteaching {{the AMS cover sheet, my curriculum vitae, a list of publications, and my research statement}}
+
+\def\noteachingnopub{{the AMS cover sheet, my curriculum vitae, and my research statement}}
+
+\def\genericplusabstract{{the AMS cover sheet, my curriculum vitae, a list of publications, and my research and teaching statements, and an abstract of my thesis}}
+
+
+\newcommand{\coverletter}[7]
+{
+\begin{letter}{#1} % #1= Address, taken from places file.
+
+\opening{#2} % #2= Dear so-and so:
+
+I am a Ph.D. student in algebraic number theory at UCLA studying with Haruzo Hida. I will be graduating in June 2016 and would like to apply for #3 beginning in the Fall
+of 2016#4
+
+%#3 = name of position, or \position for generic
+%#4 = \mathjobs, \website, \nopost, \notopol{field}, or something else beginning with a punctuation mark.
+
+
+In my thesis, I study images of Galois representation associated to Hida families of modular forms.  I prove that, in the non-CM case, the images of such Galois representations are appropriately large, an analogue of a classical theorem by Ribet and Momose.  One of the key steps is a lifting theorem, which I prove using a combination of deformation theory and automorphic techniques.  For more detailed information, please see my research statement.  #5 %\workwith{School}{Number Theorists} or more specific information.
+
+%While at UCLA, I have been a successful teacher, both in the classroom and while working with individual students.  I was honored to receive a Distinguished Teaching Award in 2014 from the UCLA Mathematics Department, based on evaluations from students and faculty members.
+#6
+
+%#7 = list of contents. \generic, \genericplusapp, \genericpluspreprints
+%My application consists of #7. In addition, it includes letters of reference from my advisor, Haruzo Hida, and from Jacques Tilouine, Chandrashekhar Khare, and Olga Radko.  Dr.~Radko's letter addresses my teaching experience.  Please let me know if any of these items is not accessible or if I can provide any further information.  Thank you for your consideration.
+
+My application consists of #7. In addition, it includes letters of reference from Haruzo Hida (my advisor), Jacques Tilouine, and Chandrashekhar Khare.  Please let me know if any of these items is not accessible or if I can provide any further information.  Thank you for your consideration.
+
+%\closing{Sincerely,\\ \includegraphics{signature.pdf}}
+\closing{Sincerely, \\[0.0in] \includegraphics{signature.png}\\ Jaclyn Lang}
+
+\end{letter}
+}
