@@ -8,7 +8,7 @@
 
 \usepackage{setspace}
 
-\doublespacing
+% \doublespacing
 \rhead{Anton Bobkov}
 
 \lhead{Research Statement}
@@ -29,24 +29,27 @@ The concept of VC-dimension was first introduced in 1971 by Vapnik and Chervonen
 P-adic numbers were first introduced by Hensel in 1897, and over the following century a powerful theory was developed around them with numerous applications across a variety of disciplines, primarily in number theory, but also in physics and computer science. In 1965 Ax, Kochen and Ershov axiomatized the theory of p-adic numbers and proved a quantifier elimination result. A key insight was to connect properties of the value group and residue field to the properties of the valued field itself. In 1984 Denef proved a cell decomposition result for more general valued fields. This result was soon generalized to p-adic subanalytic and rigid analytic extensions, allowing for the later development of a more powerful technique of motivic integration. The conjunction of those model theoretic results allowed to solve a number of outstanding open problems in number theory (e.g., Artin's Conjecture on p-adic homogeneous forms).
 
 In 1997, Karpinski and Macintyre computed VC-density bounds for o-minimal structures and asked about similar bounds for p-adic numbers. VC-density is a concept closely related to VC-dimension. It comes up naturally in combinatorics with relation to packings, Hamming metric, entropic dimension and discrepancy.  VC-density is also the decisive parameter in the Epsilon-Approximation Theorem, which is one of the crucial tools for applying VC theory in computational geometry. In a model theoretic setting it is computed for families of uniformly definable sets.  In 2013, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko computed a bound for VC-density in p-adic numbers and a number of other NIP structures \cite{density}. They observed connections to dp-rank and dp-minimality, notions first introduced by Shelah. In well behaved NIP structures families of uniformly definable sets tend to have VC-density bounded by a multiple of their dimension, a simple linear behavior. In a lot of cases including p-adic numbers this bound is not known to be optimal. My research concentrates on improving those bounds and adapting those techniques to compute VC-density in other common NIP structures of interest to mathematicians.
+Computing upper and lower bounds on VC-density requires acquiring a detailed understanding of the asymptotic combinatorial behavior of \textit{finite} subfamilies of families of definable sets, as opposed to the combinatorial behavior across a complete definable family. This means that tools from infinitary combinatorics such as Ramsey's Theorem (in the guise of indiscernible sequences) are of little help, and other, more explicit and constructive tools, need to be developed.
 
-Some of the other well behaved NIP structures are Shelah-Spencer graphs and flat graphs. Shelah-Spencer graphs are limit structures for random graphs arising naturally in a combinatorial context. Their model theory was studied by Baldwin, Shi, and Shelah in 1997, and later work of Laskowski in 2006 \cite{graph} have provided a quantifier simplification result.  Flat graphs were first studied by Podewski-Ziegler in 1978, showing that those are stable \cite{stable}, and later results gave a criterion for super stability. Flat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}. %Shelah-Spencer graphs and flat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
 
-\subsection*{Past Results}
+Some of the other well behaved NIP structures are Shelah-Spencer graphs and flat graphs. Shelah-Spencer graphs are limit structures for random graphs arising naturally in a combinatorial context. Their model theory was further developed by Baldwin, Shi, and Shelah in 1997, and later work of Laskowski in 2006 \cite{graph} has provided a quantifier simplification result.  Flat graphs were first studied by Podewski-Ziegler in 1978, showing that those are stable \cite{stable}, and later results gave a criterion for super stability. Flat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}. %Shelah-Spencer graphs and flat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
 
-I have studied properties of VC-densoty in Shelah-Spencer graphs. 
+\subsection*{Past Results and Future Work}
+
+I have studied properties of VC-density in Shelah-Spencer graphs. 
 I have shown that they have infinite dp-rank, so they are poorly behaved as NIP structures. I have also shown that one can obtain arbitrarily high VC-density when looking at uniformly definable families in a fixed dimension. However I'm able to bound VC-density of individual formulas in terms of edge density of the graphs they define.
 This indicates that there is potentially a notion more refined than VC-density that captures combinatorial behavior of definable sets in Shelah-Spencer graphs.
 
-I have answered an open question from \cite{density}, computing VC-density for trees viewed as a partial order. The main idea is to adapt a technique of Parigot \cite{trees} to partition trees into weakly interacting parts, with simple bounds of VC-density on each. Similar partitions come up in the Podewski-Ziegler analysis of flat graphs \cite {stable}. I am able to use that technique to show that flat graphs are dp-minimal, an important first step before establishing bounds on VC-density. I hope that I can adapt it further to compute VC-density bounds explicitly for specific families of flat graphs.
+I have answered an open question from \cite{density}, computing VC-density for trees viewed as a partial order.
+The technique is new, and not covered by those used in \cite{density}.
+In particular, I don't induct on the dimension of the definable set, doing all the required computations directly.
+The main idea is to adapt a technique of Parigot \cite{trees} to partition trees into weakly interacting parts, with simple bounds of VC-density on each. Similar partitions come up in the Podewski-Ziegler analysis of flat graphs \cite {stable}. I am able to use that technique to show that flat graphs are dp-minimal, an important first step before establishing bounds on VC-density. I hope that I can adapt it further to compute VC-density bounds explicitly for specific families of flat graphs.
 
-\subsection*{Short Project Description for IHES-IHP Postdoc}
-The rest of my work deals with p-adic numbers and valued fields.
+The rest of my work so far deals with p-adic numbers and valued fields.
 My goal is to improve the bound $vc(n) \leq 2n - 1$ in \cite{density}.
-I was able to do so in an cerain additive reduct of p-adic numbers using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduce}.
-I will explore other reducts described in that paper, to see if my techniques apply to those as well.
-I have also shown that a Henselian valued field of equi-characteristic zero has linear one-dimensional VC-density if its value group and its residue field have that property. This is along the lines of the results of Ax-Kochen mentioned before.
-My research goal is to adapt those techniques to higher dimensions, as well as applying them to RV sorts introduced by Flenner in 2011 \cite{value}.
+I was able to do so in an certain additive reduct of p-adic numbers using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduce}.
+I will explore other reducts described in that paper, to see if my techniques apply to those as well. I have also shown that a Henselian valued field of equi-characteristic zero has linear one-dimensional VC-density if its value group and its residue field have that property. This is along the lines of the results of Ax-Kochen mentioned before. My goal is to adapt those techniques to higher dimensions, as well as applying them to RV sorts introduced by Flenner in 2011 \cite{value}.
+Primary tool for that would be adapting Denef-Pas quantifier elimination result to keep track of the number of definable sets over a finite parameter set.
 
 
 \begin{thebibliography}{9}
@@ -87,26 +90,3 @@ Combinatorics, 32(4):600–617, 2011
 \end{document}
 
 % Include edges between y as a chain minimal extension
-
-
-Hi Anton-
-
-here are some remarks on your research statement:
-
-- You mention QE for the p-adics as a theorem of Ax-Kochen and Ershov. (By the way, the right way to cite those is exactly in this way: if you write Ax, Kochen and Ershov, you seem to suggest that these three authors collaborated, which they didnt- there were two independent teams, Ax-Kochen, and Ershov.) Now quantifier elimination for p-adics in a natural language was first proved by Macintyre. As far as I remember, Ax-Kochen didnt deal with QE (or if they did, then only in an unnatural language, with a cross-section- I forgot).
-
-- The sentence The conjunction of those model theoretic results & is a bit misleading. It seems to suggest that all the stuff mentioned earlier (motivic integration etc.) was used to show Artins Conjecture, whereas this bit was a direct consequence of Ax-Kochens work.
-
-- After the sentence My research concentrates & I would add something like: Computing upper and lower bounds on VC density requires acquiring a detailed understanding of the asymptotic combinatorial behavior of *finite* subfamilies of families of definable sets, as opposed to the combinatorial behavior across a complete definable family. This means that tools from infinitary combinatorics such as Ramseys Theorem (in the guise of indiscernible sequences) are of little help, and other, more explicit and constructive tools, need to be developed.
-
-- About the Shelah-Spencer graphs, better: Their model theory was further developed by Baldwin & and later work of Laskowski in 2006 [4] has provided & Also, give a citation for the criterion of super-stability for flat graphs.
-
-- In Past Results & there is a typo in the first sentence: VC-density. Also, in the paragraph The rest of my work & write certain instead of cerain.
-
-- Around the sentence I have answered an open question & mention that your result is a qualitative counterpart of sorts for Pierre Simons theorem that trees are dp-minimal. Also mention there that the technique that you use for this is new, and not covered by those used in [1].
-
-- The sentence My goal is to improve & needs to be expanded. First, mention that this is about the p-adics. You should perhaps say a few words about how you plan to approach this goal, even if you only have just a vague idea. You can also mention the open question from [1], whether a linear bound on VC density in one variable implies a linear bound in several variables, as a possible topic to work on in the future.
-
-
-
-                                                                Matthias.

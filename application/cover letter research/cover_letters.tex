@@ -1,0 +1,57 @@
+\documentclass[11pt]{letter}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=0.75in]{geometry}
+\usepackage{url, graphicx}
+
+\longindentation=0pt
+
+\address{UCLA Mathematics Department\\
+     Box 951555 \\
+     Los Angeles, CA 90095\\
+     \url{bobkov@math.ucla.edu}\\
+     (408) 813-6331}
+
+\begin{document}
+\input{places.tex}
+\input{template.tex}
+
+
+% #1 = Address, taken from places file.
+% #2 = Dear so-and so:
+% #3 = name of position, or \position for generic
+% #4 = \mathjobs, \website, \nopost, \notopol{field}, or something else beginning with a punctuation mark.
+% #5 =\workwith{School}{Topologists} or more specific information.
+% #6 = misc
+% #7 = list of contents. \generic, \genericplusapp, \genericpluspreprints
+
+
+
+
+
+\coverletter
+  {\uiuc}
+  {}
+  {J.L. Doob Research Assistant Professor}
+  {\mathjobs}
+  {Lou van den Dries, C. Ward Henson, Philipp Hieronymi}
+  {UIUC}
+  {\generic}
+
+\coverletter
+  {\unotredame}
+  {}
+  {Notre Dame Instructor in Mathematics}
+  {\mathjobs}
+  {Sergei Starchenko, whose work on VC-density is closely related to my research}
+  {Notre Dame}
+  {\generic}
+
+\coverletter
+  {\uic}
+  {}
+  {Research Assistant Professor}
+  {\mathjobs}
+  {John Baldwin}
+  {UIC}
+  {\generic}
+
+\end{document}

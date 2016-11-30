@@ -1,0 +1,42 @@
+\documentclass[11pt]{letter}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=0.75in]{geometry}
+\usepackage{url, graphicx}
+
+\longindentation=0pt
+
+%\name{Jaclyn Lang}
+\address{UCLA Mathematics Department\\
+     Box 951555 \\
+     Los Angeles, CA 90095\\
+     \url{jaclynlang@math.ucla.edu}\\
+     303-587-4174}
+     %\url{http://www.math.ucla.edu/~jaclynlang/}}
+%\signature{Jaclyn Lang}
+
+
+\begin{document}
+\input{places.tex}
+\input{template.tex}
+
+
+% #1 = Address, taken from places file.
+% #2 = Dear so-and so:
+% #3 = name of position, or \position for generic
+% #4 = \mathjobs, \website, \nopost, \notopol{field}, or something else beginning with a punctuation mark.
+% #5 =\workwith{School}{Topologists} or more specific information.
+% #6 = misc
+% #7 = list of contents. \generic, \genericplusapp, \genericpluspreprints
+
+
+
+
+
+\coverletter
+  {}
+  {To the Academic Hiring Committee:}
+  {a lecturer position in mathematics}
+  {\mathjobs}
+  {}
+  {Dickinson College}
+  {\generic}
+\end{document}

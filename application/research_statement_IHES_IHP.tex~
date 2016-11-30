@@ -87,26 +87,3 @@ Combinatorics, 32(4):600–617, 2011
 \end{document}
 
 % Include edges between y as a chain minimal extension
-
-
-Hi Anton-
-
-here are some remarks on your research statement:
-
-- You mention QE for the p-adics as a theorem of Ax-Kochen and Ershov. (By the way, the right way to cite those is exactly in this way: if you write Ax, Kochen and Ershov, you seem to suggest that these three authors collaborated, which they didnt- there were two independent teams, Ax-Kochen, and Ershov.) Now quantifier elimination for p-adics in a natural language was first proved by Macintyre. As far as I remember, Ax-Kochen didnt deal with QE (or if they did, then only in an unnatural language, with a cross-section- I forgot).
-
-- The sentence The conjunction of those model theoretic results & is a bit misleading. It seems to suggest that all the stuff mentioned earlier (motivic integration etc.) was used to show Artins Conjecture, whereas this bit was a direct consequence of Ax-Kochens work.
-
-- After the sentence My research concentrates & I would add something like: Computing upper and lower bounds on VC density requires acquiring a detailed understanding of the asymptotic combinatorial behavior of *finite* subfamilies of families of definable sets, as opposed to the combinatorial behavior across a complete definable family. This means that tools from infinitary combinatorics such as Ramseys Theorem (in the guise of indiscernible sequences) are of little help, and other, more explicit and constructive tools, need to be developed.
-
-- About the Shelah-Spencer graphs, better: Their model theory was further developed by Baldwin & and later work of Laskowski in 2006 [4] has provided & Also, give a citation for the criterion of super-stability for flat graphs.
-
-- In Past Results & there is a typo in the first sentence: VC-density. Also, in the paragraph The rest of my work & write certain instead of cerain.
-
-- Around the sentence I have answered an open question & mention that your result is a qualitative counterpart of sorts for Pierre Simons theorem that trees are dp-minimal. Also mention there that the technique that you use for this is new, and not covered by those used in [1].
-
-- The sentence My goal is to improve & needs to be expanded. First, mention that this is about the p-adics. You should perhaps say a few words about how you plan to approach this goal, even if you only have just a vague idea. You can also mention the open question from [1], whether a linear bound on VC density in one variable implies a linear bound in several variables, as a possible topic to work on in the future.
-
-
-
-                                                                Matthias.
