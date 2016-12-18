@@ -72,13 +72,13 @@ Los Angeles, CA 90095-1555 USA & {\it Website:}\\
 
 \textbf{University of California, Los Angeles} {\sl (graduate)}\hfill \textbf{2011 - 2017}
 
-{\sl PhD,} Mathematics (in progress)
+{\sl PhD,} Mathematics (will be completed in June 2017)
 
 \begin{itemize}
         \item 2016 Excellence in Teaching Award
         \item 2016 Girsky Fellowship
-        \item GPA: 3.91
-	\item Advanced to candidacy on June 5, 2015
+%        \item GPA: 3.91
+%	\item Advanced to candidacy on June 5, 2015
 \end{itemize}
 
 {\sl Advisor}: Matthias Aschenbrenner \\
@@ -91,11 +91,11 @@ Los Angeles, CA 90095-1555 USA & {\it Website:}\\
 	\item Sherwood Prize
 	\item Departmental Highest Honors in Mathematics, College Honors
 	\item GPA: 3.82 (Magna Cum Laude)
-	\item William Lowell Putnam Mathematics Competition
-		\begin{itemize}
-			\item 2008 - score 30
-			\item 2009 - score 19
-		\end{itemize}
+%	\item William Lowell Putnam Mathematics Competition
+%		\begin{itemize}
+%			\item 2008 - score 30
+%			\item 2009 - score 19
+%		\end{itemize}
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -103,13 +103,10 @@ Los Angeles, CA 90095-1555 USA & {\it Website:}\\
 %----------------------------------------------------------------------------------------
  
 \section{\textsc{Teaching}}
-
-% Intermediate C++ Programming, Linear Algebra, Calculus
-
 Instructor \hfill \textbf{2016 - 2017} 
   \begin{itemize}
-  \item Math 31B: Integration and Infinite Series \hfill \textbf{Summer 2016} 
-  \item Math 32BH: Calculus of Several Variables (Honors) \hfill \textbf{Winter 2017} 
+  \item Math 31B: Integration and Infinite Series 
+  \item Math 32BH: Calculus of Several Variables (Honors) 
   \end{itemize}
 Teacher Assistant \hfill \textbf{2012 - 2017} 
   \begin{itemize}
@@ -130,6 +127,9 @@ Undergraduate Projects Mentor \hfill \textbf{2016 - 2017}
   \item Optical character recognition via neural nets with Python %\hfill \textbf{2016} 
   \item Discrete signal processing with Matlab %\hfill \textbf{Fall 2017} 
   \end{itemize}
+
+% Intermediate C++ Programming, Linear Algebra, Calculus
+
 
 
 %----------------------------------------------------------------------------------------

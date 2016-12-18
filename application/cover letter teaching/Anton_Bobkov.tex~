@@ -1,0 +1,269 @@
+\documentclass[11pt]{letter}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=0.75in]{geometry}
+\usepackage{url, graphicx}
+
+\longindentation=0pt
+
+%\name{Jaclyn Lang}
+\address{UCLA Mathematics Department\\
+     Box 951555 \\
+     Los Angeles, CA 90095\\
+     \url{bobkov@math.ucla.edu}\\
+     (408) 813-6331}
+
+\begin{document}
+\input{places.tex}
+\input{template.tex}
+
+\def\teachliberalart{{The idea of teaching in a liberal arts college is particularly exciting to me.
+With large class sizes at UCLA I didn't have the opportunity to intimately work with the students as much as I would have liked to.
+I value the individual student-teacher bond.
+It empowers the student to realize their full potential and it allows the teacher to relearn the material from a student's perspective providing valuable insights into where the common misunderstandings lie.
+I'm really looking forward to an opportunity to work more closely with the students in a setting of a smaller classroom.
+I strongly believe that it will help me grow as an educator.
+}}
+\def\joint{{
+
+Unfortunately I will not be able to attend the joint AMS/MAA meetings this year.}}
+
+\def\recommendation{{my advisor, Matthias Aschenbrenner, as well as from Artem Chernikov, Olga Radko, and Jukka Virtanen. Dr.~Radko's and Dr.~Virtanen's letters address my teaching experience}}
+\def\teachrecommendation{{Olga Radko and Jukka Virtanen addressing my teaching experience}}
+
+\def\mathjobs{{, as posted on the MathJobs website.}}
+
+\def\generic {{the AMS cover sheet, my curriculum vitae, my research and teaching statements}}
+\def\noresearch {{the AMS cover sheet, my curriculum vitae, and my teaching statement}}
+\def\publication {{the AMS cover sheet, curriculum vitae, publication list, my research and teaching statements}}
+
+\def\genintro{{To the Academic Hiring Committee:}}
+\def\lecture{{a lecturer position in mathematics}}
+
+
+\coverletter
+  {}
+  {\genintro}
+  {an assistant professor position}
+  {\mathjobs}
+  % {\teachliberalart\joint}
+  {}
+  {the Emporia State University}
+  {\generic, as well as a graduate transcript}
+  {\recommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {an assistant professor position}
+  {\mathjobs}
+  {\teachliberalart\joint}
+  {the Fairfield University}
+  {\generic}
+  {\recommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {an assistant professor position}
+  {\mathjobs}
+  {\teachliberalart\joint}
+  {the Birmingham-Southern College}
+  {\generic, as well as a graduate transcript}
+  {\recommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {an assistant professor position}
+  {\mathjobs}
+  {\teachliberalart\joint}
+  {the Amherst College}
+  {\publication}
+  {\recommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {an Adjunct Instructor position}
+  {\mathjobs}
+  {}
+  {the University of Hartford}
+  {\noresearch}
+  {\teachrecommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {an Assistant Professor in Residence position}
+  {\mathjobs}
+  {}
+  {the University of Connecticut}
+  {\generic, as well as a diversity statement}
+  {\recommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {a teaching Educator position}
+  {\mathjobs}
+  {}
+  {the University of Cincinnati}
+  {\noresearch}
+  {\recommendation}
+\end{document}
+
+
+\coverletter
+  {}
+  {\genintro}
+  {an Instructor position}
+  {\mathjobs}
+  {}
+  {the Texas Christian University}
+  {\noresearch, as well as undergraduate and graduate transcripts}
+  {\teachrecommendation}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {\lecture}
+  {\mathjobs}
+  {}
+  {IUPUI}
+  % {\publication}
+  {\noresearch, , as well as a teaching portfolio as the evidence of effective teaching and a graduate transcript}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {\lecture}
+  {\mathjobs}
+  {}
+  {the University of Maryland}
+  % {\publication}
+  {\noresearch}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {E.R. Hedrick Assistant Professorship}%{\lecture}
+  {\mathjobs}
+  {}
+  {UCLA}
+  {\publication}
+\end{document}
+
+
+\coverletter
+  {}
+  {\genintro}
+  {\lecture}
+  {\mathjobs}
+  {I would be happy to work on course coordination and development, advising, and other departmental needs if I have an opportunity to do so.}
+  {the University of Texas at Austin}
+  {\publication}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}3
+  {Boas Assistant Professor}
+  {\mathjobs}
+  {}
+  {Northwestern University}
+  {\generic}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {a lecturer position in mathematics}
+  {\mathjobs}
+  {}
+  {the Rensselaer Polytechnic Institute}
+  {\noresearch}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {Assistant Professor of Instruction}
+  {\mathjobs}
+  {}
+  {Northwestern University}
+  {\generic}
+\end{document}
+
+\coverletter
+  {}
+  {\genintro}
+  {a lecturer position in mathematics}
+  {\mathjobs}
+  {}
+  {the Rensselaer Polytechnic Institute}
+  {\noresearch}
+\end{document}
+
+
+\coverletter
+  {}
+  {\genintro}
+  {a lecturer position in mathematics}
+  {\mathjobs}
+  {I'm not planning to attend the joint AMS/MAA meetings.}
+  {the University of Kentucky}
+  {\noresearch, as well as a teaching portfolio as the evidence of effective teaching}
+\end{document}
+
+
+
+\coverletter
+  {}
+  {\genintro}
+  {a lecturer position in mathematics}
+  {\mathjobs}
+  {\teachliberalart}
+  {the Dickinson College}
+  {\noresearch, as well as a graduate transcript}
+\end{document}
+
+
+  
+\coverletter
+  {}
+  {\genintro}
+  {a lecturer position}
+  {\mathjobs}
+  {}
+  {the University of Texas at Tyler}
+  {\generic, as well as a graduate transcript}
+
+\coverletter
+  {}
+  {\genintro}
+  {an Instructor or Assistant Professor position}
+  {\mathjobs}
+  {I'm always on the lookout for new ways to communicate the material and interact with the students. When possible I try to use technology and online visualization tools in my classes. By fostering interaction and group work I strive to make my classroom an active learning environment. This is what makes this position at the University of Delaware particularly exciting to me. I'm committed to teaching and developing my teaching techniques all throughout my career.}
+  {the University of Delaware}
+  {\noresearch, as well as my undergraduate and graduate transcripts}
+
+
+
+
+
+
+% #1 = Address, taken from places file.
+% #2 = Dear so-and so:
+% #3 = name of position, or \position for generic
+% #4 = \mathjobs, \website, \nopost, \notopol{field}, or something else beginning with a punctuation mark.
+% #5 =\workwith{School}{Topologists} or more specific information.
+% #6 = misc
+% #7 = list of contents. \generic, \genericplusapp, \genericpluspreprints

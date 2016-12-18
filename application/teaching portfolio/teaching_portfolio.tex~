@@ -29,6 +29,7 @@
 \usepackage{amssymb}
 \usepackage{helvet} % Default font is the helvetica postscript font
 %\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+\usepackage[final]{pdfpages}
 
 %\usepackage{graphicx}
 
@@ -46,17 +47,21 @@
 %	NAME AND ADDRESS SECTION
 %----------------------------------------------------------------------------------------
 
+\moveleft.5\hoffset\centerline	{\Large \textsc{teaching portfolio}}
+
+\phantom{hello}
+
 \moveleft.5\hoffset\centerline{\large\bf Anton Bobkov}
-%\\ % Your name at the top{Control+Shift+F7}{Control+Shift+F5}
+
 \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
+
 \section{\textsc{Contact Information}}
+
 \begin{tabular}{l|l}
-Graduate Student & {\it E-mail:}\\
-Department of Mathematics & \href{mailto:antongml@gmail.com}{antongml@gmail.com}\\
-University of California, Los Angeles & \href{mailto:bobkov@math.ucla.edu}{bobkov@math.ucla.edu}\\
-Los Angeles, CA 90095-1555 USA & {\it Website:}\\
-\phantom{lots of text that takes up a bit of space blah blah blah} & \url{www.math.ucla.edu/~bobkov/}\\
-\phantom{lots of text that takes up a bit of space blah blah blah} & {\it Phone:} (408)813-6331
+Anton Bobkov, Graduate Student & {\it E-mail:} \href{mailto:bobkov@ucla.edu}{bobkov@ucla.edu}\\
+UCLA Mathematics Department & {\it Phone:} (408) 813-6331 \\
+Box 951555 \phantom{lots of text that takes up a bit of space} & \\
+Los Angeles, CA 90095-1555 USA & 
 \end{tabular}
 
 
@@ -66,11 +71,11 @@ Los Angeles, CA 90095-1555 USA & {\it Website:}\\
 
 
 \section{\textsc{teaching philosophy}}
-When I teach my priority is to let the students develop a deep connection to the material that they can carry outside of the classroom.
-I achieve this by empasizing interaction with the material and effective ways of communicating the material.
-I make sure to incorporate demostrations and interactive activities in my teaching when possible.
-I also rely heavily on visual aid and online tools for communicating mathematical ideas.
-I relate the material to its real world applications to empasize its importance and to present it as a part of a bigger picture.
+My priority as a teacher is to let the students develop a deep connection to the material that they can carry outside of the classroom.
+I achieve this by emphasizing interaction and effective communication.
+I make sure to incorporate demonstrations and interactive activities in my classroom when possible.
+I also rely heavily on visual aid, online tools and use of technology for explaining mathematical ideas.
+I relate the math to its real world applications to underline its utility and present it as a part of a bigger picture.
 When working with students individually, I encourage independent work and exploration while providing concrete tasks and goals.
 
 \section{\textsc{honors and awards}}
@@ -85,23 +90,33 @@ Instructor \hfill \textbf{2016 - 2017}
   \end{itemize}
 Teacher Assistant \hfill \textbf{2012 - 2017} 
   \begin{itemize}
-  \item Math 31B: Integration and Infinite Series %\hfill \textbf{2012 - 2013} 
-  \item Math 33A: Linear Algebra and Applications %\hfill \textbf{2012 - 2013} 
-  \item PIC 10B: Intermediate Programming %\hfill \textbf{2015} 
-  \item PIC 20A: Principles of Java Language with Applications %\hfill \textbf{Spring 2015} 
-  \item PIC 40A: Introduction to Programming for Internet %\hfill \textbf{Fall 2015} 
-  \item Math 115B: Linear Algebra %\hfill \textbf{Winter 2016} 
-  \item Math 174E: Mathematics of Finance %\hfill \textbf{2016} 
-  % \item Math 174E: Mathematics of Finance for Mathematics/Economics Students \hfill \textbf{Spring 2016, Fall 2016} \\
+	  \item Math 31B: Integration and Infinite Series (Evaluations included in this porfolio)
+  \item Math 33A: Linear Algebra and Applications (Evaluations included in this porfolio)
+  \item Math 115B: Linear Algebra (upper division)
+  \item Math 174E: Mathematics of Finance 
+  \item PIC 10B: Intermediate Programming (Evaluations included in this porfolio)
+  \item PIC 20A: Principles of Java Language with Applications
+  \item PIC 40A: Introduction to Programming for Internet
   \end{itemize}
-Undergraduate Projects Mentor \hfill \textbf{2016 - 2017} 
+
+  I am also prepared to teach:
+  \begin{itemize}
+  \item Undergraduate math classes including: precalculus, single/multi-variable calculus, analysis, abstract algebra, topology, differential geometry, probability.
+  \item Statistics, programming/computer science, finance.
+  \end{itemize}
+
+\section{\textsc{Undergraduate Projects}}
+  \phantom{Mentor} \hfill \textbf{2016 - 2017}  
   \begin{itemize}
   \item Conway's game of life variations with C++/SDL graphics library %\hfill \textbf{Winter 2016} 
   \item App development platform with Typescript 2 %\hfill \textbf{Winter 2016} 
-  \item Internet browsing data/trends visualization with Python %\hfill \textbf{2016} 
+  % \item Internet browsing data/trends visualization with Python %\hfill \textbf{2016} 
   \item Optical character recognition via neural nets with Python %\hfill \textbf{2016} 
   \item Discrete signal processing with Matlab %\hfill \textbf{Fall 2017} 
   \end{itemize}
+
+\section{\textsc{diversity statement}}
+\input{diversity.tex}
 
 \section{\textsc{also included}}
 \textit{Student Evaluations}
@@ -112,15 +127,21 @@ Undergraduate Projects Mentor \hfill \textbf{2016 - 2017}
   \end{itemize}
 \end{resume}
 
-\textit{Practice Problems}
+\textit{Practice Problems} \\
 A set of practice problems for the first midterm in Math 31B: Integration and Infinite Series.
 
-\textit{Midterm}
-The first midterm for Math 31B: Integration and Infinite Series.
+\textit{Worksheet} \\
+In-class assignment for PIC 10B: Intermediate Programming.
 
-\textit{Worksheets}
-Two in-class assignments for Math 115B: Linear Algebra and PIC 10B: Intermediate Programming.
-
-\textit{Research Project Summary}
+\textit{Research Project Summary} \\
 Final report summarizing an independent project involving Conway's game of life variations.
+
+
+\setboolean{@twoside}{false}
+\includepdf[pages=-, offset=-80 0]{33a.pdf}
+\includepdf[pages=-, offset=-80 0]{10b.pdf}
+\includepdf[pages=-, offset=-80 0]{31b.pdf}
+\includepdf[pages=-, offset=-80 0]{review.pdf}
+\includepdf[pages=-, offset=-80 0]{programming.pdf}
+\includepdf[pages=-, offset=-80 0]{independent.pdf}
 \end{document}

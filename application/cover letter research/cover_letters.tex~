@@ -1,18 +1,14 @@
 \documentclass[11pt]{letter}
-\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=0.75in]{geometry}
+\usepackage[lmargin=.9in,rmargin=.9in,tmargin=0.6in,bmargin=0.6in]{geometry}
 \usepackage{url, graphicx}
 
 \longindentation=0pt
 
-%\name{Jaclyn Lang}
 \address{UCLA Mathematics Department\\
      Box 951555 \\
      Los Angeles, CA 90095\\
-     \url{jaclynlang@math.ucla.edu}\\
-     303-587-4174}
-     %\url{http://www.math.ucla.edu/~jaclynlang/}}
-%\signature{Jaclyn Lang}
-
+     \url{bobkov@math.ucla.edu}\\
+     (408) 813-6331}
 
 \begin{document}
 \input{places.tex}
@@ -29,14 +25,54 @@
 
 
 
+\coverletter
+  {\uic}
+  {}
+  {Research Assistant Professor}
+  {\mathjobs}
+  {John Baldwin}
+  {UIC}
+  {\generic}
+
+
+
+\end{document}
+\coverletter
+  {\uiuc}
+  {}
+  {J.L. Doob Research Assistant Professor}
+  {\mathjobs}
+  {Lou van den Dries, C. Ward Henson, Philipp Hieronymi}
+  {UIUC}
+  {\generic}
 
 
 \coverletter
+  {\unotredame}
   {}
-  {To the Academic Hiring Committee:}
-  {a lecturer position in mathematics}
+  {Notre Dame Instructor in Mathematics}
   {\mathjobs}
-  {}
-  {Dickinson College}
+  {Anand Pillay and Sergei Starchenko (whose work on VC-density is closely related to my research)}
+  {Notre Dame}
   {\generic}
+
+
+\coverletter
+  {\chicago}
+  {}
+  {L.E. Dickson Instructor}
+  {\mathjobs}
+  {Maryanthe Malliaris}
+  {University of Chicago}
+  {\generic}
+
+\coverletter
+  {\umaryland}
+  {}
+  {Michael BRIN postdoctoral fellow or Math Department postdoctoral fellow}
+  {\mathjobs}
+  {Chris Laskowski (whose work on Shelah-Spencer graphs is closely related to my research)}
+  {University of Maryland}
+  {\generic}
+
 \end{document}

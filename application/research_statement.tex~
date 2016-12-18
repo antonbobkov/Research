@@ -50,6 +50,8 @@ My goal is to improve the bound $vc(n) \leq 2n - 1$ in \cite{density}.
 I was able to do so in an certain additive reduct of p-adic numbers using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduce}.
 I will explore other reducts described in that paper, to see if my techniques apply to those as well. I have also shown that a Henselian valued field of equi-characteristic zero has linear one-dimensional VC-density if its value group and its residue field have that property. This is along the lines of the results of Ax-Kochen mentioned before. My goal is to adapt those techniques to higher dimensions, as well as applying them to RV sorts introduced by Flenner in 2011 \cite{value}.
 Primary tool for that would be adapting Denef-Pas quantifier elimination result to keep track of the number of definable sets over a finite parameter set.
+I also plan to explore an open quesiton about the relation of VC-density in one variable to multiple variables.
+Settling this relation in concrete examples may help to find a general pattern.
 
 
 \begin{thebibliography}{9}
