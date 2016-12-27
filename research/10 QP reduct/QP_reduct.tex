@@ -4,11 +4,13 @@
 \usepackage{../Research}
 \usepackage{../Thm}
 
+\usepackage{enumitem}
+
 \usepackage{mathrsfs}
 \usepackage{pgfpages}
 \usepackage{setspace}
 
-\doublespacing
+% \doublespacing
 % \usepackage[margin=.75in]{geometry}
 % \pgfpagesuselayout{2 on 1}
 
@@ -47,13 +49,14 @@
 \DeclareMathOperator{\val}{val}
 \DeclareMathOperator{\vval}{val}
 \DeclareMathOperator{\tval}{T-val}
-\DeclareMathOperator{\tbr}{T-branch}
+\DeclareMathOperator{\inti}{I}
 
 \newcommand{\defn}{\underline}
+\newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
 
 
 
-\title{VC-density in an additive reduct of $P$-adic numbers}
+\title{vc-density in an additive reduct of $P$-adic numbers}
 \author{Anton Bobkov}
 \email{bobkov@math.ucla.edu}
 
@@ -84,12 +87,12 @@ This same bound would hold in any reduct of the field of $p$-adic numbers, so on
 In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain P-minimal additive reduct of the field $p$-adic numbers.
 Using this result, in this paper we improve the bound for the VC function, showing that in Leenknegt's structure $\vc(n) = n$.
 
-Section 1 defines VC-density and states some basic lemmas about it.
-More in depth exposition of VC-density can be found in \cite{density}.
+Section 1 defines vc-density and states some basic lemmas about it.
+More in depth exposition of vc-density can be found in \cite{density}.
 Section 2 defines and states some basic facts about thoery of $p$-adic numbers.
 Here we also introduce the reduct we will be working with.
 Section 3 sets up basic definition and lemmas that will be needed for the proof.
-We define trees and intervals and show how it helps with VC-density calculations.
+We define trees and intervals and show how it helps with vc-density calculations.
 Section 4 concludes the proof.
 
 Throughout the paper, variables and tuples of elements will be simply denoted as $x, y, a, b, \ldots$.
@@ -99,7 +102,7 @@ First-order formulas will have parameter variables separated $\phi(x; y)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\section{VC-dimension and VC-density}
+\section{VC-dimension and vc-density}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -162,7 +165,7 @@ If VC-dimension is infinite then clearly $\pi_\F(n) = 2^n$ for all $n$. Converse
 \end{Theorem}
 
 Thus the systems with a finite VC-dimension are precisely the systems where the shatter function grows polynomially.
-Define VC-density to be the degree of that polynomial:
+Define vc-density to be the degree of that polynomial:
 \begin{Definition}
   Define \defn{vc-density} and \defn{dual vc-density} of $\F$ as
   \begin{align*}
@@ -172,10 +175,10 @@ Define VC-density to be the degree of that polynomial:
 \end{Definition}
 
 Generally speaking a shatter function that is bounded by a polynomial doesn't itself have to be a polynomial.
-Proposition 4.12 in \cite{density} gives an example of a shatter function that grows like $n \log n$ (so it has VC-density $1$).
+Proposition 4.12 in \cite{density} gives an example of a shatter function that grows like $n \log n$ (so it has vc-density $1$).
 
 So far the notions that we have defined are purely combinatorial.
-We now adapt VC-dimension and VC-density to the model theoretic context.
+We now adapt VC-dimension and vc-density to the model theoretic context.
 
 \begin{Definition}
   Work in a structure $M$.
@@ -185,11 +188,11 @@ We now adapt VC-dimension and VC-density to the model theoretic context.
   \item For $\phi(x, y) \in \LL(M)$ and $b \in M^{|y|}$ let $\phi(M^{|x|}, b) = \{a \in M^{|x|} \mid \phi(a, b)\} \subseteq M^{|x|}$.
   \item Let $\Phi(M^{|x|}, M^{|y|})= \{\phi_i(M^{|x|}, b) \mid \phi_i \in \Phi, b \in M^{|y|}\} \subseteq \PP(M^{|x|})$.
   \item Let $\F_\Phi = \Phi(M^{|x|}, M^{|y|})$ giving a set system $(M^{|x|}, \F_\Phi)$.
-  \item Define \defn{VC-dimension} of $\Phi$, $\VC(\Phi)$ to be the dual VC-dimension of $(M^{|x|}, \F_\Phi)$.
-  \item Define \defn{VC-density} of $\Phi$, $\vc(\Phi)$ to be the dual VC-density of $(M^{|x|}, \F_\Phi)$.
+  \item Define \defn{VC-dimension} of $\Phi$, $\VC(\Phi)$ to be the VC-dimension of $(M^{|x|}, \F_\Phi)$, similarly for the dual.
+  \item Define \defn{vc-density} of $\Phi$, $\vc(\Phi)$ to be the vc-density of $(M^{|x|}, \F_\Phi)$, similarly for the dual.
   \end{itemize}
 
-  We will also refer to the VC-density and VC-dimension of a single formula $\phi$
+  We will also refer to the vc-density and VC-dimension of a single formula $\phi$
   viewing it as a one element collection $\curly{\phi}$.
 \end{Definition}
 
@@ -204,30 +207,31 @@ so it is instructive to rewrite the shatter function in terms of types.
 
 \begin{Lemma} \label{count_types}
   \begin{align*}
-    \vc(\Phi) &= \text{degree of polynomial growth of $\pi_\Phi(n)$}  = \limsup_{n \to \infty}\frac{\log \pi_\Phi(n)}{\log n}
+    \vc^*(\Phi) &= \text{degree of polynomial growth of $\pi_\Phi(n)$}  = \limsup_{n \to \infty}\frac{\log \pi_\Phi(n)}{\log n}
   \end{align*}  
 \end{Lemma}
 
-One can check that the shatter function and hence VC-dimension and VC-density of a formula are elementary notions,
+One can check that the shatter function and hence VC-dimension and vc-density of a formula are elementary notions,
 so they only depend on the first-order theory of the structure.
 
-NIP theories are a natural context for studying VC-density.
+NIP theories are a natural context for studying vc-density.
 In fact we can take the following as the definition of NIP:
 \begin{Definition}
   Define $\phi$ to be NIP if it has finite VC-dimension. 
 \end{Definition}
 
 \cite{Aschenbrenner_reference_8} shows that in a general combinatorial context,
-VC-density can be any real number in $0 \cup [1, \infty)$.
+vc-density can be any real number in $0 \cup [1, \infty)$.
 Less is known if we restrict our attention to NIP theories.
-Proposition 4.6 in \cite{density} gives examples of formulas that have non-integer rational VC-density in an NIP theory,
-however it is open whether one can get an irrational VC-density in this context.
+Proposition 4.6 in \cite{density} gives examples of formulas that have non-integer rational vc-density in an NIP theory,
+however it is open whether one can get an irrational vc-density in this context.
 
 In general, instead of working with a theory formula by formula, we can look for a uniform bound for all formulas:
 \begin{Definition}
   For a given NIP structure $M$, define the \defn{vc-function}
   \begin{align*}
-    \vc^M(n) = \sup \{\vc(\phi(x, y)) \mid \phi \in \LL(M), |x| = n\}
+    \vc^M(n) &= \sup \{\vc^*(\phi(x, y)) \mid \phi \in \LL(M), |x| = n\} \\
+             &= \sup \{\vc(\phi(x, y)) \mid \phi \in \LL(M), |y| = n\}
   \end{align*}
 \end{Definition}
 
@@ -331,7 +335,7 @@ I am able to compute the $\vc$-function for this structure:
 
 
 
-To show that $\vc(n) = n$ it suffices to bound $\vc(\phi) \leq |x|$ for every formula $\phi(x; y)$.
+To show that $\vc(n) = n$ it suffices to bound $\vc^*(\phi) \leq |x|$ for every formula $\phi(x; y)$.
 Fix such a formula $\phi(x; y)$.
 Instead of working with it directly, we simplify it using quantifier elimination.
 The quantifier elimination result can be easily obtained from cell decomposition:
@@ -368,7 +372,7 @@ The quantifier elimination result can be easily obtained from cell decomposition
 \begin{Lemma}
   If $\phi$ can be written as a boolean combination of formulas from $\Phi$ then
   \begin{align*}
-    \vc (\Phi) \leq n \implies \vc (\phi) \leq n
+    \vc^* (\Phi) \leq n \implies \vc^* (\phi) \leq n
   \end{align*}
 \end{Lemma}
 \begin{proof}
@@ -377,45 +381,51 @@ The quantifier elimination result can be easily obtained from cell decomposition
   The bound follows from Lemma \ref{count_types}.
 \end{proof}
 
-Therefore to show that $\vc(\phi) \leq |x|$, it suffices to bound $\vc(\Phi) \leq |x|$.
+Therefore to show that $\vc^*(\phi) \leq |x|$, it suffices to bound $\vc^*(\Phi) \leq |x|$.
 More precisely, it is sufficient to show that if there is a parameter set $B$ of size $N$
 then the number of $\Phi$-types over $B$ is $O(N^{|x|})$.
 Fix such a parameter set $B$ and work with it from now on.
 We will compute a bound for the number of $\Phi$-types over $B$.
 
-Consider a set $T = \curly{c_i(b) \mid b \in B, i \in I} \subset \Q_p$.
-In this definition $B$ is the parameter set that we fixed 
+Consider a set $T = T(\Psi, B) = \curly{c_i(b) \mid b \in B, i \in I} \subset \Q_p$.
+In this definition $B$ is the parameter set that we have fixed 
 and $c_i(b)$ come from the collection of formulas $\Phi$ from the quantifier elimination above.
 View $T$ as a tree as follows:
 \begin{Definition} \ 
   \begin{itemize}
   \item For $c \in \Q_p, \alpha \in \Z$  define a \defn{ball} 
     \begin{align*}
-      B(c, \alpha) = \curly{c' \in \Q_p \mid \vval \paren{c' - c} \geq \alpha}.  
+      B(c, \alpha) = \curly{c' \in \Q_p \mid \vval \paren{c' - c} > \alpha}.  
     \end{align*}
-    % \item \defn{interval-balls} is a collection of balls $\BB = \curly{B(t_1, \vval(t_1 - t_2))}_{t_1, t_2 \in T}$.
+    We also let $B(c, -\infty) = \Q_p$ and $B(c, +\infty) = \emptyset$.
   \item Define a collection of balls $\BB = \curly{B(t_1, \vval(t_1 - t_2))}_{t_1, t_2 \in T}$.
-    An \defn{interval} $(B_1, B_2)$ is a set $B_1 \backslash B_2$
-    for $B_1, B_2 \in \BB$ with $B_1 \supset B_2$ and no balls from $\BB$ in between.
-    % We also define an interval $(-\infty, B)$ as a set $\Q_p \backslash B$ for a ball $B(c, v) \in \BB$
-    % with the smallest valuation $v$ of all the balls in $\BB$.
-    % An element $a \in \Q_p$ belongs to this interval if $a \in B(t_1, v_1) \backslash B(t_2, v_2)$.
-    Note that intervals partition $\Q_p$.
-  \item Define a collection of balls 
+    Those form a (directed) boolean algebra of sets in $\Q_p$.
+    We refer to the atoms in that algebra as \defn{intervals}.
+  \item Let's introduce some notation for the intervals.
+    For $t \in T$ and $\alpha_L. \alpha_U \in \Z \cup \curly{-\infty, +\infty}$ define
     \begin{align*}
-      \BB' = \BB \cup \curly{B(c_{i_1}(b), \vval(c_{i_2}(b) - c_{i_3}(b)))}_{i_1, i_2, i_3 \in I, b\in B}.  
+      \interval = B(t, \alpha_L) \backslash \bigcup \curly{B(t', \alpha_U) \mid t' \in T, \vval(t' - t) \geq \alpha_U}
     \end{align*}
-    A \defn{sub-interval} is defined the same as an interval except using collection $\BB'$ instead of $\BB$.
-    Sub-intervals refine intervals.
+    (this is sometimes referred to as the swiss cheese construction).
+    One can check that every interval is of the form $\interval$ for some values of $t, \alpha_L, \alpha_U$.
+  \item Intervals are a natural construction for trees, however we will require a more refined notion to make Lemma \ref{main_lemma} work.
+    Define a larger collection of balls 
+    \begin{align*}
+      \BB' = \BB \cup \curly{B(c_i(b), \vval(c_j(b) - c_k(b)))}_{i,j,k \in I, b \in B}.  
+    \end{align*}
+    Similar to the previous defintion, we define \defn{subinterval} as an atom of a boolean algebra generated by $\BB'$.
+    Subintervals refine intervals.
+    Moreover, as before, each subinterval can be written as $\interval$ for some values of $t, \alpha_L, \alpha_U$.
   \end{itemize}
 \end{Definition}
 
+Subintervals are fine enough to make Lemma \ref{main_lemma} work while coarse enough to be $O(N)$ small.
 \begin{Lemma} \label{interval_count}\ 
   \begin{itemize}
   \item 
     There are at most $2|T| = 2 N |I| = O(N)$ different intervals.
   \item 
-    There are at most $2|T| + |B| \cdot |I|^3 = O(N)$ different sub-intervals.
+    There are at most $2|T| + |B| \cdot |I|^3 = O(N)$ different subintervals.
   \end{itemize}
 \end{Lemma}
 
@@ -423,57 +433,115 @@ View $T$ as a tree as follows:
   Each new element in the tree $T$ adds at most two intervals to the total count,
   so by induction there can be at most $2|T|$ many intervals.
   Each new ball in $\BB' \backslash \BB$ adds at most one interval to the total count,
-  so by induction there are at most $|\BB' \backslash \BB|$ more sub-intervals than there are intervals.
+  so by induction there are at most $|\BB' \backslash \BB|$ more subintervals than there are intervals.
 \end{proof}
 
+
 \begin{Definition}
-  Suppose $a \in \Q_p$ lies in an interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
-  \begin{itemize}
-  \item Define \defn{T-branch} of $a$ to be $\tbr(a) = t_U$.    
-  \item Define \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t_U)$.    
-  % \item Define the \defn{floor} of $a$ to be $F(a) = \alpha_L$.
-  \item We say that $a$ is \defn{close to boundary} if $|\tval(a) - \alpha_L| \leq n$ or $|\tval(a) - \alpha_U| \leq n$.
-    Otherwise we say that it is \defn{far from boundary}.
-  \end{itemize}      
+  Suppose $a \in \Q_p$ lies in an interval $\interval$. 
+  Define \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t)$.    
+\end{Definition}
+
+This a natural notion having the following properties:
+\begin{Lemma}  \label{tval} \ 
+  \begin{enumerate}[label=(\alph*)]
+  \item $\tval(a)$ is well-defined, independent of choice of $t$ to represent the interval.
+  \item If $a \in \Q_p$ lies in a subinterval $\interval$ (as opposed to an interval),
+    then $\tval(a) = \vval(a - t)$ as well (this works for any refinement of intervals).
+  \item If $a \in \Q_p$ lies in a (sub)interval $\interval$ 
+    then $\alpha_L < \tval(a) \leq \alpha_U$.
+  \item For any $a \in \Q_p$ lying in a (sub)interval $\interval$ and $t' \in T$
+    \begin{itemize}
+    \item If $\vval(t - t') \geq \alpha_U$, then $\vval(a - t') = \tval(a)$. 
+    \item If $\vval(t - t') \leq \alpha_L$, then $\vval(a - t') = \vval(t - t') \paren{\leq \alpha_L < \tval(a)}$. 
+    \end{itemize}
+  \end{enumerate}
+\end{Lemma}
+
+
+\begin{proof}
+  (a)-(c) are clear.
+  For (d) fix $t' \in T$ and suppose $a \in \Q_p$ lies in a subinterval $\inti(t, \alpha_L', \alpha_U')$.
+  This  subinterval lies inside of an interval $\interval$ for some choice of $\alpha_L, \alpha_U$ and
+  by the definition of intervals (or more specifically $\BB$)
+  \begin{align*}
+    \vval(t - t') \geq \alpha_U &\iff \vval(t - t') \geq \alpha_U'\\
+    \vval(t - t') \geq \alpha_L &\iff \vval(t - t') \geq \alpha_L'.
+  \end{align*}
+  Therefore without loss of generality we may assume that $a \in \Q_p$ lies in an interval $\interval$.
+  By (c) and the definition of intervlas one of the three following cases has to hold.
+  
+  Case 1: $\vval(t - t') \geq \alpha_U$ and $\tval(a) < \alpha_U$.
+  \begin{align*}
+    \vval(t - t') \geq \alpha_U > \tval(a) = \vval(a - t)
+  \end{align*}
+  thus $\vval(a - t') = \vval(a - t) = \tval(a)$ as needed.
+
+  Case 2: $\vval(t - t') \geq \alpha_U$ and $\tval(a) = \alpha_U$.
+  \begin{align*}
+    \tval(a) = \vval(a - t) = \vval(t - t') \geq \alpha_U
+  \end{align*}
+  thus $\vval(a - t') \geq \alpha_U$.
+  The interval $\interval$ excludes the ball $B(t', \alpha_U)$,
+  so $a \notin B(t', \alpha_U)$, that is $\val(a - t') \leq \alpha_U$.
+  Combining this with the previous inequality we get that $\val(a - t') = \alpha_U = \tval(a)$ as needed.
+
+  Case 3: $\vval(t - t') \leq \alpha_L$
+  \begin{align*}
+    \vval(t - t') \leq \alpha_L < \tval(a) = \vval(a - t)
+  \end{align*}
+  thus $\vval(a - t') = \vval(t - t')$ and note that $\vval(a - t') \leq \tval(a)$ as needed.
+\end{proof}
+
+
+
+
+\begin{Definition}
+  Suppose $a \in \Q_p$ lies in a subinterval $\interval$.
+  We say that $a$ is \defn{far from boundary} if 
+    \begin{align*}
+	\alpha_L + n \leq \tval(a) \leq \alpha_U - n.
+    \end{align*}
+  Otherwise we say that it is \defn{close to boundary}.
 \end{Definition}
 
 \begin{Definition}
-  Suppose $a_1, a_2 \in \Q_p$ lie in our tree in the same interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
-  We say $a_1, a_2$ have the same \defn{interval type} if one of the following holds:
+  Suppose $a_1, a_2 \in \Q_p$ lie in the same subinterval $\interval$.
+  We say $a_1, a_2$ have the same \defn{subinterval type} if one of the following holds:
   \begin{itemize}
-  \item Both $a_1, a_2$ are far from boundary and $a_1 - t_U, a_2 - t_U$ are in the same $Q_{m,n}$ coset.
-  \item Both $a_1, a_2$ are close to boundary and $\vval(a_1 - a_2) > \tval(a_1) + n = \tval(a_2) + n$.
+  \item Both $a_1, a_2$ are far from boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$ coset.
+  \item Both $a_1, a_2$ are close to boundary and $ \tval(a_1) = \tval(a_2) \leq \vval(a_1 - a_2) - n$.
   \end{itemize}      
 \end{Definition}
 
 
 \begin{Definition}
-  For $c \in \Q_p$ and $\alpha, \beta \in \Z$ define $c \midr [\alpha, \beta] \in \paren{\Z/p\Z}^{\beta - \alpha}$
+	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ define $c \midr [\alpha, \beta) \in \paren{\Z/p\Z}^{\beta - \alpha}$
   to be the record of the coefficients of $c$ for the valuations between $[\alpha, \beta)$.
   More precisely write $c$ in its power series form
   \begin{align*}
     c = \sum_{\gamma \in \Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
   \end{align*}
-  Then $c \midr [\alpha, \beta]$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_{\beta - 1})$.
+  Then $c \midr [\alpha, \beta)$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_{\beta - 1})$.
 \end{Definition}
 
-The following lemma is an adaptation of lemma 7.4 in \cite{density}.
+The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 \begin{Lemma} \label{distance}
   Fix $m,n \in \N$.
   For any $x,y,c \in \Q_p$, if
   \begin{align*}
-    \val (x - c) = \val (y - c) < \val (x - y) - n,
+    \val (x - c) = \val (y - c) \leq \val (x - y) - n,
   \end{align*}
   then $x - c, y - c$ are in the same coset of $Q_{m,n}$.
 \end{Lemma}
 \begin{proof}
   Call $a,b \in \Q_p$ similar if $\val a = \val b$ and
   \begin{align*}
-    a \midr [\val a, \val a + n] = b \midr [\val b, \val b + n]
+    a \midr [\val a, \val a + n) = b \midr [\val b, \val b + n)
   \end{align*}
   If $a,b$ are similar then
   \begin{align*}
-    a \in Q_{m,n} \leftrightarrow b \in Q_{m,n}
+    a \in Q_{m,n} \iff b \in Q_{m,n}
   \end{align*}
   Moreover for any $\lambda \in \Q_p^\times$, if $a,b$ are similar then so are $\lambda a, \lambda b$.
   Thus if $a,b$ are similar, then they belong to the same coset of $Q_{m,n}$.
@@ -482,40 +550,41 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
 
 
 \begin{Lemma} \label{interval_type_count}
-  For each interval there are at most $K = K(Q_{m,n})$ many interval types 
-  (with $K$ not dependent on $B$ or the interval).  
+  For each subinterval there are at most $K = K(Q_{m,n})$ many subinterval types 
+  (with $K$ not dependent on $B$ on the subinterval).  
 \end{Lemma}
 
 \begin{proof}
-  Let $a, a' \in \Q_p$ lie in the same interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
+  Let $a, a' \in \Q_p$ lie in the same subinterval $\interval$.
 
   Suppose $a, a'$ are far from boundary.
-  Then they have the same interval type if $a - t_U, a' - t_U$ are in the same $Q_{m,n}$-coset.
-  Number of such interval types is bounded by the number of $Q_{m,n}$-cosets.
+  Then they have the same subinterval type if $a - t, a' - t$ are in the same $Q_{m,n}$-coset.
+  Number of such subinterval types is bounded by the number of $Q_{m,n}$-cosets.
 
   Suppose $a, a'$ are close to boundary and
   \begin{align*}
-    &|\tval(a) - \alpha_L| = |\tval(a') - \alpha_L| \leq n \\
-    &a \midr [\tval(a), \tval(a) + n] = a' \midr [\tval(a'), \tval(a') + n]  
+    &\tval(a) - \alpha_L = \tval(a') - \alpha_L < n \\
+    &a \midr [\tval(a), \tval(a) + n) = a' \midr [\tval(a'), \tval(a') + n)  
   \end{align*}
-  Then $a, a'$ have the same interval type.
-  Such interval type is thus determined by $|\tval(a) - \alpha_L|$ and $a \midr [\tval(a), \tval(a) + n]$,
+  Then $a, a'$ have the same subinterval type.
+  Such subinterval type is thus determined by $\tval(a) - \alpha_L$ and $a \midr [\tval(a), \tval(a) + n)$,
   therefore there are at most $n p^n$ many such types.
 
-  A similar argument works for $a$ with $|\tval(a) - \alpha_U| \leq n$.
+  A similar argument works for $a$ with $\alpha_U - \tval(a) \leq n$.
 
   Adding those up we get that there are at most
   \begin{align*}
     K = \text{(number of $Q_{m,n}$ cosets)} + 2 n p^n  
   \end{align*}
-  many interval types.
+  many subinterval types.
 \end{proof}
 
+The following lemma relates tree notions to $\Phi$-types.
 \begin{Lemma} \label{main_lemma}
   Suppose $d, d' \in \Q_p^{|x|}$ satisfy the follwing three conditions 
   \begin{itemize}
-  \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ are in the same sub-interval.
-  \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ have the same interval type.
+  \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ are in the same subinterval.
+  \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ have the same subinterval type.
   \item For all $i,j \in I$, $\tval(p_i(d)) > \tval(p_j(d))$ iff $\tval(p_i(d')) > \tval(p_j(d'))$.
   \end{itemize}
   Then $d, d'$ have the same $\Phi$-type over $B$.
@@ -530,41 +599,45 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
   We want to show that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
   Suppose $a, a'$ are close to boundary.
-  Then we have $\val(a - c_i(b)) = \val(a' - c_i(b)) < \val(a - a') - n$.
-  By Lemma \ref{distance} we have $a - c_i(b), a' - c_i(b)$ in the same $Q$-coset.
+  Then $\tval(a) = \tval(a') \leq \val(a - a') - n$.
+  Using Lemma \ref{tval}d, we have
+  \begin{align*}
+    \val(a - c_i(b)) = \val(a' - c_i(b)) \leq \tval(a) \leq \val(a - a') - n
+  \end{align*}
+  Lemma \ref{distance} shows that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
   Now, suppose both $a, a'$ are far from boundary.
-  Label their interval as $B(t_L, \alpha_L) \backslash B(t_U, \alpha_U)$.
+  Label their interval as $\interval$.
   Then we have 
   \begin{align*}
-    \alpha_L + n < &\val (a - t_U) < \alpha_U - n \\
-    \alpha_L + n < &\val (a' - t_U) < \alpha_U - n
+    \alpha_L + n \leq &\val (a - t) \leq \alpha_U - n \\
+    \alpha_L + n \leq &\val (a' - t) \leq \alpha_U - n
   \end{align*}
-  We have either $\val(t_U - c_i(b)) \geq \alpha_U$ or $\val(t_U - c_i(b)) \leq \alpha_L$
-  as otherwise it would contradict the definition of an interval.
+  (as being far from the subinterval's boundary also makes $a,a'$ far from interval's boundary).
+  We have either $\val(t - c_i(b)) \geq \alpha_U$ or $\val(t - c_i(b)) \leq \alpha_L$ (as otherwise it would contradict the definition of intervals, or more specifically $\BB$).
   
-  Suppose it is the first case $\val(t_U - c_i(b)) \geq \alpha_U$.
-  Then
+  Suppose it is the first case $\val(t - c_i(b)) \geq \alpha_U$.
+  Then using Lemma \ref{tval}d
   \begin{align*}
-    \val(a - c_i(b)) = \val(a - t_U) < \alpha_U - n \leq \val(t_U - c_i(b)) - n
+    \val(a - c_i(b)) = \val(a - t) \leq \alpha_U - n \leq \val(t - c_i(b)) - n.
   \end{align*}
-  so by Lemma \ref{distance} we have $a - c_i(b), a - t_U$ are in the same $Q$-coset.
-  By a parallel argument we have $a' - c_i(b), a' - t_U$ are in the same $Q$-coset.
-  As $a, a'$ have the same interval type, $a - t_U, a' - t_U$ are in the same $Q$-coset.
+  So by Lemma \ref{distance} we have $a - c_i(b), a - t$ are in the same $Q$-coset.
+  By a parallel argument we have $a' - c_i(b), a' - t$ are in the same $Q$-coset.
+  As $a, a'$ have the same subinterval type, $a - t, a' - t$ are in the same $Q$-coset.
   Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
-  For the second case, suppose $\val(t_U - c_i(b)) \leq \alpha_L$.
-  Then
+  For the second case, suppose $\val(t - c_i(b)) \leq \alpha_L$.
+  Then using Lemma \ref{tval}d
   \begin{align*}
-    \val(a - c_i(b)) = \val(t_U - c_i(b)) \leq \alpha_L < \val(a - t_U) - n
+    \val(a - c_i(b)) = \val(t - c_i(b)) \leq \alpha_L \leq \val(a - t) - n
   \end{align*}
-  so by Lemma \ref{distance} we have $a - c_i(b), t_U - c_i(b)$ are in the same $Q$-coset.
-  By a parallel argument we have $a' - c_i(b), t_U - c_i(b)$ are in the same $Q$-coset.
+  so by Lemma \ref{distance} we have $a - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
+  By a parallel argument we have $a' - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
   Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
 
   Next, we need to show that $d, d'$ agree on formulas of the form
   $\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))$ 
-  (see Lemma \ref{quantifier_elimination}).
+  (again, referring to the presentation in Lemma \ref{quantifier_elimination}).
   Fix $i,j \in I, b \in B$.
   We would like to show that 
 
@@ -572,61 +645,63 @@ The following lemma is an adaptation of lemma 7.4 in \cite{density}.
     \vval (p_i(d) - c_i(b)) < \vval (p_j(d) - c_j(b))  \iff \vval (p_i(d') - c_i(b)) < \vval (p_j(d') - c_j(b))
   \end{equation}
 
-  For the following argument we will need more notation.
-  Suppose $a \in \Q_p$ lies in an interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
-  Then let \defn{T-branch} of $a$ be $\tbr(a) = t_U$.    
-  Consider the following 4 cases.
+  Suppose $p_i(d), p_i(d')$ are in the subinterval $\inti(t_i, \alpha_i, \beta_i)$ and 
+  $p_j(d), p_j(d')$ are in the subinterval $\inti(t_j, \alpha_j, \beta_j)$.
+  Lemma \ref{tval}d yields 4 following cases.
 
   Case 1:
   \begin{align*}
-    &\vval (p_i(d) - c_i(b)) = \vval (p_i(d') - c_i(b)) = \vval(\tbr(p_i(d)) - c_i(b)) \\
-    &\vval (p_j(d) - c_j(b)) = \vval (p_j(d') - c_j(b)) = \vval(\tbr(p_j(d)) - c_j(b))  \\
+    &\vval (p_i(d) - c_i(b)) = \vval (p_i(d') - c_i(b)) = \vval(t_i - c_i(b)) \\
+    &\vval (p_j(d) - c_j(b)) = \vval (p_j(d') - c_j(b)) = \vval(t_j - c_j(b))
   \end{align*}
-  Then it is clear that \eqref{eq:order_equation} holds.
+  Then it is clear that the equivalence \eqref{eq:order_equation} holds.
 
   Case 2:
   \begin{align*}
     &\vval (p_i(d) - c_i(b)) = \tval(p_i(d)) \text{ and } \vval (p_i(d') - c_i(b)) = \tval(p_i(d')) \\
-    &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d')) \\
+    &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d'))
   \end{align*}
-  Then the order is preserved by the condition of the lemma statement that order of T-valuations is preserved.
+  Then the equivalence \eqref{eq:order_equation} holds by the third condition of the lemma that order of T-valuations is preserved.
 
-  Case 3:
+ Case 3:
   \begin{align*}
-    &\vval (p_i(d) - c_i(b)) = \vval (p_i(d') - c_i(b)) = \vval(\tbr(p_i(d)) - c_i(b)) \\
-    &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d')) \\
+    &\vval (p_i(d) - c_i(b)) = \vval (p_i(d') - c_i(b)) = \vval(t_i - c_i(b)) \\
+    &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d'))
   \end{align*}
   If $p_j(d), p_j(d')$ are close to boundary,
-  then $\tval(p_j(d)) = \tval(p_j(d'))$ and \eqref{eq:order_equation} clearly holds.
+  then $\tval(p_j(d)) = \tval(p_j(d'))$ and the equivalence \eqref{eq:order_equation} clearly holds.
   Suppose then that $p_j(d), p_j(d')$ are far from boundary.
-  Suppose that $p_j(d), p_j(d')$ lie in the sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
-  Then $\tval(p_j(d)), \tval(p_j(d)') \in (\alpha_L, \alpha_U)$ (as an interval in $\Z$)
-  and $\vval(\tbr(p_i(d)) - c_i(b))$ lies outside of $(\alpha_L, \alpha_U)$ by definition of sub-interval.
+  \begin{align*}
+    \alpha_j + n \leq &\tval(p_j(d)), \tval(p_j(d')) \leq \beta_j - n \\
+    \alpha_j < &\tval(p_j(d)), \tval(p_j(d')) < \beta_j
+  \end{align*}
+  and $\vval(t_i - c_i(b))$ lies outside of the $(\alpha_j, \beta_j)$
+  by the definition of subinterval (more specifically definition of $\BB'$).
   Therefore \eqref{eq:order_equation} has to hold.
-  (Note that we always have $\tval(p_j(d)), \tval(p_j(d)') \in (\alpha_L, \alpha_U]$,
-  we need the far from boundary condition to avoid equality to $\alpha_U$.)
+  (Note that we always have $\tval(p_j(d)), \tval(p_j(d')) \in (\alpha_j, \beta_j]$ by Lemma \ref{tval}c, so 
+  we only need the far from boundary condition to avoid the edge case of equality to $\beta_j$.)
 
   Case 4:
   \begin{align*}
     &\vval (p_i(d) - c_i(b)) = \tval(p_i(d)) \text{ and } \vval (p_i(d') - c_i(b)) = \tval(p_i(d')) \\
-    &\vval (p_j(d) - c_j(b)) = \vval (p_j(d') - c_j(b)) = \vval(\tbr(p_j(d)) - c_j(b)) \\
+    &\vval (p_j(d) - c_j(b)) = \vval (p_j(d') - c_j(b)) = \vval(t_j - c_j(b))
   \end{align*}
-  Similar to case 3.
+  Similar to case 3 (switching $i,j$).
 \end{proof}
 
 
 
 \begin{Note}
   This gives us an upper bound on the number of types - there are at most $|2I|!$ many choices for the order of $\tval$,
-  $O(N)$ many choices for the sub-interval for each $p_i$,
-  and $K$ many choices for the interval type for each $p_i$,
+  $O(N)$ many choices for the subinterval for each $p_i$,
+  and $K$ many choices for the subinterval type for each $p_i$,
   giving a total of $O(N^{|I|}) \cdot K^{|I|} \cdot |I|! = O(N^{|I|})$ many types.
-  This implies $\vc(\Phi) \leq |I|$.
-  The biggest contribution to this bound are the choices among the $O(N)$ many sub-intervals for each $p_i$ with $i \in I$.
+  This implies $\vc^*(\Phi) \leq |I|$.
+  The biggest contribution to this bound are the choices among the $O(N)$ many subintervals for each $p_i$ with $i \in I$.
   Are all of those choices realized?
   Intuitively there are $|x|$ many variables and $|I|$ many equations,
-  so once we choose an sub-interval for $|x|$ many $p_i$'s, the sub-interval for the rest should be determined.
-  This would give the required $\vc(\Phi) \leq |x|$ bound.
+  so once we choose an subinterval for $|x|$ many $p_i$'s, the subinterval for the rest should be determined.
+  This would give the required $\vc^*(\Phi) \leq |x|$ bound.
   The next section outlines this idea formally.
 \end{Note}
 
@@ -693,7 +768,7 @@ Fix $\gamma$ according to Lemma \ref{gamma} corresponding to $\curly{\vec p_i}_{
 (The lemma above is a general result, but we only use it applied to the vectors given by $\Phi$.)
 
 \begin{Definition}
-  Suppose $a \in \Q_p$ lies in a sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
+  Suppose $a \in \Q_p$ lies in a subinterval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
   Define \defn{floor} of $a$ to be $F(a) = \alpha_L$.
 \end{Definition}
 
@@ -722,9 +797,9 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
   \begin{itemize}
   \item Denote $\Z/p\Z^\gamma$ as \defn{$\Ct$}.
     Note that $|\Ct| = p^\gamma$.
-  \item Let \defn{$\It$} be the space of all interval types.
+  \item Let \defn{$\It$} be the space of all subinterval types.
     By Lemma \ref{interval_type_count} $|\It| \leq K$.
-  \item Let \defn{$\Sub$} be the space of all sub-intervals.
+  \item Let \defn{$\Sub$} be the space of all subintervals.
     By Lemma \ref{interval_count} $|\Sub| \leq 3 |I|^2 \cdot N = O(N)$.
   \end{itemize}
 \end{Definition}
@@ -738,14 +813,14 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
   Let $a = (a_i)_{i\in I} \in \Sg'$.
   To define $g_{\Sg'}(a)$ we need to specify where it maps $a$ in each individual component of the product.
 
-  For each $a_i$ record its interval type, giving the first component $\It^I$.
+  For each $a_i$ record its subinterval type, giving the first component $\It^I$.
 
-  For $a_j$ with $j \in J$, record the sub-interval of $a_j$, giving the second component $\Sub^J$.
+  For $a_j$ with $j \in J$, record the subinterval of $a_j$, giving the second component $\Sub^J$.
 
   For the third component $\Ct^{I \backslash J}$ do the following computation.
   Pick $a_i$ with $i$ dependent.
   Let $j$ be the largest independent index with $j < i$.
-  Record $a_i \midr [F(a_j) - \gamma, F(a_j)]$.
+  Record $a_i \midr [F(a_j) - \gamma, F(a_j))$.
 
   Combine $g_{\Sg'}$ for all the partitions to get a function 
   \begin{align*}
@@ -766,39 +841,39 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
     f(c') &= (p_i(c'))_{i \in I} = (\vec p_i \cdot \vec c')_{i \in I} = (a_i')_{i \in I}
   \end{align*}
 
-  For each $i$ we show that $a_i, a_i'$ are in the same sub-interval and have the same interval type, so the conclusion follows by Lemma \ref{main_lemma}
-  ($f(c_1), f(c_2)$ are in the same partition ensuring the proper order of T-valuations for the 3rd condition of the lemma).
-  $\It$ records the interval type of each element, so if $g(\bar a) = g(\bar a')$ then $a_i, a_i'$ have the same interval type for all $i \in I$.
-  Thus it remains to show that $a_i, a_i'$ lie in the same sub-interval for all $i \in I$.
+  For each $i$ we show that $a_i, a_i'$ are in the same subinterval and have the same subinterval type, so the conclusion follows by Lemma \ref{main_lemma}
+  ($f(c), f(c')$ are in the same partition ensuring the proper order of T-valuations for the 3rd condition of the lemma).
+  $\It$ records the subinterval type of each element, so if $g(\bar a) = g(\bar a')$ then $a_i, a_i'$ have the same subinterval type for all $i \in I$.
+  Thus it remains to show that $a_i, a_i'$ lie in the same subinterval for all $i \in I$.
   Suppose $i$ is an independent index.
-  Then by construction, $\Sub$ records the sub-interval for $a_i, a_i'$, so those have to belong to the same sub-interval.
+  Then by construction, $\Sub$ records the subinterval for $a_i, a_i'$, so those have to belong to the same subinterval.
   Now suppose $i$ is dependent.
   Pick the largest $j < i$ such that $j$ is independent.
   We have $F(a_i) \leq F(a_j)$ and $F(a_i') \leq F(a_j')$.
-  Moreover $F(a_j) = F(a_j')$ as $a_j, a_j'$ lie in the same sub-interval (using the earlier part of the argument as $j$ is independent).
+  Moreover $F(a_j) = F(a_j')$ as $a_j, a_j'$ lie in the same subinterval (using the earlier part of the argument as $j$ is independent).
   
   \begin{Claim}
-    $\val(a_i - a_i') \geq F(a_j) - \gamma$
+    $\val(a_i - a_i') > F(a_j) - \gamma$
   \end{Claim}
   \begin{proof}
     Let $K$ be the set of the independent indices less than $i$.
     Note that by the definition for dependent indices we have $\vec p_i \in \vecspan \curly{\vec p_k}_{k \in K}$.
     We also have 
     \begin{align*}
-      \val(a_k - a_k') \geq F(a_k) \text { for all } k \in K
+      \val(a_k - a_k') > F(a_k) \text { for all } k \in K
     \end{align*}
-    as $a_k, a_k'$ lie in the same sub-interval (using the earlier part of the argument as $k$ is independent).
+    as $a_k, a_k'$ lie in the same subinterval (using the earlier part of the argument as $k$ is independent).
     \begin{align*}
-      &\val(a_k - a_k') \geq F(a_j) \text { for all } k \in K \text{ by monotonicity of $F(a_k)$} \\
-      &\val(\vec p_k \cdot \vec c - \vec p_k \cdot \vec c') \geq F(a_j) \text { for all } k \in K \\
-      &\val(\vec p_k \cdot (\vec c - \vec c')) \geq F(a_j) \text { for all } k \in K \\
+      &\val(a_k - a_k') > F(a_j) \text { for all } k \in K \text{ by monotonicity of $F(a_k)$} \\
+      &\val(\vec p_k \cdot \vec c - \vec p_k \cdot \vec c') > F(a_j) \text { for all } k \in K \\
+      &\val(\vec p_k \cdot (\vec c - \vec c')) > F(a_j) \text { for all } k \in K \\
     \end{align*}
     $K \subset I, i \in I, \vec c - \vec c' \in \Q_p^{|x|}, F(a_j) \in \Z$
     satisfy the requirements of Lemma \ref {gamma}, so we apply it to conclude
     \begin{align*}
-      &\val(\vec p_i \cdot (\vec c - \vec c')) \geq F(a_j) - \gamma \\
-      &\val(\vec p_i \cdot \vec c - \vec p_i \cdot \vec c') \geq F(a_j) - \gamma \\
-      &\val(a_i - a_i') \geq F(a_j) - \gamma
+      &\val(\vec p_i \cdot (\vec c - \vec c')) > F(a_j) - \gamma \\
+      &\val(\vec p_i \cdot \vec c - \vec p_i \cdot \vec c') > F(a_j) - \gamma \\
+      &\val(a_i - a_i') > F(a_j) - \gamma
     \end{align*}
     as needed, finishing the proof of the claim.
   \end{proof}	
@@ -806,14 +881,27 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
   \begin{align*}
     \val(a_i - a_i') > F(a_j) 
   \end{align*}
-  As $F(a_i) \leq F(a_j)$, $a_i, a_i'$ have to lie in the same sub-interval.	
-  TO DO: PROVE THE PREVIOUS SENTENCE FORMALLY
-  Suppose that $a_i$ lies in the sub-interval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$
-  and that $a_i'$ lies in the sub-interval $\paren{B(t_L', \alpha_L'),  B(t_U', \alpha_U')}$.
+  We now would like to show that $a_i, a_i'$ lie in the same subinterval.
+  As $F(a_i) \leq F(a_j)$, $F(a_i') \leq F(a_j')$ and $F(a_j) = F(a_j')$ we have that
+  $\val(a_i - a_i') > F(a_i)$ and $\val(a_i - a_i') > F(a_i')$
+  Suppose that $a_i$ lies in the subinterval $\inti(t, F(a_i), \alpha_U)$
+  and that $a_i'$ lies in the subinterval $\inti(t', F(a_i'), \alpha_U')$.
+  Without loss of generality assume that $F(a_i) \leq F(a_i')$.
+  As $\val(a_i - a_i') > F(a_i')$, this implies that
+  \begin{align*}
+    a_i &\in B(a_i', F(a_i')) \\
+    a_i &\in B(t', F(a_i')) \\
+    B(t, F(a_i)) &\cap B(t', F(a_i')) \neq \emptyset \\
+    B(t, F(a_i)) &\subset B(t', F(a_i')) 
+  \end{align*}
+  For the subintervals to be disjoint we need $F(a_i') \geq \alpha_U$ and
+  $\inti(t, F(a_i), \alpha_U) \cap B(t', F(a_i')) = \emptyset$.
+  But $\val(t' - a_i) > F(a_i')$ implying that $a_i \in \inti(t, F(a_i), \alpha_U) \cap B(t', F(a_i'))$ giving a contradiction.
+  Therefore the subintervals coicide finishing the proof.
 \end{proof}
 
 \begin{Corollary}
-  $\Phi(x,y)$ has VC-density $\leq |x|$.
+  $\Phi(x,y)$ has dual $\vc$-density $\leq |x|$.
 \end{Corollary}
 
 \begin{proof}
@@ -841,8 +929,8 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
 \end{Corollary}
 
 \begin{proof}
-  Previous lemma implies that $\vc(\phi) \leq \vc(\Phi) \leq |x|$.
-  As choice of $\phi$ was arbitrary, this implies that VC-density of any formula is bounded by the arity of $x$.
+  Previous lemma implies that $\vc^*(\phi) \leq \vc^*(\Phi) \leq |x|$.
+  As choice of $\phi$ was arbitrary, this implies that vc-density of any formula is bounded by the arity of $x$.
 \end{proof}
 
 This proof relies heavily on the linearity of functions $a_1, a_2, c$ in the cell deomposition result (see Definition \ref{cell}).
