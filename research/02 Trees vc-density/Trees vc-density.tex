@@ -35,29 +35,201 @@
 
 \maketitle
 
-VC-density was introduced in \cite{vc_density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In an NIP theory we can define a vc-function
+VC-density was studied in \cite{vc_density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In an NIP theory we can define a vc-function
 
 \begin{align*}
 	\vc : \N \arr \N
 \end{align*}
 
-Where $\vc(n)$ measures complexity of definable sets in an $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with that property are known to be dp-minimal, i.e. having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
+Where $\vc(n)$ measures the worst-case complexity of definable sets in an $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e. having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
 
-In this paper we work with trees viewed as posets. Parigot in \cite{parigot_trees} showed that such models have NIP. This result was strengthened by Simon in \cite{simon_dp_min} showing that trees are dp-minimal. \cite{vc_density} has the following problem 
+In this paper we work with trees viewed as posets.
+% More precisely, our structure is branches of an infinite tree in a langugage of $\leq$ with possibly finitely many colors.
+Parigot in \cite{parigot_trees} showed that such structures have NIP.
+This result was strengthened by Simon in \cite{simon_dp_min} showing that trees are dp-minimal.
+The paper \cite{vc_density} poses the following problem:
 
 \begin{Problem} (\cite{vc_density} p. 47)
 	Determine the VC density function of each (infinite) tree.
 \end{Problem}
 
-Here we settle this question by showing that the theory of trees has $\vc(n) = n$.
+Here we settle this question by showing any model of trees has $\vc(n) = n$.
 
-\section{Preliminaries}
-%tree finite? meet? disconnected?
-%MAYBE: Work in connected trees for simplicity!
-%inequality directions
+Section 1 of the paper consists of a basic introduction to the concepts of VC-dimension and vc-density.
+In Section 2 we introduce proper subdividions -- the main tool that we use to analyze trees.
+We also prove some basic properties of proper subdivisions.
+Section 3 introduces the key constructions of proper subdivisions in tree which will be used in the proof.
+Section 4 presents the proof of $\vc(n) = n$ via the subdivisions.
+
 We use notation $a \in T^n$ for the tuples of size $n$. For a variable $x$ or a tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
 
-We work with finite relational languages. Given a formula we can define its complexity as the depth of quantifiers used to build up the formula. More precisely
+The language for the trees consists of a single binary predicate $\{\leq\}$. The theory of trees states that $\leq$ defines a partial order and for every element $a$ we have that $\{x \mid x < a\}$ is a linear order. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
+
+\begin{Definition}
+	Work in a tree $\TT = (T, \leq)$.
+        For $x \in T$ let $I(x) = \{t \in T \mid t \leq x\}$ denote all the elements below $x$.
+        The \emph{meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
+\end{Definition}
+
+The theory of meet trees requires that any two elements in the same connected component have a meet. Colored trees are trees with a finite number of colors added via unary predicates.
+
+From now on assume that all trees are colored.
+We allow our trees to be disconnected (so really, we work with forests) or finite unless otherwise stated.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{VC-dimension and vc-density}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{Definition}
+  Throughout this section we work with a collection $\F$ of subsets of a set $X$.
+  We call the pair $(X, \F)$ a \defn{set system}.
+  \begin{itemize}
+  \item Given a subset $A$ of $X$, we define the set system $(A, A \cap \F)$
+    where $A \cap \F = \curly{A \cap F}_{F\in \F}$.
+  \item For $A \subset X$ we say that $\F$ \defn{shatters} $A$ if $A \cap \F = \PP(A)$.
+  \end{itemize}    
+\end{Definition}  
+
+\begin{Definition}
+  We say $(X, \F)$ has VC-dimension $n$ if the largest subset of $X$ shattered by $\F$ is of size $n$.
+  If $\F$ shatters arbitrarily large subsets of $X$, we say that $(X, \F)$ has infinite VC-dimension.
+  We denote the VC-dimension of $(X, \F)$ by $\VC(\F)$.
+\end{Definition}  
+
+\begin{Note}
+  We may drop $X$ from the previous definition, as the VC-dimension doesn't depend on the base set and is determined by $(\bigcup \F, \F)$.
+\end{Note}
+This allows us to distinguish between well-behaved set systems of finite VC-dimension which tend to have good combinatorial properties and
+poorly behaved set systems with infinite VC-dimension.
+
+Another natural combinatorial notion is that of a dual system:
+\begin{Definition}
+  For $a \in X$ define $X_a = \curly{F \in \F \mid a \in F}$.
+  Let $\F^* = \curly{X_a}_{a \in X}$.
+  We define $(\F, \F^*)$ as the \defn{dual system} of $(X, \F)$.
+  The VC-dimension of the dual system of $(X, \F)$ is referred to as the \defn{dual VC-dimension} of $(X, \F)$ and denoted by $\VC^*(\F)$.
+  (As before, this notion doesn't depend on $X$.)
+\end{Definition}  
+
+\begin{Lemma}
+  A set system has finite VC-dimension if and only if its dual system has finite VC-dimension.
+  More precisely
+  \begin{align*}
+    \VC^*(\F) \leq 2^{1+\VC(\F)}.
+  \end{align*}
+\end{Lemma}
+
+For a more refined notion we look at the traces of our family on finite sets:
+\begin{Definition}
+  Define the \defn{shatter function} $\pi_\F \colon \N \arr \N$ and the \defn{dual shatter function} $\pi^*_\F \colon \N \arr \N$ of $\F$ by 
+  \begin{align*}
+    \pi_\F(n) &= \max \curly{|A \cap \F| \mid A \subset X \text{ and } |A| = n} \\
+	  \pi^*_\F(n) &= \max \curly{\text{atoms($B$)} \mid B \subset \F, |B| = n}
+  \end{align*}
+    where atoms($B$) = number of atoms in the Boolean algebra generated by $B$.
+  Note that the dual shatter function is precisely the shatter function of the dual system: $\pi^*_\F = \pi_{\F^*}$.
+\end{Definition}  
+
+A simple upper bound is $\pi_\F(n) \leq 2^n$ (same for the dual).
+If VC-dimension is infinite then clearly $\pi_\F(n) = 2^n$ for all $n$. Conversely we have the following remarkable fact:
+\begin{Theorem} [Sauer-Shelah '72]
+  If the set system $(X, \F)$ has finite VC-dimension $d$ then $\pi_\F(n) \leq {n \choose \leq d}$ where
+  ${n \choose \leq d} = {n \choose d} + {n \choose d - 1} + \ldots + {n \choose 1}$.    
+\end{Theorem}
+
+Thus the systems with a finite VC-dimension are precisely the systems where the shatter function grows polynomially.
+Define vc-density to be the degree of that polynomial:
+\begin{Definition}
+  Define \defn{vc-density} and \defn{dual vc-density} of $\F$ as
+  \begin{align*}
+    \vc(\F) &= \limsup_{n \to \infty}\frac{\log \pi_\F(n)}{\log n} \in \R^{\geq 0} \cup \curly{+\infty}\\
+    \vc^*(\F) &= \limsup_{n \to \infty}\frac{\log \pi^*_\F(n)}{\log n}\in \R^{\geq 0} \cup \curly{+\infty}
+  \end{align*}
+\end{Definition}
+
+Generally speaking a shatter function that is bounded by a polynomial doesn't itself have to be a polynomial.
+Proposition 4.12 in \cite{density} gives an example of a shatter function that grows like $n \log n$ (so it has vc-density $1$).
+
+So far the notions that we have defined are purely combinatorial.
+We now adapt VC-dimension and vc-density to the model theoretic context.
+
+\begin{Definition}
+  Work in a structure $M$.
+  Fix a finite collection of formulas $\Phi(x, y) = \curly{\phi_i(x, y)}$.
+
+  \begin{itemize}
+  \item For $\phi(x, y) \in \LL(M)$ and $b \in M^{|y|}$ let 
+  \begin{align*}
+	  \phi(M^{|x|}, b) = \{a \in M^{|x|} \mid \phi(a, b)\} \subseteq M^{|x|}.
+  \end{align*}
+  \item Let $\Phi(M^{|x|}, M^{|y|})= \{\phi_i(M^{|x|}, b) \mid \phi_i \in \Phi, b \in M^{|y|}\} \subseteq \PP(M^{|x|})$.
+  \item Let $\F_\Phi = \Phi(M^{|x|}, M^{|y|})$ giving a set system $(M^{|x|}, \F_\Phi)$.
+  \item Define \defn{VC-dimension} of $\Phi$, $\VC(\Phi)$ to be the VC-dimension of $(M^{|x|}, \F_\Phi)$, similarly for the dual.
+  \item Define \defn{vc-density} of $\Phi$, $\vc(\Phi)$ to be the vc-density of $(M^{|x|}, \F_\Phi)$, similarly for the dual.
+  \end{itemize}
+
+  We will also refer to the vc-density and VC-dimension of a single formula $\phi$
+  viewing it as a one element collection $\curly{\phi}$.
+\end{Definition}
+
+Counting atoms of a Boolean algebra in a model theoretic setting corresponds to counting types,
+so it is instructive to rewrite the shatter function in terms of types.
+
+\begin{Definition} 
+  \begin{align*}
+    \pi^*_\Phi(n) &= \max \curly{\text{number of $\Phi$-types over $B$} \mid B \subset M, |B| = n}
+  \end{align*}
+\end{Definition}  
+
+\begin{Lemma} \label{count_types}
+  \begin{align*}
+    \vc^*(\Phi) &= \text{degree of polynomial growth of $\pi^*_\Phi(n)$}  = \limsup_{n \to \infty}\frac{\log \pi^*_\Phi(n)}{\log n}
+  \end{align*}  
+\end{Lemma}
+
+One can check that the shatter function and hence VC-dimension and vc-density of a formula are elementary notions,
+so they only depend on the first-order theory of the structure.
+
+NIP theories are a natural context for studying vc-density.
+In fact we can take the following as the definition of NIP:
+\begin{Definition}
+  Define $\phi$ to be NIP if it has finite VC-dimension. 
+\end{Definition}
+
+% \cite{Aschenbrenner_reference_8} shows that in a general combinatorial context,
+In a general combinatorial context,
+vc-density can be any real number in $0 \cup [1, \infty)$.
+Less is known if we restrict our attention to NIP theories.
+Proposition 4.6 in \cite{density} gives examples of formulas that have non-integer rational vc-density in an NIP theory,
+however it is open whether one can get an irrational vc-density in this context.
+
+In general, instead of working with a theory formula by formula, we can look for a uniform bound for all formulas:
+\begin{Definition}
+  For a given NIP structure $M$, define the \defn{vc-function}
+  \begin{align*}
+    \vc^M(n) &= \sup \{\vc^*(\phi(x, y)) \mid \phi \in \LL(M), |x| = n\} \\
+             &= \sup \{\vc(\phi(x, y)) \mid \phi \in \LL(M), |y| = n\}
+  \end{align*}
+\end{Definition}
+
+As before this definition is elementary, so it only depends on the theory of $M$.
+We omit the superscript $M$ if it is understood from the context.
+One can easily check the following bounds:
+\begin{Lemma} [Lemma 3.22 in \cite{density}]
+  \begin{align*}
+    \vc(1) &\geq 1 \\
+    \vc(n) &\geq n\vc(1)
+  \end{align*}  
+\end{Lemma}
+
+However, it is not known whether the second inequality can be strict or even whether $\vc(1) < \infty$ implies $\vc(n) < \infty$.
+
+\section{Proper Subdivisions: Definition and Properties}
+
+We work with finite relational languages.
+Given a formula we define its complexity as the depth of quantifiers used to build up the formula. More precisely:
 %See for example \cite{ynm_notes} Definition 2D.4 pg.72.
 \begin{Definition}
 Define \emph{complexity} of a formula by induction:
@@ -68,85 +240,51 @@ Define \emph{complexity} of a formula by induction:
 	&\cx(\neg \phi) = \cx(\phi)
 \end{align*}
 \end{Definition}
-A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas when the complexity and the number of free variablesare fixed. We will use the following notation for types:
-\begin{Definition} Let $n,m$ be natural numbers, $\B$ a structure, $A$ a parameter set and $a,b$ tuples in $\B$.
-	\begin{itemize}
-		\item $\tp^n_{\B}(a/A)$ will stand for all the $A$-formulas of complexity $\leq n$ that are true of $a$ in $\B$. If $A = \emptyset$ we may write $\tp^n_{\B}(a)$. $\B$ will be omitted as well if it is clear from context. Note that if $A$ is finite, there are finitely many such formulas (up to an equivalence). Conjunction of those formulas would still have complexity $\leq n$ so we can just associate a single formula to every type. 
-		\item $\B \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $n$ over $A$ in $\B$, i.e. $\tp^n_{\B}(a/A) = \tp^n_{\B}(b/A)$
-		\item $S^n_{\B, m}(A)$ will stand for all $m$-types of complexity $n$ over $A$, for example $\tp^n_{\B}(a/A) \in S^n_{\B, m}(A)$ assuming $|a| = m$.
-	\end{itemize}
-\end{Definition}
-
-The language for the trees consists of a single binary predicate $\{\leq\}$. The theory of trees states that $\leq$ defines a partial order and for every element $a$ we have that $\{x \mid x < a\}$ is a linear order. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
-
-\begin{Definition}
-	Work in a tree $\TT$. For $x \in T$ let $I(x) = \{t \in T \mid t \leq x\}$ denote all the elements below $x$. \emph{Meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
-\end{Definition}
-
-The theory of meet trees requires that any two elements in the same connected component have a meet. Colored trees are trees with a finite number of colors added via unary predicates.
-
-From now on assume that all trees are colored. We allow our trees to be disconnected or finite unless otherwise stated.
-
-%% For completeness we also present definition of VC function.
-%% One should refer to \cite{vc_density} for more details.
-%% Suppose we have a collection $\CS$ of subsets of $X$. We define a \emph{shatter function} $\pi_\CS(n)$
-
-%% \begin{align*}
-%% 	\pi_\CS(n) = \max \{|A \cap \CS| : A \subset X \text{ and } |A| = n\}
-%% \end{align*}
-
-%% Sauer's Lemma asserts that asymptotically $\pi_\CS$ is either $2^n$ or polynomial.
-%% In the polynomial case we define VC density of $\CS$ to be power of polynomial that bounds $\pi_\CS$.
-%% More formally 
-%% \begin{align*}
-%% 	\vc(\CS) = \limsup_{n \to \infty}\frac{\log \pi_\CS}{\log n}
-%% \end{align*}
-
-%% Given a model $M \models T$ and a formula $\phi(x, y)$ we define 
-
-%% \begin{align*}
-%% 	\CS_\phi &= \{\phi(M^{|n|}, b) : b \in M^{|y|}\} \\
-%% 	\vc(\phi) &=  \vc(\CS_\phi)
-%% \end{align*}
-
-%% One has to check that this definition is independent of realization of $T$, see \cite{vc_density}, Lemma 3.2. For a theory $T$ we define the VC function
-
-%% \begin{align*}
-%% 	\vc(n) = \sup \{\vc(\phi(x, y)) : |x| = n\}
-%% \end{align*}
-
-%% Also, \cite{vc_density}, 3.2 tells us that $\vc(m) \geq m$.
-
-\section{Proper Subdivisions: Definition and Properties}
-\begin{Definition}
-	Let $\A$, $\B$, $\TT$ be models in some (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
+A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas when the complexity and the number of free variables are fixed.
+We will use the following notation for types:
+\begin{Definition} Let $\B$ be a structure, $A \subset B$ a finite parameter set and $a,b$ tuples in $\B$, $m, n$ natural numbers.
+  \begin{itemize}
+  \item $\tp^n_{\B}(a/A)$ will stand for the set of all the $A$-formulas of complexity $\leq n$ that are true of $a$ in $\B$.
+    If $A = \emptyset$ we may also write this as $\tp^n_{\B}(a)$.
+    The subscript $\B$ will be omitted as well if it is clear from context.
+    Note that if $A$ is finite, there are finitely many such formulas (up to an equivalence).
+    The conjunction of those formulas still has complexity $\leq n$ so we can just associate a single formula to every type $\tp^n_{\B}(a/A)$.
+  \item $\B \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $\leq n$ over $A$ in $\B$, i.e. $\tp^n_{\B}(a/A) = \tp^n_{\B}(b/A)$.
+  \item $S^n_{\B, m}(A)$ will stand for the set of all $m$-types of complexity $\leq n$ over $A$
+    \begin{align*}
+      S^n_{\B, m}(A) = \curly{\tp^n_{\B}(a/A) \mid a \in B^m}.
+    \end{align*}
+  \end{itemize}
 \end{Definition}
 
 \begin{Definition}
-	$(\A, \B)$ subdivision of $\TT$ is called \emph{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
-	\begin{align*}
-		\A \models a_1 &\equiv_n a_2 \\
-		\B \models b_1 &\equiv_n b_2
-	\end{align*}
-	then we have
-	\begin{align*}
-		\TT \models a_1b_1 \equiv_n a_2b_2
-	\end{align*}
-\end{Definition}
-
-\begin{Definition}
-	$(\A, \B)$ subdivision of $\TT$ is called \emph{proper} if it is $n$-proper for all $n \in \N$.
+  \begin{itemize}
+  \item Let $\A$, $\B$, $\TT$ be structures in some (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
+  \item A subdivision $(\A, \B)$ of $\TT$ is called \emph{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
+    \begin{align*}
+      \A \models a_1 &\equiv_n a_2 \\
+      \B \models b_1 &\equiv_n b_2
+    \end{align*}
+    we have
+    \begin{align*}
+      \TT \models a_1b_1 \equiv_n a_2b_2.
+    \end{align*}
+  \item A subdivision $(\A, \B)$ of $\TT$ is called \emph{proper} if it is $n$-proper for all $n \in \N$.
+  \end{itemize}
 \end{Definition}
 
 \begin{Lemma} \label{lm_subdivision}
-	Consider a subdivision $(\A, \B)$ of $\TT$. If it is $0$-proper then it is proper.
+	Consider a subdivision $(\A, \B)$ of $\TT$. If $(\A, \B)$ is $0$-proper then it is proper.
 \end{Lemma}
 
 \begin{proof}
-	We prove that the subdivision is $n$-proper for all $n$ by induction. Case $n = 0$ is given by the assumption. Suppose $n = k + 1$ and we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim i.e. $\TT \models \phi^k(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
+	We prove that the subdivision is $k$-proper for all $k$ by induction.
+        The case $k = 0$ is given by the assumption.
+        Suppose we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim i.e. $\TT \models \phi^k(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
 	\begin{align*}
 		\A \models \exists x \, \tp^k_{\A}(x, a_1) = \pp
 	\end{align*}
+        (with $\tp^k_{\A}(x, a_1) = \pp$ a shorthand for $\phi_\pp(x)$ where $\phi_\pp$ is a formula that determines the type $\pp$).
 	Formula $\tp^k_{\A}(x, a_1) = \pp$ is of complexity $k$ so $\exists x \, \tp^k_{\A}(x, a_1) = \pp$ is of complexity $k+1$. By the inductive hypothesis we have
 	\begin{align*}
 		\A \models \exists x \, \tp^k_{\A}(x, a_2) = \pp
@@ -159,26 +297,31 @@ From now on assume that all trees are colored. We allow our trees to be disconne
 	\end{align*}
 	by the inductive hypothesis we have
 	\begin{align*}
-		\TT \models aa_1b_1 &\equiv_k a'a_2b_2 \\
+		\TT &\models aa_1b_1 \equiv_k a'a_2b_2 \\
 		\TT &\models \phi^k(a', a_2, b_2) & \text {as } \TT &\models \phi^k(a, a_1, b_1)\\
 		\TT &\models \exists x \phi^k(x, a_2, b_2)
 	\end{align*}
 \end{proof}
 
-We use this lemma for (colored) trees. Suppose $\TT$ is a model of a (colored) tree in some language $\LL = \{\leq, \ldots\}$. Suppose $\A, \B$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with $\A, \B$ substructures of $\TT$ as reducts to $\LL$.
-Furthermore suppose that $(\A, \B)$ is proper.
-In this case we'll refer to $(\A, \B)$ as a \emph{proper subdivision} (of $\TT$).
+This lemma is general, but we will use it specifically applied to (colored) trees.
+Suppose $\TT$ is a model of a (colored) tree in some language $\LL = \{\leq, \ldots\}$.
+Suppose $\A, \B$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with $\A, \B$ substructures of $\TT$ as reducts to $\LL$.
+Furthermore suppose that $(\A, \B)$ is 0-proper.
+Then $(\A, \B)$ is a proper subdivision of $\TT$.
+From now on all the subdivisions we work with will be of this form.
 
 \begin{Example} \label{ex_disc}
-	Suppose a tree consists of two connected components $C_1, C_2$. Then those components $(C_1, \leq, \ldots)$, $(C_2, \leq, \ldots)$ interpreted as substructures form a proper subdivision.
+  Suppose a tree consists of two connected components $C_1, C_2$.
+  Then those components $(C_1, \leq)$, $(C_2, \leq)$ interpreted as substructures form a proper subdivision.
+  To see that we only need to show that this subdivision is 0-proper.
+  But that is immediate as any $c_1 \in C_1$ and $c_2 \in C_2$ are incomprable.
 \end{Example}
-
-%\begin{Example} \label{ex_cone}
-%	Work with a (colored) tree $\TT$ in a language $\LL = \{\leq, C_1, \ldots, C_n\}$ with colors interpreted by sets $S_1, \ldots S_n$. Fix $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Let $\LL_A$ be just $\LL$ expanded by an extra unary predicate $\LL_A = \LL \cup \{C\}$. Consider structure $\A$ in the language $\LL_A$ with universe $A$, colors $C_1 \ldots C_n$ interpreted by restriction and $C$ interpreted by $S$. Also let $\B$ be a structure in language $\LL$ and universe $B$, considered as substructure of $\TT$.	Then $(\A, \B)$ is a proper subdivision of $\TT$.
-%\end{Example}
 
 \begin{Example} \label{ex_cone}
 	Fix a tree $\TT$ in the language $\{\leq\}$ and $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
+To see this, again, we show that the subdivision is 0-proper.
+The only time $a \in A$ and $b \in B$ are comparable is when $a \in S$, so that is captured by the language.
+(See proof of Lemma \ref{subdivide} for more details.)
 \end{Example}
 
 \begin{Definition} For $\phi(x, y)$, $A \subseteq T^{|x|}$ and $B \subseteq T^{|y|}$
@@ -273,7 +416,7 @@ Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\} = \{\le
 	Define structures $\A_{S} = (A, \leq)$ and $\B_{S} = (B, \leq, \vec C, B)$ where $\LL_A = \LL$ (and $U \in \LL_B$ vacuously interpreted by $B$). Note that $S \cap B = \emptyset$. (cf example \ref{ex_disc})
 \end{Definition}
 
-\begin{Lemma}
+\begin{Lemma} \label{subdivide}
 	The pairs of structures defined above are all proper subdivisions.
 \end{Lemma}
 
@@ -446,12 +589,15 @@ Putting all of those results together we are able to compute the $\vc$-density o
 	\begin{proof}
 		Let $\TT'$ be a tree. We can embed it in a larger tree that is closed under meets $\TT' \subset \TT$. Expand $\TT$ by an extra color and interpret it by coloring the subset $\TT'$. Thus we can interpret $\TT'$ in $T^1$. By Corollary 3.17 in \cite{vc_density} we get that $\vc^{\TT'}(n) \leq \vc^T(1 \cdot n) = n$ thus $\vc^{\TT'}(n) = n$ as well.
 	\end{proof}
+
+
 	
 	\begin{thebibliography}{9}
 
 \bibitem{vc_density}
-	M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-	\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
+  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
 
 \bibitem{simon_dp_min}
 	P. Simon,
@@ -461,7 +607,7 @@ Putting all of those results together we are able to compute the $\vc$-density o
 \bibitem{parigot_trees}
 	Michel Parigot.
 	Th\'eories d'arbres.
-	\textit{Journal of Symbolic Logic}, 47, 1982.
+	\textit{Journal of Symbolic Logic}, 47, 1982, 841-853
 	
 	
 \end{thebibliography}

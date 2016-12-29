@@ -22,6 +22,44 @@
 
 \DeclareMathOperator{\cx}{Complexity}
 
+\renewcommand{\AA}{\mathscr A}
+\newcommand{\BB}{\mathscr B}
+\newcommand{\DD}{\mathscr D}
+\newcommand{\II}{\mathscr I}
+\newcommand{\MM}{\mathscr M}
+
+\renewcommand{\C}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\LL}{\mathcal L}
+\newcommand{\LLA}{\mathcal L_{aff}}
+\newcommand{\LLM}{\mathcal L_{Mac}}
+\newcommand{\M}{\mathcal M}
+
+\newcommand{\U}{\mathcal U}	
+
+
+\newcommand{\curly}[1]{\left\{#1\right\}}
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+
+\DeclareMathOperator{\Sg}{Sg}
+\DeclareMathOperator{\It}{Tp}
+\DeclareMathOperator{\Sub}{Sub}
+\DeclareMathOperator{\Ct}{Ct}
+\DeclareMathOperator{\vecspan}{span}
+\DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\vval}{val}
+\DeclareMathOperator{\tval}{T-val}
+\DeclareMathOperator{\inti}{I}
+
+\newcommand{\defn}{\underline}
+\newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
+
 \begin{document}
 
 \title{vc-density for trees}
@@ -66,12 +104,15 @@ We use notation $a \in T^n$ for the tuples of size $n$. For a variable $x$ or a 
 The language for the trees consists of a single binary predicate $\{\leq\}$. The theory of trees states that $\leq$ defines a partial order and for every element $a$ we have that $\{x \mid x < a\}$ is a linear order. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
 
 \begin{Definition}
-	Work in a tree $\TT$. For $x \in T$ let $I(x) = \{t \in T \mid t \leq x\}$ denote all the elements below $x$. \emph{Meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
+	Work in a tree $\TT = (T, \leq)$.
+        For $x \in T$ let $I(x) = \{t \in T \mid t \leq x\}$ denote all the elements below $x$.
+        The \emph{meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
 \end{Definition}
 
 The theory of meet trees requires that any two elements in the same connected component have a meet. Colored trees are trees with a finite number of colors added via unary predicates.
 
-From now on assume that all trees are colored. We allow our trees to be disconnected or finite unless otherwise stated.
+From now on assume that all trees are colored.
+We allow our trees to be disconnected (so really, we work with forests) or finite unless otherwise stated.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -147,7 +188,7 @@ Define vc-density to be the degree of that polynomial:
 \end{Definition}
 
 Generally speaking a shatter function that is bounded by a polynomial doesn't itself have to be a polynomial.
-Proposition 4.12 in \cite{density} gives an example of a shatter function that grows like $n \log n$ (so it has vc-density $1$).
+Proposition 4.12 in \cite{vc_density} gives an example of a shatter function that grows like $n \log n$ (so it has vc-density $1$).
 
 So far the notions that we have defined are purely combinatorial.
 We now adapt VC-dimension and vc-density to the model theoretic context.
@@ -199,7 +240,7 @@ In fact we can take the following as the definition of NIP:
 In a general combinatorial context,
 vc-density can be any real number in $0 \cup [1, \infty)$.
 Less is known if we restrict our attention to NIP theories.
-Proposition 4.6 in \cite{density} gives examples of formulas that have non-integer rational vc-density in an NIP theory,
+Proposition 4.6 in \cite{vc_density} gives examples of formulas that have non-integer rational vc-density in an NIP theory,
 however it is open whether one can get an irrational vc-density in this context.
 
 In general, instead of working with a theory formula by formula, we can look for a uniform bound for all formulas:
@@ -214,7 +255,7 @@ In general, instead of working with a theory formula by formula, we can look for
 As before this definition is elementary, so it only depends on the theory of $M$.
 We omit the superscript $M$ if it is understood from the context.
 One can easily check the following bounds:
-\begin{Lemma} [Lemma 3.22 in \cite{density}]
+\begin{Lemma} [Lemma 3.22 in \cite{vc_density}]
   \begin{align*}
     \vc(1) &\geq 1 \\
     \vc(n) &\geq n\vc(1)
@@ -226,7 +267,7 @@ However, it is not known whether the second inequality can be strict or even whe
 \section{Proper Subdivisions: Definition and Properties}
 
 We work with finite relational languages.
-Given a formula we can define its complexity as the depth of quantifiers used to build up the formula. More precisely
+Given a formula we define its complexity as the depth of quantifiers used to build up the formula. More precisely:
 %See for example \cite{ynm_notes} Definition 2D.4 pg.72.
 \begin{Definition}
 Define \emph{complexity} of a formula by induction:
@@ -237,44 +278,51 @@ Define \emph{complexity} of a formula by induction:
 	&\cx(\neg \phi) = \cx(\phi)
 \end{align*}
 \end{Definition}
-A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas when the complexity and the number of free variablesare fixed. We will use the following notation for types:
-\begin{Definition} Let $n,m$ be natural numbers, $\B$ a structure, $A$ a parameter set and $a,b$ tuples in $\B$.
-	\begin{itemize}
-		\item $\tp^n_{\B}(a/A)$ will stand for all the $A$-formulas of complexity $\leq n$ that are true of $a$ in $\B$. If $A = \emptyset$ we may write $\tp^n_{\B}(a)$. $\B$ will be omitted as well if it is clear from context. Note that if $A$ is finite, there are finitely many such formulas (up to an equivalence). Conjunction of those formulas would still have complexity $\leq n$ so we can just associate a single formula to every type. 
-		\item $\B \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $n$ over $A$ in $\B$, i.e. $\tp^n_{\B}(a/A) = \tp^n_{\B}(b/A)$
-		\item $S^n_{\B, m}(A)$ will stand for all $m$-types of complexity $n$ over $A$, for example $\tp^n_{\B}(a/A) \in S^n_{\B, m}(A)$ assuming $|a| = m$.
-	\end{itemize}
+A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas when the complexity and the number of free variables are fixed.
+We will use the following notation for types:
+\begin{Definition} Let $\B$ be a structure, $A \subset B$ a finite parameter set and $a,b$ tuples in $\B$, $m, n$ natural numbers.
+  \begin{itemize}
+  \item $\tp^n_{\B}(a/A)$ will stand for the set of all the $A$-formulas of complexity $\leq n$ that are true of $a$ in $\B$.
+    If $A = \emptyset$ we may also write this as $\tp^n_{\B}(a)$.
+    The subscript $\B$ will be omitted as well if it is clear from context.
+    Note that if $A$ is finite, there are finitely many such formulas (up to an equivalence).
+    The conjunction of those formulas still has complexity $\leq n$ so we can just associate a single formula to every type $\tp^n_{\B}(a/A)$.
+  \item $\B \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $\leq n$ over $A$ in $\B$, i.e. $\tp^n_{\B}(a/A) = \tp^n_{\B}(b/A)$.
+  \item $S^n_{\B, m}(A)$ will stand for the set of all $m$-types of complexity $\leq n$ over $A$
+    \begin{align*}
+      S^n_{\B, m}(A) = \curly{\tp^n_{\B}(a/A) \mid a \in B^m}.
+    \end{align*}
+  \end{itemize}
 \end{Definition}
 
 \begin{Definition}
-	Let $\A$, $\B$, $\TT$ be models in some (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
-\end{Definition}
-
-\begin{Definition}
-	$(\A, \B)$ subdivision of $\TT$ is called \emph{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
-	\begin{align*}
-		\A \models a_1 &\equiv_n a_2 \\
-		\B \models b_1 &\equiv_n b_2
-	\end{align*}
-	then we have
-	\begin{align*}
-		\TT \models a_1b_1 \equiv_n a_2b_2
-	\end{align*}
-\end{Definition}
-
-\begin{Definition}
-	$(\A, \B)$ subdivision of $\TT$ is called \emph{proper} if it is $n$-proper for all $n \in \N$.
+  \begin{itemize}
+  \item Let $\A$, $\B$, $\TT$ be structures in some (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
+  \item A subdivision $(\A, \B)$ of $\TT$ is called \emph{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
+    \begin{align*}
+      \A \models a_1 &\equiv_n a_2 \\
+      \B \models b_1 &\equiv_n b_2
+    \end{align*}
+    we have
+    \begin{align*}
+      \TT \models a_1b_1 \equiv_n a_2b_2.
+    \end{align*}
+  \item A subdivision $(\A, \B)$ of $\TT$ is called \emph{proper} if it is $n$-proper for all $n \in \N$.
+  \end{itemize}
 \end{Definition}
 
 \begin{Lemma} \label{lm_subdivision}
-	Consider a subdivision $(\A, \B)$ of $\TT$. If it is $0$-proper then it is proper.
+	Consider a subdivision $(\A, \B)$ of $\TT$. If $(\A, \B)$ is $0$-proper then it is proper.
 \end{Lemma}
 
 \begin{proof}
-	We prove that the subdivision is $n$-proper for all $n$ by induction. Case $n = 0$ is given by the assumption. Suppose $n = k + 1$ and we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim i.e. $\TT \models \phi^k(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
+	We prove that the subdivision is $k$-proper for all $k$ by induction.
+        The case $k = 0$ is given by the assumption.
+        Suppose we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim i.e. $\TT \models \phi^k(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
 	\begin{align*}
-		\A \models \exists x \, \tp^k_{\A}(x, a_1) = \pp
+          \A \models \exists x \, \tp^k_{\A}(x, a_1) = \pp
 	\end{align*}
+        (with $\tp^k_{\A}(x, a_1) = \pp$ a shorthand for $\phi_{\pp}(x)$ where $\phi_{\pp}$ is a formula that determines the type $\pp$).
 	Formula $\tp^k_{\A}(x, a_1) = \pp$ is of complexity $k$ so $\exists x \, \tp^k_{\A}(x, a_1) = \pp$ is of complexity $k+1$. By the inductive hypothesis we have
 	\begin{align*}
 		\A \models \exists x \, \tp^k_{\A}(x, a_2) = \pp
@@ -287,26 +335,31 @@ A simple inductive argument verifies that there are (up to equivalence) only fin
 	\end{align*}
 	by the inductive hypothesis we have
 	\begin{align*}
-		\TT \models aa_1b_1 &\equiv_k a'a_2b_2 \\
+		\TT &\models aa_1b_1 \equiv_k a'a_2b_2 \\
 		\TT &\models \phi^k(a', a_2, b_2) & \text {as } \TT &\models \phi^k(a, a_1, b_1)\\
 		\TT &\models \exists x \phi^k(x, a_2, b_2)
 	\end{align*}
 \end{proof}
 
-We use this lemma for (colored) trees. Suppose $\TT$ is a model of a (colored) tree in some language $\LL = \{\leq, \ldots\}$. Suppose $\A, \B$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with $\A, \B$ substructures of $\TT$ as reducts to $\LL$.
-Furthermore suppose that $(\A, \B)$ is proper.
-In this case we'll refer to $(\A, \B)$ as a \emph{proper subdivision} (of $\TT$).
+This lemma is general, but we will use it specifically applied to (colored) trees.
+Suppose $\TT$ is a model of a (colored) tree in some language $\LL = \{\leq, \ldots\}$.
+Suppose $\A, \B$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with $\A, \B$ substructures of $\TT$ as reducts to $\LL$.
+Furthermore suppose that $(\A, \B)$ is 0-proper.
+Then $(\A, \B)$ is a proper subdivision of $\TT$.
+From now on all the subdivisions we work with will be of this form.
 
 \begin{Example} \label{ex_disc}
-	Suppose a tree consists of two connected components $C_1, C_2$. Then those components $(C_1, \leq, \ldots)$, $(C_2, \leq, \ldots)$ interpreted as substructures form a proper subdivision.
+  Suppose a tree consists of two connected components $C_1, C_2$.
+  Then those components $(C_1, \leq)$, $(C_2, \leq)$ interpreted as substructures form a proper subdivision.
+  To see that we only need to show that this subdivision is 0-proper.
+  But that is immediate as any $c_1 \in C_1$ and $c_2 \in C_2$ are incomprable.
 \end{Example}
-
-%\begin{Example} \label{ex_cone}
-%	Work with a (colored) tree $\TT$ in a language $\LL = \{\leq, C_1, \ldots, C_n\}$ with colors interpreted by sets $S_1, \ldots S_n$. Fix $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Let $\LL_A$ be just $\LL$ expanded by an extra unary predicate $\LL_A = \LL \cup \{C\}$. Consider structure $\A$ in the language $\LL_A$ with universe $A$, colors $C_1 \ldots C_n$ interpreted by restriction and $C$ interpreted by $S$. Also let $\B$ be a structure in language $\LL$ and universe $B$, considered as substructure of $\TT$.	Then $(\A, \B)$ is a proper subdivision of $\TT$.
-%\end{Example}
 
 \begin{Example} \label{ex_cone}
 	Fix a tree $\TT$ in the language $\{\leq\}$ and $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
+To see this, again, we show that the subdivision is 0-proper.
+The only time $a \in A$ and $b \in B$ are comparable is when $a \in S$, so that is captured by the language.
+(See proof of Lemma \ref{subdivide} for more details.)
 \end{Example}
 
 \begin{Definition} For $\phi(x, y)$, $A \subseteq T^{|x|}$ and $B \subseteq T^{|y|}$
@@ -401,7 +454,7 @@ Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\} = \{\le
 	Define structures $\A_{S} = (A, \leq)$ and $\B_{S} = (B, \leq, \vec C, B)$ where $\LL_A = \LL$ (and $U \in \LL_B$ vacuously interpreted by $B$). Note that $S \cap B = \emptyset$. (cf example \ref{ex_disc})
 \end{Definition}
 
-\begin{Lemma}
+\begin{Lemma} \label{subdivide}
 	The pairs of structures defined above are all proper subdivisions.
 \end{Lemma}
 
@@ -574,12 +627,15 @@ Putting all of those results together we are able to compute the $\vc$-density o
 	\begin{proof}
 		Let $\TT'$ be a tree. We can embed it in a larger tree that is closed under meets $\TT' \subset \TT$. Expand $\TT$ by an extra color and interpret it by coloring the subset $\TT'$. Thus we can interpret $\TT'$ in $T^1$. By Corollary 3.17 in \cite{vc_density} we get that $\vc^{\TT'}(n) \leq \vc^T(1 \cdot n) = n$ thus $\vc^{\TT'}(n) = n$ as well.
 	\end{proof}
+
+
 	
 	\begin{thebibliography}{9}
 
 \bibitem{vc_density}
-	M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-	\textit{Vapnik-Chervonenkis density in some theories without the independence property}, I, preprint (2011)
+  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
+  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
 
 \bibitem{simon_dp_min}
 	P. Simon,
@@ -589,7 +645,7 @@ Putting all of those results together we are able to compute the $\vc$-density o
 \bibitem{parigot_trees}
 	Michel Parigot.
 	Th\'eories d'arbres.
-	\textit{Journal of Symbolic Logic}, 47, 1982.
+	\textit{Journal of Symbolic Logic}, 47, 1982, 841-853
 	
 	
 \end{thebibliography}
