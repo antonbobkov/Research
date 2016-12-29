@@ -21,3 +21,7 @@
 *.out
 *.synctex.gz
 *.tps
+*.swp
+*~
+#*#
+
