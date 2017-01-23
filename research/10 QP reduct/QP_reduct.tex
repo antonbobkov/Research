@@ -56,7 +56,7 @@
 
 
 
-\title{vc-density in an additive reduct of $P$-adic numbers}
+\title{vc-density in an additive reduct of the $P$-adic numbers}
 \author{Anton Bobkov}
 \email{bobkov@math.ucla.edu}
 
@@ -65,7 +65,7 @@
 \begin{abstract}
   Aschenbrenner et. al. computed a bound $\vc(n) \leq 2n - 1$ for the vc-density function in the field of $p$-adic numbers,
   but it is not known to be optimal.
-  I investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
+  In this paper we investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
   use a cell decomposition result of Leenknegt to compute an optimal bound $\vc(n) = n$ for that structure.
 \end{abstract}
 
@@ -74,31 +74,33 @@
 
 VC-density was studied in model theory in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko
 as a natural notion of dimension for definable families of sets in NIP theories.
-In a NIP theory $T$ we can define the vc-function
+In a complete NIP theory $T$ we can define the vc-function
 
 \begin{align*}
-  \vc_T = \vc : \N \arr \N
+  \vc^T = \vc : \N \arr \N
 \end{align*}
 
-where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-dimensional space.
-The simplest possible behavior is $\vc(n) = n$ for all $n$.
-For $T = \Th(\Q_p)$, the paper \cite{density} computes an upper bound for this function to be $2n-1$, and it is not known whether it is optimal.
-This same bound would hold in any reduct of the field of $p$-adic numbers, so one may expect that the simplified structure of the reduct would allow a better bound.
-In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain P-minimal additive reduct of the field of $p$-adic numbers.
+where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold cartesian power of the underlying set of a model of $T$
+(see \ref{vc_fn_def} below for a precise definition of $vc^T$).
+The simplest possible behavior is $\vc(n) = n$ for all $n$,
+satisfied, for example, if $T$ is o-minimal.
+For $T = \Th(\Q_p)$, the paper \cite{density} computes an upper bound for this function to be $2n-1$, and it is not known whether this is optimal.
+This same bound holds in any reduct of the field of $p$-adic numbers, but one may expect that the simplified structure of the reduct would allow a better bound.
+In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain $P$-minimal additive reduct of the field of $p$-adic numbers.
 Using this result, in this paper we improve the bound for the vc-function, showing that in Leenknegt's structure $\vc(n) = n$.
 
 Section 1 defines vc-density and states some basic lemmas about it.
-More in depth exposition of vc-density can be found in \cite{density}.
+A more in depth exposition of vc-density can be found in \cite{density}.
 Section 2 defines and states some basic facts about the theory of $p$-adic numbers.
-Here we also introduce the reduct we will be working with.
+Here we also introduce the reduct which we will be working with.
 Section 3 sets up basic definitions and lemmas that will be needed for the proof.
-We define trees and intervals and show how it helps with vc-density calculations.
+We define trees and intervals and show how they help with vc-density calculations.
 Section 4 concludes the proof.
 
 Throughout the paper, variables and tuples of elements will be simply denoted as $x, y, a, b, \ldots$.
 We will occasionally write $\vec a$ instead of $a$ for a tuple in $\Q_p^n$ to emphasize it as an element of $\Q_p$-vector space $\Q_p^n$.
-$|x|$ refers to the arity of the variable.
-First-order formulas will have parameter variables separated $\phi(x; y)$.
+We denote the arity of a tuple $x$ of variables by $|x|$.
+% First-order formulas will have parameter variables separated $\phi(x; y)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -108,24 +110,25 @@ First-order formulas will have parameter variables separated $\phi(x; y)$.
 
 
 
-\begin{Definition}
   Throughout this section we work with a collection $\F$ of subsets of a set $X$.
   We call the pair $(X, \F)$ a \defn{set system}.
+
+\begin{Definition}
   \begin{itemize}
   \item Given a subset $A$ of $X$, we define the set system $(A, A \cap \F)$
-    where $A \cap \F = \curly{A \cap F}_{F\in \F}$.
-  \item For $A \subset X$ we say that $\F$ \defn{shatters} $A$ if $A \cap \F = \PP(A)$.
+    where $A \cap \F = \curly{A \cap F \mid F\in \F}$.
+  \item For $A \subset X$ we say that $\F$ \defn{shatters} $A$ if $A \cap \F = \PP(A)$ (the power set of $A$).
   \end{itemize}    
 \end{Definition}  
 
 \begin{Definition}
-  We say $(X, \F)$ has VC-dimension $n$ if the largest subset of $X$ shattered by $\F$ is of size $n$.
+  We say $(X, \F)$ has \defn{VC-dimension} $n$ if the largest subset of $X$ shattered by $\F$ is of size $n$.
   If $\F$ shatters arbitrarily large subsets of $X$, we say that $(X, \F)$ has infinite VC-dimension.
-  We denote the VC-dimension of $(X, \F)$ by $\VC(\F)$.
+  We denote the VC-dimension of $(X, \F)$ by $\VC(X, \F)$.
 \end{Definition}  
 
 \begin{Note}
-  We may drop $X$ from the previous definition, as the VC-dimension doesn't depend on the base set and is determined by $(\bigcup \F, \F)$.
+  We may drop $X$ from the $\VC(X, \F)$, as the VC-dimension doesn't depend on the base set and is determined by $(\bigcup \F, \F)$.
 \end{Note}
 This allows us to distinguish between well-behaved set systems of finite VC-dimension which tend to have good combinatorial properties and
 poorly behaved set systems with infinite VC-dimension.
@@ -232,7 +235,7 @@ Proposition 4.6 in \cite{density} gives examples of formulas that have non-integ
 however it is open whether one can get an irrational vc-density in this context.
 
 In general, instead of working with a theory formula by formula, we can look for a uniform bound for all formulas:
-\begin{Definition}
+\begin{Definition} \label{vc_fn_def}
   For a given NIP structure $M$, define the \defn{vc-function}
   \begin{align*}
     \vc^M(n) &= \sup \{\vc^*(\phi(x, y)) \mid \phi \in \LL(M), |x| = n\} \\

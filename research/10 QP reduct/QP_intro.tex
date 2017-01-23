@@ -215,6 +215,30 @@ One can easily check the following bounds:
 
 However, it is not known whether the second inequality can be strict or even whether $\vc(1) < \infty$ implies $\vc(n) < \infty$.
 
+Another natural model-theoretic notion closely related to vc-density is dp-rank, or more specifically dp-minimality.
+The notion was first introduced by Shelah, and can be defined as follows:
+
+Suppose $M$ is a sufficiently saturated model of the complete $L$-theory $T$.
+Then $T$ is \defn{dp-minimal} iff there are no $\LL$-formula $\phi(x; y)$ with $|x| = 1$ and
+sequences $(c_i)_{i \in \N}$ in $M^{|y|}$ such that for all $i,j$,
+
+\curly{\phi(x;c_i), \phi(x;d_j)} \cup \curly{\neg \phi(x;c_k) \mid k \neq i} \cup \curly{\neg \phi(x;d_l) \mid l \neq j}
+
+is consistent.
+
+A theory is \defn{dp-minimal} if all the formulas $\phi(x; y)$ with $|x| = 1$ are dp-minimal.
+
+Lemma If a theory $T$ has $vc(1) = 1$ (or more strongly $vc(1) < 2$) then $T$ is dp-minimal.
+
+Suppose $T$ is not dp-minimal.
+Then there are sequences $c_i, d_i$ and a formula $\phi$ witnessing that.
+For every $n$ define 
+
+B_n = \curly{c_i \mid i < n} \cup \curly{d_i \mid i < n}
+
+Then there are at least $n^2$ many $\phi$-types over $B_n$.
+$|B_n| = 2n$ implies that the dual vc-density of $\phi$ is at least 2.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{$P$-adic numbers}
