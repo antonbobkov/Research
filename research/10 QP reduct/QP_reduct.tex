@@ -363,7 +363,7 @@ To show that $\vc(n) = n$ it suffices to bound $\vc^*(\phi) \leq |x|$ for every 
 Fix such a formula $\phi(x; y)$.
 Instead of working with it directly, we simplify it using quantifier elimination.
 The required quantifier elimination result can be easily obtained from cell decomposition:
-\begin{Lemma} \label{quantifier_elimination}
+\begin{Lemma} \label {quantifier_elimination}
   Any formula $\phi(x; y)$ in $(\Q_p, \LL_{aff})$ can be written as a boolean combination of formulas from the following collection
   \begin{align*}
     \Phi(x; y) = &\curly{\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))}_{i, j \in I} \cup \\
@@ -432,6 +432,7 @@ View $T$ as a tree as follows:
   \item Define a collection of balls $\BB = \curly{B(t_1, \vval(t_1 - t_2))}_{t_1, t_2 \in T}$.
     Note that $\BB$ is a (directed) boolean algebra of sets in $\Q_p$.
     We refer to the atoms in that algebra as \defn{intervals}.
+    Note that the intervals partition $\Q_p$ so any element $a \in \Q_p$ belongs to a unique interval.
   \item Let's introduce some notation for the intervals.
     For $t \in T$ and $\alpha_L, \alpha_U \in \Z \cup \curly{-\infty, +\infty}$ define
     \begin{align*}
@@ -454,7 +455,7 @@ View $T$ as a tree as follows:
   \end{itemize}
 \end{Definition}
 
-Subintervals are fine enough to make Lemma \ref{main_lemma} below work while coarse enough to be $O(N)$ small.
+Subintervals are fine enough to make Lemma \ref{main_lemma} below work while coarse enough to be $O(N)$ small:
 \begin{Lemma} \label{interval_count}\ 
   \begin{itemize}
   \item 
@@ -474,15 +475,15 @@ Subintervals are fine enough to make Lemma \ref{main_lemma} below work while coa
 
 \begin{Definition}
   Suppose $a \in \Q_p$ lies in an interval $\interval$. 
-  Define \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t)$.    
+  Define the \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t)$.    
 \end{Definition}
 
 This a natural notion having the following properties:
 \begin{Lemma}  \label{tval} \ 
   \begin{enumerate}[label=(\alph*)]
   \item $\tval(a)$ is well-defined, independent of choice of $t$ to represent the interval.
-  \item If $a \in \Q_p$ lies in a subinterval $\interval$ (as opposed to an interval),
-    then $\tval(a) = \vval(a - t)$ as well (this works for any refinement of intervals).
+  \item If $a \in \Q_p$ lies in a subinterval $\interval$,
+    then $\tval(a) = \vval(a - t)$.
   \item If $a \in \Q_p$ lies in a (sub)interval $\interval$ 
     then $\alpha_L < \tval(a) \leq \alpha_U$.
   \item For any $a \in \Q_p$ lying in a (sub)interval $\interval$ and $t' \in T$
@@ -504,26 +505,26 @@ This a natural notion having the following properties:
     \vval(t - t') \geq \alpha_L &\iff \vval(t - t') \geq \alpha_L'.
   \end{align*}
   Therefore without loss of generality we may assume that $a \in \Q_p$ lies in an interval $\interval$.
-  By (c) and the definition of intervlas one of the three following cases has to hold.
+  By (c) and the definition of intervals one of the three following cases has to hold.
   
-  Case 1: $\vval(t - t') \geq \alpha_U$ and $\tval(a) < \alpha_U$.
+  Case 1: $\vval(t - t') \geq \alpha_U$ and $\tval(a) < \alpha_U$. Then
   \begin{align*}
-    \vval(t - t') \geq \alpha_U > \tval(a) = \vval(a - t)
+    \vval(t - t') \geq \alpha_U > \tval(a) = \vval(a - t),
   \end{align*}
   thus $\vval(a - t') = \vval(a - t) = \tval(a)$ as needed.
 
-  Case 2: $\vval(t - t') \geq \alpha_U$ and $\tval(a) = \alpha_U$.
+  Case 2: $\vval(t - t') \geq \alpha_U$ and $\tval(a) = \alpha_U$. Then
   \begin{align*}
-    \tval(a) = \vval(a - t) = \vval(t - t') \geq \alpha_U
+    \tval(a) = \vval(a - t) = \vval(t - t') \geq \alpha_U,
   \end{align*}
   thus $\vval(a - t') \geq \alpha_U$.
-  The interval $\interval$ excludes the ball $B(t', \alpha_U)$,
-  so $a \notin B(t', \alpha_U)$, that is $\val(a - t') \leq \alpha_U$.
+  The interval $\interval$ is disjoint from the ball $B(t', \alpha_U)$,
+  so $a \notin B(t', \alpha_U)$, that is, $\val(a - t') \leq \alpha_U$.
   Combining this with the previous inequality we get that $\val(a - t') = \alpha_U = \tval(a)$ as needed.
 
-  Case 3: $\vval(t - t') \leq \alpha_L$
+  Case 3: $\vval(t - t') \leq \alpha_L$. Then
   \begin{align*}
-    \vval(t - t') \leq \alpha_L < \tval(a) = \vval(a - t)
+    \vval(t - t') \leq \alpha_L < \tval(a) = \vval(a - t),
   \end{align*}
   thus $\vval(a - t') = \vval(t - t')$ as needed. 
 \end{proof}
@@ -533,19 +534,21 @@ This a natural notion having the following properties:
 
 \begin{Definition}
   Suppose $a \in \Q_p$ lies in a subinterval $\interval$.
-  We say that $a$ is \defn{far from boundary} if 
+  We say that $a$ is \defn{far from the boundary} (of $\interval$) if 
     \begin{align*}
 	\alpha_L + n \leq \tval(a) \leq \alpha_U - n.
     \end{align*}
-  Otherwise we say that it is \defn{close to boundary}.
+  Here $n$ is from the Lemma \cite{quantifier_elimination}.
+  Otherwise we say that it is \defn{close to the boundary}.
 \end{Definition}
 
 \begin{Definition}
   Suppose $a_1, a_2 \in \Q_p$ lie in the same subinterval $\interval$.
   We say $a_1, a_2$ have the same \defn{subinterval type} if one of the following holds:
   \begin{itemize}
-  \item Both $a_1, a_2$ are far from boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$ coset.
-  \item Both $a_1, a_2$ are close to boundary and 
+  \item Both $a_1, a_2$ are far from the boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$ coset.
+    ($Q_{m,n}$ is from the Lemma \cite{quantifier_elimination}.)
+  \item Both $a_1, a_2$ are close to the boundary and 
     \begin{align*}
 	  \tval(a_1) = \tval(a_2) \leq \vval(a_1 - a_2) - n.
     \end{align*}
@@ -595,11 +598,11 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 \begin{proof}
   Let $a, a' \in \Q_p$ lie in the same subinterval $\interval$.
 
-  Suppose $a, a'$ are far from boundary.
+  Suppose $a, a'$ are far from the boundary.
   Then they have the same subinterval type if $a - t, a' - t$ are in the same $Q_{m,n}$-coset.
   Number of such subinterval types is bounded by the number of $Q_{m,n}$-cosets.
 
-  Suppose $a, a'$ are close to boundary and
+  Suppose $a, a'$ are close to the boundary and
   \begin{align*}
     &\tval(a) - \alpha_L = \tval(a') - \alpha_L < n \\
     &a \midr [\tval(a), \tval(a) + n) = a' \midr [\tval(a'), \tval(a') + n)  
@@ -636,7 +639,7 @@ The following lemma relates tree notions to $\Phi$-types.
   For brievety let $a = p_i(d), a' = p_i(d')$ and $Q = Q_{m,n}$.
   We want to show that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
-  Suppose $a, a'$ are close to boundary.
+  Suppose $a, a'$ are close to the boundary.
   Then $\tval(a) = \tval(a') \leq \val(a - a') - n$.
   Using Lemma \ref{tval}d, we have
   \begin{align*}
@@ -644,7 +647,7 @@ The following lemma relates tree notions to $\Phi$-types.
   \end{align*}
   Lemma \ref{distance} shows that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
-  Now, suppose both $a, a'$ are far from boundary.
+  Now, suppose both $a, a'$ are far from the boundary.
   Label their interval as $\interval$.
   Then we have 
   \begin{align*}
@@ -706,9 +709,9 @@ The following lemma relates tree notions to $\Phi$-types.
     &\vval (p_i(d) - c_i(b)) = \vval (p_i(d') - c_i(b)) = \vval(t_i - c_i(b)) \\
     &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d'))
   \end{align*}
-  If $p_j(d), p_j(d')$ are close to boundary,
+  If $p_j(d), p_j(d')$ are close to the boundary,
   then $\tval(p_j(d)) = \tval(p_j(d'))$ and the equivalence \eqref{eq:order_equation} clearly holds.
-  Suppose then that $p_j(d), p_j(d')$ are far from boundary.
+  Suppose then that $p_j(d), p_j(d')$ are far from the boundary.
   \begin{align*}
     \alpha_j + n \leq &\tval(p_j(d)), \tval(p_j(d')) \leq \beta_j - n \\
     \alpha_j < &\tval(p_j(d)), \tval(p_j(d')) < \beta_j
@@ -717,7 +720,7 @@ The following lemma relates tree notions to $\Phi$-types.
   by the definition of subinterval (more specifically definition of $\BB'$).
   Therefore \eqref{eq:order_equation} has to hold.
   (Note that we always have $\tval(p_j(d)), \tval(p_j(d')) \in (\alpha_j, \beta_j]$ by Lemma \ref{tval}c, so 
-  we only need the far from boundary condition to avoid the edge case of equality to $\beta_j$.)
+  we only need the far from the boundary condition to avoid the edge case of equality to $\beta_j$.)
 
   Case 4:
   \begin{align*}
