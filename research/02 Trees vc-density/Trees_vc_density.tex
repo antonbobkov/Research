@@ -280,15 +280,15 @@ Define \emph{complexity} of a formula by induction:
 \end{Definition}
 A simple inductive argument verifies that there are (up to equivalence) only finitely many formulas when the complexity and the number of free variables are fixed.
 We will use the following notation for types:
-\begin{Definition} Let $\B$ be a structure, $A \subset B$ a finite parameter set and $a,b$ tuples in $\B$, $m, n$ natural numbers.
+\begin{Definition} Let $\B$ be a structure, $A \subset B$ be a finite parameter set, and $a,b$ be tuples in $\B$, and $m, n$ be natural numbers.
   \begin{itemize}
-  \item $\tp^n_{\B}(a/A)$ will stand for the set of all the $A$-formulas of complexity $\leq n$ that are true of $a$ in $\B$.
+  \item $\tp^n_{\B}(a/A)$ will stand for the set of all $A$-formulas of complexity $\leq n$ that are true of $a$ in $\B$.
     If $A = \emptyset$ we may also write this as $\tp^n_{\B}(a)$.
     The subscript $\B$ will be omitted as well if it is clear from context.
-    Note that if $A$ is finite, there are finitely many such formulas (up to an equivalence).
-    The conjunction of those formulas still has complexity $\leq n$ so we can just associate a single formula to every type $\tp^n_{\B}(a/A)$.
-  \item $\B \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $\leq n$ over $A$ in $\B$, i.e. $\tp^n_{\B}(a/A) = \tp^n_{\B}(b/A)$.
-  \item $S^n_{\B, m}(A)$ will stand for the set of all $m$-types of complexity $\leq n$ over $A$
+    Note that if $A$ is finite, there are finitely many such formulas (up to equivalence).
+    The conjunction of those formulas still has complexity $\leq n$ and so we can just associate a single formula to every type $\tp^n_{\B}(a/A)$.
+  \item $\B \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $\leq n$ over $A$ in $\B$, i.e., $\tp^n_{\B}(a/A) = \tp^n_{\B}(b/A)$.
+  \item $S^n_{\B, m}(A)$ will stand for the set of all $m$-types of complexity $\leq n$ over $A$:
     \begin{align*}
       S^n_{\B, m}(A) = \curly{\tp^n_{\B}(a/A) \mid a \in B^m}.
     \end{align*}
@@ -297,7 +297,7 @@ We will use the following notation for types:
 
 \begin{Definition}
   \begin{itemize}
-  \item Let $\A$, $\B$, $\TT$ be structures in some (possibly different) finite relational languages. If $A$, $B$ partition $T$ (i.e. $T = A \sqcup B$) we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
+  \item Let $\A$, $\B$, $\TT$ be structures in some (possibly different) finite relational languages. If the underlying sets $A, B$ of $\A, \B$ partition the underlying set $T$ of $\TT$ (i.e. $T = A \sqcup B$), then we say that $(\A, \B)$ is a \emph{subdivision} of $\TT$.
   \item A subdivision $(\A, \B)$ of $\TT$ is called \emph{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
     \begin{align*}
       \A \models a_1 &\equiv_n a_2 \\
@@ -318,34 +318,26 @@ We will use the following notation for types:
 \begin{proof}
 	We prove that the subdivision is $k$-proper for all $k$ by induction.
         The case $k = 0$ is given by the assumption.
-        Suppose we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim i.e. $\TT \models \phi^k(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
+        Suppose we have $\TT \models \exists x \, \phi^k(x, a_1, b_1)$ where $\phi^k$ is some formula of complexity $k$. Let $a \in T$ witness the existential claim, i.e., $\TT \models \phi^k(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^k_{\A} (a, a_1)$. Then we have 
 	\begin{align*}
           \A \models \exists x \, \tp^k_{\A}(x, a_1) = \pp
 	\end{align*}
         (with $\tp^k_{\A}(x, a_1) = \pp$ a shorthand for $\phi_{\pp}(x)$ where $\phi_{\pp}$ is a formula that determines the type $\pp$).
-	Formula $\tp^k_{\A}(x, a_1) = \pp$ is of complexity $k$ so $\exists x \, \tp^k_{\A}(x, a_1) = \pp$ is of complexity $k+1$. By the inductive hypothesis we have
+	The formula $\tp^k_{\A}(x, a_1) = \pp$ is of complexity $\leq k$ so $\exists x \, \tp^k_{\A}(x, a_1) = \pp$ is of complexity $\leq k+1$. By the inductive hypothesis we have
 	\begin{align*}
-		\A \models \exists x \, \tp^k_{\A}(x, a_2) = \pp
+		\A \models \exists x \, \tp^k_{\A}(x, a_2) = \pp.
 	\end{align*}
-	Let $a'$ witness this existential claim so that  
-	\begin{align*}
-		\tp^k_{\A}(a', a_2) &= \pp \\
-		\tp^k_{\A}(a', a_2) &= \tp^k_{\A}(a, a_1) \\
-		\A \models a'a_2 &\equiv_k aa_1
-	\end{align*}
-	by the inductive hypothesis we have
-	\begin{align*}
-		\TT &\models aa_1b_1 \equiv_k a'a_2b_2 \\
-		\TT &\models \phi^k(a', a_2, b_2) & \text {as } \TT &\models \phi^k(a, a_1, b_1)\\
-		\TT &\models \exists x \phi^k(x, a_2, b_2)
-	\end{align*}
+	Let $a'$ witness this existential claim, so that $\tp^k_{\A}(a', a_2) &= \pp$, hence $\tp^k_{\A}(a', a_2) &= \tp^k_{\A}(a, a_1)$, that is,
+        $\A \models a'a_2 &\equiv_k aa_1$. By the inductive hypothesis we therefore have
+        $\TT &\models aa_1b_1 \equiv_k a'a_2b_2$; in particular $\TT &\models \phi^k(a', a_2, b_2) & \text {as } \TT &\models \phi^k(a, a_1, b_1)$,
+        and $\TT &\models \exists x \phi^k(x, a_2, b_2)$.
 \end{proof}
 
 This lemma is general, but we will use it specifically applied to (colored) trees.
-Suppose $\TT$ is a model of a (colored) tree in some language $\LL = \{\leq, \ldots\}$.
-Suppose $\A, \B$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with $\A, \B$ substructures of $\TT$ as reducts to $\LL$.
+Suppose $\TT$ is a (colored) tree in some language $\LL = \{\leq, \ldots\}$.
+Suppose $\A, \B$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with the $\LL$-reducts of $\A, \B$ substructures of $\TT$.
 Furthermore suppose that $(\A, \B)$ is 0-proper.
-Then $(\A, \B)$ is a proper subdivision of $\TT$.
+Then by the previous lemma $(\A, \B)$ is a proper subdivision of $\TT$.
 From now on all the subdivisions we work with will be of this form.
 
 \begin{Example} \label{ex_disc}

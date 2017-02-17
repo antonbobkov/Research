@@ -11,8 +11,8 @@
 \usepackage{setspace}
 
 \doublespacing
-% \usepackage[margin=.75in]{geometry}
-% \pgfpagesuselayout{2 on 1}
+%\usepackage[margin=.75in]{geometry}
+%\pgfpagesuselayout{2 on 1}
 
 \renewcommand{\AA}{\mathscr A}
 \newcommand{\BB}{\mathscr B}
@@ -77,7 +77,7 @@ as a natural notion of dimension for definable families of sets in NIP theories.
 In a complete NIP theory $T$ we can define the vc-function
 
 \begin{align*}
-  \vc^T = \vc : \N \arr \N
+  \vc^T = \vc : \N \arr \R \cup \curly{\infty}
 \end{align*}
 
 where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold cartesian power of the underlying set of a model of $T$
@@ -538,7 +538,7 @@ This a natural notion having the following properties:
     \begin{align*}
 	\alpha_L + n \leq \tval(a) \leq \alpha_U - n.
     \end{align*}
-  Here $n$ is from the Lemma \cite{quantifier_elimination}.
+  Here $n$ is from the Lemma \ref{quantifier_elimination}.
   Otherwise we say that it is \defn{close to the boundary}.
 \end{Definition}
 
@@ -546,8 +546,8 @@ This a natural notion having the following properties:
   Suppose $a_1, a_2 \in \Q_p$ lie in the same subinterval $\interval$.
   We say $a_1, a_2$ have the same \defn{subinterval type} if one of the following holds:
   \begin{itemize}
-  \item Both $a_1, a_2$ are far from the boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$ coset.
-    ($Q_{m,n}$ is from the Lemma \cite{quantifier_elimination}.)
+  \item Both $a_1, a_2$ are far from the boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$-coset.
+    ($Q_{m,n}$ is from the Lemma \ref{quantifier_elimination}.)
   \item Both $a_1, a_2$ are close to the boundary and 
     \begin{align*}
 	  \tval(a_1) = \tval(a_2) \leq \vval(a_1 - a_2) - n.
@@ -557,11 +557,11 @@ This a natural notion having the following properties:
 
 
 \begin{Definition}
-	For $c \in \Q_p$ and $\alpha, \beta \in \Z$ define $c \midr [\alpha, \beta) \in \paren{\Z/p\Z}^{\beta - \alpha}$
+	For $c \in \Q_p$ and $\alpha, \beta \in \Z, \alpha < \beta$ define $c \midr [\alpha, \beta) \in \paren{\Z/p\Z}^{\beta - \alpha}$
   to be the record of the coefficients of $c$ for the valuations between $[\alpha, \beta)$.
   More precisely write $c$ in its power series form
   \begin{align*}
-    c = \sum_{\gamma \in \Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \Z/p\Z
+    c = \sum_{\gamma \in \Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \curly{0,1, \ldots, p-1}
   \end{align*}
   Then $c \midr [\alpha, \beta)$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_{\beta - 1})$.
 \end{Definition}
@@ -592,7 +592,7 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 
 \begin{Lemma} \label{interval_type_count}
   For each subinterval there are at most $K = K(Q_{m,n})$ many subinterval types 
-  (with $K$ not dependent on $B$ on the subinterval).  
+  (with $K$ not depending on $B$ or on the subinterval).  
 \end{Lemma}
 
 \begin{proof}
@@ -600,15 +600,15 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 
   Suppose $a, a'$ are far from the boundary.
   Then they have the same subinterval type if $a - t, a' - t$ are in the same $Q_{m,n}$-coset.
-  Number of such subinterval types is bounded by the number of $Q_{m,n}$-cosets.
+  The number of such subinterval types is bounded by the number of $Q_{m,n}$-cosets.
 
   Suppose $a, a'$ are close to the boundary and
   \begin{align*}
-    &\tval(a) - \alpha_L = \tval(a') - \alpha_L < n \\
+    &\tval(a) - \alpha_L = \tval(a') - \alpha_L < n \text { and}\\
     &a \midr [\tval(a), \tval(a) + n) = a' \midr [\tval(a'), \tval(a') + n)  
   \end{align*}
   Then $a, a'$ have the same subinterval type.
-  Such subinterval type is thus determined by $\tval(a) - \alpha_L$ and $a \midr [\tval(a), \tval(a) + n)$,
+  Such a subinterval type is thus determined by $\tval(a) - \alpha_L$ and $a \midr [\tval(a), \tval(a) + n)$,
   therefore there are at most $n p^n$ many such types.
 
   A similar argument works for $a$ with $\alpha_U - \tval(a) \leq n$.
@@ -620,9 +620,9 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
   many subinterval types.
 \end{proof}
 
-The following lemma relates tree notions to $\Phi$-types.
+The following critical lemma relates tree notions to $\Phi$-types.
 \begin{Lemma} \label{main_lemma}
-  Suppose $d, d' \in \Q_p^{|x|}$ satisfy the follwing three conditions 
+  Suppose $d, d' \in \Q_p^{|x|}$ satisfy the follwing three conditions:
   \begin{itemize}
   \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ are in the same subinterval.
   \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ have the same subinterval type.
@@ -634,16 +634,16 @@ The following lemma relates tree notions to $\Phi$-types.
   There are two kinds of formulas in $\Phi$
   (see Lemma \ref{quantifier_elimination}).
   First we show that $d, d'$ agree on formulas of the form $p_i(x) - c_i(y) \in \lambda_k Q_{m,n}$.
-  It is enough to show that for every $i \in I, b \in B$ we have $p_i(d) - c_i(b), p_i(d') - c_i(b)$ are in the same $Q_{m,n}$-coset.
+  It is enough to show that for every $i \in I, b \in B$, $p_i(d) - c_i(b), p_i(d') - c_i(b)$ are in the same $Q_{m,n}$-coset.
   Fix such $i, b$.
-  For brievety let $a = p_i(d), a' = p_i(d')$ and $Q = Q_{m,n}$.
+  For brevity let $a = p_i(d), a' = p_i(d')$ and $Q = Q_{m,n}$.
   We want to show that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
   Suppose $a, a'$ are close to the boundary.
   Then $\tval(a) = \tval(a') \leq \val(a - a') - n$.
   Using Lemma \ref{tval}d, we have
   \begin{align*}
-    \val(a - c_i(b)) = \val(a' - c_i(b)) \leq \tval(a) \leq \val(a - a') - n
+    \val(a - c_i(b)) = \val(a' - c_i(b)) \leq \tval(a) \leq \val(a - a') - n.
   \end{align*}
   Lemma \ref{distance} shows that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
@@ -662,18 +662,18 @@ The following lemma relates tree notions to $\Phi$-types.
   \begin{align*}
     \val(a - c_i(b)) = \val(a - t) \leq \alpha_U - n \leq \val(t - c_i(b)) - n.
   \end{align*}
-  So by Lemma \ref{distance} we have $a - c_i(b), a - t$ are in the same $Q$-coset.
-  By a parallel argument we have $a' - c_i(b), a' - t$ are in the same $Q$-coset.
+  So by Lemma \ref{distance} $a - c_i(b), a - t$ are in the same $Q$-coset.
+  By an analogous argument, $a' - c_i(b), a' - t$ are in the same $Q$-coset.
   As $a, a'$ have the same subinterval type, $a - t, a' - t$ are in the same $Q$-coset.
   Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
   For the second case, suppose $\val(t - c_i(b)) \leq \alpha_L$.
   Then using Lemma \ref{tval}d
   \begin{align*}
-    \val(a - c_i(b)) = \val(t - c_i(b)) \leq \alpha_L \leq \val(a - t) - n
+    \val(a - c_i(b)) = \val(t - c_i(b)) \leq \alpha_L \leq \val(a - t) - n,
   \end{align*}
-  so by Lemma \ref{distance} we have $a - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
-  By a parallel argument we have $a' - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
+  so by Lemma \ref{distance}, $a - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
+  Similarly $a' - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
   Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
 
   Next, we need to show that $d, d'$ agree on formulas of the form
@@ -688,7 +688,7 @@ The following lemma relates tree notions to $\Phi$-types.
 
   Suppose $p_i(d), p_i(d')$ are in the subinterval $\inti(t_i, \alpha_i, \beta_i)$ and 
   $p_j(d), p_j(d')$ are in the subinterval $\inti(t_j, \alpha_j, \beta_j)$.
-  Lemma \ref{tval}d yields 4 following cases.
+  Lemma \ref{tval}d yields the following four cases.
 
   Case 1:
   \begin{align*}
@@ -702,7 +702,7 @@ The following lemma relates tree notions to $\Phi$-types.
     &\vval (p_i(d) - c_i(b)) = \tval(p_i(d)) \text{ and } \vval (p_i(d') - c_i(b)) = \tval(p_i(d')) \\
     &\vval (p_j(d) - c_j(b)) = \tval(p_j(d)) \text{ and } \vval (p_j(d') - c_j(b)) = \tval(p_j(d'))
   \end{align*}
-  Then the equivalence \eqref{eq:order_equation} holds by the third condition of the lemma that order of T-valuations is preserved.
+  Then the equivalence \eqref{eq:order_equation} holds by the third hypothesis of the lemma (that order of T-valuations is preserved).
 
  Case 3:
   \begin{align*}
@@ -733,16 +733,16 @@ The following lemma relates tree notions to $\Phi$-types.
 
 
 \begin{Note}
-  This gives us an upper bound on the number of types - there are at most $|2I|!$ many choices for the order of $\tval$,
+  The previous lemma gives us an upper bound on the number of types - there are at most $|2I|!$ many choices for the order of $\tval$,
   $O(N)$ many choices for the subinterval for each $p_i$,
-  and $K$ many choices for the subinterval type for each $p_i$,
+  and $K$ many choices for the subinterval type for each $p_i$ (where $K$ is as in Lemma \ref{interval_type_count}),
   giving a total of $O(N^{|I|}) \cdot K^{|I|} \cdot |I|! = O(N^{|I|})$ many types.
   This implies $\vc^*(\Phi) \leq |I|$.
   The biggest contribution to this bound are the choices among the $O(N)$ many subintervals for each $p_i$ with $i \in I$.
   Are all of those choices realized?
   Intuitively there are $|x|$ many variables and $|I|$ many equations,
-  so once we choose an subinterval for $|x|$ many $p_i$'s, the subinterval for the rest should be determined.
-  This would give the required $\vc^*(\Phi) \leq |x|$ bound.
+  so once we choose a subinterval for $|x|$ many $p_i$'s, the subintervals for the rest should be determined.
+  This would give the required bound $\vc^*(\Phi) \leq |x|$.
   The next section outlines this idea formally.
 \end{Note}
 
@@ -754,38 +754,21 @@ The following lemma relates tree notions to $\Phi$-types.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-Alternative way to write $p_i(c)$ is $\vec p_i \cdot \vec c$,
-where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is linear).
+An alternative way to write $p_i(c)$ is as a scalar product $\vec p_i \cdot \vec c$,
+where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is homogeneous linear).
 
-\begin{Lemma}	 \label{gamma}
-  Suppose we have a finite collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^{|x|}$.
-  Suppose $J \subset I$ and $i \in I$ satisfy
-  \begin{align*}
-    \vec p_i \in \vecspan \curly{\vec p_j}_{j \in J}, 
-  \end{align*}
-  and we have $\vec c \in \Q_p^{|x|}, \alpha \in \Z$ with
-  \begin{align*}
-    \val(\vec p_j \cdot \vec c) > \alpha \text{ for all } j \in J
-  \end{align*}
-  Then
-  \begin{align*}
-    \val(\vec p_i \cdot \vec c) > \alpha - \gamma
-  \end{align*}
-  for some $\gamma \in \N$.
-  Moreover $\gamma$ can be chosen independently from $J, j, \vec c, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
+\begin{Lemma}	 
+  Suppose we have a finite collection of vectors $\curly{\vec p_j}_{j \in J}$ with each $\vec p_j \in \Q_p^{|x|}$.
+  Suppose $\vec p \in \Q_p^{|x|}$ satisfies $\vec p \in \vecspan \curly{\vec p_j}_{j \in J}$,
+  and we have $\vec c \in \Q_p^{|x|}, \alpha \in \Z$ with $\val(\vec p_j \cdot \vec c) > \alpha \text{ for all } j \in J$.
+  Then $\val(\vec p \cdot \vec c) > \alpha - \gamma$ for some $\gamma \in \N$.
+  Moreover $\gamma$ can be chosen independently from $\vec c, \alpha$ depending only on $\curly{\vec p_j}_{j \in J}$.
 \end{Lemma}
 
 \begin{proof}
-  Fix $i, J$ satisfying the conditions of the lemma.
-  For some $c_j \in \Q_p$ for $j \in J$ we have
-  \begin{align*}
-    \vec p_i &= \sum_{j \in J} c_j \vec p_j,
-  \end{align*}
-  hence
-  \begin{align*}
-    \vec p_i \cdot \vec c &= \sum_{j \in J} c_j \vec p_j \cdot \vec c.
-  \end{align*}
-  We have
+  For some $c_j \in \Q_p$ for $j \in J$ we have $\vec p = \sum_{j \in J} c_j \vec p_j$,
+  hence $\vec p \cdot \vec c = \sum_{j \in J} c_j \vec p_j \cdot \vec c$.
+  Thus
   \begin{align*}
     \val \paren{c_j \vec p_j \cdot \vec c} = \val \paren{c_j} + \val \paren{\vec p_j \cdot \vec c} > \val \paren{c_j} + \alpha.
   \end{align*}
@@ -795,22 +778,35 @@ where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is linear
   % Let $\gamma = \max(0, \min -\val \paren{c_j})$.
   Then we have 
   \begin{align*}
-    &\val \paren{c_j \vec p_j \cdot \vec c} > \alpha - \gamma \text{ for all $j \in J$}\\
-    &\val \paren{\sum_{j \in J} c_j \vec p_j \cdot \vec c} > \alpha - \gamma \\
-    &\val(\vec p_i \cdot \vec c) > \alpha - \gamma
+    &\val(\vec p \cdot \vec c) =
+      \val \paren{\sum_{j \in J} c_j \vec p_j \cdot \vec c} \geq \\
+      \geq &\min_{j \in J} \val(\sum_{j \in J} c_j \vec p_j \cdot \vec c) >
+      \min_{j \in J} \val(c_j) + \alpha \geq
+      \alpha - \gamma
   \end{align*}
-  This shows that we can pick such $\gamma$ for a given choice of $i, J$, but independent from $\alpha, \vec c$.
-  To get a choice independent from $i, J$, go over all such eligible choices 
-  ($i$ ranges over $I$ and $J$ ranges over subsets of $I$),
-  pick $\gamma$ for each, and then take the maximum of those values.
 \end{proof}
 
-Fix $\gamma$ according to Lemma \ref{gamma} corresponding to $\curly{\vec p_i}_{i \in I}$ given by our collection of formulas $\Phi$.
+\begin{Corollary}	 \label{gamma}
+  Suppose we have a finite collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^{|x|}$.
+  Suppose $J \subset I$ and $i \in I$ satisfy $\vec p_i \in \vecspan \curly{\vec p_j}_{j \in J}$,
+  and we have $\vec c \in \Q_p^{|x|}, \alpha \in \Z$ with $\val(\vec p_j \cdot \vec c) > \alpha \text{ for all } j \in J$.
+  Then $\val(\vec p_i \cdot \vec c) > \alpha - \gamma$
+  for some $\gamma \in \N$.
+  Moreover $\gamma$ can be chosen independently from $J, j, \vec c, \alpha$ depending only on $\curly{\vec p_i}_{i \in I}$.
+\end{Corollary}
+\begin{proof}
+  The previous lemma shows that we can pick such $\gamma$ for a given choice of $i, J$, but independent from $\alpha, \vec c$.
+  To get a choice independent from $i, J$, go over all such eligible choices 
+  ($i$ ranges over $I$ and $J$ ranges over subsets of $I$),
+  pick $\gamma$ for each, and then take the maximum of those values.  
+\end{proof}
+
+Fix $\gamma$ according to Corollary \ref{gamma} corresponding to $\curly{\vec p_i}_{i \in I}$ given by our collection of formulas $\Phi$.
 (The lemma above is a general result, but we only use it applied to the vectors given by $\Phi$.)
 
 \begin{Definition}
-  Suppose $a \in \Q_p$ lies in a subinterval $\paren{B(t_L, \alpha_L),  B(t_U, \alpha_U)}$.
-  Define \defn{floor} of $a$ to be $F(a) = \alpha_L$.
+  Suppose $a \in \Q_p$ lies in the subinterval $\interval$.
+  Define \defn{$T$-floor} of $a$ to be $F(a) = \alpha_L$.
 \end{Definition}
 
 \begin{Definition}
@@ -819,13 +815,13 @@ Fix $\gamma$ according to Lemma \ref{gamma} corresponding to $\curly{\vec p_i}_{
 \end{Definition}
 
 Given a tuple $(a_i)_{i\in I}$ in the segment space,
-look at the corresponding floors $\curly{F(a_i)}_{i\in I}$ and T-valuations $\curly{\tval(a_i)}_{i\in I}$.
+look at the corresponding $T$-floors $\curly{F(a_i)}_{i\in I}$ and T-valuations $\curly{\tval(a_i)}_{i\in I}$.
 Partition the segment space by the order types of $\{F(a_i)\}_{i\in I}$ and $\curly{\tval(a_i)}_{i\in I}$ (as subsets of $\Z$).
 
-Work in a fixed partition $\Sg'$.
+Work in a fixed set $\Sg'$ of the partition.
 After relabeling we may assume that
 \begin{align*}
-  F(a_1) \geq F(a_2) \geq \ldots 
+  F(a_1) \geq F(a_2) \geq \ldots \text { for all $a_i \in \Sg'$}
 \end{align*}
 
 Consider the (relabeled) sequence of vectors $\vec p_1, \vec p_2, \ldots, \vec p_I$.
@@ -966,17 +962,17 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
 \end{proof}
 
 \begin{Corollary} [Theorem \ref{main_theorem}]
-  $(\Q_p, \LL_{aff})$ has $\vc(n) = n$.
+  $\LL_{aff}$-structure $\Q_p$ has $\vc(n) = n$.
 \end{Corollary}
 
 \begin{proof}
-  Previous lemma implies that $\vc^*(\phi) \leq \vc^*(\Phi) \leq |x|$.
-  As choice of $\phi$ was arbitrary, this implies that vc-density of any formula is bounded by the arity of $x$.
+  The previous lemma implies that $\vc^*(\phi) \leq \vc^*(\Phi) \leq |x|$.
+  As choice of $\phi$ was arbitrary, this implies that the vc-density of any formula is bounded by the arity of $x$.
 \end{proof}
 
 This proof relies heavily on the linearity of functions $a_1, a_2, c$ in the cell deomposition result (see Definition \ref{cell}).
 Linearity is used to separate $x$ and $y$ variables as well as
-for Lemma \ref{gamma} to reduce the number of independent factors from $|I|$ to $|x|$.
+for Corollary \ref{gamma} to reduce the number of independent factors from $|I|$ to $|x|$.
 The paper \cite{reduct} has cell decomposition results for more expressive reducts of $\Q_p$,
 including, for exapmple, restricted multiplication.
 While our results don't apply to it directly,
@@ -988,7 +984,7 @@ it is this author's hope that similar techniques can be used to compute $\vc(n)$
   \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
   Trans. Amer. Math. Soc. 368 (2016), 5889-5949
 \bibitem{reduct}
-  E. Leenknegt. \textit{Reducts of $p$-adically closed fields}, Archive for Mathematical logic, 53(3):285-306, 2014
+  E. Leenknegt. \textit{Reducts of $p$-adically closed fields}, Archive for Mathematical Logic, 53(3):285-306, 2014
 \end{thebibliography}
 
 
