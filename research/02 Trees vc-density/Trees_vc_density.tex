@@ -327,10 +327,10 @@ We will use the following notation for types:
 	\begin{align*}
 		\A \models \exists x \, \tp^k_{\A}(x, a_2) = \pp.
 	\end{align*}
-	Let $a'$ witness this existential claim, so that $\tp^k_{\A}(a', a_2) &= \pp$, hence $\tp^k_{\A}(a', a_2) &= \tp^k_{\A}(a, a_1)$, that is,
-        $\A \models a'a_2 &\equiv_k aa_1$. By the inductive hypothesis we therefore have
-        $\TT &\models aa_1b_1 \equiv_k a'a_2b_2$; in particular $\TT &\models \phi^k(a', a_2, b_2) & \text {as } \TT &\models \phi^k(a, a_1, b_1)$,
-        and $\TT &\models \exists x \phi^k(x, a_2, b_2)$.
+	Let $a'$ witness this existential claim, so that $\tp^k_{\A}(a', a_2) = \pp$, hence $\tp^k_{\A}(a', a_2) = \tp^k_{\A}(a, a_1)$, that is,
+        $\A \models a'a_2 \equiv_k aa_1$. By the inductive hypothesis we therefore have
+        $\TT \models aa_1b_1 \equiv_k a'a_2b_2$; in particular $\TT \models \phi^k(a', a_2, b_2)  \text {as } \TT \models \phi^k(a, a_1, b_1)$,
+        and $\TT \models \exists x \phi^k(x, a_2, b_2)$.
 \end{proof}
 
 This lemma is general, but we will use it specifically applied to (colored) trees.
@@ -342,7 +342,7 @@ From now on all the subdivisions we work with will be of this form.
 
 \begin{Example} \label{ex_disc}
   Suppose a tree consists of two connected components $C_1, C_2$.
-  Then those components $(C_1, \leq)$, $(C_2, \leq)$ interpreted as substructures form a proper subdivision.
+  Then those components $(C_1, \leq)$, $(C_2, \leq)$ viewed as substructures form a proper subdivision.
   To see that we only need to show that this subdivision is 0-proper.
   But that is immediate as any $c_1 \in C_1$ and $c_2 \in C_2$ are incomprable.
 \end{Example}
@@ -350,55 +350,61 @@ From now on all the subdivisions we work with will be of this form.
 \begin{Example} \label{ex_cone}
 	Fix a tree $\TT$ in the language $\{\leq\}$ and $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
 To see this, again, we show that the subdivision is 0-proper.
-The only time $a \in A$ and $b \in B$ are comparable is when $a \in S$, so that is captured by the language.
+The only time $a \in A$ and $b \in B$ are comparable is when $a \in S$, and this is captured by the language.
 (See proof of Lemma \ref{subdivide} for more details.)
 \end{Example}
 
 \begin{Definition} For $\phi(x, y)$, $A \subseteq T^{|x|}$ and $B \subseteq T^{|y|}$
 \begin{itemize}
-	\item Let $\phi(A, b) = \{a \in A \mid \phi(a, b)\} \subseteq A$
-	\item Let $\phi(A, B) = \{\phi(A, b) \mid b \in B\} \subseteq \PP(A)$	
+	\item let $\phi(A, b) = \{a \in A \mid \phi(a, b)\} \subseteq A$, and 
+	\item let $\phi(A, B) = \{\phi(A, b) \mid b \in B\} \subseteq \PP(A)$.	
 \end{itemize}
 \end{Definition}
-$\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with parameters from $B$. We notice the following bound when $A, B$ are parts of a proper subdivision.
+Thus $\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with parameters from $B$. We notice the following bound when $A, B$ are parts of a proper subdivision.
 
 \begin{Corollary} \label{cor_type_count}
-	Let $\A, \B$ be a proper subdivision of $\TT$ and $\phi(x,y)$ a formula of complexity $n$. Then $|\phi(A^{|x|}, B^{|y|})|$ is bounded by $|S^n_{\B, |y|}|$.
+	Let $\A, \B$ be a proper subdivision of $\TT$ and $\phi(x,y)$ be a formula of complexity $n$. Then $|\phi(A^{|x|}, B^{|y|})|$ is bounded by $|S^n_{\B, |y|}|$.
 \end{Corollary}
 
 \begin{proof}
-	Take some $a \in A^{|x|}$ and $b_1, b_2 \in B^{|y|}$ with $\tp^n_{\B}(b_1) = \tp^n_{\B}(b_2)$. We have $\B \models b_1 \equiv_n b_2$ and (trivially) $\A \models a \equiv_n a$. Thus by the Lemma \ref{lm_subdivision} we have $\TT \models ab_1 \equiv_n ab_2$ so $\phi(a, b_1) \leftrightarrow \phi(a, b_2)$. Since $a$ was arbitrary we have $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$ as different traces can only come from parameters of different types. Thus $|\phi(A^{|x|}, B^{|y|}) \leq |S^n_{\B, |y|}|$.
+	Take some $a \in A^{|x|}$ and $b_1, b_2 \in B^{|y|}$ with $\tp^n_{\B}(b_1) = \tp^n_{\B}(b_2)$. We have $\B \models b_1 \equiv_n b_2$ and (trivially) $\A \models a \equiv_n a$. Thus  we have $\TT \models ab_1 \equiv_n ab_2$, so $T \models \phi(a, b_1) \leftrightarrow \phi(a, b_2)$. Since $a$ was arbitrary we have $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$ as different traces can only come from parameters of different types. Thus $|\phi(A^{|x|}, B^{|y|}) \leq |S^n_{\B, |y|}|$.
 \end{proof}
 
-We note that the size of type space $|S^n_{\B, |y|}|$ can be bounded uniformly:
+We note that the size of the type space $|S^n_{\B, |y|}|$ can be bounded uniformly:
 
 \begin{Definition} \label{def_type_count}
-	Fix a (finite relational) language $\LL_B$, and $n$, $|y|$. Let $N = N(n, |y|, \LL_B)$ be smallest number such that for any structure $\B$ in $\LL_B$ we have $|S^n_{\B, |y|}| \leq N$. This number is well-defined as there is a finite number (up to equivalence) of possible formulas of complexity $\leq n$ with $|y|$ free variables. Note the following easy inequalities
-	\begin{align*}
-		n \leq m &\Rightarrow N(n, |y|, \LL_B) \leq N(m, |y|, \LL_B) \\
-		|y| \leq |z| &\Rightarrow N(n, |y|, \LL_B) \leq N(n, |z|, \LL_B) \\
-		\LL_A \subseteq \LL_B &\Rightarrow N(n, |y|, \LL_A) \leq N(n, |y|, \LL_B)
-	\end{align*}
+  Fix a (finite relational) language $\LL_B$. Let $N = N(n, m, \LL_B)$ be smallest integer such that for any structure $\B$ in $\LL_B$ we have $|S^n_{\B, m}| \leq N$. This integer exists as there is a finite number (up to equivalence) of possible formulas of complexity $\leq n$ with $m$ free variables.
+  Note that $N(n, m, \LL_B)$ is increasing in all variables:
+  \begin{align*}
+    n \leq n', m \leq m', \LL_B \subseteq \LL_B' \Rightarrow N(n, m, \LL_B) \leq N(n', m', \LL_B')
+  \end{align*}
 \end{Definition}
 
 \section{Proper Subdivisions: Constructions}
 
-From now on work in meet trees unless mentioned otherwise. First, we describe several constructions of proper subdivisions that are needed for the proof. 
+Throughout this section, $\TT$ denotes a colored meet tree.
+First, we describe several constructions of proper subdivisions that are needed for the proof. 
 
 \begin{Definition}
-	If $b$ and $c$ are in the same connected component we denote it as $E(b, c)$ 
-	\begin{align*}
-		E(b, c) \ifff \exists x \, (b \geq x) \wedge (c \geq x)
-	\end{align*}
+  We use $E(b,c)$ to express that $b$ and $c$ are in the same connected component:
+  \begin{align*}
+    E(b, c) \ifff \exists x \, (b \geq x) \wedge (c \geq x).
+  \end{align*}
 \end{Definition}
 \begin{Definition}
-	Given a tree element $a$ we can look at all the elements above $a$, i.e. $\{x \mid x \geq a\}$. We can think about it as a \emph{closed cone} above $a$. Connected components of that cone can be thought of as \emph{open cones} over $a$. With that interpretation in mind, notation $E_a(b, c)$ means that $b$ and $c$ are in the same open cone over $a$. More formally:
+  Given an element $a$ of the tree we call the sets fo all the elements above $a$, i.e. the set $\{x \mid x \geq a\}$,
+  the \emph{closed cone} above $a$.
+  Connected components of that cone can be thought of as \emph{open cones} above $a$.
+  With that interpretation in mind, the notation $E_a(b, c)$ means that $b$ and $c$ are in the same open cone above $a$. More formally:
 	\begin{align*}
-		E_a(b, c) \ifff E(b,c) \text{ and } (b \wedge c) > a
+		E_a(b, c) \ifff E(b,c) \text{ and } (b \wedge c) > a.
 	\end{align*}
 \end{Definition}
 
-Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\} = \{\leq, \vec C\}$. In the following four definitions $\B$-structures are going to be in the same language $\LL_B = \LL \cup \{U\}$ with $U$ a unary predicate. It is not always necessary to have this predicate but we keep it for the sake of uniformity. $\A$-structures will have different $\LL_A$ languages (those are not as important in later applications).
+Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\} = \{\leq, \vec C\}$.
+In the following four definitions structures denoted by $\B$ are going to be in the same language $\LL_B = \LL \cup \{U\}$ with $U$ a unary predicate.
+It is not always necessary to have this predicate but we keep it for the sake of uniformity.
+Structures denoted by $\A$ will have different languages $\LL_A$ (those are not as important in later applications).
 %All the colors $\vec C$ are interpreted by colors in $\TT$ by restriction.
 
 \input {vc-trees-all_figures}
