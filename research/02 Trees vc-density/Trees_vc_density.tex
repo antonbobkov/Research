@@ -70,6 +70,7 @@
 
 \begin{abstract}
   We show that for the theory of infinite trees we have $\vc(n) = n$ for all $n$.
+  This generalizes a result of Simon in \cite{simon_dp_min} showing that the trees are dp-minimal. 
 \end{abstract}
 
 \maketitle
@@ -77,10 +78,10 @@
 VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In an NIP theory we can define a vc-function
 
 \begin{align*}
-  \vc : \N \arr \N
+  \vc : \N \arr \R \cup \curly{\infty},
 \end{align*}
 
-Where $\vc(n)$ measures the worst-case complexity of definable sets in an $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e. having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
+where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e., having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
 
 In this paper we work with trees viewed as posets.
 % More precisely, our structure is branches of an infinite tree in a langugage of $\leq$ with possibly finitely many colors.
@@ -92,17 +93,17 @@ The paper \cite{density} poses the following problem:
   Determine the VC density function of each (infinite) tree.
 \end{Problem}
 
-Here we settle this question by showing any model of trees has $\vc(n) = n$.
+Here we settle this question by showing that any model of the theory of trees has $\vc(n) = n$.
 
 Section 1 of the paper consists of a basic introduction to the concepts of VC-dimension and vc-density.
-In Section 2 we introduce proper subdividions -- the main tool that we use to analyze trees.
+In Section 2 we introduce proper subdivisions -- the main tool that we use to analyze trees.
 We also prove some basic properties of proper subdivisions.
 Section 3 introduces the key constructions of proper subdivisions in tree which will be used in the proof.
 Section 4 presents the proof of $\vc(n) = n$ via the subdivisions.
 
 We use notation $a \in T^n$ for the tuples of size $n$. For a variable $x$ or a tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
 
-The language for the trees consists of a single binary predicate $\{\leq\}$. The theory of trees states that $\leq$ defines a partial order and for every element $a$ we have that $\{x \mid x < a\}$ is a linear order. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
+The language for the trees consists of a single binary predicate $\{\leq\}$. The theory of trees states that $\leq$ defines a partial order and for every element $a$ the set $\{x \mid x < a\}$ is linearly ordered by $<$. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
 
 \begin{Definition}
   Work in a tree $\TT = (T, \leq)$.
@@ -110,7 +111,7 @@ The language for the trees consists of a single binary predicate $\{\leq\}$. The
   The \emph{meet} of two tree elements $a,b$ is the greatest element of $I(a) \cap I(b)$ (if one exists) and is denoted by $a \wedge b$.
 \end{Definition}
 
-The theory of meet trees requires that any two elements in the same connected component have a meet. Colored trees are trees with a finite number of colors added via unary predicates.
+The theory of \defn{meet trees} requires that any two elements in the same connected component have a meet. \defn{Colored trees} are trees with a finite number of colors added via unary predicates.
 
 From now on assume that all trees are colored.
 We allow our trees to be disconnected (so really, we work with forests) or finite unless otherwise stated.
@@ -507,13 +508,13 @@ We get the general result for the trees that aren't necessarily meet trees via a
 \end{proof}
 
 This settles the question of $vc$-function for trees. Lacking a quantifier elimination result, a lot is still not known.
-One can try to adapt these techniques to compute vc-density of a fixed formula, and see if it can achieve any interesting non-integer values.
-It is also not known whether trees have VC 1 property (see \cite{density} 5.2 for definition).
-Our technique can show that VC 2 property holds, but it wouldn't give an optimal vc-function.
+One can try to adapt these techniques to compute the vc-density of a fixed formula, and see if it can take non-integer values.
+It is also not known whether trees have VC 1 property (see \cite{density} 5.2 for the definition).
+Our techniques can be used to show that VC 2 property holds but this doesn't give the optimal vc-function.
 
 One can also try to apply similar techniques to more general classes of patrially ordered sets.
-For example, it is not known how vc-density behaves in lattices.
-Similarly, dropping the order, one can look a nicely behaved families of graphs, such as planar graphs or flat graphs.
+For example, vc-density values are not known for lattices.
+Similarly, dropping the order, one can look at nicely behaved families of graphs, such as planar graphs or flat graphs.
 Those are known to be dp-minimal, so one would expect a simple vc-function.
 It is this author's hope that the techniques developed in this paper can be adapted to yield fruitful results for a more general class of structures.
 
