@@ -49,6 +49,7 @@
 \DeclareMathOperator{\val}{val}
 \DeclareMathOperator{\vval}{val}
 \DeclareMathOperator{\tval}{T-val}
+\DeclareMathOperator{\tfl}{T-fl}
 \DeclareMathOperator{\inti}{I}
 
 \newcommand{\defn}{\underline}
@@ -115,7 +116,7 @@ The field $\Q_p$ of $p$-adic numbers is often studied in the language of Macinty
   \begin{align*}
 	\LLM = \curly{0, 1, +, -, \cdot, |, \{P_n\}_{n \in \N}}
   \end{align*}
-which is a language $\curly{0, 1, +, -, \cdot}$ of fields together with unary predicates $P_n$ interpreted in $\Q_p$ so as to satisfy
+which is a language $\curly{0, 1, +, -, \cdot}$ of rings together with unary predicates $P_n$ interpreted in $\Q_p$ so as to satisfy
 
 \begin{align*}
   P_n x \leftrightarrow \exists y \; y^n = x
@@ -131,23 +132,25 @@ Note that $P_n\backslash \curly{0}$ is a multiplicative subgroup of $\Q_p$ with 
 
 There is also a cell decomposition result:
 \begin{Definition}
-  Define \defn{$k$-cell} recursively as follows.
-  $0$-cell is a singleton subset of $\Q_p$.
-  A $(k+1)$-cell is a subset of $\Q_p^{k+1}$ of the following form:
+  Define \defn{$k$-cells} recursively as follows.
+  A \defn{$0$-cell} is a singleton subset of $\Q_p$.
+  A \defn{$(k+1)$-cell} is a subset of $\Q_p^{k+1}$ of the following form:
   \begin{align*}
     \curly{(x, t) \in D \times \Q_p \mid \vval a_1(x) \ \square_1 \vval (t - c(x)) \ \square_2 \vval a_2(x), t - c(x) \in \lambda P_n}
   \end{align*}
   where $D$ is a $k$-cell,
   $a_1(x), a_2(x), c(x)$ are definable functions $D \arr \Q_p$,
-  $\square_i$ is $<, \leq$ or no condition, and
+  each of $\square_i$ is $<, \leq$ or no condition,
+  $n \in \N$,
+  and
   $\lambda \in \Q_p$.    
 \end{Definition}
 
 \begin{Theorem} [Denef '84]
-  Any definable subset of $Q_p^n$ defined by an $\LLM$-formula decomposes into a finite disjoint union of $n$-cells.
+  Any definable subset of $\Q_p^n$ defined by an $\LLM$-formula decomposes into a finite disjoint union of $n$-cells.
 \end{Theorem}  
 
-In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that this structure satisfies $\vc(n) \leq 2n - 1$,
+In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that $\Q_p$ as $\LLM$-structure satisfies $\vc(n) \leq 2n - 1$,
 however it is not known whether this bound is optimal.
 
 In \cite{reduct}, Leenknegt analyzes the reduct of $\Q_p$ to the language
@@ -165,29 +168,32 @@ One can check that these extra relation symbols are definable in the $\LLM$-stru
 The paper \cite{reduct} provides a cell decomposition result with the following cells:
 
 \begin{Definition} \label{cell}
-  A $0$-cell is a singleton subset of $\Q_p$.
-  A $(k+1)$-cell is a subset of $\Q_p^{k+1}$ of the following form:
+  A \defn{$0$-cell} is a singleton subset of $\Q_p$.
+  A \defn{$(k+1)$-cell} is a subset of $\Q_p^{k+1}$ of the following form:
   \begin{align*}
     \curly{(x, t) \in D \times \Q_p \mid \vval a_1(x) \ \square_1 \vval (t - c(x)) \ \square_2 \vval a_2(x), t - c(x) \in \lambda Q_{m,n} }
   \end{align*}
   where $D$ is a $k$-cell, called the \defn{base} of the cell,
   $a_1(x), a_2(x), c(x)$ are polynomials of degree $\leq 1$, called the \defn{defining polynomials}
-  $\square_1, \square_2$ is $<$ or no condition, and
+  each of $\square_1, \square_2$ is $<$ or no condition,
+  $m,n \in \N$,
+  and
   $\lambda  \in\Q_p$.
   We call $\Q_{m,n}$ the \defn{defining predicate}.
 \end{Definition}
 
 \begin{Theorem}[Leenknegt '12] 
-  Any definable subset of $Q_p^n$ defined by an $\LL_{aff}$-formula decomposes into a finite disjoint union of $n$-cells.
+  Any definable subset of $\Q_p^n$ defined by an $\LL_{aff}$-formula decomposes into a finite disjoint union of $n$-cells.
   %Any formula $\phi(x, t)$ in $(\Q_p, \LL_{aff})$ with $|x| = n$ and $|t| = 1$ decomposes into a union of $(k+1)$-cells.
 \end{Theorem}  
 
-Moreover, \cite{reduct} shows that $(\Q_p, \LL_{aff})$ is a $P$-minimal reduct,
-that is, the one-dimensional definable sets of $(\Q_p, \LL_{aff})$ coincide with the one-dimensional definable sets in the full structure $(\Q_p, \LLM)$.
+Moreover, \cite{reduct} shows that $\LLA$-structure $\Q_p$ is a $P$-minimal reduct,
+that is, the one-dimensional definable sets of $\LLA$-structure $\Q_p$
+coincide with the one-dimensional definable sets in the full structure $\LLM$-structure $\Q_p$.
 
 The main result of this paper is the computation of the $\vc$-function for this structure:
 \begin{Theorem} \label{main_theorem}
-  $(\Q_p, \LL_{aff})$ has $\vc(n) = n$.
+  $\LLA$-structure $\Q_p$ has $\vc(n) = n$.
 \end{Theorem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -200,17 +206,20 @@ The main result of this paper is the computation of the $\vc$-function for this 
 
 To show that $\vc(n) = n$ it suffices to bound $\vc^*(\phi) \leq |x|$ for every $\LL_{aff}$-formula $\phi(x; y)$.
 Fix such a formula $\phi(x; y)$.
-Instead of working with it directly, we simplify it using quantifier elimination.
+Instead of working with it directly, we first simplify it using quantifier elimination.
 The required quantifier elimination result can be easily obtained from cell decomposition:
 \begin{Lemma} \label {quantifier_elimination}
-  Any formula $\phi(x; y)$ in $(\Q_p, \LL_{aff})$ can be written as a boolean combination of formulas from the following collection
+  Any formula $\phi(x; y)$ in $\LLA$-structure $\Q_p$. can be written as a boolean combination of formulas from a collection
   \begin{align*}
     \Phi(x; y) = &\curly{\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))}_{i, j \in I} \cup \\
                  &\curly{p_i(x) - c_i(y) \in \lambda_k Q_{m,n}}_{i \in I , k \in K}
   \end{align*}
+  of $\LLA$-formulas
   where $I, K$ are finite index sets,
   each $p_i$ is a degree $\leq 1$ polynomial in $x$ without a constant term,
-  each $c_i$ is a degree $\leq 1$ polynomial in $y$, and
+  each $c_i$ is a degree $\leq 1$ polynomial in $y$,
+  $m,n \in \N$,
+  and
   $\lambda_k \in \Q_p$.
 \end{Lemma}
 
@@ -220,17 +229,17 @@ The required quantifier elimination result can be easily obtained from cell deco
   Let $\DD^{l-1}$ be the collection of the bases of the cells in $\DD^l$.
   Similarly, construct by induction $\DD^i$ for each $0 \leq j < l$,
   where $\DD^j$ is the collection of $j$-cells which are the bases of cells in $\DD^{j+1}$.
-  % Let $\DD = \bigcup \DD_j$.
+  Set
   \begin{align*}
     &m = \prod \curly{m' \mid Q_{m',n'} \text{ is the defining predicate of a cell in $\DD^j$ for $0 \leq j \leq l$} } \\
     &n = \max \curly{n' \mid Q_{m',n'} \text{ is the defining predicate of a cell in $\DD^j$ for $0 \leq j \leq l$} }
   \end{align*}
   % Choose $m,n$ large enough to cover all $m', n'$ for $Q_{m',n'}$ that show up in the cells of $\DD$.
   This way if $a, a'$ are in the same coset of $Q_{m',n'}$ then they are in the same coset of $Q_{m,n}$.
-  Choose $\curly{\lambda_k}_{k \in K}$ to go over all the cosets of $Q_{m,n}$.
+  Choose $\curly{\lambda_k}_{k \in K}$ to range over all the cosets of $Q_{m,n}$.
   Let $q_i(x, y)$ enumerate all of the defining polynomials $a_1(x), a_2(x), t - c(x)$ that show up in the cells of $\DD^j$ for any $j$.
   All if those are all polynomials of degree $\leq 1$ in variables $x, y$.
-  We can split each of them as $q_i(x,y) = p_i(x) - c_i(y)$ where the constant term goes into $c_i$.
+  We can split each of them as $q_i(x,y) = p_i(x) - c_i(y)$ where the constant term of $q_i$ goes into $c_i$.
   This gives us the appropriate finite collection of formulas $\Phi$.
   From the cell decomposition it is easy to see that when $a, a'$ have the same $\Phi$-type,
   then they have the same $\phi$-type.
@@ -241,7 +250,7 @@ The required quantifier elimination result can be easily obtained from cell deco
   Let $\Phi(x; y)$ be a finite collection of formulas.
   If $\phi$ can be written as a boolean combination of formulas from $\Phi$ then
   \begin{align*}
-    \vc^* (\Phi) \leq r \implies \vc^* (\phi) \leq r \; \text{ for all } r \in \R
+    \vc^* (\Phi) \leq r \implies \vc^* (\phi) \leq r \; \text{ for all } r \in \R.
   \end{align*}
 \end{Lemma}
 \begin{proof}
@@ -257,7 +266,7 @@ then the number of $\Phi$-types over $B$ is $O(N^{|x|})$.
 Fix such a parameter set $B$ and work with it from now on.
 We will compute a bound for the number of $\Phi$-types over $B$.
 
-Consider a set $T = T(\Phi, B) = \curly{c_i(b) \mid b \in B, i \in I} \subset \Q_p$.
+Consider the set $T = T(\Phi, B) = \curly{c_i(b) \mid b \in B, i \in I} \subset \Q_p$.
 In this definition $B$ is the parameter set that we have fixed 
 and $c_i(b)$ come from the collection of formulas $\Phi$ from the quantifier elimination above.
 View $T$ as a tree as follows:
@@ -279,7 +288,7 @@ View $T$ as a tree as follows:
     \end{align*}
     (this is sometimes referred to as the swiss cheese construction).
     One can check that every interval is of the form $\interval$ for some values of $t, \alpha_L, \alpha_U$.
-    Quantities $\alpha_L, \alpha_U$ are uniquely determined by the interval,
+    The quantities $\alpha_L, \alpha_U$ are uniquely determined by the interval $\interval$,
     while $t$ might not be.
   \item Intervals are a natural construction for trees, however we will require a more refined notion to make Lemma \ref{main_lemma} below work.
     Define a larger collection of balls 
@@ -289,7 +298,7 @@ View $T$ as a tree as follows:
     Similar to the previous definition, we define a \defn{subinterval} to be an atom of the boolean algebra generated by $\BB'$.
     Subintervals refine intervals.
     Moreover, as before, each subinterval can be written as $\interval$ for some values of $t, \alpha_L, \alpha_U$.
-    As before, $\alpha_L, \alpha_U$ are uniquely determined by the subinterval,
+    As before, $\alpha_L, \alpha_U$ are uniquely determined by the subinterval $\interval$,
     while $t$ might not be.
   \end{itemize}
 \end{Definition}
@@ -313,19 +322,19 @@ Subintervals are fine enough to make Lemma \ref{main_lemma} below work while coa
 
 
 \begin{Definition}
-  Suppose $a \in \Q_p$ lies in an interval $\interval$. 
+  Suppose $a \in \Q_p$ lies in the interval $\interval$. 
   Define the \defn{T-valuation} of $a$ to be $\tval(a) = \vval(a - t)$.    
 \end{Definition}
 
-This a natural notion having the following properties:
+This is a natural notion having the following properties:
 \begin{Lemma}  \label{tval} \ 
   \begin{enumerate}[label=(\alph*)]
   \item $\tval(a)$ is well-defined, independent of choice of $t$ to represent the interval.
-  \item If $a \in \Q_p$ lies in a subinterval $\interval$,
+  \item If $a \in \Q_p$ lies in the subinterval $\interval$,
     then $\tval(a) = \vval(a - t)$.
-  \item If $a \in \Q_p$ lies in a (sub)interval $\interval$ 
+  \item If $a \in \Q_p$ lies in the (sub)interval $\interval$ 
     then $\alpha_L < \tval(a) \leq \alpha_U$.
-  \item For any $a \in \Q_p$ lying in a (sub)interval $\interval$ and $t' \in T$
+  \item For any $a \in \Q_p$ lying in the (sub)interval $\interval$ and $t' \in T$:
     \begin{itemize}
     \item If $\vval(t - t') \geq \alpha_U$, then $\vval(a - t') = \tval(a)$. 
     \item If $\vval(t - t') \leq \alpha_L$, then $\vval(a - t') = \vval(t - t') \paren{\leq \alpha_L < \tval(a)}$. 
@@ -336,11 +345,11 @@ This a natural notion having the following properties:
 
 \begin{proof}
   (a)-(c) are clear.
-  For (d) fix $t' \in T$ and suppose $a \in \Q_p$ lies in a subinterval $\inti(t, \alpha_L', \alpha_U')$.
-  This  subinterval lies inside of an interval $\interval$ for some choice of $\alpha_L, \alpha_U$ and
-  by the definition of intervals (or more specifically $\BB$)
+  For (d) fix $t' \in T$ and suppose $a \in \Q_p$ lies in the subinterval $\inti(t, \alpha_L', \alpha_U')$.
+  This  subinterval lies inside of a unique interval $\interval$ for some choice of $\alpha_L, \alpha_U$ and
+  by the definition of intervals (or more specifically $\BB$):
   \begin{align*}
-    \vval(t - t') \geq \alpha_U &\iff \vval(t - t') \geq \alpha_U'\\
+    \vval(t - t') \geq \alpha_U &\iff \vval(t - t') \geq \alpha_U',\\
     \vval(t - t') \geq \alpha_L &\iff \vval(t - t') \geq \alpha_L'.
   \end{align*}
   Therefore without loss of generality we may assume that $a \in \Q_p$ lies in an interval $\interval$.
@@ -372,13 +381,13 @@ This a natural notion having the following properties:
 
 
 \begin{Definition}
-  Suppose $a \in \Q_p$ lies in a subinterval $\interval$.
-  We say that $a$ is \defn{far from the boundary} (of $\interval$) if 
+  Suppose $a \in \Q_p$ lies in the subinterval $\interval$.
+  We say that $a$ is \defn{far from the boundary} tacitly (of $\interval$) if 
     \begin{align*}
 	\alpha_L + n \leq \tval(a) \leq \alpha_U - n.
     \end{align*}
-  Here $n$ is from the Lemma \ref{quantifier_elimination}.
-  Otherwise we say that it is \defn{close to the boundary}.
+  Here $n$ is as in Lemma \ref{quantifier_elimination}.
+  Otherwise we say that it is \defn{close to the boundary} (of $\interval$).
 \end{Definition}
 
 \begin{Definition}
@@ -386,7 +395,7 @@ This a natural notion having the following properties:
   We say $a_1, a_2$ have the same \defn{subinterval type} if one of the following holds:
   \begin{itemize}
   \item Both $a_1, a_2$ are far from the boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$-coset.
-    ($Q_{m,n}$ is from the Lemma \ref{quantifier_elimination}.)
+    (Here $Q_{m,n}$ is an in Lemma \ref{quantifier_elimination}.)
   \item Both $a_1, a_2$ are close to the boundary and 
     \begin{align*}
 	  \tval(a_1) = \tval(a_2) \leq \vval(a_1 - a_2) - n.
@@ -396,13 +405,13 @@ This a natural notion having the following properties:
 
 
 \begin{Definition}
-	For $c \in \Q_p$ and $\alpha, \beta \in \Z, \alpha < \beta$ define $c \midr [\alpha, \beta) \in \paren{\Z/p\Z}^{\beta - \alpha}$
+	For $c \in \Q_p$ and $\alpha, \beta \in \Z, \alpha < \beta$ define $c \midr [\alpha, \beta)$
   to be the record of the coefficients of $c$ for the valuations between $[\alpha, \beta)$.
   More precisely write $c$ in its power series form
   \begin{align*}
     c = \sum_{\gamma \in \Z} c_\gamma p^\gamma \text{ with } c_\gamma \in \curly{0,1, \ldots, p-1}
   \end{align*}
-  Then $c \midr [\alpha, \beta)$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_{\beta - 1})$.
+  Then $c \midr [\alpha, \beta)$ is just $(c_\alpha, c_{\alpha+1}, \ldots c_{\beta - 1}) \in \curly{0,1, \ldots, p-1}^{\beta - \alpha}$.
 \end{Definition}
 
 The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
@@ -417,15 +426,15 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 \begin{proof}
   Call $a,b \in \Q_p$ similar if $\val a = \val b$ and
   \begin{align*}
-    a \midr [\val a, \val a + n) = b \midr [\val b, \val b + n)
+    a \midr [\val a, \val a + n) = b \midr [\val b, \val b + n).
   \end{align*}
   If $a,b$ are similar then
   \begin{align*}
-    a \in Q_{m,n} \iff b \in Q_{m,n}
+    a \in Q_{m,n} \iff b \in Q_{m,n}.
   \end{align*}
   Moreover for any $\lambda \in \Q_p^\times$, if $a,b$ are similar then so are $\lambda a, \lambda b$.
   Thus if $a,b$ are similar, then they belong to the same coset of $Q_{m,n}$.
-  Conditions of the lemma force $x - c, y - c$ to be similar, thus belonging to the same coset.
+  The hypothesis of the lemma force $x - c, y - c$ to be similar, thus belonging to the same coset.
 \end{proof} 
 
 
@@ -439,20 +448,20 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 
   Suppose $a, a'$ are far from the boundary.
   Then they have the same subinterval type if $a - t, a' - t$ are in the same $Q_{m,n}$-coset.
-  The number of such subinterval types is bounded by the number of $Q_{m,n}$-cosets.
+  So the number of such subinterval types is bounded by the number of $Q_{m,n}$-cosets.
 
   Suppose $a, a'$ are close to the boundary and
   \begin{align*}
     &\tval(a) - \alpha_L = \tval(a') - \alpha_L < n \text { and}\\
-    &a \midr [\tval(a), \tval(a) + n) = a' \midr [\tval(a'), \tval(a') + n)  
+    &a \midr [\tval(a), \tval(a) + n) = a' \midr [\tval(a'), \tval(a') + n).
   \end{align*}
   Then $a, a'$ have the same subinterval type.
-  Such a subinterval type is thus determined by $\tval(a) - \alpha_L$ and $a \midr [\tval(a), \tval(a) + n)$,
+  Such a subinterval type is thus determined by $\tval(a) - \alpha_L$ and the tuple $a \midr [\tval(a), \tval(a) + n)$,
   therefore there are at most $n p^n$ many such types.
 
   A similar argument works for $a$ with $\alpha_U - \tval(a) \leq n$.
 
-  Adding those up we get that there are at most
+  Adding all this up we get that there are at most
   \begin{align*}
     K = \text{(number of $Q_{m,n}$ cosets)} + 2 n p^n  
   \end{align*}
@@ -487,10 +496,10 @@ The following critical lemma relates tree notions to $\Phi$-types.
   Lemma \ref{distance} shows that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
   
   Now, suppose both $a, a'$ are far from the boundary.
-  Label their interval as $\interval$.
+  Let $\interval$ be the interval containing $a, a'$.
   Then we have 
   \begin{align*}
-    \alpha_L + n \leq &\val (a - t) \leq \alpha_U - n \\
+    \alpha_L + n \leq &\val (a - t) \leq \alpha_U - n, \\
     \alpha_L + n \leq &\val (a' - t) \leq \alpha_U - n
   \end{align*}
   (as being far from the subinterval's boundary also makes $a,a'$ far from interval's boundary).
@@ -521,9 +530,10 @@ The following critical lemma relates tree notions to $\Phi$-types.
   Fix $i,j \in I, b \in B$.
   We would like to show the following equivalence: 
 
-  \begin{equation} \label {eq:order_equation}
-	  \vval (p_i(d) - c_i(b)) < \vval (p_j(d) - c_j(b))  	  \iff \vval (p_i(d') - c_i(b)) < \vval (p_j(d') - c_j(b))
-  \end{equation}
+  \begin{multline} \label {eq:order_equation}
+    \vval (p_i(d) - c_i(b)) < \vval (p_j(d) - c_j(b)) \iff \\
+    \iff \vval (p_i(d') - c_i(b)) < \vval (p_j(d') - c_j(b))
+  \end{multline}
 
   Suppose $p_i(d), p_i(d')$ are in the subinterval $\inti(t_i, \alpha_i, \beta_i)$ and 
   $p_j(d), p_j(d')$ are in the subinterval $\inti(t_j, \alpha_j, \beta_j)$.
@@ -559,7 +569,7 @@ The following critical lemma relates tree notions to $\Phi$-types.
   by the definition of subinterval (more specifically definition of $\BB'$).
   Therefore \eqref{eq:order_equation} has to hold.
   (Note that we always have $\tval(p_j(d)), \tval(p_j(d')) \in (\alpha_j, \beta_j]$ by Lemma \ref{tval}c, so 
-  we only need the far from the boundary condition to avoid the edge case of equality to $\beta_j$.)
+  we only need the condition on being far from the boundary to avoid the edge case of equality to $\beta_j$.)
 
   Case 4:
   \begin{align*}
@@ -571,7 +581,6 @@ The following critical lemma relates tree notions to $\Phi$-types.
 
 
 
-\begin{Note}
   The previous lemma gives us an upper bound on the number of types - there are at most $|2I|!$ many choices for the order of $\tval$,
   $O(N)$ many choices for the subinterval for each $p_i$,
   and $K$ many choices for the subinterval type for each $p_i$ (where $K$ is as in Lemma \ref{interval_type_count}),
@@ -583,7 +592,6 @@ The following critical lemma relates tree notions to $\Phi$-types.
   so once we choose a subinterval for $|x|$ many $p_i$'s, the subintervals for the rest should be determined.
   This would give the required bound $\vc^*(\Phi) \leq |x|$.
   The next section outlines this idea formally.
-\end{Note}
 
 
 
@@ -623,11 +631,12 @@ where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is homoge
       \min_{j \in J} \val(c_j) + \alpha \geq
       \alpha - \gamma
   \end{align*}
+  as required.
 \end{proof}
 
 \begin{Corollary}	 \label{gamma}
   Suppose we have a finite collection of vectors $\curly{\vec p_i}_{i \in I}$ with each $\vec p_i \in \Q_p^{|x|}$.
-  Suppose $J \subset I$ and $i \in I$ satisfy $\vec p_i \in \vecspan \curly{\vec p_j}_{j \in J}$,
+  Suppose $J \subseteq I$ and $i \in I$ satisfy $\vec p_i \in \vecspan \curly{\vec p_j}_{j \in J}$,
   and we have $\vec c \in \Q_p^{|x|}, \alpha \in \Z$ with $\val(\vec p_j \cdot \vec c) > \alpha \text{ for all } j \in J$.
   Then $\val(\vec p_i \cdot \vec c) > \alpha - \gamma$
   for some $\gamma \in \N$.
@@ -645,58 +654,65 @@ Fix $\gamma$ according to Corollary \ref{gamma} corresponding to $\curly{\vec p_
 
 \begin{Definition}
   Suppose $a \in \Q_p$ lies in the subinterval $\interval$.
-  Define \defn{$T$-floor} of $a$ to be $F(a) = \alpha_L$.
+  Define the \defn{$T$-floor} of $a$ to be $\tfl(a) = \alpha_L$.
 \end{Definition}
 
 \begin{Definition}
   Let $f: \Q_p^{|x|} \arr \Q_p^I$ with $f(c) = (p_i(c))_{i \in I}$.
-  Define the segment space $\Sg$ to be the image of $f$.	
+  Define the segment space $\Sg$ to be the image of $f$.
+  Equvalently:
+  \begin{align*}
+    \Sg = \curly{(p_i(c))_{i \in I} \mid c \in \Q_p^{|x|}} \subseteq \Q_p^I
+  \end{align*}
 \end{Definition}
 
+Without loss of generality, we may assume that $I = \curly{1,2, \ldots, k}$ (that is the formulas are labeled by consecutive natural numbers).
 Given a tuple $(a_i)_{i\in I}$ in the segment space,
-look at the corresponding $T$-floors $\curly{F(a_i)}_{i\in I}$ and T-valuations $\curly{\tval(a_i)}_{i\in I}$.
-Partition the segment space by the order types of $\{F(a_i)\}_{i\in I}$ and $\curly{\tval(a_i)}_{i\in I}$ (as subsets of $\Z$).
+look at the corresponding $T$-floors $\curly{\tfl(a_i)}_{i\in I}$ and T-valuations $\curly{\tval(a_i)}_{i\in I}$.
+Partition the segment space by the order types of $\{\tfl(a_i)\}_{i\in I}$ and $\curly{\tval(a_i)}_{i\in I}$ (as subsets of $\Z$).
 
 Work in a fixed set $\Sg'$ of the partition.
-After relabeling we may assume that
+After relabeling the $p_i$ we may assume that
 \begin{align*}
-  F(a_1) \geq F(a_2) \geq \ldots \text { for all $a_i \in \Sg'$}
+  \tfl(a_1) \geq \tfl(a_2) \geq \ldots \text { for all $a_i \in \Sg'$}
 \end{align*}
 
 Consider the (relabeled) sequence of vectors $\vec p_1, \vec p_2, \ldots, \vec p_I$.
-There is a unique subset $J \subset I$ such that all vectors with indices in $J$ are linearly independent,
+There is a unique subset $J \subset I$ such that the set of all vectors with indices in $J$ is linearly independent,
 and all vectors with indices outside of $J$ are a linear combination of preceding vectors.
-For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call it \defn{dependent} otherwise.
+(We can pick those using a greedy algorithm for finding a linearly independent subset of vectors.)
+We call indices in $I$ \defn{independent} and we call the indices in $I \setminus J$ \defn{dependent}.
 
 
 \begin{Definition} \ 
   \begin{itemize}
-  \item Denote $\Z/p\Z^\gamma$ as \defn{$\Ct$}.
-    Note that $|\Ct| = p^\gamma$.
+  \item Denote $\curly{0,1, \ldots, p-1}$ as \defn{$\Ct$}.
+    %Note that $|\Ct| = p^\gamma$.
   \item Let \defn{$\It$} be the space of all subinterval types.
-    By Lemma \ref{interval_type_count} $|\It| \leq K$.
+    By Lemma \ref{interval_type_count} we have $|\It| \leq K$.
   \item Let \defn{$\Sub$} be the space of all subintervals.
-    By Lemma \ref{interval_count} $|\Sub| \leq 3 |I|^2 \cdot N = O(N)$.
+    By Lemma \ref{interval_count} we have $|\Sub| \leq 3 |I|^2 \cdot N = O(N)$.
   \end{itemize}
 \end{Definition}
 
 \begin{Definition}
-  Now, we define the following function
+  Now, we define a function
   \begin{align*}
     g_{\Sg'}: \Sg' \arr \It^I \times \Sub^J \times \Ct^{I \backslash J}
   \end{align*}
-
+  as follows:
+  
   Let $a = (a_i)_{i\in I} \in \Sg'$.
   To define $g_{\Sg'}(a)$ we need to specify where it maps $a$ in each individual component of the product.
 
-  For each $a_i$ record its subinterval type, giving the first component $\It^I$.
+  For each $a_i$ record its subinterval type, giving the first component in $\It^I$.
 
-  For $a_j$ with $j \in J$, record the subinterval of $a_j$, giving the second component $\Sub^J$.
+  For $a_j$ with $j \in J$, record the subinterval of $a_j$, giving the second component in $\Sub^J$.
 
-  For the third component $\Ct^{I \backslash J}$ do the following computation.
+  For the third component (an element of $\Ct^{I \backslash J}$) do the following computation.
   Pick $a_i$ with $i$ dependent.
   Let $j$ be the largest independent index with $j < i$.
-  Record $a_i \midr [F(a_j) - \gamma, F(a_j))$.
+  Record $a_i \midr [\tfl(a_j) - \gamma, \tfl(a_j))$.
 
   Combine $g_{\Sg'}$ for all the partitions to get a function 
   \begin{align*}
@@ -705,7 +721,8 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
 \end{Definition}
 
 \begin{Lemma}
-  Suppose we have $c, c' \in \Q_p^{|x|}$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
+  Suppose we have $c, c' \in \Q_p^{|x|}$ such that $f(c), f(c')$ are in the same
+  set $\Sg'$ of the partition of $\Sg$ and $g(f(c)) = g(f(c'))$.
   Then $c, c'$ have the same $\Phi$-type over $B$.
 \end{Lemma}
 
@@ -727,54 +744,50 @@ For any index $i \in I$ we call it \defn{independent} if $i \in J$ and we call i
   Then by construction, $\Sub$ records the subinterval for $a_i, a_i'$, so those have to belong to the same subinterval.
   Now suppose $i$ is dependent.
   Pick the largest $j < i$ such that $j$ is independent.
-  We have $F(a_i) \leq F(a_j)$ and $F(a_i') \leq F(a_j')$.
-  Moreover $F(a_j) = F(a_j')$ as $a_j, a_j'$ lie in the same subinterval (using the earlier part of the argument as $j$ is independent).
+  We have $\tfl(a_i) \leq \tfl(a_j)$ and $\tfl(a_i') \leq \tfl(a_j')$.
+  Moreover $\tfl(a_j) = \tfl(a_j')$ as $a_j, a_j'$ lie in the same subinterval (using the earlier part of the argument as $j$ is independent).
   
   \begin{Claim}
-    $\val(a_i - a_i') > F(a_j) - \gamma$
+    $\val(a_i - a_i') > \tfl(a_j) - \gamma$
   \end{Claim}
   \begin{proof}
     Let $K$ be the set of the independent indices less than $i$.
     Note that by the definition for dependent indices we have $\vec p_i \in \vecspan \curly{\vec p_k}_{k \in K}$.
     We also have 
     \begin{align*}
-      \val(a_k - a_k') > F(a_k) \text { for all } k \in K
+      \val(a_k - a_k') > \tfl(a_k) \text { for all } k \in K
     \end{align*}
     as $a_k, a_k'$ lie in the same subinterval (using the earlier part of the argument as $k$ is independent).
-    \begin{align*}
-      &\val(a_k - a_k') > F(a_j) \text { for all } k \in K \text{ by monotonicity of $F(a_k)$} \\
-      &\val(\vec p_k \cdot \vec c - \vec p_k \cdot \pvec c') > F(a_j) \text { for all } k \in K \\
-      &\val(\vec p_k \cdot (\vec c - \pvec {c}')) > F(a_j) \text { for all } k \in K \\
-    \end{align*}
-    $K \subset I, i \in I, \vec c - \pvec {c}' \in \Q_p^{|x|}, F(a_j) \in \Z$
-    satisfy the requirements of Lemma \ref {gamma}, so we apply it to conclude
-    \begin{align*}
-      &\val(\vec p_i \cdot (\vec c - \pvec {c}')) > F(a_j) - \gamma \\
-      &\val(\vec p_i \cdot \vec c - \vec p_i \cdot \pvec {c}') > F(a_j) - \gamma \\
-      &\val(a_i - a_i') > F(a_j) - \gamma
-    \end{align*}
+    Now $\val(a_k - a_k') > \tfl(a_j)$  for all $k \in K$ by monotonicity of $\tfl(a_k)$.
+    Moreover $a_k - a_k' = \vec p_k \cdot \vec c - \vec p_k \cdot \pvec c' = \vec p_k \cdot (\vec c - \pvec {c}')$.
+    Combining the two, we get that $\val(\vec p_k \cdot (\vec c - \pvec {c}')) > \tfl(a_j)$ for all $k \in K$.
+    Now observe that $K \subset I, i \in I, \vec c - \pvec {c}' \in \Q_p^{|x|}, \tfl(a_j) \in \Z$
+    satisfy the requirements of Lemma \ref {gamma}, so we apply it to obtain
+    $\val(\vec p_i \cdot (\vec c - \pvec {c}')) > \tfl(a_j) - \gamma$.
+    Similarly to before, we have $\vec p_i \cdot (\vec c - \pvec {c}') = \vec p_i \cdot \vec c - \vec p_i \cdot \pvec {c}' = a_i - a_i'$.
+    Therefore we can conclude that $\val(a_i - a_i') > \tfl(a_j) - \gamma$
     as needed, finishing the proof of the claim.
   \end{proof}	
   Additionally $a_i, a_i'$ have the same image in $\Ct$ component, so we have
   \begin{align*}
-    \val(a_i - a_i') > F(a_j) 
+    \val(a_i - a_i') > \tfl(a_j) 
   \end{align*}
   We now would like to show that $a_i, a_i'$ lie in the same subinterval.
-  As $F(a_i) \leq F(a_j)$, $F(a_i') \leq F(a_j')$ and $F(a_j) = F(a_j')$ we have that
-  $\val(a_i - a_i') > F(a_i)$ and $\val(a_i - a_i') > F(a_i')$
-  Suppose that $a_i$ lies in the subinterval $\inti(t, F(a_i), \alpha_U)$
-  and that $a_i'$ lies in the subinterval $\inti(t', F(a_i'), \alpha_U')$.
-  Without loss of generality assume that $F(a_i) \leq F(a_i')$.
-  As $\val(a_i - a_i') > F(a_i')$, this implies that
+  As $\tfl(a_i) \leq \tfl(a_j)$, $\tfl(a_i') \leq \tfl(a_j')$ and $\tfl(a_j) = \tfl(a_j')$ we have that
+  $\val(a_i - a_i') > \tfl(a_i)$ and $\val(a_i - a_i') > \tfl(a_i')$
+  Suppose that $a_i$ lies in the subinterval $\inti(t, \tfl(a_i), \alpha_U)$
+  and that $a_i'$ lies in the subinterval $\inti(t', \tfl(a_i'), \alpha_U')$.
+  Without loss of generality assume that $\tfl(a_i) \leq \tfl(a_i')$.
+  As $\val(a_i - a_i') > \tfl(a_i')$, this implies that
   \begin{align*}
-    a_i &\in B(a_i', F(a_i')) \\
-    a_i &\in B(t', F(a_i')) \\
-    B(t, F(a_i)) &\cap B(t', F(a_i')) \neq \emptyset \\
-    B(t, F(a_i)) &\subset B(t', F(a_i')) 
+    a_i &\in B(a_i', \tfl(a_i')) \\
+    a_i &\in B(t', \tfl(a_i')) \\
+    B(t, \tfl(a_i)) &\cap B(t', \tfl(a_i')) \neq \emptyset \\
+    B(t, \tfl(a_i)) &\subset B(t', \tfl(a_i')) 
   \end{align*}
   For the subintervals to be disjoint we need 
-  $\inti(t, F(a_i), \alpha_U) \cap B(t', F(a_i')) = \emptyset$.
-  But $\val(t' - a_i) > F(a_i')$ implying that $a_i \in \inti(t, F(a_i), \alpha_U) \cap B(t', F(a_i'))$ giving a contradiction.
+  $\inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i')) = \emptyset$.
+  But $\val(t' - a_i) > \tfl(a_i')$ implying that $a_i \in \inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i'))$ giving a contradiction.
   Therefore the subintervals coicide finishing the proof.
 \end{proof}
 
