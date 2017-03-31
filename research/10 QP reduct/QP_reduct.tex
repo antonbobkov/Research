@@ -81,7 +81,7 @@ In a complete NIP theory $T$ we can define the vc-function
   \vc^T = \vc : \N \arr \R \cup \curly{\infty}
 \end{align*}
 
-where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold cartesian power of the underlying set of a model of $T$
+where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold Cartesian power of the underlying set of a model of $T$
 (see \ref{vc_fn_def} below for a precise definition of $\vc^T$).
 The simplest possible behavior is $\vc(n) = n$ for all $n$,
 satisfied, for example, if $T$ is o-minimal.
@@ -768,31 +768,29 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
     Therefore we can conclude that $\val(a_i - a_i') > \tfl(a_j) - \gamma$
     as needed, finishing the proof of the claim.
   \end{proof}	
-  Additionally $a_i, a_i'$ have the same image in $\Ct$ component, so we have
+  Additionally $a_i, a_i'$ have the same image in the $\Ct$ component, so we have
   \begin{align*}
-    \val(a_i - a_i') > \tfl(a_j) 
+    \val(a_i - a_i') > \tfl(a_j).
   \end{align*}
   We now would like to show that $a_i, a_i'$ lie in the same subinterval.
   As $\tfl(a_i) \leq \tfl(a_j)$, $\tfl(a_i') \leq \tfl(a_j')$ and $\tfl(a_j) = \tfl(a_j')$ we have that
-  $\val(a_i - a_i') > \tfl(a_i)$ and $\val(a_i - a_i') > \tfl(a_i')$
+  $\val(a_i - a_i') > \tfl(a_i)$ and $\val(a_i - a_i') > \tfl(a_i')$.
   Suppose that $a_i$ lies in the subinterval $\inti(t, \tfl(a_i), \alpha_U)$
   and that $a_i'$ lies in the subinterval $\inti(t', \tfl(a_i'), \alpha_U')$.
   Without loss of generality assume that $\tfl(a_i) \leq \tfl(a_i')$.
-  As $\val(a_i - a_i') > \tfl(a_i')$, this implies that
-  \begin{align*}
-    a_i &\in B(a_i', \tfl(a_i')) \\
-    a_i &\in B(t', \tfl(a_i')) \\
-    B(t, \tfl(a_i)) &\cap B(t', \tfl(a_i')) \neq \emptyset \\
-    B(t, \tfl(a_i)) &\subset B(t', \tfl(a_i')) 
-  \end{align*}
+  As $\val(a_i - a_i') > \tfl(a_i')$, this implies that $a_i \in B(a_i', \tfl(a_i'))$.
+  Then $a_i \in B(t', \tfl(a_i'))$ as $\vval(a_i - t') > \tfl(a_i')$.
+  This implies that $B(t, \tfl(a_i)) \cap B(t', \tfl(a_i')) \neq \emptyset$ as they both contain $a_i$.
+  As balls are directed, the non-zero intersection means that one ball has to be contained in another.
+  Given our assumption that $\tfl(a_i) \leq \tfl(a_i')$, we have $B(t, \tfl(a_i)) \subset B(t', \tfl(a_i'))$.
   For the subintervals to be disjoint we need 
   $\inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i')) = \emptyset$.
   But $\val(t' - a_i) > \tfl(a_i')$ implying that $a_i \in \inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i'))$ giving a contradiction.
-  Therefore the subintervals coicide finishing the proof.
+  Therefore the subintervals coincide finishing the proof.
 \end{proof}
 
 \begin{Corollary}
-  $\Phi(x,y)$ has dual $\vc$-density $\leq |x|$.
+  The dual $\vc$-density of $\Phi(x,y)$ is $\leq |x|$.
 \end{Corollary}
 
 \begin{proof}
@@ -801,14 +799,14 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   Thus the number of possible $\Phi$-types is bounded by the size of the range of $g$ times the number of possible partitions
   
   \begin{align*}
-    \text{(number of partitions)} \cdot |\It|^{|I|} \cdot |\Sub|^{|J|} \cdot |\Ct|^{|I-J|}
+    \text{(number of partitions)} \cdot |\It|^{|I|} \cdot |\Sub|^{|J|} \cdot |\Ct|^{|I-J|}.
   \end{align*}
 
   There are at most $\paren{|2I|!}^2$ many partitions of $\Sg$,
   so in the product above, the only component dependent on $B$ is
 
   \begin{align*}
-    |\Sub|^{|J|} \leq (N \cdot 3{|I|}^2)^{|J|} = O(N^{|J|})
+    |\Sub|^{|J|} \leq (N \cdot 3{|I|}^2)^{|J|} = O(N^{|J|}).
   \end{align*}	
   
   Every $p_i$ is an element of a $|x|$-dimensional vector space, so there can be at most $|x|$ many independent vectors.
@@ -816,7 +814,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
 \end{proof}
 
 \begin{Corollary} [Theorem \ref{main_theorem}]
-  $\LL_{aff}$-structure $\Q_p$ has $\vc(n) = n$.
+  The $\LL_{aff}$-structure $\Q_p$ satisfies $\vc(n) = n$.
 \end{Corollary}
 
 \begin{proof}
@@ -824,13 +822,21 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   As choice of $\phi$ was arbitrary, this implies that the vc-density of any formula is bounded by the arity of $x$.
 \end{proof}
 
-This proof relies heavily on the linearity of functions $a_1, a_2, c$ in the cell deomposition result (see Definition \ref{cell}).
-Linearity is used to separate $x$ and $y$ variables as well as
+This proof relies heavily on the linearity of the defining polynomials $a_1, a_2, c$ in the cell decomposition result (see Definition \ref{cell}).
+Linearity is used to separate the $x$ and $y$ variables as well as
 for Corollary \ref{gamma} to reduce the number of independent factors from $|I|$ to $|x|$.
 The paper \cite{reduct} has cell decomposition results for more expressive reducts of $\Q_p$,
-including, for exapmple, restricted multiplication.
+including, for example, restricted multiplication.
 While our results don't apply to it directly,
-it is this author's hope that similar techniques can be used to compute $\vc(n)$ function for those structures.
+it is this author's hope that similar techniques can be used to also compute the $\vc$-function for those structures.
+
+Another interesting question whether the reduct studied in this paper has VC 1 property (see \cite{density} 5.2 for the definition).
+If so, this would imply the linear $\vc$-density bound directly.
+The paper \cite{density} implies that the reduct has VC 2 property.
+While there are techniques for showing that a structure has a given VC property,
+less is known about showing that a structure doesn't have a given VC property.
+Perhaps the simple structure of the $\LLA$-reduct can help understand this property better.
+
 
 \begin{thebibliography}{9}
   
