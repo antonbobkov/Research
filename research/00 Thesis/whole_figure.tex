@@ -1,0 +1,41 @@
+\tikzstyle{node}=[circle, draw]
+
+\tikzstyle{up}=[draw,shape=circle,fill=blue,scale=0.5]
+\tikzstyle{c1}=[node, fill = white]
+\tikzstyle{md}=[node, fill = lightgray]
+\tikzstyle{c2}=[node, fill = white]
+\tikzstyle{dn}=[node, fill = white]
+\tikzstyle{ds}=[node, fill = white]
+\tikzstyle{nd}=[rectangle, draw]
+
+\tikzstyle{l}=[level distance=50mm]
+\tikzstyle{m}=[level distance=35mm]
+\tikzstyle{s}=[level distance=20mm]
+
+\tikzstyle{ww}=[sibling distance=50mm]
+\tikzstyle{wt}=[sibling distance=20mm]
+\tikzstyle{w}=[sibling distance=15mm]
+\tikzstyle{a}=[sibling distance=10mm]
+\tikzstyle{n}=[sibling distance=5mm]
+
+\tikzstyle{ex}=[draw,shape=circle,fill=black,scale=0.1]
+\tikzstyle{lb}=[]
+
+\newcommand{\bloffset}{(-1,1)}
+\newcommand{\broffset}{(1,1)}
+\newcommand{\tloffset}{\bloffset}
+\newcommand{\troffset}{\broffset}
+
+\begin{figure}[h]
+  \begin{tikzpicture}[scale=.6]%, , every node/.style={transform shape}]
+    \def\boffset{0}
+    \def\toffset{\boffset}
+    \input{input}
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=.6]%, , every node/.style={transform shape}]
+    \def\boffset{.33}
+    \def\toffset{\boffset}
+    \input{input}
+  \end{tikzpicture}
+  \caption{A typical interval (left) and subinterval (right) on a tree $\{c_i(b) \mid i \in I, b \in B\}$.}
+\end{figure}

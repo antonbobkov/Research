@@ -1,0 +1,495 @@
+  We investigate vc-density in Shelah-Spencer graphs.
+  We provide an upper bound on formula-by-formula basis and show that there isn't a uniform lower bound forcing $\vc(n) = \infty$.
+
+VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In an NIP theory we can define a vc-function
+
+\begin{align*}
+	\vc : \N \arr \N
+\end{align*}
+
+Where $\vc(n)$ measures the worst-case complexity of definable sets in an $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e. having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
+
+In this paper, we investigate vc-density of definable sets in Shelah-Spencer graphs.
+In our description of Shelah-Spencer graphs we follow closely the treatment in \cite{laskowski}.
+A Shelah-Spencer graph is a limit of random structures $G(n, n^{-\alpha})$ for an irrational $\alpha \in (0,1)$.
+$G(n, n^{-\alpha})$ is a random graph on $n$ vertices with edge probability $n^{-\alpha}$.
+
+Our first result is that in Shelah-Spencer graphs
+\begin{align*}
+    \vc(n) = \infty
+\end{align*}
+which implies that they are not dp-minimal.
+Our second result is providing an upper bound on a vc-density for a formula $\phi$
+\begin{align*}
+    \vc(\phi) \leq K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}    
+\end{align*}
+where $K(\phi), Y(\phi), \epsilon(\phi)$ are paramters easily computable from the quantifier free form of $\phi$.
+
+Chapter 1 introduces basic facts about VC-dimension and vc-density.
+More can be found in \cite{density}.
+Chapter 2 summarizes notation and basic facts concerning Shelah-Spencer graphs.
+We direct the reader to \cite{laskowski} for a more in-depth treatment.
+In chapter 3 we introduce some measure of dimension for quantifier free formulas as well as proving some elementary facts about it.
+Chapter 4 computes a lower bound for vc-density to demonstrate that $\vc(n) = \infty$.
+Chapter 5 computes an upper bound for vc-density on a formula-by-formula basis.
+
+% This struc is axiomatized by $S_\alpha$.
+% Our ambient model is $\MM$.
+% Notations we use are $\delta(\A), \delta(\A/\B), \A \leq \B$ as well as notions of $N$-strong substructure, minimal extension, chain minimal extension, minimal pair, and $N$-strong closure.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Graph Combinatorics}
+
+We denote graph by $\A$, set of its vertices by $A$.
+\begin{Definition}
+  Fix $\alpha \in (0,1)$, irrational.
+  \begin{itemize}
+  \item For a finite graph $\A$ let
+    \begin{align*}
+      \delta(\A) = |A| - \alpha e(\A)
+    \end{align*}
+    where $e(\A)$ is the number of edges in $\A$.
+
+  \item For finite $\A,\B$ with $\A \subseteq \B$ define $\delta(\B/\A) = \delta(\B) - \delta(\A)$.
+  \item We say that $\A \leq \B$ if $\A \subseteq \B$ and $\delta(\A'/\B) > 0$ for all $\A \subseteq \A' \subsetneq \B$.
+
+  \item We say that finite $\A$ is \defn{positive} if for all $\A' \subseteq \A$ we have $\delta(\A') \geq 0$.
+
+  \item We work in theory $S_\alpha$ axiomatized by
+    \begin{itemize}
+    \item Every finite substructure is positive.
+    \item For a model $\MM$ given $\A \leq \B$ every embedding $f : \A \arr \MM$ extends to $g: \B \arr \MM$.
+    \end{itemize}
+
+  \item For $\A, \B$ positive, $(\A, \B)$ is called a \defn{minimal pair} if
+    $\A \subseteq \B$, $\delta(\B/\A) < 0$ but $\delta(\A'/\A) \geq 0$ for all proper $\A \subseteq \A' \subsetneq \B$.
+
+  \item $\agl{\A_i}_{i \leq m}$ is called a \defn{minimal chain} if $(\A_i, \A_i+1)$ is a minimal pair (for all $i < m$).
+
+  \item For a positive $\A$ let $\delta_\A(\bar x)$ be the atomic diagram of $\A$. For positive $\A \subset \B$ let 
+    \begin{align*}
+      \Psi_{\A,\B}(\bar x) = \delta_\A(\bar x) \wedge \exists \bar y \; \delta_\B(\bar x, \bar y).
+    \end{align*}
+    Such formula is called a \defn{chain-minimal extension formula} if in addition we have that there is a minimal chain starting at 
+    $\A$ and ending in $\B$.
+    Denote such formulas as $\Psi_{\agl{\M_i}}$.
+  \end{itemize}
+\end{Definition}
+
+\begin{Theorem} [5.6 in \cite{laskowski}]
+  $S_\alpha$ admits quantifier elimination down to boolean combination of chain-minimal extension formulas.
+\end{Theorem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Basic Definitions and Lemmas}
+
+Fix tuples $x = (x_1, \ldots x_n), y = (y_1, \ldots, y_m)$.
+We refer to chain-minimal extension formulas as basic formulas.
+Let $\phi_{\agl{\M_i}}(x, y)$ be a basic formula.
+
+\begin{Definition}
+  Define $\X$ to be the graph on vertices $\{x_i\}$ with edges as defined by $\phi_{\agl{\M_i}}$.
+  Similarly define $\Y$.
+  We define those abstractly, i.e. on a new set of vertices disjoint from $\MM$.
+\end{Definition}
+
+Note that $\X$, $\Y$ are positive as they are subgraphs of $\M_0$.
+As usual $X, Y$ will refer to vertices of those graphs.
+
+We restrict our attention to formulas that define no edges between $X$ and $Y$.
+
+\begin{Note} \label{note_edges}
+  We can handle edges between $x$ and $y$ as separate elements of the minimal chain extension.
+\end{Note}
+
+\begin{Definition} \label{def_basic}
+  For a basic formula $\phi = \phi_{\agl{\M_i}_{i \leq k}}(x, y)$ let
+  \begin{itemize}
+  \item $\epsilon_i(\phi) = -\dim \paren{M_i/M_{i-1}}$.
+  \item $\epsilon_L(\phi) = \sum_{[1..k]} \epsilon_i(\phi)$.
+  \item $\epsilon_U(\phi) = \min_{[1..k]} \epsilon_i(\phi)$.
+  \item Let $\Y'$ be a subgraph of $\Y$ induced by vertices of $\Y$ that are connected to $M_k - (X \cup Y)$.
+  \item Let $Y(\phi) = \dim (\Y')$.
+    In particular if $\Y = \Y'$ and $\Y$ is disconnected then $Y(\phi)$ is just the arity of the tuple $y$.
+  \end{itemize}
+\end{Definition}
+
+We conclude this section by stating a couple of technical lemmas that will be useful in our proofs later.
+\begin{Lemma}
+  Suppose we have a set $B$ and a minimal pair $(M, A)$ with $A \subset B$ and $\dim(M/A) = -\epsilon$.
+  Then either $M \subseteq B$ or $\dim((M \cup B)/B) < -\epsilon$.
+\end{Lemma}
+
+\begin{proof}
+  By diamond construction
+  \begin{align*}
+    \dim((M \cup B)/B) \leq \dim(M / (M \cap B))
+  \end{align*}
+  and 
+  \begin{align*}
+    \dim(M / (M \cap B)) &= \dim (M/A) - \dim(M / (M \cap B)) \\
+    \dim (M/A) &= -\epsilon \\
+    \dim(M / (M \cap B)) &> 0
+  \end{align*}
+\end{proof}
+
+
+
+\begin{Lemma}	\label{chain_lemma}
+  Suppose we have a set $B$ and a minimal chain $M_n$ with $M_0 \subset B$ and dimensions $-\epsilon_i$.
+  Let $\epsilon$ be the minimal of $\epsilon_i$.
+  Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) < -\epsilon$.
+\end{Lemma}
+
+
+\begin{proof}
+  Let $\bar M_i = M_i \cup B$
+
+  \begin{align*}
+    \dim(\bar M_n/B) = \dim(\bar M_n/\bar M_{n-1}) + \ldots + \dim(\bar M_2/\bar M_1) + \dim(\bar M_1/B)
+  \end{align*}
+
+  Either $M_n \subseteq B$ or one of the summands above is nonzero.
+  Apply previous lemma.
+\end{proof}
+
+\begin{Lemma} \label{chain_intersect}
+  Suppose we have a minimal chain $M_n$ with dimensions $-\epsilon_i$.
+  Let $\epsilon$ be the sum of all $\epsilon_i$.
+  Suppose we have some $B$ with $B \subseteq M_n$.
+  Then $\dim B / (M_0 \cap B) \geq -\epsilon$.
+\end{Lemma}
+
+\begin{proof}
+  Let $B_i = B \cap M_i$.
+  We have $\dim B_{i+1}/B_i \geq \dim M_{i+1}/M_i$ by minimality.
+  $\dim B / (M_0 \cap B) = \dim B_n / B_0 = \sum \dim B_{i+1}/B_i \geq -\epsilon$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Lower bound}
+
+As a simplification for our lower bound computation we assume that all the basic formulas involved we have $\Y' = \Y$ (see Definition \ref{def_basic}).
+
+We work with formulas that are boolean combinations of basic formulas written in disjunctive-conjunctive form.
+First, we extend our definition of $\epsilon$.
+
+\begin{Definition}[Negation]
+  If $\phi$ is a basic formula, then define
+  \begin{align*}
+    \epsilon_L(\neg \phi) &= \epsilon_L(\phi)
+  \end{align*}
+\end{Definition}
+
+\begin{Definition}[Conjunction]
+  Take a collection of formulas $\phi_i(x, y)$ where each $\phi_i$ is positive or negative basic formula.
+  If both positive and negative formulas are present then $\epsilon_L(\phi) = \infty$.
+  We don't have a lower bound for that case.
+  If different formulas define $\X$ or $\Y$ differently then $\epsilon_L(\phi) = \infty$.
+  In that case of the conflicting definitions would make the formula have no realizations.
+  Otherwise
+  \begin{align*}
+    \epsilon_L(\bigwedge \phi_i) &= \sum \epsilon_L(\phi_i)
+  \end{align*}
+\end{Definition}
+
+\begin{Definition} [Disjunction]
+  Take a collection of formulas $\psi_i$ where each instance is a conjunction of positive and negative instances of basic formulas that agree on $\X$ and $\Y$. % can generalize?
+  \begin{align*}
+    \epsilon_L(\bigvee \psi_i) &= \min \epsilon_L(\psi_i).
+  \end{align*}
+\end{Definition}
+
+\begin{Theorem}
+  For a formula $\phi$ as above
+  \begin{align*}
+    \vc \phi \geq \floor{\frac{Y(\phi)}{\epsilon_L(\phi)}}
+  \end{align*}
+  where $Y(\phi)$ is $Y(\psi)$ for $\psi$ one the basic components of $\phi$ (all basic componenets agree on $\Y$).
+\end{Theorem}
+
+\begin{proof}
+  First work with a formula that is a conjunction of positive basic formulas
+
+  \begin{align*}
+    \psi = \bigwedge_{j \leq J} \phi_j.
+  \end{align*}
+  Then as we defined above
+  \begin{align*}
+    \epsilon_L(\psi) = \sum \epsilon_L(\phi_j)
+  \end{align*}
+  
+  Let $\phi$ be one of the basic formulas in $\psi$ with a chain $\agl{M_i}_{i \leq k}$.
+  Let $K_\phi = |M_k|$ i.e. the size of the extension.
+  Let $K$ be the largest such size among all $\phi_i$.
+
+  Let $n$ be the integer such that $n \epsilon_L(\psi) < Y$ and $(n+1) \epsilon_L(\psi) > Y$.
+
+  Label $\Y$ by an tuple $b$.
+
+  Pick parameter set $A \subset \MM$ such that 
+
+  \begin{align*}
+    A = \bigcup_{i<N} b_i
+  \end{align*}
+
+  a disjoint union where each $b_i$ is an ordered tuple of size $|x|$ connected according to $\psi$.
+  We also require $A$ to be $N \cdot I \cdot K$-strong.
+
+  Fix $n$ arbitrary elements out of $A$, label them $a_j$.
+
+  For each $\phi_i$, $a_j$ pick an abstract realization $M_{ij}$ of $\phi_i$ over $(a_j, b)$
+  (abstract meaning disjoint from $\MM$).
+  
+  Let $\bar M$ be an abstract disjoint union of all those realizations.
+
+  \begin{Claim}
+    $(A \cap \bar M) \leq \bar M$.
+  \end{Claim}
+  \begin{proof}
+    Consider some $(A \cap \bar M) \subseteq B \subseteq \bar M$.
+    Let $B_{ij} = B \cap M_{ij} \subseteq M_{ij}$.
+    Then $B_{ij}$'s are disjoint over $\bar A = A \cup b$.
+    In particular $\dim B / (\bar A \cap B) = \sum \dim B_{ij} / (\bar A \cap B_{ij})$.
+    $\dim B_{ij} / \bar A \geq -\epsilon_L(\phi_i)$ by Lemma \ref{chain_intersect}.
+    Thus $\dim B / (\bar A \cap B) \geq -n\epsilon(\psi)$.
+    Thus $\dim B / (A \cap B) \geq \dim(B) - n\epsilon(\psi)$.
+    By construction we have $Y - n\epsilon_L(\psi) > 0$ as needed.
+  \end{proof}
+
+  $|\bar M| \leq N \cdot I \cdot K$ and $A$ is $\leq N \cdot I \cdot K$-strong.
+  Thus a copy of $\bar M$ can be embedded over $A$ into our ambient model $\MM$.
+  Our choice of $b_i$'s was arbitrary, so we get ${N \choose n}$ choices out of $N|x|$ many elements.
+  Thus we have $O(|A|^n)$ many traces.
+
+  \begin{Lemma}
+    There are arbitrarily large sets with properties of $A$.
+  \end{Lemma}
+  
+  \begin{proof}
+    $A$ is positive, as each of its disjoint components is positive. Thus $0 \leq A$.
+    We apply proposition 4.4 in Laskoswki paper, embedding $A$ into our structure $\MM$ while avoiding all nonpositive extensions of size at most $N \cdot I \cdot K$.
+  \end{proof}
+
+  This shows
+
+  \begin{align*}
+    \vc \psi \geq n = \floor{\frac{Y}{\epsilon_L}}
+  \end{align*}
+
+  Now consider the formula which is a conjunction consists of negative basic formulas
+  \begin{align*}
+    \psi = \bigwedge \neg \phi_i
+  \end{align*}
+  Let
+  \begin{align*}
+    \bar \psi = \bigwedge \phi_i
+  \end{align*}
+
+  Do the construction above for $\bar \psi$ and suppose its trace is $X \subset A$ for some $b$.
+  Then over $b$ the same construction gives trace $(A - X)$ for $\psi$. Thus we get as many traces.
+  
+  Finally consider a formula which is a disjunction of formulas considered above.
+  Choose the one with the smallest $\epsilon_L$, this yields the lower bound for the entire formula.
+\end{proof}
+
+\begin{Claim}[4.1 in \cite{laskowski}]
+  We can find a minimal extension $M$ with arbitrarily small dimension.
+\end{Claim}
+
+\begin{Corollary}
+  This shows that the vc-function is infinite in Shelah-Spencer random graphs.
+  \begin{align*}
+    \vc(n) = \infty
+  \end{align*}
+  In particular, this implies that Shelah-Spencer graphs are not dp-minimal.
+\end{Corollary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Upper bound}
+
+We bound the number of types of some finite collection of formulas $\Psi(\vec x, \vec y) = \curly{\phi_i(\vec x, \vec y)}_{i\in I}$ over a parameter set $B$ of size $N$,
+where $\phi_i$ is a basic formula.
+
+Fix a formula $\phi$ from our collection.
+Suppose it defines a minimal chain extension over $\{x, y\}$. 
+Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon(\phi) = \epsilon_U(\phi)$.
+Define dimension of that formula $D(\phi) = |\vec y| \frac{K(\phi)}{\epsilon(\phi)}$
+Define dimension of the entire collection as $D(\Psi) = \max_{i \in I} D(\phi_i)$
+
+In general we have parameter set $B \subset \MM^{|y|}$, however without loss of generality we may work with
+a parameter set $B^{|y|}$, with $B \subset \MM$.
+
+Let $S = \floor{D(\Psi)}$.
+
+For our proof to work we also need $B$ to be $S$-strong.
+We can achieve this by taking (the unique) $S$-strong closure of $B$.
+If size of $B$ is $N$ then the size of its closure is $O(N)$.	%elaborate
+So without loss of generality we can assume that $B$ is $S$-strong.
+
+\begin{Definition}
+  A \defn{witness} of $a$ is a union of realizations of the existential formulas $\phi_i(a, b)$ for all $i, b$ so that the formula holds.
+\end{Definition}
+
+\begin{Definition}
+  For sets $C, B$ define the boundary of $C$ over $B$
+  \begin{align*}
+    \partial(C, B) = \curly{b \in B \mid \text{there is an edge between $b$ and element of $C - B$}}
+  \end{align*}
+\end{Definition}
+
+\begin{Definition}
+  For each $a$ pick some $\bar M_a$ to be its witness.
+  Define two quantities
+  \begin{itemize}
+  \item $\partial_a$ is the boundary $\partial(\bar M_a, B \cup a)$
+  \item Suppose $G_1, G_2$ are some subgraphs of our model and $a_1 \subset G_1, a_2 \subset G_2$ finite tuples of vertices.
+    Call $f \colon (G_1, a_1) \arr (G_2, a_2)$ a $\partial$-isomorphism if it is a graph isomorphism,
+    $f$ and $f^{-1}$ are constant on $B$, and
+    $f(a_1) = a_2$.
+  \item Define $\II_a$ as the $\partial$-isomorphism class of $(\bar M_a, a)$.
+  \end{itemize}
+\end{Definition}
+
+\begin{Lemma} \label {bound_trace}
+  If $\II_{a_1} = \II_{a_2}$ then $a_1, a_2$ have the same $\Psi$-type over $B$.
+\end{Lemma}
+
+\begin{proof}
+  Fix a $\partial$-isomorphism $f \colon (\bar M_{a_1}, a_1) \arr (\bar M_{a_1}, a_2)$.
+  Suppose we have $\phi(a_1, b)$ for some $b \in B$.
+  Pick witness of this existential formula $M_1 \subset \bar M_{a_1}$.
+  Then $f(M_1)$ is a witness for  $\phi(a_2, b)$.
+\end{proof}
+
+Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_a$.
+
+\begin{Theorem} \label{main_bound}
+  \begin{align*}
+    |\partial_a| &\leq D(\Psi) \\ 
+    |\bar M_b - \bar A| &\leq D(\Psi)
+  \end{align*}
+\end{Theorem}
+
+\begin{Corollary}
+  \begin{align*}
+    \vc(\phi) \leq K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}
+  \end{align*}
+\end{Corollary}
+
+\begin{proof}
+  We count possible $\partial$-isomorphism classes $\II_b$.
+  Let $W = K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}$.
+  If the parameter set $A$ is of size $N$ then there are $N \choose W$ choices for boundary $\partial_b$.
+  On top of the boundary there are at most $W$ extra vertices and $(2W)^2$ extra edges.
+  Thus there are at most
+  \begin{align*}
+    W \cdot 2^{(2W)^2}
+  \end{align*}
+  configurations up to a graph isomorphism.
+  In total this gives us 
+  \begin{align*}
+    {N \choose W} \cdot W \cdot 2^{(2W)^2} = O(N^W)
+  \end{align*}
+  options for $\partial$-isomorphism classes.
+  By Lemma \ref{bound_trace} there are at most $O(N^W)$ many traces, giving the required bound.
+\end{proof}
+
+\begin{proof} \textit{(of Theorem \ref{main_bound})}
+  Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
+
+  Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.
+  Let $\bar M_i = \bigcup_{j < i} M_j$.
+  Let $\bar M = \bigcup M_i$, a witness of $A_b$
+  
+  \begin{Claim}
+    \begin{align*}
+      &\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| = K(\phi)\\
+      &\dim(M_i M \bar A / M \bar A) > -\epsilon(\phi)
+    \end{align*}
+  \end{Claim}
+  
+  \begin{Definition}
+    $(j-1, j)$ is called a \defn{jump} if some of the following conditions happen
+    \begin{itemize}
+    \item New vertices are added outside of $\bar A$ i.e.
+      \begin{align*}
+        \bar M_j - \bar A \neq \bar M_{j-1} - \bar A
+      \end{align*}
+    \item New vertices are added to the boundary, i.e.
+      \begin{align*}
+        \partial(\bar M_j, \bar A) \neq \partial(\bar M_{j-1}, \bar A)
+      \end{align*}
+    \end{itemize}
+  \end{Definition}
+
+  \begin{Definition}
+    We now let $m_i$ count all jumps below $i$
+    % Let $d_i = \dim(\bar M_i/A)$.
+    \begin{align*}
+      m_i = \abs{\curly{j < i \mid (j-1, j) \text{ is a jump}}}
+    \end{align*}
+  \end{Definition}
+
+  \begin{Lemma} \label{ub_lemma}
+    \begin{align*}
+      \dim(\bar M_i / \bar A) &\leq -m_i \cdot \epsilon(\phi) \\
+      |\partial(\bar M_i, \bar A)| &\leq m_i \cdot K(\phi) \\
+      |\bar M_j - \bar A| &\leq m_i \cdot K(\phi)
+    \end{align*}
+  \end{Lemma}
+
+  \begin{proof} \textit{(of Lemma \ref{ub_lemma})}
+    Proceed by induction.
+    Second and third propositions are clear.
+    For the first proposition base case is clear.
+    
+    Induction step.
+    Suppose $\bar M_j \cap (A \cup b) = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
+    Then $m_i = m_{i+1}$ and the quantities don't change.
+    Thus assume at least one of these equalities fails.
+    
+    Apply Lemma \ref{chain_lemma} to $\bar M_j \cup (A \cup b)$ and $(M_{j+1}, a_{j+1}b)$.
+    There are two options
+    
+    \begin{itemize}
+    \item $\dim(\bar M_{j+1} \cup (A \cup b) / \bar M_i \cup (A \cup b)) \leq -\epsilon_U$.
+      This implies the proposition.
+    \item $M_{j+1} \subset \bar M_j \cup (A \cup b)$.
+      Then by our assumption it has to be $\partial(\bar M_j, A) \neq \partial(\bar M_{j+1}, A)$.
+      There are edges between $M_{j+1} \cap (\partial(\bar M_{j+1}, A) - \partial(\bar M_j, A))$ so they contribute some negative dimension $\leq \epsilon_U$.
+    \end{itemize}
+    This ends the proof for Lemma \ref{ub_lemma}.
+  \end{proof}
+  \textit{(Proof of Theorem \ref{main_bound} continued)}
+  First part of lemma \ref{ub_lemma} implies that we have $\dim(\bar M / \bar A) \leq -m_I \cdot \epsilon(\phi)$.
+  The requirement of $A$ to be $S$-strong forces
+  \begin{align*}
+    m_I \cdot \epsilon(\phi) &< Y(\phi) \\
+    m_I  &< \frac{Y(\phi)}{\epsilon(\phi)} \\
+  \end{align*}
+  % Let $W = \frac{K(\phi)Y(\phi)}{\epsilon(\phi)}$
+  Applying the rest of \ref{ub_lemma} gives us
+  \begin{align*}
+    |\partial(\bar M, A)| &\leq m_I \cdot K(\phi) \leq \frac{K(\phi)Y(\phi)}{\epsilon(\phi)} \\
+    |\bar M \cap A| &\leq m_I \cdot K(\phi) \leq \frac{K(\phi)Y(\phi)}{\epsilon(\phi)}
+  \end{align*}
+  as needed.
+  This ends the proof for Theorem \ref{main_bound}.
+\end{proof}
+
+So far we have computed an upper bound for a single basic formula $\phi$.
+
+To bound an arbitrary formula, write it as a boolean combination of basic formulas $\phi_i$ (via quantifier elimination)
+It suffices to bound vc-density for collection of formulas $\{\phi_i\}$ to obtain a bound for the original formula.
+
+In general work with a collection of basic formulas $\{\phi_i\}_{i \in I}$.
+The proof generalizes in a straightforward manner.
+Instead of $A^{|x|}$ we now work with $A^{|x|} \times I$ separating traces of different formulas.
+Formula with the largest quantity $Y(\phi)\frac{K(\phi)}{\epsilon(\phi)}$ contributes the most to the vc-density.
+Thus we have
+\begin{align*}
+  \Phi &= \{\phi_i\}_{i \in I} \\
+  \vc(\Phi) &\leq   \max_{i \in I} Y(\phi_i) \frac{K(\phi_i)}{\epsilon_{\phi_i}}
+\end{align*}

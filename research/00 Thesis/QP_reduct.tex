@@ -1,82 +1,8 @@
-\documentclass{amsart}
-
-\usepackage{../AMC_style}	
-\usepackage{../Research}
-\usepackage{../Thm}
-
-\usepackage{tikz}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc}
-
-
-\usepackage{enumitem}
-
-\usepackage{mathrsfs}
-\usepackage{pgfpages}
-\usepackage{setspace}
-
-\doublespacing
-%\usepackage[margin=.75in]{geometry}
-%\pgfpagesuselayout{2 on 1}
-
-\renewcommand{\AA}{\mathscr A}
-\newcommand{\BB}{\mathscr B}
-\newcommand{\DD}{\mathscr D}
-\newcommand{\II}{\mathscr I}
-\newcommand{\MM}{\mathscr M}
-
-\newcommand{\A}{\mathcal A}
-\newcommand{\B}{\mathcal B} 
-\renewcommand{\C}{\mathcal C}
-\newcommand{\D}{\mathcal D}
-\newcommand{\F}{\mathcal F}
-\newcommand{\G}{\mathcal G}
-\renewcommand{\H}{\mathcal H}
-\renewcommand{\LL}{\mathcal L}
-\newcommand{\LLA}{\mathcal L_{aff}}
-\newcommand{\LLM}{\mathcal L_{Mac}}
-\newcommand{\M}{\mathcal M}
-
-\newcommand{\U}{\mathcal U}	
-
-
-\newcommand{\curly}[1]{\left\{#1\right\}}
-\newcommand{\paren}[1]{\left(#1\right)}
-\newcommand{\abs}[1]{\left|#1\right|}
-
-\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
-
-\DeclareMathOperator{\Sg}{Sg}
-\DeclareMathOperator{\It}{Tp}
-\DeclareMathOperator{\Sub}{Sub}
-\DeclareMathOperator{\Ct}{Ct}
-\DeclareMathOperator{\vecspan}{span}
-\DeclareMathOperator{\val}{val}
-\DeclareMathOperator{\vval}{val}
-\DeclareMathOperator{\tval}{T-val}
-\DeclareMathOperator{\tfl}{T-fl}
-\DeclareMathOperator{\inti}{I}
-
-\newcommand{\defn}{\underline}
-\newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
-
-
-
-\title{vc-density in an additive reduct of the $P$-adic numbers}
-\author{Anton Bobkov}
-\email{bobkov@math.ucla.edu}
-
-\begin{document}
-
-\begin{abstract}
   Aschenbrenner et. al. computed a linear bound for the vc-density function in the field of $p$-adic numbers,
   but it is not known to be optimal.
   In this paper we investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
   use a cell decomposition result of Leenknegt to compute an optimal bound for that structure.
-\end{abstract}
 
-
-\maketitle
 
 VC-density was studied in model theory in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko
 as a natural notion of dimension for definable families of sets in NIP theories.
@@ -107,8 +33,6 @@ Throughout the paper, variables and tuples of elements will be simply denoted as
 We will occasionally write $\vec a$ instead of $a$ for a tuple in $\Q_p^n$ to emphasize it as an element of the $\Q_p$-vector space $\Q_p^n$.
 We denote the arity of a tuple $x$ of variables by $|x|$.
 Natural numbers are $\N = \curly{0, 1, \ldots}$.
-
-\input{../vc_intro.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -843,44 +767,4 @@ The paper \cite{density} implies that the reduct has VC 2 property.
 While there are techniques for showing that a structure has a given VC property,
 less is known about showing that a structure doesn't have a given VC property.
 Perhaps the simple structure of the $\LLA$-reduct can help understand this property better.
-
-
-\begin{thebibliography}{9}
-  
-\bibitem{density}
-  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
-  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
-\bibitem{reduct}
-  E. Leenknegt. \textit{Reducts of $p$-adically closed fields}, Archive for Mathematical Logic, 53(3):285-306, 2014
-\bibitem{ash7}
-  P. Assouad, \textit{Densit´e et dimension}, Ann. Inst. Fourier (Grenoble) 33 (1983), no. 3, 233–282.
-\bibitem{ash8}
-  P. Assouad, \textit{Observations sur les classes de Vapnik-Cervonenkis et la dimension combinatoire de Blei},
-  in: Seminaire d’Analyse Harmonique, 1983–1984, pp. 92–112, Publications Math´ematiques
-  d’Orsay, vol. 85-2, Universit´e de Paris-Sud, D´epartement de Math´ematiques, Orsay, 1985.
-\bibitem{sauer}
-  N. Sauer, \textit{On the density of families of sets}, J. Combinatorial Theory Ser. A 13 (1972), 145–147.
-\bibitem{shelah}
-  S. Shelah, \textit{A combinatorial problem; stability and order for models and theories in infinitary languages},
-  Pacific J. Math. 41 (1972), 247–261.
-\end{thebibliography}
-
-
-
-
-
-
-
-
-
-
-\end{document}
-
-
-
-
-
-
-
 
