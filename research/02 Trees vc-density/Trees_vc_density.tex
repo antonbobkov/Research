@@ -232,7 +232,7 @@ Thus $\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with par
 We note that the size of the type space $|S^n_{\BT, |y|}|$ can be bounded uniformly:
 
 \begin{Definition} \label{def_type_count}
-  Fix a (finite relational) language $\LL_B$. Let $N = N(n, m, \LL_B)$ be smallest integer such that for any structure $\BT$ in $\LL_B$ we have $|S^n_{\BT, m}| \leq N$. This integer exists as there is a finite number (up to equivalence) of possible formulas of complexity $\leq n$ with $m$ free variables.
+  Fix a (finite relational) language $\LL_B$. Let $N = N(n, m, \LL_B)$ be smallest integer such that for any structure $\BT$ in $\LL_B$ we have $|S^n_{\BT, m}| \leq N$. This integer exists as there is a finite number (up to logical equivalence) of possible formulas of complexity $\leq n$ with $m$ free variables.
   Note that $N(n, m, \LL_B)$ is increasing in all variables:
   \begin{align*}
     n \leq n', m \leq m', \LL_B \subseteq \LL_B' \Rightarrow N(n, m, \LL_B) \leq N(n', m', \LL_B')
@@ -251,7 +251,7 @@ First, we describe several constructions of proper subdivisions that are needed 
   \end{align*}
 \end{Definition}
 \begin{Definition}
-  Given an element $a$ of the tree we call the sets fo all the elements above $a$, i.e. the set $\{x \mid x \geq a\}$,
+  Given an element $a$ of the tree $\TT$ we call the set of all elements above $a$, i.e. the set $T^{> a} = \{x \mid x > a\}$,
   the \defn{closed cone} above $a$.
   Connected components of that cone can be thought of as \defn{open cones} above $a$.
   With that interpretation in mind, the notation $E_a(b, c)$ means that $b$ and $c$ are in the same open cone above $a$. More formally:
@@ -260,10 +260,13 @@ First, we describe several constructions of proper subdivisions that are needed 
   \end{align*}
 \end{Definition}
 
-Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\} = \{\leq, \vec C\}$.
-In the following four definitions structures denoted by $\BT$ are going to be in the same language $\LL_B = \LL \cup \{U\}$ with $U$ a unary predicate.
-It is not always necessary to have this predicate but we keep it for the sake of uniformity.
-Structures denoted by $\AT$ will have different languages $\LL_A$ (those are not as important in later applications).
+Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\}$. Put  $\vec C = \curly{C_1, \ldots C_n}$.
+Given $A \subseteq T$ we put $\vec C \cap A = \curly{C_1 \cap A, \ldots, C_n \cap A}$.
+In that case $(A, \leq, \vec C \cap A)$ is a substructure of $\TT$ (here as usual by abuse of notation $\leq$ denotes the restriction of the ordering $\leq$ of $T$ to $A$.)
+For the following four definitions fix $\LL_B = \LL \cup \{U\}$ be an expansion of language $\LL$ by a unary predicate.
+We refer to the figures below for illustrations of these definitions.
+% It is not always necessary to have this predicate but we keep it for the sake of uniformity.
+% Structures denoted by $\AT$ in defintion below will have different languages $\LL_A$ (those are not as important in later applications).
 % All the colors $\vec C$ are interpreted by colors in $\TT$ by restriction.
 
 \input {vc-trees-all_figures}
@@ -273,14 +276,14 @@ Structures denoted by $\AT$ will have different languages $\LL_A$ (those are not
   \begin{align*}
     B &= \{b \in T \mid E_{c_1}(c_2, b) \wedge \neg(b \geq c_2)\}, \\
     A &= T - B, \\
-    S_1 &= \{t \in T \mid t < c_1\}, \\
-    S_2 &= \{t \in T \mid t < c_2\}, \\
-    S_B &= S_2 - S_1, \\
-    T_A &= \{t \in T \mid c_2 \leq t\}.
+    T^{<c_1} &= \{t \in T \mid t < c_1\}, \\
+    T^{<c_2} &= \{t \in T \mid t < c_2\}, \\
+    S_B &= T^{<c_2} - T^{<c_1}, \\
+    T^{\geq c_2} &= \{t \in T \mid c_2 \leq t\}.
   \end{align*}
-  Define structures $\AT^{c_1}_{c_2} = (A, \leq, \vec C \cap A, S_1, T_A)$
-  where $\vec C \cap A = \curly{C_1 \cap A, \ldots, C_n \cap A}$
-  and $\BT^{c_1}_{c_2} = (B, \leq, \vec C \cap B, S_B)$ where $\LL_A$ is an expansion of $\LL$ by two unary predicate symbols (and $\LL_B$ as defined above). Note that $c_1, c_2 \notin B$.
+  Define structures $\AT^{c_1}_{c_2} = (A, \leq, \vec C \cap A, T^{<c_1}, T^{\geq c_2})$ in a language expanding $\LL$ by two unary predicate symbols and
+  $\BT^{c_1}_{c_2} = (B, \leq, \vec C \cap B, S_B)$ with language $\LL_B$ (as defined above).
+  Note that $c_1, c_2 \notin B$.
 \end{Definition}
 
 
@@ -289,9 +292,10 @@ Structures denoted by $\AT$ will have different languages $\LL_A$ (those are not
   \begin{align*}
     B &= \{b \in T \mid \neg(b \geq c) \wedge E(b,c)\}, \\
     A &= T - B, \\
-    S_1 &= \{t \in T \mid t < c\}.
+    T^{<c_1} &= \{t \in T \mid t < c\}.
   \end{align*}
-  Define structures $\AT_{c} = (A, \leq, \vec C \cap A)$ and $\BT_{c} = (B, \leq, \vec C\cap B, S_1)$ where $\LL_A = \LL$ (and $\LL_B$ as defined above). Note that $c \notin B$. (cf example \ref{ex_cone}).
+  Define structures $\AT_{c} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{c} = (B, \leq, \vec C\cap B, T^{<c_1})$ with language $\LL_B$.
+  Note that $c \notin B$. (cf. example \ref{ex_cone}).
 \end{Definition}
 
 \begin{Definition}
@@ -299,9 +303,10 @@ Structures denoted by $\AT$ will have different languages $\LL_A$ (those are not
   \begin{align*}
     B &= \{b \in T \mid (b > c) \text{ and for all $s \in S$ we have } \neg E_c(s, b)\}, \\
     A &= T - B, \\
-    S_1 &= \{t \in T \mid t \leq c\}.
+    T^{\leq c_1} &= \{t \in T \mid t \leq c\}.
   \end{align*}
-  Define structures $\AT^{c}_{S} = (A, \leq, \vec C\cap A, S_1)$ and $\BT^{c}_{S} = (B, \leq, \vec C\cap B, B)$ where $\LL_A$ is an expansion of $\LL$ by a single unary predicate (and $U \in \LL_B$ vacuously interpreted by $B$). Note that $c \notin B$ and $S \cap B = \emptyset$.
+  Define structures $\AT^{c}_{S} = (A, \leq, \vec C\cap A, T^{\leq c_1})$ and $\BT^{c}_{S} = (B, \leq, \vec C\cap B, B)$ both with language $\LL_B$.
+  Note that $c \notin B$ and $S \cap B = \emptyset$.
 \end{Definition}
 
 \begin{Definition}
@@ -310,8 +315,13 @@ Structures denoted by $\AT$ will have different languages $\LL_A$ (those are not
     B &= \{b \in T \mid \text{ for all $s \in S$ we have } \neg E(s, b)\}, \\
     A &= T - B.
   \end{align*}
-  Define structures $\AT_{S} = (A, \leq)$ and $\BT_{S} = (B, \leq, \vec C\cap B, B)$ where $\LL_A = \LL$ (and $U \in \LL_B$ vacuously interpreted by $B$). Note that $S \cap B = \emptyset$. (cf. example \ref{ex_disc})
+  Define structures $\AT_{S} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{S} = (B, \leq, \vec C\cap B, B)$ with language $\LL_B$.
+  (cf. example \ref{ex_disc})
 \end{Definition}
+
+Note that we forced the structures $\BT^{c_1}_{c_2}, \BT_c, \BT^{c}_{S}, \BT_{S}$ to have the same language $\LL_B$.
+This is done for uniformity to simplify lemma \ref{lm_partition_bound}.
+By comparison, the corresponding $\AT$ structures have different languages.
 
 \begin{Lemma} \label{subdivide}
   The pairs of structures defined above are all proper subdivisions of $\TT$.
@@ -341,12 +351,12 @@ Structures denoted by $\AT$ will have different languages $\LL_A$ (those are not
   
   \begin{itemize}
   \item It is impossible that $a_i = b_j$ as they come from disjoint sets.
-  \item Suppose $a_i < b_j$. This forces $a_i \in S_1$ thus $a_i' \in S_1$ and $a_i' < b_j'$.
-  \item Suppose $a_i > b_j$. This forces $b_j \in S_B$ and $a \in T_A$, thus $b_j' \in S_B$ and $a_i' \in T_A$, so $a_i' > b_j'$.
+  \item Suppose $a_i < b_j$. This forces $a_i \in T^{<c_1}$ thus $a_i' \in T^{<c_1}$ and $a_i' < b_j'$.
+  \item Suppose $a_i > b_j$. This forces $b_j \in S_B$ and $a \in T^{\geq c_2}$, thus $b_j' \in S_B$ and $a_i' \in T^{\geq c_2}$, so $a_i' > b_j'$.
   \item Suppose $a_i$ and $b_j$ are incomparable. Two cases are possible:
     \begin{itemize}
-    \item $b_j \notin S_B$ and $a_i \in T_A$. Then $b_j' \notin S_B$ and $a_i' \in T_A$ making $a_i', b_j'$ incomparable.
-    \item $b_j \in S_B$, $a_i \notin T_A$, $a_i \notin S_1$. Similarly this forces $a_i', b_j'$ to be incomparable.
+    \item $b_j \notin S_B$ and $a_i \in T^{\geq c_2}$. Then $b_j' \notin S_B$ and $a_i' \in T^{\geq c_2}$ making $a_i', b_j'$ incomparable.
+    \item $b_j \in S_B$, $a_i \notin T^{\geq c_2}$, $a_i \notin T^{<c_1}$. Similarly this forces $a_i', b_j'$ to be incomparable.
     \end{itemize}
   \end{itemize}
   Also we need to check that $ab$ has the same colors as $a'b'$. But that is immediate as having the same color in a substructure means having the same color in the tree.
@@ -372,7 +382,7 @@ First, we generalize Corollary \ref{cor_type_count}. (This is required for compu
   \begin{align*}
     B = B_1^{i_1} \times B_2^{i_2} \times \ldots \times B_n^{i_n} \text { with } i_1 + i_2 + \ldots + i_n = |y|.
   \end{align*}
-  (some of the indeces can be zero). Then we have the following bound:
+  (some of the indices can be zero). Then we have the following bound:
   \begin{align*}
     \phi(A^{|x|}, B) \leq N^{|y|}.
   \end{align*}
