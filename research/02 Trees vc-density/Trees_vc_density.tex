@@ -37,6 +37,7 @@
 \renewcommand{\LL}{\mathcal L}
 \newcommand{\LLA}{\mathcal L_{aff}}
 \newcommand{\LLM}{\mathcal L_{Mac}}
+\newcommand{\LLU}{\LL^*}
 \newcommand{\M}{\mathcal M}
 
 \newcommand{\U}{\mathcal U}	
@@ -69,19 +70,20 @@
 % more info
 
 \begin{abstract}
-  We show that for the theory of infinite trees we have $\vc(n) = n$ for all $n$.
+  We show that in the theory of infinite trees the vc-function is optimal.
   This generalizes a result of Simon showing that the trees are dp-minimal. 
 \end{abstract}
 
 \maketitle
 
-VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In an NIP theory we can define a vc-function
+VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
+In a complete NIP theory $T$ we can define the vc-function
 
 \begin{align*}
-  \vc : \N \arr \R \cup \curly{\infty},
+  \vc^T = \vc : \N \arr \R \cup \curly{\infty}
 \end{align*}
 
-where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-dimensional space
+where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold Cartesian power of the underlying set of a model of $T$
 (see \ref{vc_fn_def} below for a precise definition of $\vc^T$).
 The simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e., having the smallest possible dp-rank. It is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$
 (see \cite{density}, diagram on pg. 41).
@@ -251,7 +253,7 @@ First, we describe several constructions of proper subdivisions that are needed 
   \end{align*}
 \end{Definition}
 \begin{Definition}
-  Given an element $a$ of the tree $\TT$ we call the set of all elements above $a$, i.e. the set $T^{> a} = \{x \mid x > a\}$,
+  Given an element $a$ of the tree $\TT$ we call the set of all elements above $a$, i.e., the set $T^{> a} = \{x \mid x > a\}$,
   the \defn{closed cone} above $a$.
   Connected components of that cone can be thought of as \defn{open cones} above $a$.
   With that interpretation in mind, the notation $E_a(b, c)$ means that $b$ and $c$ are in the same open cone above $a$. More formally:
@@ -263,7 +265,7 @@ First, we describe several constructions of proper subdivisions that are needed 
 Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\}$. Put  $\vec C = \curly{C_1, \ldots C_n}$.
 Given $A \subseteq T$ we put $\vec C \cap A = \curly{C_1 \cap A, \ldots, C_n \cap A}$.
 In that case $(A, \leq, \vec C \cap A)$ is a substructure of $\TT$ (here as usual by abuse of notation $\leq$ denotes the restriction of the ordering $\leq$ of $T$ to $A$.)
-For the following four definitions fix $\LL_B = \LL \cup \{U\}$ be an expansion of language $\LL$ by a unary predicate.
+For the following four definitions fix $\LLU = \LL \cup \{U\}$ be an expansion of language $\LL$ by a unary predicate.
 We refer to the figures below for illustrations of these definitions.
 % It is not always necessary to have this predicate but we keep it for the sake of uniformity.
 % Structures denoted by $\AT$ in defintion below will have different languages $\LL_A$ (those are not as important in later applications).
@@ -282,7 +284,7 @@ We refer to the figures below for illustrations of these definitions.
     T^{\geq c_2} &= \{t \in T \mid c_2 \leq t\}.
   \end{align*}
   Define structures $\AT^{c_1}_{c_2} = (A, \leq, \vec C \cap A, T^{<c_1}, T^{\geq c_2})$ in a language expanding $\LL$ by two unary predicate symbols and
-  $\BT^{c_1}_{c_2} = (B, \leq, \vec C \cap B, S_B)$ with language $\LL_B$ (as defined above).
+  $\BT^{c_1}_{c_2} = (B, \leq, \vec C \cap B, S_B)$ with language $\LLU$ (as defined above).
   Note that $c_1, c_2 \notin B$.
 \end{Definition}
 
@@ -294,7 +296,7 @@ We refer to the figures below for illustrations of these definitions.
     A &= T - B, \\
     T^{<c_1} &= \{t \in T \mid t < c\}.
   \end{align*}
-  Define structures $\AT_{c} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{c} = (B, \leq, \vec C\cap B, T^{<c_1})$ with language $\LL_B$.
+  Define structures $\AT_{c} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{c} = (B, \leq, \vec C\cap B, T^{<c_1})$ with language $\LLU$.
   Note that $c \notin B$. (cf. example \ref{ex_cone}).
 \end{Definition}
 
@@ -305,7 +307,7 @@ We refer to the figures below for illustrations of these definitions.
     A &= T - B, \\
     T^{\leq c_1} &= \{t \in T \mid t \leq c\}.
   \end{align*}
-  Define structures $\AT^{c}_{S} = (A, \leq, \vec C\cap A, T^{\leq c_1})$ and $\BT^{c}_{S} = (B, \leq, \vec C\cap B, B)$ both with language $\LL_B$.
+  Define structures $\AT^{c}_{S} = (A, \leq, \vec C\cap A, T^{\leq c_1})$ and $\BT^{c}_{S} = (B, \leq, \vec C\cap B, B)$ both with language $\LLU$.
   Note that $c \notin B$ and $S \cap B = \emptyset$.
 \end{Definition}
 
@@ -315,11 +317,11 @@ We refer to the figures below for illustrations of these definitions.
     B &= \{b \in T \mid \text{ for all $s \in S$ we have } \neg E(s, b)\}, \\
     A &= T - B.
   \end{align*}
-  Define structures $\AT_{S} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{S} = (B, \leq, \vec C\cap B, B)$ with language $\LL_B$.
+  Define structures $\AT_{S} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{S} = (B, \leq, \vec C\cap B, B)$ with language $\LLU$.
   (cf. example \ref{ex_disc})
 \end{Definition}
 
-Note that we forced the structures $\BT^{c_1}_{c_2}, \BT_c, \BT^{c}_{S}, \BT_{S}$ to have the same language $\LL_B$.
+Note that we forced the structures $\BT^{c_1}_{c_2}, \BT_c, \BT^{c}_{S}, \BT_{S}$ to have the same language $\LLU$.
 This is done for uniformity to simplify lemma \ref{lm_partition_bound}.
 By comparison, the corresponding $\AT$ structures have different languages.
 
@@ -366,22 +368,24 @@ By comparison, the corresponding $\AT$ structures have different languages.
 
 The basic idea for the proof is as follows.
 Suppose we have a formula with $q$ parameters over a parameter set of size $n$.
-We are able to split our parameter space into $O(n)$ many partitions. Each of $q$ parameters can come from any of those $O(n)$ partitions giving us $O(n)^q$ many choices for parameter configuration. When every parameter is coming from a fixed partition the number of definable sets is constant and in fact is uniformly bounded above by some $N$. This gives us at most $N \cdot O(n)^q$ possibilities for different definable sets.
+We are able to split our parameter space into a partition with $O(n)$ many components.
+Each of the $q$ parameters can come from any of those $O(n)$ components giving us $O(n)^q$ many choices for parameter configuration.
+When every parameter is coming from a fixed component the number of definable sets is constant and in fact is uniformly bounded above by some $N$.
+This gives us at most $N \cdot O(n)^q$ possibilities for different definable sets.
 
-First, we generalize Corollary \ref{cor_type_count}. (This is required for computing vc-density for formulas $\phi(x, y)$ with $|y| > 1$).
+First, we generalize Corollary \ref{cor_type_count}.
+(This is required for computing vc-density of formulas $\phi(x, y)$ with $|y| > 1$).
 
 \begin{Lemma} \label{lm_partition_bound}
   Consider a finite collection $(\AT_i, \BT_i)_{i \leq n}$ satisfying the following properties:
   \begin{itemize}
   \item $(\AT_i, \BT_i)$ is either a proper subdivision of $\TT$ or $A_i = T$ and $B_i = \{b_i\}$,
-  \item all $\BT_i$ have the same language $\LL_B$,
-  \item sets $\curly{B_i}_{i \leq n}$ are pairwise disjoint.
+  \item all $\BT_i$ have the same language $\LLU$, and 
+  \item the sets $\curly{B_i}_{i \leq n}$ are pairwise disjoint.
   \end{itemize}
   Let $A = \bigcap_{i \in I} A_i$.
-  Fix a formula $\phi(x, y)$ of complexity $m$ . Let $N = N(m, |y|, \LL_B)$ be as in Definition \ref{def_type_count}. Consider any $B \subseteq T^{|y|}$ of the form
-  \begin{align*}
-    B = B_1^{i_1} \times B_2^{i_2} \times \ldots \times B_n^{i_n} \text { with } i_1 + i_2 + \ldots + i_n = |y|.
-  \end{align*}
+  Fix a formula $\phi(x, y)$ of complexity $m$ . Let $N = N(m, |y|, \LLU)$ be as in Definition \ref{def_type_count}.
+  Let $B = B_1^{i_1} \times B_2^{i_2} \times \ldots \times B_n^{i_n} \subseteq T^{|y|}$ where $i_1 + i_2 + \ldots + i_n = |y|$
   (some of the indices can be zero). Then we have the following bound:
   \begin{align*}
     \phi(A^{|x|}, B) \leq N^{|y|}.
@@ -404,8 +408,8 @@ First, we generalize Corollary \ref{cor_type_count}. (This is required for compu
     \end{align*}
   \end{Claim}
   \begin{proof}
-    Define $\bar b_i = (b_1, \ldots, b_i, b_{i+1}', \ldots, b_n') \in B$ for $i \in [0..n]$.
-    (That is, a tuple where first $i$ elements are without prime, and elements after that are with a prime.)
+    Define $\bar b_i = (b_1, \ldots, b_i, b_{i+1}', \ldots, b_n') \in B$ for $i = 0, \ldots, n$.
+    %(That is, a tuple where first $i$ elements are without prime, and elements after that are with a prime.)
     We have $\phi(A^{|x|}, \bar b_i) \iff \phi(A^{|x|}, \bar b_{i+1})$ as either $(\AT_{i+1}, \BT_{i+1})$ is $m$-proper
     or $\BT_{i+1}$ is a singleton, and the implication is trivial.
     (Notice that $b_i \in \AT_j$ for $j \neq i$ by disjointness assumption.)
@@ -417,7 +421,7 @@ First, we generalize Corollary \ref{cor_type_count}. (This is required for compu
   \end{align*}
   Now for each type space we have an inequality
   \begin{align*}
-    |S^m_{\BT_j, i_j}| \leq N(m, i_j, \LL_B) \leq N(m, |y|, \LL_B) \leq N
+    |S^m_{\BT_j, i_j}| \leq N(m, i_j, \LLU) \leq N(m, |y|, \LLU) \leq N
   \end{align*}
   (For singletons $|S^m_{\BT_j, i_j}| = 1 \leq N$). Only non-zero indices contribute to the product and there are at most $|y|$ of those (by the equality $i_1 + i_2 + \ldots + i_n = |y|$). Thus we have
   \begin{align*}
@@ -426,14 +430,16 @@ First, we generalize Corollary \ref{cor_type_count}. (This is required for compu
   as needed.
 \end{proof}
 
-For subdivisions to work out properly, we will need to work with subsets closed under meets. We observe that the closure under meets doesn't add too many new elements.
+For subdivisions to work out properly, we will need to pass to subsets closed under meets. We observe that the closure under meets doesn't add too many new elements.
 
 % MAYBE: write a more detailed proof
 \begin{Lemma} \label{lm_meet}
   Suppose $S \subseteq T$ is a finite subset of size $n \geq 1$ in a meet tree and $S'$ is its closure under meets. Then $|S'| \leq 2n - 1$.
 \end{Lemma}
 \begin{proof}
-  We can partition $S$ into connected components and prove the result separately for each component. Thus we may assume all elements of $S$ lie in the same connected component. We prove the claim by induction on $n$. The base case $n = 1$ is clear. Suppose we have $S$ of size $k$ with closure of size at most $2k - 1$. Take a new point $s$, and look at its meets with all the elements of $S$. Pick the smallest one, $s'$. Then $S \cup \{s, s'\}$ is closed under meets.
+  We can partition $S$ into connected components and prove the result separately for each component. Thus we may assume all elements of $S$ lie in the same connected component. We prove the claim by induction on $n$. The base case $n = 1$ is clear. Suppose we have $S$ of size $k$ with closure of size at most $2k - 1$. Take a new point $s$, and look at its meets with all the elements of $S$.
+  Those are linearly ordered, so we can pick the smallest one, $s'$.
+  Then $S \cup \{s, s'\}$ is closed under meets.
 \end{proof}
 
 Putting all of those results together we are able to compute the $\vc$-density of formulas in meet trees.
@@ -445,22 +451,33 @@ Putting all of those results together we are able to compute the $\vc$-density o
 \begin{proof}
   Pick a finite subset of $S_0 \subset T^p$ of size $n$. Let $S_1 \subset T$ consist of the components of the elements of $S_0$. Let $S \subset T$ be the closure of $S_1$ under meets. Using Lemma \ref{lm_meet} we have $|S| \leq 2|S_1| \leq 2p|S_0| = 2pn = O(n)$. We have $S_0 \subseteq S^p$, so $|\phi(S_0, T^q)| \leq |\phi(S^p, T^q)|$. Thus it is enough to show $|\phi(S^p, T^q)| = O(n^q)$.
   
-  Label $S = \{c_i\}_{i \in I}$ with $|I| \leq 2pn$. For every $c_i$ we construct two partitions in the following way. We have that $c_i$ is either minimal in $S$ or it has a predecessor in $S$ (greatest element less than $c$). If it is minimal, construct $(\AT_{c_i}, \BT_{c_i})$. If there is a predecessor $p$, construct $(\AT^p_{c_i}, \BT^p_{c_i})$. For the second subdivision let $G$ be all the elements in $S$ greater than $c_i$ and construct $(\AT^c_G, \BT^c_G)$. So far we have constructed two subdivisions for every $i \in I$. Additionally construct $(\AT_S, \BT_S)$. We end up with a finite collection of proper subdivisons $(\AT_j, \BT_j)_{j \in J}$ with $|J| = 2|I| + 1$. Before we proceed, we note the following two lemmas describing our partitions.
+  Label $S = \{c_i\}_{i \in I}$ with $|I| \leq 2pn$. For every $c_i$ we construct two subdivisions in the following way. We have that $c_i$ is either minimal in $S$ or it has a predecessor in $S$ (greatest element less than $c$). If it is minimal, construct $(\AT_{c_i}, \BT_{c_i})$. If there is a predecessor $p$, construct $(\AT^p_{c_i}, \BT^p_{c_i})$. For the second subdivision let $G$ be all the elements in $S$ greater than $c_i$ and construct $(\AT^c_G, \BT^c_G)$. So far we have constructed two subdivisions for every $i \in I$. Additionally construct $(\AT_S, \BT_S)$. We end up with a finite collection of proper subdivisons $(\AT_j, \BT_j)_{j \in J}$ with $|J| = 2|I| + 1$. Before we proceed, we note the following two lemmas describing our subdivisions.
   
   \begin{Lemma}
     For all $j \in J$ we have $S \subseteq A_j$. Thus $S \subseteq \bigcap_{j \in J} A_j$ and $S^p \subseteq \bigcap_{j \in J} (A_j)^p$. 
   \end{Lemma}
   
   \begin{proof}
-    Check this for each possible choice of partition. Cases for partitions of the type $\AT_S, \AT^c_G, \AT_c$ are easy. Suppose we have a partition $(\AT, \BT) = (\AT^{c_1}_{c_2}, \BT^{c_1}_{c_2})$. We need to show that $B \cap S = \emptyset$. By construction we have $c_1, c_2 \notin B$. Suppose we have some other $c \in S$ with $c \in B$. We have $E_{c_1}(c_2, c)$ i.e. there is some $b$ such that $(b > c_1)$, $(b \leq c_2)$ and $(b \leq c)$. Consider the meet $(c \wedge c_2)$. We have $(c \wedge c_2) \geq b > c_1$. Also as $\neg (c \geq c_2)$ we have $(c \wedge c_2) < c_2$. To summarize: $c_2 > (c \wedge c_2) > c_1$. But this contradicts our construction as $S$ is closed under meets, so $(c \wedge c_2) \in S$ and $c_1$ is supposed to be a predecessor of $c_2$ in $S$.
+    Check this for each possible choice of subdivision. Cases for subdivisions of the type $\AT_S, \AT^c_G, \AT_c$ are easy.
+    Suppose we have a subdivision $(\AT, \BT) = (\AT^{c_1}_{c_2}, \BT^{c_1}_{c_2})$.
+    We need to show that $B \cap S = \emptyset$.
+    By construction we have $c_1, c_2 \notin B$.
+    Suppose we have some other $c \in S$ with $c \in B$.
+    We have $E_{c_1}(c_2, c)$, i.e., there is some $b$ such that $b > c_1$, $b \leq c_2$ and $b \leq c$.
+    Consider the meet $c \wedge c_2$.
+    We have $c \wedge c_2 \geq b > c_1$.
+    Also as $\neg (c \geq c_2)$ we have $c \wedge c_2 < c_2$.
+    To summarize: $c_2 > c \wedge c_2 > c_1$.
+    But this contradicts our construction as $S$ is closed under meets,
+    so $c \wedge c_2 \in S$ and $c_1$ is supposed to be a predecessor of $c_2$ in $S$.
   \end{proof}
   
   \begin{Lemma}
-    $\{B_j\}_{j \in J}$ is a disjoint partition of $T - S$ i.e. $T = \bigsqcup_{j \in J} B_j \sqcup S$
+    $\{B_j\}_{j \in J}$ is a partition of $T - S$, i.e., $T = \bigsqcup_{j \in J} B_j \sqcup S$
   \end{Lemma}
   
   \begin{proof}
-    This more or less follows from the choice of partitions. Pick any $b \in S - T$. Take all the elements in $S$ greater than $b$ and take the minimal one $a$. Take all the elements in $S$ less than $b$ and take the maximal one $c$ (possible as $S$ is closed under meets). Also take all the elements in $S$ incomparable to $b$ and denote them $G$. If both $a$ and $c$ exist we have $b \in \BT^a_c$. If only the upper bound exists we have $b \in \BT^a_G$. If only the lower bound exists we have $b \in \BT_c$. If neither exists we have $b \in \BT_G$.
+    This more or less follows from the choice of subdivisions. Pick any $b \in S - T$. Take all the elements in $S$ greater than $b$ and take the minimal one $a$. Take all the elements in $S$ less than $b$ and take the maximal one $c$ (possible as $S$ is closed under meets). Also take all the elements in $S$ incomparable to $b$ and denote them $G$. If both $a$ and $c$ exist we have $b \in \BT^a_c$. If only the upper bound exists we have $b \in \BT^a_G$. If only the lower bound exists we have $b \in \BT_c$. If neither exists we have $b \in \BT_G$.
   \end{proof}
   
   \begin{Note}
@@ -480,9 +497,9 @@ Putting all of those results together we are able to compute the $\vc$-density o
       &\leq (4pn + 1)N + 2pn = (4pN + 2p)n + N = O(n)
     \end{align*}
   \end{Note}
-  Basic idea for the general case $q \geq 1$ is that we have $q$ parameters and $|J| = O(n)$ many partitions to pick each parameter from giving us $|J|^q = O(n^q)$ choices for the parameter configuration, each giving a uniformly constant number of definable subsets of $S$. (If every parameter is picked from a fixed partition, Lemma \ref{lm_partition_bound} provides a uniform bound). This yields $\vc(\phi) \leq q$ as needed. The rest of the proof is stating this idea formally.
+  Basic idea for the general case $q \geq 1$ is that we have $q$ parameters and $|J| = O(n)$ many components to pick each parameter from giving us $|J|^q = O(n^q)$ choices for the parameter configuration, each giving a uniformly constant number of definable subsets of $S$. (If every parameter is picked from a fixed component, Lemma \ref{lm_partition_bound} provides a uniform bound). This yields $\vc(\phi) \leq q$ as needed. The rest of the proof is stating this idea formally.
   
-  First, we extend our collection of subdivisions $(\AT_j, \BT_j)_{j \in J}$ by the following singleton sets. For each $c_i \in S$ let $B_i = \{c_i\}$ and $A_i = T$ and add $(\AT_i, \BT_i)$ to our collection with $\LL_B$ the language of $B_i$ interpreted arbitrarily. We end up with a new collection $(\AT_k, \BT_k)_{k \in K}$ indexed by some $K$ with $|K| = |J| + |I|$ (we added $|S|$ new pairs). Now $\curly{B_k}_{k \in K}$ partitions $T$, so $T = \bigsqcup_{k \in K} B_k$ and $S = \bigcap_{j \in J} A_j = \bigcap_{k \in K} A_k$. For $(k_1, k_2, \ldots k_q) = \vec k \in K^q$ denote 
+  First, we extend our collection of subdivisions $(\AT_j, \BT_j)_{j \in J}$ by the following singleton sets. For each $c_i \in S$ let $B_i = \{c_i\}$ and $A_i = T$ and add $(\AT_i, \BT_i)$ to our collection with $\LLU$ the language of $B_i$ interpreted arbitrarily. We end up with a new collection $(\AT_k, \BT_k)_{k \in K}$ indexed by some $K$ with $|K| = |J| + |I|$ (we added $|S|$ new pairs). Now $\curly{B_k}_{k \in K}$ partitions $T$, so $T = \bigsqcup_{k \in K} B_k$ and $S = \bigcap_{j \in J} A_j = \bigcap_{k \in K} A_k$. For $(k_1, k_2, \ldots k_q) = \vec k \in K^q$ denote 
   \begin{align*}
     B_{\vec k} = B_{k_1} \times B_{k_2} \times \ldots \times B_{k_q}
   \end{align*}
@@ -527,10 +544,10 @@ It is also not known whether trees have VC 1 property (see \cite{density} 5.2 fo
 Our techniques can be used to show that VC 2 property holds but this doesn't give the optimal vc-function.
 
 One can also try to apply similar techniques to more general classes of partially ordered sets.
-For example, vc-density values are not known for lattices.
-Similarly, dropping the order, one can look at nicely behaved families of graphs, such as planar graphs or flat graphs.
-Those are known to be dp-minimal, so one would expect a simple vc-function.
-It is this author's hope that the techniques developed in this paper can be adapted to yield fruitful results for a more general class of structures.
+For example, vc-density values are not known for lattices as well as whehter lattices are dp-minimal.
+Similarly, dropping the order, one can look at nicely behaved families of graphs, such as planar graphs or flat graphs (see \ref{stable_graphs}).
+Those are known to be dp-minimal (see \ref{thesis}), so one would expect a simple vc-function.
+It is this author's hope that the techniques developed in this paper can be adapted to yield fruitful results for such a general class of structures.
 
 \begin{thebibliography}{9}
 
@@ -539,16 +556,20 @@ It is this author's hope that the techniques developed in this paper can be adap
   \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
   Trans. Amer. Math. Soc. 368 (2016), 5889-5949
 
-\bibitem{simon_dp_min}
-  P. Simon,
-  \textit{On dp-minimal ordered structures},
-  J. Symbolic Logic 76 (2011), no. 2, 448-460
+\bibitem{thesis} A. Bobkov, \textit{VC-density computations in model theoretic structures}, PhD Thesis
 
 \bibitem{parigot_trees}
   Michel Parigot.
   Th\'eories d'arbres.
   \textit{Journal of Symbolic Logic}, 47, 1982, 841-853
+
+\bibitem{stable_graphs}
+  Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
   
+\bibitem{simon_dp_min}
+  P. Simon,
+  \textit{On dp-minimal ordered structures},
+  J. Symbolic Logic 76 (2011), no. 2, 448-460
   
 \end{thebibliography}
 

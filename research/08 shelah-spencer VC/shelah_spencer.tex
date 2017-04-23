@@ -5,7 +5,7 @@
 \usepackage{../Thm}
 
 \usepackage{mathrsfs}
-\usepackage{pgfpages}
+\usepackage{pgfpages} 
 \usepackage{setspace}
 
 \doublespacing
@@ -58,20 +58,24 @@
 
 \begin{abstract}
   We investigate vc-density in Shelah-Spencer graphs.
-  We provide an upper bound on formula-by-formula basis and show that there isn't a uniform lower bound forcing $\vc(n) = \infty$.
+  We provide an upper bound on formula-by-formula basis and show that there isn't a uniform lower bound forcing the vc-function to be infinite.
 \end{abstract}
 
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories. In an NIP theory we can define a vc-function
+VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
+In a complete NIP theory $T$ we can define the vc-function
 
 \begin{align*}
-	\vc : \N \arr \N
+  \vc^T = \vc : \N \arr \R \cup \curly{\infty}
 \end{align*}
 
-Where $\vc(n)$ measures the worst-case complexity of definable sets in an $n$-dimensional space. Simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e. having the smallest possible dp-rank. In general, it is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$.
+where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold Cartesian power of the underlying set of a model of $T$
+(see \ref{vc_fn_def} below for a precise definition of $\vc^T$).
+The simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e., having the smallest possible dp-rank. It is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$
+(see \cite{density}, diagram on pg. 41).
 
 In this paper, we investigate vc-density of definable sets in Shelah-Spencer graphs.
 In our description of Shelah-Spencer graphs we follow closely the treatment in \cite{laskowski}.
