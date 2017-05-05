@@ -26,6 +26,7 @@
 \DeclareMathOperator{\diag}{diag}
 
 \newcommand{\DB}{\mathbb D}
+\newcommand{\ppp}{\partial}
 
 \newcommand{\A}{A}
 \newcommand{\B}{B}
@@ -199,6 +200,12 @@ We will require the following lemmas from \cite{laskowski}:
   Then for any integer $S$ there exists an embedding $f \colon A \arr \G$ such that $f(A)$ is $S$-strong in $\G$.
 \end{Lemma}
     
+\begin{Lemma} \label{las_closure} [See 3.8 in \cite{laskowski}]
+  For all $S > 0$ there exists $M = M(S, \alpha) \in \N$ with the following property.
+  Suppose $A \subseteq \G$ where $\G$ is a model of $S_\alpha$.
+  Then there exists $B$ with $A \subseteq B \subseteq \G$ such that $B$ is $S$-strong in $\GG$ and $|B| \leq M|A|$.
+\end{Lemma}
+
 We conclude this section by stating a couple of technical lemmas that will be useful in our proofs later.
 
 \begin{Lemma} \label{minimal_over_set}
@@ -537,49 +544,72 @@ Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon
 Define dimension of that formula $D(\phi) = |\vec y| \frac{K(\phi)}{\epsilon(\phi)}$
 Define dimension of the entire collection as $D(\Psi) = \max_{i \in I} D(\phi_i)$
 
-In general we have parameter set $B \subseteq \GG^{|y|}$, however without loss of generality we may work with
-a parameter set $B^{|y|}$, with $B \subseteq \GG$.
-
-Let $S = \floor{D(\Psi)}$.
-
-For our proof to work we also need $B$ to be $S$-strong.
-We can achieve this by taking (the unique) $S$-strong closure of $B$.
-If size of $B$ is $N$ then the size of its closure is $O(N)$.	%elaborate
-So without loss of generality we can assume that $B$ is $S$-strong.
+Fix $S = ??$.
+Suppose we have a finite parameter set $A_0 \subseteq \GG^{|x|}$ with $|A_0| = N_0$.
+We would like to bound $\phi(A_0, \GG^{|y|})$.
+Let $A_1 \subseteq \GG$ consist of the components of the elements of $A_0$.
+Then $|A_1| \leq |x| N_0$.
+Using Lemma \ref{las_closure} let $A$ be a graph $A_0 \subseteq A \subseteq \GG$, $S$-strong in $\GG$.
+Let $N = |A|$.
+We have $N \leq |x| N_0 M$ (where $M$ is the constant from the Lemma \ref{las_closure}).
+As $A_0 \subseteq A^{|x|}$ we have
+\begin{align*}
+  \abs{{\phi(A_0, \GG^{|y|})} \leq \abs{\phi(A^{|x|}, \GG^{|y|})}.
+\end{align*}
+Therefore it suffices to bound $\abs{\phi(A^{|x|}, \GG^{|y|})}$.
+Let
+\begin{align*}
+  \GG_1 = \curly{b \in \GG^{|y|} \mid b \subseteq A}
+\end{align*}
+and $\GG_2 = \GG^{|y|} - \GG_1$.
+Then
+\begin{align*}
+  \abs{\phi(A^{|x|}, \GG^{|y|})}
+  \leq \abs{\phi(A^{|x|}, \GG_1)} + \abs{\phi(A^{|x|}, \GG_2)} =
+  \abs{\GG_1} + \abs{\phi(A^{|x|}, \GG_2)} \leq N^{|y|} + \abs{\phi(A^{|x|}, \GG_2)}.
+\end{align*}
+Our goal now is to bound $\abs{\phi(A^{|x|}, \GG_2)}$.
 
 \begin{Definition}
-  A \defn{witness} of $a$ is a union of realizations of the existential formulas $\phi_i(a, b)$ for all $i, b$ so that the formula holds.
+  \begin{itemize}
+  \item For all $a \in A^{|x|}, b \in \GG_2$ if $\phi(a, b)$ holds fix $W_{a,b} \subseteq \GG$, a witness of this formula.
+  \item For $b \in \GG_2$ let 
+    \begin{align*}
+      W_b = \bigcup {W_{a,b} \mid a \in A^{|x|}, \GG \models \phi(a,b)}.
+    \end{align*}
+  \end{itemize}
 \end{Definition}
 
 \begin{Definition}
-  For sets $C, B$ define the boundary of $C$ over $B$
+  For sets $C, B \subset \GG$ define the boundary of $C$ over $B$
   \begin{align*}
-    \partial(C, B) = \curly{b \in B \mid \text{there is an edge between $b$ and element of $C - B$}}
+    \partial(C, B) = \curly{b \in B \mid \text{there is an edge between $b$ and a vertex in $C - B$}}
   \end{align*}
 \end{Definition}
 
 \begin{Definition}
-  For each $a$ pick some $\bar M_a$ to be its witness.
-  Define two quantities
   \begin{itemize}
-  \item $\partial_a$ is the boundary $\partial(\bar M_a, B \cup a)$
-  \item Suppose $G_1, G_2$ are some subgraphs of our model and $a_1 \subseteq G_1, a_2 \subseteq G_2$ finite tuples of vertices.
-    Call $f \colon (G_1, a_1) \arr (G_2, a_2)$ a $\partial$-isomorphism if it is a graph isomorphism,
-    $f$ and $f^{-1}$ are constant on $B$, and
-    $f(a_1) = a_2$.
-  \item Define $\II_a$ as the $\partial$-isomorphism class of $(\bar M_a, a)$.
+  \item For $b \in \GG_2$ let $\partial_b$ to be the boundary $\partial(W_b, A)$.
+  \item For $b \in \GG_2$ let $\bar W_b = (W_b - A) \cup \ppp_b$.
+  \item For $b_1, b_2 \in \GG_2$ we say that $b_1 \sim b_2$ if $\ppp_{b_1} = \ppp_{b_2}$
+    and there exists a graph isomorphism from $\bar W_{b_1}$ to $\bar W_{b_2}$ that fixes $\ppp_{b_1}$ and
+    maps $b_1$ to $b_2$.
+    One easily checks that this defines an equivalence relation.
+  \item For $b \in \GG_2$ define $\II_b$ to be the $\sim$-equivalence class of $b$.
   \end{itemize}
 \end{Definition}
 
 \begin{Lemma} \label {bound_trace}
-  If $\II_{a_1} = \II_{a_2}$ then $a_1, a_2$ have the same $\Psi$-type over $B$.
+  For $b_1, b_2 \in \GG_2$ if $b_1 \sim b_2$ then $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$.
 \end{Lemma}
 
 \begin{proof}
-  Fix a $\partial$-isomorphism $f \colon (\bar M_{a_1}, a_1) \arr (\bar M_{a_1}, a_2)$.
-  Suppose we have $\phi(a_1, b)$ for some $b \in B$.
-  Pick witness of this existential formula $M_1 \subseteq \bar M_{a_1}$.
-  Then $f(M_1)$ is a witness for  $\phi(a_2, b)$.
+  Fix the graph isomorphism $\bar f \colon \bar W_{b_1} \arr \bar W_{b_2}$.
+  Extend it to an isomorphism $f \colon W_{b_1} \cup A \arr W_{b_2} \cup A$ by being an identity map on the new vertices.
+  Suppose $\GG \models phi(a, b_1)$ for some $a \in A^{|x|}$.
+  Then $f(W_{a, b_1})$ is a witness for  $\phi(a, b_2)$ (though not necessarily equal to $W_{a, b_2}$)
+  and thus $\GG \models phi(a, b_2)$.
+  As $a$ was arbitrary, this proves the equality of the traces.
 \end{proof}
 
 Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_a$.
