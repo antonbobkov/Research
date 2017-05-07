@@ -16,7 +16,11 @@
 \newcommand{\BB}{\mathscr B}
 \newcommand{\DD}{\mathscr D}
 \newcommand{\II}{\mathscr I}
+
 \newcommand{\GG}{\mathbb G}
+\newcommand{\GGY}{\GG^{|y|}}
+\newcommand{\AX}{A^{|x|}}
+\newcommand{\BA}{\bar A}
 
 \newcommand{\F}{\mathcal F}
 \renewcommand{\LL}{\mathcal L}
@@ -27,6 +31,7 @@
 
 \newcommand{\DB}{\mathbb D}
 \newcommand{\ppp}{\partial}
+\newcommand{\BM}{\bar M_{j-1}}
 
 \newcommand{\A}{A}
 \newcommand{\B}{B}
@@ -186,7 +191,8 @@ We will require the following lemmas from \cite{laskowski}:
   \begin{align*}
     \dim(A \cup B / A) = \dim(\B / A \cap B) - \alpha E,
   \end{align*}
-  where $E$ is the number of edges connecting the vertices of $A \cup B - A$ to the vertices of $A - A \cap B$.
+  % where $E$ is the number of edges connecting the vertices of $A \cup B - A$ to the vertices of $A - A \cap B$.
+  where $E$ is the number of edges connecting the vertices of $B - A$ to the vertices of $A - B$.
 \end{Lemma}
 
 \begin{Lemma} \label{las_min} [See 4.1 in \cite{laskowski}]
@@ -235,8 +241,9 @@ We conclude this section by stating a couple of technical lemmas that will be us
   Work in an ambient graph $\DB$.
   Suppose we have a set $B$ and a minimal chain  $\agl{M_i}_{0 \leq i \leq n}$ with dimensions
   \begin{align*}
-    \dim(M_{i+1}/M_i) = -\epsilon_i.
+    \dim(M_{i+1}/M_i) = -\epsilon_i
   \end{align*}
+  and $M_0 \subseteq B$.
   Let $\epsilon = \min_{0 \leq i \leq n} \epsilon_i$.
   Then either $M_n \subseteq B$ or $\dim((M_n \cup B)/B) < -\epsilon$.
 \end{Lemma}
@@ -386,22 +393,22 @@ First, define $\epsilon_L(\phi)$.
   \begin{proof}
     Consider some $A \subsetneq B \subseteq W$.
     We need to show $\dim (B/A) > 0$.
-    Let $\bar A = A \cup b$.
+    Let $\BA = A \cup b$.
     We have
     \begin{align*}
-      \dim(B/A) = \dim(B/ B \cap \bar A) + \dim(B \cap \bar A / A).
+      \dim(B/A) = \dim(B/ B \cap \BA) + \dim(B \cap \BA / A).
     \end{align*}
     Let $B_{ij} = B \cap W_{ij}$.
     Let $B_{j} = B \cap W_{j}$.
     To unify indices, relabel all the graphs above as $\curly{B_k}_{k \in K}$ for some index set $K$.
     By the construction of $W$ we have
     \begin{align*}
-      \dim(B/ B \cap \bar A) = \sum_{k \in K} \dim(B_k/ B_k \cap \bar A).
+      \dim(B/ B \cap \BA) = \sum_{k \in K} \dim(B_k/ B_k \cap \BA).
     \end{align*}
     Fix $k$.
     We have $B_k \subseteq W_k$, where $W_k$ is a minimal extension of $M^k_0 = a \cup b$ for some $a \in A$.
     Let $\epsilon_k$ be the dimension of this minimal extension.
-    We have $\dim(B_k / B_k \cap \bar A) = \dim(B_k / a \cup (B \cap b))$.
+    We have $\dim(B_k / B_k \cap \BA) = \dim(B_k / a \cup (B \cap b))$.
 
     Case 1: $B \cap b = b$.
     Then $M_0^k \subseteq B_k \subseteq W_k$ and
@@ -411,11 +418,11 @@ First, define $\epsilon_L(\phi)$.
     By minimality of $(M_0^k, B_k)$ we have $\dim (B_k/M_0^k) \geq -\epsilon_k$.
     Thus
     \begin{align*}
-      \dim(B/ B \cap \bar A) \geq - \sum_{k \in K} \epsilon_k = -\paren{n_1 \epsilon_L(\psi) + n_2 \epsilon'}.
+      \dim(B/ B \cap \BA) \geq - \sum_{k \in K} \epsilon_k = -\paren{n_1 \epsilon_L(\psi) + n_2 \epsilon'}.
     \end{align*}
     In addition
     \begin{align*}
-      \dim(B \cap \bar A / A) = \dim (b) = Y(\psi).
+      \dim(B \cap \BA / A) = \dim (b) = Y(\psi).
     \end{align*}
     Combining the two, we get
     \begin{align*}
@@ -424,10 +431,10 @@ First, define $\epsilon_L(\phi)$.
     which is positive by the construction of $n_1, n_2$ as needed.
     
     Case 2: $B \cap b \subsetneq b$.
-    \begin{Claim} We have $\dim(B_k / B_k \cap \bar A) > 0$.
+    \begin{Claim} We have $\dim(B_k / B_k \cap \BA) > 0$.
     \end{Claim}
     \begin{proof}
-      Recall that $\dim(B_k / B_k \cap \bar A) = \dim(B_k / a \cup (B \cap b))$.
+      Recall that $\dim(B_k / B_k \cap \BA) = \dim(B_k / a \cup (B \cap b))$.
       First, suppose that $B_k \cup M_0^k \neq W_k$.
       Then by Lemma \ref{minimal_subset} we get the required inequality.
       Thus we may assume that $B_k \cup M_0^k = W_k$.
@@ -435,7 +442,8 @@ First, define $\epsilon_L(\phi)$.
       \begin{align*}
         \dim(B_k \cup M_0^k / M_0^k) = \dim(B_k / B_k \cap M_0^k) - \alpha E,
       \end{align*}
-      where $E$ is the number of edges connecting the vertices of $B_k \cup M_0^k - M_0^k$ to the vertices of $M_0^k - B_k \cap M_0^k$.
+      where $E$ is the number of edges connecting the vertices of
+      $B_k - M_0^k = B_k \cup M_0^k - M_0^k$ to the vertices of $M_0^k - B_k = M_0^k - B_k \cap M_0^k$.
       Noting that $B_k \cup M_0^k = W_k$, $\dim{W_k / M_0^k} = -\epsilon_k$, and $B_k \cap M_0^k = a \cup (B \cap b)$
       we may rewrite the equality above as
       \begin{align*}
@@ -447,15 +455,15 @@ First, define $\epsilon_L(\phi)$.
     \end{proof}
     Now, recall that
     \begin{align*}
-      \dim(B/A) = \dim(B \cap \bar A / A) + \sum_{k \in K} \dim(B_k/ B_k \cap \bar A).
+      \dim(B/A) = \dim(B \cap \BA / A) + \sum_{k \in K} \dim(B_k/ B_k \cap \BA).
     \end{align*}
-    By the claim above each of $\dim(B_k/ B_k \cap \bar A) > 0$, thus
+    By the claim above each of $\dim(B_k/ B_k \cap \BA) > 0$, thus
     \begin{align*}
-      \dim(B/A) > \dim(B \cap \bar A / A).
+      \dim(B/A) > \dim(B \cap \BA / A).
     \end{align*}
     In addition
     \begin{align*}
-      \dim(B \cap \bar A / A) = \dim (B \cap b) \geq 0,
+      \dim(B \cap \BA / A) = \dim (B \cap b) \geq 0,
     \end{align*}
     as $b$ is postive.
     Thus $\dim (B/A) > 0$ as needed.
@@ -544,44 +552,35 @@ Record the size of that extension as $K(\phi)$ and its total dimension $\epsilon
 Define dimension of that formula $D(\phi) = |\vec y| \frac{K(\phi)}{\epsilon(\phi)}$
 Define dimension of the entire collection as $D(\Psi) = \max_{i \in I} D(\phi_i)$
 
-Fix $S = ??$.
+Let
+\begin{align*}
+  S = \ceil*{\paren{\frac{|y|}{\epsilon(\phi)} + 1} K(\phi)}.
+\end{align*}
 Suppose we have a finite parameter set $A_0 \subseteq \GG^{|x|}$ with $|A_0| = N_0$.
-We would like to bound $\phi(A_0, \GG^{|y|})$.
+We would like to bound $\phi(A_0, \GGY)$.
 Let $A_1 \subseteq \GG$ consist of the components of the elements of $A_0$.
 Then $|A_1| \leq |x| N_0$.
 Using Lemma \ref{las_closure} let $A$ be a graph $A_0 \subseteq A \subseteq \GG$, $S$-strong in $\GG$.
 Let $N = |A|$.
 We have $N \leq |x| N_0 M$ (where $M$ is the constant from the Lemma \ref{las_closure}).
-As $A_0 \subseteq A^{|x|}$ we have
+As $A_0 \subseteq \AX$ we have
 \begin{align*}
-  \abs{{\phi(A_0, \GG^{|y|})} \leq \abs{\phi(A^{|x|}, \GG^{|y|})}.
+  \abs{\phi(A_0, \GGY)} \leq \abs{\phi(\AX, \GGY)}.
 \end{align*}
-Therefore it suffices to bound $\abs{\phi(A^{|x|}, \GG^{|y|})}$.
-Let
-\begin{align*}
-  \GG_1 = \curly{b \in \GG^{|y|} \mid b \subseteq A}
-\end{align*}
-and $\GG_2 = \GG^{|y|} - \GG_1$.
-Then
-\begin{align*}
-  \abs{\phi(A^{|x|}, \GG^{|y|})}
-  \leq \abs{\phi(A^{|x|}, \GG_1)} + \abs{\phi(A^{|x|}, \GG_2)} =
-  \abs{\GG_1} + \abs{\phi(A^{|x|}, \GG_2)} \leq N^{|y|} + \abs{\phi(A^{|x|}, \GG_2)}.
-\end{align*}
-Our goal now is to bound $\abs{\phi(A^{|x|}, \GG_2)}$.
+Therefore it suffices to bound $\abs{\phi(\AX, \GGY)}$.
 
 \begin{Definition}
   \begin{itemize}
-  \item For all $a \in A^{|x|}, b \in \GG_2$ if $\phi(a, b)$ holds fix $W_{a,b} \subseteq \GG$, a witness of this formula.
-  \item For $b \in \GG_2$ let 
+  \item For all $a \in \AX, b \in \GGY$ if $\phi(a, b)$ holds fix $W_{a,b} \subseteq \GG$, a witness of this formula.
+  \item For $b \in \GGY$ let 
     \begin{align*}
-      W_b = \bigcup {W_{a,b} \mid a \in A^{|x|}, \GG \models \phi(a,b)}.
+      W_b = \bigcup {W_{a,b} \mid a \in \AX, \GG \models \phi(a,b)}.
     \end{align*}
   \end{itemize}
 \end{Definition}
 
 \begin{Definition}
-  For sets $C, B \subset \GG$ define the boundary of $C$ over $B$
+  For sets $C, B \subset \GG$ define the \defn{boundary} of $C$ over $B$
   \begin{align*}
     \partial(C, B) = \curly{b \in B \mid \text{there is an edge between $b$ and a vertex in $C - B$}}
   \end{align*}
@@ -589,140 +588,293 @@ Our goal now is to bound $\abs{\phi(A^{|x|}, \GG_2)}$.
 
 \begin{Definition}
   \begin{itemize}
-  \item For $b \in \GG_2$ let $\partial_b$ to be the boundary $\partial(W_b, A)$.
-  \item For $b \in \GG_2$ let $\bar W_b = (W_b - A) \cup \ppp_b$.
-  \item For $b_1, b_2 \in \GG_2$ we say that $b_1 \sim b_2$ if $\ppp_{b_1} = \ppp_{b_2}$
-    and there exists a graph isomorphism from $\bar W_{b_1}$ to $\bar W_{b_2}$ that fixes $\ppp_{b_1}$ and
+  \item For $b \in \GGY$ let $\partial_b \subseteq A$ be the boundary $\partial(W_b, A)$.
+  \item For $b \in \GGY$ let $\bar W_b = (W_b - A) \cup \ppp_b$.
+  \item For $b_1, b_2 \in \GGY$ we say that $b_1 \sim b_2$ if $\ppp_{b_1} = \ppp_{b_2}$,
+    $b_1 \cap A = b_2 \cap A$,
+    and there exists a graph isomorphism from $\bar W_{b_1} \cup b_1$ to $\bar W_{b_2} \cup b_2$ that fixes $\ppp_{b_1}$ and
     maps $b_1$ to $b_2$.
     One easily checks that this defines an equivalence relation.
-  \item For $b \in \GG_2$ define $\II_b$ to be the $\sim$-equivalence class of $b$.
+  \item For $b \in \GGY$ define $\II_b$ to be the $\sim$-equivalence class of $b$.
   \end{itemize}
 \end{Definition}
 
 \begin{Lemma} \label {bound_trace}
-  For $b_1, b_2 \in \GG_2$ if $b_1 \sim b_2$ then $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$.
+  For $b_1, b_2 \in \GGY$ if $b_1 \sim b_2$ then $\phi(\AX, b_1) = \phi(\AX, b_2)$.
 \end{Lemma}
 
 \begin{proof}
-  Fix the graph isomorphism $\bar f \colon \bar W_{b_1} \arr \bar W_{b_2}$.
+  Fix the graph isomorphism $\bar f \colon \bar W_{b_1} \cup b_1 \arr \bar W_{b_2} \cup b_2$.
   Extend it to an isomorphism $f \colon W_{b_1} \cup A \arr W_{b_2} \cup A$ by being an identity map on the new vertices.
-  Suppose $\GG \models phi(a, b_1)$ for some $a \in A^{|x|}$.
+  Suppose $\GG \models phi(a, b_1)$ for some $a \in \AX$.
   Then $f(W_{a, b_1})$ is a witness for  $\phi(a, b_2)$ (though not necessarily equal to $W_{a, b_2}$)
   and thus $\GG \models phi(a, b_2)$.
   As $a$ was arbitrary, this proves the equality of the traces.
 \end{proof}
 
-Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_a$.
+Thus to bound the number of traces it is sufficient to bound the number of possibilities for $\II_b$.
 
 \begin{Theorem} \label{main_bound}
+  Suppose we have $b \in \GGY$.
+  Let $Y = \abs{b - A}$.
+  Then
   \begin{align*}
-    |\partial_a| &\leq D(\Psi) \\ 
-    |\bar M_b - \bar A| &\leq D(\Psi)
+    |\partial_b| &\leq Y D_1(\phi) \\ 
+    |\bar W_b| &\leq 2 Y D_1(\phi)
   \end{align*}
 \end{Theorem}
 
 \begin{Corollary}
   \begin{align*}
-    \vc(\phi) \leq K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}
+    \vc(\phi) \leq D(\phi) %K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}
   \end{align*}
 \end{Corollary}
 
 \begin{proof}
-  We count possible $\partial$-isomorphism classes $\II_b$.
-  Let $W = K(\phi) \frac{Y(\phi)}{\epsilon(\phi)}$.
-  If the parameter set $A$ is of size $N$ then there are $N \choose W$ choices for boundary $\partial_b$.
-  On top of the boundary there are at most $W$ extra vertices and $(2W)^2$ extra edges.
-  Thus there are at most
+  We count possible equivalence classes of $\sim$.
+  This essentially boils down to bounding possibilities for $\partial_b$, $b \cap A$, and number of isomorphism classes of $W_b$.
+  Fix $b \in \GGY$ and let $Y = \abs{b - A}$.
+  Let $D = Y D_1(\phi)$.
+  By the first part of Theorem \ref{main_bound} there are $N \choose D$ choices for boundary $\partial_b$.
+  By the second part of Theorem \ref{main_bound} there are at most $2D$ vertices in $\bar W_b$.
+  Thus to determine the graph $\bar W_b$ we need to choose how many vertices it has and then decide where edges go.
+  This amounts to at most $2D 2^{{2D}^2}$ choices.
+  Additionally there are $N \choose (|y| - Y)$ choices for $b \cap A$.
+  In total this gives us at most
   \begin{align*}
-    W \cdot 2^{(2W)^2}
+    {N \choose D} \cdot {N \choose (|y| - Y)} \cdot 2D 2^{(2D)^2} = O((N^{D + |y| - Y})) = O(N^{Y D_1(\phi) + |y| - Y}) = O(N^{|y| D_1(\phi)}) = O(N^{D(\phi)})
   \end{align*}
-  configurations up to a graph isomorphism.
-  In total this gives us 
+  choices (second to last inequality uses $D_1(\phi) \geq 1$).
+  By Lemma \ref{bound_trace} we have $\abs{\phi(\AX, \GGY)} = O(N^{D(\phi)})$.
+  Recall that 
   \begin{align*}
-    {N \choose W} \cdot W \cdot 2^{(2W)^2} = O(N^W)
+    \abs{\phi(A_0, \GGY)} \leq \abs{\phi(\AX, \GGY)}.    
   \end{align*}
-  options for $\partial$-isomorphism classes.
-  By Lemma \ref{bound_trace} there are at most $O(N^W)$ many traces, giving the required bound.
+  Therefore we have
+  \begin{align*}
+    \abs{\phi(A_0, \GGY)} = O(N^{D(\phi)}) = O(\paren{|x| N_0 M}^{D(\phi)}) = O(\paren{|x| M}^{D(\phi)} N_0^{D(\phi)}) = O(N_0^{D(\phi)}).
+  \end{align*}
+  As $A_0$ was arbitrary, this shows that $\vc(\phi) \leq D(\phi)$ as needed.
+  (Note that throughout this proof we are using the fact that quantities $D_1(\phi), D(\phi), M$ are completely determined by $\phi$,
+  thus independent from $A_0$.)
 \end{proof}
 
 \begin{proof} \textit{(of Theorem \ref{main_bound})}
-  Fix some $b$-trace $A_b$. Enumerate $A_b = \{a_1, \ldots, a_I\}$.
 
-  Let $M_i / \{a_i, b\}$ be a witness of $\phi(a_i, b)$ for each $i \leq I$.
-  Let $\bar M_i = \bigcup_{j < i} M_j$.
-  Let $\bar M = \bigcup M_i$, a witness of $A_b$
-  
-  \begin{Claim}
-    \begin{align*}
-      &\abs{\partial(M_i M, \bar A) - \partial(M, \bar A)} \leq |M_i| = K(\phi)\\
-      &\dim(M_i M \bar A / M \bar A) > -\epsilon(\phi)
-    \end{align*}
-  \end{Claim}
-  
+  The graph $W_b$ is a union of witnesses of the from $W_{a,b}$ for some $a \in \AX, b \in \GGY$.
+  Enumerate all of them as $\curly{W_j}_{1 \leq j \leq J}$.
+  Define $M_j = \bigcup_1^j W_{j'}$ for $1 \leq j \leq J$ and let $M_0 = \emptyset$.
+  Let $\BA = A \cup b$.
+    
   \begin{Definition}
-    $(j-1, j)$ is called a \defn{jump} if some of the following conditions happen
+    For $1 \leq j \leq J$ define two quantities: $v_j$ and $E_j$.
     \begin{itemize}
-    \item New vertices are added outside of $\bar A$ i.e.
+    \item Let $v_j = 1$ if new vertices are added to $M_j$ outside of $A$, that is if
       \begin{align*}
-        \bar M_j - \bar A \neq \bar M_{j-1} - \bar A
+        M_j - \BA \neq M_{j-1} - \BA,
       \end{align*}
-    \item New vertices are added to the boundary, i.e.
+      and let it be $0$ otherwise.
+    \item Let % $e_j$ count the number of new vertices on the boundary of $M_j$ with $A$ that are not in $W_j$, that is
       \begin{align*}
-        \partial(\bar M_j, \bar A) \neq \partial(\bar M_{j-1}, \bar A)
+        % e_j = \abs{\partial(M_j, A) - \partial(M_{j-1}, A) - W_j}
+        E_j = \curly{a \in A - W_j \mid \text{there is an edge between $a$ and a vertex in $W_j - M_{j-1} - A$}}.
       \end{align*}
     \end{itemize}
   \end{Definition}
 
   \begin{Definition}
-    We now let $m_i$ count all jumps below $i$
-    % Let $d_i = \dim(\bar M_i/A)$.
+    For $1 \leq j \leq J$ let
     \begin{align*}
-      m_i = \abs{\curly{j < i \mid (j-1, j) \text{ is a jump}}}
+      m_j = \sum_{j ' = 1}^j (v_j + |E_j|) 
     \end{align*}
+    and let $m_0 = 0$.
   \end{Definition}
 
   \begin{Lemma} \label{ub_lemma}
+    For $0 \leq j \leq J$ we have
     \begin{align*}
-      \dim(\bar M_i / \bar A) &\leq -m_i \cdot \epsilon(\phi) \\
-      |\partial(\bar M_i, \bar A)| &\leq m_i \cdot K(\phi) \\
-      |\bar M_j - \bar A| &\leq m_i \cdot K(\phi)
+      |\partial(M_j, A)| &\leq m_j \cdot K(\phi) \\
+      |M_j - A| &\leq m_j \cdot K(\phi) \\
     \end{align*}
   \end{Lemma}
 
   \begin{proof} \textit{(of Lemma \ref{ub_lemma})}
     Proceed by induction.
-    Second and third propositions are clear.
-    For the first proposition base case is clear.
+
+    Base case: $j = 0$. Clear, as all the quantities on the left and right are zero.
+
+    We do induction steps separately for each inequality.
+
+    Inequality 1: suppose
+    \begin{align*}
+      |\partial(M_{j-1}, A)| \leq m_{j-1} \cdot K(\phi)
+    \end{align*}
+    holds.
+    Let
+    \begin{align*}
+      \delta_1 = \partial(M_j, A) - \partial(M_{j-1}, A) = \curly{a \in A \mid \text{ there is an edge from $a$ to a vertex in $M_j - A$ but no edges to
+      vertices in $M_{j-1} - A$}}.
+    \end{align*}
+    If $M_j - A = M_{j-1} - A$ then $\delta_1 = \emptyset$ and we are done as $m_j$ is increasing.
+    Suppose not.
+    We have:
+    \begin{align*}
+      |\delta_1| &= |\delta_1 \cap W_j| + |\delta_1 - W_j|, \\
+      \delta_1 - W_j & = \curly{a \in A - W_j \mid \text{ there is an edge from $a$ to a vertex in $M_j - A$ but no edges to
+      vertices in $M_{j-1} - A$}}.
+    \end{align*}
+    But then it's clear that $\delta_1 - W_j \subseteq E_j$ as $W_j - M_{j-1} - A \subseteq M_j - A$ and $W_j - M_{j-1} - A \cap M_{j-1} - A = \emptyset$.
+    Therefore we have
+    \begin{align*}
+      |\delta_1| = |\delta_1 \cap W_j| + |\delta_1 - W_j| \leq |W_j| + |E_j| \leq K(\phi) + |E_j|
+      \leq (v_j + |E_j|) K(\phi)  \leq (m_j - m_{j-1}) K(\phi),
+    \end{align*}
+    as needed.
+
+    \begin{align*}
+      \abs{\partial(M_j, A) - \partial(M_{j-1}, A)} = e_j + \abs{\paren{\partial(M_j, A) - \partial(M_{j-1}, A)} \cap W_j} \leq e_j +
+    \end{align*}
     
-    Induction step.
-    Suppose $\bar M_j \cap (A \cup b) = \bar M_{j+1}$ and $\partial(\bar M_j, A) = \partial(\bar M_{j+1}, A)$.
-    Then $m_i = m_{i+1}$ and the quantities don't change.
-    Thus assume at least one of these equalities fails.
-    
-    Apply Lemma \ref{chain_lemma} to $\bar M_j \cup (A \cup b)$ and $(M_{j+1}, a_{j+1}b)$.
-    There are two options
-    
-    \begin{itemize}
-    \item $\dim(\bar M_{j+1} \cup (A \cup b) / \bar M_i \cup (A \cup b)) \leq -\epsilon_U$.
-      This implies the proposition.
-    \item $M_{j+1} \subseteq \bar M_j \cup (A \cup b)$.
-      Then by our assumption it has to be $\partial(\bar M_j, A) \neq \partial(\bar M_{j+1}, A)$.
-      There are edges between $M_{j+1} \cap (\partial(\bar M_{j+1}, A) - \partial(\bar M_j, A))$ so they contribute some negative dimension $\leq \epsilon_U$.
-    \end{itemize}
+    Inequality 2: suppose
+    \begin{align*}
+      |M_{j-1} - A| \leq m_{j-1} \cdot K(\phi)
+    \end{align*}
+    holds.
+    If $M_j - A = M_{j-1} - A$ then the inequality is immediate as $m_j$ is increasing.
+    Therefore assume this is not the case, so $v_j = 1$ and thus $(m_j - m_{j-1}) \cdot K(\phi) \geq K(\phi)$.
+    In addition, we have $|M_j - A| - |M_{j-1} - A| \leq |W_j| \leq K(\phi)$, and we get the required inequality.
     This ends the proof for Lemma \ref{ub_lemma}.
   \end{proof}
+
+  \begin{Lemma} \label{ubdim_lemma}
+    For $1 \leq j \leq J$ we have
+    \begin{align*}
+      \dim(M_j \cup \BA / \BA) \leq e_0 \alpha - m_j \cdot \epsilon(\phi),
+    \end{align*}
+    where
+    \begin{align*}
+      e_0 &= \text{ the number of edges connecting the vertices of $A$ to the vertices of $b - A$}.
+    \end{align*}
+  \end{Lemma}
+  \begin{proof}
+    Proceed by induction. Base case is $j = 1$.
+    We have
+    \begin{align*}
+      \dim(M_1 \cup \BA / \BA) = \dim(W_1 \cup \BA / \BA).
+    \end{align*}
+    By Lemma \ref{diamond}
+    \begin{align*}
+      \dim(W_1 \cup \BA / \BA) = \dim(W_1 / W_1 \cap \BA) - e \alpha
+    \end{align*}
+    where $e$ is the number of edges connecting the vertices of $\BA - W_1$ to the vertices of $W_1 - \BA$.
+    Let 
+    \begin{align*}
+      e'  &= \text{ the number of edges connecting the vertices of $\BA - W_1$ to the vertices of $W_1 - A$}, \\
+      e'' &= \text{ the number of edges connecting the vertices of $\BA - W_1$ to the vertices of $(W_1 - A) \cap b$}.
+    \end{align*}
+    Then $e' = e + e''$ as $v(W_1 - A)$ is a disjoint union of $v((W_1 - A) \cap b)$ and $v(W_1 - \BA) = v(W_1 - A - b)$.
+    Note that as $b \subset W_1$ we have $(W_1 - A) \cap b = b - A$ and $\BA - W_1 \subseteq A$.
+    Thus $e'' \leq e_0$.
+    Recall that 
+    \begin{align*}
+      E_j = \curly{a \in A - W_j \mid \text{there is an edge between $a$ and a vertex in $W_j - M_{j-1} - A$}},
+    \end{align*}
+    thus
+    \begin{align*}
+      E_1 = \curly{a \in A - W_1 \mid \text{there is an edge between $a$ and a vertex in $W_1 - A$}}.
+    \end{align*}
+    We have $A - W_1 \subseteq \BA - W_1$ (as $A \subseteq \BA$), thus $|E_1| \leq e'$.
+    Combining the inequalities, we get
+    \begin{align*}
+      \dim(W_1 \cup \BA / \BA) = \dim(W_1 / W_1 \cap \BA) - e \alpha = \dim(W_1 / W_1 \cap \BA) - e' \alpha + e'' \alpha
+      \leq \dim(W_1 / W_1 \cap \BA) - |E_1| \alpha + e_0 \alpha.
+    \end{align*}
+    If $W_1 \subseteq \BA)$ then $\dim(W_1 / W_1 \cap \BA) = 0$.
+    If not, then by Lemma \ref{chain_lemma} we have $\dim(W_1 / W_1 \cap \BA) \leq - \epsilon(\phi)$.
+    Either way, we have $\dim(W_1 / W_1 \cap \BA) \leq - v_1 \epsilon(\phi)$.
+    Using this and the fact that $\epsilon(\phi) \leq \alpha$, we obtain
+    \begin{align*}
+      \dim(W_1 \cup \BA / \BA) \leq \dim(W_1 / W_1 \cap \BA) - |E_1| \alpha + e_0 \alpha \leq e_0 \alpha - v_1 \epsilon(\phi) - |E_1| \epsilon(\phi)
+      =  e_0 \alpha - m_1 \epsilon(\phi),
+    \end{align*}
+    as needed.
+    
+    Induction step: suppose 
+    \begin{align*}
+      \dim(M_{j-1} \cup \BA / \BA) &\leq e_0 \alpha - m_{j-1} \cdot \epsilon(\phi)
+    \end{align*}
+    holds.
+    We have
+    \begin{align*}
+      \dim(M_j \cup \BA / \BA) = \dim(M_j \cup \BA / M_{j-1} \cup \BA) + \dim(M_{j-1} \cup \BA / \BA)
+      \leq \dim(M_j \cup \BA / M_{j-1} \cup \BA) + e_0 \alpha - m_{j-1} \cdot \epsilon(\phi).
+    \end{align*}
+    Let $\BM = \M_{j-1} \cup \BA$.
+    By Lemma \ref{diamond}
+    \begin{align*}
+      \dim(M_j \cup \BA / M_{j-1} \cup \BA) = \dim(W_j \cup \BM / \BM) = \dim(W_j / W_j \cap \BM) - e \alpha
+    \end{align*}
+    where $e$ is the number of edges connecting the vertices of $\BM - W_j$ to the vertices of $W_j - \BM$.
+    Recall that 
+    \begin{align*}
+      E_j = \curly{a \in A - W_j \mid \text{there is an edge between $b$ and a vertex in $W_j - M_{j-1} - A$}}.
+    \end{align*}
+    We have $A - W_j \subseteq \BM - W_j$ (as $A \subseteq \BM$) and $W_j - M_{j-1} - A = W_j - \BM$ (as for $j > 1$, we have $b \subseteq M_{j-1}$).
+    Thus $|E_j| \leq e$, and we get 
+    \begin{align*}
+      \dim(M_j \cup \BA / M_{j-1} \cup \BA) \leq \dim(W_j / W_j \cap \BM) - |E_j| \alpha.
+    \end{align*}
+    If $W_j \subseteq \BM)$ then $\dim(W_j / W_j \cap \BM) = 0$.
+    If not, then by Lemma \ref{chain_lemma} we have $\dim(W_j / W_j \cap \BM) \leq - \epsilon(\phi)$.
+    Either way, we have $\dim(W_j / W_j \cap \BM) \leq - v_j \epsilon(\phi)$.
+    Using this and the fact that $\epsilon(\phi) \leq \alpha$, we obtain
+    \begin{align*}
+      \dim(M_j \cup \BA / M_{j-1} \cup \BA) \leq - v_j \epsilon(\phi) - |E_j| \epsilon(\phi) = -(m_j - m_{j-1})\epsilon(\phi).
+    \end{align*}
+    Finally,
+    \begin{align*}
+      \dim(M_j \cup \BA / \BA) \leq \dim(M_j \cup \BA / M_{j-1} \cup \BA) + e_0 \alpha - m_{j-1} \cdot \epsilon(\phi)
+      \leq e_0 \alpha -(m_j - m_{j-1})\epsilon(\phi) - m_{j-1} \cdot \epsilon(\phi) = e_0 \alpha - m_j \cdot \epsilon(\phi),
+    \end{align*}
+    as needed.
+  \end{proof}
+
   \textit{(Proof of Theorem \ref{main_bound} continued)}
-  First part of lemma \ref{ub_lemma} implies that we have $\dim(\bar M / \bar A) \leq -m_I \cdot \epsilon(\phi)$.
-  The requirement of $A$ to be $S$-strong forces
+
   \begin{align*}
-    m_I \cdot \epsilon(\phi) &< Y(\phi) \\
-    m_I  &< \frac{Y(\phi)}{\epsilon(\phi)} \\
+    \dim(M_j \cup A / A) = \dim(\BA / A) + \dim(M_j \cup \BA / \BA) \leq Y - e_0\alpha + \dim(M_j \cup \BA / \BA).
   \end{align*}
-  % Let $W = \frac{K(\phi)Y(\phi)}{\epsilon(\phi)}$
-  Applying the rest of \ref{ub_lemma} gives us
+  Lemma \ref{ubdim_lemma} %applied with $j = J$ gives us
   \begin{align*}
-    |\partial(\bar M, A)| &\leq m_I \cdot K(\phi) \leq \frac{K(\phi)Y(\phi)}{\epsilon(\phi)} \\
-    |\bar M \cap A| &\leq m_I \cdot K(\phi) \leq \frac{K(\phi)Y(\phi)}{\epsilon(\phi)}
+    \dim(M_j \cup \BA / \BA) \leq e_0 \alpha - m_j \cdot \epsilon(\phi).
+  \end{align*}
+  \begin{align*}
+    \dim(M_j \cup A / A) \leq Y - m_j \cdot \epsilon(\phi).
+  \end{align*}
+  Suppose $j$ is an index such that $Y - m_j \cdot \epsilon(\phi) \geq 0$ but $Y - m_{j+1} \cdot \epsilon(\phi) < 0$ if one exists.
+  Then 
+  \begin{align*}
+    m_j \leq \frac{Y}{\epsilon(\phi)}.
+  \end{align*}
+  By Lemma \ref{ub_lemma} we have
+  \begin{align*}
+    \abs{M_{j+1} - A} \leq \paren{\sum_{j'=1}^{j+1} v_{j'}} K(\phi) \leq (m_j + 1) K(\phi) \leq \paren{\frac{Y}{\epsilon(\phi)} + 1} K(\phi) \leq S.
+  \end{align*}
+  This is a contradiction, as $A$ is $S$-strong and $\dim(M_{j+1} \cup A / A)$ is negative.
+  Thus $Y - m_j \cdot \epsilon(\phi) \geq 0$ for all $j \leq J$.
+  In particular $Y - m_J \cdot \epsilon(\phi) \geq 0$ and $m_J \leq \frac{Y}{\epsilon(\phi)}$.
+  Noting that $M_J = W_b$, Lemma \ref{ubd_lemma} gives us 
+  \begin{align*}
+      |\ppp| = |\partial(W_b, A)| \leq m_J \cdot K(\phi) \leq K(\phi) \frac{Y}{\epsilon(\phi)} = Y D_1(\phi).
+  \end{align*}
+  But this is precisely the first part of what we are proving in this theorem.
+  For the second part, Lemma \ref{ub_lemma} gives us
+  \begin{align*}
+    \abs{W_b - A} \leq \paren{\sum_{j'=1}^J v_{j'}} K(\phi) \leq m_J K(\phi)  \leq K(\phi) \frac{Y}{\epsilon(\phi)} = Y D_1(\phi).
+  \end{align*}
+  We have
+  \begin{align*}
+      |\bar W_b| \leq \abs{W_b - A} + \abs{\ppp} 2\leq Y D_1(\phi),
   \end{align*}
   as needed.
   This ends the proof for Theorem \ref{main_bound}.
@@ -735,7 +887,7 @@ It suffices to bound vc-density for collection of formulas $\{\phi_i\}$ to obtai
 
 In general work with a collection of basic formulas $\{\phi_i\}_{i \in I}$.
 The proof generalizes in a straightforward manner.
-Instead of $A^{|x|}$ we now work with $A^{|x|} \times I$ separating traces of different formulas.
+Instead of $\AX$ we now work with $\AX \times I$ separating traces of different formulas.
 Formula with the largest quantity $Y(\phi)\frac{K(\phi)}{\epsilon(\phi)}$ contributes the most to the vc-density.
 Thus we have
 \begin{align*}
