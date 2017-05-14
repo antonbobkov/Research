@@ -1,83 +1,13 @@
-\documentclass{amsart}
+\chapter{Shelah-Spencer Graphs}
 
-\usepackage{../AMC_style}	
-\usepackage{../Research}
-\usepackage{../Thm}
 
-\usepackage{mathrsfs}
-\usepackage{pgfpages} 
-\usepackage{setspace}
 
-\doublespacing
-%% \usepackage[margin=.75in]{geometry}
-%% \pgfpagesuselayout{2 on 1}
-
-\renewcommand{\AA}{\mathscr A}
-\newcommand{\BB}{\mathscr B}
-\newcommand{\DD}{\mathscr D}
-\newcommand{\II}{\mathscr I}
-
-\newcommand{\GG}{\mathbb G}
-\newcommand{\GGY}{\GG^{|y|}}
-\newcommand{\AX}{A^{|x|}}
-\newcommand{\BA}{\bar A}
-
-\newcommand{\F}{\mathcal F}
-\renewcommand{\LL}{\mathcal L}
-
-\DeclareMathOperator{\diag}{diag}
-
-\newcommand{\DB}{\mathbb D}
-\newcommand{\ppp}{\partial}
-\newcommand{\BM}{\bar M_{j-1}}
-\newcommand{\E}{\mathscr E}
-\DeclareMathOperator{\ind}{ind}
-\newcommand{\vcind}{\vc_{\ind}}
-\newcommand{\Ind}{\mathscr I}
-
-\newcommand{\A}{A}
-\newcommand{\B}{B}
-\renewcommand{\C}{\mathcal C}
-\newcommand{\D}{\mathcal D}
-\renewcommand{\H}{\mathcal H}
-\newcommand{\G}{\mathcal G}
-\newcommand{\M}{\mathcal M}
-\newcommand{\U}{\mathcal U}	
-\newcommand{\X}{X}
-\newcommand{\Y}{Y}
-
-\newcommand{\K}{\boldface K_\alpha}
-\renewcommand{\S}{S_\alpha}
-
-\newcommand{\curly}[1]{\left\{#1\right\}}
-\newcommand{\paren}[1]{\left(#1\right)}
-\newcommand{\abs}[1]{\left|#1\right|}
-\newcommand{\agl}[1]{\left\langle #1 \right\rangle}
-
-\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
-
-\usepackage{soul}
-\newcommand{\defn}{\ul}
-
-% \DeclareMathOperator{\dim}{dim}
-
-\title{Some vc-density computations in Shelah-Spencer graphs}
-\author{Anton Bobkov}
-\email{bobkov@math.ucla.edu}
-
-\begin{document}
-
-\begin{abstract}
   We investigate vc-density in Shelah-Spencer graphs.
   We provide an upper bound on a formula-by-formula basis and show that there isn't a uniform lower bound,
   forcing the vc-function to be infinite.
   In addition we show that Shelah-Spencer graphs do not have a finite dp-rank,
   in particular they are not dp-minimal.
-\end{abstract}
 
-\maketitle
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
 In a complete NIP theory $T$ we can define the vc-function
@@ -118,33 +48,7 @@ Section 4 computes a lower bound for vc-density to demonstrate that $\vc(n) = \i
 Here we also do computations involving dp-rank.
 Section 5 computes an upper bound for vc-density on a formula-by-formula basis.
 
-\input{../vc_intro.tex}
 
-Dp-rank is a common measure used in study of NIP theories, with dp-minimality being a special case.
-Those notions originated in \cite{shelah_dp}, and further studied in \cite{dp_add}, showing, for example, that dp-rank is additive.
-Here it is easiest for us to define dp-rank in terms of vc-density over indiscernible sequences.
-
-\begin{Definition} \label{def_dp}
-  Work in a first-order structure $M$.
-  Fix a finite collection of formulas $\Phi(x, y)$ in the language $\LL(M)$ of $M$.
-  \begin{itemize}
-  \item Suppose $A = (a_i)_{i \in \N}$ is an indiscernible sequence with each $a_i \in M^{|x|}$.
-    Let
-    \begin{align*}
-      \Ind(A, \Phi) = \{\phi(\bigcup_{i \in \N} a_i, b) \mid \phi \in \Phi, b \in M^{|y|}\} \subseteq \PP(M^{|x|}).     
-    \end{align*}
-    This gives rise to a set system $(M^{|x|}, \Ind(A, \Phi))$.
-  \item Define
-    \begin{align*}
-      \vcind(\Phi) = \sup \curly{\vc(\Ind(A, \Phi)) \mid A = (a_i)_{i \in \N} \text{ is indiscernible}}.
-    \end{align*}
-  \item \defn{Dp-rank} of a theory $T$ is $\leq n$ if $\vcind(\phi) \leq n$ for all formulas $\phi$.
-  \item A theory $T$ is said to have finite dp-rank if its dp-rank is $\leq n$ for some $n$.
-  \item A theory $T$ is \defn{dp-minimal} if its dp-rank $\leq 1$.
-  \end{itemize}
-\end{Definition}
-
-Refer to \cite{guingona} for the connection between to the classical definition of dp-rank and the definition given here.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Graph Combinatorics}
@@ -943,45 +847,3 @@ and some more refined measure might be required.
 One potential way to do this is to separate the formulas based on values of $K(\phi), \epsilon(\phi)$.
 Once those are bounded, vc-density seems to be well-behaved.
 This author hopes to explore this further in his future work.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{thebibliography}{9}
-
-\bibitem{density}
-  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
-  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
-\bibitem{laskowski}
-  Michael C. Laskowski, \textit{A simpler axiomatization of the Shelah-Spencer almost sure theories},
-  Israel J. Math. \textbf{161} (2007), 157–186. MR MR2350161	
-\bibitem{ash7}
-  P. Assouad, \textit{Densit´e et dimension}, Ann. Inst. Fourier (Grenoble) 33 (1983), no. 3, 233-282.
-\bibitem{ash8}
-  P. Assouad, \textit{Observations sur les classes de Vapnik-Cervonenkis et la dimension combinatoire de Blei},
-  in: Seminaire d’Analyse Harmonique, 1983-1984, pp. 92-112, Publications Math´ematiques
-  d’Orsay, vol. 85-2, Universit´e de Paris-Sud, D´epartement de Math´ematiques, Orsay, 1985.
-\bibitem{sauer}
-  N. Sauer, \textit{On the density of families of sets}, J. Combinatorial Theory Ser. A 13 (1972), 145-147.
-\bibitem{shelah}
-  S. Shelah, \textit{A combinatorial problem; stability and order for models and theories in infinitary languages},
-  Pacific J. Math. 41 (1972), 247-261.
-\bibitem{shelah_dp}
-  S. Shelah, \textit{Strongly dependent theories} (2009), preprint.
-\bibitem{spencer}
-  S. Shelah and J. Spencer, \textit{Zero-one laws for sparse random graphs}, Journal
-of AMS 1 (1988) 97-115.  
-\bibitem{guingona}
-  V. Guingona, C. Hill, \textit{Local dp-rank and VC-density over indiscernible sequences},
-  Math. Log. Quart., 60: 59-65
-\bibitem{dp_add} 
-  I. Kaplan, A. Onshuus, and A. Usvyatsov, \textit{Additivity of the dp-rank},
-  Trans. Amer. Math. Soc. 365 (2013), 5783-5804
-
-  % \bibitem{bob_tree}
-%   A. Bobkov,
-%   \textit{vc-density for trees},
-%   preprint (2017).
-\end{thebibliography}
-
-\end{document}
-

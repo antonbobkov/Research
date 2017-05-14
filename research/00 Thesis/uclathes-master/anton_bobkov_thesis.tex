@@ -1,0 +1,123 @@
+
+\documentclass [PhD] {uclathes}
+ 
+\input {mymacros}                         % personal LaTeX macros
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Usually things live in separate flies.
+%
+% \input {prelim}                           % preliminary page info
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+%                          PRELIMINARY PAGES                           %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title          {VC-density Computations \\
+                in Various Model-Theoritic Structures}
+\author         {Anton Bobkov} 
+\department     {Mathematics}
+% Note:  degreeyear should be optional, but as of  5-Feb-96
+% it seems required or you get a year of ``2''.   -johnh
+\degreeyear     {2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chair          {Matthias Aschenbrenner}
+\member         {Yiannis N.\ Moschovakis}
+\member         {Igor Pak}
+\member         {Vladimir V.\ Vassiliev}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dedication     {\textsl{To my family and friends\\
+                who have been unerringly supportive \\
+                throughout my career path}}
+% \dedication     {\textsl{To my mother \ldots \\
+%                 who---among so many other things--- \\
+%                 saw to it that I learned to touch-type \\
+%                 while I was still in elementary school}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \acknowledgments {(Acknowledgments omitted for brevity.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \vitaitem   {1974--1975}
+%                 {Campus computer center ``User Services'' programmer and
+%                 consultant, Stanford Center for Information Processing,
+%                 Stanford University, Stanford, California.}
+% \vitaitem   {1974--1975}
+%                 {Programmer, Housing Office, Stanford University.
+%                 Designed a major software system for assigning
+%                 students to on-campus housing.
+%                 With some later improvements, it is still in use.}
+% \vitaitem   {1975}
+%                 {B.S.~(Mathematics) and A.B.~(Music),
+%                 Stanford University.}
+% \vitaitem   {1977}
+%                 {M.A.~(Music), UCLA, Los Angeles, California.}
+% \vitaitem   {1977--1979}
+%                 {Teaching Assistant, Computer Science Department, UCLA.
+%                 Taught sections of Engineering 10 (beginning computer
+%                 programming course) under direction of Professor Leon
+%                 Levine.
+%                 During summer 1979, taught a beginning programming
+%                 course as part of the Freshman Summer Program.}
+% \vitaitem   {1979}
+%                 {M.S.~(Computer Science), UCLA.}
+% \vitaitem   {1979--1980}
+%                 {Teaching Assistant, Computer Science Department, UCLA.}
+% \vitaitem   {1980--1981}
+%                 {Research Assistant, Computer Science Department, UCLA.}
+% \vitaitem   {2007--2011}
+%                 {Programmer/Analyst, Computer Science Department, UCLA.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \publication    {\textsl{MADHOUS Reference Manual.}
+%                 Stanford University, Dean of Student Affairs
+%                 (Residential Education Division), 1978.
+%                 Technical documentation for the MADHOUS
+%                 software system used to assign students to
+%                 on-campus housing.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+            \abstract       {
+  Aschenbrenner et. al. studied vc-density in model-theoretic context.
+  We investigate it further by computing in some common structures: trees, Shelah-Spencer graphs, and an additive reduct of $p$-adic numbers.
+  We show that in the theory of infinite trees the vc-function is optimal.
+  This generalizes a result of Simon showing that the trees are dp-minimal. 
+  In Shelah-Spencer graphs we provide an upper bound on a formula-by-formula basis and show that there isn't a uniform lower bound,
+  forcing the vc-function to be infinite.
+  In addition we show that Shelah-Spencer graphs do not have a finite dp-rank,
+  in particular they are not dp-minimal.
+  There is a linear bound for the vc-density function in the field of $p$-adic numbers,
+  but this bound is not known to be optimal.
+  We investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
+  use a cell decomposition result of Leenknegt to compute an optimal bound for that structure.
+            }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+\begin {document} 
+\makeintropages
+
+\include{general_intro}
+\include{Trees_vc_density}
+\include{shelah_spencer}
+\include{QP_reduct} 
+\include{flat}
+
+\input{bibliography}
+
+%\bibliography {bib/network,bib/naming}    % bibliography references
+%\bibliographystyle {thesis}
+
+\end {document}
+
