@@ -1,0 +1,183 @@
+\usepackage{amsrefs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{color}
+\usepackage{xcolor}
+%\usepackage{breqn} %For dmath
+\usepackage{mathrsfs} %mathscr?
+\usepackage{wasysym} %\eighthnote
+
+\usepackage{enumitem} % For fancy enumerations...
+
+\usepackage{hyperref}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes,calc,arrows,intersections}
+\usetikzlibrary{decorations.pathreplacing,shapes.geometric}
+\usetikzlibrary{calc,positioning}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\R}{\mathalpha}{AMSb}{"52}
+\DeclareMathSymbol{\C}{\mathalpha}{AMSb}{"43}
+\DeclareMathSymbol{\F}{\mathalpha}{AMSb}{"46}
+\DeclareMathSymbol{\E}{\mathalpha}{AMSb}{"45}
+\DeclareMathSymbol{\N}{\mathalpha}{AMSb}{"4E}
+\DeclareMathSymbol{\T}{\mathalpha}{AMSb}{"54}
+\DeclareMathSymbol{\Z}{\mathalpha}{AMSb}{"5A}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\sq}[1]{\left[#1\right]}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ang}[1]{\left\langle#1\right\rangle}
+
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\NC}{\mathcal{NC}}
+\newcommand{\BNC}{\mathcal{BNC}}
+\newcommand{\LR}{LR}
+
+\newcommand{\bigO}[1]{\mathcal{O}\paren{#1}}
+
+\newcommand{\ocX}{\mathring{\cX}}
+\newcommand{\oX}{\mathring{X}}
+\newcommand{\oV}{\mathring{V}}
+
+\newcommand{\taur}{\text{\taurus}}
+\newcommand{\gem}{\text{\gemini}}
+
+\newcommand{\st}{\mathop{\ast}}
+\newcommand{\stst}{\mathop{\ast\ast}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{notation}[theorem]{Notation}
+
+\numberwithin{theorem}{section}
+
+
+\newcommand{\fpf}{\paren{(\A_\ell^{(\iota)}, \A_r^{(\iota)})}_{\iota\in\I}}
+\newcommand{\slr}{\set{\ell, r}}
+\newcommand{\precc}{\prec_\chi}
+
+\newcommand{\lat}{{\operatorname{lat}}}
+\newcommand{\llat}{<_{\lat}}
+\newcommand{\llateq}{\leq_{\lat}}
+\newcommand{\glat}{>_{\lat}}
+\newcommand{\glateq}{\geq_{\lat}}
+
+\newcommand{\alg}{{\operatorname{alg}}}
+
+%%%%%%
+% Temporary for amalgamated thingy; get rid of these later...
+%%%%%%
+\newcommand{\lrleq}{\llateq}
+\newcommand{\e}{\iota}
+%%%%%%
+% End temporary...
+%%%%%%
+
+\newcommand{\makeaball}[1]{\begin{tikzpicture}\pgfmathparse{\palette[#1]}\shade[ball color=\pgfmathresult] (0, 0) circle (0.07);\end{tikzpicture}}
+
+%%%%%%%%%%%%%%%%
+% Colours
+%%%%%%%%%%%%%%%%
+\def\greyscale{0}
+\ifthenelse{\greyscale>0}{
+	\definecolor{iblue}{rgb}{0.75, 0.75, 0.75}
+	\definecolor{igreen}{rgb}{0, 0, 0}
+	\definecolor{ired}{rgb}{0.55, 0.55, 0.55}
+	\definecolor{izure}{rgb}{0.3, 0.3, 0.3}
+}{
+	\definecolor{iblue}{rgb}{0.2, 0.3, 1.0}
+	\definecolor{igreen}{rgb}{0.4, 1.0, 0.3}
+	\definecolor{ired}{rgb}{0.8, 0.2, 0.2}
+	\definecolor{izure}{rgb}{0.3, 0.8, 1.0}
+}
+
+\def\palette{{"iblue", "igreen", "ired", "izure"}}
+\colorlet{pal0}{iblue}
+\colorlet{pal1}{igreen}
+\colorlet{pal2}{ired}
+\colorlet{pal3}{izure}
+
+
+\makeatletter
+\pgfkeys{/bnc/.cd,
+	n/.code		= {\def\bnc@n{#1}},
+	sidez/.code	= {\def\bnc@sidez{#1}},
+	labelz/.code	= {\def\bnc@labelz{#1}},
+	colourz/.code	= {\def\bnc@colourz{#1}},
+	colourzfrompalette/.code	= {\def\bnc@colourzfrompalette{#1}},
+	nodez/.code	= {\def\bnc@nodez{#1}},
+	drawbase/.code	= {\def\bnc@drawbase{#1}},
+	order/.code	= {\def\bnc@order{#1}}
+	}
+\newcommand{\bnc}[1][]{
+	\pgfkeys{/bnc/.cd,
+		n = 0,
+		sidez = {},
+		labelz = {},
+		colourz = {},
+		colourzfrompalette = {},
+		nodez = {},
+		drawbase = 1,
+		order = {}
+	}
+	\pgfqkeys{/bnc}{#1}
+	\draw[thick] (-1,0.25) coordinate (tl) -- coordinate (cl) ++(0, -0.5*\bnc@n) coordinate (bl)
+			++(2,0) coordinate (br) -- coordinate (cr) ++(0, 0.5*\bnc@n) coordinate (tr);
+	\ifthenelse{\bnc@drawbase=0}{}{\draw[thick] (bl) -- coordinate (bc) (br);}
+	\pgfmathtruncatemacro{\looplimit}{\bnc@n-1}
+	\foreach \w in {0, ..., \looplimit} {
+		\ifthenelse{\equal{\bnc@order}{}}{\pgfmathtruncatemacro{\y}{\w}}{\pgfmathtruncatemacro{\y}{\bnc@order[\w]}}
+		\pgfmathtruncatemacro{\sd}{\bnc@sidez[\y]}
+
+		\ifthenelse{\sd=0}{}{
+
+			\ifthenelse{\equal{\bnc@colourz}{}}{\pgfmathparse{"black"}}{
+				\pgfmathparse{\bnc@colourz[\y]}
+			}
+			\ifthenelse{\equal{\bnc@colourzfrompalette}{}}{}{
+				\pgfmathparse{\palette[\bnc@colourzfrompalette[\y]]}}
+			\colorlet{clr}{\pgfmathresult}
+			\ifthenelse{\equal{\bnc@nodez}{}}{\pgfmathtruncatemacro{\nodename}{\w+1}}{
+				\pgfmathparse{\bnc@nodez[\y]}
+				\edef\nodename{\pgfmathresult}}
+			\ifthenelse{\equal{\bnc@labelz}{}}{\pgfmathtruncatemacro{\nodelabel}{\w+1}}{
+				\pgfmathparse{\bnc@labelz[\y]}
+				\edef\nodelabel{\pgfmathresult}}
+
+			\node (ball\nodename) [draw, shade, circle, ball color=clr, inner sep=0.07cm] at (\sd, -\w*0.5) {};
+			\ifthenelse{\sd=1}{\node[right]}{\node[left]} at (ball\nodename) {\nodelabel};
+		}
+	}
+}
+\makeatother
