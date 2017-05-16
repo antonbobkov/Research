@@ -1,0 +1,2331 @@
+\chapter{Amalgamated bi-free probability.}
+\label{ch:abfp}
+We now turn to an examination of the amalgamated setting of bi-free probability.
+Section~8 of \cite{voiculescu2014free} laid the framework for generalizing $\cB$-valued free probability to the bi-free setting; our goal here is to make use of the combinatorial tools we have developed in Chapter~\ref{ch:bfi} to explore operator-valued bi-free probability in much greater depth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	   Bi-Free Families with Amalgamation		   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bi-free families with amalgamation.}
+\label{sec:bifreefamilieswithamalgamation}
+
+
+
+In this section, we will recall and develop the structures from \cite{voiculescu2014free}*{Section 8} necessary to discuss bi-freeness with amalgamation.
+Throughout, $\cB$ will denote a unital algebra over $\C$.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Concrete structures for bi-free probability with amalgamation.}
+
+
+To begin the necessary constructions in the amalgamated setting, we need an analogue of a vector space with a specified vector state.
+\begin{definition}
+	A \emph{$\cB$-$\cB$-bimodule with a specified $\cB$-vector state} is a triple $(\cX, \ocX, p)$ where $\cX$ is a direct sum of $\cB$-$\cB$-bimodules
+	\[
+		\cX = \cB \oplus \ocX,
+	\]
+	and $p : \cX \to \cB$ is the linear map
+	\[
+		p(b \oplus \eta) = b.
+	\]
+\end{definition}
+Given a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state $(\cX, \ocX, p)$, for $b_1, b_2 \in \cB$ and $\eta \in \cX$ we have
+\[
+	p(b_1 \cdot \eta \cdot b_2) = b_1 p(\eta) b_2.
+\]
+
+
+\begin{definition}
+	Given a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state $(\cX, \ocX, p)$, let $\cL(\cX)$ denote the set of linear operators on $\cX$.
+	Given $b \in \cB$, we define two operators $L_b, R_b \in \cL(\cX)$ by
+	\[
+		L_b(\eta) = b \cdot \eta \qquad \text{ and } \qquad R_b(\eta) = \eta \cdot b \qquad \text{ for } \eta \in \cX.
+	\]
+
+	In addition, we define the unital subalgebras $\cL_\ell(\cX)$ and $\cL_r(\cX)$ of $\cL(\cX)$ by
+	\begin{align*}
+		\cL_\ell(\cX) &:= \set{ T \in \cL(\cX) \, \mid \, TR_b = R_b T \text{ for all }b \in \cB}\\
+		\cL_r(\cX) &:= \set{ T \in \cL(\cX) \, \mid \, TL_b = L_b T \text{ for all }b \in \cB}.
+	\end{align*}
+	We call $\cL_\ell(\cX)$ and $\cL_r(\cX)$ the \emph{left} and \emph{right algebras} of $\cL(\cX)$, respectively.
+\end{definition}
+
+Note $\cL_\ell(\cX)$ consists of all operators in $\cL(\cX)$ that are right $\cB$-linear; that is, if $T \in \cL_\ell(\cX)$ then
+\[
+	T( \eta \cdot b) = T(R_b(\eta)) = R_b(T(\eta)) = T(\eta) \cdot b
+\]
+for all $b \in \cB$ and $\eta \in \cX$.
+%In the usual treatment of bimodules, what we have denoted $\cL_\ell(\cX)$ would instead be $\cL_r(\cX)$ and vice versa, to reflect the fact that its elements are right $\cB$-linear.
+This may seem counter-intuitive; however, we take our left (resp. right) face to be a sub-algebra of $\cL_\ell(\cX)$ (resp. $\cL_r(\cX)$), and we would like to think of right multiplication by $\cB$ as a right variable.
+One sees from the $\cB$-$\cB$-bimodule structure that $b \mapsto L_b$ is a homomorphism, $b \mapsto R_b$ is an anti-homomorphism, and the ranges of these maps commute.
+Hence
+\[
+	\set{L_b \, \mid \, b \in \cB} \subseteq \cL_\ell(\cX) \qquad \text{and} \qquad \set{R_b \, \mid \, b \in \cB} \subseteq \cL_r(\cX).
+\]
+Thus, in the context of this paper, $\cL_\ell(\cX)$ consists of `left' operators and $\cL_r(\cX)$ consists of `right' operators.
+
+As we are interested in $\cL(\cX)$ and amalgamating over $\cB$, we will need an ``expectation'' from $\cL(\cX)$ to $\cB$.
+\begin{definition}
+	\label{defn:expectationofLXontoB}
+	Given a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state $(\cX, \ocX, p)$, we define the linear map $E_{\cL(\cX)} : \cL(\cX) \to \cB$ by
+	\[
+		E_{\cL(\cX)}(T) = p(T(1_\cB \oplus 0))
+	\]
+	for all $T \in \cL(\cX)$.
+	We call $E_{\cL(\cX)}$ the \emph{expectation of $\cL(\cX)$ onto $\cB$}.
+\end{definition}
+The following important properties justify calling $E_{\cL(\cX)}$ an expectation.
+
+\begin{proposition}
+	\label{prop:propertiesofEforLX}
+	Let $(\cX, \ocX, p)$ be a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state.
+	Then
+	\[
+		E_{\cL(\cX)}(L_{b_1} R_{b_2} T) = b_1 E_{\cL(\cX)}(T) b_2
+	\]
+	for all $b_1, b_2 \in \cB$ and $T \in \cL(\cX)$, and
+	\[
+		E_{\cL(\cX)}(TL_b) = E_{\cL(\cX)}(TR_b)
+	\]
+	for all $b \in \cB$ and $T \in \cL(\cX)$.
+\end{proposition}
+
+\begin{proof}
+	If $b_1, b_2 \in \cB$ and $T \in \cL(\cX)$, we see that
+	\begin{align*}
+		E_{\cL(\cX)}(L_{b_1} R_{b_2} T)
+		&= p(L_{b_1} R_{b_2} T(1_\cB \oplus 0))
+		= p(L_{b_1} R_{b_2} (E(T) \oplus \eta)) \\
+		&\qquad\qquad = p( (b_1 E(T) b_2) \oplus (b_1 \cdot \eta \cdot b_2))
+		= b_1 E(T) b_2
+	\end{align*}
+	for some $\eta \in \ocX$. The second result holds as $L_b(1_\cB\oplus 0) = b = R_b(1_\cB\oplus0)$.
+\end{proof}
+
+To complete this section, we recall the construction of the reduced free product of $\cB$-$\cB$-bimodules with specified $\cB$-vector states.
+This will be similar in spirit to the construction of a free product of vector spaces with specified state vectors from Subsection~\ref{ssec:freeind}.
+
+\begin{construction}
+	\label{cons:freeproductconstruction}
+	Let $\set{(\cX_{\iota}, \ocX_{\iota}, p_{\iota})}_{\iota \in \I}$ be $\cB$-$\cB$-bimodules with specified $\cB$-vector states.
+	For simplicity, let $E_{\iota}$ denote $E_{\cL(\cX_{\iota})}$.
+	The \emph{free product of $\set{(\cX_{\iota}, \ocX_{\iota}, p_{\iota})}_{\iota \in \I}$ with amalgamation over $\cB$} is defined to be the $\cB$-$\cB$-bimodule with specified vector state $(\cX, \ocX, p)$
+	where $\cX = \cB \oplus \ocX$ and $\ocX$ is the $\cB$-$\cB$-bimodule
+	\begin{align*}
+		\ocX=\bigoplus_{n\geq 1}\bigoplus_{k_1\neq k_2\neq\cdots\neq k_n} \ocX_{k_1}\otimes_\cB\cdots\otimes_\cB\ocX_{k_n}
+	\end{align*}
+	with the left and right actions of $\cB$ on $\ocX$ defined by
+	\begin{align*}
+		b \cdot (x_1\otimes\cdots\otimes x_n) &= (L_b x_1)\otimes\cdots\otimes x_n\\
+		(x_1\otimes\cdots\otimes x_n) \cdot b&= x_1\otimes\cdots\otimes (R_b x_n).
+	\end{align*}
+	We use $\st_{\iota \in \I} \cX_{\iota}$ to denote $\cX$.
+
+	For each $\iota \in \I$, we define the left representation $\lambda_{\iota} : \cL_\ell(\cX_{\iota}) \to \cL(\cX)$ as follows:
+	let
+	\[
+		W_{\iota} : \cX \to \cX_{\iota} \otimes_\cB \paren{\cB\oplus \bigoplus_{n\geq 1}\bigoplus_{\substack{k_1\neq k_2\neq \cdots \neq k_n\\k_1\neq k}} \ocX_{k_1}\otimes_\cB\cdots\otimes_\cB\ocX_{k_n}}
+	\]
+	be the $\cB$-$\cB$-bimodule isomorphism defined analogously to $W_\iota$ from Subsection~\ref{ssec:freeind}, and set
+	\[
+		\lambda_{\iota}(T) = W_{\iota}^{-1}(T \otimes I)W_{\iota}.
+	\]
+	Note that this is unambiguous precisely because $T \in \cL_\ell(\cX_\iota)$, so we have
+	$$(T\otimes I)(x\cdot b)\otimes \xi = (Tx)\cdot b \otimes \xi = (T\otimes I)(x \otimes b\cdot \xi).$$
+	We can compute $\lambda_\iota(T)$ explicitly: for $b \in \cB$ and $T \in \cL_\ell(\cX_\iota)$,
+	\begin{align*}
+		\lambda_{\iota}(T) (b) = E_{k}(T)b + (T-L_{E_{\iota}(T)})b,
+	\end{align*}
+	while
+	\begin{align*}
+		\lambda_{\iota}(T) (x_1\otimes\cdots \otimes x_n) =\left\{
+			\begin{array}{ll}
+				\paren{L_{p_{k}(Tx_1)} x_2\otimes\cdots\otimes x_n } + \paren{
+				[(1-p_{k})Tx_1]\otimes\cdots \otimes x_n } & \text{if }x_1\in \ocX_{\iota}\\
+				\paren{L_{E_{k}(T)} x_1\otimes\cdots\otimes x_n} + \paren{[(T-L_{E_{k}(T)})1_\cB]\otimes x_1\otimes\cdots\otimes x_n } & \text{if }x_1\not\in\ocX_{\iota}
+		\end{array}\right..
+	\end{align*}
+	Here as usual we interpret a tensor product of length zero as the vector $1_{\cB}$.
+	Observe that $\lambda_{\iota}$ is a homomorphism, $\lambda_{\iota}(L_b)=L_b$, and $\lambda_{\iota}(\cL_\ell(\cX_{\iota})) \subseteq \cL_\ell(\cX)$.
+
+	Similarly, for each $\iota \in \I$, we define the map $\rho_{\iota} : \cL_r(\cX_{\iota}) \to \cL(\cX)$ as follows:
+	let
+	\[
+		U_{\iota} : \cX \to \paren{\cB\oplus\bigoplus_{n\geq1}\bigoplus_{\substack{k_1\neq k_2\neq\cdots\neq k_n\\ k_n \neq k}}
+		\ocX_{k_1}\otimes_\cB\cdots\otimes_\cB\ocX_{k_n}} \otimes_\cB \cX_{\iota}
+	\]
+	be the $\cB$-$\cB$-bimodule isomorphism analogous to $U_\iota$ in Subsection~\ref{ssec:freeind}, and define
+	\[
+		\rho_{\iota}(T) = U_{\iota}^{-1}(I \otimes T)U_{\iota};
+	\]
+	again this is well-defined precisely because $T$ commutes with the left action of $\cB$.
+	As before, we find
+	\begin{align*}
+		\rho_{\iota}(T)(b) = b E_{\iota}(T) + (T-R_{E_{\iota}(T)}) b,
+	\end{align*}
+	and
+	\begin{align*}
+		\rho_{\iota}(T)(x_1\otimes\cdots \otimes x_n)=\left\{
+			\begin{array}{cl}
+				\paren{x_1\otimes\cdots\otimes R_{p_{k}(T x_n)}x_{n-1}}
+				+ \paren{x_1\otimes\cdots \otimes [(1-p_{k})Tx_n]} & \text{if }x_n\in \ocX_{\iota}\\
+				\paren{x_1\otimes\cdots\otimes R_{E_{\iota}(T)}x_n}
+				+ \paren{x_1\otimes\cdots\otimes x_n\otimes [(T-R_{E_{\iota}(T)})1_\cB]} & \text{if }x_n\not\in\ocX_{\iota}
+		\end{array}\right.,
+	\end{align*}
+	for all $T \in \cL(\cX_{\iota})$.
+	Clearly $\rho_{\iota}$ is a homomorphism, $\rho_{\iota}(R_b)=R_b$, and $\rho_{\iota}(\cL_r(\cX_{\iota})) \subseteq \cL_r(\cX)$.
+
+
+
+
+	In addition, note that if $T \in \cL_\ell(\cX_{\iota})$ then
+	\begin{align*}
+		E_{\cL(\cX)}(\lambda_{\iota}(T))=p(\lambda_{\iota}(T)1_\cB)= p( E_{\iota}(T)+ [T-L_{E_{\iota}(T)}]1_\cB ) = E_{\iota}(T)
+	\end{align*}
+	and similarly $E_{\cL(\cX)}(\rho_{\iota}(T)) = E_{\iota}(T)$ if $T \in \cL_r(\cX_\iota)$.
+	Hence, the above shows that $\cL(\cX)$ contains each $\cL(\cX_{\iota})$ in a left-preserving, right-preserving, state-preserving way.
+\end{construction}
+
+With computation, we see that $\lambda_i(T)$ and $\rho_j(S)$ commute when $T \in \cL_{\ell}(\cX_i)$, $S \in \cL_r(\cX_j)$, and $i \neq j$.
+Indeed, notice if $b \in \cB$ then
+\begin{align*}
+	& \lambda_i(T) \rho_j(S) b \\
+	&= \lambda_i(T) \paren{b E_j(S) + (S-R_{E_j(S)}) b
+	} \\
+	&= E_{i}(T)bE_j(S) + (T-L_{E_i(T)})bE_j(S) + L_{E_i(T)}(S-R_{E_j(S)}) b
+	+ \paren{[(T-L_{E_{i}(T)})1_\cB] \otimes [(S-R_{E_j(S)}) b]
+	},
+\end{align*}
+whereas
+\begin{align*}
+	&
+	\rho_j(S) \lambda_i(T)b \\
+	&= \rho_j(S) \paren{ E_{i}(T)b + (T-L_{E_i(T)})b} \\
+	&= E_{i}(T)b E_j(S) + (S-R_{E_j(S)})E_{i}(T)b +
+	R_{E_j(S)} (T-L_{E_i(T)})b +
+	\paren{[(T-L_{E_{i}(T)})b] \otimes [(S-R_{E_j(S)}) 1_\cB]
+	}.
+\end{align*}
+Since $T \in \cL_{\ell}(\cX_i)$ and $S \in \cL_r(\cX_j)$, one sees that
+\begin{align*}
+	L_{E_i(T)}(S-R_{E_j(S)}) b = (S-R_{E_j(S)})L_{E_i(T)} b = (S-R_{E_j(S)})E_i(T) b,\\
+	R_{E_j(S)} (T-L_{E_i(T)})b = (T-L_{E_i(T)}) R_{E_j(S)} b =
+	(T-L_{E_i(T)})bE_j(S),
+\end{align*}
+and
+\begin{align*}
+	[(T-L_{E_{i}(T)})b] \otimes [(S-R_{E_j(S)}) 1_\cB] & = [(T-L_{E_{i}(T)})R_b 1_\cB] \otimes [(S-R_{E_j(S)}) 1_\cB] \\
+	& = [R_b(T-L_{E_{i}(T)}) 1_\cB] \otimes [(S-R_{E_j(S)}) 1_\cB] \\
+	& = [(T-L_{E_{i}(T)}) 1_\cB] \otimes [L_b(S-R_{E_j(S)}) 1_\cB] \\
+	& = [(T-L_{E_{i}(T)}) 1_\cB] \otimes [(S-R_{E_j(S)}) L_b1_\cB] \\
+	& = [(T-L_{E_{i}(T)})1_\cB] \otimes [(S-R_{E_j(S)}) b] .
+\end{align*}
+Thus $\lambda_i(T) \rho_j(S) b = \rho_j(S) \lambda_i(T) b$.
+Similar computations show $\lambda_i(T)$ and $\rho_j(T)$ commute on $\ocX_i$, $\ocX_j$, and $\ocX_i \otimes \ocX_j$, and it is trivial to see that $\lambda_i(T)$ and $\rho_j(T)$ commute on all other components of $\ocX$.
+
+Note that $\lambda_i(T)$ and $\rho_i(S)$ need not commute, though their commutator will be supported on $\cB \oplus \ocX_i$ and there will be equal to the commutator $[T, S]$.
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Abstract Structures for Bi-Free Probability with Amalgamation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Abstract structures for bi-free probability with amalgamation.}
+
+The purpose of this section is to develop an abstract notion of the pair $(\cL(\cX), E_{\cL(\cX)})$.
+Based on the previous section and Proposition \ref{prop:propertiesofEforLX}, we make the following definition.
+\begin{definition}
+	\label{defn:BBncps}
+	A \emph{$\cB$-$\cB$-non-commutative probability space} is a triple $(\A, E_\A, \varepsilon)$ where $\A$ is a unital algebra, $\varepsilon : \cB \otimes \cB^{\mathrm{op}} \to \A$ is a unital homomorphism such that $\varepsilon|_{\cB \otimes 1_\cB}$ and $\varepsilon|_{1_\cB \otimes \cB^{\mathrm{op}}}$ are injective, and $E_\A : \A \to \cB$ is a unital linear map such that
+	\[
+		E_{\A}(\varepsilon(b_1 \otimes b_2)T) = b_1 E_{\A}(T) b_2
+	\]
+	for all $b_1, b_2 \in \cB$ and $T \in \A$, and
+	\[
+		E_{\A}(T\varepsilon(b \otimes 1_\cB)) = E_{\A}(T\varepsilon(1_\cB \otimes b))
+	\]
+	for all $b \in \cB$ and $T \in \A$.
+
+	In addition, we define the unital subalgebras $\A_\ell$ and $\A_r$ of $\A$ by
+	\begin{align*}
+		\A_\ell &:= \set{ T \in \A
+		\, \mid \, T\varepsilon(1_\cB \otimes b) = \varepsilon(1_\cB \otimes b) T \text{ for all }b \in \cB}\\
+		\A_r &:= \set{ T \in \A
+		\, \mid \, T\varepsilon(b \otimes 1_\cB) = \varepsilon(b \otimes 1_\cB) T \text{ for all }b \in \cB}.
+	\end{align*}
+	We call $\A_\ell$ and $\A_r$ the \emph{left} and \emph{right algebras} of $\A$, respectively.
+\end{definition}
+
+If $(\cX, \ocX, p)$ is a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state, we see via Proposition \ref{prop:propertiesofEforLX} that $(\cL(\cX), E_{\cL(\cX)}, \varepsilon)$ is a $\cB$-$\cB$-non-commutative probability space where $E_{\cL(\cX)}$ is as in Definition \ref{defn:expectationofLXontoB} and $\varepsilon : \cB \otimes \cB^{\mathrm{op}} \to \cB$ is defined by $\varepsilon(b_1 \otimes b_2) = L_{b_1} R_{b_2}$.
+As such, in an arbitrary $\cB$-$\cB$-non-commutative probability space $(\A, E_\A, \varepsilon)$, we will often use
+$L_b$ instead of $\varepsilon(b \otimes 1)$ and $R_b$ instead of $\varepsilon(1 \otimes b)$, in which case $L_b \in \A_\ell$ and $R_b \in \A_r$ for all $b \in \cB$.
+For $b \in \cB$, we will call $L_b$ a \emph{left $\cB$-operator} and $R_b$ a \emph{right $\cB$-operator}.
+
+It may appear that Definition~\ref{defn:BBncps} is incompatible with the notion of a $\cB$-probability space in free probability: that is, a pair $(\A, \E)$ where $\A$ is a unital algebra containing $\cB$, and $\E : \A \to \cB$ is a linear map such that $\E(b_1Tb_2) = b_1\E(T)b_2$ for all $b_1, b_2 \in \cB$ and $T \in \A$.
+However, $\A$ is a $\cB$-$\cB$-bimodule by left and right multiplication by $\cB$, and $\A$ can be made into a $\cB$-$\cB$-bimodule with specified $\cB$-vector state via $p = \E$ and $\ocX = \ker(\E)$.
+Hence the above discussion implies $\cL(\A)$ is a $\cB$-$\cB$-non-commutative probability space with
+\[
+	E_{\cL(\A)}(T) = \E(T)
+\]
+for all $T \in \cL(\A)$.
+In addition, we can view $\A$ as a unital subalgebra of both $\cL_\ell(\A)$ and $\cL_r(\A)$ by left and right multiplication on $\A$ respectively.
+
+
+Viewing $\A \subseteq \cL_\ell(\A)$, it is clear we can recover the joint $\cB$-moments of elements of $\A$ from $E_{\cL(\A)}$.
+Indeed, for $T \in \A \subseteq \cL_\ell(\A)$ we have
+\[
+	E_{\cL(\A)}(L_{b_1} T L_{b_2}) = E_{\cL(\A)}(L_{b_1} T R_{b_2}) = E_{\cL(\A)}(L_{b_1} R_{b_2} T) = b_1 E_{\cL(\A)}(T) b_2,
+\]
+which is consistent with the defining property of $\E$.
+In particular, the same proof shows $(\A_\ell, E)$ is a $\cB$-non-commutative probability space and $(\A_r, E)$ is a $\cB^{\mathrm{op}}$-non-commutative probability space.
+
+One should note that Definition~\ref{defn:BBncps} differs slightly from \cite{voiculescu2014free}*{Definition 8.3}.
+However, given Proposition \ref{prop:propertiesofEforLX} and the following result which demonstrates that a $\cB$-$\cB$-non-commutative probability space embeds into $\cL(\cX)$ for a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state $\cX$, Definition \ref{defn:BBncps} indeed specifies the correct abstract objects to study.
+
+\begin{theorem}
+	\label{thm:representingbbncps}
+	Let $(\A, E_\A, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space.
+	Then there exists a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state $(\cX, \ocX, p)$ and a unital homomorphism $\theta : \A \to \cL(\cX)$ such that 
+	\[
+		\theta(L_{b_1} R_{b_2}) = L_{b_1} R_{b_2}, \quad \theta(\A_\ell) \subseteq \cL_\ell(\cX), \quad
+		\theta(\A_r) \subseteq \cL_r(\cX), \quad
+		\text{and} \quad
+		E_{\cL(\cX)}(\theta(T)) = E_\A(T)
+	\]
+	for all $b_1, b_2 \in \cB$ and $T \in \A$.
+\end{theorem}
+
+\begin{proof}
+	Consider the vector space $\cX = \cB \oplus \cY$, where
+	\[
+		\cY = \ker(E_\A) / \mathrm{span}\set{TL_b - TR_b \, \mid \, T \in \A, b \in \cB}.
+	\]
+	Note $\cY$ is a well-defined quotient vector space since $E_{\A}(TL_b - TR_b) = 0$ by Definition \ref{defn:BBncps}.
+	We will postpone describing the $\cB$-$\cB$-module structure on $\cX$ until later in the proof.
+
+	Let $q : \ker(E_\A) \to \cY$ denote the canonical quotient map.
+	Then, for $T, A \in \A$ with $E_\A(A) = 0$ and $b \in \cB$, we define $\theta(T) \in \cL(\cX)$ by
+	\[
+		\theta(T)(b) = E_\A(TL_b) \oplus q(TL_b - L_{E_\A(TL_b)})
+	\]
+	and
+	\[
+		\theta(T)(q(A)) = E_\A(TA) \oplus q(TA - L_{E_\A(TA)}).
+	\]
+	Note that $\mathrm{span}\set{TL_b - TR_b \, \mid \, T \in \A, b \in \cB}$ is a left-ideal in $\A$, so $q(A) = 0$ implies $q(TA) = 0$ and thus $\theta$ is well-defined.
+
+
+
+	We wish to show that $\theta$ is a homomorphism; it is immediate that $\theta$ is linear.
+	To see that $\theta$ is multiplicative, fix $T, S \in \A$.
+	If $b \in \cB$, then
+	\[
+		\theta(T)(b) = E_\A(TL_b) \oplus q(TL_b - L_{E(_{\A}TL_b)}).
+	\]
+	Thus
+	\begin{align*}
+		\theta(S)(\theta(T)(b))
+		= & \,\,E_{\A}(SL_{E_{\A}(TL_b)}) \oplus q\paren{SL_{E_{\A}(TL_b)} - L_{E_{\A}(SL_{E_{\A}(TL_b)})}
+		} \\
+		& + E_{\A}(S (TL_b - L_{E_{\A}(TL_b)})) \oplus q\paren{S(TL_b - L_{E_{\A}(TL_b)}) - L_{E_{\A}(S(TL_b - L_{E_{\A}(TL_b)}))}
+		}
+		\\
+		= & \,\,E_{\A}(STL_b) \oplus q\paren{STL_b - L_{E_{\A}(STL_b)}}
+		\\
+		= & \,\,\theta(ST)(b).
+	\end{align*}
+	Similarly, if $q(A)\in \cY$ then
+	\[
+		\theta(T)(q(A)) = E_{\A}(TA) \oplus q(TA - L_{E_{\A}(TA)}).
+	\]
+	Thus
+	\begin{align*}
+		\theta(S)(\theta(T)(q(A))) = &\,\, E_{\A}\paren{SL_{E_{\A}(TA)}} \oplus q\paren{SL_{E_{\A}(TA)} - L_{E_{\A}(SL_{E_{\A}(TA)})} } \\
+		& + E_{\A}(S(TA - L_{E_{\A}(TA)})) \oplus q(S(TA - L_{E_{\A}(TA)}) - L_{E_{\A}(S(TA - L_{E_{\A}(TA)}))} )\\
+		= & \,\,E_{\A}(STA) \oplus q\paren{ STA - L_{E_{\A}(STA)}} \\
+		= & \,\,\theta(ST)(q(A)).
+	\end{align*}
+	Hence $\theta$ is a homomorphism.
+
+
+
+
+
+
+	To make $\cX$ a $\cB$-$\cB$-bimodule, we define
+	\[
+		b \cdot \xi = \theta(L_b)(\xi) \qquad \text{and}\qquad \xi \cdot b = \theta(R_b)(\xi)
+	\]
+	for all $\xi \in \cX$ and $b \in \cB$; thus we automatically have $\theta(L_{b_1}R_{b_2}) = L_{b_1}R_{b_2}$.
+
+
+	To demonstrate that $\cX$ is indeed a $\cB$-$\cB$-bimodule with a specified vector state, we must show that $\cY$ is invariant under this $\cB$-$\cB$-bimodule structure, and that the $\cB$-$\cB$-bimodule structure when restricted to $\cB \subseteq \cX$ is the canonical one.
+	If $b, b' \in \cB$ and $q(A) \in \cY$, then
+	\[
+		\theta(L_b)(b') = E_{\A}(L_b L_{b'}) \oplus q(L_b L_{b'} - L_{E_{\A}(L_b L_{b'})}) = bb' \oplus q(L_{bb'} - L_{bb'}) = bb' \oplus 0
+	\]
+	and
+	\begin{align*}
+		\theta(L_b)(q(A)) &= E_{\A}(L_b A) \oplus q(L_b A - L_{E_{\A}(L_b A)})\\
+		&= bE_{\A}(A) \oplus q(L_b A - L_{E_{\A}(L_b A)}) = 0 \oplus q(L_b A - L_{E_{\A}(L_b A)}).
+	\end{align*}
+	Similarly,
+	\[
+		\theta(R_b)(b') = E_{\A}(R_b L_{b'}) \oplus q(R_b L_{b'} - L_{E_{\A}(R_b L_{b'})}) = b'b \oplus q(L_{b'}R_b - L_{b'}L_{b}) = b'b \oplus 0
+	\]
+	and
+	\begin{align*}
+		\theta(R_b)(q(A)) &= E_{\A}(R_b A) \oplus q(R_b A - L_{E(R_b A)})\\
+		&= E_{\A}(A)b \oplus q(R_b A - L_{E_{\A}(R_b A)}) = 0 \oplus q(R_b A - L_{E_{\A}(R_b A)}).
+	\end{align*}
+	Thus $\cX$ is a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state.
+
+	Since $\theta$ is a homomorphism, it is clear that $\theta(\A_\ell) \subseteq \cL_\ell(\cX)$ and $\theta(\A_r) \subseteq \cL_r(\cX)$ due to the definition of the $\cB$-$\cB$-bimodule structure on $\cX$.
+	Finally, if $T \in \A$ then
+	\[
+		E_{\cL(\cX)}(\theta(T)) = p(\theta(T) (1_\cB \oplus 0)) = p(E_\A(T) \oplus q(T - L_{E_\A(T)})) = E_\A(T).\qedhere
+	\]
+\end{proof}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Abstract Structures for Bi-Free Probability with Amalgamation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bi-free families of pairs of $\cB$-faces.}
+
+
+With the notion of a $\cB$-$\cB$-non-commutative probability space from Definition \ref{defn:BBncps}, we are now able to define the main concept of this chapter, following \cite{voiculescu2014free}*{Definition 8.5}.
+\begin{definition}
+	\label{defn:pairofBfaces}
+	Let $(\A, E_\A, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space.
+	A \emph{pair of $\cB$-faces of $\A$} is a pair $(C, D)$ of unital subalgebras of $\A$ such that
+	\[
+		\varepsilon(\cB \otimes 1_\cB) \subseteq C \subseteq \A_\ell \qquad \mathrm{and}\qquad \varepsilon(1_\cB \otimes \cB^{op}) \subseteq D \subseteq \A_r.
+	\]
+
+	A family $\set{(C_\iota, D_\iota)}_{\iota \in \I}$ of pairs of $\cB$-faces of $\A$ is said to be \emph{bi-free with amalgamation over $\cB$} (or simply \emph{bi-free over $\cB$}) if there exist $\cB$-$\cB$-bimodules with specified $\cB$-vector states $\set{(\cX_\iota, \ocX_\iota, p_\iota)}_{\iota \in \I}$ and unital homomorphisms $l_\iota : C_\iota \to \cL_{\ell}(\cX_\iota)$, $r_\iota : D_\iota \to \cL_{r}(\cX_\iota)$ such that the joint distribution of $\set{(C_\iota, D_\iota)}_{\iota \in \I}$ with respect to $E_\A$ is equal to the joint distribution of the images $\set{((\lambda_\iota \circ l_\iota)(C_\iota), (\rho_\iota \circ r_\iota)(D_\iota))}_{\iota \in \I}$ inside $\cL(\st_{\iota \in \I} \cX_\iota)$ with respect to $E_{\cL(\st_{\iota \in \I} \cX_\iota)}$.
+\end{definition}
+
+It will be an immediate consequence of Theorem \ref{thm:bifreeequivalenttouniversalpolys} that the selection of representations in Definition \ref{defn:pairofBfaces} does not matter (see \cite{voiculescu2014free}*{Proposition 2.9}).
+Note that if $\set{(C_\iota, D_\iota)}_{\iota \in \I}$ is bi-free over $\cB$, then $\set{C_\iota}_{\iota \in \I}$ is free with amalgamation over $\cB$ (as is $\set{D_\iota}_{\iota \in \I}$) and $C_i$ and $D_j$ commute in distributions whenever $i \neq j$.
+
+To conclude this section, we give the following example.
+\begin{example}
+	Let $(M_1, \tau_1)$ and $(M_2, \tau_2)$ be $\mathrm{II}_1$ factors, and $(N, \tau_N)$ a common von Neumann sub-algebra.
+	Then if $M = M_1 \st_N M_2$ is their amalgamated free product as von Neumann algebras, $L^2(M)$ has the structure of an $N$-$N$-bimodule via left and right multiplication.
+	If we take $p$ to be the orthogonal projection of $L^2(M)$ onto $L^2(N)$, this makes $(L^2(M), L^2(N)^\perp, p)$ into a an $N$-$N$-bimodule with specified $B$-vector state.
+	Then taking $\lambda_i$ and $\rho_i$ to be the left and right representations of $M_i$ on $M$, we find that $(\lambda_1(M_1), \rho_1(M_1))$ and $(\lambda_2(M_2), \rho_2(M_2))$ are bi-free with amalgamation over $N$ in $\cL\paren{L^2(M)}$.
+\end{example}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	    Operator-Valued Bi-Multiplicative Functions	   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Operator-valued bi-multiplicative functions.}
+\label{sec:OperatorValuedBiMultiplicativeFunctions}
+
+
+
+
+
+In this section, we will develop a notion of $\cB$-valued bi-multiplicative functions in order to study $\cB$-$\cB$-non-commutative probability spaces (compare \cite{nica2002operator}*{Section 2} or \cite{speicher1998combinatorial}*{Section 2}).
+Our goal is once again to use this theory to understand operator-valued bi-free cumulants.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definition of bi-multiplicative functions.}
+We begin by examining the operator-valued generalization of the multiplicative functions used in Chapter~\ref{ch:bfi}.
+
+\begin{definition}
+	\label{defnbimultiplicative}
+	Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let 
+	\[
+		\Phi : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+	\]
+	be a function that is linear in each $\A_{\chi(k)}$.
+	We say that $\Phi$ is \emph{bi-multiplicative} if for every $\chi : [n] \to \slr$, $T_k \in \A_{\chi(k)}$, $b \in \cB$, and $\pi \in \BNC(\chi)$, the following four conditions hold:
+	\begin{enumerate}[label=(\roman*)]
+		\item\label{def:bimult:i} Let
+			\[
+				q = \max\set{ k \in [n] \, \mid \, \chi(k) \neq \chi(n)}.
+			\]
+			If $\chi(n) = \ell$ then
+			\[
+				\Phi_{1_\chi}(T_1, \ldots, T_{n-1}, T_nL_b) = \left\{
+					\begin{array}{ll}
+						\Phi_{1_\chi}(T_1, \ldots, T_{q-1}, T_q R_b, T_{q+1}, \ldots, T_n) & \text{if } q \neq -\infty
+						\\
+						\Phi_{1_\chi}(T_1, \ldots, T_{n-1}, T_n)b & \text{if } q = -\infty
+				\end{array} \right. .
+			\]
+			If $\chi(n) = r$ then 
+			\[
+				\Phi_{1_\chi}(T_1, \ldots, T_{n-1}, T_nR_b) = \left\{
+					\begin{array}{ll}
+						\Phi_{1_\chi}(T_1, \ldots, T_{q-1}, T_q L_b, T_{q+1}, \ldots, T_n) & \text{if } q \neq -\infty
+						\\
+						b\Phi_{1_\chi}(T_1, \ldots, T_{n-1}, T_n) & \text{if } q = -\infty
+				\end{array} \right. .
+			\]
+
+		\item\label{def:bimult:ii} Let $p \in [n]$, and let
+			\[
+				r = \max\set{ k \in [n] \, \mid \, \chi(k) = \chi(p), k < p}.
+			\]
+			If $\chi(p) = \ell$ then
+			\[
+				\Phi_{1_\chi}(T_1, \ldots, T_{p-1}, L_bT_p, T_{p+1}, \ldots, T_n) = \left\{
+					\begin{array}{ll}
+						\Phi_{1_\chi}(T_1, \ldots, T_{q-1}, T_qL_b, T_{q+1}, \ldots, T_n) & \text{if } q \neq -\infty
+						\\
+						b \Phi_{1_\chi}(T_1, T_2, \ldots, T_n) & \text{if } q = -\infty
+				\end{array} \right. .
+			\]
+			If $\chi(p) = r$ then
+			\[
+				\Phi_{1_\chi}(T_1, \ldots, T_{p-1}, R_bT_p, T_{p+1}, \ldots, T_n) = \left\{
+					\begin{array}{ll}
+						\Phi_{1_\chi}(T_1, \ldots, T_{q-1}, T_qR_b, T_{q+1}, \ldots, T_n) & \text{if } q \neq -\infty
+						\\
+						\Phi_{1_\chi}(T_1, T_2, \ldots, T_n) b & \text{if } q = -\infty
+				\end{array} \right. .
+			\]
+
+		\item\label{def:bimult:iii} 
+			Suppose that $V_1, \ldots, V_m$ are $\chi$-intervals which partition $[n]$ so that $\pi \leq \set{V_1, \ldots, V_m}$.
+			Further, suppose $V_1 \prec_\chi \ldots \prec_\chi V_m$ (i.e., the relation $\prec_\chi$ holds for every choice of elements from these sets).
+			Then
+			\[
+				\Phi_\pi(T_1, \ldots, T_n) = \Phi_{\pi|_{V_1}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cdots \Phi_{\pi|_{V_m}}\paren{(T_1, \ldots, T_n)|_{V_m}}.
+			\]
+
+		\item\label{def:bimult:iv} Suppose that $V$ and $W$ partition $[n]$, $\pi \leq \set{V, W}$, and $V$ is a $\chi$-interval which is inner in $\set{V,W}$ in the sense of Subsection~\ref{ss:condbifree}.
+			Let
+			\[
+				\theta = \max_{\prec_\chi}\paren{\set{k \in W
+				\, \mid \, k \prec_\chi \min_{\prec_\chi}(V)}} \qquad\text{ and } \qquad \gamma = \min_{\prec_\chi}\paren{\set{k \in W
+				\, \mid \, \max_{\prec_\chi}(V) \prec_\chi k}}.
+			\]
+			Then
+			\begin{align*}
+				\Phi_\pi(T_1, \ldots, T_n) &= \left\{
+					\begin{array}{ll}
+						\Phi_{\pi|_{W}}\paren{\paren{T_1, \ldots, T_{\theta-1}, T_\theta L_{\Phi_{\pi|_{V}}\paren{(T_1,\ldots, T_n)|_{V}}}, T_{\theta+1}, \ldots, T_n}|_{W}}
+						& \text{if } \chi(\theta) = \ell \\
+						\Phi_{\pi|_{W}}\paren{\paren{T_1, \ldots, T_{\theta-1}, R_{\Phi_{\pi|_{V}}\paren{(T_1,\ldots, T_n)|_{V}}} T_\theta, T_{\theta+1}, \ldots, T_n}|_{W}}
+						& \text{if } \chi(\theta) = r 
+				\end{array} \right. \\
+				&= \left\{
+					\begin{array}{ll}
+						\Phi_{\pi|_{W}}\paren{\paren{T_1, \ldots, T_{\gamma-1},
+						L_{\Phi_{\pi|_{V}}\paren{(T_1,\ldots, T_n)|_{V}}} T_\gamma, T_{\gamma+1}, \ldots, T_n}|_{W}}
+						& \text{if } \chi(\gamma) = \ell
+						\\
+						\Phi_{\pi|_{W}}\paren{\paren{T_1, \ldots, T_{\gamma-1}, T_\gamma R_{\Phi_{\pi|_{V}}\paren{(T_1,\ldots, T_n)|_{V}}}, T_{\gamma+1}, \ldots, T_n}|_{W}} & \text{if } \chi(\gamma) = r
+				\end{array} \right. .
+			\end{align*}
+	\end{enumerate}
+\end{definition}
+
+
+
+
+
+
+
+\begin{example}
+	Suppose that $\Phi$ is a bi-multiplicative function, and that $\chi : [5] \to \slr$ corresponds to the sequence $(\ell, \ell, r, \ell, r)$.
+	Using Properties~\ref{def:bimult:i} and \ref{def:bimult:ii}, we obtain that
+	$$\Phi_\pi(T_1, L_{b_1}T_2, R_{b_2}T_3, T_4, T_5 R_{b_3}) = \Phi_\pi(T_1L_{b_1}, T_2, T_3, T_4 L_{b_3}, T_5)b_2.$$
+	This can be thought of as allowing us to move elements of $\cB$ between nodes on the diagram of the corresponding bi-non-crossing partition:
+	\[
+		\begin{tikzpicture}
+			\def\sdz{{-1,-1,1,-1,1}}
+			\def\labelz{{"$T_1$", "$T_2$", "$T_3$", "$T_4$", "$T_5$"}}
+			\foreach \shft in {0,1} {
+				\begin{scope}[xshift=6*\shft cm]
+					\bnc[n=5,sidez=\sdz,labelz=\labelz]
+					\foreach \y in {1, ..., 5} {
+						\draw [thick] (ball\y) -| (ball1 -| 0,0);
+						\coordinate (b\shft\y) at (ball\y);
+					}
+					\coordinate (cl\shft) at (cl);
+					\coordinate (cr\shft) at (cr);
+					\coordinate (tr\shft) at (tr);
+					\coordinate (br\shft) at (br);
+
+					\node [left=0.4cm] at ($ (ball2) ! 0.5 ! (ball1) $) {$L_{b_1}$};
+				\end{scope}
+			}
+			\node at ($ (cl1) ! .5 ! (cr0) $) {$=$};
+
+			\node [above, draw, shade, circle, ball color=gray, inner sep=0.07cm] at (b02) {};
+			\node [below, draw, shade, circle, ball color=gray, inner sep=0.07cm] at (b11) {};
+
+			\node [above, draw, shade, circle, ball color=gray, inner sep=0.07cm] at (b03) {};
+			\node [draw, shade, circle, ball color=gray, inner sep=0.07cm] at (tr1) {};
+			\path (b03) |- node[right=0.4cm] {$R_{b_2}$} ($ (b03) ! 0.5 ! (b02) $);
+			\node [right=0.4cm] at (tr1) {$R_{b_2}$};
+
+			\node [below, draw, shade, circle, ball color=gray, inner sep=0.07cm] at (b05) {};
+			\node [below, draw, shade, circle, ball color=gray, inner sep=0.07cm] at (b14) {};
+			\node [right=0.4cm] at (br0) {$R_{b_3}$};
+			\path (b14) |- node [left=0.4cm] {$L_{b_3}$} ($ (b14) ! 0.5 ! (b15) $);
+
+		\end{tikzpicture}
+	\]
+\end{example}
+
+\begin{example}
+	Again, take $\Phi$ to be a bi-multiplicative function.
+	Suppose $\chi : [8] \to \slr$ corresponds to the sequence $(\ell, r, \ell, \ell, \ell, r, r, \ell)$.
+	Let $\pi = \set{\set{1,3,4}, \set{5,7,8}, \set{2,6}}$ and $\sigma = \set{\set{1,2,6}, \set{3,7}, \set{4,5,8}}$.
+	Then
+	$$\Phi_\pi(T_1, \ldots, T_8) = \Phi_{\pi_1}(T_1, T_3, T_4) \Phi_{\pi_2}(T_5, T_7, T_8) \Phi_{\pi_3}(T_2, T_6),$$
+	and
+	$$\Phi_\sigma(T_1,\ldots, T_8) = \Phi_{\sigma_1}\paren{T_1L_{\Phi_{\sigma_2}\paren{T_3, T_7R_{\Phi_{\sigma_3}(T_4, T_5, T_6)}}}, T_2, T_6}.$$
+	\[
+		\begin{tikzpicture}
+			\def\sdz{{-1,1,-1,-1,-1,1,1,-1}}
+			\def\labelz{{"$T_1$", "$T_2$", "$T_3$", "$T_4$", "$T_5$", "$T_6$", "$T_7$", "$T_8$"}}
+			\begin{scope}[xshift=-3cm]
+				\bnc[n=8,sidez=\sdz,labelz=\labelz]
+				\foreach \y in {1,3,4} {
+					\draw [thick] (ball\y) -| (ball1 -| -0.3,0);
+				}
+				\foreach \y in {5,7,8} {
+					\draw [thick] (ball\y) -| (ball5 -| -0.3,0);
+				}
+				\foreach \y in {2,6} {
+					\draw [thick] (ball\y) -| (ball2 -| 0.3,0);
+				}
+				\node[below] at (bc) {$\pi$};
+			\end{scope}
+			\begin{scope}[xshift=3cm]
+				\bnc[n=8,sidez=\sdz,labelz=\labelz]
+				\foreach \y in {1,2,6} {\draw [thick] (ball\y) -| (ball1 -| 0.5,0);}
+				\foreach \y in {3,7} {\draw [thick] (ball\y) -| (ball3 -| 0,0);}
+				\foreach \y in {4,5,8} {\draw [thick] (ball\y) -| (ball4 -| -0.5,0);}
+				\node[below] at (bc) {$\sigma$};
+			\end{scope}
+		\end{tikzpicture}
+	\]
+	The underlying idea is this: any interval of blocks in $\pi$ may be evaluated with $\Phi$ and replaced by the corresponding element of $\cB$ at the location in the diagram where the block was removed.
+	Only blocks which do not bound other blocks may be reduced in this manner; inner blocks must be reduced first.
+\end{example}
+
+Although Definition \ref{defnbimultiplicative} is cumbersome (due to the necessity of specifying cases based on whether certain terms are left or right operators), its properties can be viewed as direct analogues of those of a multiplicative map as described in \cite{nica2002operator}*{Section 2.2}.
+Indeed, for $\pi \in \BNC(\chi)$ and a bi-multiplicative map $\Phi$, each expression of $\Phi_\pi(T_1, \ldots, T_n)$ in Definition \ref{defnbimultiplicative} comes from viewing $s_\chi^{-1}
+\circ \pi \in NC(n)$, rearranging the $n$-tuple $(T_1, \ldots, T_n)$ to $(T_{s_\chi(1)}, \ldots, T_{s_\chi(n)})$, replacing any occurrences of $L_bT_j$, $T_j L_b$, $R_b T_j$, and $T_j R_b$ with $bT_j$, $T_j b$, $T_j b$, and $bT_j$ respectively, applying one of the properties of a multiplicative map from \cite{nica2002operator}*{Section 2.2}, and reversing the above identifications.
+In particular, these properties reduce to those of a multiplicative map when $\chi^{-1}(\set{\ell}) = [n]$.
+We use the more complex Definition \ref{defnbimultiplicative} as it will be easier to verify for functions later on.
+
+Since a bi-multiplicative function satisfies all of these properties, it is easy to see that if $\Phi$ is bi-multiplicative, then $\Phi_\pi(T_1, \ldots, T_n)$ is determined by the values 
+\[
+	\set{\Phi_{1_{\chi'}}(S_1, \ldots, S_m) \, \mid \, m \in \N, \chi' : \set{1,\ldots, m} \to \slr, S_k \in \A_{\chi(k)}}.
+\]
+There may be multiple ways to reduce $\Phi$ to an expression involving elements from the above set, but Definition \ref{defnbimultiplicative} implies that all such reductions are equal.
+
+Note that Definition \ref{defnbimultiplicative} automatically implies additional properties for bi-multiplicative functions.
+Indeed one can either verify the following proposition via Definition \ref{defnbimultiplicative} and casework, or can appeal to the fact that the properties of bi-multiplicative functions can be described via the properties of multiplicative functions as above, and use the fact that multiplicative functions have additional properties (see, e.g., \cite{speicher1998combinatorial}*{Remark 2.1.3}).
+
+\begin{proposition}
+	\label{propenhancedproperties}
+	Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let
+	\[
+		\Phi : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+	\]
+	be a bi-multiplicative function.
+	Given any $\chi : [n] \to \slr$, $\pi \in \BNC(\chi)$, and $T_k \in \A_{\chi(k)}$ Properties (i) and (ii) of Definition \ref{defnbimultiplicative} hold when $1_\chi$ is replaced with $\pi$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	    Bi-Free Operator-Valued Moment Function is Bi-Multiplicative   	   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bi-free operator-valued moment function is bi-multiplicative.}
+\label{sec:verifyingrecursivedefinitionfromuniversalpolynomialshasdesiredproperties}
+
+In this section, we will define the bi-free operator-valued moment function based on recursively defined functions $E_\pi(T_1,\ldots, T_n)$ that appear via actions on free product spaces.
+However, it is not immediate that it is bi-multiplicative.
+The proof of this result requires substantial case work, to which this section is dedicated.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definition of the bi-free operator-valued moment function.}
+
+We will begin with the recursive definition of expressions that appear in the operator-valued moment polynomials.
+These will arise in the proof of Theorem~\ref{thm:bifreeequivalenttouniversalpolys}, where we will give a characterisation of bi-freeness with amalgamation over $\cB$ akin to that of bi-freeness in Corollary~\ref{cor:bifreemob}.
+
+\begin{definition}
+	\label{defn:recursivedefinitionofEpi}
+	Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space.
+	For $\chi : [n] \to \slr$, $\pi \in \BNC(\chi)$, and $T_1, \ldots, T_n \in \A$, we define $E_\pi(T_1,\ldots, T_n) \in \cB$ via the following recursive process.
+	Let $V$ be the block of $\pi$ that terminates closest to the bottom, so $\min(V)$ is largest among all blocks of $\pi$. Then:
+	\begin{itemize}
+		\item If $\pi$ contains exactly one block (that is, $\pi = 1_\chi)$, we set $E_{1_\chi}(T_1, \ldots, T_n) = E(T_1 \cdots T_n)$.
+
+		\item If $V = \set{k+1, \ldots, n}$ for some $k < n$, then $\min(V)$ is not adjacent to any spines of $\pi$ and we define
+			\[
+				E_\pi(T_1, \ldots, T_n) := \left\{
+					\begin{array}{ll}
+						E_{\pi|_{V^c}}(T_1, \ldots, T_k L_{E_{\pi|_V}(T_{k+1},\ldots, T_n)}) & \text{if } \chi(\min(V)) = \ell
+						\\
+						E_{\pi|_{V^c}}(T_1, \ldots, T_k R_{E_{\pi|_V}(T_{k+1},\ldots, T_n)}) & \text{if } \chi(\min(V)) = r
+				\end{array} \right..
+			\]
+			In the long run, it will not matter if we choose $L$ or $R$ by the first part of this recursive definition and Definition \ref{defn:BBncps}.
+
+		\item Otherwise, $\min(V)$ is adjacent to a spine. Let $W$ denote the block of $\pi$ corresponding to the spine adjacent to $\min(V)$, and
+			let $k$ be the first element of $W$ below where $V$ terminates -- that is, $k$ is the smallest element of $W$ that is larger than $\min(V)$.
+			We define
+			\[
+				E_\pi(T_1, \ldots, T_n) := \left\{
+					\begin{array}{l}
+						E_{\pi|_{V^c}}((T_1, \ldots, T_{k-1}, L_{E_{\pi|_V}((T_{1},\ldots, T_n)|_V)} T_k, T_{k+1}, \ldots, T_n)|_{V^c}) \qquad
+						\\\hfill \text{if } \chi(\min(V)) = \ell \\
+						E_{\pi|_{V^c}}((T_1, \ldots, T_{k-1}, R_{E_{\pi|_V}((T_{1},\ldots, T_n)|_V)} T_k, T_{k+1}, \ldots, T_n)|_{V^c}) \qquad
+						\\\hfill \text{if } \chi(\min(V)) = r
+				\end{array} \right..
+			\]
+	\end{itemize}
+\end{definition}
+Notice that if $\cB = \C$ and $E = \varphi$ is a state, then $E_\pi$ in the above sense is precisely $\varphi_\pi$ in the notation from Chapter~\ref{ch:bfi}.
+
+\begin{example}
+	Let $\pi$ be the following bi-non-crossing partition.
+	\[
+		\begin{tikzpicture}
+			\def\sdz{{-1,1,-1,-1,1,1,-1,1,1}}
+			\bnc[n=9,sidez=\sdz]
+			\foreach \y in {1,2} {\draw [thick] (ball\y) -| (ball1 -| 0,0);}
+			\foreach \y in {3,5,9} {\draw [thick] (ball\y) -| (ball3 -| 0,0);}
+			\foreach \y in {4,7} {\draw [thick] (ball\y) -| (ball4 -| -0.5,0);}
+			\foreach \y in {6,8} {\draw [thick] (ball\y) -| (ball6 -| 0.5,0);}
+		\end{tikzpicture}
+	\]
+	Then
+	\[
+		E_\pi(T_1, \ldots, T_9) = E\paren{T_1T_2 L_{E\paren{T_3 L_{E(T_4T_7)}
+			T_5 R_{E(T_6T_8)} T_9 }}
+		}
+	\]
+	via the following sequence of diagrams (where $X = L_{E\paren{T_3 L_{E(T_4T_7)} T_5 R_{E(T_6T_8)} T_9 }}$):
+	\[
+		\begin{tikzpicture}
+			\def\sdz{{0,-1,1,-1,-1,1,1,-1,1,1}}
+			\def\labelz{{"", "$T_1$", "$T_2$", "$T_3$", "$T_4$", "$T_5$", "$T_6$", "$T_7$", "$T_8$", "$T_9$"}}
+
+			\begin{scope}[xshift=0cm]
+				\def\ord{{1,2,3,4,5,6,7,8,9}}
+				\bnc[n=9,sidez=\sdz,order=\ord,labelz=\labelz]
+				\foreach \y in {1,2} {\draw [thick] (ball\y) -| (ball1 -| 0,0);}
+				\foreach \y in {3,5,9} {\draw [thick] (ball\y) -| (ball3 -| 0,0);}
+				\foreach \y in {4,7} {\draw [thick] (ball\y) -| (ball4 -| -0.5,0);}
+				\foreach \y in {6,8} {\draw [thick] (ball\y) -| (ball6 -| 0.5,0);}
+
+				\draw [thick,->] ($ (cr) + (0.75,0) $) -- ++(0.5,0);
+			\end{scope}
+
+			\begin{scope}[xshift=4cm]
+				\def\ord{{1,2,3,4,5,0,7,0,9}}
+				\bnc[n=9,sidez=\sdz,order=\ord,labelz=\labelz]
+				\foreach \y in {1,2} {\draw [thick] (ball\y) -| (ball1 -| 0,0);}
+				\foreach \y in {3,5,9} {\draw [thick] (ball\y) -| (ball3 -| 0,0);}
+				\foreach \y in {4,7} {\draw [thick] (ball\y) -| (ball4 -| -0.5,0);}
+
+				\node (a1) [draw, shade, circle, ball color=gray, inner sep=0.07cm] at ($ (ball9) + (0,0.25) $) {};
+				\node [right] at (a1) {\scriptsize $R_{E(T_6T_8)}$};
+
+				\draw [thick,->] ($ (cr) + (0.75,0) $) -- ++(0.5,0);
+			\end{scope}
+
+			\begin{scope}[xshift=8cm]
+				\def\ord{{1,2,3,0,5,0,0,0,9}}
+				\bnc[n=9,sidez=\sdz,order=\ord,labelz=\labelz]
+				\foreach \y in {1,2} {\draw [thick] (ball\y) -| (ball1 -| 0,0);}
+				\foreach \y in {3,5,9} {\draw [thick] (ball\y) -| (ball3 -| 0,0);}
+
+				\node (a1) [draw, shade, circle, ball color=gray, inner sep=0.07cm] at ($ (ball9) + (0,0.25) $) {};
+				\node [right] at (a1) {\scriptsize $R_{E(T_6T_8)}$};
+				\node (a2) [draw, shade, circle, ball color=gray, inner sep=0.07cm] at ($ (ball5) + (0,0.25) $) {};
+				\node [right] at (a2) {\scriptsize $L_{E(T_4T_7)}$};
+
+				\draw [thick,->] ($ (cr) + (0.75,0) $) -- ++(0.5,0);
+			\end{scope}
+
+			\begin{scope}[xshift=12cm]
+				\def\ord{{1,2,0,0,0,0,0,0,0}}
+				\bnc[n=9,sidez=\sdz,order=\ord,labelz=\labelz]
+				\foreach \y in {1,2} {\draw [thick] (ball\y) -| (ball1 -| 0,0);}
+
+				\node (a0) [draw, shade, circle, ball color=gray, inner sep=0.07cm] at ($ (ball2) + (0,-0.25) $) {};
+				\node [right] at (a0) {\scriptsize $X$};
+			\end{scope}
+
+		\end{tikzpicture}
+	\]
+\end{example}
+
+Note that the definition of $E_\pi(T_1,\ldots, T_n)$ is invariant under $\cB$-$\cB$-non-commutative probability space embeddings, such as those listed in Theorem \ref{thm:representingbbncps}.
+Observe that in the context of Definition \ref{defn:recursivedefinitionofEpi}, we ignore the notions of left and right operators.
+However, we are ultimately interested in the following.
+
+\begin{definition}
+	Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space.
+	The \emph{bi-free operator-valued moment function}
+	\[
+		\cE : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+	\]
+	is defined by
+	\[
+		\cE_\pi(T_1, \ldots, T_n) = E_\pi(T_1, \ldots, T_n)
+	\]
+	for each $\chi : [n] \to \slr$, $\pi \in \BNC(\chi)$, and $T_k \in \A_{\chi(k)}$.
+\end{definition}
+
+Our next goal is the prove the following which is not apparent from Definition \ref{defn:recursivedefinitionofEpi}.
+
+\begin{theorem}
+	\label{thm:samantha}
+	The operator-valued bi-free moment function $\cE$ on $\A$ is bi-multiplicative.
+\end{theorem}
+
+We divide the proof of the above theorem into several lemmata, verifying various of properties from Definition \ref{defnbimultiplicative}.
+Properties (i) and (ii) are immediate but, unfortunately, the remaining properties are not as easily verified.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Verification of Properties (i) and (ii) from Definition \ref{defnbimultiplicative} for $\cE$}
+
+
+
+\begin{lemma}
+	\label{lemeasy}
+	The operator-valued bi-free moment function $\cE$ satisfies Properties (i) and (ii) of Definition \ref{defnbimultiplicative}.
+\end{lemma}
+
+\begin{proof}
+	This follows from the facts that $\cE_{1_\chi}(T_1, \ldots, T_n) = E(T_1\cdots T_n)$, that left (resp. right) variables commute with $R_b$ (resp. $L_b$) for $b \in \cB$, and that $E(T_1\cdots T_nL_b) = E(T_1\cdots T_nR_b)$.
+\end{proof}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Verification of Property (iii) from Definition~\ref{defnbimultiplicative} for $\cE$.}
+
+\begin{lemma}
+	\label{lemproductofdisjointblocksforE}
+	The operator-valued bi-free moment function $\cE$ satisfies Property (iii) of Definition \ref{defnbimultiplicative}.
+\end{lemma}
+
+\begin{proof}
+	We claim it suffices to consider the case when $\sigma = \set{V_1, \ldots, V_m}$ is the finest partition such that each $V_j$ is a $\chi$-interval and $\pi \leq \sigma$; indeed, given any other $\rho$ with $\pi \leq \rho$ having $\chi$-intervals $W_1 \prec_\chi \cdots \prec_\chi W_{m'}$ as blocks, applying the argument for this restricted case to the blocks of $\rho$ yields
+	$$\cE_{\pi|_{W_1}}((T_i)|_{W_1}) \cdots \cE_{\pi|_{W_{m'}}}((T_i)|_{W_{m'}})
+	= \cE_{\pi|_{V_1}}((T_i)|_{V_1}) \cdots \cE_{\pi|_{V_m}}((T_i)|_{V_m})
+	= \cE_\pi(T_1, \ldots, T_n).$$
+	Note that for $\sigma$ above, it must be the case that $\min_{\prec_\chi}(V_i) \sim_{\pi} \max_{\prec_\chi}(V_i)$, as otherwise a finer partition is possible.
+
+
+	%We now proceed by induction on $m$, the number of blocks in $\sigma$, with the case $m = 1$ being immediate.
+	%Assume Property (iii) of Definition \ref{defnbimultiplicative} is satisfied for $\cE$ for all smaller values of $m$.
+	%Notice that the reductions in the definition of $\cE_\pi$ only depend on the block which is completed nearest the bottom of the diagram, and if it is tangled with another block, that block as well (note that it can be tangled with at most one other block since no block terminates below it).
+
+	We now proceed by induction on $m$, the number of blocks in $\sigma$, with the case $m = 1$ being immediate.
+	Assume Property (iii) of Definition \ref{defnbimultiplicative} is satisfied for $\cE$ for all smaller values of $m$.
+	Fix $V_1, \ldots, V_m$ and note that either $1 \in V_1$ (i.e. $\chi(1) = \ell$) or $1 \in V_m$ (i.e. $\chi(1) = r$).
+	We will treat the case when $1 \in V_1$; for the other case, consult a mirror.
+	Let $V'_1 \subseteq V_1$ be the block of $\pi$ containing $1$ and $\max_{\prec_\chi}(V_1)$.
+	The proof is divided into three cases.
+
+	\paragraph{Case 1: $\min(V_k) > \max(V_1)$ for all $k \neq 1$.}
+
+	As an example of this case, consider the following diagram where $V_1 = \set{1, 2, 3 }$, $V_2 = \set{4, 6}$, and $V_3 = \set{5, 7, 8, 9}$.
+	\[
+		\begin{tikzpicture}[baseline]
+			\def\sidez{{-1,-1,-1,-1,1,-1,1,1,-1}}
+			\def\clrz{{0,0,0,1,2,1,2,2,2}}
+			\bnc[n=9,sidez=\sidez,colourzfrompalette=\clrz]
+			\foreach \y in {1,3} {\draw [thick, pal0] (ball\y) -| (ball1 -| -0.5,0);}
+			\foreach \y in {4,6} {\draw [thick, pal1] (ball\y) -| (ball4 -| -0.5,0);}
+			\foreach \y in {5,9} {\draw [thick, pal2] (ball\y) -| (ball5 -| 0,0);}
+			\foreach \y in {7,8} {\draw [thick, pal2] (ball\y) -| (ball7 -| 0.5,0);}
+		\end{tikzpicture}
+	\]
+
+	In this case, drawing a horizontal line directly beneath $\max(V_1)$ will hit no spines in $\pi$ and $V_1 \subseteq \chi^{-1}(\set{\ell})$.
+	Let $V'_1 = \set{1 = q_1 < q_2 < \cdots < q_p}$ and $V_0 = \bigcup^m_{k=2} V_k$.
+	Repeatedly applying the definition of $E$, we may find $b_1, \ldots, b_{p-1} \in \cB$ depending only on $(T_1, \ldots, T_n)|_{V_1}$ and $\pi|_{V_1}$, so that writing $T'_{q_k} = T_{q_k}L_{b_k}$ we have
+	\[
+		E_\pi(T_1, \ldots, T_n)
+		= E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_{p-1}}T_{q_p} L_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})} }
+		= E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_{p-1}}T_{q_p} R_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})} }.
+	\]
+	By the assumptions in this case, each $T_k \in \A_\ell$ for all $k \in V'_1$ and since right $\cB$-operators commute with elements of $\A_\ell$, we obtain
+	\begin{align*}
+		E_\pi(T_1, \ldots, T_n) &= E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_p}R_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})} }
+		\\
+		&= E\paren{R_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})}T'_{q_1} T'_{q_2} \cdots T'_{q_p} } \\
+		&= E(T'_{q_1} T'_{q_2} \cdots T'_{q_p}) E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0}) \\
+		&=
+		E_{\pi|_{V_1}}((T_1, \ldots, T_n)|_{V_1})E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0}) \\
+		&= \cE_{\pi|_{V_1}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cE_{\pi|_{V_2}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cdots \cE_{\pi|_{V_m}}\paren{(T_1, \ldots, T_n)|_{V_m}}
+	\end{align*}
+	with the last step following by the inductive hypothesis.
+
+	If we are not in Case 1, then there exists a $k \neq 1$ such that $\min(V_k) < \max(V_1)$.
+	In particular, $V_m$ must terminate on the right above $\max(V_1)$, so $\min(V_m) < \max(V_1)$ and $\chi(\min(V_m)) = r$.
+	We thus find that there are two further cases.
+
+	\paragraph{Case 2: $\max(V_1) < \max(V_m)$.}
+	As an example of this case, consider the following diagram where $V_1 = \set{1, 3 }$, $V_2 = \set{4, 6, 7, 8, 9}$, and $V_3 = \set{2, 5}$.
+	\[
+		\begin{tikzpicture}[baseline]
+			\def\sidez{{-1,1,-1,-1,1,1,-1,1,-1}}
+			\def\clrz{{0,2,0,1,2,1,1,1,1}}
+			\bnc[n=9,sidez=\sidez,colourzfrompalette=\clrz]
+			\foreach \y in {1,3} {\draw [thick, pal0] (ball\y) -| (ball1 -| 0,0);}
+			\foreach \y in {2,5} {\draw [thick, pal2] (ball\y) -| (ball5 -| 0.5,0);}
+			\foreach \y in {4,6} {\draw [thick, pal1] (ball\y) -| (ball4 -| 0,0);}
+			\foreach \y in {7,8,9} {\draw [thick, pal1] (ball\y) -| (ball7 -| 0,0);}
+		\end{tikzpicture}
+	\]
+
+	Again $V_1 \subseteq \chi^{-1}(\set{\ell})$, as its lowest element is higher than the lowest element of $V_m$.
+	With the same conventions as above, by repeated application of the rules defining $E$, we obtain
+	\[
+		E_\pi(T_1, \ldots, T_n) = E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_{p_1}} R_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})} T'_{q_{p_1+1}} \cdots T'_{q_{p_2}}},
+	\]
+	where $p_1$ is the smallest element of $V_1'$ greater than $\min(V_m)$.
+	Note that all of the other blocks of $\pi$ are consumed into the block $V_m$: blocks are only consumed into either the lowest block or a block they are tangled with, and not block except $V_m$ may be tangled with $V_1$.
+	By the assumptions in this case, each $T_k \in \A_\ell$ for all $k \in V'_1$, and since right $\cB$-operators commute with elements of $\A_\ell$, one obtains
+	\begin{align*}
+		E_\pi(T_1, \ldots, T_n) &=
+		E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_{p_1}} R_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})} T'_{q_{p_1+1}} \cdots T'_{q_{p_2}}} \\
+		&= E\paren{R_{E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})}T'_{q_1} T'_{q_2} \cdots T'_{q_{p_2}} } \\
+		&= E(T'_{q_1} T'_{q_2} \cdots T'_{q_{p_2}}) E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0}) \\
+		&=
+		E_{\pi|_{V_1}}((T_1, \ldots, T_n)|_{V_1})E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})\\
+		&= \cE_{\pi|_{V_1}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cE_{\pi|_{V_2}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cdots \cE_{\pi|_{V_m}}\paren{(T_1, \ldots, T_n)|_{V_m}},
+	\end{align*}
+	with the last step following by the inductive hypothesis.
+
+	\paragraph{Case 3: $\max(V_1) > \max(V_m)$.}
+	As an example of this case, consider the following diagram where $V_1 = \set{1, 5 }$, $V_2 = \set{ 6, 8, 9}$, $V_3 = \set{4, 7}$, and $V_4 = \set{2, 3}$.
+	\[
+		\begin{tikzpicture}[baseline]
+			\def\sidez{{-1,1,1,1,-1,-1,1,1,-1}}
+			\def\clrz{{0,3,3,2,0,1,2,1,1}}
+			\bnc[n=9,sidez=\sidez,colourzfrompalette=\clrz]
+			\foreach \y in {1,5} {\draw [thick, pal0] (ball\y) -| (ball1 -| -0.2,0);}
+			\foreach \y in {2,3} {\draw [thick, pal3] (ball\y) -| (ball3 -| 0.2,0);}
+			\foreach \y in {4,7} {\draw [thick, pal2] (ball\y) -| (ball4 -| 0.2,0);}
+			\foreach \y in {6,8,9} {\draw [thick, pal1] (ball\y) -| (ball8 -| -0.2,0);}
+		\end{tikzpicture}
+	\]
+
+	Let $V_0 = \bigcup^{m-1}_{k=1} V_k$.
+	Once again appealing to the properties of $E$ given in Definition~\ref{defn:recursivedefinitionofEpi} we may find $T'_{q_1}, \ldots, T'_{q_{p_1}}$ and $S \in \A$ where $T'_k$ differs from $T_k$ by a left multiplication operator, so that
+	\[
+		E_\pi(T_1, \ldots, T_n) = E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_{p_1}} R_{E_{\pi|_{V_m}}((T_1, \ldots, T_n)|_{V_m})} S}. 
+	\]
+	Since right $\cB$-operators commute with elements of $\A_\ell$, one obtains
+	\begin{align*}
+		E_\pi(T_1, \ldots, T_n) &=
+		E\paren{T'_{q_1} T'_{q_2} \cdots T'_{q_{p_1}} R_{E_{\pi|_{V_m}}((T_1, \ldots, T_n)|_{V_m})} S} \\
+		&= E\paren{R_{E_{\pi|_{V_m}}((T_1, \ldots, T_n)|_{V_m})}T'_{q_1} T'_{q_2} \cdots T'_{q_{p_1}}S } \\
+		&= E(T'_{q_1} T'_{q_2} \cdots T'_{q_{p_1}}S) E_{\pi|_{V_m}}((T_1, \ldots, T_n)|_{V_m}) \\
+		&=
+		E_{\pi|_{V_0}}((T_1, \ldots, T_n)|_{V_0})E_{\pi|_{V_m}}((T_1, \ldots, T_n)|_{V_m})\\
+		&= \cE_{\pi|_{V_1}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cE_{\pi|_{V_2}}\paren{(T_1, \ldots, T_n)|_{V_1}} \cdots \cE_{\pi|_{V_m}}\paren{(T_1, \ldots, T_n)|_{V_m}}
+	\end{align*}
+	with the last step following by the inductive hypothesis.
+\end{proof}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Verification of Property~(iv) from Definition~\ref{defnbimultiplicative} for $\cE$.}
+
+
+We begin with the following intermediate step on the way to verifying that $\cE$ satisfies Property (iv).
+Recall that in the context of Definition~\ref{defnbimultiplicative} Property~\ref{def:bimult:iv}, we have an inner $\chi$-interval $V$, $W := [n]\setminus V$, and we have labelled the nodes which are immediately before and after $V$ in the $\prec_\chi$-order as $\theta$ and $\gamma$, respectively.
+
+\begin{lemma}
+	\label{lemreductionofbimultiplicativeinsideablockforE}
+	The operator-valued bi-free moment function $\cE$ satisfies Property~\ref{def:bimult:iv} of Definition~\ref{defnbimultiplicative} with the additional assumption that there exists a block $W_0 \subseteq W$ of $\pi$ such that 
+	\[
+		\theta, \gamma, \min_{\prec_\chi}([n]),
+		\max_{\prec_\chi}([n]) \in W_0.
+	\]
+\end{lemma}
+
+\begin{proof}
+	We will present only the proof of the case $\chi(\theta) = \ell$ as the other case is similar.
+
+	Let $\set{V_1 \prec_\chi \ldots \prec_\chi V_m}$ be the finest partition of $V$ consisting of $\chi$-intervals which has $\pi|_V$ as a refinement.
+	Note that $\theta$ immediately precedes $\min_{\prec_\chi}(V_1)$ and $\gamma$ immediately follows $\max_{\prec_\chi}(V_m)$.
+
+	The proof is now divided into three cases.
+	In the case $\chi(n) = \ell$, we have $\chi \equiv \ell$ since $q = -\infty$.
+
+	\paragraph{Case 1: $\chi(\gamma) = \ell$.}
+	As an example of this case, consider the following diagram where $W = W_0 = \set{1, 5, 9 }$, $V_1 = \set{2, 3 }$, $V_2 = \set{4, 6, 7, 8}$, $\theta = 1$, and $\gamma = 9$.
+	\[
+		\begin{tikzpicture}[baseline]
+			\def\sidez{{-1,-1,-1,-1,1,-1,-1,-1,-1}}
+			\def\clrz{{0,1,1,1,0,1,1,1,0}}
+			\bnc[n=9,sidez=\sidez,colourzfrompalette=\clrz]
+			\foreach \y in {1,5,9} {\draw [thick, pal0] (ball\y) -| (ball1 -| 0.2,0);}
+			\foreach \y in {2,3} {\draw [thick, pal1] (ball\y) -| (ball3 -| -0.2,0);}
+			\foreach \y in {4,6,8} {\draw [thick, pal1] (ball\y) -| (ball4 -| -0.2,0);}
+		\end{tikzpicture}
+	\]
+
+	In this case $V \subseteq \chi^{-1}(\set{\ell})$.
+	Write $X_k = L_{E_{\pi|_{V_k}}((T_1, \ldots, T_n)|_{V_k})}$ and $W_0 = \set{q_1 < q_2 < \cdots < q_{k_{m+1}}}$.
+	Then
+	\[
+		E_\pi(T_1, \ldots, T_n) = E\paren{ T'_{q_1} T'_{q_2} \cdots T'_{q_{k_1}} X_1 T'_{q_{k_1+1}} \cdots T'_{q_{k_m}} X_m
+		T'_{q_{k_m+1}} \cdots T'_{q_{k_{m+1}}}},
+	\]
+	where $T_k'$ is $T_k$, potentially multiplied on the left and/or right by appropriate $L_b$ and $R_b$.
+	Here $T_\theta$ appears left of $X_1$, $\gamma = q_{k_{m+1}}$, and every operator between $T_\theta$ and $T_\gamma$ is either some $X_k$ or a right operator.
+	Hence, by the commutation of left $\cB$-operators with elements of $\A_r$, we obtain
+	\[
+		E_\pi(T_1, \ldots, T_n) = E\paren{ T'_{q_1} \cdots T'_{q_{j-1}}
+			R_{b}L_{b'}\paren{T_{\theta} X_1 X_2 \cdots X_m} R_{b''} T'_{q_{j+1}} \cdots T'_{q_{k_{m+1}}}
+		}
+	\]
+	for some $b,b',b'' \in \cB$.
+	Since
+	\[
+		\cE_{\pi|_{V_1}}((T_1, \ldots, T_n)|_{V_1}) \cdots \cE_{\pi|_{V_m}}((T_1, \ldots, T_n)|_{V_m}) = \cE_{\pi|_{V}}((T_1, \ldots, T_n)|_{V}),
+	\]
+	by Lemma~\ref{lemproductofdisjointblocksforE}, we have
+	\begin{align*}
+		\cE_\pi(T_1, \ldots, T_n)
+		&= E\paren{T'_{q_1} \cdots T'_{q_{j-1}}
+		R_{b}L_{b'}\paren{T_{\theta} L_{\cE_{\pi|_{V}}((T_1, \ldots, T_n)|_{V})}} R_{b''} T'_{q_{j+1}} \cdots T'_{q_{k_{m+1}}} } \\
+		&= \cE_{\pi|_{W}}\paren{\left.\paren{T_1, \ldots, T_{\theta-1}, T_\theta L_{\cE_{\pi|_{V}}\paren{(T_1,\ldots, T_n)|_{V}}}, T_{\theta+1}, \ldots, T_n}\right|_{W}}
+		\end{align*}
+		where the last step follows as $\cE_{\pi |_W}$ ignores arguments corresponding to $V$.
+
+		\paragraph{Case 2: $\chi(\gamma) = r$ and $\theta < \gamma$.}
+		As an example of this case, consider the following diagram where $W = W_0 = \set{1, 3, 6 }$, $V_1 = \set{2, 4 }$, $V_2 = \set{5,
+		8}$, $V_3 = \set{7, 9}$, $\theta = 1$, and $\gamma = 6$.
+		\[
+			\begin{tikzpicture}[baseline]
+				\def\sidez{{-1,-1,1,-1,-1,1,1,-1,-1}}
+				\def\clrz{{0,1,0,1,1,0,1,1,1}}
+				\bnc[n=9,sidez=\sidez,colourzfrompalette=\clrz]
+				\foreach \y in {1,3,6} {\draw [thick, pal0] (ball\y) -| (ball1 -| 0.2,0);}
+				\foreach \y in {2,4} {\draw [thick, pal1] (ball\y) -| (ball2 -| -0.2,0);}
+				\foreach \y in {5,8} {\draw [thick, pal1] (ball\y) -| (ball5 -| -0.2,0);}
+				\foreach \y in {7,9} {\draw [thick, pal1] (ball\y) -| (ball7 -| 0.2,0);}
+			\end{tikzpicture}
+		\]
+
+		Let $p$ be the index of the last sub-interval of $V$ to begin above $\gamma$, if such exists, and $0$ otherwise.
+		That is, let $p$ be such that $\min(V_k) > \gamma$ if and only if $k > p$.
+		Note that if $k < p$ we have $V_k \subset \chi^{-1}(\ell)$, and if $p > 0$, $\chi(\min(V_p)) = \ell$.
+
+		Considering the process which reductions are performed in evaluating $E$, we find that every block of $\pi$ contained in $V_k$ with $k>p$ will wind up either attached to a node in $V_p$ or multiplied on the right of $T_\gamma$, depending on whether $V_p$ terminates above or below $\gamma$.
+		Letting $W_0 = \set{q_1 < \cdots < q_t}$, we find that there are $T'_k$ which differ from $T_k$ by multiplication by $L_b$ and/or $R_b$ (these corresponding to the reduction of other blocks in $W$) so that $E_\pi(T_1, \ldots, T_n)$ is of the form
+		$$E\paren{T_{q_1}' \cdots T_\theta' Z T_\gamma' L_Y},$$
+		where: $Z$ is a product of $T_{q_j}'$ having only right pieces (with $\theta < q_j < q_{j+1} < \gamma$), $L_{E_{\pi|_{V_k}}}((T_i)|_{V_k}$ with $k \leq p$, and possibly one term of the form $L_{E_{\pi|_{V_{\geq p}}}((T_i)|_{V_{\geq p}})}$; and $Y$ is either $L_{E_{\pi|_{V_{> p}}}((T_i)|_{V_{>p}})}$ or $1$.
+			The point, though, is that we can commute all the terms arising from $V$ next to each other next to $T_\theta$, and use Lemma~\ref{lemproductofdisjointblocksforE} to replace their product by $L_{E_{\pi|_V}((T_i)|_V)}$:
+			\begin{align*}
+				E_\pi(T_1,\ldots, T_n)
+				&= E(T_{q_1}' \cdots T_{q_{j-1}}' T_\theta' L_{E_{\pi|_V}((T_i)|_V)} T_{q_{j+1}}' \cdots T_\gamma') \\
+				&= E_{\pi|_W}\paren{\paren{T_1, \ldots, T_{\theta-1}, T_\theta L_{\cE_{\pi|_V}\paren{(T_i)|_V}}, T_{\theta+1},\ldots, T_n}|_W},
+			\end{align*}
+			where the second equality follows by reversing the sequence of reductions which compressed the blocks of $W$ and created the $T_{q_i}'$, as these reductions could not be influenced by the presence or absences of $V$, being separated from it by $W_0$.
+
+
+
+
+
+			\paragraph{Case 3: $\chi(\gamma) = r$ and $\theta > \gamma$.}
+			The argument in this case is essentially the same as the above, except one finds that terms from $V$ are collected as right multiplication operators rather than as left ones, and always occurring after $T_\gamma$ in the expansion of the product.
+			All things arising from $W$ after $T_\gamma$ must be left operators, though, and so they commute with the terms coming from the reduction of $V$ which can the be collected as a right multiplication operator after $T_\theta$.
+			Since $T_\theta$ must be the last operator in $W$, we are able to replace this right multiplication coming from $V$ with a left one, as required by Definition~\ref{defnbimultiplicative}:
+			\begin{align*}	
+				E_\pi(T_1, \ldots, T_n)
+				= E(T_{q_1}' \cdots T_\theta' R_{\cE_{\pi|_V}((T_i)|_V)})
+				= E(T_{q_1}' \cdots T_\theta' L_{\cE_{\pi|_V}((T_i)|_V)}).
+				&\qedhere
+			\end{align*}
+		\end{proof}
+
+		In order to establish that Property~\ref{def:bimult:iv} holds without our special assumption above, it will be useful to prove the following stronger versions of Properties~\ref{def:bimult:i} and \ref{def:bimult:ii}.
+
+		\begin{lemma}
+			\label{lemenhancedpropertyiforE}
+	%The operator-valued bi-free moment function $\cE$ satisfies the $q = -\infty$ case of Property (i) of Definition \ref{defnbimultiplicative} when $1_\chi$ is replaced with an arbitrary $\pi \in \BNC(\chi)$.
+			The operator-valued bi-free moment function $\cE$ satisfies Property~\ref{def:bimult:i} of Definition~\ref{defnbimultiplicative} when $\chi$ is constant and $1_\chi$ is replaced by an arbitrary $\pi \in \BNC(\chi)$.
+		\end{lemma}
+
+
+		\begin{proof}
+			We will demonstrate the case $\chi \equiv \ell$, as the other case follows mutatis mutandis.
+			Notice that $\chi$ being constant means that $q := \max\set{k\in[n] | \chi(k) \neq \chi(n)} = -\infty$.
+			Let $\set{V_1 \prec_\chi \ldots \prec_\chi V_m}$ be the finest partition of $V$ consisting of $\chi$-intervals which has $\pi|_V$ as a refinement, and let $V_i'$ be the outer block of $\pi$ contained in $V_i$.
+			By Lemma \ref{lemproductofdisjointblocksforE}, we may assume $m = 1$.
+
+
+			Writing $V_1' = \set{1 = q_1 < q_2 < \cdots < q_{p+1} = n}$, for some $b_j \in \cB$ depending only on $(T_1, \ldots, T_n)|_{(V'_1)^c}$ and on $\pi$,
+			\[
+				E_\pi(T_1, \ldots, T_n) = E\paren{ T_{q_1} L_{b_1} T_{q_2} L_{b_2} \cdots T_{q_p} L_{b_p} T_{q_{p+1}}}.
+			\]
+			Hence, by the commutation of right $\cB$-operators with elements of $\A_\ell$, we obtain
+			\begin{align*}
+				\cE_\pi(T_1, \ldots, T_n)b & = E\paren{ T_{q_1} L_{b_1} T_{q_2} L_{b_2} \cdots T_{q_p} L_{b_p} T_{q_{p+1}}}b\\
+				& = E\paren{ R_b T_{q_1} L_{b_1} T_{q_2} L_{b_2} \cdots T_{q_p} L_{b_p} T_{q_{p+1}}}\\
+				& = E\paren{ T_{q_1} L_{b_1} T_{q_2} L_{b_2} \cdots T_{q_p} L_{b_p} T_{q_{p+1}}R_b }\\
+				& = E\paren{ T_{q_1} L_{b_1} T_{q_2} L_{b_2} \cdots T_{q_p} L_{b_p} T_{q_{p+1}}L_b }\\
+				& = \cE_\pi(T_1, \ldots, T_n L_b).\qedhere
+			\end{align*}
+		\end{proof}
+
+
+		\begin{lemma}
+			\label{lemenhancedpropertyiiforE}
+			The operator-valued bi-free moment function $\cE$ satisfies Property~\ref{def:bimult:ii} of Definition~\ref{defnbimultiplicative} when $q$ in the context of that definition is $-\infty$, and $1_\chi$ is replaced by an arbitrary $\pi \in \BNC(\chi)$.
+		\end{lemma}
+
+
+		\begin{proof}
+			We will assume $\chi(p) = \ell$ as the case where $\chi(p) = r$ is once again similar.
+			Let $\set{V_1 \prec_\chi \ldots \prec_\chi V_m}$ be the finest partition of $V$ consisting of $\chi$-intervals which has $\pi|_V$ as a refinement, and let $V_i'$ be the outer block of $\pi$ contained in $V_i$.
+			Notice that since $p$ is the first node on the left side of the partition, we necessarily have $p \in V'_1$.
+			Thus Lemma \ref{lemproductofdisjointblocksforE} implies we may reduce to the case where $m = 1$.
+
+
+
+			Notice that any block which will be contracted on the left in the evaluation of $\cE_\pi$ must be below $p$; then writing $V_1' = \set{q_1 < q_2 < \cdots < q_{k}}$, for some $b_j \in \cB$ depending only on $(T_1, \ldots, T_n)|_{(V'_1)^c}$ and on $\pi$, for some $S \in \A$, and for some $z < k$,
+			\[
+				\cE_\pi(T_1, \ldots, T_n) = E\paren{ T_{q_1} R_{b_1}
+				\cdots T_{q_z} R_{b_z} T_p S}.
+			\]
+
+			Hence, by the commutation of left $\cB$-operators with elements of $\A_r$, we obtain
+			\begin{align*}
+				b\cE_\pi(T_1, \ldots, T_n) & =bE\paren{ T_{q_1} R_{b_1}
+				\cdots T_{q_z} R_{b'_z} T_p S}\\
+				& =E\paren{L_bT_{q_1} R_{b_1}
+				\cdots T_{q_z} R_{b_z} T_p S}\\
+				& = E\paren{ T_{q_1} R_{b_1}
+				\cdots T_{q_z} R_{b_z} L_bT_p S}\\
+				& = \cE_\pi(T_1, \ldots, T_{p-1}, L_b T_p, T_{p+1}, \ldots, T_n).
+				\qedhere
+			\end{align*}
+		\end{proof}
+
+		\begin{lemma}
+			\label{lemfullreductionofproductsinvolvingblocksinsideblocks}
+			The operator-valued bi-free moment function $\cE$ satisfies Property~\ref{def:bimult:iv} of Definition \ref{defnbimultiplicative}.
+		\end{lemma}
+
+		\begin{proof}
+			Again, only the proof of the first case where $\chi(\theta) = \ell$ will be presented.
+			We proceed by induction on the number of blocks $U\in\pi$ with
+			\[
+				U\subseteq W, \qquad
+				\min_{\prec_\chi}(U) \prec_{\chi} \min_{\prec_\chi}(V), \qquad
+				\text{and} \qquad
+				\max_{\prec_\chi}(V)
+				\prec_{\chi} \max_{\prec_\chi}(U),
+			\]
+			which we will denote by $m$.
+			Such blocks are the ones which enclose $V$.
+
+			We will first treat the case $m=0$.
+			Let
+			\[
+				W_1 = \set{k \in [n] \, \mid \, k \preceq_\chi \theta} \qquad
+				\text{and} \qquad
+				W_2 = \set{k \in [n] \, \mid \, \gamma \preceq_\chi k}.
+			\]
+			Now both $W_1$ and $W_2$ are $\chi$-intervals that are unions of blocks of $\pi$ such that $W = W_1 \sqcup W_2$, and $W_1 \subseteq \chi^{-1}(\ell)$.
+			Therefore by Lemmata \ref{lemproductofdisjointblocksforE} and \ref{lemenhancedpropertyiforE},
+			\begin{align*}
+				\cE_\pi(T_1,\ldots, T_n) &=\cE_{\pi|_{W_1}}((T_1,\ldots, T_n)|_{W_1})\cE_{\pi|_{V}}((T_1,\ldots, T_n)|_{V})\cE_{\pi|_{W_2}}((T_1,\ldots, T_n)|_{W_2}) \\
+				& = \cE_{\pi|_{W_1}}((T_1,\ldots, T_{\theta - 1}, T_\theta L_{\cE_{\pi|_{V}}((T_1,\ldots, T_n)|_{V})})|_{W_1})\cE_{\pi|_{W_2}}((T_1,\ldots, T_n)|_{W_2}) \\
+				& =\cE_{\pi|_{W}}((T_1,\ldots, T_{\theta - 1}, T_\theta L_{\cE_{\pi|_{V}}((T_1,\ldots, T_n)|_{V})}, T_{\theta + 1}, \ldots, T_n)|_{W}).
+			\end{align*}
+			Note that we would either invoke Lemma \ref{lemenhancedpropertyiiforE} instead of \ref{lemenhancedpropertyiforE} in the case $\chi(\theta) = r$, or else bundle $\cE_{\pi|_V}((T_i)|_V)$ into the expectation corresponding to $W_2$.
+
+			We must also establish the case $m = 1$ before we can begin the inductive step.
+			Let $W_0$ be the corresponding block counted by $m$, and let
+			\begin{align*}
+				\alpha_1 &= \min_{\prec_\chi}(W_0),
+				& & \alpha_2 = \max_{\prec_\chi}(\set{ k \in W_0 \, \mid \, k \preceq_{\chi} \theta
+				}), \\
+				\beta_1& = \max_{\prec_\chi}(W_0), & \text{and} \qquad \qquad \qquad &
+				\beta_2 = \min_{\prec_\chi}(\set{ k \in W_0 \, \mid \, \gamma \preceq_\chi k
+				}).
+			\end{align*}
+			Furthermore, let
+			\begin{align*}
+				W'_1 &= \set{k \in [n] \, \mid \, k \prec_\chi \alpha_1 }, & &
+				W'_2 = \set{k \in [n] \, \mid \,
+				\beta_1 \prec_\chi k}, \\
+				W''_1 &= \set{k \in [n] \, \mid \, \alpha_2 \prec k \preceq_\chi \theta},
+				& \text{and} \qquad \quad &
+				W''_2 = \set{k \in [n] \, \mid \, \gamma \preceq_\chi k \prec_\chi \beta_2}.
+			\end{align*}
+			Representing things graphically,
+			\[
+				\begin{tikzpicture}
+					\def\sdz{{0,-1,1,1,-1, -1, 1}}
+					\def\labelz{{"", "$\alpha_1$", "$\beta_1$", "$\beta_2$", "$\alpha_2$", "$\theta$", "$\gamma$"}}
+					\def\ord{{0,0,1,2,0,3,4,0,5,6,0,0}}
+					\bnc[n=12,order=\ord,sidez=\sdz,labelz=\labelz]
+					\draw [thick] ($ (ball3) + (-0.25, 0.25) $) -- ++(-0.25,0) |- node[pos=.25,left]{$W_1'$} ($ (tl) + (-0.25,0) $);
+					\draw [thick] ($ (ball4) + (0.25, 0.25) $) -- ++(0.25,0) |- node[pos=.25,right]{$W_2'$} ($ (tr) + (0.25,0) $);
+					\draw [thick] ($ (ball6) + (0.25, -0.25) $) -- ++(0.25,0) |- node[pos=.25,right]{$W_2''$} ($ (ball10) + (0.25,-0.25) $);
+					\draw [thick] ($ (ball7) + (-0.25, -0.25) $) -- ++(-0.25,0) |- node[pos=.25,left]{$W_1''$} ($ (ball9) + (-0.25,-0.25) $);
+					\draw [thick] ($ (ball10) + (0,-0.5) $) -- coordinate (hi) ($ (ball9) + (0,-0.5) $);
+					\node at ($ (hi) ! .5 ! (bc) $) {$V$};
+
+					\node at ($ ($ (ball3) ! .5 ! (ball7) $) + (0.5,0) $) {$\vdots$};
+					\node at ($ ($ (ball4) ! .5 ! (ball6) $) + (-0.5,0) $) {$\vdots$};
+
+					\foreach \y in {3,4,6,7} {\draw [thick] (ball\y) -| (ball7 -| 0,0);}
+
+				\end{tikzpicture}
+			\]
+
+			Therefore, if
+			\begin{align*}
+				X'_1 &= \cE_{\pi|_{W'_1}}((T_1,\ldots, T_n)|_{W'_1}), & & X'_2 = \cE_{\pi|_{W'_2}}((T_1,\ldots, T_n)|_{W'_2}), \\
+				X''_1 &= \cE_{\pi|_{W''_1}}((T_1,\ldots, T_n)|_{W''_1}), & \text{and} \qquad \qquad \qquad & X''_2 = \cE_{\pi|_{W''_2}}((T_1,\ldots, T_n)|_{W''_2}),
+			\end{align*} 
+			then by Lemmata \ref{lemproductofdisjointblocksforE} and \ref{lemreductionofbimultiplicativeinsideablockforE},
+			\begin{align*}
+				\cE_\pi(T_1,\ldots, T_n)
+				&= X'_1 \cE_{\pi|_{W_0 \cup W''_1 \cup W''_2 \cup V}}((T_1,\ldots, T_n)|_{W_0 \cup W''_1 \cup W''_2 \cup V})X'_2 \\
+				&= X'_1 \cE_{\pi|_{W_0 }}\paren{\paren{T_1,\ldots, T_{\alpha_2 - 1}, T_{\alpha_2}L_{\cE_{\pi|_{W''_1 \cup W''_2 \cup V}}((T_1, \ldots, T_n)|_ {W''_1 \cup W''_2 \cup V})}, T_{\alpha_2+1},\ldots, T_n}|_{W_0}}X'_2 \\
+				&= X'_1\cE_{\pi|_{W_0 }}\paren{\paren{T_1,\ldots, T_{\alpha_2 - 1}, T_{\alpha_2} L_{X''_1 \cE_{\pi|_{V}}((T_1, \ldots, T_n)|_ {V})
+				X''_2}, T_{\alpha_2+1},\ldots, T_n}|_{W_0}}X'_2.
+			\end{align*}
+
+			If $W''_1$ is empty, then $\alpha_2 = \theta$ and 
+			\[
+				T_{\alpha_2} L_{X''_1
+					\cE_{\pi|_{V}}((T_1, \ldots, T_n)|_ {V})
+				X''_2} = T_{\theta} L_{\cE_{\pi|_{V}}((T_1, \ldots, T_n)|_ {V})} L_{X''_2}.
+			\]
+			On the other hand, if $W''_1$ is non-empty, then Lemma \ref{lemenhancedpropertyiforE} implies that
+			\[
+				X''_1\cE_{\pi|_{V}}((T_1, \ldots, T_n)|_ {V}) = \cE_{\pi|_{W''_1}}((T_1, \ldots, T_{\theta - 1}, T_\theta L_{\cE_{\pi|_{V}}((T_1, \ldots, T_n)|_ {V})}, T_{\theta + 1}, \ldots, T_n)|_ {W''_1}).
+			\] 
+			The result follows now from Lemmata \ref{lemproductofdisjointblocksforE} and \ref{lemreductionofbimultiplicativeinsideablockforE} in the direction opposite the above.
+
+
+
+
+			Inductively, suppose that the result holds when the number of enclosing blocks is at most $m$.
+			Suppose $W$ contains blocks $W_0, \ldots, W_m$ of $\pi$ which satisfy the above enclosing inequalities, ordered so that
+			\[
+				\min_{\prec_\chi}(W_0) \prec_\chi \cdots \prec_\chi \min_{\prec_\chi}(W_m).
+			\]
+			Note that as $\pi$ is bi-non-crossing, this implies
+			\[
+				\max_{\prec_\chi}(W_m) \prec_\chi \cdots \prec_\chi \max_{\prec_\chi}(W_0).
+			\]
+			Let $\alpha_1, \alpha_2, \beta_1, \beta_2$, $W'_1, W'_2, X'_1,$ and $X'_2$ be as above.
+			Hence applying Lemmata \ref{lemproductofdisjointblocksforE} and \ref{lemreductionofbimultiplicativeinsideablockforE} once again gives
+			\begin{align*}
+				\cE_\pi&(T_1,\ldots, T_n) \\
+				&= X'_1\cE_{\pi|_{(W'_1 \cup W'_2)^c}}((T_1,\ldots, T_n)|_{(W'_1 \cup W'_2)^c})X'_2\\
+				&= X'_1\cE_{\pi|_{W_0 }}\paren{\paren{T_1,\ldots, T_{\alpha_2 - 1}, T_{\alpha_2}L_{\cE_{\pi|_{(W_0 \cup W'_1 \cup W'_2)^c}}((T_1, \ldots, T_n)|_ {(W_0 \cup W'_1 \cup W'_2)^c})}, T_{\alpha_2+1},\ldots, T_n}|_{W_0}}X'_2.
+			\end{align*}
+			Now, by the inductive hypothesis, we see that
+			\begin{align*}
+				\cE_{\pi|_{(W_0 \cup W'_1 \cup W'_2)^c}}&((T_1, \ldots, T_n)|_ {(W_0 \cup W'_1 \cup W'_2)^c}) \\
+				&
+				= \cE_{\pi|_{(W_0 \cup W'_1 \cup W'_2)^c \setminus V}}((T_1, \ldots, T_{\theta - 1}, T_\theta L_{\cE_{\pi|_V}((T_1,\ldots, T_n)|_{V})}, T_{\theta + 1}, \ldots, T_n)|_ {(W_0 \cup W'_1 \cup W'_2)^c\setminus V}).
+			\end{align*}
+			Hence, by substituting this expression into the above computation and applying Lemmata \ref{lemproductofdisjointblocksforE} and \ref{lemreductionofbimultiplicativeinsideablockforE} in the opposite order, the inductive step is complete.
+		\end{proof}
+
+
+
+		With this result, the proof of Theorem \ref{thm:samantha} is complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	    Operator-Valued Bi-Free Cumulants   	   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		\section{Operator-valued bi-free cumulants.}
+		\label{sec:operatorvaluedbifreecumulants}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\subsection{Cumulants via convolution.}
+		Following \cite{speicher1998combinatorial}*{Definition 2.1.6}, we begin with a definition of operator-valued convolution.
+
+		\begin{definition}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space, let
+			\[
+				\Phi : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to \cB,
+			\]
+			and let $f \in IA(\BNC)$.
+			We define \emph{the convolution of $\Phi$ and $f$}, denoted $\Phi \st f$, by
+			\[
+				(\Phi \st f)_\pi(T_1, \ldots, T_n) := \sum_{\substack{\sigma \in \BNC(\chi)\\ \sigma \leq \pi}} \Phi_\sigma(T_1,\ldots, T_n) f(\sigma, \pi)
+			\]
+			for all $\chi : [n] \to \slr$, $\pi \in \BNC(\chi)$, and $T_k \in \A_{\chi(k)}$.
+		\end{definition}
+
+		One can check that if $\Phi$ is as above and $f,g \in IA(\BNC)$ then $(\Phi \st f) \st g = \Phi \st (f \st g)$; this comes down to swapping the order of two finite sums.
+
+		\begin{definition}
+			\label{def:kappa}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let $\cE$ be the operator-valued bi-free moment function on $\A$.
+			The \emph{operator-valued bi-free cumulant function} is the function
+			\[
+				\kappa : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+			\]
+			defined by
+			\[
+				\kappa := \cE \st \mu_{\BNC}.
+			\]
+		\end{definition}
+
+		Note for $\chi : [n] \to \slr$, $\pi \in \BNC(\chi)$, and $T_k \in \A_{\chi(k)}$ that
+		\[
+			\kappa_\pi(T_1,\ldots, T_n) = \sum_{\sigma \leq \pi} \cE_\sigma(T_1, \ldots, T_n) \mu_{\BNC}(\sigma, \pi)
+			\qquad \text{ and }\qquad
+			\cE_\pi(T_1, \ldots, T_n) = \sum_{\sigma \leq \pi} \kappa_\sigma(T_1, \ldots, T_n).
+		\]
+		Also observe that if $\cB = \C$ is the complex numbers, the operator-valued bi-free cumulant function $\kappa$ is precisely the usual bi-free cumulant functional.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\subsection{Convolution preserves bi-multiplicativity.}
+		It is now straightforward to demonstrate the operator-valued bi-free cumulant function is bi-multiplicative, as a corollary to the following theorem:
+
+		\begin{theorem}
+			\label{thmbimulticonvoledwithmultiisbimult}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space, let
+			\[
+				\Phi : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to \cB, 
+			\]
+			and let $f \in IA(\BNC)$.
+			If $\Phi$ is bi-multiplicative and $f$ is multiplicative, then $\Phi \st f$ is bi-multiplicative.
+		\end{theorem}
+
+		\begin{proof}
+			Clearly $(\Phi \st f)_\pi$ is linear in each entry.
+			Furthermore, Proposition \ref{propenhancedproperties} establishes that $\Phi \st f$ satisfies Properties (i) and (ii) of Definition \ref{defnbimultiplicative}.
+			Thus it remains to verify Properties (iii) and (iv).
+
+			Suppose the hypotheses of Property (iii).
+			We see that
+			\begin{align*}
+				(\Phi \st f)_\pi&(T_1,\ldots, T_n) \\
+				&= \sum_{\sigma \leq \pi} \Phi_\sigma(T_1, \ldots, T_n) f(\sigma, \pi)
+				\\
+				&= \sum_{\sigma \leq \pi} \Phi_{\sigma|_{V_1}}((T_1,\ldots, T_n)|_{V_1})
+				\cdots \Phi_{\sigma|_{V_m}}((T_1,\ldots, T_n)|_{V_m})
+				f(\sigma|_{V_1}, \pi|_{V_1}) \cdots f(\sigma|_{V_m}, \pi|_{V_m})
+				\\
+				&= (\Phi \st f)_{\pi|_{V_1}}((T_1,\ldots, T_n)|_{V_1})
+				\cdots (\Phi \st f)_{\pi|_{V_m}}((T_1,\ldots, T_n)|_{V_m}),
+			\end{align*}
+			using the bi-multiplicativity of $\Phi$ and the multiplicativity of $f$.
+
+			To see Property (iv) holds, note under the hypotheses of its initial case,
+			\begin{align*}
+				(\Phi \st f)_\pi&(T_1,\ldots, T_n) \\
+				&= \sum_{\sigma \leq \pi} \Phi_\sigma(T_1, \ldots, T_n) f(\sigma, \pi)
+				\\
+				&= \sum_{\sigma \leq \pi} \Phi_{\sigma|_{W}}((T_1,\ldots, T_{\theta-1}, T_\theta L_{\Phi_{\sigma|_{V}}((T_1, \ldots, T_n)|_V)}, T_{\theta + 1}, \ldots, T_n)|_{W})
+				f(\sigma|_{V}, \pi|_{V}) f(\sigma|_{W}, \pi|_{W})
+				\\
+				&= \sum_{\sigma \leq \pi} \Phi_{\sigma|_{W}}((T_1,\ldots, T_{\theta-1}, T_\theta L_{\Phi_{\sigma|_{V}}((T_1, \ldots, T_n)|_V)f(\sigma|_{V}, \pi|_{V})}, T_{\theta + 1}, \ldots, T_n)|_{W})
+				f(\sigma|_{W}, \pi|_{W})
+				\\
+				&= (\Phi \st f)_{\pi|_{W}}((T_1,\ldots, T_{\theta-1}, T_\theta L_{\Phi_{\sigma|_{V}}((T_1, \ldots, T_n)|_V)}, T_{\theta + 1}, \ldots, T_n)|_{W}),
+			\end{align*}
+			again by the corresponding properties of $\Phi$ and $f$.
+			The proof of the remaining three statements in Property (iv) is identical.
+		\end{proof}
+
+		\begin{corollary}
+			\label{cor:cumulantsarebimultiplicative}
+			The operator-valued bi-free cumulant function is bi-multiplicative.
+		\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\subsection{Bi-moment and bi-cumulant functions.}
+		\label{subsec:bimomentandbicumulantfunctions}
+
+
+
+		Inspired by \cite{speicher1998combinatorial}*{Section 3.2}, we define the formal classes of bi-moment and bi-cumulant functions and give an important relation between them.
+		It follows readily that the operator-valued bi-free moment and cumulant functions on a $\cB$-$\cB$-non-commutative probability space are examples of these types of functions, respectively.
+
+
+
+		We begin with the following useful notation.
+		\begin{notation}
+			Let $\chi : [n] \to \slr$, $\pi \in \BNC(\chi)$, and $q \in [n]$.
+			We denote by $\chi|_{\setminus q}$ the restriction of $\chi$ to the set $[n] \setminus \set{q}$.
+			In addition, if $q \neq n$ and $\chi(q) = \chi(q+1)$, we define $\pi|_{q = q+1} \in \BNC(\chi|_{\setminus q})$ to be the bi-non-crossing partition which results from identifying $q$ and $q+1$ in $\pi$ (i.e. if $q$ and $q+1$ are in the same block as $\pi$ then $\pi|_{q=q+1}$ is obtained from $\pi$ by just removing $q$ from the block in which $q$ occurs, while if $q$ and $q+1$ are in different blocks, $\pi|_{q=q+1}$ is obtained from $\pi$ by merging the two blocks and then removing $q$).
+		\end{notation}
+
+		\begin{definition}
+			\label{defnbimomentandbicumulantfunctions}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let
+			\[
+				\Phi : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+			\]
+			be bi-multiplicative.
+			We say that $\Phi$ is a \emph{bi-moment function} if whenever $\chi : [n] \to \slr$ is such that there exists a $q \in \set{1,\ldots, n-1}$ with $\chi(q) = \chi(q+1)$, then
+			\[
+				\Phi_{1_\chi}(T_1, \ldots, T_n) = \Phi_{1_{\chi|_{\setminus q}}}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2},\ldots, T_n)
+			\]
+			for all $T_k \in \A_{\chi(k)}$.
+			Similarly, we say that $\Phi$ is a \emph{bi-cumulant function} if whenever $\chi : [n] \to \slr$ and $\pi \in \BNC(\chi)$ are such that there exists a $q \in \set{1,\ldots, n-1}$ with $\chi(q) = \chi(q+1)$, then
+			\[
+				\Phi_{1_{\chi|_{\setminus q}}}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2},\ldots, T_n) = \Phi_{1_\chi}(T_1, \ldots, T_n) + \sum_{\substack{\pi \in \BNC(\chi)\\ |\pi| =2, q\nsim_\pi q+1}} \Phi_\pi(T_1, \ldots, T_n)
+			\]
+			for all $T_k \in \A_{\chi(k)}$.
+		\end{definition}
+
+		Notice that any operator-valued bi-free moment function $\cE$ is a bi-moment function.
+
+		Before relating the notions of bi-moment and bi-cumulant functions, we note the following alternate formulations.
+		\begin{lemma}
+			\label{lemequivalentnotionsofbimomentandbicumulant}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let
+			\[
+				\Phi : \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+			\]
+			be bi-multiplicative.
+			Then $\Phi$ is a bi-moment function if and only if whenever $\chi : [n] \to \slr$ and $\pi \in \BNC(\chi)$ are such that there exists a $q \in \set{1,\ldots, n-1}$ with $\chi(q) = \chi(q+1)$ and $q \sim_\pi q+1$, then
+			\[
+				\Phi_\pi(T_1, \ldots, T_n) = \Phi_{\pi|_{q = q+1}}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2}, \ldots T_n)
+			\]
+			for all $T_k \in \A_{\chi(k)}$.
+			Similarly, $\Phi$ is a bi-cumulant function if and only if whenever $\chi : [n] \to \slr$ is such that there exists a $q \in \set{1,\ldots, n-1}$ with $\chi(q) = \chi(q+1)$, we have
+			\[
+				\Phi_{\pi}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2}, \ldots T_n) = \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma|_{q = q+1} = \pi}} \Phi_\sigma(T_1, \ldots, T_n)
+			\]
+			for all $\pi \in \BNC(\chi|_{\setminus q})$.
+		\end{lemma}
+
+		To establish the lemma, one uses bi-multiplicativity to reduce to the case of full partitions and then applies Definition \ref{defnbimomentandbicumulantfunctions}.
+
+
+		\begin{theorem}
+			\label{thmrelationbetweenbimomentandbicumulantfunctions}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let
+			\[
+				\Phi , \Psi: \bigcup_{n\geq 1} \bigcup_{\chi : [n] \to \slr} \BNC(\chi) \times \A_{\chi(1)} \times \cdots \times \A_{\chi(n)} \to B
+			\]
+			be related by the formulae
+			\[
+				\Phi = \Psi \st \zeta_{\BNC}, \qquad \text{or equivalently,} \qquad \Psi = \Phi \st \mu_{\BNC}.
+			\]
+			Then $\Phi$ is a bi-moment function if and only if $\Psi$ is a bi-cumulant function. 
+		\end{theorem}
+
+		\begin{proof}
+			To begin, note $\Phi$ is bi-multiplicative if and only if $\Psi$ is bi-multiplicative by Theorem~\ref{thmbimulticonvoledwithmultiisbimult}.
+
+
+			Suppose $\Psi$ is a bi-cumulant function.
+			If $\chi : [n] \to \slr$ is such that there exists a $q \in \set{1,\ldots, n-1}$ with $\chi(q) = \chi(q+1)$, then for all $T_k \in \A_{\chi(k)}$
+			\begin{align*}
+				\Phi_{1_{\chi|_{\setminus q}}}(T_1,\ldots, T_{q-1}, T_q T_{q+1}, T_{q+2}, \ldots, T_n) &= \sum_{\pi \in \BNC(\chi|_{\setminus q})} \Psi_{\pi}(T_1,\ldots, T_{q-1}, T_q T_{q+1}, T_{q+2}, \ldots, T_n)
+				\\
+				&=
+				\sum_{\pi \in \BNC(\chi|_{\setminus q})} \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma|_{q = q+1} = \pi}} \Psi_{\sigma}(T_1,\ldots, T_n) \\
+				&=
+				\sum_{\sigma \in \BNC(\chi)} \Psi_{\sigma}(T_1,\ldots, T_n) \\
+				&=
+				\Phi_{1_\chi}(T_1,\ldots, T_n).
+			\end{align*}
+			Thus $\Phi$ is a bi-moment function.
+
+			For the other direction, suppose $\Phi$ is a bi-moment function.
+			Let $\chi : [n] \to \slr$.
+			We will proceed by induction on $n$.
+			If $n = 1$, there is nothing to check.
+			If $n = 2$, then
+			\[
+				\Psi_{1_{\chi|_{1=2}}}(T_1T_2) = \Phi_{1_{\chi|_{1=2}}}(T_1T_2) = \Phi_{1_\chi}(T_1, T_2) = \Psi_{1_\chi}(T_1, T_2) + \Psi_{0_\chi}(T_1, T_2)
+			\]
+			as required.
+			\par 
+			Suppose that the formula from Definition \ref{defnbimomentandbicumulantfunctions} holds for $n-1$.
+			Then using the induction hypothesis and bi-multiplicativity of $\Psi$, we see for all $\pi \in \BNC(\chi|_{\setminus q}) \setminus \set{1_{\chi|_{\setminus q}}}$ that
+			\[
+				\Psi_{\pi}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2}, \ldots, T_n) = \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma|_{q = q+1} = \pi}} \Psi_\sigma(T_1, \ldots, T_n).
+			\]
+			Hence
+			\begin{align*}
+				\Psi_{1_{\chi|_{\setminus q}}}&(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2}, \ldots, T_n) \\
+				&= \Phi_{1_{\chi|_{\setminus q}}}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2}, \ldots, T_n) - \sum_{\substack{\pi \in \BNC(\chi|_{\setminus q}) \\
+				\pi \neq 1_{\chi|_{\setminus q}}}}
+				\Psi_{\pi}(T_1, \ldots, T_{q-1}, T_qT_{q+1}, T_{q+2}, \ldots T_n) \\
+				&= \Phi_{1_{\chi}}(T_1, \ldots, T_n) - \sum_{\substack{\pi \in \BNC(\chi|_{\setminus q}) \\
+				\pi \neq 1_{\chi|_{\setminus q}}}} \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma|_{q = q+1} = \pi}} \Psi_\sigma(T_1, \ldots, T_n)
+				\\
+				&= \sum_{\sigma\in \BNC(\chi)}\Psi_{\sigma}(T_1, \ldots, T_n) - \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma|_{q = q+1} \neq 1_{\chi|_{\setminus q}}}} \Psi_\sigma(T_1, \ldots, T_n)
+				\\
+				&= \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma|_{q = q+1} = 1_{\chi|_{\setminus q}}}} \Psi_\sigma(T_1, \ldots, T_n). \qedhere
+			\end{align*}
+		\end{proof}
+
+		\begin{corollary}
+			\label{corcumulantfunctionisabicumulantfunction}
+			The operator-valued bi-free cumulant function $\kappa$ is a bi-cumulant function.
+		\end{corollary}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\subsection{Vanishing of operator-valued bi-free cumulants.}
+
+		The following demonstrates, like with classical and free cumulants, that operator-valued bi-free cumulants of order at least two vanish provided at least one entry is an element of $\cB$.
+		\begin{proposition}
+			\label{prop:inputaL_borR_bandyougetzerocumulants}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space, $\chi : [n] \to \slr$ with $n \geq 2$, and $T_k \in \A_{\chi(k)}$.
+			If there exist $q \in [n]$ and $b \in \cB$ such that $T_q = L_b$ if $\chi(q) = \ell$ or $T_q = R_b$ if $\chi(q) = r$, then
+			\[
+				\kappa(T_1, \ldots, T_n) = 0.
+			\]
+		\end{proposition}
+
+		\begin{proof}
+			We will proceed by induction on $n$.
+			The base case can be readily established by computing directly the cumulants of order two.
+
+			For the inductive step, suppose the result holds for all $\chi : \set{1, \ldots, k} \to \slr$ with $k < n$.
+			Fix $\chi : [n] \to \slr$ and $T_k \in \A_{\chi(k)}$. 
+			Suppose that for some $q \in [n]$ we have $\chi(q) = \ell$ and $T_q = L_b$ with $b \in \cB$, as the argument for the right side is similar.
+
+			Let
+			\[
+				p = \max\set{k \in [n] \, \mid \, \chi(k) = \ell, k < q}.
+			\]
+			The proof is now divided into two cases.
+
+			\paragraph{Case 1: $p \neq -\infty$.}
+			In this case we notice that
+			\begin{align*}
+				\kappa_{1_\chi}(T_1, \ldots, T_n)
+				&= \cE_{1_\chi}(T_1, \ldots, T_n) - \sum_{\substack{\pi \in \BNC(\chi)\\ \pi \neq 1_\chi}}\kappa_{\pi}(T_1, \ldots, T_n)
+				\\
+				&= \cE_{1_\chi}(T_1, \ldots, T_n) - \sum_{\substack{\pi \in \BNC(\chi)\\ \set{q} \in \pi}}\kappa_{\pi}(T_1, \ldots, T_{p-1}, T_p, T_{p+1}, \ldots, T_{q-1}, L_b, T_{q+1}, \ldots, T_n)
+				\\
+				&= \cE_{1_\chi}(T_1, \ldots, T_n) - \sum_{\sigma \in \BNC(\chi|_{\setminus q})}\kappa_{\sigma}(T_1, \ldots, T_{p-1}, T_p L_b, T_{p+1}, \ldots, T_{q-1}, T_{q+1}, \ldots, T_n),
+			\end{align*}
+			by induction and Proposition \ref{propenhancedproperties}.
+			Since
+			\begin{align*}
+				\cE_{1_\chi}(T_1, \ldots, T_n) &= E(T_1\cdots T_n)
+				\\
+				&= E(T_1 \cdots T_{q-1} L_b T_{q+1} \cdots T_n) \\
+				&= E(T_1 \cdots T_p L_b T_{p+1} \cdots T_{q-1}T_{1+1}\cdots T_n) \\
+				&=
+				\sum_{\sigma \in \BNC(\chi|_{\setminus q})}\kappa_{\sigma}(T_1, \ldots, T_{p-1}, T_p L_b, T_{p+1}, \ldots, T_{q-1}, T_{q+1}, \ldots, T_n),
+			\end{align*}
+			the proof is complete in this case.
+
+
+
+			\paragraph{Case 2: $p = -\infty$.}
+			In this case, notice that
+			\begin{align*}
+				\kappa_{1_\chi}(T_1, \ldots, T_n)
+				&= \cE_{1_\chi}(T_1, \ldots, T_n) - \sum_{\substack{\pi \in \BNC(\chi)\\ \pi \neq 1_\chi}}\kappa_{\pi}(T_1, \ldots, T_n)
+				\\
+				&= \cE_{1_\chi}(T_1, \ldots, T_n) - \sum_{\substack{\pi \in \BNC(\chi)\\ \set{q} \in \pi}}\kappa_{\pi}(T_1, \ldots, T_{q-1}, L_b, T_{q+1}, \ldots, T_n)
+				\\
+				&= \cE_{1_\chi}(T_1, \ldots, T_n) - \sum_{\sigma \in \BNC(\chi|_{\setminus q})} b\kappa_{\sigma}(T_1, \ldots, T_{q-1}, T_{q+1}, \ldots, T_n),
+			\end{align*}
+			by induction and Proposition \ref{propenhancedproperties}.
+			Since
+			\begin{align*}
+				\cE_{1_\chi}(T_1, \ldots, T_n) &= E(T_1\cdots T_n)
+				\\
+				&= E(T_1 \cdots T_{q-1} L_b T_{q+1} \cdots T_n) \\
+				&=
+				E(L_bT_1 \cdots T_{q-1} T_{q+1}\cdots T_n) \\
+				&=
+				bE(T_1 \cdots T_{q-1} T_{q+1}\cdots T_n) \\
+				&=
+				\sum_{\sigma \in \BNC(\chi|_{\setminus q})} b\kappa_{\sigma}(T_1, \ldots, T_{q-1}, T_{q+1}, \ldots, T_n),
+			\end{align*}
+			the proof is complete in this case as well.
+		\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	   Universal Moment Polynomials for Bi-Free Families with Amalgamation	   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Universal moment polynomials for bi-free families with amalgamation.}
+		\label{sec:universalmomentpolysforbifreewithamalgamation}
+
+		In this section, we will generalize Corollary~\ref{cor:bifreelats} to demonstrate that algebras will be bi-free with amalgamation over $\cB$ if and only if certain moment expressions hold; our goal is to use the same technology to eventually show that bi-freeness with amalgamation can be characterised by the vanishing of mixed cumulants.
+		To begin, we will need to extend the definition of $E_\pi(T_1,\ldots, T_n)$ to certain diagrams in the style of Subsection~\ref{ss:shadedlrdiagrams} of Chapter~\ref{ch:bfi}.
+
+%	Equivalence of Bi-Free with Amalgamation and Universal Polynomials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		\subsection{Bi-freeness with amalgamation through universal moment polynomials.}
+
+		\begin{definition}
+			Let $\chi : [n] \to \slr$ and let $\iota : [n] \to \I$.
+			Let $LR^\lat_k(\chi, \iota)$ denote the closure of $LR_k(\chi, \iota)$ under lateral refinement.
+			Observe that every diagram in $LR^\lat_k(\chi, \iota)$ still has $k$ strings reaching its top, as lateral refinements may only introduce cuts between ribs.
+			We denote
+			\[
+				LR^\lat(\chi, \iota) := \bigcup_{k\geq 0} LR^\lat_k(\chi, \iota).
+			\]
+		\end{definition}
+
+
+
+
+
+
+
+
+
+		\begin{definition}
+			\label{defn:ELRrecursiveproof}
+			Let $\set{(\cX_\iota, \ocX_\iota, p_\iota)}_{\iota \in \I}$ be $\cB$-$\cB$-bimodules with specified $\cB$-vector states, let $\lambda_\iota$ and $\rho_\iota$ be as defined in Construction \ref{cons:freeproductconstruction}, and let $\cX = \st_{\iota \in \I} \cX_\iota$.
+			Let $\chi : [n] \to \slr$, $\iota : [n] \to \I$, $D \in LR^\lat(\chi, \iota)$, and $T_\iota \in \cL_{\chi(k)}(\cX_{\iota(k)})$.
+			Define $\mu_k(T_k) = \lambda_{\iota(k)}(T_k)$ if $\chi(k) = \ell$ and $\mu_k(T_k) = \rho_{\iota(k)}(T_k)$ if $\chi(k) = r$.
+			We define $E_D(\mu_1(T_1),\ldots, \mu_n(T_n))$ as follows: first, apply the same recursive process as in Definition \ref{defn:recursivedefinitionofEpi} until every block of $\pi$ has a spine reaching the top.
+			If every block of $D$ has a spine reaching the top, enumerate them from left to right according to their spines as $V_1,\ldots, V_m$ with $V_j=\set{k_{j,1}<\cdots <k_{j,q_j}}$, and set
+			\[
+				E_D(\mu_1(T_1),\ldots,\mu_n(T_n))=[(1-p_{\iota(k_{1,1})})T_{k_{1,1}} \cdots T_{k_{1,q_1}} 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m,1})})T_{k_{m,1}} \cdots T_{k_{m,q_m}} 1_\cB].
+			\]
+		\end{definition}
+
+
+
+
+
+
+
+
+		\begin{lemma}
+			\label{lem:actingonFreeproductspace}
+			With the notation as in Definition \ref{defn:ELRrecursiveproof},
+			\[
+				\mu_1(T_1) \cdots \mu_n(T_n)1_\cB = \sum_{m=0}^n \sum_{D \in LR^\lat_m(\chi, \iota)} \left[ \sum_{\substack{ D' \in LR_m(\chi, \iota) \\ D' \geq_{\mathrm{lat}} D}} (-1)^{|D| - |D'|}
+				\right] E_{D}(\mu_1(T_1),\ldots, \mu_n(T_n)),
+			\]
+			where $|D|$ and $|D'|$ denote the number of blocks of $D$ and $D'$ respectively.
+			In particular,
+			\[
+				E_{\cL(\cX)}(\mu_1(T_1) \mu_2(T_2) \cdots \mu_n(T_n)) = \sum_{\pi \in \BNC(\chi)} \left[ \sum_{\substack{\sigma\in \BNC(\chi)\\\pi\leq\sigma\leq\e}}\mu_{\BNC}(\pi, \sigma) \right] \cE_{\pi}(\mu_1(T_1),\ldots, \mu_n(T_n)).
+			\]
+		\end{lemma}
+
+
+
+
+
+		\begin{proof}
+			To begin, note that the second claim follows from the first by Definition~\ref{defn:ELRrecursiveproof} and by Proposition~\ref{prop:lattomob}.
+			To prove the main claim we will proceed by induction on the number of operators $n$.
+			The case $n = 1$ is immediate.
+
+			For the inductive step, we will assume that $\chi(1) = \ell$ as the proof in the case $\chi(1) = r$ will follow by similar arguments. Let $\chi_0 = \chi|_{\set{2,\ldots, n}}$ and $\iota_0 = \iota|_{\set{2,\ldots, n}}$.
+			By induction, we obtain that
+			\[
+				\mu_2(T_2) \cdots \mu_n(T_n)1_\cB = \sum_{m=0}^{n-1} \sum_{D_0 \in LR^\lat_m(\chi_0, \iota_0)} \left[ \sum_{\substack{ D'_0 \in LR_m(\chi_0, \iota_0) \\ D'_0 \geq_{\mathrm{lat}} D_0}} (-1)^{|D_0| - |D'_0|}
+				\right] E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n)).
+			\]
+			The result will follow by applying $\lambda_1(T_1)$ to each $E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n))$, checking the correct terms appear, collecting the same terms, and verifying the coefficients are correct.
+
+
+			Fix $D_0 \in LR^\lat_m(\chi_0, \iota_0)$.
+			We can write
+			\[
+				E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n)) = [(1-p_{\iota(k_{1})}) S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]
+			\]
+			for some operators $S_p \in \mathrm{alg}(\lambda_{k_p}(\cL_\ell(\cX_{k_p})), \rho_{k_p}(\cL_r(\cX_{k_p})))$.
+			To demonstrate the correct terms appear, we divide the analysis into three cases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+			\paragraph{Case 1: $m = 0$.}
+			In this case $E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n)) = b \in \cB$.
+			As such, we see that
+			\begin{align*}
+				\lambda_{\iota(1)}(T_1)E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n)) & = E(T_1)b \oplus [(1-p_{\iota(1)})T_1 b].
+			\end{align*}
+			If $D_1$ is the $LR$-diagram obtained from $D_0$ by placing a node shaded $\iota(1)$ at the top left and $D_2$ is the $LR$-diagram obtained from $D_0$ by placing a node $\iota(1)$ at the top left and drawing a spine from this node to the top, then since 
+			\[
+				E(\mu_1(T_1) L_b) = E(\mu_1(T_1) R_b) = E(R_b \mu_1(T_1)) = E(T_1) b
+			\]
+			and
+			\[
+				T_1 b = T_1 R_b 1_\cB = T_1 L_b 1_B
+			\]
+			one easily sees that 
+			\[
+				E(T_1)b = E_{D_1}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n)) \quad \text{and} \quad (1-p_{\iota(1)})T_1 b = E_{D_2}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n)).
+			\]
+
+
+
+
+
+
+			\paragraph{Case 2: $m \neq 0$ and $\iota(1) \neq \iota(k_1)$.}
+			In this case, $(1-p_{\iota(k_{1})}) S_1 1_\cB$ is in a space orthogonal to $\ocX_{\iota(1)}$.
+			Thus
+			\begin{align*}
+				\lambda_{\iota(1)}(T_1)E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n))
+				=& \paren{[L_{E(T_1)}(1-p_{\iota(k_{1})}) S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]} \\
+				&
+				\oplus \paren{[(1-p_{\iota(1)})T_1 1_\cB]
+				\otimes [(1-p_{\iota(k_{1})}) S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]}.
+			\end{align*}
+			If $D_1$ is the $LR$-diagram obtained from $D_0$ by placing a node shaded $\iota(1)$ at the top and $D_2$ is the $LR$-diagram obtained from $D_0$ by placing a node $\iota(1)$ at the top and drawing a spine from this node to the top, then since 
+			\[
+				L_{E(T_1)}(1-p_{\iota(k_{1})}) S_1 1_\cB = (1-p_{\iota(k_{1})}) L_{E(T_1)}S_1 1_\cB,
+			\]
+			one easily sees that 
+			\begin{align*}
+				[L_{E(T_1)}(1-p_{\iota(k_{1})}) S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB] = E_{D_1}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n)) \\
+				[(1-p_{\iota(1)})T_1 1_\cB]
+				\otimes [(1-p_{\iota(k_{1})}) S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB] = E_{D_2}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n)).
+			\end{align*}
+
+
+
+
+
+
+
+
+			\paragraph{Case 3: $m \neq 0$ and $\iota(1) = \iota(k_1)$.}
+			In this case, there is a spine in $D$ that reaches the top and is the same shading as $T_1$.
+			Thus $(1-p_{\iota(k_{1})}) S_1 1_\cB \in\ocX_{\iota(1)}$, so
+			\begin{align*}
+				\lambda_{\iota(1)}(T_1)E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n))
+				=& \paren{[L_{p_{\iota(1)}\paren{T_1(1-p_{\iota(1)}) S_1 1_\cB}}(1-p_{\iota(k_{2})}) S_2 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]} \\
+				&
+				\oplus \paren{[(1-p_{\iota(1)})T_1(1-p_{\iota(1)}) S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]}.
+			\end{align*}
+			Expanding $T_1(1-p_{\iota(1)}) S_11_\cB = T_1S_11_\cB - T_1E(S_1)$, the above becomes
+			\begin{align*}
+				\lambda_{\iota(1)}(T_1)E_{D_0}(\mu_2(T_2),\ldots, \mu_n(T_n))
+				=& \paren{[L_{E(T_1S_1)}(1-p_{\iota(k_{2})}) S_2 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]} \\
+				& \oplus (-1) \paren{[L_{p_{\iota(1)}\paren{T_1E(S_1)}}(1-p_{\iota(k_{2})}) S_2 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]} \\
+				&
+				\oplus \paren{[(1-p_{\iota(1)})T_1S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]}\\
+				&
+				\oplus (-1)\paren{[(1-p_{\iota(1)})T_1E(S_1)] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB]}.
+			\end{align*}
+			Let $D_1$ be the $LR$-diagram obtained from $D_0$ by placing a node shaded $\iota(1)$ at the top and terminating the left-most spine at this node, $D_2$ be the $LR$-diagram obtained by laterally refining $D_1$ by cutting the spine attached to the top node directly beneath the top node, $D_3$ be the $LR$-diagram obtained from $D_0$ by placing a node shaded $\iota(1)$ at the top and connecting this node to the left-most spine, and $D_4$ be the $LR$-diagram obtained by laterally refining $D_3$ by cutting the spine attached to the top node directly beneath the top node.
+			As in the previous case, we see (by applying Lemma \ref{lemproductofdisjointblocksforE} if $m = 1$) that
+			\[
+				[L_{E(T_1S_1)}(1-p_{\iota(k_{2})}) S_2 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB] = E_{D_1}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n))
+			\]
+			and 
+			\[
+				[(1-p_{\iota(1)})T_1S_1 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB] = E_{D_3}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n)).
+			\]
+
+			We will demonstrate that
+			\[
+				[L_{p_{\iota(1)}\paren{T_1E(S_1)}}(1-p_{\iota(k_{2})}) S_2 1_\cB] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB] = E_{D_2}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n))
+			\]
+			and forgo the similar proof that
+			\[
+				[(1-p_{\iota(1)})T_1E(S_1)] \otimes \cdots \otimes [(1-p_{\iota(k_{m})}) S_m1_\cB] = E_{D_4}(\mu_1(T_1), \mu_2(T_2),\ldots, \mu_n(T_n)).
+			\]
+			Notice that 
+			\[
+				L_{p_{\iota(1)}\paren{T_1E(S_1)}} = L_{p_{\iota(1)}\paren{T_1R_{E(S_1)}1_\cB}} = L_{p_{\iota(1)}\paren{T_11_\cB} E(S_1)} = L_{p_{\iota(1)}\paren{T_11_\cB}}L_{E(S_1)},
+			\]
+			and so
+			\[
+				L_{p_{\iota(1)}\paren{T_1E(S_1)}}(1-p_{\iota(k_{2})}) S_2 1_\cB = (1-p_{\iota(k_{2})}) L_{p_{\iota(1)}\paren{T_11_\cB}}L_{E(S_1)}S_2 1_\cB.
+			\]
+			Thus, unless $m = 1$, $L_{p_{\iota(1)}\paren{T_11_\cB}}$ appears as it should in the definition of $E_{D_2}$ although the $E(S_1)$ term may not be as it should.
+			To obtain the desired result, we make the following corrections.
+
+			Recall that $S_1$ corresponds to the left-most spine of $D_0$ reaching the top.
+			Let $W \subseteq \set{2,\ldots, n}$ be the set of $k$ for which $T_k$ appears in the expression for $S_1$.
+			Note that $S_1$ will be of the form $C_{E(S'_1)} C_{E(S'_2)} \cdots C_{E(S'_{p-1})} S'_p$, where each $E(S'_k)$ is the moment of a disjoint $\chi$-interval $W_k$ composed of blocks of $D_2$ with the property that $\min_{\prec_\chi}(W_k)$ and $\max_{\prec_\chi}(W_k)$ lie in the same block ($C$ denotes either $L$ or $R$, as appropriate).
+			Observe that $W = \bigcup^p_{k=1} W_k$.
+			Therefore, by Proposition \ref{prop:propertiesofEforLX}
+			\[
+				E(S_1) = E(C_{E(S'_1)} C_{E(S'_2)} \cdots C_{E(S'_{p-1})} S'_p)= E(S''_1) \cdots E(S''_p),
+			\]
+			where the $S''_1,\ldots, S''_p$ are $S'_1,\ldots, S'_p$ up to reordering by $\prec_\chi$. Let $W'_1,\ldots, W'_k$ be $W_1,\ldots, W_k$ under this new ordering. 
+
+			Through Lemma \ref{lemproductofdisjointblocksforE} in the case $m=1$ and computations similar to the reverse of those used in cases 1 and 2 of Lemma \ref{lemreductionofbimultiplicativeinsideablockforE} one can verify these terms can be moved into the correct positions.
+
+
+
+			Finally, it is clear that the coefficients of each $E_D(\mu_1(T_1),\ldots, \mu_n(T_n))$ are correct for each $D \in LR^\lat(\chi, \iota)$.
+			Alternatively, one can check the coefficients in the second claim by noting that the coefficients did not depend on the algebra $\cB$, setting $\cB=\C$, and using Corollary~\ref{cor:bifreemob}.
+		\end{proof}
+
+		\begin{theorem}
+			\label{thm:bifreeequivalenttouniversalpolys}
+			Let $(\A, E_\A, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let $\fpf$ be a family of pairs of $\cB$-faces of $\A$.
+			Then $\fpf$ are bi-free with amalgamation over $\cB$ if and only if for all $\chi : [n] \to \slr$, $\iota : [n] \to \I$, and $T_k \in \A_{\chi(k)}^{(\iota(k))}$, the following formula holds:
+			\[
+				E_{\A}(T_1 \cdots T_n) = \sum_{\pi \in \BNC(\chi)} \sq{ \sum_{\substack{\sigma\in \BNC(\chi)\\\pi\leq\sigma\leq\e}}\mu_{\BNC}(\pi, \sigma) } \cE_{\pi}(T_1,\ldots, T_n).
+			\]
+		\end{theorem}
+
+		\begin{proof}
+			If $\fpf$ are bi-free with amalgamation over $\cB$, then Lemma~\ref{lem:actingonFreeproductspace} implies the desired formula holds.
+
+			Conversely, suppose that the formula holds.
+			By Theorem \ref{thm:representingbbncps} there exists a $\cB$-$\cB$-bimodule with a specified $\cB$-vector state $(\cX, \ocX, p)$ and a unital homomorphism $\theta : \A \to \cL(\cX)$ such that 
+			\[
+				\theta(\varepsilon(b_1 \otimes b_2)) = L_{b_1} R_{b_2}, \quad \theta(\A_\ell) \subseteq \cL_\ell(\cX),\quad \theta(\A_r) \subseteq \cL_r(\cX), \quad \mathrm{and}\quad E_{\cL(\cX)}(\theta(T)) = E_\A(T)
+			\]
+			for all $b_1, b_2 \in \cB$ and $T \in \A$.
+			For each $\iota \in \I$, let $(\cX_\iota, \ocX_\iota, p_\iota)$ be a copy of $(\cX, \ocX, p)$ and $l_\iota$ and $r_\iota$ be copies of $\theta\colon \A\to \cL(\cX_\iota)$.
+			Since the formula holds for $E_{\cL(\cX)}\circ\theta$ as well by Lemma~\ref{lem:actingonFreeproductspace}, $\fpf$ are bi-free over $\cB$.
+		\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	     Additivity of Operator-Valued Bi-Free Cumulants        	   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		\section{Additivity of operator-valued bi-free cumulants.}
+		\label{sec:additivity}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\subsection{Equivalence of bi-freeness with vanishing of mixed cumulants.}
+		We now state the operator-valued analogue of the main result of Section~\ref{sec:unibifree} from Chapter~\ref{ch:bfi}, namely, that bi-freeness of families of pairs of $\cB$-faces is equivalent to the vanishing of their mixed cumulants.
+
+		\begin{theorem}
+			\label{thmequivalenceofbifreeandcombintoriallybifree}
+			Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let $\fpf$ be a family of pairs of $\cB$-faces from $\A$.
+			Then $\fpf$ are bi-free with amalgamation over $\cB$ if and only if for all $\chi : [n] \to \slr$, $\iota : [n] \to \I$ non-constant, and $T_k \in \A_{\chi(k)}^{(\iota(k))}$, we have
+			\[\kappa_{1_\chi}(T_1, \ldots, T_n) = 0.\]
+		\end{theorem}
+
+		\begin{proof}
+			Suppose $\fpf$ are bi-free over $\cB$.
+			Fix a shading $\iota : [n] \to \I$ and let $\chi : [n] \to \slr$.
+			If $T_1, \ldots, T_n$ are operators as above, Theorem \ref{thm:bifreeequivalenttouniversalpolys} implies
+			\[
+				\cE_{1_\chi}\paren{ T_1, \ldots, T_n}
+				= \sum_{{\pi \in \BNC(\alpha)}} \left[
+				\sum_{\substack{\sigma \in \BNC(\chi) \\ \pi \leq \sigma \leq \iota}} \mu_{\BNC}(\pi, \sigma) \right] \cE_{\pi}\paren{ T_1, \ldots, T_n}.
+			\]
+			Therefore
+			\[
+				\cE_{1_\chi}\paren{ T_1, \ldots, T_n } = \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma \leq \iota}} \kappa_\sigma\paren{T_1, \ldots, T_n}
+			\]
+			by Definition \ref{def:kappa}.
+			Using the above formula, we will proceed inductively to show that $\kappa_\sigma\paren{T_1, \ldots, T_n} = 0$ if $\sigma \in \BNC(\chi)$ and $\sigma \nleq \iota$.
+			The base case where $n = 1$ holds vacuously.
+
+
+
+			For the inductive case, suppose the result holds for every $q < n$.
+			Suppose $\iota$ is not constant and note $1_\chi \nleq \iota$.
+			Then
+			\[
+				\sum_{\sigma \in \BNC(\chi)} \kappa_\sigma\paren{ T_1, \ldots, T_n }
+				= \cE_{1_\chi}\paren{ T_1, \ldots, T_n }
+				= \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma \leq \iota}} \kappa_\sigma\paren{T_1, \ldots, T_n}.
+			\]
+			On the other hand, by induction and the bi-multiplicativity of $\kappa$, $\kappa_\sigma\paren{T_1, \ldots, T_n} = 0$ provided $\sigma \in \BNC(\chi)\setminus \set{1_\chi}$ and $\sigma \nleq \iota$.
+			Consequently,
+			\[
+				\sum_{\sigma \in \BNC(\chi)} \kappa_\sigma\paren{ T_1, \ldots, T_n } = \kappa_{1_\chi}\paren{ T_1, \ldots, T_n } + \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma \leq \iota}} \kappa_\sigma\paren{ T_1, \ldots, T_n }.
+			\]
+			Combining these two equations gives $\kappa_{1_\chi}\paren{ T_1, \ldots, T_n } = 0$, completing the inductive step.
+
+			Conversely, suppose all mixed cumulants vanish.
+			Then we have
+			\begin{align*}
+				\cE_{1_\chi}\paren{ T_1, \ldots, T_n }
+				&= \sum_{\sigma \in \BNC(\chi)} \kappa_\sigma\paren{ T_1, \ldots, T_n }\\
+				&=
+				\sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma \leq \iota}} \kappa_\sigma\paren{ T_1, \ldots, T_n } \\
+				&=
+				\sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma \leq \iota}} \sum_{\substack{\pi \in \BNC(\chi)\\ \pi \leq \sigma}}\cE_\pi\paren{ T_1, \ldots, T_n } \mu_{\BNC}(\pi, \sigma) \\
+				&=
+				\sum_{{\pi\in \BNC(\chi) }} \left[\sum_{\substack{\sigma \in \BNC(\chi)\\ \pi \leq \sigma \leq \iota}} \mu_{\BNC}(\pi, \sigma) \right] \cE_\pi\paren{ T_1, \ldots, T_n }.
+			\end{align*}
+			Hence Theorem \ref{thm:bifreeequivalenttouniversalpolys} implies $\fpf$ are bi-free over $\cB$.
+		\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\subsection{Moment and cumulant series.}
+
+		In this section, we will begin the study of pairs of $\cB$-faces generated by operators.
+
+		Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let $(C, D)$ be a pair of $\cB$-faces such that
+		\[
+		C = \mathrm{alg}(\set{L_b \, \mid \, b \in \cB} \cup \set{z_i}_{i \in I}\})
+		\qquad
+		\text{and}
+		\qquad
+	D = \mathrm{alg}(\set{R_b \, \mid \, b \in \cB} \cup \set{z_j}_{j \in J}\}).
+\]
+We desire to compute the joint distribution of $(C, D)$ under $E$.
+To do so, it suffices to compute
+\[
+	E((C_{b_1} z_{\alpha(1)} C_{b'_1}) \cdots (C_{b_n} z_{\alpha(n)} C_{b'_n})) = \cE_{1_{\chi_\alpha}}(C_{b_1'} z_{\alpha(1)} C_{b_1}, \ldots, C_{b_n'} z_{\alpha(n)} C_{b_n})
+\]
+where $\alpha : [n] \to I \sqcup J$, $b_1, b'_1, \ldots, b_n, b'_n \in \cB$, and $C_{b_k} = L_{b_k}$, $C_{b'_k} = L_{b'_k}$ if $\alpha(k) \in I$ and $C_{b_k} = R_{b_k}$, $C_{b'_k} = R_{b'_k}$ if $\alpha(k) \in J$.
+However, because $\cE$ is bi-multiplicative it suffices to treat the case where $b_k' = 1$ and so $C_{b_k'} = I$; we may even assume $b_n = 1$.
+Similarly, to compute all possible cumulants, it suffices to compute
+\[
+	\kappa_{1_{\chi_\alpha}}(z_{\alpha(1)} C_{b_1},
+		z_{\alpha(2)} C_{b_2}, \ldots,
+		z_{\alpha(n-1)} C_{b_{n-1}},
+	z_{\alpha(n)}).
+\]
+As such we make the following definition.
+
+\begin{definition}
+	\label{defnmomentandcumulantseries}
+	Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space and let $(C, D)$ be a pair of $\cB$-faces such that
+	\[
+	C = \mathrm{alg}(\set{L_b \, \mid \, b \in \cB} \cup \set{z_i}_{i \in I}\})
+	\qquad
+	\text{and}
+	\qquad
+D = \mathrm{alg}(\set{R_b \, \mid \, b \in \cB} \cup \set{z_j}_{j \in J}\}).
+		  \]
+		  The \emph{moment series} of $z = ((z_i)_{i \in I}, (z_j)_{j \in J})$ is the collection of maps
+		  \[
+			  \set{\mu^z_\alpha : \cB^{n-1} \to \cB \, \mid \, n \in \N, \alpha :[n] \to I \sqcup J}
+		  \]
+		  given by
+		  \[
+			  \mu^z_\alpha(b_1, \ldots, b_{n-1}) = \cE_{1_{\chi_\alpha}}(z_{\alpha(1)} C_{b_1},
+				  z_{\alpha(2)} C_{b_2}, \ldots,
+				  z_{\alpha(n-1)} C_{b_{n-1}},
+			  z_{\alpha(n)}),
+		  \]
+		  where $C_{b_k} = L_{b_k}$ if $\alpha(k) \in I$ and $C_{b_k} = R_{b_k}$ otherwise.
+
+		  Similarly, the \emph{cumulant series} of $z$ is the collection of maps
+		  \[
+			  \set{\kappa^z_\alpha : \cB^{n-1} \to \cB \, \mid \, n \in \N, \alpha :[n] \to I \sqcup J}
+		  \]
+		  given by
+		  \[
+			  \kappa^z_\alpha(b_1, \ldots, b_{n-1}) = \kappa_{1_{\chi_\alpha}}(z_{\alpha(1)} C_{b_1},
+				  z_{\alpha(2)} C_{b_2}, \ldots,
+				  z_{\alpha(n-1)} C_{b_{n-1}},
+			  z_{\alpha(n)}).
+		  \]
+
+		  Note that if $n = 1$, we have $\mu_\alpha^z = E(z_{\alpha(1)}) = \kappa_\alpha^z$.
+	  \end{definition}
+
+
+
+
+
+
+
+	  \begin{proposition}
+		  Let $(\A, E)$ be a $\cB$-$\cB$-non-commutative probability space, and for $\iota\in \set{',''}$ let $\set{z_i^\iota}_{i\in I}\subset \A_\ell$ and $\set{z_j^\iota}_{j\in J}\subset \A_r$. If 
+		  \[
+			  C^\iota = \alg\paren{\set{L_b : b \in \cB} \cup \set{z_i^\iota}_{i\in I}}\qquad\text{and}\qquad
+			  D^\iota = \alg\paren{\set{R_b : b \in \cB} \cup \set{z_j^\iota}_{j\in J}}
+		  \]
+		  are such that $(C', D')$ and $(C'', D'')$ are bi-free, then
+		  \[
+			  \kappa_\alpha^{z'+z''} = \kappa_\alpha^{z'}+\kappa_\alpha^{z''}.
+		  \]
+	  \end{proposition}
+
+	  \begin{proof}
+		  This follows directly from Theorem \ref{thmequivalenceofbifreeandcombintoriallybifree}.
+	  \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	    Multiplicative Convolution for Families of Pairs of $\cB$-Faces   	   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% \section{Multiplicative convolution for families of pairs of $\cB$-faces.}
+% \label{sec:MultiplicativeConvolution}
+% 
+% In this section, we will demonstrate how operator-valued bi-free cumulants involving products of operators may be computed.
+% The main theorem of this section, Theorem \ref{thm:advancedcumulantreduction}, also gives rise to an extension of Theorem~\ref{thm:multkrewer} in the case $\cB = \C$.
+% 
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Operator-valued bi-free cumulants of products.}
+% 
+% \begin{notation}
+% 	\label{nota:expandingnodesonthesameside}
+% 	Let $m,n \in \N$ with $m < n$, and fix a sequence of integers 
+% 	\[
+% 		k(0) = 0 < k(1) < \cdots < k(m) = n
+% 	\]
+% 	For $\chi : \set{1,\ldots, m} \to \slr$, we define $\widehat{\chi} : [n] \to \slr$ via
+% 	\[
+% 		\widehat{\chi}(q) = \chi(p_q)
+% 	\]
+% 	where $p_q$ is the unique element of $\set{1,\ldots, m}$ such that $k(p_q-1) < q \leq k(p_q)$.
+% 
+% \end{notation}
+% 
+% There exists an embedding of $\BNC(\chi)$ into $\BNC(\widehat{\chi})$ via $\pi \mapsto \widehat{\pi}$ where the $p^{\mathrm{th}}$ node of $\pi$ is replaced by the block $(k(p-1)+1, \ldots, k(p))$.
+% Observe that all of these nodes appear on the side $p$ was on originally.
+% Alternatively, this map can be viewed as an analogue of the map on non-crossing partitions from \cite{nica2006lectures}*{Notation 11.9} after applying $s^{-1}_\chi$.
+% 
+% It is easy to see that $\widehat{1_\chi} = 1_{\widehat{\chi}}$, $\widehat{0_\chi}$ is the partition with blocks $\set{(k(p-1)+1, \ldots, k(p))
+% }_{p=1}^m$, and $\pi \mapsto \widehat{\pi}$ is injective and preserves the partial ordering on $\BNC$.
+% Furthermore the image of $\BNC(\chi)$ under this map is
+% \[
+% 	\widehat{\BNC}(\chi) = \left[\widehat{0_\chi}, \widehat{1_\chi}\right] = \left[\widehat{0_\chi}, 1_{\widehat{\chi}}\right] \subseteq \BNC(\widehat{\chi}).
+% \]
+% Finally, since the lattice structure is preserved by this map, we see that $\mu_{\BNC}(\sigma, \pi) = \mu_{\BNC}(\widehat{\sigma}, \widehat{\pi})$.
+% 
+% 
+% 
+% Recall that since $\mu_{\BNC}$ is the M\"obius function on the lattice of bi-non-crossing partitions, we have for each $\sigma,\pi \in \BNC(\chi)$ with $\sigma \leq \pi$ that
+% \[
+% 	\sum_{\substack{ \tau \in \BNC(\chi) \\ \sigma \leq \tau \leq \pi
+% }} \mu_{\BNC}(\tau, \pi) =
+% \left\{
+% 	\begin{array}{ll}
+% 		1 & \text{if } \sigma = \pi
+% 		\\
+% 			0 & \text{otherwise }
+% 	\end{array} \right. .
+% \]
+% Therefore, it is easy to see that the partial M\"{o}bius inversion from \cite{nica2006lectures}*{Proposition 10.11} holds in our setting: that is, if $f, g : \BNC(\chi) \to \cB$ are such that 
+% \[
+% 	f(\pi) = \sum_{\substack{\sigma \in \BNC(\chi) \\ \sigma \leq \pi}} g(\sigma)
+% \]
+% for all $\pi \in \BNC(\chi)$, then for all $\pi, \sigma \in \BNC(\chi)$ with $\sigma \leq \pi$, we have the relation
+% \[
+% 	\sum_{\substack{\tau \in \BNC(\chi) \\ \sigma \leq \tau \leq \pi }} f(\tau) \mu_{\BNC}(\tau, \pi) = \sum_{\substack{\omega \in \BNC(\chi) \\ \omega \vee \sigma = \pi }} g(\omega).
+% \]
+% 
+% 
+% 
+% We now describe the operator-valued bi-free cumulants involving products of operators in terms of the above notation, following the spirit of \cite{nica2006lectures}*{Theorem 11.12}.
+% \begin{theorem}
+% 	\label{thm:advancedcumulantreduction}
+% 	Let $(\A, E, \varepsilon)$ be a $\cB$-$\cB$-non-commutative probability space, $m, n \in \N$ with $m < n$, $\chi : [m] \to \slr$, and
+% 	\[
+% 		k(0) = 0 < k(1) < \cdots < k(m) = n.
+% 	\]
+% 	If $\pi \in \BNC(\chi)$ and $T_k \in \A_{\widehat{\chi}(k)}$ for all $k \in [n]$, then
+% 	\[
+% 		\kappa_\pi\paren{T_1 \cdots T_{k(1)}, T_{k(1)+1} \cdots T_{k(2)}, \ldots, T_{k(m-1)+1} \cdots T_{k(m)} } =
+% 	\sum_{\substack{\sigma \in \BNC(\widehat{\chi})\\ \sigma \vee \widehat{0_\chi} = \widehat{\pi}}} \kappa_\sigma(T_1, \ldots, T_n).
+% 	\]
+% 	In particular, for $\pi = 1_\chi$, we have
+% 	\[
+% 		\kappa_{1_\chi}\paren{T_1 \cdots T_{k(1)}, T_{k(1)+1} \cdots T_{k(2)}, \ldots, T_{k(m-1)+1} \cdots T_{k(m)}} = \sum_{\substack{\sigma \in \BNC(\widehat{\chi})\\ \sigma \vee \widehat{0_\chi} = 1_{\widehat{\chi}}}} \kappa_\sigma(T_1, \ldots, T_n).
+% 	\]
+% \end{theorem}
+% 
+% \begin{proof}
+% 	For $j \in \set{1,\ldots, m}$, let $S_j = T_{k(j-1)+1} \cdots T_{k(j)}$.
+% 	Then, by Definition \ref{defn:recursivedefinitionofEpi},
+% 	\begin{align*}
+% 		\kappa_\pi(S_1, \ldots, S_m) &= \sum_{\substack{\tau \in \BNC(\chi) \\ \tau \leq \pi}} \cE_\tau(S_1, \ldots, S_m) \mu_{\BNC}(\tau, \pi) \\
+% 		& = \sum_{\substack{\tau \in \BNC(\chi)\\
+% 		\tau \leq \pi}} \cE_{\widehat{\tau}}(T_1, \ldots, T_n) \mu_{\BNC}(\widehat{\tau}, \widehat{\pi}) \\
+% 		& = \sum_{\substack{\sigma \in \BNC(\widehat{\chi}) \\ \widehat{0_\chi} \leq \sigma \leq \widehat{\pi}}} \cE_{\sigma}(T_1, \ldots, T_n) \mu_{\BNC}(\sigma, \widehat{\pi}) \\
+% 		& = \sum_{\substack{\sigma \in \BNC(\widehat{\chi})\\ \sigma \vee \widehat{0_\chi} = \widehat{\pi}}} \kappa_\sigma(T_1, \ldots, T_n),
+% 	\end{align*}
+% 	with the last line following from our comments before the statement of the theorem.
+% \end{proof}
+% 
+% 
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Multiplicative convolution of bi-free two-faced families.}
+% 
+% Recall the definition of the Kreweras complement $K_{\BNC}$ from Section~\ref{sec:bimultconv} of Chapter~\ref{ch:bfi}.
+% Using Theorem \ref{thm:advancedcumulantreduction}, we can extend Theorem~\ref{thm:multkrewer} as follows, using ideas from the proof of \cite{nica2006lectures}*{Theorem 14.4}.
+% 
+% 
+% \begin{proposition}
+% 	\label{prop:multiplcative-convolution}
+% 	Let $(\A, \varphi)$ be a non-commutative probability space.
+% 	Let $z'=( (z'_i)_{i \in I}, (z'_j)_{j \in J})$ and $z''=( (z''_i)_{i \in I}, (z''_j)_{j \in J})$ be bi-free two-faced families in $\A$, and set $z_i = z'_iz''_i$, $z_j = z''_jz'_j$ for $i \in I$ and $j \in J$.
+% 	Then for $\alpha : [n] \to I \sqcup J$, we have
+% 	\[
+% 		\kappa_{\chi_\alpha}(z_{\alpha(1)}, \ldots, z_{\alpha(n)}) = \sum_{\pi \in \BNC(\chi_\alpha)} \kappa_\pi(z'_{\alpha(1)}, \ldots, z'_{\alpha(n)}) \cdot \kappa_{K_{\BNC}(\pi)}(z''_{\alpha(1)}, \ldots, z''_{\alpha(n)}).
+% 	\]
+% \end{proposition}
+% 
+% \begin{proof}
+% 	Define $\widehat{\alpha} : \set{1,\ldots, 2n} \to I \sqcup J$ by $\widehat{\alpha}(2k-1) = \widehat{\alpha}(2k) = \alpha(k)$ for $k \in [n]$, and define $\iota : \set{1,\ldots, 2n} \to \set{', ''}$ by
+% 	\[
+% 		\iota(2k-1)
+% 	= \left\{
+% 		\begin{array}{ll}
+% 			' & \text{if } \alpha(k) \in I
+% 			\\
+% 				'' & \text{if } \alpha(k) \in J
+% 		\end{array} \right.
+% 	\qquad \text{ and }\qquad \iota(2k) = 
+% 	\left\{
+% 		\begin{array}{ll}
+% 			'' & \text{if } \alpha(k) \in I
+% 			\\
+% 			' & \text{if } \alpha(k) \in J
+% 		\end{array} \right..
+% 	\]
+% 	Using Theorem \ref{thm:advancedcumulantreduction}, we easily obtain
+% 	\[
+% 		\kappa_\chi(z_{\alpha(1)}, \ldots, z_{\alpha(n)}) = \sum_{\substack{\pi \in \BNC(\chi_{\widehat{\alpha}}) \\ \pi \vee \sigma = 1_{\chi_{\widehat{\alpha}}}}} \kappa_\pi\paren{z^{\iota(1)}_{\alpha(1)}, z^{\iota(2)}_{\alpha(1)}, \ldots, z^{\iota(2n-1)}_{\alpha(n)}, z^{\iota(2n)}_{\alpha(n)}}
+% 	\]
+% 	where $\sigma = \set{(1,2), (3,4), \ldots, (2n-1, 2_n)}$.
+% 	Since $z'$ and $z''$ are bi-free, Theorem \ref{thmequivalenceofbifreeandcombintoriallybifree} (or simply Theorem~\ref{thm:biequiv}) implies mixed bi-free cumulants vanish and thus only $\pi$ of the form $\pi = \pi' \cup \pi''$ with $\pi' \in \BNC\paren{ \chi_{\widehat{\alpha}}|_{\set{k \, \mid \, \iota(k) = '}}}$ and $\pi'' \in \BNC\paren{ \chi_{\widehat{\alpha}}|_{\set{k \, \mid \, \iota(k) = ''}}}$ will provide a non-zero contribution.
+% 	However, for an arbitrary $\pi' \in \BNC\paren{ \chi_{\widehat{\alpha}}|_{\set{k \, \mid \, \iota(k) = '}}}$, it is elementary to see (for example, by the relations between the Kreweras complements for bi-non-crossing and non-crossing partitions) that there exists a unique $\pi'' \in \BNC\paren{ \chi_{\widehat{\alpha}}|_{\set{k \, \mid \, \iota(k) = ''}}}$ such that $(\pi' \cup \pi'') \vee \sigma = 1_{\chi_{\widehat{\alpha}}}$; namely, $\pi'' = K_{\BNC}(\pi')$.
+% 	Therefore, since we are in the scalar setting and $\kappa_\tau(T_1,\ldots, T_n) = \kappa_{\tau|_{V}}((T_1,\ldots, T_n)|_V) \kappa_{\tau|_{V^c}}((T_1,\ldots, T_n)|_{V^c})$ whenever $\tau \in \BNC(\chi')$ and $V$ is a block of $\pi$, we obtain the desired equation.
+% \end{proof}
+% 
+
+
+
+
+
+
+	  \section{Amalgamated versions of results from Chapter~\ref{ch:bfi}.}
+	  In this section we remark that several of our results from Chapter~\ref{ch:bfi} have immediate or almost-immediate extensions to the operator-valued setting.
+	  We will eschew many of the details as they are for the most part restatements of the proofs in the scalar-valued case with much more tedious bookkeeping.
+
+	  \subsection{Amalgamated vaccine.}
+	  We first turn our attention to the vaccine condition, which extends to the bi-free setting by replacing every instance of $\varphi$ with $\cE$.
+	  Lemma~\ref{lem:bifreeimpliesvaccine} (that bi-free families exhibit vaccine) still holds in this situation, its proof being entirely combinatorial.
+	  One must take some care when reducing cumulants into products based on their blocks since $\cB$ is potentially non-commutative; however, the key point of the argument is that if an interval is not connected to any nodes outside of it, its moment is multiplied into the product, and this still holds.
+	  All the terms corresponding to the isolated interval can be collected in one place in the correct order, and then replaced by one of $0$, $L_0$, or $R_0$.
+
+% We are not aware of a proof of an analogue of Lemma~\ref{lem:vaccineimpliesbifree} (that vaccine suffices for bi-free independence), however, essentially because $\cB$ is very likely to not be algebraically closed.
+% Thus we do not know that we can necessarily apply the same trick to reduce any moment to a polynomial of moments of smaller order.
+% We do arrive at the following much weaker statement:
+% \begin{lemma}
+% 	\label{lem:amalgavaccineimpliesbifree}
+% 	Let $\fpf$ be a family of pairs of $\cB$-faces in a $\cB$-$\cB$-non-commutative probability space $(\A, E, \varepsilon)$.
+% 	Suppose further that for each single $\iota \in \I$ and every $\chi : [n] \to \slr$ and $z_i \in \A^{(\iota)}_{\chi(i)}$, there are $b_i \in \varepsilon(\cB\otimes\cB)$ so that
+% 	$$E\paren{(z_1 - b_1) \cdots (z_n - b_n)} = 0.$$
+% 	Then $\fpf$ are bi-free with amalgamation over $\cB$ if they exhibit vaccine.
+% \end{lemma}
+% With the stronger assumption, the proof of Lemma~\ref{lem:vaccineimpliesbifree} carries over unchanged.
+% 
+% We do point out that the assumptions of Lemma~\ref{lem:amalgavaccineimpliesbifree} are satisfied in more than just the scalar case.
+% For example, suppose that $\cB \subset \cZ(\A)$ is a $W^*$-algebra (so isomorphic to the space of continuous functions on some compact set), and $\varepsilon(f\otimes g) = fg$.
+% Then given an equation of the form of the one in Lemma~\ref{lem:amalgavaccineimpliesbifree}, we may reduce this to a polynomial equation in $\cB$ by expanding, commuting all of the $b$ terms to the front of the monomials they lie in, and then using multiplicativity to pull them outside of $E$; we are left trying to solve an $n$-variable equation in $\cB$, where no variable has degree greater than $1$ and the coefficients are elements of $\cB$.
+% But we also know that the coefficient of the term $b_1\cdots b_n$ is $\pm1$; in particular, if we collect the terms in which $b_1$ appears and let $b_2 = \cdots = b_n = \lambda$, for sufficiently large $\lambda$ the $\C[b_2, \ldots, b_n]$-coefficient of $b_1$ becomes invertible.
+% In particular, the equation has a solution of the form $(b, \lambda, \ldots, \lambda)$ for some $b \in \cB$ and $\lambda \in \R$ large.
+
+	  The analogue of Lemma~\ref{lem:vaccineimpliesbifree} requires a bit more care, however, essentially due to the fact that $\cB$ is probably not algebraically closed, and even if it were, terms of the form $E\paren{(z_1-b_1)\cdots(z_n-b_n)}$ (with $z_i \in \A$ and $b_i \in \varepsilon(\cB\otimes\cB)$) do not directly reduce to polynomials with coefficients in $\cB$, as the $b$'s cannot be assumed to commute past the $z$'s and so can't be pulled out of the $E$ without further argument.
+	  However, we do have the following Lemma which will suffice for our purposes:
+	  \begin{lemma}
+		  Suppose $(\A, E, \varepsilon)$ is a $\cB$-$\cB$-non-commutative probability space, with $\cB$ a Banach algebra.
+		  Then for every $\chi : [n] \to \slr$ and $z_i \in \A_{\chi(i)}$ there exist $\hat b_i \in \cB$ so that, with $b_i = \varepsilon(\hat b_i\otimes1) = L_{\hat b_i}$ if $\chi(i) = \ell$ and $b_i = \varepsilon(1\otimes \hat b_i) = R_{\hat b_i}$ if $\chi(i) = r$, we have
+		  $$
+		  E\paren{(z_1-b_1)\cdots (z_n-b_n)} = 0.
+		  $$
+	  \end{lemma}
+
+	  \begin{proof}
+		  Let $j = \min_{\prec_\chi}([n])$.
+		  Notice that we can write
+		  \begin{align*}
+			  E\paren{(z_1-b_1)\cdots (z_n-b_n)}
+			  &= E\paren{(z_1-b_1)\cdots(z_{j-1}-b_{j-1})z_j(z_{j+1}-b_{j+1})\cdots(z_n-b_n)} \\
+			  &\qquad- \hat b_jE\paren{(z_1-b_1)\cdots(z_{j-1}-b_{j-1})(z_{j+1}-b_{j+1})\cdots(z_n-b_n)}.
+		  \end{align*}
+		  Indeed, this is immediate if $\chi(j) = \ell$, while if $\chi(j) = r$ we must be in the case $j = n$, so we can replace $R_{\hat b_n}$ by $L_{\hat b_n}$ and then pull $\hat b_n$ out of the left.
+		  Now, if we take $b_i = \lambda \in \C$ for $i \neq j$, we find that $b_i$ commutes with every $z_k$, and
+		  $$E\paren{(z_1-\lambda)\cdots(z_{j-1}-\lambda)(z_{j+1}-\lambda)\cdots(z_n-\lambda)} = (-\lambda)^n + \bigO{\lambda^{n-1}}$$
+		  becomes a polynomial in $\lambda$ with coefficients in $\cB$ and leading term $(-\lambda)^n$.
+		  In particular, for $\lambda$ sufficiently large it is invertible in $\cB$.
+		  Then once $\lambda$ is large enough, we may take
+		  \begin{align*}
+			  \hat b_j
+			  &= {E\paren{(z_1-\lambda)\cdots(z_{j-1}-\lambda)z_j(z_{j+1}-\lambda)\cdots(z_n-\lambda)}} \\
+			  &\qquad \cdot{E\paren{(z_1-\lambda)\cdots(z_{j-1}-\lambda)(z_{j+1}-\lambda)\cdots(z_n-\lambda)}}^{-1}
+		  \end{align*}
+		  producing a solution to our equation.
+	  \end{proof}
+	  Of course, we needed something slightly weaker than $\cB$ being a Banach algebra: we only require that monic polynomials with coefficients in $\cB$ have spectrum which is not all of $\C$.
+
+	  With this lemma in hand, we can reprove Lemma~\ref{lem:vaccineimpliesbifree} in the amalgamated setting; the only difference is that for each maximal $\chi$-interval $I$ we must choose a solution to an equation with $\abs{I}$ unknowns, rather than only one.
+	  It is of course important to note that if we have $L_b$ or $R_b$ terms occurring in the expansion of this equation, they can be multiplied into adjacent $z$'s to still reduce the total number of variables in the moment being considered.
+	  We therefore have the following theorem:
+	  \begin{theorem}
+		  Suppose that $\cB$ is a Banach algebra, and let $\fpf$ be a family of pairs of $\cB$-faces in a $\cB$-$\cB$-non-commutative probability space $(\A, E, \varepsilon)$.
+		  Then the family has vaccine if and only if the pairs of $\cB$-faces are bi-free with amalgamation over $\cB$.
+	  \end{theorem}
+
+	  With vaccine established for the amalgamated setting, the results in Section~\ref{sec:morebifreeexamples} follow readily, using essentially the same proofs.
+	  In fact if one is more careful about bookkeeping, and carefully studies the action of variables in their standard representation on a free product space, one can establish Theorems~\ref{thm:bihaarconj} and \ref{thm:bipartitefreetobifree} when $\cB$ is merely an algebra with no assumptions of closure; the details may be found in \cite{Charlesworth:2015aa}.
+
+	  \subsection{Amalgamated multiplicative convolution.}
+	  In the realm of multiplicative convolution things do not work out as nicely.
+	  We do still receive a direct analogue of Proposition~\ref{prop:multicumulantplicationthingywhateverihatelabelsnowsosueme}: the combinatorial argument we employed goes through without difficulty.
+	  However we do not arrive at an equation like the one in Theorem~\ref{thm:multiconv}: while it is true in the scalar setting that we can decompose a cumulant $\kappa_{\pi^{(1)}\cup\pi^{(2)}}$ into a product $\kappa_{\pi^{(1)}}\cdot\kappa_{\pi^{(2)}}$, this does not hold in the $\cB$-valued case: the terms corresponding to the second partition may be dispersed through the first cumulant and impossible to collect.

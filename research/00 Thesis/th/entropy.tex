@@ -1,0 +1,671 @@
+\chapter{An investigation into regularity and free entropy.}
+In this section we collect some results dealing with the regularity of non-commutative random variables.
+We also show how some of the ideas from the study of free entropy, such as those in \cite{Voiculescu1999101}, and ideas from the study of free unitary Brownian motion coming from \cite{biane1997free} may be used to gain further insight into bi-free probability.
+
+\section{Regularity results.}
+We begin by recalling several useful theorems from the literature, which we will use as a starting point for our results.
+
+\subsection{Useful results from the literature.}
+This first result is paraphrased to suit our purposes.
+\begin{theorem}[\cite{anderson2008law}*{Theorem 2.9}]
+	Suppose that $\mu$ is a non-atomic probability measure with algebraic Cauchy transform.
+	Then $\mu$ has density $f$ with respect to Lebesgue measure which fails to exist at only finitely many points, and for some $d > 0$ and every $a \in \R$ satisfies
+	$$\lim_{x\to a}(x-a)^{1-d} f(x) < \infty.$$
+	In particular, if $1 < p < (1-d)^{-1}$, we have $f \in L^p(\R)$.
+	\label{thm:alginlp}
+\end{theorem}
+
+\begin{theorem}[\cite{2014arXiv1406.6664A}*{Theorem 1}]
+	\label{thm:algebraicandfree}
+	Let $(\A, \varphi)$ be a non-commutative probability space.
+	Let $x_1, \ldots, x_n \in \A$ be freely independent self-adjoint non-commutative random variables.
+	Let $$X = X^* \in M_N(\C)\otimes\C\ang{x_1, \ldots, x_n} \subset M_N(\C)\otimes\A$$ be a self-adjoint matrix polynomial.
+	If the laws of $x_1, \ldots, x_n$ are algebraic, then so is the law of $X$.
+\end{theorem}
+
+\begin{theorem}[\cite{Charlesworth2016}*{Theorem 3}]
+	\label{thm:noatoms}
+	Let $(M, \tau)$ be a finite tracial von Neumann algebra, and $y_1, \ldots, y_n \in M$.
+	Suppose that Voiculescu's free entropy dimension $\delta^*(y_1, \ldots, y_n) = n$.
+	Then for any self-adjoint non-constant non-commutative polynomial $P$, the spectral measure of $y = P(y_1, \ldots, y_n)$ has no atoms.
+\end{theorem}
+We will not define Voiculescu's free entropy dimension, but instead state that the condition in the above theorem is satisfied if $\chi(y_1, \ldots, y_n) > -\infty$ or $\Phi^*(y_1, \ldots, y_n) < \infty$.
+
+\section{Algebraicity and finite entropy.}
+We the help of the following proposition, we are able to combine the above results to show that finite entropy is preserved under polynomial convolutions for sufficiently smooth variables.
+
+
+\begin{proposition}
+	\label{prop:lpentropy}
+	Suppose that $y = y^*$ is a self-adjoint variable in a finite tracial von Neumann algebra $(M, \tau)$.
+	Further suppose that the spectral distribution of $y$ is Lebesgue absolutely continuous, with density $f$.
+	If $f \in L^p(\R)$ for some $p > 1$, then $\chi(y) > -\infty$.
+\end{proposition}
+\begin{proof}
+	Using interpolation and the fact that $\norm{f}_1 = 1$, we may assume that $p < 2$.
+	From Theorem~\ref{thm:singlevariableentropy}, we know that the free entropy of $y$ is given by
+	$$\chi(y) = \iint_{\R^2}\log\abs{s-t} \,d\mu_y(s)\,d\mu_y(t) + \frac34 + \frac12\log2\pi,$$
+	so it suffices to bound the integral above.
+	Let $L(t) := 1_{(-4M, 4M)}(t)\log\abs{t}$, where $M = \norm{y}$ (so that the support of $\mu_y$ is contained in $[-M, M]$).
+	Now for $s \in \R$, we have
+	$$f(s) \int f(t) \log\abs{s-t}\,dt = f(s)\int f(t)L(s-t)\,dt = f(s)(f\star L)(s).$$
+	We compute:
+	\begin{align*}
+		\abs{\iint \log\abs{t-s}\,d\mu(t)\,d\mu(s)}
+		&= \abs{\int f(s) \int f(t)\log\abs{s-t}\,dt\,ds}\\
+		&= \abs{\int f(s)(f\star L)(s)\,ds}\\
+		&\leq \norm{f\cdot(f\star L)}_1\\
+		&\leq \norm{f}_p\norm{f\star L}_q,
+	\end{align*}
+	where $1 = \frac1p+\frac1q$, by H\"older's inequality; note that $q > 2$ since $p < 2$.
+	It suffices, now, to show that $f\star L \in L^q(\R)$; for this, we appeal to Young's inequality.
+	Indeed, if $s = \frac q2 > 1$, then $1 + \frac 1q = \frac1p+\frac1s$ and so we have
+	$$\norm{f \star L}_q \leq \norm{f}_p\norm{L}_s.$$
+	Yet $\norm{L}_s < \infty$ for any $1 \leq s < \infty$, so we conclude $\abs{\chi(x)} < \infty$.
+\end{proof}
+
+
+\begin{corollary}
+	Suppose that $y_1, \ldots, y_n$ are freely independent, self-adjoint, and algebraic, with $\chi(y_i) > -\infty$.
+	Then if $P$ is a non-constant polynomial and $y = P(y_1, \ldots, y_n)$, we have $\chi(y) > -\infty$.
+\end{corollary}
+
+\begin{proof}
+	From Theorem~\ref{thm:algebraicandfree}, we know that $y$ is algebraic.
+	As $y_1, \ldots, y_n$ are free, we have $\chi(y_1, \ldots, y_n) = \chi(y_1) + \ldots + \chi(y_n) > -\infty$, and so Theorem~\ref{thm:noatoms} informs us that the spectral measure of $y$ has no atoms.
+	Then Theorem~\ref{thm:alginlp} tells us that Proposition~\ref{prop:lpentropy} applies, and we conclude that $\chi(y) > -\infty$.
+\end{proof}
+
+It is tempting to believe that the above corollary is true far more generally, such as when $y_1, \ldots, y_n$ is merely a system of variables with $\chi(y_1, \ldots, y_n) > -\infty$.
+Indeed, one expects that polynomial convolution is an operation which should be well-behaved.
+However, we are not aware of a proof that works in this full generality.
+
+
+\subsection{Properties of spectral measures.}
+We will show in this section that certain strong regularity properties on the generators of an algebra do ensure weaker regularity of elements of that algebra.
+We begin by establishing several useful lemmata which will allow us to gain some control over operators based on their spectral measures.
+The first result may be found in \cite{voiculescu1979some}*{Section 4}, though our narrower version of it essentially goes back to Kato~\cite{kato1966perturbation}.
+We sketch a proof here for completeness.
+\begin{lemma}
+	\label{lem:singularcontractioncommutation}
+	Let $x = x^* \in B(\cH)$ be a self-adjoint operator, and assume that the spectral measure of $x$ is not Lebesgue absolutely continuous.
+	Then there exists a sequence $T_n$ of finite-rank operators which satisfy the following properties:
+	\begin{itemize}
+		\item $0 \leq T_n \leq 1$;
+		\item $T_n \to p$ weakly, where $p$ is the spectral projection of $x$ corresponding to the support of the Lebesgue-singular part of its spectral measure; and
+		\item $\norm{[T_n, x]}_1 \to 0$.
+	\end{itemize}
+\end{lemma}
+
+
+\begin{proof}
+	Replacing $x$ by $pxp$, we may assume that $x$ has singular spectral measure.
+	Let us further assume that the spectrum of $x$ is contained in $[0,1]$ (renormalizing and shifting $x$ if necessary) and that $\cH = L^2([0,1], \mu_x)$.
+	Fix $n > 0$ and let $E_1, \ldots, E_k$ be a disjoint collection of Borel subsets of $[0,1]$ such that
+	$$\sum_{i=1}^k\operatorname{diam}(E_i) < \frac1n \qquad\text{but}\qquad \mu_x\paren{\bigcup_{i=1}^k E_i} > 1-\frac1n.$$
+	Now let $Q_i$ be the rank $1$ projection onto the function $1_{E_i}$, and $P_n = Q_1 + \ldots + Q_k$ a rank $k$ projection.
+	Plainly $P_n \to 1$ weakly, by our choice of $E_i$.
+	On the other hand, 
+	$$[P_n, x] = \sum_{i=1}^k [Q_i, x].$$
+	Now $[Q_i, x]$ has rank at most two, while $\norm{[Q_i, x]} \leq \operatorname{diam}(E_i) < \frac1n$; hence 
+	$$\norm{[P_n, x]}_1 \leq \sum_{i=1}^k \norm{[Q_i, x]}_1 \leq 2\operatorname{diam}(E_i) \leq \frac2n \to 0.$$
+\end{proof}
+
+The next two lemmata are similar to each other in spirit; each allows us to conclude that the vanishing of certain derivative-like quantities implies that a variable must be constant.
+First, though, we establish some convenient notation.
+\begin{notation}
+	In what follows, given $x, y \in \A$, we will denote $y\otimes x =: (x\otimes y)^\sigma$, and extend this map linearly to all of $\A\otimes\A$.
+	Recall also the notation we established in Section~\ref{ss:freeentropyintro}: if $X$ is an $\A$-$\A$-bimodule, $\xi\in X$, and $x, y \in \A$, then $(x\otimes y)\#\xi = x\cdot\xi\cdot y$.
+\end{notation}
+
+\begin{lemma}
+	\label{lem:zero-der}
+	Let $(\A, \tau)$ be a non-commutative probability space with faithful tracial state $\tau$, generated by algebraically free self-adjoint elements $y_1, \ldots, y_n$.
+	Take $y \in \A$ a polynomial.
+	Let $\partial_i : \A\otimes\A \to \A$ be the free difference quotients, as in Definition~\ref{defn:freedifferencequotients}.
+	Then $y \in \operatorname{Alg}\paren{y_1, \ldots, \hat{y}_i, \ldots, y_n}$ if and only if
+	$$\paren{\partial_i y}^\sigma\#y^* = 0.$$
+	Consequently, if the above equation holds for each $i$, $y \in \C$.
+\end{lemma}
+
+\begin{proof}
+	One direction is immediate as $\operatorname{Alg}(y_1, \ldots, \hat y_i, \ldots, y_n) \subseteq \ker\partial_i$.
+
+	Let $\mathcal{N}_i : \A \to \A$ be the number operator associated to $y_i$, the linear map which multiplies each monomial by its $y_i$-degree.
+	Observe that
+	$$(\partial_i y)\# y_i = \mathcal{N}_i(y),$$
+	as each monomial $m$ in $y$ contributes $\sum_{m = ay_ib} (a\otimes b)\# y_i = \mathcal{N}_i(m)$.
+
+	Suppose, then, that $(\partial_i y)^\sigma\#y^* = 0$, so $y_i(\partial_i y)^\sigma\#y^* = 0$ as well.
+	Let $\varphi_\lambda : A \to A$ be the algebra homomorphism given by $\varphi_\lambda(y_i) = \lambda y_i$, $\varphi_\lambda(y_j) = y_j$ for $j \neq i$, which exists as $y_1, \ldots, y_n$ are algebraically free.
+	We compute the following:
+	$$
+	0
+	= \tau\circ\varphi_\lambda(0)
+	= \tau\circ\varphi_\lambda\left(y_i(\partial_i y)^\sigma\#y^*\right)
+	= \tau\circ\varphi_\lambda\left(y^*(\partial_i y)\# y_i\right)
+	= \tau\circ\varphi_\lambda\left(y^* \mathcal{N}_i(y)\right).
+	$$
+
+	Now, suppose $\deg_{y_i}(y) = d$, and take $x, z \in A$ so that $x$ is $y_i$-homogeneous of degree $d$, $\deg_{y_i}(z) < d$, and $y = x + z$.
+	Then:
+	$$
+	0
+	= \tau\circ\varphi_\lambda\left( y^*\mathcal{N}_i(y) \right)
+	= \tau\circ\varphi_\lambda(dx^*x) + \tau\circ\varphi_\lambda(z^*\mathcal{N}_i(y) + x^*\mathcal{N}_i(z))
+	= d\lambda^{2d}\tau(x^*x) + \bigO{\lambda^{2d-1}}.
+	$$
+	Thus $d\lambda^{2d}\tau(x^*x) = 0$, and as $\tau$ is faithful, either $x = 0$ (in which case $y = 0$) or $d = 0$ (in which case $\deg_{y_i}(y) = 0$).
+	Either way, $y \in \operatorname{Alg}(y_1, \ldots, \hat y_i, \ldots, y_n)$.
+
+	Repeated application of the above yields the final claim.
+\end{proof}
+
+\begin{lemma}
+	\label{lem:zero-der-again}
+	Let $y_1, \ldots, y_n$ be algebraically free self-adjoint elements which generate a finite tracial von Neumann algebra $(M, \tau)$, and $\A$ be the algebra they generate.
+	Suppose further that $\delta^*(y_1, \ldots, y_n) = n$.
+	Once again, let $\partial_i : \A\otimes\A \to \A$ be the free difference quotients.
+	Suppose that $N: \A \to \A$ is a linear combination of number operators $\cN_i$, so for $x \in \A$,
+	$$N(x) = \sum_{i=1}^n a_i(\partial_ix)\# y_i.$$
+	Let $y = y^* \in \A$ be an eigenvector of $N$.
+	Then if for some spectral projection $p \in \cP(W^*(y))$ and for each $1 \leq i \leq n$ with $a_i \neq 0$ we have
+	$$(\partial_i y)^\sigma\#(py) = 0,$$
+	it follows that $N(y) = 0$.
+\end{lemma}
+
+\begin{proof}
+	As in the proof of Lemma \ref{lem:zero-der}, we compute:
+	$$
+	0 = \sum_{i=1}^n a_i\tau\left(y_i(\partial_iy)^\sigma\#(py)\right)
+	= \tau\left( py \sum_{i=1}^n a_i(\partial_i y)\#y_i \right)
+	= \tau\left( py N(y) \right)
+	= \lambda \tau\left( pyyp \right).
+	$$
+	If $\lambda \neq 0$, it follows that $pyyp = 0$, hence $py = 0$.
+	But then by Theorem~\ref{thm:noatoms} we have that $y$ is constant and each $\mathcal{N}_i(y) = 0$.
+	In either case, $N(y) = 0$.
+\end{proof}
+
+We now ready to state and prove the main result of this section.
+\begin{theorem}
+	Let $y_1, \ldots, y_n$ be algebraically free self-adjoint elements which generate a finite tracial von Neumann algebra $(M, \tau)$, and $\A$ be the algebra they generate.
+	Suppose further that $y_1, \ldots, y_n$ admit a dual system $R_1, \ldots, R_n$ as in Definition~\ref{defn:dualsystem}.
+	Take $y = y^* \in \A$ be a non-constant polynomial evaluated at $(y_1, \ldots, y_n)$.
+	Then the spectral measure of $y$ is not singular with respect to Lebesgue measure.
+	Moreover, if there is $N$ is in the positive linear span of the number operators $\cN_i$ such that each $\cN_i$ has a non-zero coefficient and $y$ is an eigenvector of $N$, then the spectral measure of $y$ is Lebesgue absolutely continuous.
+\end{theorem}
+
+\begin{proof}
+	Assume to the contrary that the spectral measure of $y$ is not absolutely continuous with respect to Lebesgue measure.
+	By Lemma~\ref{lem:singularcontractioncommutation}, we may choose $0\leq T_n \leq 1$ finite rank operators with $T_n\to p$ weakly and $\norm{[T_n,y]}_1 \to 0$, where $p$ is the spectral projection onto the singular part of $y$.
+	Let $J : L^2(M)\to L^2(M)$ be Tomita's conjugation operator, defined on $x \in M$ by $J(x) = x^*$, and extended by continuity to $L^2(M)$.
+
+	Fix $x \in M$.
+	Note that by definition of $R_j$, $[R_j,y_k]=\partial_j (y_k) \# P_1$; since both $[R_j,\cdot]$ and $\partial_j(\cdot)\#P_1$ are derivations, it follows that $[R_j,y]=\partial_j(y)\#P_1$.
+	We now compute as follows:
+	\begin{align*}
+		0
+		&= \lim_{n\to\infty} \norm{ Jx^*J R_i y }_\infty \norm{ [T_n, y] }_1 \\
+		&\geq \lim_{n\to\infty} \abs{ \operatorname{Tr}( Jx^*J R_i y [T_n, y]) } \\
+		&= \lim_{n\to\infty} \abs{ \operatorname{Tr}(Jx^*J [y, R_i] yT_n) } \\
+		&= \lim_{n\to\infty} \abs{ \operatorname{Tr}(Jx^*J ((\partial_i y)\# P_1) yT_n) } \\
+		&= \abs{ \operatorname{Tr}( Jx^*J P_1 ((\partial_i y)^\sigma \# (yp)) ) } \\
+		&= \abs{ \tau(((\partial_i y)^\sigma\#(yp))x) }
+	\end{align*}
+	Here we used: the inequality $\norm{ Tw }_1 \leq \norm{ T}_1 \norm{ w}_\infty$, the trace property and commutation between $Jx^*J$ and $y$, the equality $[y,R_i] =-\partial_i(y)\#P_1$, the fact that $P_1$ is finite rank (so that we can pass to the limit $T_n\to p$) and finally the equality $\tau(z) = \langle z1, 1\rangle =\operatorname{Tr} (zP_1)$.
+
+	We conclude that $(\partial_i y)^\sigma\#(yp) = 0$ as $\tau$ is faithful and as $x$ was arbitrary.
+	Then if $p = 1$, Lemma~\ref{lem:zero-der} implies that $y$ is constant, which is absurd; thus the spectral measure of $y$ cannot be singular with respect to Lebesgue measure.
+
+	Further, if we have $N$ as in the statement of the theorem, then Lemma~\ref{lem:zero-der-again} implies that $N(y) = 0$.
+	It follows that for any non-zero monomial $m$ in $y$, $N(m) = 0$.
+	As $m$ is an eigenvector of each $\cN_i$ and each has a non-negative coefficient in $N$, we learn that $\cN_i(m) = 0$.
+	Thus $m$ has zero degree for each $y_i$, and so $m \in \C$.
+	We conclude that $y \in \C$, a contradiction.
+\end{proof}
+
+
+
+
+\section{Bi-free unitary Brownian motion.}
+Our aim in this section is to study multiplicative bi-free Brownian motion, as an analogue to the free unitary Brownian motion introduced by Biane \cite{biane1997free}.
+Many related results in the free case were obtained in the context of a tracial von Neumann algebra, allowing the arguments to be simplified; unfortunately that luxury is not available to us in the context of bi-free probability as we are not aware of an appropriate analogue of traciality.
+As the following example demonstrates, simply asking that the state on the non-commutative probability space be tracial is too restrictive.
+
+\begin{example}
+	Suppose $\paren{\A_\ell^{(\iota)}, \A_r^{(\iota)}}_{\iota\in\set{\makeaball{0},\makeaball{1}}}$ are bi-free pairs of faces in a non-commutative probability space $(\A, \varphi)$.
+	Then we have for $x \in \A_\ell^{(\makeaball{0})}$, $w \in \A_r^{(\makeaball{0})}$, $y \in \A_\ell^{(\makeaball{1})}$, and $z \in \A_r^{(\makeaball{1})}$ that
+	\[
+		\begin{tikzpicture}[baseline]
+			\def\colours{{0, 0, 1, 1}}
+			\def\sidez{{1, -1,-1,1,1}}
+			\def\opnames{{"$w$", "$x$", "$y$", "$z$"}}
+
+			\begin{scope}[shift={(-\textwidth*0.25,0)}]
+				\def\ordr{{1,2,3,0}}
+				\bnc [n=4,colourzfrompalette=\colours,sidez=\sidez,order=\ordr,labelz=\opnames] 
+				\node [below, scale=0.7] (vp1) at (bc) {$\varphi(xyzw) = \varphi(xw)\varphi(y)\varphi(z) + \varphi(x)\varphi(w)\varphi(yz) - \varphi(x)\varphi(w)\varphi(y)\varphi(z)$};
+			\end{scope}
+			\begin{scope}[shift={(\textwidth*0.25,0)}]
+				\def\ordr{{0,1,2,3}}
+				\bnc [n=4,colourzfrompalette=\colours,sidez=\sidez,order=\ordr,labelz=\opnames] 
+				\node [below, scale=0.7] (vp2) at (bc) {$\varphi(wxyz) = \varphi(wx)\varphi(yz)$.};
+			\end{scope}
+			\path (vp1) -- node [scale=0.7] {while} (vp2);
+		\end{tikzpicture}
+	\]
+	Note that these two terms fail to be equal even when $(x, w)$, $(y, z)$ are a bi-free standard semicircular system with $\varphi(wx) = \varphi(yz) = 1$, as the left expression vanishes while the right equals $1$.
+\end{example}
+
+\subsection{Free Brownian motion.}
+We take some time to review the concept of free Brownian motion, which is the free analogue of the Gaussian process acting on a Hilbert space.
+A more complete description of free Brownian motion and free stochastic calculus may be found in \cite{voiculescu1992free}.
+
+\begin{definition}
+	A \emph{free Brownian motion} in a non-commutative probability space $(\A, \varphi)$ is a non-commutative stochastic process $(S(t))_{t\geq0}$ such that:
+	\begin{itemize}
+		\item the increments of $S(t)$ are free: for $0\leq t_1 < \cdots < t_k$, the collection $S(t_2)-S(t_1), \ldots, S(t_k)-S(t_{k-1})$ are freely independent; and
+		\item the process is stationary, with semicircular increments: for $0 \leq s < t$, $S(t)-S(s)$ is semicircular with variance $t-s$.
+	\end{itemize}
+\end{definition}
+
+Free Brownian motion can be modelled on a Fock space \cite{voiculescu1992free}. Indeed, suppose
+$$\mathcal{F}\paren{L^2(\R_{\geq0})} := \C\Omega \oplus \bigoplus_{n\geq1} L^2(\R_{\geq0})^{\otimes n}.$$
+Let $\xi_t = 1_{[0, t]}$, and define $S(t) = l(\xi_t) + l^*(\xi_t)$.
+Then $(S(t))_t$ is a free Brownian motion.
+
+Free unitary Brownian motion was initially introduced by Biane in \cite{biane1997free} as a multiplicative analogue of the (additive) free Brownian motion above.
+It's definition makes reference to a certain family of measures $(\nu_t)_{t\geq0}$ supported on $\mathbb{T}$, introduced by Bercovici and Voiculescu in \cite{bercovici1992levy}.
+In particular, $\nu_t$ has the property that for $t, s \geq 0$, $\nu_t\boxtimes\nu_s = \nu_{t+s}$.
+We do not require the particular details of its introduction and so will eschew them.
+
+\begin{definition}
+	A \emph{free unitary Brownian motion} in a non-commutative probability space $(\A, \varphi)$ is a non-commutative stochastic process $(U(t))_{t\geq0}$ such that:
+	\begin{itemize}
+		\item the (left) multiplicative increments of $U(t)$ are free: for $0 \leq t_1 < \cdots < t_k$, the increments given by $U^*(t_1)U(t_2), U^*(t_2)U(t_3), \ldots, U^*(t_{n-1})U(t_n)$ are freely independent; and
+		\item the process is stationary with increments prescribed by $\nu_\cdot$: the distribution of $U^*(t)U(s)$ depends only on $s-t$, and is in fact $\nu_{s-t}$.
+	\end{itemize}
+\end{definition}
+
+It was shown in \cite{biane1997free} that if $S(t)$ is a Fock space realization of a free additive Brownian motion and $U(t)$ the solution to the free stochastic differential equation
+$$dU(t) = iU(t)\,dS(t) - \frac12 U(t)\,dt$$
+with $U(0) = 1$, then $U(t)$ is a free unitary Brownian motion.
+Moreover, the moments of a free unitary Brownian motion were computed: for $n > 0$,
+$$\varphi(U(t)^n) = \sum_{k=0}^{n-1}(-1)^k\frac{t^k}{k!}n^{k-1}{n \choose k+1}e^{-nt/2}.$$
+A consequence is that free unitary Brownian motion converges in distribution as $t\to\infty$ to a Haar unitary, i.e., a unitary $u_\infty$ with $\varphi(u_\infty^{k}) = \delta_{k=0}$ for $k \in \Z$.
+Another important results from \cite{biane1997free} is the following bound: for some $K > 0$ and any $t > 0$,
+$$\norm{U(t)-e^{-t/2}} \leq K\sqrt{t}.$$
+We have already identified the bi-free analogue of Haar unitaries in Subsection~\ref{ssec:haarunitary}, which we will use to motivate our approach to a bi-free version of Brownian motion: we want a process which tends to the distribution of a Haar pair of unitaries, so that conjugating by the process asymptotically creates bi-freeness and can therefore be seen as a sort of liberation.
+
+
+
+
+
+\subsection{The free liberation derivation.}
+Suppose that $A, B$ are algebraically free unital sub-algebras generating a tracial non-commutative probability space $(\A, \tau)$.
+In \cite{Voiculescu1999101}, Voiculescu defined the derivation $\delta_{A:B} : \A \to \A\otimes\A$ to be a linear map satisfying the Leibniz rule such that $\delta_{A:B}(a) = a\otimes1-1\otimes a$ for $a \in A$ and $\delta_{A:B}(b) = 0$ for $b \in B$.
+It was shown that $A$ and $B$ are freely independent if and only if $(\tau\otimes\tau)\circ\delta_{A:B} \equiv 0$.
+Moreover, the derivation $\delta_{A:B}$ relates to how the joint distribution of $A$ and $B$ changes as $A$ is perturbed by unitary free Brownian motion.
+\begin{proposition}[\cite{Voiculescu1999101}*{Proposition 5.6}]
+	Let $A, B$ be two unital $*$-subalgebras in $(\A, \tau)$ and let $\paren{U(t)}_{t\geq0}$ be a unitary free Brownian motion, which is freely independent of $A\vee B$.
+	If $a_j \in A$ and $b_j \in B$ for $1\leq j \leq n$, then
+	\begin{align*}
+		\tau\paren{U(\epsilon)a_1U(\epsilon)^*b_1\cdots U(\epsilon)a_nU(\epsilon)^*b_n} 
+		&= 
+		\frac\epsilon2(\tau\otimes\tau)\left(\delta_{A:B}\left(\sum_{k=1}^n a_kb_k\cdots a_nb_na_1b_1\cdots a_{k-1}b_{k-1} \right.\right.\\
+		&\qquad\qquad\qquad- \left.\left.\sum_{k=1}^n b_ka_{k+1}b_{k+1}\cdots a_nb_na_1b_1\cdots b_{k-1}a_k\right)\right) \\
+		&\qquad+\tau(a_1b_1\cdots a_nb_n) + \bigO{\epsilon^2}.
+	\end{align*}
+\end{proposition}
+
+Important to the proof of the above proposition, and of use to us here also, is the following approximation result.
+\begin{proposition}[\cite{Voiculescu1999101}*{Proposition 1.4}]
+	\label{prop:approxubm}
+	Let $A$ be a $W^*$-subalgebra, $(U(t))_t$ a unitary free Brownian motion, and $S$ a $(0,1)$-semicircular element in $(M, \tau)$ so that $A$ and $(U(t))_t$ are $*$-free and $A$ and $S$ are also free. If $a_j \in A$ and $\alpha_j \in \set{1,-1}$, then we have
+	$$\tau\paren{\prod_{1\leq j \leq n}^{\rightarrow} a_j U(t)^{\alpha_j}}
+	= \tau\paren{\prod_{1\leq j \leq n}^{\rightarrow} a_j\paren{\paren{1-\frac{t}{2}}+i\alpha_j\sqrt{t}S}} + \mathcal{O}\paren{t^2},$$
+	where the products place the terms in order from left to right.
+\end{proposition}
+Although the proposition was stated in terms of a tracial $W^*$-probability space, traciality was not needed in the proof.
+
+\subsection{A bi-free analogue to the liberation derivation.}
+\renewcommand{\e}{\epsilon} %this is gonna be painful to fix... TODO
+For the remainder of this section, we will always be working in the context of a family of pairs of faces $\paren{(\A_\ell^{(\iota)}, \A_r^{(\iota)})}_{\iota\in\I}$ generating a non-commutative probability space $(\A, \varphi)$.
+We will further denote by $\A_\ell$ and $\A_r$ the algebras generated by $\set{\A_\ell^{(\iota)} : \iota \in \I}$ and $\set{\A_r^{(\iota)} : \iota \in \I}$ respectively, and by $\A^{(\iota)}$ the algebra generated by $\A_\ell^{(\iota)}$ and $\A_r^{(\iota)}$.
+Moreover, we assume that there are no algebraic relations between $\A^{(i)}$ and $\A^{(j)}$ other than $[\A^{(i)}_\ell, \A^{(j)}_r] = 0$ when $i \neq j$, and possibly $[\A^{(i)}_\ell, \A^{(i)}_r] = 0$.
+In particular, we want to ensure that given a product $z_1\cdots z_n$ we can determine the $\chi$-order of the variables.
+
+Suppose $\chi : [n] \to \set{\ell, r}$ and let $1 \leq i, j \leq n$ with $i \preceq_\chi j$.
+We denote $[i, j]_\chi := \set{k : i \preceq_\chi k \preceq_\chi j}$ the $\chi$-interval between $i$ and $j$, and define analogously $[i, j)_\chi$, $(i, j]_\chi$, and $(i, j)_\chi$.
+Likewise we define $[i, \infty)_\chi := \set{k : 1 \leq k \leq n, i \preceq k}$ and analogously the other rays.
+
+We will also change our conventions on the use of $\iota$ from earlier.
+For the remainder of this section, $\iota$ will always be an element of $\I$, never a map; we will use $\gem$ to denote a map $\gem: [n] \to \I$.
+
+\begin{definition}
+	Fix $\iota \in \I$.
+	We define a map
+	$$\taur_{\A^{(\iota)} : \bigvee_{j \in \I\setminus\set{\iota}} \A^{(j)}} : \A \to \A \otimes \A$$
+	as follows.
+	Given $\chi : [n] \to \slr$, $\gem: [n] \to \I$, and $z_i \in \A^{(\gem(i))}_{\chi(i)}$,
+	%\begin{dmath*}
+	$$
+	\taur_{\A^{(\iota)} : \bigvee_{j \in \I\setminus\set{\iota}} \A^{(j)}}(z_1\cdots z_n)
+	= \sum_{i \in \e^{-1}(\iota)} \sum_{\substack{j\in\e^{-1}(\iota)\\i \preceq_\chi j}}
+	z_{[i,j]_\chi^c} \otimes z_{[i,j]_\chi}
+	- z_{[i,j)_\chi^c}\otimes z_{[i,j)_\chi}
+	- z_{(i,j]_\chi^c}\otimes z_{(i,j]_\chi}
+	+ z_{(i,j)_\chi^c}\otimes z_{(i,j)_\chi}.
+	$$
+	%\end{dmath*}
+	We now extend this definition by linearity to all of $\A$.
+	When context makes our intent clear, we will sometimes write $\taur_\iota$ for $\taur_{\A^{(\iota)} : \bigvee_{j \in \I\setminus\set{\iota}} \A^{(j)}}$.
+
+	The subscript $A : B$ is meant to mimic that in the free situation, and the basic properties present there still hold: $B \subset \ker\taur_{A:B}$ and for $a \in A$, $\taur_{A:B}(a) = 1\otimes a-a\otimes 1$.
+	However, $\taur_{A:B}$ is not a derivation, even when restricted to the left or right faces of $A$ and $B$.
+\end{definition}
+\begin{lemma}
+	\label{lem:taur}
+	$\taur_\iota$ is well-defined.
+	Moreover, the only terms which do not cancel in the sum defining $\taur_\iota$ are those in which no $\gem$-monochromatic $\chi$-interval is split across a tensor sign.
+\end{lemma}
+\begin{proof}
+	Our assumptions about the lack of algebraic relations in $\A$ mean that the only ambiguity in writing a product $z_1\cdots z_n$ comes from grouping or failing to group adjacent terms, and commuting left and right terms; the latter has no impact on $\taur_\iota$ because it does not change the $\chi$-ordering of the variables.
+	Notice that if $i \prec_\chi i_+$ are consecutive under the $\chi$-ordering and both contribute to the sum, then all intervals with $i$ as an open left endpoint are intervals with $i_+$ as a closed left endpoint and have opposite sign in their contributions to the two terms; likewise, all intervals with $i$ as a closed right endpoint are intervals with $i_+$ as an open right endpoint and again cancel.
+	Hence the value of $\taur_\iota$ does not change if a product is written differently, and the only terms which do not cancel are those with the tensor sign falling between two $\e$-monochromatic $\chi$-intervals (or one such interval and the edge of the product), exactly one of which is $\iota$-coloured.
+\end{proof}
+
+In essence, $\taur_\iota$ acts by adding one term for each $\chi$-interval with endpoints either before or after terms coming from $\A^{(\iota)}$, consisting of the product of the terms not in that interval tensored with the product of the terms in the interval.
+The sign is chosen so that if the division comes before both chosen nodes or after both chosen nodes the term counts negatively, and otherwise counts positively.
+Notice that when $i = j$, the terms corresponding to $[i,i)_\chi$ and $(i,i)_\chi$ cancel and only one term contributing $-z_1\cdots z_n \otimes 1$ survives.
+
+The liberation gradient $\delta_{A^{(\iota)}:B}$ can be expressed in a similar manner:
+$$\delta_{A:B}(z_1\cdots z_n) = \sum_{i \in \gem^{-1}(\iota)} -z_{(-\infty, i)}\otimes z_{(-\infty, i)^c} + z_{(-\infty, i]} \otimes z_{(-\infty, i]^c}.$$
+
+\begin{example}
+	Let $\chi:[n]\to\slr$ and $\gem:[n]\to\I$ be as in Example~\ref{ex:vaccine}.
+	Then $\taur_{\makeaball{1}}(z_1\cdots z_{10})$ is a sum of the following eight terms:
+	\[\begin{tikzpicture}[baseline]
+			\def\colours{{0, 0, 0, 1, 0, 1, 1, 0, 0, 0}}
+			\def\sidez{{1,-1,1,1,-1,-1,-1,1,-1,1}}
+
+			\begin{scope}[shift={(-\textwidth*0.375,0)},scale=1]
+				\draw[thick] (-1,0.125) -- (-1, -2.375) --
+				node[below,scale=2/3] {$-z_1\cdots z_{10}\otimes 1$}
+				(1,-2.375) -- (1,0.125);
+				\foreach \y in {0,...,9} {
+					\pgfmathtruncatemacro{\nodename}{\y+1}
+					\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+					\pgfmathparse{\palette[\colours[\y]]}
+					\def\clr{\pgfmathresult}
+					\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+					\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+					{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+				}
+				\draw (-1.1, -1.125) -- (-.8, -1.125);
+			\end{scope}
+			\begin{scope}[shift={(-\textwidth*0.125,0)},scale=1]
+				\draw[thick] (-1,0.125) -- (-1, -2.375) --
+				node[below,scale=2/3] {$z_1\cdots z_5 z_8z_9z_{10}\otimes z_6z_7$}
+				(1,-2.375) -- (1,0.125);
+				\foreach \y in {0,...,9} {
+					\pgfmathtruncatemacro{\nodename}{\y+1}
+					\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+					\pgfmathparse{\palette[\colours[\y]]}
+					\def\clr{\pgfmathresult}
+					\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+					\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+					{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+				}
+				\draw (-1.1, -1.125) -- (-1, -1.125) to [in=90,out=0] (-.8, -1.375) to [in=0,out=270] (-1, -1.625) -- (-1.1, -1.625);
+			\end{scope}
+			\begin{scope}[shift={(\textwidth*0.125,0)},scale=1]
+				\draw[thick] (-1,0.125) -- (-1, -2.375) --
+				node[below,scale=2/3] {$-z_1\cdots z_5\otimes z_6\cdots z_{10}$}
+				(1,-2.375) -- (1,0.125);
+				\foreach \y in {0,...,9} {
+					\pgfmathtruncatemacro{\nodename}{\y+1}
+					\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+					\pgfmathparse{\palette[\colours[\y]]}
+					\def\clr{\pgfmathresult}
+					\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+					\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+					{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+				}
+			%\draw plot [smooth] coordinates {(-1.1, -1.125) (-0.5, -1.125) (0, -1) (0.5, -0.875) (1.1, -0.875)};
+				\draw (-1.1, -1.125) -- ++(0.6,0) .. controls +(.5,0) and +(-.5, 0) .. (0.5, -0.875) -- ++(0.6,0);
+			\end{scope}
+			\begin{scope}[shift={(\textwidth*0.375,0)},scale=1]
+				\draw[thick] (-1,0.125) -- (-1, -2.375) --
+				node[below,scale=2/3] {$z_1z_2z_3z_5\otimes z_4z_6\cdots z_{10}$}
+				(1,-2.375) -- (1,0.125);
+				\foreach \y in {0,...,9} {
+					\pgfmathtruncatemacro{\nodename}{\y+1}
+					\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+					\pgfmathparse{\palette[\colours[\y]]}
+					\def\clr{\pgfmathresult}
+					\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+					\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+					{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+				}
+			%\draw plot [smooth] coordinates {(-1.1, -1.125) (-0.5, -1.125) (0, -.875) (0.5, -0.625) (1.1, -0.625)};
+				\draw (-1.1, -1.125) -- ++(0.6,0) .. controls +(.5,0) and +(-.5, 0) .. (0.5, -0.625) -- ++(0.6,0);
+			\end{scope}
+			\begin{scope}[yshift=-3cm]
+				\begin{scope}[shift={(-\textwidth*0.375,0)},scale=1]
+					\draw[thick] (-1,0.125) -- (-1, -2.375) --
+					node[below,scale=2/3] {$z_1\cdots z_7\otimes z_8z_9z_{10}$}
+					(1,-2.375) -- (1,0.125);
+					\foreach \y in {0,...,9} {
+						\pgfmathtruncatemacro{\nodename}{\y+1}
+						\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+						\pgfmathparse{\palette[\colours[\y]]}
+						\def\clr{\pgfmathresult}
+						\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+						\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+						{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+					}
+			%\draw plot [smooth] coordinates {(-1.1, -1.625) (-0.5, -1.625) (0, -1.25) (0.5, -0.875) (1.1, -0.875)};
+					\draw (-1.1, -1.625) -- ++(0.6,0) .. controls +(.5,0) and +(-.5, 0) .. (0.5, -0.875) -- ++(0.6,0);
+				\end{scope}
+				\begin{scope}[shift={(-\textwidth*0.125,0)},scale=1]
+					\draw[thick] (-1,0.125) -- (-1, -2.375) --
+					node[below,scale=2/3] {$-z_1z_2z_3z_5z_6z_7\otimes z_4z_8z_9z_{10}$}
+					(1,-2.375) -- (1,0.125);
+					\foreach \y in {0,...,9} {
+						\pgfmathtruncatemacro{\nodename}{\y+1}
+						\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+						\pgfmathparse{\palette[\colours[\y]]}
+						\def\clr{\pgfmathresult}
+						\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+						\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+						{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+					}
+			%\draw plot [smooth] coordinates {(-1.1, -1.625) (-0.5, -1.625) (0, -1.125) (0.5, -0.625) (1.1, -0.625)};
+					\draw (-1.1, -1.625) -- ++(0.6,0) .. controls +(.5,0) and +(-.5, 0) .. (0.5, -0.625) -- ++(0.6,0);
+				\end{scope}
+				\begin{scope}[shift={(\textwidth*0.125,0)},scale=1]
+					\draw[thick] (-1,0.125) -- (-1, -2.375) --
+					node[below,scale=2/3] {$z_1z_2z_3z_5\cdots z_{10}\otimes z_4$}
+					(1,-2.375) -- (1,0.125);
+					\foreach \y in {0,...,9} {
+						\pgfmathtruncatemacro{\nodename}{\y+1}
+						\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+						\pgfmathparse{\palette[\colours[\y]]}
+						\def\clr{\pgfmathresult}
+						\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+						\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+						{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+					}
+					\draw (1.1, -0.875) -- (1, -0.875) to [in=270,out=180] (.8, -0.75) to [in=180,out=90] (1, -0.625) -- (1.1, -0.625);
+				\end{scope}
+				\begin{scope}[shift={(\textwidth*0.375,0)},scale=1]
+					\draw[thick] (-1,0.125) -- (-1, -2.375) --
+					node[below,scale=2/3] {$-z_1\cdots z_{10}\otimes 1$}
+					(1,-2.375) -- (1,0.125);
+					\foreach \y in {0,...,9} {
+						\pgfmathtruncatemacro{\nodename}{\y+1}
+						\pgfmathtruncatemacro{\sd}{\sidez[\y]}
+						\pgfmathparse{\palette[\colours[\y]]}
+						\def\clr{\pgfmathresult}
+						\node (ball\nodename) [draw, shade, circle, ball color=\clr, inner sep=0.07cm*2/3] at (\sd, -\y*1/4) {};
+						\ifthenelse{\sd=1}{\node[scale=2/3,right] at (\sd, -\y*0.25) {\nodename}}
+						{\node[scale=2/3,left] at (\sd, -\y*0.25) {\nodename}};
+					}
+					\draw (1.1, -0.875) -- (0.8, -0.875);
+				\end{scope}
+			\end{scope}
+	\end{tikzpicture}\]
+\end{example}
+
+\begin{theorem}
+	Let the notation be as above, and suppose $\I = \set{1,2}$.
+	Then $(\A_\ell^{(1)}, \A_r^{(1)})$ and $(\A_\ell^{(2)}, \A_r^{(2)})$ are bi-free if and only if $(\varphi\otimes\varphi)\circ\taur_{1} \equiv 0$.
+\end{theorem}
+
+\begin{proof}
+	Suppose first that bi-freeness holds.
+	Note that for $\lambda \in \C$, $\taur_1(\lambda) = 0$, so it suffices to check the condition on products $z_1\cdots z_n$ with $z_i \in \A_{\chi(i)}^{(\gem(i))}$ and each maximal $\gem$-monochromatic $\chi$-interval centred, since an arbitrary term may be written as a sum of such terms.
+	However, by Lemma~\ref{lem:taur} we know that each term in $\taur_1(z_1\cdots z_n)$ is a tensor product with zero or more centred $\chi$-intervals occurring on each side of the tensor. The vaccine condition from bi-freeness then tells us that $\varphi\otimes\varphi$ of such a term is $0$, and so $(\varphi\otimes\varphi)\circ\taur_1(z_1\cdots z_n) = 0$.
+
+	Now, suppose that bi-freeness fails, and let $z_1, \ldots, z_n$ be an example of the failure of vaccine with a minimum number of terms.
+	Then the only terms which possibly fail to vanish under $\varphi\otimes\varphi$ from $\taur_1$ are those of the form $z_1\cdots z_n\otimes 1$ or $1\otimes z_1\cdots z_n$ (the rest being ones to which vaccine should apply, which are of shorter length and so not counterexamples by minimality).
+	The term $z_1\cdots z_n\otimes1$ occurs once per $1$-coloured $\chi$-interval with negative sign, while $1\otimes z_1\cdots z_n$ occurs once with positive sign if the $\chi$-first and $\chi$-last variables are both in $\A^{(1)}$, and not at all otherwise; let $k$ be the number of $1$-coloured $\chi$-intervals, and $d = 1$ if the $\chi$-first and $\chi$-last variables are in $\A^{(1)}$, with $d = 0$ otherwise.
+	Hence $\varphi\otimes\varphi(\taur_1(z_1\cdots z_n)) = (d-k)\varphi(z_1\cdots z_n) \neq 0$ unless $k = d$; but if $k = d$ either there is one $1$-interval which is $[n]$, or there are no $1$-intervals; in either case, $\gem$ is constant and so $z_1\cdots z_n$ cannot actually be a counterexample of vaccine.
+\end{proof}
+
+
+
+\subsection{Bi-free unitary Brownian motion.}
+We are now ready to introduce a notion of bi-free unitary Brownian motion.
+
+\begin{definition}
+	A pair of free stochastic processes $(U_\ell(t), U_r(t))_{t\geq0}$ is a \emph{bi-freely liberating unitary Brownian motion} (or \emph{bi-flu Brownian motion}) if:
+	\begin{itemize}
+		\item the multiplicative increments are bi-free: if $0\leq t_1 < \cdots < t_n$, then the family of pairs of faces $((U_\ell^*(t_\iota)U_\ell(t_{\iota+1}), U_r(t_{\iota+1})U_r^*(t_\iota))_{\iota=1}^{n-1}$ is bi-free;
+		\item $(U_\ell(t))_{t\geq0}$ and $(U^*_r(t))_{t\geq0}$ are each free unitary Brownian motions, and for all $t > 0$ the $*$-distribution of the pair $(U_\ell(t), U_r(t))$ matches that of $(U_\ell(t), U_\ell^*(t))$; and
+		\item the distribution is stationary: the moments of $(U_\ell^*(s)U_\ell(t), U_r(t)U_r^*(s))$ depend only on $t-s$.
+	\end{itemize}
+\end{definition}
+We have qualified this as a liberating unitary Brownian motion because it asymptotically introduces bi-free independence without modifying the distributions of the faces being liberated; we reserve the possibility of using ``bi-free unitary Brownian motion'' more broadly, such as for processes with different covariance between the left and right faces.
+
+We will show that once again a bi-flu Brownian motion may be realized from an additive Brownian motion.
+\begin{lemma}
+	Suppose that $(S_\ell(t))_{t\geq0}$ is a free Brownian motion in a tracial von Neumann algebra $(M, \tau)$, and $J : L^2(M) \to L^2(M)$ is the Tomita operator defined on $M$ by $J(x) = x^*$ and extended continuously to $L^2(M)$.
+	Let $S_r(t) = JS_\ell(t)J \in M'$.
+	Then if $(U_\ell(t), U_r(t))$ are solutions to the stochastic differential equations
+	$$dU_\ell(t) = iU_\ell(t)\,dS_\ell(t) - \frac12 U_\ell(t)\,dt \qquad\text{and}\qquad dU_r(t) = -iU_r(t)\,dS_r(t) - \frac12 U_r(t)\,dt,$$
+	with initial conditions $U_\ell(0) = 1 = U_r(0)$, the pair $(U_\ell(t), U_r(t))$ is a bi-flu Brownian motion.
+	Moreover, $(U_\ell(t), U_r(t))$ converges in distribution as $t \to \infty$ to a Haar pair of unitaries.
+\end{lemma}
+
+\begin{proof}
+	We find immediately that $U_\ell(t)$ is a unitary free Brownian motion.
+	Note that integrating a stochastic process $\omega_t\sharp dX_t$ comes down to finding a limit in $L^2(\A)$ of approximations of the form $\sum \theta_{t_k}(x_{t_k}-x_{t_k-1})\phi_{t_k}$, where $\sum \theta_{t_k}\otimes \phi_{t_k}$ approximates $\omega_t$.
+	It follows that $d(JX_t^*J) = J(dX_t)^*J$, and in particular, $JdS_r(t)J = dS_\ell(t)$.
+	Conjugating the equation for $dU_r(t)$ above, we find
+	$$
+	d(JU_r(t)J)
+	= i\paren{JU_r(t)J}JdS_r(t)J - \frac12\paren{JU_r(t)J}\,dt 
+	= i\paren{JU_r(t)J}dS_\ell(t) - \frac12\paren{JU_r(t)J}\,dt.
+	$$
+	Thus $JU_r(t)J$ satisfies the same differential equation as $U_\ell$, whence the two are equal.
+	We conclude that $U_r(t)$ corresponds to right multiplication in the standard representation on $L^2(M)$ by $U_\ell^*(t)$.
+	The remaining properties of bi-flu Brownian motion now follow readily from the free properties possessed by $(U_\ell(t))_{t\geq0}$, using, essentially, the techniques of Theorem~\ref{thm:bipartitefreetobifree}.
+\end{proof}
+
+We find that conjugating by bi-flu Brownian motion leads to bi-freeness as $t\to\infty$, much like in the free case, and this allows to think of this as a sort of bi-free liberation process.
+A strange consequence is the following: suppose that $X, Y \in L^\infty(\Omega, \mu) \subset \A$ are classical random variables, and $((U_\ell(t), U_r(t))_{t\geq 0}$ a bi-flu Brownian motion in $\A$, bi-free from $(X, Y)$.
+Then $X$ commutes in distribution with $Y$, $U_r(t)$, and $U_r^*(t)$, so in particular, $X$ and $U_r(t)YU_r^*(t)$ become independent as $t\to\infty$ while always generating a commutative probability space.
+One finds that
+\begin{align*}
+	\varphi(f(X)U_r(t)g(Y)U_r^*(t))
+	&= \varphi(f(X)g(Y))\varphi(U_r(t))\varphi(U_r^*(t)) \\
+	&\qquad+ \varphi(f(X))\varphi(g(Y))\paren{1-\varphi(U_r(t))\varphi(U_r^*(t))} \\
+	&= \varphi(f(X)g(Y))e^{-t} + \varphi(f(X))\varphi(g(Y))\paren{1-e^{-t}}.
+\end{align*}
+
+We will demonstrate a connection between liberation and the map $\taur$, but first we need a bi-free version of Proposition~\ref{prop:approxubm}.
+
+\begin{lemma}
+	\label{lem:ubmest}
+	Suppose $(\A_\ell, \A_r)$ is a pair of faces in $\A$ and $\paren{U_\ell(t), U_r(t)}$ is a bi-flu Brownian motion, bi-free from $(\A_\ell, \A_r)$.
+	Suppose further that $(S_\ell, S_r)$ is a pair of semicircular variables with covariance matrix containing a $1$ in every entry, also bi-free from $(\A_\ell, \A_r)$.
+	Let $\chi : [n] \to \set{\ell, r}$, and for $1 \leq j \leq n$, take $a_j \in \A_{\chi_j}$ and $\alpha_j \in \set{1, 0, -1}$.
+	Define $\psi : [n] \to \set{1, -1}$ by $\psi(j) = \alpha_j$ if $\chi(j) = \ell$, and $\psi(j) = -\alpha_j$ otherwise.
+	Then we have
+	$$\varphi\paren{\prod_{1\leq j \leq n}^{\rightarrow} a_jU_{\chi(j)}(t)^{\alpha_j}}
+	= \varphi\paren{\prod_{1\leq j \leq n}^{\rightarrow} a_j\paren{\paren{1-\abs{\alpha_j}\frac{t}{2}}+i\psi(j)\sqrt{t}S_{\chi(j)}}} + \mathcal{O}\paren{t^2},$$
+\end{lemma}
+
+Essentially, this lemma tells us that the pair $(U_\ell(t), U_r(t))$ behaves in $*$-distribution to order $t$ the same as the pair $\paren{1-\frac{t}2 + i\sqrt{t}S_\ell, 1-\frac{t}2 - i\sqrt{t}S_r}$.
+
+\begin{proof}
+	We proceed along the same lines as in the proof of Proposition~\ref{prop:approxubm}.
+	Let $I = \set{j : \alpha_j \neq 0}$, and write $m := \abs{I}$.
+	Since the $*$-distribution of $(U_\ell(t), U_r(t))$ is the same as that of $(U_\ell(t), U_\ell^*(t))$, one can check that for any sequence $j_1 < \ldots < j_k$ of terms in $I$,
+	$$\varphi\paren{(U_{\chi(j_1)}(t)^{\alpha_{j_1}}-e^{-t/2})\cdots(U_{\chi(j_k)}(t)^{\alpha_{j_k}}-e^{-t/2})}
+	= -\delta_{k=2}\psi(j_1)\psi(j_2)t + \bigO{t^2}.$$
+	This follows from the fact that the same is true in the free case, which was used in the original proof of Proposition~\ref{prop:approxubm} (\emph{cf.} \cite{Voiculescu1999101}).
+
+	Now for each $j \in I$, we rewrite $U_{\chi(j)}(t)^{\alpha_j}$ as $\paren{U_{\chi(j)}(t)^{\alpha_j} - e^{-t/2}} + e^{-t/2}$, and expand the product.
+	As we have the estimate $\norm{U_{\chi(j)}(t)^{\alpha_j} - e^{-t/2}} \leq K\sqrt{t}$, we find that only terms where at most three of these are chosen will contribute more than $\bigO{t^2}$.
+	But by the above argument, terms with one or three such differences are $\bigO{t^2}$ under $\varphi$;
+	then only terms which contribute are those where precisely zero or two $\paren{U_{\chi(j)}(t)^{\alpha_j} - e^{-t/2}}$ terms are chosen.
+	Hence, if we abbreviate
+	$$Z(t) := \paren{\sum_{\substack{1 \preceq_\chi p \prec_\chi q \preceq_\chi n\\p, q \in I}} \varphi\paren{a_1\cdots a_p (U_{\chi(p)}^{\alpha_p}-e^{-t/2}) a_{p+1}\cdots a_q (U_{\chi(q)}^{\alpha_q} - e^{-t/2}) a_{q+1}\cdots a_n}},$$
+	we have
+	\begin{align*}
+		\varphi\paren{\prod_{1\leq j \leq n}^{\rightarrow} a_jU_{\chi(j)}(t)^{\alpha_j}}
+		&= \varphi(a_1\cdots a_n)e^{-mt/2} + \bigO{t^2} - e^{-(m-2)t/2}Z(t) \\
+		&= \varphi(a_1\cdots a_n)e^{-mt/2} + \bigO{t^2} \\
+		&\qquad- t e^{-(m-2)t/2} \paren{\sum_{\substack{1 \preceq_\chi p \prec_\chi q \preceq_\chi n\\p, q \in I}} \varphi(a_{(p, q]_\chi})\varphi(a_{(p, q]_\chi^c})\psi(p)\psi(q)} \\
+		&= \varphi(a_1\cdots a_n)\paren{1 - m\frac{t}2} + \bigO{t^2} \\
+		&\qquad- t\paren{\sum_{\substack{1 \preceq_\chi p \prec_\chi q \preceq_\chi n\\p, q \in I}} \varphi(a_{(p, q]_\chi})\varphi(a_{(p, q]_\chi^c})\psi(p)\psi(q)}.
+	\end{align*}
+	Here the second equality may require some justification.
+	One can verify that it is correct by considering the expansion in terms of cumulants; the terms corresponding to partitions with blocks of mixed colour or partitions that do not connect the $U$ terms both vanish, and we are left with all the bi-non crossing partitions which have the two joined. Summing over these, in turn, produces the product of the two moments claimed.
+
+	Next we turn our attention to the right hand side of the equation.
+	Notice that the pair $(S_\ell, S_r)$ has the same distribution as $(-S_\ell, -S_r)$ while both are bi-free from $(\A_\ell, \A_r)$, so replacing $\sqrt{t}$ by $-\sqrt{t}$ does not change the value and thus we are in fact working with a power series in $t$ rather than $\sqrt{t}$.
+	Since the constant term is clearly correct, we need only establish that the $t$ term agrees.
+	Contributions to the linear term come either from selecting a single $\frac{t}{2}$ in the product (together these contribute $-m\frac{t}{2}\varphi(a_1\cdots a_n)$) or from selecting a pair indices to include the semicircular terms from.
+	But now
+	$$\varphi(a_1\cdots a_{p}(i\psi(p)\sqrt{t})S_{\chi(p)}a_{p+1}\cdots a_{q} (i\psi(q)\sqrt{t})S_{\chi(q)} a_{q+1}\cdots a_n)
+	= -t\psi(p)\psi(q)\varphi(a_{(p, q]_\chi})\varphi(a_{(p, q]^c_\chi}).
+	$$
+	Summing over the terms from which semi-circular elements may be selected, which is to say those with indices coming from $I$, we see the two sides of the claimed equation agree at order $t$, also. 
+\end{proof}
+
+\begin{theorem}
+	Suppose $(\A^{(\iota)}_\ell, \A^{(\iota)}_r)_{\iota \in \set{\makeaball{0}, \makeaball{1}}}$ are algebraically-free pairs of faces in a non-commutative probability space $(\A, \varphi)$, which is bi-free from the bi-flu Brownian motion $(U_\ell(t), U_r(t))$.
+	Given $\chi : [n]$, $\gem : [n]\to\set{\makeaball{0}, \makeaball{1}}$, and $x_i \in \A_{\chi(i)}$, set
+	$$z_i{(t)} = \left\{\begin{array}{l@{\emph{ if }}l} % emph to prevent italics...
+			x_i & \e(i) = \makeaball{0}\\
+			U_{\chi(i)}(t) x_i U_{\chi(i)}^*(t) & \e(i) = \makeaball{1}.
+	\end{array}\right.$$
+	Then we have the following estimate:
+	$$
+	\varphi(z_1{(t)}\cdots z_n{(t)}) = \varphi(x_1\cdots x_n) + t\varphi\otimes\varphi\paren{\taur_{\makeaball{1}}(x_1\cdots x_n)} + \bigO{t^2}.
+	$$
+\end{theorem}
+
+\begin{proof}
+	We first apply Lemma~\ref{lem:ubmest} to replace $U_\ell(t)^{\pm1}$ by $1-\frac{t}{2} \pm i\sqrt{t}S_\ell$ and $U_r(t)^{\pm1}$ by $1-\frac{t}{2}\mp i\sqrt{t}S_r$, for some $(S_\ell, S_r)$ bi-free from $(\A_\ell, \A_r)$ as in Lemma~\ref{lem:ubmest}.
+	Again, as the distribution of $(S_\ell, S_r)$ matches that of $(-S_\ell, -S_r)$, we find that we are dealing with a power series in $t$; further, it is evident that the constant term is correct.
+	We therefore consider contributions to the linear term.
+
+	However, note that these precisely correspond to the terms in the definition of $\taur_{\makeaball{1}}$.
+	Indeed, we notice that when $i \prec_\chi j$ with $\e(i) = \e(j) = \makeaball{1}$, selecting the $S$ terms on either side of $x_i$ and $x_j$ contribute a total of
+	$$t\paren{\varphi(x_{[i,j]_\chi^c})\varphi(x_{[i,j]_\chi}) - \varphi(x_{[i,j)_\chi^c})\varphi(x_{[i,j)_\chi})
+	- \varphi(x_{(i,j]_\chi^c})\varphi(x_{(i,j]_\chi}) + \varphi(x_{(i,j)_\chi^c})\varphi(x_{(i,j)_\chi})}.$$
+	The signs occur because the signs of $S$'s $\chi$-before their respective elements, or $\chi$-after, always match.
+	This accounts for all the contributions coming from selecting two semicircular variables when expanding the product; what's left are the terms corresponding to selecting a $-\frac{t}{2}$ term, so each $x_i$ coming from \makeaball{1} winds up contributing $-t\varphi(x_1\cdots x_n)$ in total.
+	Yet this precisely matches the contribution to $\taur_{\makeaball{1}}$ corresponding to selecting the empty terms with $i = j$.
+	We conclude that the linear term in $\varphi(z_1(t)\cdots z_n(t))$ is precisely $t\varphi\otimes\varphi\paren{\taur_{\makeaball{1}}(x_1\cdots x_n)}$.
+\end{proof}
+
+In \cite{Voiculescu1999101}, Voiculescu used the free liberation process to define the liberation gradient and a mutual non-microstates free entropy.
+Thus our approach here may be seen as taking the first steps towards a non-microstates theory of bi-free entropy.
+\renewcommand{\e}{\iota}
