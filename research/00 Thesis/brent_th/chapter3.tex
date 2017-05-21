@@ -1,0 +1,327 @@
+
+%
+% introduction.tex
+% Copyright (C) 1995 by John Heidemann, <johnh@isi.edu>.
+% $Id: demo2intr.tex,v 1.1 1996/01/12 18:13:58 johnh Exp $
+%
+
+\chapter{Free Araki-Woods factors}\label{application}
+
+We saw in Theorem \ref{free_Gibbs_is_free_quasi-free} that $\varphi_0$ is the free Gibbs state with potential
+	\begin{align*}
+		V_0=\frac{1}{2}\sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk}X_k^{(0)}X_j^{(0)}.
+	\end{align*}
+In this section we will show that for small $|q|$, $\varphi_q$ is the free Gibbs state with potential 
+	\begin{align*}
+		V=\frac{1}{2}\sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk}X_k^{(q)}X_j^{(q)}+W\in\mathscr{P}_{c..s.}^{(R,\sigma)},
+	\end{align*}
+and that $\|W\|_{R,\sigma}\rightarrow 0 $ as $|q|\rightarrow 0$. Hence it will follow from Corollary \ref{iso_cor} that $M_q\cong M_0$ for sufficiently small $|q|$. We now let $M=M_q$ for arbitrary (but fixed) $q\in (-1,1)$, with the usual notational simplifications.
+
+%	Invertibility of $\Xi_q$
+%%%%%%%%%%%%%%
+
+\section{Invertibility of $\Xi_q$}
+
+Let $\Psi\colon M\Omega\rightarrow M$ be the inverse of canonical embedding of $M$ into $\mc{F}_q(\H)$ via $x\mapsto x\Omega$ for $x\in M$, which we note is injective from the fact that $\Omega$ is separating. Hence for $\xi\in M\Omega$ we have that $\Psi(\xi)$ is the unique element in $M$ such that $\Psi(\xi)\Omega=\xi$. The uniqueness then implies the complex linearity of $\Psi$:  $\Psi(\sum_i \alpha_i\xi_i)=\sum_i \alpha_i\Psi(\xi_i)$. We also note that by the formulas (\ref{Tomita-Takesaki_formulas}) we have
+	\begin{align}\label{Psi_delta}
+		\Psi(S\xi)\Omega&=S\xi=S(\Psi(\xi)\Omega)=\Psi(\xi)^*\Omega;\qquad\text{ and}\notag\\
+		\Psi(\Delta^{iz}\xi)\Omega &= \Delta^{iz}\xi = \Delta^{iz}\Psi(\xi)\Delta^{-iz}\Omega = \sigma_z(\Psi(\xi))\Omega,
+	\end{align}
+so that the uniqueness implies $\Psi(S\xi)=\Psi(\xi)^*$ and $\Psi(\Delta^{iz}\xi) = \sigma_z(\Psi(\xi))$.\par
+Recall that $\Xi_q=\sum q^n P_n$, where $P_n\in HS(\mc{F}_q(\H))$ is the projection onto tensors of length $n$. We claim that (\ref{Psi_delta}) implies each $P_n$, when identified with an element in $L^2(M\bar{\otimes}M^{op},\varphi\otimes\varphi^{op})$, is fixed by $\sigma_{it}\otimes\sigma_{it}$ for all $t\in\R$. Indeed, fix $t\in\R$ and let $\{\xi_{\ul{i}}\}_{|\ul{i}|=n}$ be an orthonormal basis for $\H^{\otimes n}$. Then $P_n$ is identified with $\sum_{|\ul{i}|=n} \Psi(\xi_{\ul{i}})\otimes \Psi(\xi_{\ul{i}})^*$ since for $\eta\in\mc{F}_q(\H)$
+	\begin{align*}
+		\sum_{|\ul{i}|=n} \< \Psi(\xi_{\ul{i}})\Omega, \eta\>_{U,q} \Psi(\xi_{\ul{i}})\Omega = \sum_{|\ul{i}|=n} \<\xi_{\ul{i}},\eta\>_{U,q}\xi_{\ul{i}} = P_n\eta.
+	\end{align*}
+Now, using (\ref{Psi_delta}), we see that
+	\begin{align*}
+		(\sigma_{it}\otimes\sigma_{it})(P_n)= \sum_{|\ul{i}|=n} \Psi(\Delta^{t}\xi_{\ul{i}})\otimes \Psi(\Delta^{-t}\xi_{\ul{i}})^* = \sum_{|\ul{i}|=n} \Psi\left( \left(A^{-t}\right)^{\otimes n}\xi_{\ul{i}}\right) \otimes \Psi\left( \left( A^t\right)^{\otimes n}\xi_{\ul{i}}\right)^*.
+	\end{align*}
+Let $Q_n\in HS(\mc{F}_q(\H))$ be the element associated with $(\sigma_{it}\otimes\sigma_{it})(P_n)$. That is, for $\eta\in\mc{F}_q(\H)$ we have
+	\begin{align*}
+		Q_n\eta= \sum_{|\ul{i}|=n} \< \left(A^{t}\right)^{\otimes n}\xi_{\ul{i}},\eta\>_{U,q} \left(A^{-t}\right)^{\otimes n}\xi_{\ul{i}},
+	\end{align*}
+and so
+	\begin{align*}
+		\<\left(A^{t}\right)^{\otimes n}\xi_{\ul{j}}, Q_n\eta\>_{U,q} &= \sum_{|\ul{i}|=n} \< \left(A^{t}\right)^{\otimes n}\xi_{\ul{i}},\eta\>_{U,q} \< \left(A^{t}\right)^{\otimes n}\xi_{\ul{j}}, \left(A^{-t}\right)^{\otimes n}\xi_{\ul{i}}\>_{U,q}\\
+					&=\sum_{|\ul{i}|=n} \< \left(A^{t}\right)^{\otimes n}\xi_{\ul{i}},\eta\>_{U,q} \<\xi_{\ul{j}}, \xi_{\ul{i}}\>_{U,q} = \< \left(A^{t}\right)^{\otimes n}\xi_{\ul{j}},\eta\>_{U,q}\\
+					&=\< \left(A^{t}\right)^{\otimes n}\xi_{\ul{j}},P_n\eta\>_{U,q}.
+	\end{align*}
+From Lemma 1.2 of \cite{Hia03}, $A^t>0$ implies $\left(A^t\right)^{\otimes n}>0$. Thus $\left\{ \left(A^{t}\right)^{\otimes n}\xi_{\ul{i}}\right\}_{|\ul{i}|=n}$ is a basis for $\H^{\otimes n}$ and hence $P_n=Q_n=(\sigma_{it}\otimes \sigma_{it})(P_n)$ as claimed.\par
+It follows that for any $t\in\R$ we have $(\sigma_{it}\otimes\sigma_{it})(\Xi_q)=\Xi_q$, and more generally 
+	\begin{align}\label{Xi_q_sigma_invariant}
+		(\sigma_{it}\otimes\sigma_{is})(\Xi_q)=(\sigma_{i(t-s)}\otimes 1)(\Xi_q)=(1\otimes\sigma_{i(s-t)})(\Xi_q)\qquad \forall t,s\in\R.
+	\end{align}\par
+We remind the reader that the norm $\|\cdot\|_{R\otimes_\pi R}$ is defined in Section \ref{projective_tensor_norm}. Denote the closure of $\mathscr{P}\otimes\mathscr{P}^{op}$ with respect to this norm by $\left(\mathscr{P}\otimes\mathscr{P}^{op}\right)^{(R)}$. We now prove an estimate analogous to those in Corollary 29 in \cite{D} for the non-tracial case.
+
+\begin{prop}\label{Xi_invertible}
+Let $R=\left(1+\frac{c}{2}\right)\frac{2}{1-|q|}>\|X_i\|$ for some $c>0$. Fix $t_0\in\R$, then for sufficiently small $|q|$ and all $|t|\leq |t_0|$, $(\sigma_{it}\otimes 1)(\Xi_q)\in \left(\mathscr{P}\otimes\mathscr{P}^{op}\right)^{(R)}$ with
+	\begin{align*}
+		\| (\sigma_{it}\otimes1)(\Xi_q) - 1\|_{R\otimes_\pi R} \leq \frac{\|A^{t}\|(3+c)^2(1+\|A\|)N^2|q|}{2- \left(4+ \|A^{t}\|(3+c)^2(1+\|A\|)N^2\right)|q|}=:\pi(q,N,A,t).
+	\end{align*}
+Moreover, $\pi(q,N,A,t)\rightarrow 0$ as $|q|\rightarrow 0$ and $\pi(q,N,A,s)\leq\pi(q,N,A,t)$ for $|s|\leq |t|$. Finally, for $\pi(q,N,A,t_0)<1$ and $|t|\leq |t_0|$, $(\sigma_{it}\otimes 1)(\Xi_q)$ is invertible with $(\sigma_{it}\otimes 1)(\Xi_q)^{-1}=(\sigma_{it}\otimes 1)(\Xi_q^{-1})\in\left(\mathscr{P}\otimes\mathscr{P}^{op}\right)^{(R)}$ and
+	\begin{align*}
+		\left\| (\sigma_{it}\otimes 1)(\Xi_q^{-1}) -1 \right\|_{R\otimes_\pi R} \leq \frac{\pi(q,N,A,t)}{1-\pi(q,N,A,t)}\longrightarrow 0\	\text{ as }|q|\rightarrow 0.
+	\end{align*}
+\end{prop}
+\begin{proof}
+We first construct the operators $\Psi(\xi_{\ul{i}})=:r_{\ul{i}}$ from the remarks preceding the proposition (for a suitable orthonormal basis). However, in order to control their $\|\cdot\|_R$-norms we must build these operators out of $\{\Psi(e_{\ul{i}})\}$ since this latter set is easily expressed as polynomials in the $X_i$. Indeed, for a multi-index $\underline{j}=\{j_1,\ldots,j_n\}$ let $\psi_{\underline{j}}\in\mathscr{P}$ be the non-commutative polynomial defined inductively by
+	\begin{align}\label{recursive_psi}
+		\psi_{\ul{j}}=X_{j_1}\psi_{j_2,\ldots,j_n} - \sum_{k\geq 2} q^{k-2}\<e_{j_1},e_{j_k}\>_U\psi_{j_2,\ldots,\hat{j_k},\ldots,j_n},
+	\end{align}
+where $\psi_{\emptyset}=1$. From a simple computation it is clear that $\psi_{\underline{j}}=\Psi(e_{j_1}\otimes\cdots\otimes e_{j_n})$.\par
+Fix $n\geq 0$,  then, following \cite{D}, we let $B=B^*\in M_{N^n}(\C)$ be the matrix such that $B^2=\pi_{q,N,n}\left(P_q^{(n)-1}\right)$. In other words, given $h_1,\ldots,h_n\in \H$ if we define $g_{\underline{i}}=\sum_{|\underline{j}|=n} B_{\underline{i},\underline{j}} h_{\underline{j}}$ then
+	\begin{equation*}
+		\< g_{\underline{i}}, g_{\underline{j}}\>_{U,q} = \<h_{\underline{i}}, h_{\underline{j}}\>_{U,0} = \prod_{k=1}^n \<h_{i_k},h_{j_k}\>_U.
+	\end{equation*}
+Define $p_{\underline{i}}=\sum_{|\underline{j}|=n} B_{\underline{i},\underline{j}}\psi_{\underline{j}}$. Then the $p_{\underline{i}}$ satisfy
+	\begin{equation*}
+		\<p_{\underline{i}},p_{\underline{j}}\>_{\varphi} =\<p_{\ul{i}}\Omega, p_{\ul{j}}\Omega\>_{U,q}= \<e_{\underline{i}},e_{\underline{j}}\>_{U,0}.
+	\end{equation*}
+Let $\alpha\in M_N(\C)$ have entries $\alpha_{ij}=\<e_j,e_i\>_U$, and recall that by a previous computation this implies $\alpha=\frac{2}{1+A}$. We note that the eigenvalues of $\alpha$ are contained in the interval $\left[ \frac{2}{1+\|A\|},\frac{2}{1+\|A\|^{-1}}\right]$. Lemma 1.2 in \cite{Hia03} implies that $\alpha^{\otimes n}$ is strictly positive, so let $D=D^*\in M_{N^n}(\C)$ be such that $D^2=\left(\alpha^{\otimes n}\right)^{-1}$.We claim that $\|D^2\| \leq  \left(\frac{1+\|A\|}{2}\right)^{n}$. Indeed, it suffices to show that the eigenvalues of $\alpha^{\otimes n}$ are bounded below by $\left(\frac{2}{1+\|A\|}\right)^n$. Suppose $\lambda$ is an eigenvalue with eigenvector $h_1\otimes \cdots \otimes h_n\in \H_\R^{\otimes n}$. Upon renormalizing, we may assume $\|h_i\|=1$ for each $i$. Thus
+	\begin{align*}
+		\lambda= \< h_1\otimes \cdots \otimes h_n, \alpha^{\otimes n}h_1\otimes \cdots \otimes h_n\>_{1,0}=\prod_i \< h_i,\alpha h_i\> \geq \left(\frac{2}{1+\|A\|}\right)^n,
+	\end{align*}
+and the claim follows. Setting $r_{\underline{i}}=\sum_{\underline{k}} D_{\underline{i},\underline{k}} p_{\underline{k}}$ we have
+	\begin{align*}
+		\<r_{\underline{i}}, r_{\underline{j}}\>_{\varphi} &= \sum_{\underline{k},\underline{l}} \overline{D_{\underline{i},\underline{k}}}D_{\underline{j},\underline{l}} \<p_{\underline{k}},p_{\underline{l}}\>_{\varphi}=\sum_{\underline{k},\underline{l}} D_{\underline{k},\underline{i}} D_{\underline{j},\underline{l}} \< e_{\underline{k}},e_{\underline{l}}\>_{U,0}\\
+			& = \sum_{\underline{k},\underline{l}} D_{\underline{k},\underline{i}} D_{\underline{j},\underline{l}} \< \left(\frac{2}{1+A^{-1}}\right)^{\otimes n} e_{\underline{k}}, e_{\underline{l}}\>_{1,0} = \sum_{\underline{k},\underline{l}} D_{\underline{j},\underline{l}} \left[\left(\frac{2}{1+A^{-1}}\right)^{\otimes n}\right]_{\underline{k},\underline{l}} D_{\underline{k},\underline{i}}\\
+			&=\sum_{\underline{k},\underline{l}} D_{\underline{j},\underline{l}} \left[\alpha^{\otimes n}\right]_{\underline{l},\underline{k}} D_{\underline{k},\underline{i}}= [D\alpha^{\otimes n}D]_{\underline{j},\underline{i}}=\delta_{\underline{i}=\underline{j}}.
+	\end{align*}
+Noting that $r_{\ul{i}}$ is a linear combination of the $\psi_{\ul{j}}$ with $|\ul{j}|=n$, we see that $r_{\ul{i}}\Omega\in\H^{\otimes n}$. Hence $\{r_{\ul{i}}\Omega\}_{|\ul{i}|=n}$ is an orthonormal basis for $\H^{\otimes n}$ and $P_n$ can be identified with $\sum_{|\ul{i}|=n} r_{\ul{i}} \otimes r_{\ul{i}}^*\in\mathscr{P}\otimes\mathscr{P}^{op}$.\par
+Repeat this construction for each $n\geq 0$ so that for a multi-index $\ul{i}$ of arbitrary length we have a corresponding $r_{\ul{i}}$ and consequently a representation of $P_n$ in $\mathscr{P}\otimes\mathscr{P}^{op}$ for every $n$. Then by definition we have $\Xi_q=\sum_{n\geq 0} q^n \sum_{|\underline{i}|=n} r_{\underline{i}}\otimes r_{\underline{i}}^*$, provided this sum converges. Let $C_n(t)=\sup_{|\ul{i}|=n}\|\sigma_{it}(\psi_{\ul{i}})\|_R$, then we have
+	\begin{align*}
+		\left\|\sum_{|\ul{i}|=n}  \sigma_{it}(r_{\ul{i}})\otimes r_{\ul{i}}^*\right\|_{R\otimes_\pi R}&\leq \sum_{\ul{i},\ul{j},\ul{k},\ul{l},\ul{m}} \left|D_{\ul{i},\ul{j}}B_{\ul{j},\ul{l}} \overline{D_{\ul{i},\ul{k}}}\overline{B_{\ul{k},\ul{m}}}\right| \left\| \sigma_{it}(\psi_{\ul{l}})\right\|_R \| \psi_{\ul{m}}\|_R\\
+			&\leq \sum_{\ul{m},\ul{l}} \left| (BD^2B)_{\ul{m},\ul{l}}\right| C_n(t)C_n(0) \\
+			&\leq N^{2n} \|BD^2B\| C_n(t)C_n(0)\\
+			&\leq N^{2n}\left(\frac{1+\|A||}{2}\right)^n \|B^2\| C_n(t)C_n(0) \\
+			& \leq N^{2n}\left(\frac{1+\|A\|}{2}\right)^n \left( (1-|q|)\prod_{k=1}^\infty \frac{1+|q|^k}{1-|q|^k}\right)^n C_n(t)C_n(0),
+	\end{align*}
+where we have used the bound on $\|B^2\|$ from \cite{D}. From Equation (\ref{recursive_psi}) and (\ref{differentiating_sigma_with_q}), $C_n(t)\leq \|A^{-t}X\|_RC_{n-1}(t) +C_{n-2}(t)/(1-|q|)$. But $\|A^{-t}X\|_R\leq \|A^{-t}\| R=\|A^t\| R$ (see property 4 of $A$ in section \ref{free_Araki-Woods}), so that $C_n(t)\leq \|A^{t}\|^n\left( R+\frac{1}{1-|q|}\right)^n=\|A^{t}\|^n\left(\frac{3+c}{1-|q|}\right)^n$. Also, we use the bound
+	\begin{align*}
+		(1-|q|)\prod_{k=1}^\infty \frac{1+|q|^k}{1-|q|^k}\leq \frac{(1-|q|)^2}{1-2|q|},
+	\end{align*}
+from Lemma 13 in \cite{Shl09}. Thus
+	\begin{align*}
+		\left\|\sum_{|\underline{i}|=n} \sigma_{it}( r_{\underline{i}})\otimes r_{\underline{i}}^*\right\|_{R\otimes_\pi R} &\leq N^{2n}\left(\frac{1+\|A\|}{2}\right)^n \left(\frac{(1-|q|)^2}{1-2|q|}\right)^n \|A^{t}\|^n\left(\frac{3+c}{1-|q|}\right)^{2n}\\
+					&= \left[ \|A^{t}\|N^2 \frac{1+\|A\|}{2}\frac{(3+c)^2}{1-2|q|}\right]^n.
+	\end{align*}
+Thus choosing $|q|$ small enough so that
+	\begin{align*}
+		|q|\|A^{t_0}\|N^2 \frac{1+\|A\|}{2}\frac{(3+c)^2}{1-2|q|}<1,
+	\end{align*}
+we can use $\|A^t\|\leq \|A^{t_0}\|$ for $|t|\leq|t_0|$ to obtain
+	\begin{align*}
+		\left\|(\sigma_{it}\otimes 1)(\Xi_q)-1\otimes 1\right\|_{R\otimes_\pi R} &\leq \sum_{n=1}^\infty \left[|q|\|A^{t}\|N^2\frac{1+\|A\|}{2}\frac{(3+c)^2}{1-2|q|}\right]^n\\
+													&=\frac{\left\|A^{t}\right\|(3+c)^2(1+\|A\|)N^2|q|}{2- \left(4+ \left\|A^{t}\right\|(3+c)^2(1+\|A\|)N^2\right)|q|}.
+	\end{align*}
+The limit $\pi(q,N,A,t)\rightarrow 0$ as $|q|\rightarrow 0$ is clear from the definition of $\pi(q,N,A,t)$, and the ordering $\pi(q,N,A,s)\leq \pi(q,N,A,t)$ for $|s|\leq |t|$ simply follows from $\|A^s\| \leq \|A^t\|$. The final statements are then simple consequences of the formula $\frac{1}{x}=\sum_{n=0}^\infty (1-x)^n$.
+\end{proof}
+
+\begin{rem}
+We note that $\pi(q,N,1,0)=\pi(q,N^2)$ in \cite{D}.
+\end{rem}
+
+
+%	The conjugate variables $\xi_j^{(q)}$	
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{The conjugate variables $\xi_j$}
+
+Recall that $\hat{\sigma}_z=\sigma_z\otimes \sigma_{\bar{z}}$. We will show that $\partial_j^{(q)*}\circ\hat{\sigma}_{-i}\left(\left[\Xi_q^{-1}\right]^*\right)$ defines the conjugate variables for $\partial_j$, but first we require some estimates relating to $\partial_j^{(q)*}$.\par
+Fix $c>0$ and let $R=\left(1+\frac{c}{2}\right)\frac{2}{1-|q|}$. For now, we only assume $|q|$ is small enough that $\Xi_q\in \left(\mathscr{P}\otimes\mathscr{P}^{op}\right)^{(R)}$.
+
+\begin{lem}\label{bounded_adjoint}
+For each $j=1,\ldots,N$, the maps $(\varphi\otimes 1)\circ\partial_j^{(q)}$ and $(1\otimes\varphi)\circ\bar{\partial}_j^{(q)}$ are bounded operators from $\mathscr{P}^{(R)}$ to itself with norms bounded by $\frac{1-|q|}{c}\|\Xi_q\|_{R\otimes_\pi R}$. Consequently the maps $m\circ(1\otimes\varphi\otimes 1)\circ\left(1\otimes\partial_j^{(q)} +\bar{\partial}_j^{(q)}\otimes 1\right)$ are bounded from $\left(\mathscr{P}\otimes\mathscr{P}^{op}\right)^{(R)}$ to $\mathscr{P}^{(R)}$ with norm bounded by $\frac{2(1-|q|)}{c}\|\Xi_q\|_{R\otimes_\pi R}$.
+\end{lem}
+\begin{proof}
+Recall that $\varphi$ is a state and $\|X_i\| \leq \frac{2}{1-|q|}$ and therefore $\varphi$ satisfies (\ref{phi_monomial}) with $C_0=\frac{2}{1-|q|}$. For $P\in \mathscr{P}^{(R)}$ write $P=\sum_{\ul{i}} a(\ul{i}) X_{\ul{i}}$ and denote $\|\Xi_q\|_{R\otimes_\pi R}=Q_0$. Then
+	\begin{align*}
+		\left\| (\varphi\otimes 1)\circ\partial_j^{(q)}(P)\right\|_R  &= \left\| \sum_{\ul{i}} a(\ul{i})(\varphi\otimes 1)\left( \sum_{k=1}^{|\ul{i}|} \alpha_{i_k j} X_{i_1}\cdots X_{i_{k-1}} \otimes X_{i_{k+1}}\cdots X_{i_{|\ul{i}|}}\#\Xi_q\right)\right\|_R \\
+										&\leq \sum_{\ul{i}} |a(\ul{i})| \sum_{k=1}^{|\ul{i}|} \left(\frac{2}{1-|q|}\right)^{k-1} R^{n-k}Q_0 \\
+										&=\sum_{\ul{i}} |a(\ul{i})| R^{n-1} Q_0\sum_{k=1}^{\ul{i}} \left(\frac{1}{1+c/2}\right)^{k-1}\\
+					&\leq \sum_{\ul{i}} a(\ul{i}) R^{n-1}Q_0 \frac{1}{1-\frac{1}{1+c/2}} \\
+					&=\|P\|_RQ_0 \frac{1}{R} \frac{1+c/2}{c/2} = \|P\|_R Q_0\frac{1-|q|}{c}.
+	\end{align*}
+The estimate for $(1\otimes \varphi)\circ\bar{\partial}_j^{(q)}$ is similar.\par
+Define $\eta(P\otimes 1)$ to be left multiplication by $P$ on $\mathscr{P}^{(R)}$ and define $\eta(1\otimes P)$ to be right multiplication by $\frac{c}{1-|q|}Q_0^{-1}(\varphi\otimes 1)\circ\partial_j^{(q)}(P)$ on $\mathscr{P}^{(R)}$. Let $Q\in \mathscr{P}\otimes\mathscr{P}^{op}$, then by the above computations and the definition of $\|\cdot\|_{R\otimes_\pi R}$ we have
+	\begin{align*}
+		\left\|m\circ(1\otimes\varphi\otimes 1)\circ(1\otimes\partial_j^{(q)})(Q)\right\|_R = Q_0\frac{1-|q|}{c}\left\| \eta(Q)(1)\right\|_R\leq Q_0\frac{1-|q|}{c}\|Q\|_{R\otimes_\pi R}.
+	\end{align*}
+Similarly, $\| m\circ(1\otimes\varphi\otimes 1)\circ(\bar{\partial}_j^{(q)}\otimes 1)\|\leq Q_0\frac{1-|q|}{c}$ and so the final statement holds.
+\end{proof}
+
+Now let $|q|$ be sufficiently small that $\pi(q,N,A,-2)<1$. Then by Proposition \ref{Xi_invertible} and the statements preceding it, $\hat{\sigma}_{i}(\Xi_q^{-1}) = (\sigma_{2i}\otimes 1)(\Xi_q^{-1})$ and $(\sigma_{i}\otimes 1)(\Xi_q^{-1})$ exist as elements of $(\mathscr{P}\otimes\mathscr{P}^{op})^{(R)}$, as do their adjoints $\hat{\sigma}_{-i}\left(\left[\Xi_q^{-1}\right]^*\right)$ and $(\sigma_{-i}\otimes 1)\left(\left[\Xi_q^{-1}\right]^*\right)$. So by the preceding lemma the following defines an element of $\mathscr{P}^{(R)}$ for each $j=1,\ldots, N$: 
+	\begin{align}\label{def_xi}
+		\xi_j:=& (\sigma_{-i}\otimes 1)\left(\left[\Xi_q^{-1}\right]^*\right)\# X_j \\
+					&- m\circ(1\otimes\varphi\otimes 1)\circ \left(1\otimes\partial_j^{(q)} + \bar{\partial}_j^{(q)}\otimes 1\right)\circ(\sigma_{-i}\otimes 1)\left(\left[\Xi_q^{-1}\right]^*\right),
+	\end{align}
+and
+	\begin{align}\label{xi_R_norm}
+		\|\xi_j\|_R \leq \left\| (\sigma_{i}\otimes 1)\left(\Xi_q^{-1}\right)\right\|_{R\otimes_\pi R} R + \frac{2(1-|q|)}{c}\left\| \Xi_q\right\|_{R\otimes_\pi R} \left\| (\sigma_{i}\otimes 1)\left(\Xi_q^{-1}\right)\right\|_{R\otimes_\pi R}.
+	\end{align}
+Now, using (\ref{adjoint_formula_2}) we see that
+	\begin{align*}
+		\partial_j^{(q)*}\circ\hat{\sigma}_{-i}\left(\left[\Xi_q^{-1}\right]^*\right) =& (\sigma_{-i}\otimes 1)\left(\left[\Xi_q^{-1}\right]^*\right)\# X_j \\
+														&- m\circ(1\otimes\varphi\otimes \sigma_{-i})\circ\left(1\otimes \bar{\partial}_j^{(q)} + \bar{\partial}_j^{(q)}\otimes 1\right)\circ(\sigma_{-i}\otimes 1)\left(\left[\Xi_q^{-1}\right]^*\right),
+	\end{align*} 
+which is equivalent to $\xi_j$ defined above. Hence
+	\begin{align*}
+		\<\xi_j,P\>&=\<\hat{\sigma}_{-i}\left(\left[\Xi_q^{-1}\right]^*\right), \partial_j^{(q)}(P)\> = \varphi\otimes\varphi^{op}\left( \hat{\sigma}_i\left(\Xi_q^{-1}\right)\#\partial_{j}^{(q)}(P)\right) \\
+			&= \varphi\otimes \varphi^{op}\left(\partial_j^{(q)}(P)\#\Xi_q^{-1}\right)=\varphi\otimes\varphi^{op}\left(\partial_j(P)\right)=\<1\otimes 1, \partial_j(P)\>.
+	\end{align*}
+Thus $\xi_j=\partial_j^*(1\otimes 1)$ is the conjugate variable of $X_1,\ldots,X_N$ with respect to the $\sigma$-difference quotient $\partial_j$. It also holds that $\xi_j=\xi_j^*$:
+	\begin{align*}
+		\<\xi_j^{*},P\>&=\varphi(\sigma_i(P)\xi_j)=\overline{\<\xi_j,\sigma_{-i}(P^*)\>}=\overline{\varphi\otimes\varphi^{op}(\partial_j\circ\sigma_{-i}(P^*))}\\
+					&=\overline{\varphi\otimes\varphi^{op}\left(\bar{\partial}_{j}(P^*)\right)}=\varphi\otimes\varphi^{op}\left(\partial_j(P)\right)=\<\xi_j,P\>.
+	\end{align*}
+We remark that this could also be observed directly from the definition of $\xi_j$ in (\ref{def_xi}) using a combination of (\ref{Xi_q_sigma_invariant}) and the fact that $\Xi_q^\dagger=\Xi_q$.\par
+We claim that there exists $V\in \mathscr{P}_{c.s.}^{(R,\sigma)}\subset M$ such that $\D_j V=\xi_j$. We first require a technical lemma which will lead to what is essentially the converse of Lemma \ref{change_of_variables}.(iii) in the case $Y=(\xi_1,\ldots, \xi_N)$.
+
+\begin{lem}
+Let $\xi_1,\ldots, \xi_N$ be as defined above. Then for $j,k\in\{1,\ldots, N\}$,
+	\begin{align}\label{xi_has_positive_hessian}
+		\partial_k(\xi_j)&=(1\otimes \sigma_{-i})\circ\bar{\partial}_j(\xi_k)^\diamond
+	\end{align}
+as elements of $L^2(M\bar{\otimes}M^{op},\varphi\otimes\varphi^{op})$. Furthermore,
+	\begin{align}\label{xi_is_eigenvector}
+		\sigma_{-i}(\xi_j)&=\sum_{k=1}^N [A]_{jk} \xi_k.
+	\end{align}
+\end{lem}
+\begin{proof}
+It suffices to check
+	\begin{align*}
+		\<\partial_i(\xi_j), a\otimes b\> = \<(1\otimes \sigma_{-i})\circ\bar{\partial}_j(\xi_i)^\diamond, a\otimes b\>
+	\end{align*}
+for elementary tensors $a\otimes b\in L^2(M\bar{\otimes}M^{op},\varphi\otimes\varphi^{op})$. So using (\ref{adjoint_formula}) we compute
+	\begin{align*}
+		\<\partial_k(\xi_j), a\otimes b\>=&\varphi(\xi_j a\xi_k\sigma_{-i}(b)) - \varphi(\xi_ja[(\varphi\otimes\sigma_{-i})\circ\bar{\partial}_k(b)]) - \varphi(\xi_j[(1\otimes\varphi)\circ\bar{\partial}_k(a)]\sigma_{-i}(b))\\
+							      =&\<\partial_j^*\left( (\sigma_{-i}(b)\otimes a)^\dagger\right),\xi_k\> + \varphi( \left\{ a^*[(\varphi\otimes \sigma_{-i})\circ\bar{\partial}_j\circ\sigma_{i}(b^*)]\right\}^*\xi_k)\\
+							      &+\varphi(\{[(1\otimes \varphi)\circ\bar{\partial}_j(a^*)]b^*\}^*\xi_k)\\
+							      & - \varphi( [(\varphi\otimes 1)\circ\partial_j(a)][(\varphi\otimes\sigma_{-i})\circ\bar{\partial}_k(b)])\\
+							      & - \varphi( a [(1\otimes \varphi)\circ\partial_j\circ(\varphi\otimes \sigma_{-i})\circ\bar{\partial}_k(b)])\\
+							      &-\varphi([(\varphi\otimes 1)\circ\partial_j\circ(1\otimes \varphi)\circ\bar{\partial}_k(a)]\sigma_{-i}(b))\\
+							      & - \varphi([(1\otimes \varphi)\circ\bar{\partial}_k(a)][(1\otimes\varphi)\circ\partial_j\circ\sigma_{-i}(b)]).
+	\end{align*}
+We note that
+	\begin{align*}
+		\varphi(P^*\xi_k)=\overline{\<\xi_k,P\>}=\overline{\varphi\otimes \varphi^{op}(\partial_k (P))}=\varphi\otimes\varphi^{op}(\partial_k(P)^\dagger)=\varphi\otimes\varphi^{op}(\bar{\partial}_k(P^*)).
+	\end{align*}
+Applying this to the second and third terms in the above computation yields
+	\begin{align*}
+		\<\partial_k(\xi_j), a\otimes b\>=&\<\partial_j^*\left( (\sigma_{-i}(b)\otimes a)^\dagger\right),\xi_k\>\\
+							&+ \varphi\otimes\varphi^{op}( \bar{\partial}_k\{[(\sigma_{i}\otimes\varphi)\circ\partial_j\circ\sigma_{-i}(b)]a\})\\
+							&+\varphi\otimes\varphi^{op}(\bar{\partial}_k\{b[(\varphi\otimes 1)\circ\partial_j(a)]\})\\
+							& - \varphi( [(\varphi\otimes 1)\circ\partial_j(a)][(\varphi\otimes\sigma_{-i})\circ\bar{\partial}_k(b)])\\
+							& - \varphi( a [(1\otimes \varphi)\circ\partial_j\circ(\varphi\otimes \sigma_{-i})\circ\bar{\partial}_k(b)])\\
+							&-\varphi([(\varphi\otimes 1)\circ\partial_j\circ(1\otimes \varphi)\circ\bar{\partial}_k(a)]\sigma_{-i}(b))\\
+							&- \varphi([(1\otimes \varphi)\circ\bar{\partial}_k(a)][(1\otimes\varphi)\circ\partial_j\circ\sigma_{-i}(b)])\\
+							=& \<[\sigma_{-i}(b)\otimes a]^\dagger, \partial_j(\xi_k)\>\\
+							&+\varphi([(\varphi\otimes 1)\circ\bar{\partial}_k\circ(\sigma_i\otimes \varphi)\circ\partial_j\circ\sigma_{-i}(b)]a)\\
+							&- \varphi( a [(1\otimes \varphi)\circ\partial_j\circ(\varphi\otimes \sigma_{-i})\circ\bar{\partial}_k(b)])\\
+							&+\varphi(b[(1\otimes \varphi)\circ\bar{\partial}_k\circ(\varphi\otimes 1)\circ\partial_j(a)])\\
+							&-\varphi([(\varphi\otimes 1)\circ\partial_j\circ(1\otimes \varphi)\circ\bar{\partial}_k(a)]\sigma_{-i}(b)).
+	\end{align*}
+Now, applying (\ref{differentiating_sigma_with_q}) to the second line in the last equality above yields
+	\begin{equation*}
+		\varphi([(\varphi\otimes 1)\circ(\bar{\partial}_k\otimes \varphi)\circ\bar{\partial}_j(b)]a) -\varphi( [(1\otimes \varphi)\circ(\varphi\otimes \bar{\partial}_j)\circ\bar{\partial}_k(b)]a).
+	\end{equation*}
+This is zero if $(\varphi\otimes 1)\circ(\bar{\partial}_k\otimes \varphi)\circ\bar{\partial}_j=(1\otimes \varphi)\circ(\varphi\otimes \bar{\partial}_j)\circ\bar{\partial}_k$, but this is easily verified by computing on monomials. Finally, the final line in the last equality of the computation is equivalent to
+	\begin{equation*}
+		\varphi(b[(1\otimes \varphi)\circ\bar{\partial}_k\circ(\varphi\otimes 1)\circ\partial_j(a)]) -\varphi(b[(\varphi\otimes 1)\circ\partial_j\circ(1\otimes \varphi)\circ\bar{\partial}_k(a)]).
+	\end{equation*}
+This is zero if $(1\otimes\varphi)\circ(\varphi\otimes \bar{\partial}_k)\circ\partial_j = (\varphi\otimes 1)\circ(\partial_j \otimes \varphi)\circ\bar{\partial}_k$, but again this is easily checked on monomials. Thus
+	\begin{align*}
+		\<\partial_k(\xi_j),a\otimes b\>&=\<[\sigma_{-i}(b)\otimes a]^\dagger, \partial_j(\xi_k)\>=\varphi\otimes \varphi^{op}(a\otimes \sigma_{-i}(b)\#\partial_j(\xi_k))\\
+				&=\varphi\otimes \varphi^{op}( (\sigma_i\otimes 1)\circ\partial_j(\xi_k)\# a\otimes b)=\<(1\otimes \sigma_{-i})\circ\bar{\partial}_j(\xi_k^*)^\diamond, a\otimes b\>,
+	\end{align*}
+showing (\ref{xi_has_positive_hessian}).\par
+Towards verifying (\ref{xi_is_eigenvector}), we note that
+	\begin{align*}
+		\sum_{k=1}^N \left[A^{-1}\right]_{jk}\partial_k = \bar{\partial}_j.
+	\end{align*}
+Hence for $P\in\mathscr{P}$ we have
+	\begin{align*}
+		\< \sum_{k=1}^N [A]_{jk} \xi_k, P\> &= \sum_{k=1}^N [A]_{kj} \varphi\otimes\varphi^{op}\left(\partial_k(P)\right) = \varphi\otimes\varphi^{op}\left( \bar{\partial}_j(P) \right)\\
+						& = \overline{\varphi\otimes\varphi^{op}\left( \partial_j(P^*)\right)}= \overline{\<\xi_j, P^*\>}=\varphi(P\xi_j)=\varphi(\sigma_i(\xi_j)P)=\<\sigma_{-i}(\xi_j),P\>,
+	\end{align*}
+which establishes (\ref{xi_is_eigenvector}).
+\end{proof}
+
+\section{$M_q\cong M_0$ for small $|q|$}
+
+Define
+	\begin{align*}
+		V = \Sigma\left(\sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk} \xi_k X_j\right).
+	\end{align*}
+Note that (\ref{xi_R_norm}) implies $V\in\mathscr{P}^{(R)}$. We further claim that $\D_j V=\xi_j$ and $V\in\mathscr{P}_{c.s.}^{(R,\sigma)}$. The former is equivalent to
+	\begin{align*}
+		\D_j(\mathscr{N}V)=(1+\mathscr{N})\D_j V=(1+\mathscr{N})\xi_j= \xi_j+\sum_{k=1}^n \delta_k(\xi_j)\# X_k.
+	\end{align*}
+To show this, we first note that $\D_j=m\circ\diamond\circ(1\otimes\sigma_{-i})\circ\bar{\partial}_j$ and so by the derivation property of $\bar{\partial}_j$ we have
+	\begin{align*}
+		\D_j(PQ)= (1\otimes\sigma_{-i})\circ\bar{\partial}_j(P)^\diamond \# \sigma_{-i}(Q) + (1\otimes\sigma_{-i})\circ\bar{\partial}_j(Q)^\diamond\#P.
+	\end{align*}
+Thus using (\ref{xi_has_positive_hessian}) and $\sigma_{-i}(X_j)=[A X]_j$ from (\ref{modular_semicircular}) we have
+	\begin{align*}
+		\D_t(\mathscr{N}V)&=\sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk} \left( (1\otimes\sigma_{-i})\circ\bar{\partial}_t(\xi_k)\# \sigma_{-i}(X_j) + \alpha_{tj} \xi_k\right)\\
+			&=\sum_{j,k,l=1}^N \left[\frac{1+A}{2}\right]_{jk} \partial_k(\xi_t)\# [A]_{jl}X_l + \sum_{j,k=1}^N \left[\frac{2}{1+A}\right]_{tj}\left[\frac{1+A}{2}\right]_{jk} \xi_k\\
+			&= \xi_t+\sum_{l=1}^N \delta_l(\xi_t)\# X_l,
+	\end{align*}
+as claimed.\par
+Now, in order to show $V\in\mathscr{P}_{c.s.}^{(R,\sigma)}$ we will show that $V$ is invariant under $\sigma_{-i}$ and that $\mathscr{S}(V)=V$ Together, these imply that $V$ is invariant under $\rho$ and hence $V\in\mathscr{P}_{c.s.}^{(R,\sigma)}$ (that $V$ has finite $\|\cdot\|_{R,\sigma}$-norm follows from the fact that for $\rho$ invariant elements this norm agrees with the $\|\cdot\|_R$-norm). Using (\ref{xi_is_eigenvector}) and $\sigma_{-i}(X_j)=[A X]_j$ we see that
+	\begin{align*}
+		\sigma_{-i}(V)&=\Sigma\left( \sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk} \sum_{l=1}^N [A]_{kl} \xi_l \sum_{m=1}^N [A]_{jm} X_m\right)\\
+				&=\Sigma\left( \sum_{j,k,l,m=1}^N \left[A^{-1}\right]_{mj}\left[\frac{1+A}{2}\right]_{jk}[A]_{kl} \xi_l X_m\right) = V.
+	\end{align*}
+Towards seeing $\mathscr{S}(V)=V$, we note that
+	\begin{align*}
+		\mathscr{S}(X_{i_1}\cdots X_{i_n}) &= \frac{1}{n}\sum_{l=0}^{n-1} \rho^l(X_{i_1}\cdots X_{i_n}) = \frac{1}{n}\sum_{l=1}^N \left[m\circ(1\otimes\sigma_{-i})\circ\delta_l(X_{i_1}\cdots X_{i_n})^\diamond\right]X_l\\
+			&=\Sigma\left(\sum_{l=1}^N \left[m\circ(1\otimes\sigma_{-i})\circ\delta_l(X_{i_1}\cdots X_{i_n})^\diamond\right]X_l\right),
+	\end{align*}
+and by linearity this extends to general polynomials $P$. Hence
+	\begin{align*}
+		\sum_{l,m=1}^N \left[\frac{1+A}{2}\right]_{lm} &\left[m\circ(1\otimes\sigma_{-i})\circ\bar{\partial}_{m}(P)^\diamond\right]X_l \\
+					&= \sum_{l=1}^N \left[m\circ(1\otimes\sigma_{-i})\circ\delta_l(P)^\diamond\right] X_l = \mathscr{N}\mathscr{S}(P)=\mathscr{S}(\mathscr{N}P).
+	\end{align*}
+Consequently (\ref{xi_has_positive_hessian}) implies
+	\begin{align*}
+		\mathscr{S}(\mathscr{N}^2V) &= \sum_{l,m=1}^N \left[\frac{1+A}{2}\right]_{lm} \left[(1\otimes\sigma_{-i})\circ\bar{\partial}_m\left(\mathscr{N}V\right)^\diamond\right] X_l\\
+						&=\sum_{j,k,l,m=1}^N \left[\frac{1+A}{2}\right]_{lm}\left[\frac{1+A}{2}\right]_{jk} \left[ (1\otimes\sigma_{-i})\circ\bar{\partial}_m(\xi_k)^\diamond\# \sigma_{-i}(X_j) + \alpha_{mj}\xi_k\right]X_l\\
+						&=\sum_{j,k,l,m,a=1}^N \left[\frac{1+A}{2}\right]_{lm}\left[\frac{1+A}{2}\right]_{jk} [A]_{ja}\left[ \partial_k(\xi_m)\# X_a\right]X_l + \sum_{k,l=1}^N \left[\frac{1+A}{2}\right]_{lk} \xi_k x_l\\
+						&=\sum_{l,m=1}^N \left[\frac{1+A}{2}\right]_{lm} \left[\mathscr{N}-1\right]\left(\xi_m X_l\right) + \mathscr{N}V=\mathscr{N}^2V.
+	\end{align*}
+Thus $\mathscr{S}(V)=V$, and $V\in\mathscr{P}_{c.s.}^{(R,\sigma)}$ as claimed.\par
+Note
+	\begin{align*}
+		V_0=\frac{1}{2}\sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk} X_kX_j = \Sigma\left(\sum_{j,k=1}^N \left[\frac{1+A}{2}\right]_{jk} X_kX_j\right),
+	\end{align*}
+and define $W:=V-V_0$. Then $W\in\mathscr{P}_{c..s}^{(R,\sigma)}$ and
+	\begin{align*}
+		\|W\|_{R,\sigma}=\|W\|_{R} \leq \sum_{j,k=1}^N \left|\left[\frac{1+A}{2}\right]_{jk}\right| \|\xi_k - X_k\|_{R} R.
+	\end{align*}
+We claim that $\|\xi_k - X_k\|_{R}\rightarrow 0 $ as $|q|\rightarrow 0$, and consequently $\|W\|_{R,\sigma}\rightarrow 0$. Indeed, we can write
+	\begin{align*}
+		X_k=\left(\left[1\otimes 1\right]^*\right)\# X_k - m\circ(1\otimes\varphi\otimes 1)\circ\left(1\otimes\partial_k^{(q)}+\bar{\partial}_k^{(q)}\otimes 1\right)\left( \left[1\otimes 1\right]^*\right),
+	\end{align*}
+and so using (\ref{def_xi}) and Lemma \ref{bounded_adjoint} we have
+	\begin{align*}
+		\|\xi_k - X_k\|_{R} \leq& \left\| (\sigma_i\otimes 1)(\Xi_q^{-1}) - 1\otimes 1 \right\|_{R\otimes_\pi R}R\\
+			&+ \frac{2(1-|q|)}{c} \|\Xi_q\|_{R\otimes_\pi R}\left\| (\sigma_i\otimes 1)(\Xi_q^{-1}) - 1\otimes 1\right\|_{R\otimes_\pi R}.
+	\end{align*}
+From the final remark in Proposition \ref{Xi_invertible}, we see that this tends to zero as $|q|\rightarrow 0$. Thus we are in a position to apply our transport results from Section \ref{construction}. Using Corollary \ref{iso_cor} we obtain the following result.
+
+\begin{thm}
+There exists $\epsilon>0$ such that $|q|<\epsilon$ implies $\Gamma_q(\H_\R,U_t)\cong \Gamma_0(\H_\R,U_t)$ and $\Gamma_q(\H_\R,U_t)''\cong\Gamma_0(\H_\R,U_t)$.
+\end{thm}
+
+Using the classification of $\Gamma_0(\H_\R,U_t)''$ in Theorem 6.1 of \cite{Shl97} we obtain the following classification result.
+
+\begin{cor}
+For $\H_\R$ finite dimensional, let $G$ be the multiplicative subgroup of $\R^\times_+$ generated by the spectrum of $A$. Then there exists $\epsilon>0$ such that for $|q|<\epsilon$
+	\begin{align*}
+		\Gamma_q(\H_\R,U_t)''\text{ is a factor of type }\left\{\begin{array}{cl}	\mathrm{III}_1	&	\text{if }G=\R_+^\times\\
+													\mathrm{III}_\lambda & 	\text{if }G=\lambda^\Z,\ 0<\lambda<1\\
+													\mathrm{II}_1		&	\text{if }G=\{1\}.\end{array}\right.
+	\end{align*}
+Moreover, $\Gamma_q(\H_\R,U_t)''$ is full.
+\end{cor}

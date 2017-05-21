@@ -1,32 +1,14 @@
-@article{einstein,
-    author =       "Albert Einstein",
-    title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
-        [{On} the electrodynamics of moving bodies]",
-    journal =      "Annalen der Physik",
-    volume =       "322",
-    number =       "10",
-    pages =        "891--921",
-    year =         "1905",
-    DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
+@Article{Laskowski2007,
+author="Laskowski, Michael C.",
+title="A simpler axiomatization of the Shelah-Spencer almost sure theories",
+journal="Israel Journal of Mathematics",
+year="2007",
+volume="161",
+number="1",
+pages="157--186",
+abstract="We give an explicit AE-axiomatization of the almost sure theories of sparse random graphs G(n, n                −$\alpha$) of Shelah-Spencer. In the process we give a method of constructing extensions of graphs whose `relative dimension' is negative, but arbitrarily small. We describe the existentially closed and locally finite models of the theory and produce types of dimension zero. We offer a useful characterization of forking and generalize results about stability and the Dimensional Order Property (DOP) that were known for graphs to arbitrary relational languages.",
+issn="1565-8511",
+doi="10.1007/s11856-007-0077-8",
+url="http://dx.doi.org/10.1007/s11856-007-0077-8"
 }
 
-@article{density,
-    author =       "Albert Einstein",
-    title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
-        [{On} the electrodynamics of moving bodies]",
-    journal =      "Annalen der Physik",
-    volume =       "322",
-    number =       "10",
-    pages =        "891--921",
-    year =         "1905",
-    DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
-}
-
-\bibitem{density}
-  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
-  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
-  
-\bibitem{laskowski}
-  Michael C. Laskowski, \textit{A simpler axiomatization of the Shelah-Spencer almost sure theories},
-  Israel J. Math. \textbf{161} (2007), 157–186. MR MR2350161	

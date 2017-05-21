@@ -26,7 +26,12 @@ The third chapter of my dissertation deals with p-adic numbers and valued fields
 
 \section{Basic Model Theory}
 
-\begin{Definition}
+This section goes through the basics of the model theory used throughout this text.
+It is meant to be used mostly as a reference on the notation as opposed to a comprehensive summary.
+For a complete and more thorough introduction to the material, we refer the reader to \noref.
+We begin with a short summary of languages, formulas, and structures:
+
+\begin{Definition} \;
   \begin{itemize}
   \item A \defn{language} is a collection of predicate, function, and constant symbols.
   \item Fix language $\LL$ and a collection of variables.
@@ -47,7 +52,8 @@ The third chapter of my dissertation deals with p-adic numbers and valued fields
   \item Suppose we have a structure $\MM$ and $A \subseteq M$.
     Then $\LL(A)$ denotes an expansion of $\LL$ by constant symbols correspoding to elements in $A$.
     The structure $\MM$ then can be viewed as a $\LL(A)$-structure with the appropriate interpretations.
-    Formulas $\phi \in \LL(A)$ will be referred to as \defn{formulas with parameters from $A$}.
+    Formulas $\phi \in \LL(A)$ will be referred to as \defn{formulas with parameters from $A$} or simply as \defn{$A$-formulas}.
+    In this context $A$ is usually referred to as a \defn{parameter set}.
   \item A \defn{theory} is a collection of sentences.
   \item For a theory $T$ and a structure $\MM$, we say that $\MM$ \defn{models} $T$,
     or that $\MM$ is a \defn{model} of $T$, if $\MM$ models every sentence in $T$.
@@ -59,6 +65,10 @@ The third chapter of my dissertation deals with p-adic numbers and valued fields
 Throughout this text we often confuse complete theories with their models.
 This is justfied for properties that can be described by a collection of first-order sentences.
 Then a theory has this property if and only any (all) models have this property.
+An example of that is a notion of stability.
+
+Stability is a deep subject, with a lot of theory developed around it.
+We present a definitnon for completeness and refer the reader to \noref for a more complete introcudtion.
 
 \begin{Definition}
   \begin{itemize}
@@ -74,12 +84,30 @@ Then a theory has this property if and only any (all) models have this property.
   \end{itemize}
 \end{Definition}
 
+Definable sets are subsets of our structure given by formulas.
+More precisely:
 \begin{Definition}
-  Let $\kappa$ be a cardinal.
-  A structure $\MM$ is called $\kappa$-saturated if for all $B \subset M$ with $|B| < \kappa$
-  we have that all consistent partial types over $B$ are realized in $\MM$.
+  Suppose we have a structure $\MM$, a paramter set $A \subseteq M$ and an $A$-formula $\phi(x)$.
+  Then
+  \begin{align*}
+    \phi(M^{|x|}) = \curly{m \in M^{|x|} \mid \MM \models \phi(m)}.
+  \end{align*}
+  is referred as an \defn{$A$-definable} subset of $M^{|x|}$ defined by $\phi$.
 \end{Definition}
 
+More generally, we will need a slightly more refined notion of a trace:
+\begin{Definition}
+  Suppose we have a structure $\MM$, a formula $\phi(x, y)$, tuples $a \in M^{|x|}, b \in M^{|y|}$, and
+  sets $A \subseteq M^{|x|}, B \subseteq M^{|y|}$. 
+  Define
+  \begin{align*}
+    \phi(A, b) &= \curly{a \in A \mid \MM \models \phi(a,b)}, \\
+    \phi(a, B) &= \curly{b \in B \mid \MM \models \phi(a,b)}.
+  \end{align*}
+  These sets will be informally referred to as traces.
+\end{Definition}
+
+Types is one of the main tools of study in model theory:
 \begin{Definition}
   Suppose $\MM$ is a structure, $B \subseteq M$.
   Also fix a variable tuple $x$.
@@ -98,6 +126,17 @@ Then a theory has this property if and only any (all) models have this property.
   \end{itemize}
 \end{Definition}
 
+Saturated structures is another important construction that we will be using.
+Generally speaking, a lot of the model theory is done inside of saturated structures as it simplifies a lot of constructions.
+The definition is as follows:
+\begin{Definition}
+  Let $\kappa$ be a cardinal.
+  A structure $\MM$ is called $\kappa$-saturated if for all $B \subset M$ with $|B| < \kappa$
+  we have that all consistent partial types over $B$ are realized in $\MM$.
+\end{Definition}
+
+Indiscernible sequences will be useful to us to describe dp-rank and dp-minimality.
+They come up often in model theory as a way to leverage symmetry present in sequences and sets.
 \begin{Definition}
   \begin{itemize}
   \item Suppose we have a sequence $(a_i)_{i \in \I}$ where $\I$ is an ordered index set.
@@ -114,11 +153,13 @@ Then a theory has this property if and only any (all) models have this property.
   \end{itemize}
 \end{Definition}
 
-\begin{Lemma}
+Here is an important property of indiscernible sequences in stable thoeries:
+\begin{Lemma}[see \noref]
   A structure is stable if and only if every indiscernible sequence is totally indiscernible.
 \end{Lemma}
 
-\begin{Lemma}
+Sometimes instead of starting with an indiscernible sequence, we wish to construct one from a sequence with some degree of symmetry:
+\begin{Lemma} [see \noref]
   Work in a $\aleph_1$-saturated structure $\MM$.
   Suppose $B \subset M$.
   Fix a variable tuple $x$ and a collection of formulas $\Delta(x_1, \ldots, x_n)$ with $|x_1| = |x|$.
@@ -132,6 +173,36 @@ Then a theory has this property if and only any (all) models have this property.
     \MM \models \Delta(a_1', a_2', \ldots, a_n').
   \end{align*}
 \end{Lemma}
+
+Instead of working with types directly, it is often more convenient to work with automorphisms:
+\begin{Definition}
+  Suppose $\MM$ is a structure and $A \subset M$.
+  An \defn{automorphism} of $\MM$ over $A$ is a bijection of $f \colon M \arr M$
+  that fixes $A$ and preserves constants, relations, and functions of $\MM$.
+  We use notation $f \in \Aut(\MM/A)$.
+\end{Definition}
+
+The following result is easy to show directly from the definition:
+\begin{Lemma} [see \noref]
+  Suppose $\MM$ is a structure, $A \subset M$, and $f \in \Aut(\MM/A)$.
+  Suppose also that $a,b \in M^n$ such that $f(a) = b$.
+  Then $tp(a/A) = tp(b/A)$.
+\end{Lemma}
+
+The converse of this result holds in a special type of structure:
+\begin{Definition}
+  Let $\MM$ be a structure and $\kappa$ a cardinal.
+  Then $\MM$ is called \defn{$\kappa$-homogeneous} if for all $A \subseteq M$ with $|A| < \kappa$
+  we have that if for $a, b \in M^n$ if $tp(a/A) = tp(b/A)$ then
+  there exists $f \in \Aut(\MM/A)$ such that $f(a) = b$.
+\end{Definition}
+
+Luckily, for a given theory one can always find a model sufficiently saturated and homogeneous:
+\begin{Lemma} [see \noref]
+  Let $T$ be a complete theory and $\kappa$ a cardinal.
+  There exists a model of $T$ that is $\kappa$-saturated and $\kappa$-homogeneous.
+\end{Lemma}
+
 
 \input{../../vc_intro}
 
