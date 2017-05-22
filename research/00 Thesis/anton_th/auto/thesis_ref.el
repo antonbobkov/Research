@@ -3,6 +3,7 @@
  (lambda ()
    (LaTeX-add-bibitems
     "density"
+    "densityII"
     "laskowski"
     "reduct"
     "ash7"
@@ -19,5 +20,16 @@
     "spencer"
     "guingona"
     "dp_add"
+    "tent"
+    "pillay"
+    "shelah_nip"
+    "vc71"
+    "hensel"
+    "den84"
+    "karp97"
+    "ak1"
+    "er1"
+    "baldwin"
+    "shi"
     "jabref-meta:")))
 

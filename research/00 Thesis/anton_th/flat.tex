@@ -8,10 +8,10 @@ Superflat graphs were introduced in \cite{stable_graphs} as a natural class of s
 
 First, we introduce some basic graph-theoretic definitions.
 \begin{Definition}
-  Work in an infinite graph $G$. Let $A, B, S, V \subseteq V(G)$ (where $V(G)$ denotes vertices of $G$).
+  Work in a possibly infinite graph $\GG$. Let $A, B, S, V \subseteq G$ where $G$ is the set of vertices of $G$.
   \begin{enumerate}
-  \item $G' = G[V]$ is called the \defn{induced} subgraph of $G$ \defn{spanned} by $V$. It is obtained as a subgraph of $G$ by taking all edges between vertices in $V$.
-  \item A \defn{path} is a subgraph with distinct vertices $v_0, v_1, \ldots, v_n$ and an edge between $a_{i-1}, a_i$ for all $i = 1, \ldots n$.
+  % \item $G' = G[V]$ is called the \defn{induced} subgraph of $G$ \defn{spanned} by $V$. It is obtained as a subgraph of $G$ by taking all edges between vertices in $V$.
+  \item A \defn{path} is a subgraph of $\GG$ with distinct vertices $v_0, v_1, \ldots, v_n$ and an edge between $v_{i-1}, v_i$ for all $i = 1, \ldots n$.
     It is called a path from $A$ to $B$ if $v_0 \in A$ and $v_n \in B$.
     A \defn{length} of such a path is $n$.
   \item For $a,b \in V(G)$ define the \defn{distance} $d(a,b)$ to be the length of the shortest path between $a$ and $b$ in $G$.
@@ -34,7 +34,7 @@ In \cite{infinite_megner} we find a generalization of Megner's Theorem for infin
 We use the following easy consequence:
 
 \begin{Corollary} \label{cr_disjoint_paths}
-  Let $V$ be a subset of a graph $G$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
+  Let $V$ be a subset of vertices of a graph $\GG$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
 \end{Corollary}
 
 \begin{Corollary} \label{cr_hull_finite}
@@ -45,7 +45,7 @@ We use the following easy consequence:
   All the separating sets have to have exactly one vertex in each of those paths. 
 \end{proof}
 
-\begin{Definition}
+\begin{Definition} \ 
   \begin{itemize}
     \item A graph $K^m_n$ denotes a graph obtained from a complete graph on $n$ vertices with $m$ vertices added to every edge.
     \item A graph is called \defn{superflat} if for every $m \in \N$ there is $n \in \N$ such that the graph avoids $K^m_n$ as a subgraph. 
@@ -57,8 +57,8 @@ Theorem 2 in \cite{stable_graphs} gives a useful characterization of the superfl
 \begin{Theorem} \label{th_superflat_equivalence}
   The following are equivalent:
   \begin{enumerate}
-  \item $G$ is superflat.
-  \item For every $n \in \N$ and an infinite set $A \subseteq V(G)$, there exists a finite $B \subseteq V(G)$ and infinite $A' \subseteq A$ such that for all $x,y \in A'$ we have $d_{B}(x, y) > n$.
+  \item $\GG$ is superflat.
+  \item For every $n \in \N$ and an infinite set $A \subseteq G$, there exists a finite $B \subseteq G$ and infinite $A' \subseteq A$ such that for all $x,y \in A'$ we have $d_{B}(x, y) > n$.
   \end{enumerate}
 \end{Theorem}
 
@@ -66,14 +66,17 @@ Roughly, in superflat graphs every infinite set contains a sparse infinite subse
 
 \section{Indiscernible sequences}
 
-In this section we work in a superflat graph $G$. Stability implies that all the indiscernible sequences are totally indiscernible.
+Fix an uncoutable cardinal $\kappa$.
+In this section we work in a superflat graph $\SS$ that is $\kappa$-saturated and strongly $\kappa$-homogeneous.
+Fix a parameter set $A \subset S$ with $|A| < \kappa$.
+Additionally, let $I = (a_i)_{i \in \I}$ be a countable indiscernible sequence over $A$ with $a_i \in S$.
+Stability implies that $I$ is totally indiscernible (see Lemma \ref{totally}).
 
 \begin{Definition}
-  Let $V \subseteq V(G)$. Define $P_n(V)$, a subgraph of $G$, to be a union of all paths of length $\leq n$ between the vertices of $V$.
+  Let $V \subseteq S$. Define $P_n(V)$, a subgraph of $\SS$, to be a union of all paths of length $\leq n$ between the vertices of $V$.
 \end{Definition}
 
 \begin{Lemma} \label{lm_bump}
-  Let $I = (a_i)_{i \in \I}$ be a countable indiscernible sequence over $A$ with $a_i \in G$.
   Fix $n \in \N$.
   Then there exists a finite set $B$ such that
   \begin{align*}
@@ -93,7 +96,7 @@ This shows that $I$ has finite connectivity in $P_n(I)$.
 Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of $I$ in $P_n(I)$ is finite.
 
 \begin{Definition}
-  We call a set $H \subseteq V(G)$ uniformly definable from an indiscernible sequence $I$ if there is a formula $\phi(x, y)$ such that for every $J \subseteq I$ of size $|y|$ we have
+  We call a set $H \subseteq V(G)$ \defn{uniformly definable} from $I$ if there is a formula $\phi(x, y)$ such that for every $J \subseteq I$ of size $|y|$ we have
   \begin{align*}
     H = \{g \in G \mid \phi(g, J)\},
   \end{align*}
@@ -101,26 +104,14 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
 \end{Definition}
 
 \begin{Definition}
-  Given a graph $G$ and $V \subseteq V(G)$ define $H(G, V)$ to be the connectivity hull of $V$ in $G$.
-  Note that given a finite $V$, we have that $H(P_n(V), V)$ is $V$-definable.
+  Given a graph $\GG$ and $V \subseteq G$ define $H(\GG, V) \subseteq G$ to be the connectivity hull of $V$ in $\GG$.
+  Note that if $V$ is finite, we have that $H(P_n(V), V)$ is $V$-definable.
 \end{Definition}
 
 \begin{Lemma} \label{lm_uniform}
-  Fix a countable indiscernible sequence $I = (a_i)_{i \in \I}$ with $a_i \in G$.
-  Let $H$ be its connectivity hull inside of graph $P_n(I)$.
-  Then $H$ is uniformly definable from $I$ in $G$.
+  Let $H$ be the connectivity hull of $I$ inside of graph $P_n(I)$, that is $H = H(\P_n(I), I)$.
+  Then $H$ is uniformly definable from $I$ in $\SS$.
 \end{Lemma}
-
-
-% \begin{proof}
-%   Corollary \ref{cr_disjoint_paths} tells us that there finitely many paths between elements of $V$ such that $H(P_n(I), I)$ is inside those paths.
-%   Take $J \subseteq I$ be the endpoints of those paths.
-%   $H(P_n(J), J)$ is $J$-definable as noted above.
-%   Moreover we have $H(P_n(I), I) \subseteq H(P_n(J), J)$, both finite sets.
-%   In particular we have $H \subseteq \acl(J)$.
-%   $I-J$ is indiscernible over $A \cup J$.
-  
-% \end{proof}
 
 \begin{proof}%(of \ref{lm_uniform})
   Consider finite parts of the sequence $I_i = \{a_1, a_2, \ldots, a_i\}$.
@@ -147,8 +138,7 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
 \end{proof}
 
 \begin{Corollary} \label{inf_dis}
-  Let $I = (a_i)_{i \in \I}$ be a countable indiscernible sequence over $A$ with $a_i \in G$.
-  Then there is a countable $B$ such that $I$ is indiscernible over $A \cup B$ and
+  There is a countable $B$ such that $I$ is indiscernible over $A \cup B$ and
   \begin{align*}
     \forall i \neq j \ d_B(a_i, a_j) = \infty.
   \end{align*}
@@ -162,7 +152,7 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
   and $I$ is indiscernible over $A \cup B_n$ by Corollary \ref{cr_bump}. Let $B = \bigcup_{n \in \N} B_n$.
 \end{proof}
 
-That is every indiscernible sequence can be upgraded to have infinite distance over its parameter set.
+That is $I$ can be upgraded to have infinite distance over its parameter set.
 
 \section{Superflat graphs are dp-minimal}
 
