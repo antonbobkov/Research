@@ -3,5 +3,6 @@
  (lambda ()
    (LaTeX-add-labels
     "totally"
-    "def_dp")))
+    "def_dp"
+    "dp_min_simon")))
 

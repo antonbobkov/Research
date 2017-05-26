@@ -8,7 +8,7 @@ The study of VC-density goes one step further, looking at a structure of the asy
 In the most geometric examples, VC-density coincides with the natural notion of dimension.
 However, no geometric structure is required for the definition of VC-density, thus we can get some notion of geometric dimension for families of sets given without any geometric context.
 
-In 2013, Aschenbrenner et al. investigated and developed a notion of VC-density for NIP structures, an analog of geometric dimension in an abstract setting \cite{density}. Their applications included a bound for p-adic numbers, an object of great interest and a very active area of research in mathematics. My research concentrates on improving and expanding techniques of that paper to improve the known bounds as well as computing VC-density for other NIP structures of interest. I am able to obtain new bounds for the additive reduct of p-adic numbers, treese, and certain families of graphs. Recent research by Chernikov and Starchenko in 2015 \cite{regularity} suggests that having good bounds on VC-density in p-adic numbers opens a path for applications to incidence combinatorics (e.g. Szemeredi-Trotter theorem).
+In 2013, Aschenbrenner et al. investigated and developed a notion of VC-density for NIP structures, an analog of geometric dimension in an abstract setting \cite{density}. Their applications included a bound for $p$-adic numbers, an object of great interest and a very active area of research in mathematics. My research concentrates on improving and expanding techniques of that paper to improve the known bounds as well as computing VC-density for other NIP structures of interest. I am able to obtain new bounds for the additive reduct of $p$-adic numbers, trees, and certain families of graphs. Recent research by Chernikov and Starchenko in 2015 \cite{regularity} suggests that having good bounds on VC-density in $p$-adic numbers opens a path for applications to incidence combinatorics (e.g. Szemeredi-Trotter theorem).
 
 The concept of VC-dimension was first introduced in 1971 by Vapnik and Chervonenkis for set systems in a probabilistic setting \cite{vc71}.
 The theory grew rapidly and found wide use in geometric combinatorics, computational learning theory, and machine learning.
@@ -16,24 +16,24 @@ Around the same time Shelah was developing the notion of NIP ("not having the in
 a natural tameness property of (complete theories of) structures in model theory \cite{shelah_nip}.
 In 1992 Laskowski noticed the connection between the two: theories where all uniformly definable families of sets have finite VC-dimension are exactly NIP theories \cite{laskowski92}.
 It is a wide class of theories including algebraically closed fields, differentially closed fields, modules, free groups, o-minimal structures, and ordered abelian groups.
-A variety of valued fields fall into this category as well, including the p-adic numbers.
+A variety of valued fields fall into this category as well, including the $p$-adic numbers.
 
-P-adic numbers were first introduced by Hensel in 1897 in \cite{hensel}, and over the following century a powerful theory was developed around them with numerous applications across a variety of disciplines, primarily in number theory, but also in physics and computer science.
-In 1965 Ax, Kochen \cite{ak1} and Ershov \cite{er1} axiomatized the theory of p-adic numbers and proved a quantifier elimination result.
+The $p$-adic numbers were first introduced by Hensel in 1897 in \cite{hensel}, and over the following century a powerful theory was developed around them with numerous applications across a variety of disciplines, primarily in number theory, but also in physics and computer science.
+In 1965 Ax, Kochen \cite{ak1} and Ershov \cite{er1} axiomatized the theory of $p$-adic numbers and proved a quantifier elimination result.
 A key insight was to connect properties of the value group and residue field to the properties of the valued field itself.
 In 1984 Denef proved a cell decomposition result for more general valued fields \cite{den84}.
-This result was soon generalized to p-adic subanalytic and rigid analytic extensions, allowing for the later development of a more powerful technique of motivic integration.
-The conjunction of those model theoretic results allowed to solve a number of outstanding open problems in number theory (e.g., Artin's Conjecture on p-adic homogeneous forms).
+This result was soon generalized to $p$-adic subanalytic and rigid analytic extensions, allowing for the later development of a more powerful technique of motivic integration.
+The conjunction of those model theoretic results allowed to solve a number of outstanding open problems in number theory (e.g., Artin's Conjecture on $p$-adic homogeneous forms).
 
-In 1997, Karpinski and Macintyre computed VC-density bounds for o-minimal structures and asked about similar bounds for p-adic numbers \cite{karp97}.
+In 1997, Karpinski and Macintyre computed VC-density bounds for o-minimal structures and asked about similar bounds for $p$-adic numbers \cite{karp97}.
 VC-density is a concept closely related to VC-dimension.
 It comes up naturally in combinatorics with relation to packings, Hamming metric, entropic dimension and discrepancy.
  VC-density is also the decisive parameter in the Epsilon-Approximation Theorem, which is one of the crucial tools for applying VC theory in computational geometry.
 In a model theoretic setting it is computed for families of uniformly definable sets.
- In 2013, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko computed a bound for VC-density in p-adic numbers and a number of other NIP structures \cite{density}.
+ In 2013, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko computed a bound for VC-density in $p$-adic numbers and a number of other NIP structures \cite{density}.
 They observed connections to dp-rank and dp-minimality, notions first introduced by Shelah.
 In well behaved NIP structures families of uniformly definable sets tend to have VC-density bounded by a multiple of their dimension, a simple linear behavior.
-In a lot of cases including p-adic numbers this bound is not known to be optimal.
+In a lot of cases including $p$-adic numbers this bound is not known to be optimal.
 My research concentrates on improving those bounds and adapting those techniques to compute VC-density in other common NIP structures of interest to mathematicians.
 
 Some of the other well behaved NIP structures are Shelah-Spencer graphs and flat graphs.
@@ -44,21 +44,25 @@ Later work of Laskowski in 2006 \cite{laskowski} has provided a quantifier simpl
 Flat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}.
 %Shelah-Spencer graphs and flat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
 
-The first chapter of my dissertation concentrates on Shelah-Spencer graphs.
+The first chapter of my dissertation introduces some basics of model theory and defines VC-density and VC-dimension.
+
+The second chapter concentrates on trees.
+I answer an open question from \cite{density}, computing VC-density for trees viewed as a partial order.
+The main idea is to adapt a technique of Parigot \cite{parigot_trees} to partition trees into weakly interacting parts, with simple bounds of VC-density on each.
+
+In the third chapter of my dissertation I work with Shelah-Spencer graphs.
 I have shown that they have infinite dp-rank, so they are poorly behaved as NIP structures.
 I have also shown that one can obtain arbitrarily high VC-density when looking at uniformly definable families in a fixed dimension.
 However I'm able to bound VC-density of individual formulas in terms of edge density of the graphs they define.
 
-The second chapter of my dissertation concentrates on graphs and graph-like structures.
-I have answered an open question from \cite{density}, computing VC-density for trees viewed as a partial order.
-The main idea is to adapt a technique of Parigot \cite{parigot_trees} to partition trees into weakly interacting parts, with simple bounds of VC-density on each.
-Similar partitions come up in the Podewski-Ziegler analysis of flat graphs \cite {stable_graphs}.
-I am able to use that technique to show that flat graphs are dp-minimal, an important first step before establishing bounds on VC-density.
+The fourth chapter deals with $p$-adic numbers.
+I have shown that VC-density is linear for an additive reduct of $p$-adic numbers
+using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduct}.
+% I will explore other reducts described in that paper, to see if my techniques apply to those as well.
 
-
-The third chapter of my dissertation deals with p-adic numbers and valued fields.
-I have shown that VC-density is linear for an additive reduct of p-adic numbers (using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduct}).
-I will explore other reducts described in that paper, to see if my techniques apply to those as well.
+In chapter five I investigate flat graphs using the work of
+Podewski-Ziegler \cite {stable_graphs}.
+I am able to show that flat graphs are dp-minimal, an important first step before establishing bounds on VC-density.
 
 \section{Basic Model Theory}
 
@@ -67,24 +71,25 @@ It is meant to be used mostly as a reference on the notation as opposed to a com
 For a complete and more thorough introduction to the material, we refer the reader to Chapters 1 and 2 of \cite{tent}.
 We begin with a short summary of languages, formulas, and structures:
 
-\begin{Definition} \;
+\begin{Definition} \ 
   \begin{itemize}
   \item A \defn{language} is a collection of predicate, function, and constant symbols.
-  \item Fix language $\LL$ and a collection of variables.
+  \item Fix a language $\LL$ and a collection of variables.
     A \defn{term} is an expression constructed out of constants, variables, and functions.
-  \item An \defn{atomic formula} is an expression constructed out of equality symbol or a predicate applied to terms.
+  \item An \defn{atomic formula} is an expression constructed out of the equality symbol or a predicate applied to terms.
   \item A \defn{(first-order) formula} is an expression constructed out of atomic formulas using boolean connectives
     $\wedge, \vee, \neg$ and quantifiers $\exists, \forall$.
     We denote such a formula as $\phi(x)$ where $x$ is a tuple of \defn{free variables},
     that is the variables used in $\phi$ that are not bound by quantifiers.
-    Abusing notation, we denote $\LL$ to be the set of all such formulas (so $\phi \in \LL$).
+    Abusing notation, we denote $\LL$ to be the set of all such formulas (so we have $\phi \in \LL$).
   \item A formula without free variables is called a \defn{sentence}.
   \item A \defn{quantifier-free} formula is a formula that doesn't contain any quantifiers.
   \item A \defn{structure} $\MM$ consists of an infinite universe $M$ and functions, predicates, and constants matching those of $\LL$.
   \item For a variable tuple $x$, let $|x|$ be the arity of the tuple.
+    Similarly, for a tuple $a \in M^n$ let $|a|=n$.
   \item Suppose we have a formula $\phi(x)$, structure $\MM$, and $a \in M^{|x|}$.
     Then we say that $\MM$ \defn{models} $\phi(a)$, denoted as $\MM \models \phi(a)$,
-    if formula $\phi$ holds $\MM$ when we plug in $a$ into $x$.
+    if the formula $\phi$ holds $\MM$ when we plug in $a$ into $x$.
   \item Suppose we have a structure $\MM$ and $A \subseteq M$.
     Then $\LL(A)$ denotes an expansion of $\LL$ by constant symbols correspoding to elements in $A$.
     The structure $\MM$ then can be viewed as a $\LL(A)$-structure with the appropriate interpretations.
@@ -107,7 +112,7 @@ Stability is a deep subject, with a lot of theory developed around it.
 We won't work with it directly, but it is a property of some of the structures we study.
 We present a definitnon for completeness and refer the reader to Chapter 8 of \cite{tent} or to \cite{pillay} for a more complete introduction.
 
-\begin{Definition}
+\begin{Definition} \ 
   \begin{itemize}
   \item Suppose we have a structure $\MM$.
     The formula $\phi(x,y)$ is called \defn{unstable} if for all natural $n$
@@ -125,11 +130,11 @@ Definable sets are subsets of our structure given by formulas.
 More precisely:
 \begin{Definition}
   Suppose we have a structure $\MM$, a paramter set $A \subseteq M$ and an $A$-formula $\phi(x)$.
-  Then
+  Then 
   \begin{align*}
-    \phi(M^{|x|}) = \curly{m \in M^{|x|} \mid \MM \models \phi(m)}.
+    \phi(M^{|x|}) = \curly{m \in M^{|x|} \mid \MM \models \phi(m)}
   \end{align*}
-  is referred as an \defn{$A$-definable} subset of $M^{|x|}$ defined by $\phi$.
+  is referred to as an \defn{$A$-definable} subset of $M^{|x|}$ defined by $\phi$.
 \end{Definition}
 
 More generally, we will need a slightly more refined notion of a trace:
@@ -142,15 +147,20 @@ More generally, we will need a slightly more refined notion of a trace:
     \phi(a, B) &= \curly{b \in B \mid \MM \models \phi(a,b)}.
   \end{align*}
   These sets will be informally referred to as traces.
+  Similarly, let
+  \begin{align*}
+    \phi(A, B) = \curly{\phi(A, b) \mid b \in B} \in \PP(A)
+  \end{align*}
+  denote a collection of traces.
 \end{Definition}
 
-Types is one of the main tools of study in model theory:
+Types is one of the main tools of study in model theory.
 \begin{Definition}
   Suppose $\MM$ is a structure, $B \subseteq M$.
   Also fix a variable tuple $x$.
   \begin{itemize}
   \item \defn{A partial type over $B$} is a collection of formulas in variable $x$ with parameters from $B$.
-  \item A partial type $p(x)$ has a realization in $\MM$ if there exists $a \in M^{|x|}$ such that
+  \item A partial type $p(x)$ has a \defn{realization} in $\MM$ if there exists $a \in M^{|x|}$ such that
     $\MM \models \phi(a)$ for all $\phi(x) \in p(x)$.
   \item A partial type is \defn{consistent} if its every finite subset of formulas has a realization.
   \item Suppose $a \in M^{|x|}$ and $\Delta \subseteq \LL(B)$ a collection of formulas in $x$.
@@ -270,3 +280,16 @@ Here it is easiest for us to define dp-rank in terms of vc-density over indiscer
 \end{Definition}
 
 Refer to \cite{guingona} for the connection between to the classical definition of dp-rank and the definition given here.
+
+There is a useful characterization of dp-minimality in terms of indiscernible sequences that will be useful for what we do:
+\begin{Lemma} [see Lemma 1.4 in \cite{simon_dp_min}] \label{dp_min_simon}
+  Suppose $\MM$ is an $\aleph_1$-saturated structure.
+  Then the following are equivalent:
+  \begin{itemize}
+  \item $\MM$ is dp-minimal.
+  \item For any countable indiscernible sequence $(a_i)_{i \in \I}$ indexed by a dense linear order $\I$,
+    and any $c \in M$, there is $i_0$ in the completion of $I$
+    such that the two sequences $\paren{\tp(a_i/c) \mid i < i_0}$ and
+    $\paren{\tp(a_i/c) \mid i > i_0}$ are constant.
+  \end{itemize}
+\end{Lemma}
