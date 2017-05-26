@@ -1,0 +1,231 @@
+
+\documentclass [PhD] {uclathes}
+
+\usepackage{tikz}
+%\usetikzlibrary{shapes,snakes,calc,arrows}
+\usetikzlibrary{decorations.pathreplacing,shapes.geometric}
+\usetikzlibrary{calc,positioning}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{yfonts}
+\usepackage{cite}
+\usepackage{verbatim}
+
+
+% \input {mymacros}                         % personal LaTeX macros
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem Environments %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{innercthm}{Theorem}
+\newenvironment{cthm}[1]
+{\renewcommand\theinnercthm{#1}\innercthm}
+{\endinnercthm}
+\newtheorem{innerclem}{Lemma}
+\newenvironment{clem}[1]
+{\renewcommand\theinnerclem{#1}\innerclem}
+{\endinnerclem}
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem*{exs}{Examples}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{innercdefi}{Definition}
+\newenvironment{cdefi}[1]
+{\renewcommand\theinnercdefi{#1}\innercdefi}
+{\endinnercdefi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Commands %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\theenumii}{\roman{enumii}}
+%\renewcommand{\labelenumii}{(\theenumii)}
+\newcommand{\supp}{\text{supp}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\Inn}{\text{Inn}}
+\newcommand{\Irr}{\text{Irr}}
+\newcommand{\Ker}{\text{Ker}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+%\newcommand{\D}{\mathbb{D}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\M}{\mathcal{M}}
+
+\newcommand{\J}{\mathscr{J}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\P}{\mathscr{P}}
+
+\newcommand{\ul}[1]{\underline{#1}}
+
+\newcommand{\I}{\text{I}}
+\newcommand{\II}{\text{II}}
+\newcommand{\III}{\text{III}}
+\newcommand{\Tr}{\text{Tr}}
+
+\newcommand{\<}{\left\langle}
+\renewcommand{\>}{\right\rangle}
+\renewcommand{\Re}[1]{\text{Re}\ #1}
+\renewcommand{\Im}[1]{\text{Im}\ #1}
+\newcommand{\dom}[1]{\text{dom}\,#1}
+\renewcommand{\i}{\text{i}}
+\renewcommand{\mod}[1]{(\operatorname{mod}#1)}
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\im}{\operatorname{im}}
+%\renewcommand{\span}{\text{span}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%	TIkZ Settings	%
+%%%%%%%%%%%%%%%%%%%%%%
+
+\tikzset{Box/.style={very thick, rounded corners}}
+\tikzset{marked/.style={star, star point height = .75mm, star points =5, fill=black,minimum size=2mm, inner sep=0mm} }
+\tikzset{verythickline/.style = {line width=7pt}}
+\tikzset{thickline/.style = {line width=5pt}}
+\tikzset{medthick/.style = {line width=3pt}}
+\tikzset{med/.style = {line width=2pt}}
+\tikzset{count/.style = {fill=white,circle,draw,thin, inner sep=2pt}}
+\tikzset{rcount/.style = {fill=white,rectangle,draw,thin,inner sep=2pt, rounded corners}}
+\tikzset{cpr/.style = {draw,fill=white,rectangle,thin, rounded corners}}
+
+\newcommand{\dcup}{\tikz[scale=.5]{\draw (0,.5) -- ++(0,-.25) arc(180:360:.25) -- ++(0,.25); \draw (.1,.5) -- ++(0,-.25) arc(180:360:.15) -- ++(0,.25);}}
+\newcommand{\corner}{\tikz{\draw (0,0) arc(-90:0:.15 and .25); \draw (.5,0) arc(270:180:.15 and .25);}}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Usually things live in separate flies.
+%
+% \input {prelim}                           % preliminary page info
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+%                          PRELIMINARY PAGES                           %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title          {Non-Tracial Free Transport and Applications}
+\author         {Brent Andrew Nelson}
+\department     {Mathematics}
+% Note:  degreeyear should be optional, but as of  5-Feb-96
+% it seems required or you get a year of ``2''.   -johnh
+\degreeyear     {2015}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chair          {Dimitri Y. Shlyakhtenko}
+\member         {Sorin Popa}
+\member         {Edward Effros}
+\member         {Eric D'Hoker}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dedication     {\textsl{For my wife and parents \ldots \\
+                to which the following offers\\
+                but a pallid testament\\
+                of their unwavering support.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acknowledgments	{I would first like to thank my advisor Dimitri Shlyakhtenko. Without his guidance and support this work would not have been possible. He has furthered my career immensely and probably even more than I yet realize. He will always be a mentor and inspiration to me.
+
+Thank you to Benjamin Hayes and Paul Skoufranis. They introduced me to the field of operator algebras through countless student seminars, answered all the questions I could come up with (regardless of triviality), and provided me with invaluable advice on research, conferences, publishing, and more. The journey was all the easier for the trail they blazed.
+
+I am further indebted to a great many people for the various aid they provided me throughout my time as a graduate student. Thank you to Dan-Virgil Voiculescu, Yoann Dabrowski, Stephen Avsec, and Makoto Yamashita for their insightful comments on free transport. Thank you to Sorin Popa, Dietmar Bisch, Vaughan Jones, Michael Hartglass, Arnaud Brothier, and Dave Penneys for their helpful conversations on subfactors and planar algebras. Thank you to Ian Charlesworth, who was always willing to offer comments on practice talks and research ideas. And thanks to Stephen Curran for providing me with notes from which I was able to learn TikZ.
+
+I would like to thank my parents, Tom and Cheryl. They made me who I am today, and even though they can no longer help me with my math homework their guidance and encouragement means so much.
+
+And of course I would like to thank my wife Cheryl, whose companionship throughout my graduate career has meant everything. She is a constant source of sunshine in my life, getting me through the tougher times and magnifying the good ones. Though we will not always know what lies ahead, with her by my side I know that we will be alright.
+
+The content from Chapters 2 and 3 is from \cite{Nel15}. The published version can be found at Springer via: 
+	\begin{center}
+		\url{http://dx.doi.org/10.1007/s00220-014-2148-0} 
+	\end{center}
+The content from Chapter 4 is from \cite{Nel15b}. The published version can be found at Elsevier via: 	
+	\begin{center}
+		\url{http://dx.doi.org/10.1016/j.jfa.2014.12.018}
+	\end{center}
+I would also like to acknowledge that parts of this disseration were supported financially by NSF grants DMS-1161411 and DMS-0838680, and the UCLA Dissertation Year Fellowship.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vitaitem   {2010}
+                {B.S. (Mathematics, Physics Minor), University of Illinois at Urbana-Champaign}
+\vitaitem	 {2010-2013}
+			{NSF Research and Training Grant Fellowship, Department of Mathematics, UCLA}
+\vitaitem   {2011-2012}
+                {Teaching Assistant, Department of Mathematics, UCLA}
+\vitaitem   {2014}
+                {Graduate Student Instructor, Department of Mathematics, UCLA}
+\vitaitem   {2014-2015}
+                {Dissertation Year Fellowship.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\publication    {I. Charlesworth, B. Nelson, and P. Skoufranis, \textit{On two-faced families of non-commutative random variables}, Canad. J. Math., to appear (2014).}
+
+\publication	{I. Charlesworth, B. Nelson, and P. Skoufranis, \textit{Combinatorics of bi-freeness with amalgamation}, Comm. Math. Phys., to appear (2014).}
+
+\publication	{B. Nelson, \text{Free monotone transport without a trace}, Comm. Math. Phys., \textbf{334}(3):1245-1298 (2015).}
+
+\publication	{B. Nelson, \textit{Free transport for finite depth subfactor planar algebras}, J. Funct. Anal. \textbf{268}(9):2586-2620 (2015).}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract       {By modifying the tracial techniques of Guionnet and Shlyakhtenko in \cite{GS14} we produce free monotone transport in the context of a finitely generated free Araki-Woods factor, which can be considered a non-tracial analogue of the free group factors. We solve a free analogue of the Monge-Amp\`{e}re equation to produce a criterion for when an $N$-tuple of non-commutative random variables generate a free Araki-Woods factor. The criterion, that the joint law satisfies a certain non-commutative differential equation involving a canonical potential, is precisely the tracial criterion established in \cite{GS14} modulo modifications to the differential operators and potential that are completely natural in light of the structure of the free Araki-Woods factor. We provide two applications of this result. The first is that for small $|q|$, the $q$-deformed free Araki-Woods algebras are isomorphic to the free Araki-Woods factor with the same number of generators and orthogonal representation of $\R$. This is obtained using similar estimates to some found in \cite{Dab14}, which were used to prove the tracial analogue in \cite{GS14} that the $q$-deformed free group factors are isomorphic to the free group factor for small $|q|$. The second application is to finite depth subfactor planar algebras, where it is shown that the transport machinery can be expressed diagrammatically via planar tangles. From this one obtains a criterion for when towers of von Neumann algebras are isomorphic.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin {document}
+\makeintropages
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ordinarily each chapter (at least) is in a separate file.
+%
+\input{introduction}
+\input{chapter2}                         % Non-tracial transport
+\input{chapter3}                         % Free Araki-Woods factors
+\input{chapter4}                         % Finite depth subfactor planar algebras
+
+
+\bibliography{references}    % bibliography references
+\bibliographystyle{uclathes}
+
+\end {document}
+
