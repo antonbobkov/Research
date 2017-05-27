@@ -1,7 +1,10 @@
    
 \documentclass [PhD] {uclathes}
  
-\input {mymacros}                         % personal LaTeX macros
+\input {../../mymacros}                         % personal LaTeX macros
+\usepackage{../../AMC_style}	
+\usepackage{../../Research}
+\usepackage{../../Thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -88,18 +91,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
             \abstract       {
-  Aschenbrenner et. al. studied vc-density in model-theoretic context.
-  We investigate it further by computing in some common structures: trees, Shelah-Spencer graphs, and an additive reduct of $p$-adic numbers.
+  Aschenbrenner et. al. have studied vc-density in the model-theoretic context.
+  We investigate it further by computing it in some common structures: trees, Shelah-Spencer graphs, and an additive reduct of $p$-adic numbers.
   We show that in the theory of infinite trees the vc-function is optimal.
   This generalizes a result of Simon showing that the trees are dp-minimal. 
   In Shelah-Spencer graphs we provide an upper bound on a formula-by-formula basis and show that there isn't a uniform lower bound,
   forcing the vc-function to be infinite.
   In addition we show that Shelah-Spencer graphs do not have a finite dp-rank,
-  in particular they are not dp-minimal.
+  so they are not dp-minimal.
   There is a linear bound for the vc-density function in the field of $p$-adic numbers,
   but this bound is not known to be optimal.
   We investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
   use a cell decomposition result of Leenknegt to compute an optimal bound for that structure.
+  Following results of Podewski and Ziegler we show that flat graphs are dp-minimal.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,12 +113,12 @@
 \makeintropages
 
 \include{general_intro}
-\include{Trees_vc_density}
-\include{shelah_spencer}
-\include{QP_reduct} 
+\include{Trees_vc_density_}
+\include{shelah_spencer_}
+\include{QP_reduct_} 
 \include{flat}
 
-\bibliography {thesis_ref}    % bibliography references
+\bibliography {../../thesis_ref}    % bibliography references
 \bibliographystyle {uclathes_my}
 
 \end {document}  
