@@ -1,16 +1,11 @@
 \documentclass{amsart}
 
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{../AMC_style}	
 \usepackage{../Research}
 \usepackage{../Thm}
 
-\usepackage{tikz}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc}
-
-
-\usepackage{enumitem}
-\usepackage{soul}
+\input{../mymacros}
 
 \usepackage{mathrsfs}
 \usepackage{pgfpages}
@@ -20,48 +15,46 @@
 %\usepackage[margin=.75in]{geometry}
 %\pgfpagesuselayout{2 on 1}
 
-\renewcommand{\AA}{\mathscr A}
-\newcommand{\BB}{\mathscr B}
-\newcommand{\DD}{\mathscr D}
-\newcommand{\II}{\mathscr I}
-\newcommand{\MM}{\mathscr M}
+% \renewcommand{\AA}{\mathscr A}
+% \newcommand{\BB}{\mathscr B}
+% \newcommand{\DD}{\mathscr D}
+% \newcommand{\II}{\mathscr I}
+% \newcommand{\MM}{\mathscr M}
 
-\newcommand{\A}{\mathcal A}
-\newcommand{\B}{\mathcal B} 
-\renewcommand{\C}{\mathcal C}
-\newcommand{\D}{\mathcal D}
-\newcommand{\F}{\mathcal F}
-\newcommand{\G}{\mathcal G}
-\renewcommand{\H}{\mathcal H}
-\renewcommand{\LL}{\mathcal L}
-\newcommand{\LLA}{\mathcal L_{aff}}
-\newcommand{\LLM}{\mathcal L_{Mac}}
-\newcommand{\M}{\mathcal M}
+% \newcommand{\A}{\mathcal A}
+% \newcommand{\B}{\mathcal B} 
+% \renewcommand{\C}{\mathcal C}
+% \newcommand{\D}{\mathcal D}
+% \newcommand{\F}{\mathcal F}
+% \newcommand{\G}{\mathcal G}
+% \renewcommand{\H}{\mathcal H}
+% \renewcommand{\LL}{\mathcal L}
+% \newcommand{\LLA}{\mathcal L_{aff}}
+% \newcommand{\LLM}{\mathcal L_{Mac}}
+% \newcommand{\M}{\mathcal M}
 
-\newcommand{\U}{\mathcal U}	
-
-
-\newcommand{\curly}[1]{\left\{#1\right\}}
-\newcommand{\paren}[1]{\left(#1\right)}
-\newcommand{\abs}[1]{\left|#1\right|}
-
-\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
-
-\DeclareMathOperator{\Sg}{Sg}
-\DeclareMathOperator{\It}{Tp}
-\DeclareMathOperator{\Sub}{Sub}
-\DeclareMathOperator{\Ct}{Ct}
-\DeclareMathOperator{\vecspan}{span}
-\DeclareMathOperator{\val}{val}
-\DeclareMathOperator{\vval}{val}
-\DeclareMathOperator{\tval}{T-val}
-\DeclareMathOperator{\tfl}{T-fl}
-\DeclareMathOperator{\inti}{I}
-
-\newcommand{\defn}{\ul}
-\newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
+% \newcommand{\U}{\mathcal U}	
 
 
+% \newcommand{\curly}[1]{\left\{#1\right\}}
+% \newcommand{\paren}[1]{\left(#1\right)}
+% \newcommand{\abs}[1]{\left|#1\right|}
+
+% \providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+
+% \DeclareMathOperator{\Sg}{Sg}
+% \DeclareMathOperator{\It}{Tp}
+% \DeclareMathOperator{\Sub}{Sub}
+% \DeclareMathOperator{\Ct}{Ct}
+% \DeclareMathOperator{\vecspan}{span}
+% \DeclareMathOperator{\val}{val}
+% \DeclareMathOperator{\vval}{val}
+% \DeclareMathOperator{\tval}{T-val}
+% \DeclareMathOperator{\tfl}{T-fl}
+% \DeclareMathOperator{\inti}{I}
+
+% \newcommand{\defn}{\ul}
+% \newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
 
 \title{vc-density in an additive reduct of the $P$-adic numbers}
 \author{Anton Bobkov}
@@ -75,7 +68,6 @@
   In this paper we investigate a certain $P$-minimal additive reduct of the field of $p$-adic numbers and
   use a cell decomposition result of Leenknegt to compute an optimal bound for that structure.
 \end{abstract}
-
 
 \maketitle
 
@@ -92,15 +84,17 @@ satisfied, for example, if $T$ is o-minimal.
 For $T = \Th(\Q_p)$, the paper \cite{density} computes an upper bound for this function to be $2n-1$, and it is not known whether this is optimal.
 This same bound holds in any reduct of the field of $p$-adic numbers, but one may expect that the simplified structure of suitable reducts would allow a better bound.
 In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain $P$-minimal additive reduct of the field of $p$-adic numbers.
-Using this result, in this paper we improve the bound for the vc-function, showing that in Leenknegt's structure $\vc(n) = n$.
+Using this result, in this paper we improve the bound for the vc-function, showing that in Leenknegt's structure $\vc(n) = n$ for each $n$.
+By Corollary 5.13 in \cite{density} this also gives a proof that this structure is dp-minimal which is more direct than using that the field of $p$-adics is dp-minimal.
 
-Section 1 defines vc-density and states some basic lemmas about it.
+Section 1 defines vc-density and states some basic lemmas about this notion.
 A more in depth exposition of vc-density can be found in \cite{density}.
-Section 2 defines and states some basic facts about the theory of $p$-adic numbers.
+In Section 2 we recall some basic facts about the theory of $p$-adic numbers.
 Here we also introduce the reduct which we will be working with.
 Section 3 sets up basic definitions and lemmas that will be needed for the proof.
 We define trees and intervals and show how they help with vc-density calculations.
 Section 4 concludes the proof.
+In concluding section we discuss some possible future work.
 
 Throughout the paper, variables and tuples of elements will be simply denoted as $x, y, a, b, \ldots$.
 We will occasionally write $\vec a$ instead of $a$ for a tuple in $\Q_p^n$ to emphasize it as an element of the $\Q_p$-vector space $\Q_p^n$.
@@ -113,9 +107,6 @@ The set of natural numbers is denoted by $\N = \curly{0, 1, \ldots}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{$P$-adic numbers}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
 The field $\Q_p$ of $p$-adic numbers is often studied in the language of Macintyre 
   \begin{align*}
 	\LLM = \curly{0, 1, +, -, \cdot, |, \{P_n\}_{n \in \N}}
@@ -124,16 +115,14 @@ which is a language $\curly{0, 1, +, -, \cdot}$ of rings together with unary pre
 \begin{align*}
   P_n x \leftrightarrow \exists y \; y^n = x
 \end{align*}
-
 and a divisibility relation where $a|b$ holds in $\Q_p$ when $\vval a \leq \vval b$.
 
 Note that $P_n\backslash \curly{0}$ is a multiplicative subgroup of $\Q_p$ with finitely many cosets.
-
 \begin{Theorem} [Macintyre '76, \cite{mac76}]
   The $\LLM$-structure $\Q_p$ has quantifier elimination.
 \end{Theorem}
 
-There is also a cell decomposition result:
+There is also a cell decomposition result for definable sets in this structure:
 \begin{Definition}
   Define \defn{$k$-cells} recursively as follows.
   A \defn{$0$-cell} is the singleton $\Q_p^0$.
@@ -153,8 +142,8 @@ There is also a cell decomposition result:
   Any definable subset of $\Q_p^k$ defined by an $\LLM$-formula decomposes into a finite disjoint union of $k$-cells.
 \end{Theorem}  
 
-In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that $\Q_p$ as $\LLM$-structure satisfies $\vc(n) \leq 2n - 1$,
-however it is not known whether this bound is optimal.
+In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that $\Q_p$ as $\LLM$-structure satisfies $\vc(n) \leq 2n - 1$
+for each $n \geq 1$, however it is not known whether this bound is optimal.
 
 In \cite{reduct}, Leenknegt analyzes the reduct of $\Q_p$ to the language
 \begin{align*}
@@ -168,7 +157,7 @@ and $Q_{m,n}$ is a unary predicate interpreted as
 \end{align*}
 Note that $Q_{m,n} \backslash \curly{0}$ is a subgroup of the multiplicative group of $\Q_p$ with finitely many cosets.
 One can check that these extra relation symbols are definable in the $\LLM$-structure $\Q_p$.
-The paper \cite{reduct} provides a cell decomposition result with the following cells:
+The paper \cite{reduct} provides a cell decomposition result based on the following notion of cell:
 
 \begin{Definition} \label{cell}
   A \defn{$0$-cell} is the singleton $\Q_p^0$.
@@ -202,11 +191,6 @@ The main result of this paper is the computation of the $\vc$-function for this 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{Key Lemmas and Definitions}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-
 To show that $\vc(n) = n$ it suffices to bound $\vc^*(\phi) \leq |x|$ for every $\LL_{aff}$-formula $\phi(x; y)$.
 Fix such a formula $\phi(x; y)$.
 Instead of working with this formula directly, we first simplify it using quantifier elimination.
@@ -602,9 +586,6 @@ The following critical lemma relates tree notions to $\Phi$-types.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{Main Proof}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
 An alternative way to write $p_i(c)$ is as a scalar product $\vec p_i \cdot \vec c$,
 where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is homogeneous linear).
 
@@ -837,44 +818,37 @@ While there are techniques for showing that a structure has a given VC property,
 less is known about showing that a structure doesn't have a given VC property.
 Perhaps the simple structure of the $\LLA$-reduct can help understand this property better.
 
+\bibliography {../thesis_ref}    % bibliography references
+\bibliographystyle {plain}
 
-\begin{thebibliography}{9}
+% \begin{thebibliography}{9}
   
-\bibitem{density}
-  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
-  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
-\bibitem{reduct}
-  E. Leenknegt. \textit{Reducts of $p$-adically closed fields}, Archive for Mathematical Logic, 53(3):285-306, 2014
-\bibitem{ash7}
-  P. Assouad, \textit{Densit´e et dimension}, Ann. Inst. Fourier (Grenoble) 33 (1983), no. 3, 233-282.
-\bibitem{ash8}
-  P. Assouad, \textit{Observations sur les classes de Vapnik-Cervonenkis et la dimension combinatoire de Blei},
-  in: Seminaire d’Analyse Harmonique, 1983-1984, pp. 92-112, Publications Math´ematiques
-  d’Orsay, vol. 85-2, Universit´e de Paris-Sud, D´epartement de Math´ematiques, Orsay, 1985.
-\bibitem{sauer}
-  N. Sauer, \textit{On the density of families of sets}, J. Combinatorial Theory Ser. A 13 (1972), 145-147.
-\bibitem{shelah}
-  S. Shelah, \textit{A combinatorial problem; stability and order for models and theories in infinitary languages},
-  Pacific J. Math. 41 (1972), 247-261.
-\bibitem{mac76}
-  A Macintyre,
-  \textit{On definable sets of p-adic numbers},
-  J. Symbol. Logic, 41 (1976), pp. 605-610.
-\bibitem{den84}
-  Jan Denef,
-  \textit{The rationality of the Poincar´e series associated to the p-adic points on a variety},
-  Invent. Math., 77(1), 1984, 1-23.
-\end{thebibliography}
-
-
-
-
-
-
-
-
-
+% \bibitem{density}
+%   M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+%   \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
+%   Trans. Amer. Math. Soc. 368 (2016), 5889-5949
+% \bibitem{reduct}
+%   E. Leenknegt. \textit{Reducts of $p$-adically closed fields}, Archive for Mathematical Logic, 53(3):285-306, 2014
+% \bibitem{ash7}
+%   P. Assouad, \textit{Densit´e et dimension}, Ann. Inst. Fourier (Grenoble) 33 (1983), no. 3, 233-282.
+% \bibitem{ash8}
+%   P. Assouad, \textit{Observations sur les classes de Vapnik-Cervonenkis et la dimension combinatoire de Blei},
+%   in: Seminaire d’Analyse Harmonique, 1983-1984, pp. 92-112, Publications Math´ematiques
+%   d’Orsay, vol. 85-2, Universit´e de Paris-Sud, D´epartement de Math´ematiques, Orsay, 1985.
+% \bibitem{sauer}
+%   N. Sauer, \textit{On the density of families of sets}, J. Combinatorial Theory Ser. A 13 (1972), 145-147.
+% \bibitem{shelah}
+%   S. Shelah, \textit{A combinatorial problem; stability and order for models and theories in infinitary languages},
+%   Pacific J. Math. 41 (1972), 247-261.
+% \bibitem{mac76}
+%   A Macintyre,
+%   \textit{On definable sets of p-adic numbers},
+%   J. Symbol. Logic, 41 (1976), pp. 605-610.
+% \bibitem{den84}
+%   Jan Denef,
+%   \textit{The rationality of the Poincar´e series associated to the p-adic points on a variety},
+%   Invent. Math., 77(1), 1984, 1-23.
+% \end{thebibliography}
 
 \end{document}
 

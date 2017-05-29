@@ -1,8 +1,11 @@
 \documentclass{amsart}
 
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{../AMC_style}	
 \usepackage{../Research}
 \usepackage{../Thm}
+
+\input{../mymacros}
 
 \usepackage{tikz}
 
@@ -14,53 +17,49 @@
 %% \usepackage[margin=.75in]{geometry}
 %% \pgfpagesuselayout{2 on 1}
 
-\DeclareMathOperator{\TT}{\boldface T}
-\DeclareMathOperator{\AT}{\boldface A}
-\DeclareMathOperator{\BT}{\boldface B}
-\DeclareMathOperator{\PR}{P}
-\DeclareMathOperator{\cl}{cl}
-\newcommand{\CS}{\mathcal S}
+% \DeclareMathOperator{\PR}{P}
+% \DeclareMathOperator{\cl}{cl}
+% \newcommand{\CS}{\mathcal S}
 
-\DeclareMathOperator{\cx}{Complexity}
+% \DeclareMathOperator{\cx}{Complexity}
 
-\renewcommand{\AA}{\mathscr A}
-\newcommand{\BB}{\mathscr B}
-\newcommand{\DD}{\mathscr D}
-\newcommand{\II}{\mathscr I}
-\newcommand{\MM}{\mathscr M}
+% \renewcommand{\AA}{\mathscr A}
+% \newcommand{\BB}{\mathscr B}
+% \newcommand{\DD}{\mathscr D}
+% \newcommand{\II}{\mathscr I}
+% \newcommand{\MM}{\mathscr M}
 
-\renewcommand{\C}{\mathcal C}
-\newcommand{\D}{\mathcal D}
-\newcommand{\F}{\mathcal F}
-\newcommand{\G}{\mathcal G}
-\renewcommand{\H}{\mathcal H}
-\renewcommand{\LL}{\mathcal L}
-\newcommand{\LLA}{\mathcal L_{aff}}
-\newcommand{\LLM}{\mathcal L_{Mac}}
-\newcommand{\LLU}{\LL^*}
-\newcommand{\M}{\mathcal M}
+% \renewcommand{\C}{\mathcal C}
+% \newcommand{\D}{\mathcal D}
+% \newcommand{\F}{\mathcal F}
+% \newcommand{\G}{\mathcal G}
+% \renewcommand{\H}{\mathcal H}
+% \renewcommand{\LL}{\mathcal L}
+% \newcommand{\LLA}{\mathcal L_{aff}}
+% \newcommand{\LLM}{\mathcal L_{Mac}}
+% \newcommand{\M}{\mathcal M}
 
-\newcommand{\U}{\mathcal U}	
+% \newcommand{\U}{\mathcal U}	
 
 
-\newcommand{\curly}[1]{\left\{#1\right\}}
-\newcommand{\paren}[1]{\left(#1\right)}
-\newcommand{\abs}[1]{\left|#1\right|}
+% \newcommand{\curly}[1]{\left\{#1\right\}}
+% \newcommand{\paren}[1]{\left(#1\right)}
+% \newcommand{\abs}[1]{\left|#1\right|}
 
-\providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+% \providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
 
-\DeclareMathOperator{\Sg}{Sg}
-\DeclareMathOperator{\It}{Tp}
-\DeclareMathOperator{\Sub}{Sub}
-\DeclareMathOperator{\Ct}{Ct}
-\DeclareMathOperator{\vecspan}{span}
-\DeclareMathOperator{\val}{val}
-\DeclareMathOperator{\vval}{val}
-\DeclareMathOperator{\tval}{T-val}
-\DeclareMathOperator{\inti}{I}
+% \DeclareMathOperator{\Sg}{Sg}
+% \DeclareMathOperator{\It}{Tp}
+% \DeclareMathOperator{\Sub}{Sub}
+% \DeclareMathOperator{\Ct}{Ct}
+% \DeclareMathOperator{\vecspan}{span}
+% \DeclareMathOperator{\val}{val}
+% \DeclareMathOperator{\vval}{val}
+% \DeclareMathOperator{\tval}{T-val}
+% \DeclareMathOperator{\inti}{I}
 
-\newcommand{\defn}{\underline}
-\newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
+% \newcommand{\defn}{\underline}
+% \newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
 
 \begin{document}
 
@@ -71,22 +70,20 @@
 
 \begin{abstract}
   We show that in the theory of infinite trees the vc-function is optimal.
-  This generalizes a result of Simon showing that the trees are dp-minimal. 
+  This generalizes a result of Simon showing that trees are dp-minimal. 
 \end{abstract}
 
 \maketitle
 
 VC-density was studied in \cite{density} by Aschenbrenner, Dolich, Haskell, MacPherson, and Starchenko as a natural notion of dimension for NIP theories.
 In a complete NIP theory $T$ we can define the vc-function
-
 \begin{align*}
   \vc^T = \vc : \N \arr \R \cup \curly{\infty}
 \end{align*}
-
 where $\vc(n)$ measures the worst-case complexity of families of definable sets in an $n$-fold Cartesian power of the underlying set of a model of $T$
 (see \ref{vc_fn_def} below for a precise definition of $\vc^T$).
 The simplest possible behavior is $\vc(n) = n$ for all $n$. Theories with the property that $\vc(1) = 1$ are known to be dp-minimal, i.e., having the smallest possible dp-rank. It is not known whether there can be a dp-minimal theory which doesn't satisfy $\vc(n)=n$
-(see \cite{density}, diagram on pg. 41).
+(see \cite{density}, diagram in section 5.3).
 
 In this paper we work with trees viewed as posets.
 % More precisely, our structure is branches of an infinite tree in a langugage of $\leq$ with possibly finitely many colors.
@@ -98,23 +95,24 @@ The paper \cite{density} poses the following problem:
   Determine the VC density function of each (infinite) tree.
 \end{Problem}
 
-Here we solve this problem by showing that any model of the theory of trees has $\vc(n) = n$.
+Here we solve this problem by showing that any infinite model of the theory of trees has $\vc(n) = n$.
 
 Section 1 of the paper consists of a basic introduction to the concepts of VC-dimension and vc-density.
 In Section 2 we introduce proper subdivisions -- the main tool that we use to analyze trees.
 We also prove some basic properties of proper subdivisions.
 Section 3 introduces the key constructions of proper subdivisions which will be used in the proof.
-Section 4 presents the proof $\vc(n) = n$ via subdivisions.
+Section 4 presents the proof of $\vc(n) = n$ via subdivisions.
 
-We use notation $a \in T^n$ for tuples of size $n$. For a variable $x$ or a tuple $a$ we denote their arity by $|x|$ and $|a|$ respectively.
+%We use notation $a \in T^n$ for tuples of size $n$.
+For a tuple of variables $x$ or a tuple $a$ of elements of a set we denote their arity by $|x|$ and $|a|$ respectively.
 
-The language of trees consists of a single binary predicate $\leq$. The theory of trees states that $\leq$ defines a partial order and that for every element $a$ the set $\{x \mid x \leq a\}$ is linearly ordered by $\leq$. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
+The language of trees consists of a single binary predicate symbol $\leq$. The theory of trees states that $\leq$ defines a partial order and that for every element $a$ the set $\{x \mid x \leq a\}$ is linearly ordered by $\leq$. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
 
 \begin{Definition}
-  Work in a tree $\TT = (T, \leq)$.
-  For $x \in T$ let $T^{\leq x} = \{t \in T \mid t \leq x\}$ denote all the elements below $x$.
+  Work in a tree $\TTB = (T, \leq)$.
+  For $x \in T$ let $T^{\leq x} = \{t \in T \mid t \leq x\}$ denote the set of all elements of $T$ below $x$.
   Two elements $a,b$ are said to be in same \defn{connected component} if $T^{\leq a} \cap T^{\leq b}$ is non-empty.
-  The \defn{meet} of two tree elements $a,b$ is the greatest element of $T^{\leq a} \cap T^{\leq b}$ (if one exists) and is denoted by $a \wedge b$.
+  The \defn{meet} of two elements $a,b$ of $T$ is the greatest element of $T^{\leq a} \cap T^{\leq b}$ (if one exists) and is denoted by $a \wedge b$.
 \end{Definition}
 
 The theory of \defn{meet trees} requires that any two elements in the same connected component have a meet. \defn{Colored trees} are trees with a finite number of colors added via unary predicates.
@@ -139,15 +137,18 @@ Given a formula we define its complexity as the depth of quantifiers used to bui
     &\cx(\neg \phi) = \cx(\phi)
   \end{align*}
 \end{Definition}
-A simple inductive argument verifies that there are (up to logical equivalence) only finitely many formulas when the complexity and the number of free variables are fixed.
+A simple inductive argument verifies that there are (up to logical equivalence) only finitely many formulas when the complexity
+and free variables are fixed.
 We will use the following notation for types:
 \begin{Definition} Let $\BT$ be a structure, $A \subseteq B$ be a finite parameter set, $a,b$ be tuples in $\BT$, and $m, n$ be natural numbers.
   \begin{itemize}
   \item $\tp^n_{\BT}(a/A)$ will stand for the set of all $A$-formulas of complexity $\leq n$ that are true of $a$ in $\BT$.
     If $A = \emptyset$ we may also write this as $\tp^n_{\BT}(a)$.
     The subscript $\BT$ will be omitted as well if it is clear from context.
-    Note that if $A$ is finite, there are finitely many such formulas (up to equivalence).
-    The conjunction of those formulas still has complexity $\leq n$ and so we can just associate a single formula to every type $\tp^n_{\BT}(a/A)$.
+    Note that if $A$ is finite, then there are finitely many such formulas (up to equivalence and renaming free variables).
+    The conjunction of finitely many formulas of complexity $\leq n$
+    still has complexity $\leq n$ and so we can just associate a single formula complexity $\leq n$ to every type $\tp^n_{\BT}(a/A)$
+    defining the set of realizations of $\tp^n_{\BT}(a/A)$ in $\BT$.
   \item $\BT \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $\leq n$ over $A$ in $\BT$, i.e., $\tp^n_{\BT}(a/A) = \tp^n_{\BT}(b/A)$.
   \item $S^n_{\BT, m}(A)$ will stand for the set of all $m$-types of complexity $\leq n$ over $A$:
     \begin{align*}
@@ -158,47 +159,47 @@ We will use the following notation for types:
 
 \begin{Definition}
   \begin{itemize}
-  \item Let $\AT$, $\BT$, $\TT$ be structures in some (possibly different) finite relational languages. If the underlying sets $A, B$ of $\AT, \BT$ partition the underlying set $T$ of $\TT$ (i.e. $T = A \sqcup B$), then we say that $(\AT, \BT)$ is a \defn{subdivision} of $\TT$.
-  \item A subdivision $(\AT, \BT)$ of $\TT$ is called \defn{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
+  \item Let $\AT$, $\BT$, $\TTB$ be structures in some (possibly different) finite relational languages. If the underlying sets $A, B$ of $\AT, \BT$ partition the underlying set $T$ of $\TTB$ (i.e. $T = A \sqcup B$), then we say that $(\AT, \BT)$ is a \defn{subdivision} of $\TTB$.
+  \item A subdivision $(\AT, \BT)$ of $\TTB$ is called \defn{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
     \begin{align*}
       \AT \models a_1 &\equiv_n a_2 \\
       \BT \models b_1 &\equiv_n b_2
     \end{align*}
     we have
     \begin{align*}
-      \TT \models a_1b_1 \equiv_n a_2b_2.
+      \TTB \models a_1b_1 \equiv_n a_2b_2.
     \end{align*}
-  \item A subdivision $(\AT, \BT)$ of $\TT$ is called \defn{proper} if it is $n$-proper for all $n \in \N$.
+  \item A subdivision $(\AT, \BT)$ of $\TTB$ is called \defn{proper} if it is $n$-proper for all $n \in \N$.
   \end{itemize}
 \end{Definition}
 
 \begin{Lemma} \label{lm_subdivision}
-  Consider a subdivision $(\AT, \BT)$ of $\TT$. If $(\AT, \BT)$ is $0$-proper then it is proper.
+  Consider a subdivision $(\AT, \BT)$ of $\TTB$. If $(\AT, \BT)$ is $0$-proper then it is proper.
 \end{Lemma}
 
 \begin{proof}
-  We prove that the subdivision is $n$-proper for all $n$ by induction.
+  We prove that the subdivision $(\AT, \BT)$ is $n$-proper for all $n$ by induction.
   The case $n = 0$ is given by the assumption.
-  Suppose we have $\TT \models \exists x \, \phi^n(x, a_1, b_1)$ where $\phi^n$ is some formula of complexity $n$. Let $a \in T$ witness the existential claim, i.e., $\TT \models \phi^n(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^n_{\AT} (a, a_1)$. Then we have 
+  Suppose we have $\TTB \models \exists x \, \phi^n(x, a_1, b_1)$ where $\phi^n$ is some formula of complexity $n$. Let $a \in T$ witness the existential claim, i.e., $\TTB \models \phi^n(a, a_1, b_1)$. We can have $a \in A$ or $a \in B$. Without loss of generality assume $a \in A$. Let $\pp = \tp^n_{\AT} (a, a_1)$. Then we have 
   \begin{align*}
     \AT \models \exists x \, \tp^n_{\AT}(x, a_1) = \pp
   \end{align*}
   (with $\tp^n_{\AT}(x, a_1) = \pp$ a shorthand for $\phi_{\pp}(x)$ where $\phi_{\pp}$ is a formula that determines the type $\pp$).
-  The formula $\tp^n_{\AT}(x, a_1) = \pp$ is of complexity $\leq n$ so $\exists x \, \tp^n_{\AT}(x, a_1) = \pp$ is of complexity $\leq k+1$. By the inductive hypothesis we have
+  The formula $\tp^n_{\AT}(x, a_1) = \pp$ is of complexity $\leq n$ so $\exists x \, \tp^n_{\AT}(x, a_1) = \pp$ is of complexity $\leq n+1$. By the inductive hypothesis we have
   \begin{align*}
     \AT \models \exists x \, \tp^n_{\AT}(x, a_2) = \pp.
   \end{align*}
   Let $a'$ witness this existential claim, so that $\tp^n_{\AT}(a', a_2) = \pp$, hence $\tp^n_{\AT}(a', a_2) = \tp^n_{\AT}(a, a_1)$, that is,
   $\AT \models a'a_2 \equiv_n aa_1$. By the inductive hypothesis we therefore have
-  $\TT \models aa_1b_1 \equiv_n a'a_2b_2$; in particular $\TT \models \phi^n(a', a_2, b_2)  \text { as } \TT \models \phi^n(a, a_1, b_1)$,
-  and $\TT \models \exists x \phi^n(x, a_2, b_2)$.
+  $\TTB \models aa_1b_1 \equiv_n a'a_2b_2$; in particular $\TTB \models \phi^n(a', a_2, b_2)  \text { as } \TTB \models \phi^n(a, a_1, b_1)$,
+  and $\TTB \models \exists x \phi^n(x, a_2, b_2)$.
 \end{proof}
 
 This lemma is general, but we will use it specifically applied to (colored) trees.
-Suppose $\TT$ is a (colored) tree in some language $\LL = \{\leq, \ldots\}$ expanding the language of trees by finitely many predicate symbols.
-Suppose $\AT, \BT$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with the $\LL$-reducts of $\AT, \BT$ substructures of $\TT$.
+Suppose $\TTB$ is a (colored) tree in some language $\LL = \{\leq, \ldots\}$ expanding the language of trees by finitely many predicate symbols.
+Suppose $\AT, \BT$ are some structures in languages $\LL_A, \LL_B$ which expand $\LL$, with the $\LL$-reducts of $\AT, \BT$ substructures of $\TTB$.
 Furthermore suppose that $(\AT, \BT)$ is 0-proper.
-Then by the previous lemma $(\AT, \BT)$ is a proper subdivision of $\TT$.
+Then by the previous lemma $(\AT, \BT)$ is a proper subdivision of $\TTB$.
 From now on all the subdivisions we work with will be of this form.
 
 \begin{Example} \label{ex_disc}
@@ -209,7 +210,7 @@ From now on all the subdivisions we work with will be of this form.
 \end{Example}
 
 \begin{Example} \label{ex_cone}
-  Fix a tree $\TT$ in the language $\{\leq\}$, and let $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
+  Fix a tree $\TTB$ in the language $\{\leq\}$, and let $a \in T$. Let $B = \{t \in T \mid a < t\}$, $S = \{t \in T \mid t \leq a\}$, $A = T - B$. Then $(A, \leq, S)$ and $(B, \leq)$ form a proper subdivision, where $\LL_A$ has a unary predicate interpreted by $S$.
   To see this, again, we show that the subdivision is 0-proper.
   The only time $a \in A$ and $b \in B$ are comparable is when $a \in S$, and this is captured by the language.
   (See proof of Lemma \ref{subdivide} for more details.)
@@ -224,18 +225,18 @@ From now on all the subdivisions we work with will be of this form.
 Thus $\phi(A, B)$ is a collection of subsets of $A$ definable by $\phi$ with parameters from $B$. We notice the following bound when $A, B$ are parts of a proper subdivision.
 
 \begin{Corollary} \label{cor_type_count}
-  Let $\AT, \BT$ be a proper subdivision of $\TT$ and $\phi(x,y)$ be a formula of complexity $n$. Then $|\phi(A^{|x|}, B^{|y|})| \leq |S^n_{\BT, |y|}|$.
+  Let $\AT, \BT$ be a proper subdivision of $\TTB$ and $\phi(x,y)$ be a formula of complexity $n$. Then $|\phi(A^{|x|}, B^{|y|})| \leq |S^n_{\BT, |y|}|$.
 \end{Corollary}
 
 \begin{proof}
-  Take some $a \in A^{|x|}$ and $b_1, b_2 \in B^{|y|}$ with $\tp^n_{\BT}(b_1) = \tp^n_{\BT}(b_2)$. We have $\BT \models b_1 \equiv_n b_2$ and (trivially) $\AT \models a \equiv_n a$. Thus  we have $\TT \models ab_1 \equiv_n ab_2$, so $\TT \models \phi(a, b_1) \leftrightarrow \phi(a, b_2)$. Since $a$ was arbitrary we have $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$ as different traces can only come from parameters of different types. Thus $|\phi(A^{|x|}, B^{|y|}) \leq |S^n_{\BT, |y|}|$.
+  Take some $a \in A^{|x|}$ and $b_1, b_2 \in B^{|y|}$ with $\tp^n_{\BT}(b_1) = \tp^n_{\BT}(b_2)$. We have $\BT \models b_1 \equiv_n b_2$ and (trivially) $\AT \models a \equiv_n a$. Thus  we have $\TTB \models ab_1 \equiv_n ab_2$, so $\TTB \models \phi(a, b_1) \leftrightarrow \phi(a, b_2)$. Since $a$ was arbitrary we have $\phi(A^{|x|}, b_1) = \phi(A^{|x|}, b_2)$ as different traces can only come from parameters of different types. Thus $|\phi(A^{|x|}, B^{|y|}) \leq |S^n_{\BT, |y|}|$.
 \end{proof}
 
 We note that the size of the type space $|S^n_{\BT, |y|}|$ can be bounded uniformly:
 
 \begin{Definition} \label{def_type_count}
-  Fix a (finite relational) language $\LL_B$. Let $N = N(n, m, \LL_B)$ be smallest integer such that for any structure $\BT$ in $\LL_B$ we have $|S^n_{\BT, m}| \leq N$. This integer exists as there is a finite number (up to logical equivalence) of possible formulas of complexity $\leq n$ with $m$ free variables.
-  Note that $N(n, m, \LL_B)$ is increasing in all variables:
+  Fix a (finite relational) language $\LL_B$. Let $N = N(n, m, \LL_B)$ be smallest integer such that for any structure $\BT$ in $\LL_B$ we have $|S^n_{\BT, m}| \leq N$. This integer exists as there is a finite number (up to logical equivalence) of possible formulas of complexity $\leq n$ with free variables $x_1,x_2, \ldots, x_m$.
+  Note that $N(n, m, \LL_B)$ is increasing in all parameters:
   \begin{align*}
     n \leq n', m \leq m', \LL_B \subseteq \LL_B' \Rightarrow N(n, m, \LL_B) \leq N(n', m', \LL_B')
   \end{align*}
@@ -243,33 +244,33 @@ We note that the size of the type space $|S^n_{\BT, |y|}|$ can be bounded unifor
 
 \section{Proper Subdivisions: Constructions}
 
-Throughout this section, $\TT$ denotes a colored meet tree.
-First, we describe several constructions of proper subdivisions that are needed for the proof. 
+Throughout this section, $\TTB = (T, \leq, C_1, \ldots, C_n)$ denotes a colored meet tree.
+First, we describe several constructions of proper subdivisions that are needed for the proof of our main theorem. 
 
 \begin{Definition}
-  We use $E(b,c)$ to express that $b$ and $c$ are in the same connected component:
+  We use $E(b,c)$ to express that $b$ and $c$ are in the same connected component of $T$:
   \begin{align*}
     E(b, c) \ifff \exists x \, (b \geq x) \wedge (c \geq x).
   \end{align*}
 \end{Definition}
 \begin{Definition}
-  Given an element $a$ of the tree $\TT$ we call the set of all elements above $a$, i.e., the set $T^{> a} = \{x \mid x > a\}$,
-  the \defn{closed cone} above $a$.
-  Connected components of that cone can be thought of as \defn{open cones} above $a$.
-  With that interpretation in mind, the notation $E_a(b, c)$ means that $b$ and $c$ are in the same open cone above $a$. More formally:
+  Given an element $a$ of the tree $\TTB$ we call the set of all elements strictly above $a$, i.e., the set $T^{> a} = \{x \mid x > a\}$,
+  the \defn{open cone} above $a$.
+  Connected components of that cone can be thought of as \defn{closed cones} above $a$.
+  With that interpretation in mind, the notation $E_a(b, c)$ means that $b$ and $c$ are in the same closed cone above $a$. More formally:
   \begin{align*}
     E_a(b, c) \ifff E(b,c) \text{ and } (b \wedge c) > a.
   \end{align*}
 \end{Definition}
 
-Fix a language $\LL$ for a colored tree $\LL = \{\leq, C_1, \ldots C_n\}$. Put  $\vec C = \curly{C_1, \ldots C_n}$.
+Fix a language for our colored tree $\LL = \{\leq, C_1, \ldots C_n\}$. Put  $\vec C = \curly{C_1, \ldots C_n}$.
 Given $A \subseteq T$ we put $\vec C \cap A = \curly{C_1 \cap A, \ldots, C_n \cap A}$.
-In that case $(A, \leq, \vec C \cap A)$ is a substructure of $\TT$ (here as usual by abuse of notation $\leq$ denotes the restriction of the ordering $\leq$ of $T$ to $A$.)
-For the following four definitions fix $\LLU = \LL \cup \{U\}$ be an expansion of language $\LL$ by a unary predicate.
+In that case $(A, \leq, \vec C \cap A)$ is a substructure of $\TTB$ (here as usual by abuse of notation $\leq$ denotes the restriction of the ordering $\leq$ of $T$ to $A$.)
+For the following four definitions fix an expansion $\LLU = \LL \cup \{U\}$ of the language $\LL$ by a unary predicate symbol $U$.
 We refer to the figures below for illustrations of these definitions.
 % It is not always necessary to have this predicate but we keep it for the sake of uniformity.
 % Structures denoted by $\AT$ in defintion below will have different languages $\LL_A$ (those are not as important in later applications).
-% All the colors $\vec C$ are interpreted by colors in $\TT$ by restriction.
+% All the colors $\vec C$ are interpreted by colors in $\TTB$ by restriction.
 
 \input {vc-trees-all_figures}
 
@@ -284,7 +285,7 @@ We refer to the figures below for illustrations of these definitions.
     T^{\geq c_2} &= \{t \in T \mid c_2 \leq t\}.
   \end{align*}
   Define structures $\AT^{c_1}_{c_2} = (A, \leq, \vec C \cap A, T^{<c_1}, T^{\geq c_2})$ in a language expanding $\LL$ by two unary predicate symbols and
-  $\BT^{c_1}_{c_2} = (B, \leq, \vec C \cap B, S_B)$ with language $\LLU$ (as defined above).
+  $\BT^{c_1}_{c_2} = (B, \leq, \vec C \cap B, S_B)$ in the language $\LLU$ (as defined above).
   Note that $c_1, c_2 \notin B$.
 \end{Definition}
 
@@ -296,7 +297,7 @@ We refer to the figures below for illustrations of these definitions.
     A &= T - B, \\
     T^{<c_1} &= \{t \in T \mid t < c\}.
   \end{align*}
-  Define structures $\AT_{c} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{c} = (B, \leq, \vec C\cap B, T^{<c_1})$ with language $\LLU$.
+  Define structures $\AT_{c} = (A, \leq, \vec C \cap A)$ in the language $\LL$ and $\BT_{c} = (B, \leq, \vec C\cap B, T^{<c_1})$ in the language $\LLU$.
   Note that $c \notin B$. (cf. example \ref{ex_cone}).
 \end{Definition}
 
@@ -307,7 +308,7 @@ We refer to the figures below for illustrations of these definitions.
     A &= T - B, \\
     T^{\leq c_1} &= \{t \in T \mid t \leq c\}.
   \end{align*}
-  Define structures $\AT^{c}_{S} = (A, \leq, \vec C\cap A, T^{\leq c_1})$ and $\BT^{c}_{S} = (B, \leq, \vec C\cap B, B)$ both with language $\LLU$.
+  Define structures $\AT^{c}_{S} = (A, \leq, \vec C\cap A, T^{\leq c_1})$ and $\BT^{c}_{S} = (B, \leq, \vec C\cap B, B)$ both in the language $\LLU$.
   Note that $c \notin B$ and $S \cap B = \emptyset$.
 \end{Definition}
 
@@ -317,31 +318,31 @@ We refer to the figures below for illustrations of these definitions.
     B &= \{b \in T \mid \text{ for all $s \in S$ we have } \neg E(s, b)\}, \\
     A &= T - B.
   \end{align*}
-  Define structures $\AT_{S} = (A, \leq, \vec C \cap A)$ with language $\LL$ and $\BT_{S} = (B, \leq, \vec C\cap B, B)$ with language $\LLU$.
+  Define structures $\AT_{S} = (A, \leq, \vec C \cap A)$ in the language $\LL$ and $\BT_{S} = (B, \leq, \vec C\cap B, B)$ in the language $\LLU$.
   (cf. example \ref{ex_disc})
 \end{Definition}
 
 Note that we forced the structures $\BT^{c_1}_{c_2}, \BT_c, \BT^{c}_{S}, \BT_{S}$ to have the same language $\LLU$.
 This is done for uniformity to simplify lemma \ref{lm_partition_bound}.
-By comparison, the corresponding $\AT$ structures have different languages.
+By comparison, the corresponding structures denoted by $\AT$ with decorations have different languages.
 
 \begin{Lemma} \label{subdivide}
-  The pairs of structures defined above are all proper subdivisions of $\TT$.
+  The pairs of structures defined above are all proper subdivisions of $\TTB$.
 \end{Lemma}
 
 \begin{proof}
   We only show this holds for the pair $(\AT, \BT) = (\AT^{c_1}_{c_2} ,\BT^{c_1}_{c_2})$.
   The other cases follow by a similar argument.
-  The sets $A,B$ partition $T$ by definition, so $(A,B)$ is a subdivision of $\TT$.
+  The sets $A,B$ partition $T$ by definition, so $(A,B)$ is a subdivision of $\TTB$.
   To show that it is proper, by Lemma \ref{lm_subdivision} we only need to check that it is $0$-proper. Suppose we have
   \begin{align*}
     a &= (a_1, a_2, \ldots, a_p) \in A^p, \\
     a' &= (a_1', a_2', \ldots, a_p') \in A^p,  \\
     b &= (b_1, b_2, \ldots, b_q) \in B^q,  \\
-    b' &= (b_1', b_2', \ldots, b_q') \in B^q. 
+    b' &= (b_1', b_2', \ldots, b_q') \in B^q, 
   \end{align*}
   with $\AT \models a \equiv_0 a'$ and $\BT \models b \equiv_0 b'$.
-  We need to show that $ab$ has the same quantifier-free type in $\TT$ as $a'b'$.
+  We need to show that $ab$ has the same quantifier-free type in $\TTB$ as $a'b'$.
   Any two elements in $T$ can be related in the four following ways:
   \begin{align*}
     x &= y, \\
@@ -368,9 +369,12 @@ By comparison, the corresponding $\AT$ structures have different languages.
 
 The basic idea for the proof is as follows.
 Suppose we have a formula with $q$ parameters over a parameter set of size $n$.
-We are able to split our parameter space into a partition with $O(n)$ many components.
+We are able to split our parameter space into $O(n)$ many sets
+by designating subdivisions described in the previous section based on the paramter set
+(see figures in the previous section for an example of a partition of the tree into four sets using two parameters $c_1, c_2$).
 Each of the $q$ parameters can come from any of those $O(n)$ components giving us $O(n)^q$ many choices for parameter configuration.
-When every parameter is coming from a fixed component the number of definable sets is constant and in fact is uniformly bounded above by some $N$.
+When every parameter is coming from a fixed component the number of definable sets is constant and in fact is uniformly bounded above by some $N$
+(independent of the parameter set).
 This gives us at most $N \cdot O(n)^q$ possibilities for different definable sets.
 
 First, we generalize Corollary \ref{cor_type_count}.
@@ -379,7 +383,7 @@ First, we generalize Corollary \ref{cor_type_count}.
 \begin{Lemma} \label{lm_partition_bound}
   Consider a finite collection $(\AT_i, \BT_i)_{i \leq n}$ satisfying the following properties:
   \begin{itemize}
-  \item $(\AT_i, \BT_i)$ is either a proper subdivision of $\TT$ or $A_i = T$ and $B_i = \{b_i\}$,
+  \item $(\AT_i, \BT_i)$ is either a proper subdivision of $\TTB$ or $A_i = T$ and $B_i = \{b_i\}$,
   \item all $\BT_i$ have the same language $\LLU$, and 
   \item the sets $\curly{B_i}_{i \leq n}$ are pairwise disjoint.
   \end{itemize}
@@ -409,8 +413,11 @@ First, we generalize Corollary \ref{cor_type_count}.
   \end{Claim}
   \begin{proof}
     Define $\bar b_i = (b_1, \ldots, b_i, b_{i+1}', \ldots, b_n') \in B$ for $i = 0, \ldots, n$.
-    %(That is, a tuple where first $i$ elements are without prime, and elements after that are with a prime.)
-    We have $\phi(A^{|x|}, \bar b_i) \iff \phi(A^{|x|}, \bar b_{i+1})$ as either $(\AT_{i+1}, \BT_{i+1})$ is $m$-proper
+    We have
+    \begin{align*}      
+      \phi(A^{|x|}, \bar b_i) \iff \phi(A^{|x|}, \bar b_{i+1}),
+    \end{align*}
+    as either $(\AT_{i+1}, \BT_{i+1})$ is $m$-proper
     or $\BT_{i+1}$ is a singleton, and the implication is trivial.
     (Notice that $b_i \in \AT_j$ for $j \neq i$ by disjointness assumption.)
     Thus, by induction we get $\phi(A^{|x|}, \bar b_0) \iff \phi(A^{|x|}, \bar b_n)$ as needed.
@@ -421,7 +428,7 @@ First, we generalize Corollary \ref{cor_type_count}.
   \end{align*}
   Now for each type space we have an inequality
   \begin{align*}
-    |S^m_{\BT_j, i_j}| \leq N(m, i_j, \LLU) \leq N(m, |y|, \LLU) \leq N
+    |S^m_{\BT_j, i_j}| \leq N(m, i_j, \LLU) \leq N(m, |y|, \LLU) \leq N.
   \end{align*}
   (For singletons $|S^m_{\BT_j, i_j}| = 1 \leq N$). Only non-zero indices contribute to the product and there are at most $|y|$ of those (by the equality $i_1 + i_2 + \ldots + i_n = |y|$). Thus we have
   \begin{align*}
@@ -445,7 +452,7 @@ For subdivisions to work out properly, we will need to pass to subsets closed un
 Putting all of those results together we are able to compute the $\vc$-density of formulas in meet trees.
 
 \begin{Theorem}
-  Let $\TT$ be an infinite (colored) meet tree and $\phi(x, y)$ a formula with $|x| = p$ and $|y| = q$. Then $\vc(\phi) \leq q$.
+  Let $\TTB$ be an infinite (colored) meet tree and $\phi(x, y)$ a formula with $|x| = p$ and $|y| = q$. Then $\vc(\phi) \leq q$.
 \end{Theorem}
 
 \begin{proof}
@@ -473,116 +480,136 @@ Putting all of those results together we are able to compute the $\vc$-density o
   \end{proof}
   
   \begin{Lemma}
-    $\{B_j\}_{j \in J}$ is a partition of $T - S$, i.e., $T = \bigsqcup_{j \in J} B_j \sqcup S$
+    $\{B_j\}_{j \in J}$ is a partition of $T - S$, i.e., $T = \bigsqcup_{j \in J} B_j \sqcup S$.
   \end{Lemma}
   
   \begin{proof}
-    This more or less follows from the choice of subdivisions. Pick any $b \in S - T$. Take all the elements in $S$ greater than $b$ and take the minimal one $a$. Take all the elements in $S$ less than $b$ and take the maximal one $c$ (possible as $S$ is closed under meets). Also take all the elements in $S$ incomparable to $b$ and denote them $G$. If both $a$ and $c$ exist we have $b \in \BT^a_c$. If only the upper bound exists we have $b \in \BT^a_G$. If only the lower bound exists we have $b \in \BT_c$. If neither exists we have $b \in \BT_G$.
+    This more or less follows from the choice of subdivisions. Pick any $b \in T - S$.
+    Let $a$ be the minimal element of $S$ with $a > b$, and let $c$ be the maximal element of $S$ with $c < b$ (if such elements exist).
+    %Take all the elements in $S$ greater than $b$ and take the minimal one $a$. Take all the elements in $S$ less than $b$ and take the maximal one $c$ (possible as $S$ is closed under meets).
+    Also let $G$ be the set of elements of $S$ incomparable to $b$.
+    If both $a$ and $c$ exist we have $b \in \BT^a_c$. If only the upper bound exists we have $b \in \BT^a_G$. If only the lower bound exists we have $b \in \BT_c$. If neither exists we have $b \in \BT_G$.
   \end{proof}
+  Note that those two lemmas imply $S = \bigcap_{j \in J} A_j$.
   
-  \begin{Note}
-    Those two lemmas imply $S = \bigcap_{j \in J} A_j$.
-  \end{Note}
-  
-  \begin{Note}
-    % careful application of note - have different languages and has to be > 1 
-    For one-dimensional case $q = 1$ we don't need to do any more work. We have partitioned the parameter space into $|J| = O(n)$ many pieces and over each piece the number of definable sets is uniformly bounded. By Corollary \ref{cor_type_count} we have that $|\phi((A_j)^p, B_j)| \leq N$ for any $j \in J$ (letting $N = N(n_\phi, q, \LL \cup \{S\})$ where $n_\phi$ is the complexity of $\phi$ and $S$ is a unary predicate). Compute
-    % describe steps
-    \begin{align*}
-      |\phi(S^p, T)|
-      &= \left|\bigcup_{j \in J} \phi(S^p, B_j) \cup \phi(S^p, S)\right| \leq \\
-      &\leq \sum_{j \in J} |\phi(S^p, B_j)| + |\phi(S^p, S)| \leq \\
-      &\leq \sum_{j \in J} |\phi((A_j)^p, B_j)| + |S| \leq \\
-      &\leq \sum_{j \in J}N + |I| \leq \\
-      &\leq (4pn + 1)N + 2pn = (4pN + 2p)n + N = O(n)
-    \end{align*}
-  \end{Note}
-  Basic idea for the general case $q \geq 1$ is that we have $q$ parameters and $|J| = O(n)$ many components to pick each parameter from giving us $|J|^q = O(n^q)$ choices for the parameter configuration, each giving a uniformly constant number of definable subsets of $S$. (If every parameter is picked from a fixed component, Lemma \ref{lm_partition_bound} provides a uniform bound). This yields $\vc(\phi) \leq q$ as needed. The rest of the proof is stating this idea formally.
-  
-  First, we extend our collection of subdivisions $(\AT_j, \BT_j)_{j \in J}$ by the following singleton sets. For each $c_i \in S$ let $B_i = \{c_i\}$ and $A_i = T$ and add $(\AT_i, \BT_i)$ to our collection with $\LLU$ the language of $B_i$ interpreted arbitrarily. We end up with a new collection $(\AT_k, \BT_k)_{k \in K}$ indexed by some $K$ with $|K| = |J| + |I|$ (we added $|S|$ new pairs). Now $\curly{B_k}_{k \in K}$ partitions $T$, so $T = \bigsqcup_{k \in K} B_k$ and $S = \bigcap_{j \in J} A_j = \bigcap_{k \in K} A_k$. For $(k_1, k_2, \ldots k_q) = \vec k \in K^q$ denote 
+  % careful application of note - have different languages and has to be > 1 
+  For the one-dimensional case $q = 1$ we don't need to do any more work. We have partitioned the parameter space into $|J| = O(n)$ many pieces and over each piece the number of definable sets is uniformly bounded. By Corollary \ref{cor_type_count} we have that $|\phi((A_j)^p, B_j)| \leq N$ for any $j \in J$ (letting $N = N(n_\phi, q, \LL \cup \{S\})$ where $n_\phi$ is the complexity of $\phi$ and $S$ is a unary predicate). Compute
+  % describe steps
   \begin{align*}
-    B_{\vec k} = B_{k_1} \times B_{k_2} \times \ldots \times B_{k_q}
+    |\phi(S^p, T)|
+    &= \left|\bigcup_{j \in J} \phi(S^p, B_j) \cup \phi(S^p, S)\right| \leq \\
+    &\leq \sum_{j \in J} |\phi(S^p, B_j)| + |\phi(S^p, S)| \leq \\
+    &\leq \sum_{j \in J} |\phi((A_j)^p, B_j)| + |S| \leq \\
+    &\leq \sum_{j \in J}N + |I| \leq \\
+    &\leq (4pn + 1)N + 2pn = (4pN + 2p)n + N = O(n)
+  \end{align*}
+  The basic idea for the general case $q \geq 1$ is that we have $q$ parameters and $|J| = O(n)$ many components to pick each parameter from, giving us $|J|^q = O(n^q)$ choices for the parameter configuration, each giving a uniformly constant number of definable subsets of $S$. (If every parameter is picked from a fixed component, Lemma \ref{lm_partition_bound} provides a uniform bound). This yields $\vc(\phi) \leq q$ as needed. The rest of the proof is stating this idea formally.
+  
+  First, we extend our collection of subdivisions $(\AT_j, \BT_j)_{j \in J}$ by the following singleton sets.
+  For each $c_i \in S$ let $A_i = T, B_i = \{c_i\}$ and add $(\AT_i, \BT_i)$ to our collection with $U$ in the language $\LLU$ of $B_i$ interpreted arbitrarily.
+  We end up with a new collection $(\AT_k, \BT_k)_{k \in K}$ indexed by some set $K$ with $|K| = |I| + |J|$ (we added $|S|$ many new pairs). Now $\curly{B_k}_{k \in K}$ partitions $T$, so $T = \bigsqcup_{k \in K} B_k$ and $S = \bigcap_{j \in J} A_j = \bigcap_{k \in K} A_k$. For $(k_1, k_2, \ldots k_q) = \vec k \in K^q$ denote 
+  \begin{align*}
+    B_{\vec k} = B_{k_1} \times B_{k_2} \times \ldots \times B_{k_q}.
   \end{align*}
   Then we have the following identity
   \begin{align*}
-    T^q = (\bigsqcup_{k \in K} B_k)^q = \bigsqcup_{\vec k \in K^q} B_{\vec k}
+    T^q = (\bigsqcup_{k \in K} B_k)^q = \bigsqcup_{\vec k \in K^q} B_{\vec k}.
   \end{align*}
   Thus we have that $\{B_{\vec k}\}_{\vec k \in K^q}$ partition $T^q$. Compute
   \begin{align*}
     |\phi(S^p, T^q)|
     &= \left|\bigcup_{\vec k \in K^q} \phi(S^p, B_{\vec k}) \right| \leq \\
-    &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})|
+    &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})|.
   \end{align*}
-  We can bound $|\phi(S^p, B_{\vec k})|$ uniformly using Lemma \ref{lm_partition_bound}. $(\AT_k, \BT_k)_{k \in K}$ satisfies the requirements of the lemma and $B_{\vec k}$ looks like $B$ in the lemma after possibly permuting some variables in $\phi$. Applying the lemma we get
+  We can bound $|\phi(S^p, B_{\vec k})|$ uniformly using Lemma \ref{lm_partition_bound}. The family $(\AT_k, \BT_k)_{k \in K}$ satisfies the requirements of the lemma and $B_{\vec k}$ looks like $B$ in the lemma after possibly permuting some variables in $\phi$.
+  (For example we would need to permute $B_{(2,1,2)} = B_2 \times B_1 \times B_2$ to get $B_1 \times B_2^2$ so it has the appropriate form for the lemma application.)
+  Applying the lemma we get
   \begin{align*}
     |\phi(S^p, B_{\vec k})| \leq N^q
   \end{align*}
-  with $N$ only depending on $q$ and complexity of $\phi$. We complete our computation
+  with $N$ only depending on $q$ and complexity of $\phi$. We complete our computation:
   \begin{align*}
     |\phi(S^p, T^q)|
     &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})| \leq \\
     &\leq \sum_{\vec k \in K^q} N^q \leq \\
     &\leq |K^q| N^q \leq \\
     &\leq (|J| + |I|)^q N^q \leq \\
-    &\leq (4pn + 1 + 2pn)^q N^q = N^q (6p + 1/n)^q n^q = O(n^q)
+    &\leq (4pn + 1 + 2pn)^q N^q = N^q (6p + 1/n)^q n^q = O(n^q).
   \end{align*}
 \end{proof}
 \begin{Corollary}
   In the theory of infinite (colored) meet trees we have $vc(n) = n$ for all $n$.
 \end{Corollary}
-We get the general result for the trees that aren't necessarily meet trees via an easy application of interpretability.
+We get the general result for trees that aren't necessarily meet trees via an easy application of interpretability.
 \begin{Corollary}
   In the theory of infinite (colored) trees we have $vc(n) = n$ for all $n$.
 \end{Corollary}
 \begin{proof}
-  Let $\TT'$ be a tree. We can embed it in a larger tree $\TT$ that is closed under meets. Expand $\TT$ by an extra color and interpret it by coloring the subset $\TT'$. Thus we can interpret $\TT'$ in $T$. By Corollary 3.17 in \cite{density} we get that $\vc^{\TT'}(n) \leq \vc^T(1 \cdot n) = n$ thus $\vc^{\TT'}(n) = n$ as well.
+  Let $\TTB'$ be a tree. We can embed it in a larger tree $\TTB$ that is closed under meets. Expand $\TTB$ by an extra color and interpret it by coloring the subset $\TTB'$. Thus we can interpret $\TTB'$ in $T$. By Corollary 3.17 in \cite{density} we get that $\vc^{\TTB'}(n) \leq \vc^T(1 \cdot n) = n$ thus $\vc^{\TTB'}(n) = n$ as well.
 \end{proof}
 
-This settles the question of $vc$-function for trees. Lacking a quantifier elimination result, a lot is still not known.
-One can try to adapt these techniques to compute the vc-density of a fixed formula, and see if it can take non-integer values.
-It is also not known whether trees have VC 1 property (see \cite{density} 5.2 for the definition).
-Our techniques can be used to show that VC 2 property holds but this doesn't give the optimal vc-function.
-
+\section{Conclusion}
+This settles the question of determining vc-function for infinite trees.
+Lacking a quantifier elimination result in a natural language, a lot is still not known.
+One can try to adapt these techniques to compute the vc-density on the formula by formula basis:
+% of a fixed formula, and see if it can take non-integer values.
+\begin{openq}
+  What is vc-density of individual formulas in infinite trees?
+  Can it take non-integer values?
+\end{openq}
+It is also not known whether trees have the VC 1 property
+(see \cite{density} Definition 5.2; this is a quantified formulation of uniform definability of types over finite sets).
+Our techniques can be used to show that the VC 2 property holds but this doesn't give the optimal vc-function.
+\begin{openq}
+  For which $n$ do infinite trees have VC $n$ property?
+\end{openq}
 One can also try to apply similar techniques to more general classes of partially ordered sets.
-For example, vc-density values are not known for lattices as well as whehter lattices are dp-minimal.
-Similarly, dropping the order, one can look at nicely behaved families of graphs, such as planar graphs or flat graphs (see \ref{stable_graphs}).
-Those are known to be dp-minimal (see \ref{thesis}), so one would expect a simple vc-function.
-It is this author's hope that the techniques developed in this paper can be adapted to yield fruitful results for such a general class of structures.
+For example, the vc-density function is not known for lattices, and it is also not known whehter lattices are dp-minimal.
+Similarly, relaxing the ordering condition,
+one can look at nicely behaved families of graphs, such as planar graphs or flat graphs (see \cite{stable_graphs}).
+Those are known to be dp-minimal (see ref{thesis}), so one would expect a simple vc-function.
+It is this author's hope that the techniques developed in this paper can be adapted
+to yield fruitful results for such more general classes of structures.
 
-\begin{thebibliography}{9}
+\bibliography {../thesis_ref}    % bibliography references
+\bibliographystyle {plain}
 
-\bibitem{density}
-  M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
-  \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
-  Trans. Amer. Math. Soc. 368 (2016), 5889-5949
+ 
 
-\bibitem{thesis} A. Bobkov, \textit{VC-density computations in model theoretic structures}, PhD Thesis
+% \begin{thebibliography}{9}
 
-\bibitem{parigot_trees}
-  Michel Parigot.
-  Th\'eories d'arbres.
-  \textit{Journal of Symbolic Logic}, 47, 1982, 841-853
+% \bibitem{density}
+%   M. Aschenbrenner, A. Dolich, D. Haskell, D. Macpherson, S. Starchenko,
+%   \textit{Vapnik-Chervonenkis density in some theories without the independence property}, I,
+%   Trans. Amer. Math. Soc. 368 (2016), 5889-5949
 
-\bibitem{stable_graphs}
-  Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
+% \bibitem{thesis} A. Bobkov, \textit{VC-density computations in model theoretic structures}, PhD Thesis
+
+% \bibitem{parigot_trees}
+%   Michel Parigot.
+%   Th\'eories d'arbres.
+%   \textit{Journal of Symbolic Logic}, 47, 1982, 841-853
+
+% \bibitem{stable_graphs}
+%   Klaus-Peter Podewski and Martin Ziegler. Stable graphs. \textit{Fund. Math.}, 100:101-107, 1978.
   
-\bibitem{simon_dp_min}
-  P. Simon,
-  \textit{On dp-minimal ordered structures},
-  J. Symbolic Logic 76 (2011), no. 2, 448-460
+% \bibitem{simon_dp_min}
+%   P. Simon,
+%   \textit{On dp-minimal ordered structures},
+%   J. Symbolic Logic 76 (2011), no. 2, 448-460
 
-\bibitem{ash7}
-  P. Assouad, \textit{Densite et dimension}, Ann. Inst. Fourier (Grenoble) 33 (1983), no. 3, 233-282.
-\bibitem{ash8}
-  P. Assouad, \textit{Observations sur les classes de Vapnik-Cervonenkis et la dimension combinatoire de Blei},
-  in: Seminaire d¡¯Analyse Harmonique, 1983-1984, pp. 92-112, Publications Mathematiques
-  d¡¯Orsay, vol. 85-2, Universite de Paris-Sud, Departement de Mathematiques, Orsay, 1985.
-\bibitem{sauer}
-  N. Sauer, \textit{On the density of families of sets}, J. Combinatorial Theory Ser. A 13 (1972), 145-147.
-\bibitem{shelah}
-  S. Shelah, \textit{A combinatorial problem; stability and order for models and theories in infinitary languages},
-  Pacific J. Math. 41 (1972), 247-261.
+% \bibitem{ash7}
+%   P. Assouad, \textit{Densite et dimension}, Ann. Inst. Fourier (Grenoble) 33 (1983), no. 3, 233-282.
+% \bibitem{ash8}
+%   P. Assouad, \textit{Observations sur les classes de Vapnik-Cervonenkis et la dimension combinatoire de Blei},
+%   in: Seminaire d¡¯Analyse Harmonique, 1983-1984, pp. 92-112, Publications Mathematiques
+%   d¡¯Orsay, vol. 85-2, Universite de Paris-Sud, Departement de Mathematiques, Orsay, 1985.
+% \bibitem{sauer}
+%   N. Sauer, \textit{On the density of families of sets}, J. Combinatorial Theory Ser. A 13 (1972), 145-147.
+% \bibitem{shelah}
+%   S. Shelah, \textit{A combinatorial problem; stability and order for models and theories in infinitary languages},
+%   Pacific J. Math. 41 (1972), 247-261.
 
-\end{thebibliography}
+% \end{thebibliography}
 
 \end{document}

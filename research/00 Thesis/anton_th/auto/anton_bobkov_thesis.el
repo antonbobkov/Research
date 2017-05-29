@@ -4,8 +4,12 @@
    (TeX-run-style-hooks
     "{"
     "general_intro"
-    "Trees_vc_density_"
+    "Trees_vc_density"
     "shelah_spencer_"
     "QP_reduct_"
-    "flat")))
+    "flat"
+    "amsmath"
+    "amsthm"
+    "amssymb"
+    "amsfonts")))
 
