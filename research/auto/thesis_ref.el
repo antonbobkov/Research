@@ -32,5 +32,6 @@
     "baldwin"
     "shi"
     "mac76"
+    "rational"
     "jabref-meta:")))
 

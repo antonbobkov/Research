@@ -1,0 +1,35 @@
+(TeX-add-style-hook
+ "shelah_spencer"
+ (lambda ()
+   (TeX-run-style-hooks
+    "latex2e"
+    "../mymacros"
+    "../vc_intro"
+    "amsart"
+    "amsart10"
+    "amsmath"
+    "amsthm"
+    "amssymb"
+    "amsfonts"
+    "mathrsfs"
+    "pgfpages"
+    "setspace")
+   (LaTeX-add-labels
+    "def_dp"
+    "def_basic"
+    "def_e"
+    "diamond"
+    "las_min"
+    "las_str"
+    "las_closure"
+    "minimal_over_set"
+    "chain_lemma"
+    "minimal_subset"
+    "chain_intersect"
+    "main_lower"
+    "upper"
+    "main_bound"
+    "ubd_lemma"
+    "ub_lemma"
+    "ubdim_lemma")))
+
