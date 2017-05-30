@@ -179,14 +179,19 @@ The paper \cite{reduct} provides a cell decomposition result based on the follow
   %Any formula $\phi(x, t)$ in $(\Q_p, \LL_{aff})$ with $|x| = n$ and $|t| = 1$ decomposes into a union of $(k+1)$-cells.
 \end{Theorem}  
 
-Moreover, \cite{reduct} shows that $\LLA$-structure $\Q_p$ is a $P$-minimal reduct,
-that is, the one-variable definable sets of $\LLA$-structure $\Q_p$
-coincide with the one-variable definable sets in the full structure $\LLM$-structure $\Q_p$.
+Moreover, \cite{reduct} shows that $\LLA$-structure $\Q_p$ is a $P$-minimal reduct
+of the $\LLM$-structure $\Q_p$,
+that is, the one-variable definable sets of the $\LLA$-structure $\Q_p$
+coincide with the one-variable definable sets of the full structure $\LLM$-structure $\Q_p$.
 
 The main result of this paper is the computation of the $\vc$-function for this structure:
 \begin{Theorem} \label{main_theorem}
   The $\LLA$-structure $\Q_p$ satisfies $\vc(n) = n$ for all $n$.
 \end{Theorem}
+ 
+Unlike the bound on the vc-function of the $\LLM$-structure $\Q_p$ from \cite{density}
+which was obtained via a quantified version of uniform definability of types over finite sets,
+we will directly count the number of $\phi$-types over a finite set of parameters.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -290,9 +295,9 @@ View $T$ as a tree as follows:
   \end{itemize}
 \end{Definition}
 
-\input{whole_figure}  
+\input{whole_figure}
 
-Subintervals are fine enough to make Lemma \ref{main_lemma} below work while coarse enough to be $O(N)$ small:
+Subintervals are fine enough to make Lemma \ref{main_lemma} below work while coarse enough to be $O(N)$ few:
 \begin{Lemma} \label{interval_count}\ 
   \begin{itemize}
   \item 
@@ -384,7 +389,7 @@ This is a natural notion having the following properties:
   We say $a_1, a_2$ have the same \defn{subinterval type} if one of the following holds:
   \begin{itemize}
   \item Both $a_1, a_2$ are far from the boundary and $a_1 - t, a_2 - t$ are in the same $Q_{m,n}$-coset.
-    (Here $Q_{m,n}$ is an in Lemma \ref{quantifier_elimination}.)
+    (Here $Q_{m,n}$ is as in Lemma \ref{quantifier_elimination}.)
   \item Both $a_1, a_2$ are close to the boundary and 
     \begin{align*}
 	  \tval(a_1) = \tval(a_2) \leq \vval(a_1 - a_2) - n.
@@ -586,8 +591,9 @@ The following critical lemma relates tree notions to $\Phi$-types.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{Main Proof}
-An alternative way to write $p_i(c)$ is as a scalar product $\vec p_i \cdot \vec c$,
-where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is homogeneous linear).
+Given a homogenenous linear polynomial $p(x)$ with coefficients in $\Q_p$ and $c \in \Q_p^{|x|}$,
+an alternative way to write $p(c)$ is as a scalar product $\vec p \cdot \vec c$,
+where $\vec p$ and $\vec c$ are vectors in $\Q_p^{|x|}$.% (as $p(x)$ is homogeneous linear).
 
 \begin{Lemma}	 
   Suppose we have a finite collection of vectors $\curly{\vec p_j}_{j \in J}$ with each $\vec p_j \in \Q_p^{|x|}$.
@@ -634,7 +640,8 @@ where $\vec p_i$ and $\vec c$ are vectors in $\Q_p^{|x|}$ (as $p_i(x)$ is homoge
   pick $\gamma$ for each, and then take the maximum of those values.  
 \end{proof}
 
-Fix $\gamma$ according to Corollary \ref{gamma} corresponding to $\curly{\vec p_i}_{i \in I}$ given by our collection of formulas $\Phi$.
+We now confine to work with collection $\Phi(x; y)$ of formulas from Lemma \ref{quantifier_elimination}.
+Fix $\gamma$ according to Corollary \ref{gamma} corresponding to $\curly{\vec p_i}_{i \in I}$ given by $\Phi$.
 (The lemma above is a general result, but we only use it applied to the vectors given by $\Phi$.)
 
 \begin{Definition}
@@ -653,7 +660,7 @@ Fix $\gamma$ according to Corollary \ref{gamma} corresponding to $\curly{\vec p_
 
 Without loss of generality, we may assume that $I = \curly{1,2, \ldots, k}$ (that is the formulas are labeled by consecutive natural numbers).
 Given a tuple $(a_i)_{i\in I}$ in the segment space,
-look at the corresponding $T$-floors $\curly{\tfl(a_i)}_{i\in I}$ and T-valuations $\curly{\tval(a_i)}_{i\in I}$.
+look at the corresponding $T$-floors $\curly{\tfl(a_i)}_{i\in I}$ and $T$-valuations $\curly{\tval(a_i)}_{i\in I}$.
 Partition the segment space by the order types of $\{\tfl(a_i)\}_{i\in I}$ and $\curly{\tval(a_i)}_{i\in I}$ (as subsets of $\Z$).
 
 Work in a fixed set $\Sg'$ of the partition.
@@ -721,7 +728,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   \end{align*}
   For each $i$ we show that $a_i, a_i'$ are in the same subinterval and have the same subinterval type,
   so the conclusion follows by Lemma \ref{main_lemma}
-  (the tuples $f(c), f(c')$ are in the same partition ensuring the proper order of T-valuations for the 3rd condition of the lemma).
+  (the tuples $f(c), f(c')$ are in the same partition ensuring the proper order of $T$-valuations for the 3rd condition of the lemma).
   $\It$ records the subinterval type of each element, so if $g(\bar a) = g(\bar a')$ then $a_i, a_i'$ have the same subinterval type for all $i \in I$.
   Thus it remains to show that $a_i, a_i'$ lie in the same subinterval for all $i \in I$.
   Suppose $i$ is an independent index.
@@ -795,7 +802,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
 \end{proof}
 
 \begin{Corollary} [Theorem \ref{main_theorem}]
-  The $\LL_{aff}$-structure $\Q_p$ satisfies $\vc(n) = n$.
+  The $\LL_{aff}$-structure $\Q_p$ satisfies $\vc(n) = n$ for each $n$.
 \end{Corollary}
 
 \begin{proof}
@@ -803,6 +810,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   As choice of $\phi$ was arbitrary, this implies that the vc-density of any formula is bounded by the arity of $x$.
 \end{proof}
 
+\section{Conclusion}
 This proof relies heavily on the linearity of the defining polynomials $a_1, a_2, c$ in the cell decomposition result (see Definition \ref{cell}).
 Linearity is used to separate the $x$ and $y$ variables as well as
 for Corollary \ref{gamma} to reduce the number of independent factors from $|I|$ to $|x|$.
@@ -810,13 +818,19 @@ The paper \cite{reduct} has cell decomposition results for more expressive reduc
 including, for example, restricted multiplication.
 While our results don't apply to them directly,
 it is this author's hope that similar techniques can be used to also compute the $\vc$-function for those structures.
+\begin{openq}
+  Compute vc-function for $\Q_p$-reducts studied in \cite{reduct}.
+\end{openq}
 
-Another interesting question is whether the reduct studied in this paper has the VC 1 property (see \cite{density}, 5.2 for the definition).
+Another interesting question is whether the reduct studied in this paper has the VC 1 property (see Definition 5.2 in \cite{density}).
 If so, this would imply the linear $\vc$-density bound directly.
-The techniques used in paper \cite{density} make it seem likely that the reduct has VC 2 property.
+The techniques used in the paper \cite{density} make it seem likely that the reduct has VC 2 property (just as the $\LLM$-structure $\Q_p$).
 While there are techniques for showing that a structure has a given VC property,
 less is known about showing that a structure doesn't have a given VC property.
 Perhaps the simple structure of the $\LLA$-reduct can help understand this property better.
+\begin{openq}
+  For which $n$ does $\LLA$-structure $\Q_p$ have VC $n$ property?
+\end{openq}
 
 \bibliography {../thesis_ref}    % bibliography references
 \bibliographystyle {plain}
