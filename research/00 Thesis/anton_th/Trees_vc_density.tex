@@ -1,23 +1,24 @@
 \chapter{Trees}
-In this chapter we show that in the theory of infinite trees the vc-function is optimal.
+In this \chapa we establish an optimal bound on the VC-density function in the theory of infinite trees.
 This generalizes a result of Simon showing that trees are dp-minimal. 
  
-In this paper we work with trees viewed as posets.
+We work with trees viewed as posets.
 % More precisely, our structure is branches of an infinite tree in a langugage of $\leq$ with possibly finitely many colors.
 Parigot in \cite{parigot_trees} showed that such structures have NIP.
 This result was strengthened by Simon in \cite{simon_dp_min} showing that trees are dp-minimal.
 The paper \cite{density} poses the following problem:
 
-\begin{Problem} (\cite{density} p. 47)
-  Determine the VC density function of each (infinite) tree.
+\begin{Problem} (see section 6.3 in \cite{density})
+  Determine the VC-density function of each infinite tree.
 \end{Problem}
 
-Here we solve this problem by showing that any infinite model of the theory of trees has $\vc(n) = n$.
+Here we solve this problem by showing that any infinite model of the theory of trees has $\vc(n) = n$ for each $n$.
 
-In Section 1 we introduce proper subdivisions -- the main tool that we use to analyze trees.
+In Sec\-tion~1 we introduce proper subdivisions -- the main tool that we use to analyze trees.
 We also prove some basic properties of proper subdivisions.
-Section 2 introduces the key constructions of proper subdivisions which will be used in the proof.
-Section 3 presents the proof of $\vc(n) = n$ via subdivisions.
+Sec\-tion~2 introduces the key constructions of proper subdivisions which will be used in the proof.
+Sec\-tion~3 presents the proof of $\vc(n) = n$ via subdivisions.
+In the concluding section we state open question and outline future work.
 
 The language of trees consists of a single binary predicate symbol $\leq$. The theory of trees states that $\leq$ defines a partial order and that for every element $a$ the set $\{x \mid x \leq a\}$ is linearly ordered by $\leq$. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
 
@@ -56,7 +57,7 @@ We will use the following notation for types:
     The subscript $\BT$ will be omitted as well if it is clear from context.
     Note that if $A$ is finite, then there are finitely many such formulas (up to equivalence and renaming free variables).
     The conjunction of finitely many formulas of complexity $\leq n$
-    still has complexity $\leq n$ and so we can just associate a single formula complexity $\leq n$ to every type $\tp^n_{\BT}(a/A)$
+    still has complexity $\leq n$ and so we can just associate a single formula with complexity $\leq n$ to every type $\tp^n_{\BT}(a/A)$
     defining the set of realizations of $\tp^n_{\BT}(a/A)$ in $\BT$.
   \item $\BT \models a \equiv^n_A b$ means that $a,b$ have the same type with complexity $\leq n$ over $A$ in $\BT$, i.e., $\tp^n_{\BT}(a/A) = \tp^n_{\BT}(b/A)$.
   \item $S^n_{\BT, m}(A)$ will stand for the set of all $m$-types of complexity $\leq n$ over $A$:
@@ -66,7 +67,7 @@ We will use the following notation for types:
   \end{itemize}
 \end{Definition}
 
-\begin{Definition}
+\begin{Definition} \ 
   \begin{itemize}
   \item Let $\AT$, $\BT$, $\TTB$ be structures in some (possibly different) finite relational languages. If the underlying sets $A, B$ of $\AT, \BT$ partition the underlying set $T$ of $\TTB$ (i.e. $T = A \sqcup B$), then we say that $(\AT, \BT)$ is a \defn{subdivision} of $\TTB$.
   \item A subdivision $(\AT, \BT)$ of $\TTB$ is called \defn{$n$-proper} if given $p,q \in \N$,  $a_1, a_2 \in A^p$ and $b_1, b_2 \in B^q$ with
@@ -147,14 +148,13 @@ We note that the size of the type space $|S^n_{\BT, |y|}|$ can be bounded unifor
   Fix a (finite relational) language $\LL_B$. Let $N = N(n, m, \LL_B)$ be smallest integer such that for any structure $\BT$ in $\LL_B$ we have $|S^n_{\BT, m}| \leq N$. This integer exists as there is a finite number (up to logical equivalence) of possible formulas of complexity $\leq n$ with free variables $x_1,x_2, \ldots, x_m$.
   Note that $N(n, m, \LL_B)$ is increasing in all parameters:
   \begin{align*}
-    n \leq n', m \leq m', \LL_B \subseteq \LL_B' \Rightarrow N(n, m, \LL_B) \leq N(n', m', \LL_B')
+    n \leq n', m \leq m', \LL_B \subseteq \LL_B' \Rightarrow N(n, m, \LL_B) \leq N(n', m', \LL_B').
   \end{align*}
 \end{Definition}
 
 \section{Proper Subdivisions: Constructions}
 Throughout this section, $\TTB = (T, \leq, C_1, \ldots, C_n)$ denotes a colored meet tree.
 First, we describe several constructions of proper subdivisions that are needed for the proof of our main theorem. 
-
 \begin{Definition}
   We use $E(b,c)$ to express that $b$ and $c$ are in the same connected component of $T$:
   \begin{align*}
@@ -231,7 +231,7 @@ We refer to the figures below for illustrations of these definitions.
 \end{Definition}
 
 Note that we forced the structures $\BT^{c_1}_{c_2}, \BT_c, \BT^{c}_{S}, \BT_{S}$ to have the same language $\LLU$.
-This is done for uniformity to simplify lemma \ref{lm_partition_bound}.
+This is done for uniformity to simplify Lemma \ref{lm_partition_bound}.
 By comparison, the corresponding structures denoted by $\AT$ with decorations have different languages.
 
 \begin{Lemma} \label{subdivide}
@@ -277,15 +277,15 @@ By comparison, the corresponding structures denoted by $\AT$ with decorations ha
 The basic idea for the proof is as follows.
 Suppose we have a formula with $q$ parameters over a parameter set of size $n$.
 We are able to split our parameter space into $O(n)$ many sets
-by designating subdivisions described in the previous section based on the paramter set
-(see figures in the previous section for an example of a partition of the tree into four sets using two parameters $c_1, c_2$).
+by designating subdivisions described in the previous section based on the parameter set
+(see figures in the previous section for an example of a partition of the tree into four sets using parameter set $\curly{c_1, c_2}$).
 Each of the $q$ parameters can come from any of those $O(n)$ components giving us $O(n)^q$ many choices for parameter configuration.
-When every parameter is coming from a fixed component the number of definable sets is constant and in fact is uniformly bounded above by some $N$
+When every parameter is coming from a fixed component, the number of definable sets is constant and in fact is uniformly bounded above by some $N$
 (independent of the parameter set).
 This gives us at most $N \cdot O(n)^q$ possibilities for different definable sets.
 
 First, we generalize Corollary \ref{cor_type_count}.
-(This is required for computing vc-density of formulas $\phi(x, y)$ with $|y| > 1$).
+(This is required for computing VC-density of formulas $\phi(x, y)$ with $|y| > 1$).
 
 \begin{Lemma} \label{lm_partition_bound}
   Consider a finite collection $(\AT_i, \BT_i)_{i \leq n}$ satisfying the following properties:
@@ -344,9 +344,7 @@ First, we generalize Corollary \ref{cor_type_count}.
   as needed.
 \end{proof}
 
-For subdivisions to work out properly, we will need to pass to subsets closed under meets. We observe that the closure under meets doesn't add too many new elements.
-
-% MAYBE: write a more detailed proof
+For subdivisions to work out properly, we will need to pass to subsets closed under meets. We observe that the closure under meets doesn't add too many new elements:
 \begin{Lemma} \label{lm_meet}
   Suppose $S \subseteq T$ is a finite subset of size $n \geq 1$ in a meet tree and $S'$ is its closure under meets. Then $|S'| \leq 2n - 1$.
 \end{Lemma}
@@ -356,8 +354,7 @@ For subdivisions to work out properly, we will need to pass to subsets closed un
   Then $S \cup \{s, s'\}$ is closed under meets.
 \end{proof}
 
-Putting all of those results together we are able to compute the $\vc$-density of formulas in meet trees.
-
+Putting all of those results together we are able to compute the VC-density of formulas in meet trees:
 \begin{Theorem}
   Let $\TTB$ be an infinite (colored) meet tree and $\phi(x, y)$ a formula with $|x| = p$ and $|y| = q$. Then $\vc(\phi) \leq q$.
 \end{Theorem}
@@ -365,7 +362,7 @@ Putting all of those results together we are able to compute the $\vc$-density o
 \begin{proof}
   Pick a finite subset of $S_0 \subset T^p$ of size $n$. Let $S_1 \subset T$ consist of the components of the elements of $S_0$. Let $S \subset T$ be the closure of $S_1$ under meets. Using Lemma \ref{lm_meet} we have $|S| \leq 2|S_1| \leq 2p|S_0| = 2pn = O(n)$. We have $S_0 \subseteq S^p$, so $|\phi(S_0, T^q)| \leq |\phi(S^p, T^q)|$. Thus it is enough to show $|\phi(S^p, T^q)| = O(n^q)$.
   
-  Label $S = \{c_i\}_{i \in I}$ with $|I| \leq 2pn$. For every $c_i$ we construct two subdivisions in the following way. We have that $c_i$ is either minimal in $S$ or it has a predecessor in $S$ (greatest element less than $c$). If it is minimal, construct $(\AT_{c_i}, \BT_{c_i})$. If there is a predecessor $p$, construct $(\AT^p_{c_i}, \BT^p_{c_i})$. For the second subdivision let $G$ be all the elements in $S$ greater than $c_i$ and construct $(\AT^c_G, \BT^c_G)$. So far we have constructed two subdivisions for every $i \in I$. Additionally construct $(\AT_S, \BT_S)$. We end up with a finite collection of proper subdivisons $(\AT_j, \BT_j)_{j \in J}$ with $|J| = 2|I| + 1$. Before we proceed, we note the following two lemmas describing our subdivisions.
+  Label $S = \{c_i\}_{i \in I}$ with $|I| \leq 2pn$. For every $c_i$ we construct two subdivisions in the following way. We have that $c_i$ is either minimal in $S$ or it has a predecessor in $S$ (greatest element less than $c$). If it is minimal, construct $(\AT_{c_i}, \BT_{c_i})$. If there is a predecessor $p$, construct $(\AT^p_{c_i}, \BT^p_{c_i})$. For the second subdivision let $G$ be all the elements in $S$ greater than $c_i$ and construct $(\AT^c_G, \BT^c_G)$. So far we have constructed two subdivisions for every $i \in I$. Additionally construct $(\AT_S, \BT_S)$. We end up with a finite collection of proper subdivisions $(\AT_j, \BT_j)_{j \in J}$ with $|J| = 2|I| + 1$. Before we proceed, we note the following two lemmas describing our subdivisions.
   
   \begin{Lemma}
     For all $j \in J$ we have $S \subseteq A_j$. Thus $S \subseteq \bigcap_{j \in J} A_j$ and $S^p \subseteq \bigcap_{j \in J} (A_j)^p$. 
@@ -408,8 +405,9 @@ Putting all of those results together we are able to compute the $\vc$-density o
     &\leq \sum_{j \in J} |\phi(S^p, B_j)| + |\phi(S^p, S)| \leq \\
     &\leq \sum_{j \in J} |\phi((A_j)^p, B_j)| + |S| \leq \\
     &\leq \sum_{j \in J}N + |I| \leq \\
-    &\leq (4pn + 1)N + 2pn = (4pN + 2p)n + N = O(n)
+    &\leq (4pn + 1)N + 2pn = (4pN + 2p)n + N = O(n).
   \end{align*}
+  
   The basic idea for the general case $q \geq 1$ is that we have $q$ parameters and $|J| = O(n)$ many components to pick each parameter from, giving us $|J|^q = O(n^q)$ choices for the parameter configuration, each giving a uniformly constant number of definable subsets of $S$. (If every parameter is picked from a fixed component, Lemma \ref{lm_partition_bound} provides a uniform bound). This yields $\vc(\phi) \leq q$ as needed. The rest of the proof is stating this idea formally.
   
   First, we extend our collection of subdivisions $(\AT_j, \BT_j)_{j \in J}$ by the following singleton sets.
@@ -429,7 +427,7 @@ Putting all of those results together we are able to compute the $\vc$-density o
     &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})|.
   \end{align*}
   We can bound $|\phi(S^p, B_{\vec k})|$ uniformly using Lemma \ref{lm_partition_bound}. The family $(\AT_k, \BT_k)_{k \in K}$ satisfies the requirements of the lemma and $B_{\vec k}$ looks like $B$ in the lemma after possibly permuting some variables in $\phi$.
-  (For example we would need to permute $B_{(2,1,2)} = B_2 \times B_1 \times B_2$ to get $B_1 \times B_2^2$ so it has the appropriate form for the lemma application.)
+  (For example we would need to permute $B_{(2,1,2)} = B_2 \times B_1 \times B_2$ to make it into $B_1 \times B_2^2$ so it has the appropriate form for the lemma application.)
   Applying the lemma we get
   \begin{align*}
     |\phi(S^p, B_{\vec k})| \leq N^q
@@ -437,10 +435,8 @@ Putting all of those results together we are able to compute the $\vc$-density o
   with $N$ only depending on $q$ and complexity of $\phi$. We complete our computation:
   \begin{align*}
     |\phi(S^p, T^q)|
-    &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})| \leq \\
-    &\leq \sum_{\vec k \in K^q} N^q \leq \\
-    &\leq |K^q| N^q \leq \\
-    &\leq (|J| + |I|)^q N^q \leq \\
+    &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})| \leq \sum_{\vec k \in K^q} N^q \leq \\
+    &\leq |K^q| N^q \leq (|J| + |I|)^q N^q \leq \\
     &\leq (4pn + 1 + 2pn)^q N^q = N^q (6p + 1/n)^q n^q = O(n^q).
   \end{align*}
 \end{proof}
@@ -456,24 +452,24 @@ We get the general result for trees that aren't necessarily meet trees via an ea
 \end{proof}
 
 \section{Conclusion}
-This settles the question of determining vc-function for infinite trees.
+This settles the question of determining VC-density function for infinite trees.
 Lacking a quantifier elimination result in a natural language, a lot is still not known.
-One can try to adapt these techniques to compute the vc-density on the formula by formula basis:
+One can try to adapt these techniques to compute the VC-density on the formula by formula basis:
 % of a fixed formula, and see if it can take non-integer values.
 \begin{openq}
-  What is vc-density of individual formulas in infinite trees?
+  What is the VC-density of individual formulas in infinite trees?
   Can it take non-integer values?
 \end{openq}
 It is also not known whether trees have the VC 1 property
 (see Definition 5.2 in \cite{density}; this is a quantified formulation of uniform definability of types over finite sets).
-Our techniques can be used to show that the VC 2 property holds but this doesn't give the optimal vc-function.
+It seems that our techniques can be used to show that the VC 2 property holds but this doesn't give the optimal VC-density function.
 \begin{openq}
-  For which $n$ do infinite trees have VC $n$ property?
+  For which $n$ do infinite trees have the VC $n$ property?
 \end{openq}
 One can also try to apply similar techniques to more general classes of partially ordered sets.
-For example, the vc-density function is not known for lattices, and it is also not known whehter lattices are dp-minimal.
+For example, the VC-density function is not known for lattices, and it is also not known whether lattices are dp-minimal.
 Similarly, relaxing the ordering condition,
 one can look at nicely behaved families of graphs, such as planar graphs or flat graphs (see \cite{stable_graphs}).
-Those are known to be dp-minimal (see Theorem \ref{flat_dp_thm}), so one would expect a simple vc-function.
-It is this author's hope that the techniques developed in this paper can be adapted
+Those are known to be dp-minimal (see Theorem \ref{flat_dp_thm}), so one would expect a simple VC-density function.
+It is this author's hope that the techniques developed in this \chapa can be adapted
 to yield fruitful results for such more general classes of structures.

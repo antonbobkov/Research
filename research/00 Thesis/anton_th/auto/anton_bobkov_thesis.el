@@ -5,11 +5,13 @@
     "{"
     "general_intro"
     "Trees_vc_density"
-    "shelah_spencer_"
+    "shelah_spencer"
     "QP_reduct"
     "flat"
     "amsmath"
     "amsthm"
     "amssymb"
-    "amsfonts")))
+    "amsfonts")
+   (TeX-add-symbols
+    "chapa")))
 

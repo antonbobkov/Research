@@ -1,5 +1,5 @@
 
-% Aschenbrenner et. al. computed a linear bound for the vc-density function in the field of $p$-adic numbers,
+% Aschenbrenner et. al. computed a linear bound for the VC-density function in the field of $p$-adic numbers,
 % but this bound is not known to be optimal.
 
 % $P$-adic numbers are a simple, yet a very deep construction.
@@ -19,20 +19,21 @@
 % Model theory is an extremely flexible field with applications in many areas of mathematics including algebra, analysis, geometry, number theory, and combinatorics as well as some applications to computer science and quantum mechanics.
 
 \chapter{An Additive Reduct of the $P$-adic Numbers}
-For $\Q_p$ in the language $\LLM$, the paper \cite{density} computes an upper bound for the vc-function to be $2n-1$, and it is not known whether this is optimal.
+For $\Q_p$ in the language $\LLM$ of Macintyre, the paper \cite{density} computes an upper bound for the VC-density function to be $2n-1$, and it is not known whether it is optimal for $n \geq 2$.
 This same bound holds in any reduct of the field of $p$-adic numbers, but one may expect that the simplified structure of suitable reducts would allow a better bound.
-In this chapter we investigate a reduct of the field of $p$-adic numbers and
+In this \chapa we investigate a reduct of the field of $p$-adic numbers and
 use a cell decomposition result of Leenknegt to compute an optimal bound for that structure.
-In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain $P$-minimal additive reduct of the field of $p$-adic numbers.
-Using this result, we improve the bound for the vc-function, showing that in Leenknegt's structure $\vc(n) = n$ for each $n$.
-By Corollary 5.13 in \cite{density} this also gives a proof that this structure is dp-minimal which is more direct than using that the field of $p$-adics is dp-minimal.
 
-In Section 1 we recall some basic facts about the theory of $p$-adic numbers.
+In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain $P$-minimal additive reduct of the field of $p$-adic numbers.
+Using this result, we improve the bound for the VC-density function, showing that in Leenknegt's structure $\vc(n) = n$ for each $n$.
+Using Definition \ref{def_dp} this also gives a proof that this structure is dp-minimal which is more direct than using that the field of $p$-adics is dp-minimal.
+
+In Sec\-tion~1 we recall some basic facts about the theory of $p$-adic numbers.
 Here we also introduce the reduct which we will be working with.
-Section 2 sets up basic definitions and lemmas that will be needed for the proof.
-We define trees and intervals and show how they help with vc-density calculations. 
-Section 3 concludes the proof.
-In concluding section we discuss some possible future work.
+Sec\-tion~2 sets up basic definitions and lemmas that will be needed for the proof.
+We define trees and intervals and show how they help with VC-density calculations. 
+Sec\-tion~3 finishes the proof.
+In the concluding section we state open questions and discuss future work.
 
 \section{$P$-adic numbers}
 The field $\Q_p$ of $p$-adic numbers is often studied in the language of Macintyre 
@@ -46,7 +47,7 @@ which is a language $\curly{0, 1, +, -, \cdot}$ of rings together with unary pre
 and a divisibility relation where $a|b$ holds in $\Q_p$ when $\vval a \leq \vval b$.
 
 Note that $P_n\backslash \curly{0}$ is a multiplicative subgroup of $\Q_p$ with finitely many cosets.
-\begin{Theorem} [Macintyre '76, \cite{mac76}]
+\begin{Theorem} [see \cite{mac76}]
   The $\LLM$-structure $\Q_p$ has quantifier elimination.
 \end{Theorem}
 
@@ -66,7 +67,7 @@ There is also a cell decomposition result for definable sets in this structure:
   $\lambda \in \Q_p$.    
 \end{Definition}
 
-\begin{Theorem} [Denef '84, \cite{den84}]
+\begin{Theorem} [see \cite{den84}]
   Any definable subset of $\Q_p^k$ defined by an $\LLM$-formula decomposes into a finite disjoint union of $k$-cells.
 \end{Theorem}  
 
@@ -112,26 +113,26 @@ of the $\LLM$-structure $\Q_p$,
 that is, the one-variable definable sets of the $\LLA$-structure $\Q_p$
 coincide with the one-variable definable sets of the full structure $\LLM$-structure $\Q_p$.
 
-The main result of this paper is the computation of the $\vc$-function for this structure:
+The main result of this \chapa is the computation of the VC-density function for this structure:
 \begin{Theorem} \label{main_theorem}
   The $\LLA$-structure $\Q_p$ satisfies $\vc(n) = n$ for all $n$.
 \end{Theorem}
  
-Unlike the bound on the vc-function of the $\LLM$-structure $\Q_p$ from \cite{density}
+Unlike the bound on the VC-density function of the $\LLM$-structure $\Q_p$ from \cite{density}
 which was obtained via a quantified version of uniform definability of types over finite sets,
 we will directly count the number of $\phi$-types over a finite set of parameters.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{Key Lemmas and Definitions}
-To show that $\vc(n) = n$ it suffices to bound $\vc^*(\phi) \leq |x|$ for every $\LL_{aff}$-formula $\phi(x; y)$.
-Fix such a formula $\phi(x; y)$.
+To show that $\vc(n) = n$ it suffices to bound $\vc^*(\phi) \leq |x|$ for every $\LL_{aff}$-formula $\phi(x, y)$.
+Fix such a formula $\phi(x, y)$.
 Instead of working with this formula directly, we first simplify it using quantifier elimination.
 The required quantifier elimination result can be easily obtained from cell decomposition:
 \begin{Lemma} \label {quantifier_elimination}
-  Any $\LLA$-formula $\phi(x; y)$ is equivalent in the $\LLA$-structure $\Q_p$ to a boolean combination of formulas from a collection
+  Any $\LLA$-formula $\phi(x, y)$ is equivalent in the $\LLA$-structure $\Q_p$ to a boolean combination of formulas from a collection
   \begin{align*}
-    \Phi(x; y) = &\curly{\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))}_{i, j \in I} \cup \\
+    \Phi(x, y) = &\curly{\vval (p_i(x) - c_i(y)) < \vval (p_j(x) - c_j(y))}_{i, j \in I} \cup \\
                  &\curly{p_i(x) - c_i(y) \in \lambda_k Q_{m,n}}_{i \in I , k \in K}
   \end{align*}
   of $\LLA$-formulas
@@ -151,7 +152,7 @@ The required quantifier elimination result can be easily obtained from cell deco
   where $\DD^j$ is the collection of $j$-cells which are the bases of cells in $\DD^{j+1}$.
   Set
   \begin{align*}
-    &m = \prod \curly{m' \mid Q_{m',n'} \text{ is the defining predicate of a cell in $\DD^j$ for $0 \leq j \leq l$} } \\
+    &m = \prod \curly{m' \mid Q_{m',n'} \text{ is the defining predicate of a cell in $\DD^j$ for $0 \leq j \leq l$} }, \\
     &n = \max \curly{n' \mid Q_{m',n'} \text{ is the defining predicate of a cell in $\DD^j$ for $0 \leq j \leq l$} }.
   \end{align*}
   % Choose $m,n$ large enough to cover all $m', n'$ for $Q_{m',n'}$ that show up in the cells of $\DD$.
@@ -169,7 +170,7 @@ The required quantifier elimination result can be easily obtained from cell deco
 \end{proof}
 
 \begin{Lemma}
-  Let $\Phi(x; y)$ be a finite collection of formulas.
+  Let $\Phi(x, y)$ be a finite collection of formulas.
   If $\phi$ can be written as a boolean combination of formulas from $\Phi$ then $\vc^* (\phi) \leq \vc^* (\Phi)$.
 \end{Lemma}
 \begin{proof}
@@ -178,7 +179,7 @@ The required quantifier elimination result can be easily obtained from cell deco
   The bound follows from Lemma \ref{count_types}.
 \end{proof}
 
-For the remainder of the paper fix $\Phi(x; y)$ to be a collection of formulas as in Lemma \ref{quantifier_elimination}.
+For the remainder of the \chapa fix $\Phi(x, y)$ to be a collection of formulas as in Lemma \ref{quantifier_elimination}.
 By the previous lemma, to show that $\vc^*(\phi) \leq |x|$, it suffices to bound $\vc^*(\Phi) \leq |x|$.
 More precisely, it is sufficient to show that given a parameter set $B$ of size $N$,
 the number of $\Phi$-types over $B$ is $O(N^{|x|})$.
@@ -186,8 +187,9 @@ Fix such a parameter set $B$ and work with it from now on.
 We will compute a bound for the number of $\Phi$-types over $B$.
 
 Consider the finite set $T = T(\Phi, B) = \curly{c_i(b) \mid b \in B, i \in I} \subseteq \Q_p$.
-In this definition $B$ is the parameter set that we have fixed 
-and $c_i(b)$ come from the collection of formulas $\Phi$ from the quantifier elimination above.
+In this definition %$B$ is the parameter set that we have fixed 
+$c_i(b)$ come from the collection of formulas $\Phi$ (see Lemma \ref{quantifier_elimination}).
+%from the quantifier elimination above.
 View $T$ as a tree as follows:
 \begin{Definition} \ 
   \begin{itemize}
@@ -346,7 +348,7 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
   then $x - c, y - c$ are in the same coset of $Q_{m,n}$.
 \end{Lemma}
 \begin{proof}
-  Call $a,b \in \Q_p$ similar if $\val a = \val b$ and
+  Call $a,b \in \Q_p$ \defn{similar} if $\val a = \val b$ and
   \begin{align*}
     a \midr [\val a, \val a + n) = b \midr [\val b, \val b + n).
   \end{align*}
@@ -392,7 +394,7 @@ The following lemma is an adaptation of Lemma 7.4 in \cite{density}.
 
 The following critical lemma relates tree notions to $\Phi$-types.
 \begin{Lemma} \label{main_lemma}
-  Suppose $d, d' \in \Q_p^{|x|}$ satisfy the follwing three conditions:
+  Suppose $d, d' \in \Q_p^{|x|}$ satisfy the following three conditions:
   \begin{itemize}
   \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ are in the same subinterval.
   \item For all $i \in I$ $p_i(d)$ and $p_i(d')$ have the same subinterval type.
@@ -432,7 +434,7 @@ The following critical lemma relates tree notions to $\Phi$-types.
   \begin{align*}
     \val(a - c_i(b)) = \val(a - t) \leq \alpha_U - n \leq \val(t - c_i(b)) - n.
   \end{align*}
-  So by Lemma \ref{distance} $a - c_i(b), a - t$ are in the same $Q$-coset.
+  So by Lemma \ref{distance} elements $a - c_i(b), a - t$ are in the same $Q$-coset.
   By an analogous argument, $a' - c_i(b), a' - t$ are in the same $Q$-coset.
   As $a, a'$ have the same subinterval type, $a - t, a' - t$ are in the same $Q$-coset.
   Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
@@ -442,7 +444,7 @@ The following critical lemma relates tree notions to $\Phi$-types.
   \begin{align*}
     \val(a - c_i(b)) = \val(t - c_i(b)) \leq \alpha_L \leq \val(a - t) - n,
   \end{align*}
-  so by Lemma \ref{distance}, $a - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
+  so by Lemma \ref{distance} elements $a - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
   Similarly $a' - c_i(b), t - c_i(b)$ are in the same $Q$-coset.
   Thus by transitivity we get that $a - c_i(b), a' - c_i(b)$ are in the same $Q$-coset.
 
@@ -489,7 +491,11 @@ The following critical lemma relates tree notions to $\Phi$-types.
   and $\vval(t_i - c_i(b))$ lies outside of the $(\alpha_j, \beta_j)$
   by the definition of subinterval (more specifically definition of $\BB'$).
   Therefore \eqref{eq:order_equation} has to hold.
-  (Note that we always have $\tval(p_j(d)), \tval(p_j(d')) \in (\alpha_j, \beta_j]$ by Lemma \ref{tval}c, so 
+  (Note that we always have
+  \begin{align*}
+    \tval(p_j(d)), \tval(p_j(d')) \in (\alpha_j, \beta_j]
+  \end{align*}
+   by Lemma \ref{tval}c, so 
   we only need the condition on being far from the boundary to avoid the edge case of equality to $\beta_j$.)
 
   Case 4:
@@ -568,7 +574,7 @@ where $\vec p$ and $\vec c$ are vectors in $\Q_p^{|x|}$.% (as $p(x)$ is homogene
   pick $\gamma$ for each, and then take the maximum of those values.  
 \end{proof}
 
-We now confine to work with collection $\Phi(x; y)$ of formulas from Lemma \ref{quantifier_elimination}.
+Recall that we have confined to work with collection $\Phi(x, y)$ of formulas from Lemma \ref{quantifier_elimination}.
 Fix $\gamma$ according to Corollary \ref{gamma} corresponding to $\curly{\vec p_i}_{i \in I}$ given by $\Phi$.
 (The lemma above is a general result, but we only use it applied to the vectors given by $\Phi$.)
 
@@ -651,8 +657,8 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
 \begin{proof}
   Let $a_i = \vec p_i \cdot \vec c$ and $a_i' = \vec p_i \cdot \pvec c'$ so that
   \begin{align*}
-    f(c) &= (p_i(c))_{i \in I} = (\vec p_i \cdot \vec c)_{i \in I} = (a_i)_{i \in I} \\
-    f(c') &= (p_i(c'))_{i \in I} = (\vec p_i \cdot \pvec c')_{i \in I} = (a_i')_{i \in I}
+    f(c) &= (p_i(c))_{i \in I} = (\vec p_i \cdot \vec c)_{i \in I} = (a_i)_{i \in I}, \\
+    f(c') &= (p_i(c'))_{i \in I} = (\vec p_i \cdot \pvec c')_{i \in I} = (a_i')_{i \in I}.
   \end{align*}
   For each $i$ we show that $a_i, a_i'$ are in the same subinterval and have the same subinterval type,
   so the conclusion follows by Lemma \ref{main_lemma}
@@ -667,7 +673,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   Moreover $\tfl(a_j) = \tfl(a_j')$ as $a_j, a_j'$ lie in the same subinterval (using the earlier part of the argument as $j$ is independent).
   
   \begin{Claim}
-    $\val(a_i - a_i') > \tfl(a_j) - \gamma$
+    We have $\val(a_i - a_i') > \tfl(a_j) - \gamma$.
   \end{Claim}
   \begin{proof}
     Let $K$ be the set of the independent indices less than $i$.
@@ -683,7 +689,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
     Now observe that $K \subseteq I, i \in I, \vec c - \pvec {c}' \in \Q_p^{|x|}, \tfl(a_j) \in \Z$
     satisfy the requirements of Lemma \ref {gamma}, so we apply it to obtain
     $\val(\vec p_i \cdot (\vec c - \pvec {c}')) > \tfl(a_j) - \gamma$.
-    Similarly to before, we have $\vec p_i \cdot (\vec c - \pvec {c}') = \vec p_i \cdot \vec c - \vec p_i \cdot \pvec {c}' = a_i - a_i'$.
+    Similar to before, we have $\vec p_i \cdot (\vec c - \pvec {c}') = \vec p_i \cdot \vec c - \vec p_i \cdot \pvec {c}' = a_i - a_i'$.
     Therefore we can conclude that $\val(a_i - a_i') > \tfl(a_j) - \gamma$
     as needed, finishing the proof of the claim.
   \end{proof}	
@@ -706,25 +712,21 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
 \end{proof}
 
 \begin{Corollary}
-  The dual $\vc$-density of $\Phi(x,y)$ is $\leq |x|$.
+  The dual VC-density of $\Phi(x,y)$ is $\leq |x|$.
 \end{Corollary}
 
 \begin{proof}
   Suppose we have $c, c' \in \Q_p^{|x|}$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
   Then by the previous lemma $c, c'$ have the same $\Phi$-type.
   Thus the number of possible $\Phi$-types is bounded by the size of the range of $g$ times the number of possible partitions
-  
   \begin{align*}
     \text{(number of partitions)} \cdot |\It|^{|I|} \cdot |\Sub|^{|J|} \cdot |\Ct|^{|I-J|}.
   \end{align*}
-
   There are at most $\paren{|2I|!}^2$ many partitions of $\Sg$,
   so in the product above, the only component dependent on $B$ is
-
   \begin{align*}
     |\Sub|^{|J|} \leq (N \cdot 3{|I|}^2)^{|J|} = O(N^{|J|}).
   \end{align*}	
-  
   Every $p_i$ is an element of a $|x|$-dimensional vector space, so there can be at most $|x|$ many independent vectors.
   Thus we have $|J| \leq |x|$ and the bound follows.
 \end{proof}
@@ -735,7 +737,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
 
 \begin{proof}
   The previous lemma implies that $\vc^*(\phi) \leq \vc^*(\Phi) \leq |x|$.
-  As choice of $\phi$ was arbitrary, this implies that the vc-density of any formula is bounded by the arity of $x$.
+  As our choice of $\phi$ was arbitrary, this implies that the VC-density of any formula is bounded by $|x|$.
 \end{proof}
 
 \section{Conclusion}
@@ -745,17 +747,17 @@ for Corollary \ref{gamma} to reduce the number of independent factors from $|I|$
 The paper \cite{reduct} has cell decomposition results for more expressive reducts of $\Q_p$,
 including, for example, restricted multiplication.
 While our results don't apply to them directly,
-it is this author's hope that similar techniques can be used to also compute the $\vc$-function for those structures.
+it is this author's hope that similar techniques can be used to also compute the VC-density function for those structures.
 \begin{openq}
-  Compute vc-function for $\Q_p$-reducts studied in \cite{reduct}.
+  Compute the VC-density function for $\Q_p$-reducts studied in \cite{reduct}.
 \end{openq}
 
-Another interesting question is whether the reduct studied in this paper has the VC 1 property (see Definition 5.2 in \cite{density}).
-If so, this would imply the linear $\vc$-density bound directly.
+Another interesting question is whether the reduct studied in this \chapa has the VC 1 property (see Definition 5.2 in \cite{density}).
+If so, this would imply the linear VC-density bound directly.
 The techniques used in the paper \cite{density} make it seem likely that the reduct has VC 2 property (just as the $\LLM$-structure $\Q_p$).
-While there are techniques for showing that a structure has a given VC property,
-less is known about showing that a structure doesn't have a given VC property.
-Perhaps the simple structure of the $\LLA$-reduct can help understand this property better.
+While there are techniques for showing that a structure has a given VC $n$ property,
+less is known about showing that a structure doesn't have a given VC $n$ property.
+Perhaps the simple structure of the $\LLA$-reduct can help understand this phenomenon better.
 \begin{openq}
-  For which $n$ does $\LLA$-structure $\Q_p$ have VC $n$ property?
+  For which $n$ does the $\LLA$-structure $\Q_p$ have the VC $n$ property?
 \end{openq}

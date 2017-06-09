@@ -528,7 +528,7 @@
   \@makededication
   \tableofcontents
   \listoffigures
-  \listoftables
+  % \listoftables
   \@makeacknowledgments
   \@makevitapage
   \newpage \pagenumbering{arabic}

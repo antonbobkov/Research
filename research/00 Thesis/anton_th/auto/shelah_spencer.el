@@ -1,21 +1,7 @@
 (TeX-add-style-hook
  "shelah_spencer"
  (lambda ()
-   (TeX-run-style-hooks
-    "latex2e"
-    "../mymacros"
-    "../vc_intro"
-    "amsart"
-    "amsart10"
-    "amsmath"
-    "amsthm"
-    "amssymb"
-    "amsfonts"
-    "mathrsfs"
-    "pgfpages"
-    "setspace")
    (LaTeX-add-labels
-    "def_dp"
     "diamond"
     "las_min"
     "las_str"
@@ -26,6 +12,7 @@
     "chain_intersect"
     "def_basic"
     "main_lower"
+    "ALEQW"
     "upper"
     "def_e"
     "main_bound"

@@ -2,6 +2,11 @@
  "thesis_ref"
  (lambda ()
    (LaTeX-add-bibitems
+    "ivanov"
+    "adleradler"
+    "dpstable"
+    "ultraflat"
+    "anthony"
     "density"
     "densityII"
     "laskowski"

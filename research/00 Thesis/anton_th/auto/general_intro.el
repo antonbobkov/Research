@@ -3,6 +3,7 @@
  (lambda ()
    (LaTeX-add-labels
     "totally"
+    "make_ind"
     "def_dp"
     "dp_min_simon")))
 

@@ -3,5 +3,6 @@
  (lambda ()
    (LaTeX-add-labels
     "count_types"
-    "vc_fn_def")))
+    "vc_fn_def"
+    "vcone")))
 

@@ -6,8 +6,8 @@
 \usepackage{enumitem}  
 \usepackage{mathrsfs} 
 
-\newcommand{\X}{\mathcal X}
-\newcommand{\Y}{\mathcal Y}
+% \newcommand{\X}{\mathcal X}
+% \newcommand{\Y}{\mathcal Y}
 
 
 \DeclareMathOperator{\TT}{\mathcal T}
@@ -30,13 +30,13 @@
 \renewcommand{\AA}{\mathscr A}
 \newcommand{\BB}{\mathscr B}
 \newcommand{\DD}{\mathscr D}
-\newcommand{\II}{\mathscr I}
+% \newcommand{\II}{\mathscr I}
 \newcommand{\MM}{\mathbb M}
 
 \newcommand{\A}{\mathcal A}
 \newcommand{\B}{\mathcal B} 
 \renewcommand{\C}{\mathcal C}
-\newcommand{\D}{\mathcal D}
+% \newcommand{\D}{\mathcal D}
 \newcommand{\F}{\mathcal F}
 \newcommand{\G}{\mathcal G}
 \renewcommand{\H}{\mathcal H}
@@ -54,29 +54,31 @@
 \DeclareMathOperator{\vecspan}{span}
 \DeclareMathOperator{\val}{val}
 \DeclareMathOperator{\vval}{val}
-\DeclareMathOperator{\tval}{T-val}
 \DeclareMathOperator{\inti}{I}
 
 \DeclareMathOperator{\tflAA}{-fl}
-%\newcommand{\tfl}{T-{\tflAA}}
 \newcommand{\tfl}{T{\tflAA}}
+\DeclareMathOperator{\tvalAA}{-val}
+\newcommand{\tval}{T{\tvalAA}}
 
 \newcommand{\interval}{\inti(t, \alpha_L, \alpha_U)}
+
+\newcommand{\mybar}[1]{\overline{#1}}
 
 \newcommand{\GG}{\mathbb G}
 \newcommand{\GGY}{\GG^{|y|}}
 \newcommand{\AX}{A^{|x|}}
-\newcommand{\BA}{\bar A}
+\newcommand{\BA}{\mybar A}
 
 \DeclareMathOperator{\diag}{diag}
 
 \newcommand{\DB}{\mathbb D}
 \newcommand{\ppp}{\partial}
-\newcommand{\BM}{\bar M_{j-1}}
+\newcommand{\BM}{{\mybar M}_{j-1}}
 \newcommand{\E}{\mathscr E}
 \DeclareMathOperator{\ind}{ind}
 \newcommand{\vcind}{\vc_{\ind}}
-\newcommand{\Ind}{\mathscr I}
+\newcommand{\Ind}{\Phi}
 
 
 \newcommand{\curly}[1]{\left\{#1\right\}}
@@ -85,6 +87,7 @@
 \newcommand{\agl}[1]{\left\langle #1 \right\rangle}
 
 \providecommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+\providecommand{\ceil}[1]{\left \lceil #1 \right \rceil }
 
 \usepackage{soul}
 \newcommand{\defn}{\ul}
@@ -96,7 +99,12 @@
 \DeclareMathOperator{\AT}{\boldface A}
 \DeclareMathOperator{\BT}{\boldface B}
 
-
 \newcommand{\LLU}{\LL^*}
 
+\newcommand{\DOPHI}{\frac{K(\Phi)}{\epsilon(\Phi)}}
+%{D_1(\Phi)}
+\newcommand{\DPHI}{\floor{|y|\DOPHI}}
+%{D(\Phi)}
+
+\newcommand{\OO}[1]{O\paren{#1}}
 

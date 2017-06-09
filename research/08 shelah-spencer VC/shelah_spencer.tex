@@ -14,7 +14,7 @@
 \doublespacing
 %\usepackage[margin=.75in]{geometry}
 %\pgfpagesuselayout{2 on 1}
-
+ 
 % \renewcommand{\AA}{\mathscr A}
 % \newcommand{\BB}{\mathscr B}
 % \newcommand{\DD}{\mathscr D}
@@ -109,6 +109,9 @@ Our second result provides an upper bound on the vc-density of a given formula $
   \vc(\phi) \leq D(\phi)
 \end{align*}
 where $D(\phi)$ is an explicitly computable expression involving $|y|$ and the number of vertices and edges defined by $\phi$.
+For example let $\phi(x,y)$ be a formula that says that there is an edge between $x$ and $y$.
+Our bound gives $\vc(\phi) \leq D(\phi) = \floor{\frac{2}{\alpha}}$.
+With a more careful computation we can get $\vc(\phi) = \floor{\frac{1}{\alpha}}$ (see 4.9 in \cite{density}).
 
 Section 1 introduces basic facts about VC-dimension and vc-density.
 More can be found in \cite{density}.
@@ -180,6 +183,9 @@ For the remainder of the paper fix $\alpha \in (0,1)$, irrational.
     This theory is complete and stable (see 5.7 and 7.1 in \cite{laskowski}).
     From now on fix an ambient model $\GG \models S_\alpha$.
     This will be the only infinite graph we work with.
+    % We denote the set of its vertices by $G$.
+  \item Given $S \in \N$, a graph $S \subseteq \DB$ is called \defn{$S$-strong}
+    if for any $R \subseteq T \subseteq \DB$ with $|T| - |R| \leq S$ we have $R \leq T$.
   \item For $A, B$ positive, $(A, B)$ is called a \defn{minimal pair} if
     $A \subseteq B$, $\dim(B/A) < 0$ but $\dim(A'/A) \geq 0$ for all proper $A \subseteq A' \subsetneq B$.
     We call $B$ a \defn{minimal extension} of $A$.
@@ -209,32 +215,16 @@ For the remainder of the paper fix $\alpha \in (0,1)$, irrational.
   \item A formula $\phi_{A,B}$ is called a \defn{basic formula}
     if there is a minimal chain $\agl{M_i}_{0 \leq i \leq n}$
     such that $A = M_0$ and $B = M_n$.
+    We also denote such a formula by $\phi_{\agl{M_i}_{0 \leq i \leq n}}$. 
   \end{itemize}
 \end{Definition}
-
-\begin{Theorem} [Quantifier elimination, 5.6 in \cite{laskowski}]
-  In theory $S_\alpha$ every formula is equivalent to a boolean combination of basic formulas.
+ 
+\begin{Theorem} [Quantifier simplication, 5.6 in \cite{laskowski}]
+  In the theory $S_\alpha$ every formula is equivalent to a boolean combination of basic formulas.
 \end{Theorem}
-
-\begin{Definition}
-  A graph $S \subseteq \DB$ is called \defn{$N$-strong} if for any $S \subseteq T \subseteq D$ with $|T| - |S| \leq N$ we have $S \leq T$.
-\end{Definition}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Basic Definitions and Lemmas}
-\begin{Definition} \label{def_basic}
-  Suppose $\phi(x, y)$ is a basic formula.
-  Define $\X$ to be the graph on vertices $x$ with edges defined by $\phi$.
-  Similarly define $\Y$.
-  Note that $\X$, $\Y$ are positive.
-  Additionally, let $\Y'$ be a subgraph of $\Y$ induced by vertices of $\Y$ that are connected to $W - (X \cup Y)$, where $W$ is a witness of $\phi$.
-\end{Definition}
-
-\begin{Definition} \label{def_e}
-  Suppose $A, B$ are subgraphs of $\D$ such that $v(A), v(B)$ are disjoint.
-  Then define $\E(A, B)$ to be the number of edges between the vertices in $v(A)$ and the vertices in $v(B)$.
-\end{Definition}
-
 We will require the following lemmas from \cite{laskowski}:
 
 \begin{Lemma} \label{diamond} [See 2.3 in \cite{laskowski}]
@@ -252,36 +242,36 @@ We will require the following lemmas from \cite{laskowski}:
 \end{Lemma}
 
 \begin{Lemma} \label{las_min} [See 4.1 in \cite{laskowski}]
-  Suppose $A$ is a positive graph, with at least $1/\alpha + 2$ vertices.
+  Suppose $A$ is a positive graph, with at least $\ceil{1/\alpha} + 2$ vertices.
   Then for any $\epsilon > 0$ there exists a graph $B$ such that $(A, B)$ is a minimal pair with dimension $\leq \epsilon$.
   Moreover, every vertex in $A$ is connected to a vertex in $B - A$.
 \end{Lemma}
 
 \begin{Lemma} \label{las_str} [See 4.4 in \cite{laskowski}]
-  Suppose $A$ is a positive graph, and $\G$ a model of $S_\alpha$.
-  Then for any integer $S$ there exists an embedding $f \colon A \arr \G$ such that $f(A)$ is $S$-strong in $\G$.
+  Suppose we have $A \subset \GG$.
+  Then for any integer $S \geq 0$ there exists an embedding $f \colon A \arr \GG$ such that $f(A)$ is $S$-strong in $\GG$.
 \end{Lemma}
     
 \begin{Lemma} \label{las_closure} [See 3.8 in \cite{laskowski}]
   For all $S > 0$ there exists $M = M(S, \alpha) \in \N$ with the following property.
-  Suppose $A \subseteq \G$ where $\G$ is a model of $S_\alpha$.
-  Then there exists $B$ with $A \subseteq B \subseteq \G$ such that $B$ is $S$-strong in $\GG$ and $|B| \leq M|A|$.
+  Suppose $A \subseteq \GG$.
+  Then there exists $B$ with $A \subseteq B \subseteq \GG$ such that $B$ is $S$-strong in $\GG$ and $|B| \leq M|A|$.
 \end{Lemma}
 
 We conclude this section by stating a couple of technical lemmas that will be useful in our proofs later.
+In those lemmas we work in an ambient graph $\DB$; all finite graphs that we are dealing with are subgraphs of $\DB$.
 
 \begin{Lemma} \label{minimal_over_set}
-  Work in an ambient graph $\DB$.
-  Suppose we have a set $B$ and a minimal pair $(A, M)$ with $A \subseteq B$ and $\dim(M/A) = -\epsilon$.
+  Let $B$ be a graph and $(A, M)$ be a minimal pair with $A \subseteq B$ and $\dim(M/A) = -\epsilon$.
   Then either $M \subseteq B$ or $\dim(M \cup B/B) < -\epsilon$.
 \end{Lemma}
 
 \begin{proof}
-  By Lemma \ref{diamond}
+  By Lemma \ref{diamond} we have
   \begin{align*}
     \dim(M \cup B/B) \leq \dim(M / M \cap B),
   \end{align*}
-  and as $A \subseteq M \cap B \subseteq M$
+  and as $A \subseteq M \cap B \subseteq M$ we get
   \begin{align*}
     \dim (M/A) = \dim(M / M \cap B) + \dim(M \cap B / A).
   \end{align*}
@@ -294,8 +284,7 @@ We conclude this section by stating a couple of technical lemmas that will be us
 \end{proof}
 
 \begin{Lemma}	\label{chain_lemma}
-  Work in an ambient graph $\DB$.
-  Suppose we have a set $B$ and a minimal chain  $\agl{M_i}_{0 \leq i \leq n}$ with dimensions
+  Let $B$ be a graph and $\agl{M_i}_{0 \leq i \leq n}$ be a minimal chain with dimensions
   \begin{align*}
     \dim(M_{i+1}/M_i) = -\epsilon_i
   \end{align*}
@@ -305,59 +294,73 @@ We conclude this section by stating a couple of technical lemmas that will be us
 \end{Lemma}
 
 \begin{proof}
-  Let $\bar M_i = M_i \cup B$. Then:
+  Let ${\mybar M}_i = M_i \cup B$. Then:
   \begin{align*}
-    \dim(\bar M_n/B) = \dim(\bar M_n/\bar M_{n-1}) + \ldots + \dim(\bar M_2/\bar M_1) + \dim(\bar M_1/B).
+    \dim({\mybar M}_n/B) = \dim({\mybar M}_n/{\mybar M}_{n-1}) + \ldots + \dim({\mybar M}_2/{\mybar M}_1) + \dim({\mybar M}_1/B).
   \end{align*}
   Either $M_n \subseteq B$ or at least one of the summands above is nonzero.
-  Apply previous lemma.
+  Apply the previous lemma.
 \end{proof}
 
 \begin{Lemma} \label{minimal_subset}
-  Suppose we have a minimal pair $(A, M)$ with dimension $\epsilon$.
-  Suppose we have some $B \subseteq M$.
+  Let $(A, M)$ be a minimal pair with dimension $\epsilon$ and $B \subseteq M$.
   Then $\dim B / (A \cap B) \geq -\epsilon$.
   Moreover if $B \cup A \neq M$ then $\dim B / (A \cap B) \geq 0$.
 \end{Lemma}
 
 \begin{proof}
-  We have $\dim (B \cup A / A) \leq \dim B / (A \cap B)$ by Lemma \ref{diamond}.
-  As $A \subseteq B \cup A \subseteq M$ we have $\dim (B \cup A / A) \geq -\epsilon$ by minimality.
-  Moreover, minimality implies that it is positive if $B \cup A \neq M$.
+  We have $\dim (B \cup A / A) \leq \dim (B / A \cap B)$ by Lemma \ref{diamond}.
+  Note that $A \subseteq B \cup A \subseteq M$.
+  If $B \cup A \neq M$ then we have $\dim (B \cup A / A) \geq 0$ by minimality.
+  If $B \cup A = M$ then we have $\dim (B \cup A / A) = -\epsilon$.
+  % Moreover, minimality implies that it is positive if $B \cup A \neq M$.
 \end{proof}
 
 \begin{Lemma} \label{chain_intersect}
-  Suppose we have a minimal chain  $\agl{M_i}_{0 \leq i \leq n}$ with dimensions
+  Let  $\agl{M_i}_{0 \leq i \leq n}$ be  a minimal chain with dimensions
   \begin{align*}
-    \dim(M_{i+1}/M_i) = -\epsilon_i.
+    \dim(M_i/M_{i-1}) = -\epsilon_i.
   \end{align*}
-  Let $\epsilon$ be the sum of all $\epsilon_i$.
-  Suppose we have a graph $B$ with $B \subseteq M_n$.
-  Then $\dim B / (M_0 \cap B) \geq -\epsilon$.
+  Let
+  \begin{align*}
+    \epsilon = \sum_{i = 1}^{n}\epsilon_i,  
+  \end{align*}
+  and let $B \subseteq M_n$.
+  Then $\dim (B / M_0 \cap B) \geq -\epsilon$.
 \end{Lemma}
 
 \begin{proof}
   Let $B_i = B \cap M_i$.
-  We have $\dim B_{i+1}/B_i \geq \dim M_{i+1}/M_i$ by the previous lemma.
+  We have $\dim (B_{i+1}/B_i) \geq \dim (M_{i+1}/M_i)$ by the previous lemma.
   Thus
   \begin{align*}
-    \dim B / (M_0 \cap B) = \dim B_n / B_0 = \sum \dim B_{i+1}/B_i \geq -\epsilon.
+    \dim (B / M_0 \cap B) = \dim (B_n / B_0) = \sum_{i = 1}^n \dim (B_{i+1}/B_i) \geq -\epsilon.
   \end{align*}
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Lower bound}
+\begin{Definition} \label{def_basic}
+  Suppose $\phi_{A,B}(x, y)$ is a basic formula.
+  Define $\X$ to be the graph on vertices $x$ with edges defined by $\phi$
+  (equivalently it is a subgraph of $A$ induced by vertices of $x$).
+  Similarly define $\Y$.
+  Note that $\X$, $\Y$ are positive as $A$ is positive.
+  Additionally, let $\Y'$ be a subgraph of $\Y$ induced by vertices of $\Y$ that are connected to $W - (X \cup Y)$,
+  where $W$ is a witness of $\phi$.% over $X \cup Y$.
+\end{Definition}
+
 In this section we restrict our attention to the following family of basic formulas $\phi(x,y)$:
 \begin{itemize}
-%\item Graphs defined by $x,y$ are $\X, \Y$.
-\item All formulas have $\Y' = \Y$ (see Definition \ref{def_basic}).
+\item All formulas have $\Y' = \Y$.% (see Definition \ref{def_basic}).
 \item All formulas define no edges between $X$ and $Y$.
-\item Minimal chain of $\phi(x,y)$ consists of one step, that is we only have one minimal extension as opposed to a chain of minimal extensions.
+\item The minimal chain of $\phi(x,y)$ consists of one step, that is we only have one minimal extension as opposed to a chain of minimal extensions.
 \item The dimension of that minimal extension is smaller than $\alpha$.
 \end{itemize}
 
-We obtain a lower bound for the formulas that are boolean combinations of basic formulas written in the disjunctive-conjunctive form.
+We obtain a lower bound for the formulas that are boolean combinations of basic formulas of this type written in disjunctive-normal form.
 First, define $\epsilon_L(\phi)$.
+
 
 \begin{Definition} 
   For a basic formula $\phi = \phi_{\agl{M_i}_{0 \leq i \leq n}}(x, y)$ let
@@ -375,19 +378,20 @@ First, define $\epsilon_L(\phi)$.
 \end{Definition}
 
 \begin{Definition}[Conjunction]
-  Take a collection of formulas $\phi_i(x, y)$ where each $\phi_i$ is a positive or a negative basic formula.
+  Take a finte collection of formulas $\phi_i(x, y)$ where each $\phi_i$ is a positive or a negative basic formula
+  and $\phi = \bigwedge_i\phi_i$.
   If both positive and negative formulas are present then $\epsilon_L(\phi) = \infty$.
   We don't have a lower bound for that case.
-  If different formulas define $\X$ or $\Y$ differently then $\epsilon_L(\phi) = \infty$.
+  If different formulas define $\X$ or $\Y$ differently then let $\epsilon_L(\phi) = \infty$.
   In the case of conflicting definitions the formula would have no realizations.
   Otherwise let
   \begin{align*}
-    \epsilon_L\paren{\bigwedge \phi_i} &= \sum \epsilon_L(\phi_i).
+    \epsilon_L\paren{\bigwedge_i \phi_i} &= \sum_i \epsilon_L(\phi_i).
   \end{align*}
 \end{Definition}
 
 \begin{Definition} [Disjunction]
-  Take a collection of formulas $\psi_i$ where each instance is a conjunction as above all agreing on $\X$ and $\Y$.
+  Take a collection of formulas $\psi_i$ where each instance is a conjunction as above all agreeing on $\X$ and $\Y$.
   Then
   \begin{align*}
     \epsilon_L\paren{\bigvee \psi_i} &= \min \epsilon_L(\psi_i).
@@ -398,7 +402,7 @@ First, define $\epsilon_L(\phi)$.
   \begin{align*}
     \vc \psi \geq \floor{\frac{Y(\psi)}{\epsilon_L(\psi)}},
   \end{align*}
-  where $Y(\psi)$ is $\dim(Y)$ (as all basic componenets agree on $\Y$).
+  where $Y(\psi)$ is $\dim(Y)$ (as all basic components agree on $\Y$).
 \end{Theorem}
 \begin{proof}
   First, work with a formula that is a conjunction of positive basic formulas $\psi = \bigwedge_{i \in I} \phi_i$.
@@ -411,8 +415,7 @@ First, define $\epsilon_L(\phi)$.
   \begin{align*}
     n_1 \epsilon_L(\psi) < Y(\psi).
   \end{align*}
-  Let $\epsilon'$ be the smallest value among $\epsilon_L(\phi_i)$.
-  Suppose it corresponds to the formula $\phi'$.
+  Let $\epsilon'$ be the smallest value among $\epsilon_L(\phi_i)$ corresponding to the formula $\phi'$.
   Let $n_2$ be the largest natural number such that
   \begin{align*}
     n_1 \epsilon_L(\psi) + n_2 \epsilon' < Y(\psi).
@@ -578,28 +581,30 @@ First, define $\epsilon_L(\phi)$.
 \end{proof}
 
 \begin{Corollary}
-  VC-function is infinite in Shelah-Spencer random graphs:
+  The vc-function is infinite in the theory of Shelah-Spencer random graphs:
   \begin{align*}
-    \vc(n) = \infty.
+    \vc^{S_\alpha}(n) = \infty.
   \end{align*}
 \end{Corollary}
 
 \begin{proof}
-  Let $A$ be a graph consisting of $1/\alpha + 2 + n$ disconnected vertices.
+  Let $A$ be a graph consisting of $\ceil{1/\alpha} + 2 + n$ disconnected vertices.
   Fix $\epsilon > 0$.
   By Lemma \ref{las_min}, there exists $B$ such that $(A, B)$ is minimal with dimension $\leq \epsilon$.
-  Consider a basic formula $\psi_{A, B}(x, y)$ where $|x| = 1/\alpha + 2$ and $|y| = n$.
-  Then by the theorem above $\vc(n) \geq \vc (\psi_{A,B}) \geq \frac{n}{\epsilon}$.
-  As $\epsilon$ was arbitrary, this number can be made arbitrarily large, giving $vc(n) = \infty$ as needed.
+  Consider a basic formula $\psi_{A, B}(x, y)$ where $|x| = \ceil{1/\alpha} + 2$ and $|y| = n$.
+  Then by the theorem above $\vc^{S_\alpha}(n) \geq \vc (\psi_{A,B}) \geq \floor{\frac{n}{\epsilon}}$.
+  As $\epsilon$ was arbitrary, this number can be made arbitrarily large, giving $\vc^{S_\alpha}(n) = \infty$ as needed.
 \end{proof}
 
 \begin{Corollary}
-  Shelah-Spencer random graphs don't have finite dp-rank.
-  In particular they are not dp-minimal.
+  The theory of Shelah-Spencer random graphs doesn't have finite dp-rank.
+  In particular it is not dp-minimal.
 \end{Corollary}
 
 \begin{proof}
+  Suppose that the ambient model $\GG$ is $\aleph_1$-saturated.
   We would like to modify the proof of Theorem \ref{main_lower} such that $A$ is indiscernible.
+  Note that as $S_\alpha$ is stable, all indiscernible sequences are totally indiscernible.
   Note that in the proof we can construct sets $A = \curly{a_j}_{j \in J}$ of arbitrary length.
   Moreover for every finite $J' \subseteq J$, the set $A = \curly{a_j}_{j \in J'}$ is still $S$-strong.
   Thus we can find an infinite set $A = \curly{a_j}_{j \in \N}$ indiscernible and $S$-strong.
@@ -611,7 +616,7 @@ First, define $\epsilon_L(\phi)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Upper bound}
-Consider a basic formula $\phi(x,y)$ with a minimal chain  $\agl{M_i}_{0 \leq i \leq n_{\phi}}$ with dimensions  $\dim(M_{i+1}/M_i) = -\epsilon_i$.
+Consider a basic formula $\phi(x,y)$ associated to a minimal chain  $\agl{M_i}_{0 \leq i \leq n_{\phi}}$ with dimensions  $\dim(M_{i+1}/M_i) = -\epsilon_i$.
 Define
 \begin{align*}
   \epsilon(\phi) &= \min \curly{\epsilon_i}_{0 \leq i \leq n_\phi}\\
@@ -619,73 +624,86 @@ Define
 \end{align*}
 Now consider a finite collection of basic formulas
 \begin{align*}
-  \Phi = \Phi(\vec x, \vec y) = \curly{\phi_i(\vec x, \vec y)}_{i\in I}.
+  \Phi = \Phi( x, y) = \curly{\phi_i( x,  y)}_{i\in I}.
 \end{align*}
 Define
 \begin{align*}
-  \epsilon(\Phi) &= \min \curly{\epsilon(\phi_i)}_{i \in I} \cup \curly{\alpha}, \\
-  K(\Phi) &= \max \curly{K(\phi_i)}_{i \in I},\\
-  D_1(\Phi) &= \frac{K(\Phi)}{\epsilon(\Phi)}, \\
-  D(\Phi) &= |y| D_1(\Phi).\\
+  \epsilon(\Phi) &= \min \curly{\epsilon(\phi_i)}_{i \in I} \cup \curly{\alpha}, (\text{ so } ) \epsilon(\Phi) > 0\\
+  K(\Phi) &= \max \curly{K(\phi_i)}_{i \in I}.
+  % \DOPHI &= \frac{K(\Phi)}{\epsilon(\Phi)}, \\
+  % \DPHI &= |y| \DOPHI.\\
 \end{align*}
-We claim that
 \begin{Theorem} \label{upper}
-  If $\phi$ is a boolean combination of formulas from $\Phi$, then $\vc(\phi) \leq D(\Phi)$.
+  If $\phi$ is a boolean combination of formulas from $\Phi$, then
+  \begin{align*}
+    \vc(\phi) \leq \DPHI.    
+  \end{align*}
 \end{Theorem}
+We first reduce Theorem \ref{upper} to a combinatorial statement (Theorem \ref{main_bound} below), the proof of which
+takes up the rest of this section.
+
 Let
 \begin{align*}
   S = \left\lceil{\paren{\frac{|y|}{\epsilon(\phi)} + 1} K(\phi)}\right\rceil.
 \end{align*}
 Suppose we have a finite parameter set $A_0 \subseteq \GG^{|x|}$ with $|A_0| = N_0$.
-We would like to bound $\phi(A_0, \GGY)$.
-Let $A_1 \subseteq \GG$ consist of the components of the elements of $A_0$.
+We would like to bound $\abs{\phi(A_0, \GGY)}$ in terms of $\Phi$ and $N_0$.
+Let $A_1 \subseteq \GG$ consist of the components of the tuples of $A_0$ (so $A_1 \subset A_0^{|x|}$).
 Then $|A_1| \leq |x| N_0$.
 Using Lemma \ref{las_closure} let $A$ be a graph $A_0 \subseteq A \subseteq \GG$, $S$-strong in $\GG$.
 Let $N = |A|$.
-We have $N \leq |x| N_0 M$ (where $M$ is the constant from the Lemma \ref{las_closure}).
+We have $N \leq |x| N_0 M$ (where $M = M(S, \alpha)$ is the constant from Lemma \ref{las_closure}).
 As $A_0 \subseteq \AX$ we have
 \begin{align*}
   \abs{\phi(A_0, \GGY)} \leq \abs{\phi(\AX, \GGY)}.
 \end{align*}
-Therefore it suffices to bound $\abs{\phi(\AX, \GGY)}$.
+Therefore it suffices to bound $\abs{\phi(\AX, \GGY)}$ uniformly in $\Phi, |A|$.
 
 \begin{Definition}
-  For $A \subseteq \GG^{|x|}, B \subseteq \GG^{|y|}$ define
+  For $A \subseteq \GG^{|x|}, B \subseteq \GG^{|y|}, b \in \GG^{|y|}$ define
   \begin{align*}
-    \Phi(A, B) = \curly{(a, i) \in A \times I \mid \GG \models \phi_i(a, b)} \subseteq A \times I
+    \Phi(A, b) = \curly{(a, i) \in A \times I \mid \GG \models \phi_i(a, b) } \subseteq A \times I, \\
+    \Phi(A, B) = \curly{\Phi(A, b) \mid b \in B } \subseteq \PP(A \times I).
   \end{align*}  
 \end{Definition}
 
 \begin{Lemma}
   For $A \subseteq \GG^{|x|}, B \subseteq \GG^{|y|}$
   if $\phi$ is a boolean combination of formulas from $\Phi$ then
-  \begin{align*}
-    \abs{\phi(A, B)} \leq \abs{\Phi(A, B)}
-  \end{align*}  
+    $\abs{\phi(A, B)} \leq \abs{\Phi(A, B)}$.
 \end{Lemma}
 \begin{proof}
-  Clear, as for all $a \in A, b \in B$ the set $\Phi(a,b)$ determines the truth value of $\phi(a,b)$.
+  Clear, as for all $a \in A, b \in B$ the set
+  \begin{align*}
+    \Phi(a, b) = \curly{i \in I \mid \GG \models \phi_i(a, b)}
+  \end{align*}
+  determines the truth value of $\phi(a,b)$.
 \end{proof}
 
-Thus it suffices to bound  $\abs{\Phi(\AX, \GGY)}$.
+Thus it suffices to bound  $\abs{\Phi(\AX, \GGY)}$ in terms of $\Phi, |A|$.
+Below we fix $A \subset \GG$.
 
-\begin{Definition} \;
+\begin{Definition} \label{def_e}\ 
   \begin{itemize}
-  \item For all $i \in I, a \in \AX, b \in \GGY$ if $\phi_i(a, b)$ holds fix $W^i_{a,b} \subseteq \GG$, a witness of this formula.
+  \item For all $i \in I, a \in \AX, b \in \GGY$ if $\phi_i(a, b)$ holds fix $W^i_{a,b} \subseteq \GG$, a witness of $\phi_i(a, b)$.
   \item For $b \in \GGY$ let 
     \begin{align*}
       W_b = \bigcup \curly{W^i_{a,b} \mid a \in \AX, i \in I, \GG \models \phi_i(a,b)}.
     \end{align*}
-  \item For sets $C, B \subset \GG$ define the \defn{boundary} of $C$ over $B$
+  \item Suppose $A, B$ are subgraphs of $\DB$ such that $v(A), v(B)$ are disjoint.
+    Then define $\E(A, B)$ to be the number of edges between the vertices in $v(A)$ and the vertices in $v(B)$.
+  \item For $C, B \subset \GG$ define the \defn{boundary} of $C$ over $B$
     \begin{align*}
-      \partial(C, B) = \curly{b \in B \mid \E(b, C - B) \neq \emptyset}
+      \partial(C, B) = \curly{b \in B \mid \E(b, C - B) \neq 0} \subset B.
     \end{align*}
-    (see Definition \ref{def_e} for $\E$).
-  \item For $b \in \GGY$ let $\partial_b \subseteq A$ be the boundary $\partial(W_b, A)$.
-  \item For $b \in \GGY$ let $\bar W_b = (W_b - A) \cup \ppp_b$.
+    % (see Definition \ref{def_e} for $\E$).
+  \item For $b \in \GGY$ let $\partial_b = \partial(W_b, A) \subset A$.
+  \item For $b \in \GGY$ let ${\mybar W}_b = (W_b - A) \cup \ppp_b$.
   \item For $b_1, b_2 \in \GGY$ we say that $b_1 \sim b_2$ if $\ppp_{b_1} = \ppp_{b_2}$,
     $b_1 \cap A = b_2 \cap A$,
-    and there exists a graph isomorphism from $\bar W_{b_1} \cup b_1$ to $\bar W_{b_2} \cup b_2$ that fixes $\ppp_{b_1}$ and
+    and there exists a graph isomorphism from ${\mybar W}_{b_1} \cup b_1$ to ${\mybar W}_{b_2} \cup b_2$
+    (here, and from now on, we treat tuples as subgraphs)
+    that fixes $\ppp_{b_1}$ and
     maps $b_1$ to $b_2$.
     One easily checks that this defines an equivalence relation.
   \item For $b \in \GGY$ define $\II_b$ to be the $\sim$-equivalence class of $b$.
@@ -697,10 +715,10 @@ Thus it suffices to bound  $\abs{\Phi(\AX, \GGY)}$.
 \end{Lemma}
 
 \begin{proof}
-  Fix a graph isomorphism $\bar f \colon \bar W_{b_1} \cup b_1 \arr \bar W_{b_2} \cup b_2$.
+  Fix a graph isomorphism $\bar f \colon {\mybar W}_{b_1} \cup b_1 \arr {\mybar W}_{b_2} \cup b_2$.
   Extend it to an isomorphism $f \colon W_{b_1} \cup A \arr W_{b_2} \cup A$ by being an identity map on the new vertices.
   Suppose $\GG \models \phi_i(a, b_1)$ for some $a \in \AX$.
-  Then $f(W^i_{a, b_1})$ is a witness for  $\phi_i(a, b_2)$ (though not necessarily equal to $W^i_{a, b_2}$)
+  Then $f(W^i_{a, b_1})$ is a witness of $\phi_i(a, b_2)$ (though not necessarily equal to $W^i_{a, b_2}$)
   and thus $\GG \models \phi_i(a, b_2)$.
   As $a$ was arbitrary, this proves the equality of the traces.
 \end{proof}
@@ -712,32 +730,33 @@ Thus to bound the number of traces it is sufficient to bound the number of possi
   Let $Y = \abs{b - A}$.
   Then
   \begin{align*}
-    |\partial_b| &\leq Y D_1(\phi) \\ 
-    |\bar W_b| &\leq 3 Y D_1(\phi)
+    |\partial_b| &\leq \floor{Y \DOPHI }\\ 
+    |{\mybar W}_b| &\leq \floor{3 Y \DOPHI}
   \end{align*}
 \end{Theorem}
 
 From this theorem we get the desired result:
 \begin{Corollary} (Theorem \ref{upper})
-  If $\phi$ is a boolean combination of formulas from $\Phi$, then $\vc(\phi) \leq D(\Phi)$.
+  If $\phi$ is a boolean combination of formulas from $\Phi$, then $\vc(\phi) \leq \DPHI$.
 \end{Corollary}
 
-\begin{proof}
+\begin{proof} [Proof of Theorem \ref{upper} is based on Theorem \ref{main_bound}]
   We count possible equivalence classes of $\sim$.
-  This essentially boils down to bounding possibilities for $\partial_b$, $b \cap A$, and number of isomorphism classes of $W_b$.
+  This amounts to bounding the possibilities for $\partial_b$, $b \cap A$, and the number of isomorphism classes of $W_b$.
   Fix $b \in \GGY$ and let $Y = \abs{b - A}$.
-  Let $D = Y D_1(\Phi)$.
+  Let $D = \floor{Y \DOPHI}$, and $D' = \floor{3Y \DOPHI}$.
   By the first part of Theorem \ref{main_bound} there are $N \choose D$ choices for boundary $\partial_b$.
-  By the second part of Theorem \ref{main_bound} there are at most $3D$ vertices in $\bar W_b$.
-  Thus to determine the graph $\bar W_b$ we need to choose how many vertices it has and then decide where edges go.
-  This amounts to at most $3D 2^{(3D)^2}$ choices.
+  By the second part of Theorem \ref{main_bound} there are at most $D'$ vertices in ${\mybar W}_b$.
+  Thus to determine the graph ${\mybar W}_b$ we need to choose how many vertices it has and then decide where edges go.
+  This amounts to at most $D' 2^{(D')^2}$ choices.
   Additionally there are $N \choose |y| - Y$ choices for $b \cap A$.
+  Let $D_1(\Phi) = \DOPHI, D(\Phi) = \DPHI$.
   In total this gives us at most
   \begin{align*}
-    &{N \choose D} \cdot {N \choose |y| - Y} \cdot 3D 2^{(3D)^2} = O(N^{D + |y| - Y}) = \\
-    &= O(N^{Y D_1(\Phi) + |y| - Y}) = O(N^{|y| D_1(\Phi)}) = O(N^{D(\Phi)})
+    &{N \choose D} \cdot {N \choose |y| - Y} \cdot D' 2^{(D')^2} = O(N^{D + |y| - Y}) = \\
+    &= O(N^{\floor{Y \DOPHI} + |y| - Y}) = O(N^{\floor{|y| D_1(\Phi)}}) = O(N^{D(\Phi)})
   \end{align*}
-  choices (second to last inequality uses $D_1(\Phi) \geq 1$).
+  choices (second to last inequality uses $\DOPHI \geq 1$).
   By Lemma \ref{bound_trace} we have $\abs{\Phi(\AX, \GGY)} = O(N^{D(\Phi)})$.
   Recall that 
   \begin{align*}
@@ -748,16 +767,15 @@ From this theorem we get the desired result:
     \abs{\phi(A_0, \GGY)} &= O(N^{D(\Phi)}) = O(\paren{|x| N_0 M}^{D(\Phi)}) = \\
     &= O(\paren{|x| M}^{D(\Phi)} N_0^{D(\Phi)}) = O(N_0^{D(\Phi)}).
   \end{align*}
-  As $A_0$ was arbitrary, this shows that $\vc(\phi) \leq D(\Phi)$ as needed.
-  (Note that throughout this proof we are using the fact that quantities $D_1(\Phi), D(\Phi), M$ are completely determined by $\Phi$,
+  As $A_0$ was arbitrary, this shows that $\vc(\phi) \leq \DPHI$ as needed.
+  (Note that throughout this proof we are using the fact that quantities $\K(\Phi), \epsilon(\Phi), M$ are completely determined by $\Phi$,
   thus independent from $A_0$.)
 \end{proof}
 
 \begin{proof} \textit{(of Theorem \ref{main_bound})}
-
-  The graph $W_b$ is a union of witnesses of the from $W_{a,b}$ for some $a \in \AX, b \in \GGY$.
+  The graph $W_b$ is a union of witnesses of the form $W_{a,b}$ for some $a \in \AX, b \in \GGY$.
   Enumerate all of them as $\curly{W_j}_{1 \leq j \leq J}$.
-  Define $M_j = \bigcup_1^j W_{j'}$ for $1 \leq j \leq J$ and let $M_0 = b$.
+  Define $M_j = \bigcup_{k=1}^j W_{k}$ for $1 \leq j \leq J$ and let $M_0 = b, M_{-1} = \emptyset$.
   Let $\BA = A \cup b$.
   \begin{Definition}
     For $0 \leq j \leq J$ define:
@@ -769,10 +787,9 @@ From this theorem we get the desired result:
       $E_j = \partial(A - W_j, M_j - A)$.
     \item Let
       \begin{align*}
-        m_j = \sum_{j' = 0}^j (v_j + |E_j|).
+        m_j = \sum_{k = 0}^j (v_j + |E_j|).
       \end{align*}
     \end{itemize}
-    (Here assume $M_{-1} = \emptyset$.)
   \end{Definition}
 
   \begin{Lemma} \label{ubd_lemma}
@@ -783,8 +800,8 @@ From this theorem we get the desired result:
   \end{Lemma}
 
   \begin{proof} %\textit{(of Lemma \ref{ub_lemma})}
-    Proceed by induction. The base case $j = 0$ is clear.
-    For an induction step suppose that
+    Proceed by induction on $j = 0, \ldots, J$. The base case $j = 0$ is clear.
+    For the inductive step suppose that
     \begin{align*}
       |\partial(M_{j-1}, A)| \leq m_{j-1}  K(\Phi)
     \end{align*}
@@ -792,13 +809,13 @@ From this theorem we get the desired result:
     Let
     \begin{align*}
       \delta_1 &= \partial(M_j, A) - \partial(M_{j-1}, A) = \\
-               &=\curly{a \in A \mid  \E(a, M_j - A) \neq \emptyset \text{ and } \E(a, M_{j-1} - A) = \emptyset}.
+               &=\curly{a \in A \mid  \E(a, M_j - A) \neq 0 \text{ and } \E(a, M_{j-1} - A) = 0}.
     \end{align*}
     If $M_j - A = M_{j-1} - A$ then $\delta_1 = \emptyset$ and we are done as $m_j$ is increasing.
     Suppose not.
     We have $|\delta_1| = |\delta_1 \cap W_j| + |\delta_1 - W_j|$, and
     \begin{align*}
-      \delta_1 - W_j = \curly{a \in A - W_j \mid \E(a, M_j - A) \neq \emptyset \text{ and } \E(a, M_{j-1} - A) = \emptyset}.
+      \delta_1 - W_j = \curly{a \in A - W_j \mid \E(a, M_j - A) \neq 0 \text{ and } \E(a, M_{j-1} - A) = 0}.
     \end{align*}
     But then it's clear that $\delta_1 - W_j \subseteq E_j$ as
     \begin{align*}
@@ -818,15 +835,15 @@ From this theorem we get the desired result:
   \begin{Lemma} \label{ub_lemma}
     For $0 \leq j \leq J$ we have
     \begin{align*}
-      |M_j - \BA| \leq \sum_{j'=0}^j v_{j'} K(\Phi)
+      |M_j - \BA| \leq \sum_{k=0}^j v_{k} K(\Phi)
     \end{align*}
   \end{Lemma}
 
   \begin{proof} %\textit{(of Lemma \ref{ub_lemma})}
-    Proceed by induction. The base case $j = 0$ is clear.
-    For an induction step suppose that
+    Proceed by induction on $j = 0, \ldots, J$. The base case $j = 0$ is clear.
+    For the inductive step suppose that
     \begin{align*}
-      |M_{j-1} - \BA| \leq \sum_{j'=0}^{j-1} v_{j'} K(\Phi)
+      |M_{j-1} - \BA| \leq \sum_{k=0}^{j-1} v_{k} K(\Phi)
     \end{align*}
     holds.
     If $M_j - \BA = M_{j-1} - \BA$ then the inequality is immediate as $v_j \geq 0$.
@@ -842,8 +859,8 @@ From this theorem we get the desired result:
     \end{align*}
   \end{Lemma}
   \begin{proof}
-    Proceed by induction. Base case $j = 0$ is clear.    
-    For an induction step suppose that
+    Proceed by induction on $j = 0, \ldots, J$. The base case $j = 0$ is clear.
+    For the inductive step suppose that
     \begin{align*}
       \dim(M_{j-1} \cup \BA / \BA) \leq  - m_{j-1}  \epsilon(\Phi)
     \end{align*}
@@ -905,7 +922,7 @@ From this theorem we get the desired result:
   \end{align*}
   By Lemma \ref{ub_lemma} we have
   \begin{align*}
-    \abs{M_{j+1} - A} &\leq \paren{\sum_{j'=1}^{j+1} v_{j'}} K(\Phi) \leq (m_j + 1) K(\Phi) \\
+    \abs{M_{j+1} - A} &\leq \paren{\sum_{k=1}^{j+1} v_{k}} K(\Phi) \leq (m_j + 1) K(\Phi) \\
                      &\leq \paren{\frac{Y - |E_0| \alpha}{\epsilon(\Phi)} + 1} K(\Phi) \leq S.
   \end{align*}
   This is a contradiction, as $A$ is $S$-strong and $\dim(M_{j+1} \cup A / A)$ is negative.
@@ -917,20 +934,22 @@ From this theorem we get the desired result:
   \end{align*}
   As $K(\Phi) \geq 1$ and $\epsilon(\Phi) \geq \alpha$, we get
   \begin{align*}
-      |\ppp_b| \leq K(\Phi) \frac{Y}{\epsilon(\Phi)} = Y D_1(\Phi).
+      |\ppp_b| \leq K(\Phi) \frac{Y}{\epsilon(\Phi)} \leq Y \frac{K(\Phi)}{\epsilon(\Phi)}.
   \end{align*}
+  As $|\ppp_b|$ is an integer we have $|\ppp_b| \leq \floor{Y \DOPHI}$.
   But this is precisely the first inequality we need to prove.
   For the second inequality, Lemma \ref{ub_lemma} gives us
   \begin{align*}
-    \abs{W_b - \BA} &\leq Y + \paren{\sum_{j'=0}^J v_{j'}} K(\Phi) \leq Y + m_J K(\Phi) \leq \\
-    &\leq Y + K(\Phi) \frac{Y}{\epsilon(\Phi)} \leq 2 Y D_1(\Phi).
+    \abs{W_b - \BA} &\leq Y + \paren{\sum_{k=0}^J v_{k}} K(\Phi) \leq Y + m_J K(\Phi) \leq \\
+    &\leq Y + K(\Phi) \frac{Y}{\epsilon(\Phi)} \leq 2Y \frac{K(\Phi)}{\epsilon(\Phi)} \leq 2 Y \DOPHI.
   \end{align*}
+  As $\abs{W_b - \BA}$ is an integer we have $\abs{W_b - \BA} \leq \floor{2 Y \DOPHI}$.
   Thus we have
   \begin{align*}
-      |\bar W_b| \leq \abs{W_b - A} + \abs{\ppp_b} \leq 3 Y D_1(\Phi),
+      |{\mybar W}_b| \leq \abs{W_b - A} + \abs{\ppp_b} \leq \floor{3 Y \DOPHI},
   \end{align*}
   as needed.
-  This ends the proof for Theorem \ref{main_bound}.
+  This ends the proof of Theorem \ref{main_bound}.
 \end{proof}
 
 
@@ -948,17 +967,20 @@ It is this author's hope that a refinement of presented techniques can yield bet
 One potential direction towards this goal is to have a closer study on
 how multiple minimal extensions can intersect without increasing overall dimension.
 
+One direction for future work is to ask what these bounds on vc-density can tell about structure in large finite random graphs, along the lines of results in \cite{anthony}.
+
 Note that this paper doesn't answer the question whether there can be exotic values for vc-density of individual formulas,
 such as non-integer or irrational values.
-A better bound can help address this question.
-
+A better bound can help address this.
+\begin{openq}
+  In Shelah-Spencer graphs can a formula have non-integer or irrational vc-density?
+\end{openq}
 Another observation is that while $\vc(n) = \infty$ there seems to be a good structural behavior of the vc-density for individual formulas.
-This perhaps suggests that the vc-function is not the best tool to describe behaviour of the definable sets in Shelah-Spencer graphs,
+This suggests that perhaps the vc-function is not the best tool to describe behaviour of the definable sets in Shelah-Spencer graphs,
 and some more refined measure might be required.
 One potential way to do this is to separate the formulas based on values of $K(\phi), \epsilon(\phi)$.
 Once those are bounded, vc-density seems to be well-behaved.
-This author hopes to explore this further in his future work.
-
+The author hopes to explore this further in his future work.
 
 \bibliography {../thesis_ref}    % bibliography references
 \bibliographystyle {plain}

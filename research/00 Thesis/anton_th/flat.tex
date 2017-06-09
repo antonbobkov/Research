@@ -1,32 +1,39 @@
-\chapter{Dp-minimality in Flat Graphs}
+\chapter{Dp-minimality in Superflat Graphs}
+Superflat graphs were introduced in \cite{stable_graphs} as a natural class of stable graphs.
+This family of graphs comes up in a combinatorial context as nowhere dense graphs, see \cite{adleradler} and \cite{nowhere}.
+In this chapter we prove that superflat graphs are dp-minimal.
+It may be possible to prove dp-minimality by combining a characterization of dp-minimality in stable theories studied in \cite{dpstable}
+with the results on forking in superflat graphs given in \cite{ivanov}.
+Here, however, we present a direct proof using the characterization of dp-minimality by Lemma \ref{dp_min_simon}.
 
-In this chapter we show that the theory of superflat graphs is dp-minimal.
+Sec\-tion~1 gives all the necessary combinatorial and model-theoretic definitions.
+In addition, we list several basic results involving connectivity hulls and superflat graphs.
+In Sec\-tion~2 we study how to expand parameter sets of indiscernible sequences to increase distance between the elements of those sequences.
+Sec\-tion~3 applies a special case of this result to show dp-mimality via Lemma \ref{dp_min_simon}.
+In the concluding section we outline directions for the future work.
 
 \section{Preliminaries}
-
-Superflat graphs were introduced in \cite{stable_graphs} as a natural class of stable graphs. Here we present a direct proof showing dp-minimality.
-
 First, we introduce some basic graph-theoretic definitions.
 \begin{Definition}
-  Work in a possibly infinite graph $\GG$. Let $A, B, S, V \subseteq G$ where $G$ is the set of vertices of $G$.
+  Work in a possibly infinite graph $\GG$. Let $A, B, S, V \subseteq G$ where $G$ is the set of vertices of $\GG$.
   \begin{enumerate}
   \item A \defn{path} is a subgraph of $\GG$ with distinct vertices $v_0, v_1, \ldots, v_n$ and an edge between $v_{i-1}, v_i$ for all $i = 1, \ldots n$.
     It is called a path from $A$ to $B$ if $v_0 \in A$ and $v_n \in B$.
-    A \defn{length} of such a path is $n$.
+    The \defn{length} of such a path is $n$.
   \item Two paths are \defn{disjoint} if, excluding endpoints, they have no vertices in common.
-  \item For $a,b \in G$ define the \defn{distance} $d(a,b)$ to be the length of the shortest path from $a$ to $b$ in $G$.
+  \item For $a,b \in G$ define the \defn{distance} $d(a,b)$ between $a$ and $b$ to be the length of the shortest path from $a$ to $b$ in $G$.
     If no such path exists then the distance is infinite.
   \item For $a,b \in G - A$ define $d_A(a,b)$ to be the distance between $a$ and $b$ in the subgraph of $\GG$
-    induced on the vertices $G - A$. Equivalently it is the shortest path between $a$ and $b$ that avoids vertices in $A$.
+    induced on the set of vertices $G - A$. Equivalently it is the shortest path between $a$ and $b$ that avoids vertices in $A$.
   \item We say that $S$ \defn{separates} $A$ from $B$ if there exists $a \in A - S$, $b \in B - S$, with $d_S(a,b) = \infty$.
   \item We say that $A$ \defn{separates} $V$ if it separates $V$ from itself.
   \item We say that $V$ has \defn{connectivity} $n$ if there is a set of size $n$ that separates $V$,
     but there are no sets of size $n-1$ that separate $V$.
-  \item Suppose $V$ has connectivity $n$. \defn{A connectivity hull} of $V$ is defined to be the union of all sets of size $n$ separating $V$.
+  \item Suppose $V$ has connectivity $n$. The \defn{connectivity hull} of $V$ is defined to be the union of all sets of size $n$ separating $V$.
   \end{enumerate}
 \end{Definition}
 
-In \cite{infinite_megner} we find a generalization of Megner's Theorem for infinite graphs:
+In \cite{infinite_megner} we find a generalization of Menger's Theorem for infinite graphs:
 
 \begin{Theorem} \label{megner}
   Let $A$ and $B$ be two sets of vertices in a possibly infinite graph. Then there exists a set $P$ of disjoint paths from $A$ to $B$, and a set $S$ of vertices separating $A$ from $B$, such that $S$ consists of a choice of precisely one vertex from each path in $P$.
@@ -48,10 +55,14 @@ We use the following easy consequences:
 
 \begin{Definition} \ 
   \begin{itemize}
-    \item A graph $K^m_n$ denotes a graph obtained from a complete graph on $n$ vertices by adding $m$ vertices to every edge.
+  \item $K^m_n$ denotes the graph obtained from a complete graph on $n$ vertices by adding $m$ vertices to every edge.
+    $K^m_\infty$ denotes the same construction on a complete graph with an infinite countable number of vertices.
+    \item A graph is called \defn{flat} if for every $m \in \N$ the graph avoids $K^m_\infty$ as a subgraph. 
     \item A graph is called \defn{superflat} if for every $m \in \N$ there is $n \in \N$ such that the graph avoids $K^m_n$ as a subgraph. 
   \end{itemize}
 \end{Definition}
+It is easy to see by compactness that a graph is superflat if and only if there is an elementary extension which is flat.
+By the same line of reasoning, in uncountably saturated structures notions of flatness and superflatness coincide.
 
 Theorem 2 in \cite{stable_graphs} gives a useful characterization of the superflat graphs.
 
@@ -65,18 +76,23 @@ Theorem 2 in \cite{stable_graphs} gives a useful characterization of the superfl
 
 Roughly, in superflat graphs every infinite set contains a sparse infinite subset (possibly after throwing away finitely many nodes).
 
+We also note the stability result:
+\begin{Theorem} [see Corollary 10 in \cite{stable_graphs}]
+  Every superflat graph is stable.
+\end{Theorem}
+
 \section{Indiscernible sequences}
 
-Fix an uncoutable cardinal $\kappa$.
+Fix an uncountable cardinal $\kappa$.
 Work in a superflat graph $\SS$ that is $\kappa$-saturated and strongly $\kappa$-homogeneous.
 Fix a parameter set $A \subset S$ with $|A| < \kappa$.
-Let $I = (a_i)_{i \in \I}$ be a countable $A$-indiscernible sequence.% of singletons (that is $|a_i| = 1$).
+Let $I = (a_i)_{i \in \I}$ be a countable $A$-indiscernible sequence.
 Stability implies that $I$ is totally indiscernible (see Lemma \ref{totally}).
 
 \begin{Definition} \ 
   \begin{itemize}
   \item For a subsequence $\J \subset \I$ let $a(\J)$ denote the tuple obtained by concatenating $(a_j)_{j \in \J}$.
-  \item Let $m$ be the arity of elements of $I$, that is $a_i \in S^m$.
+  \item Let $m$ be the arity of elements of $I$, that is, $a_i \in S^m$.
     We call a set $H \subseteq S$ \defn{uniformly definable} from $I$ if there
     is a formula $\phi(x, y_1, \ldots, y_k)$ with $|y_i| = m$
     such that for every $\J \subseteq \I$ of size $k$ we have $H = \phi(G, a(\J))$.
@@ -86,7 +102,7 @@ Stability implies that $I$ is totally indiscernible (see Lemma \ref{totally}).
 First suppose that $I$ consists of singletons, that is $a_i \in S$.
 
 \begin{Definition}
-  Let $V \subseteq S$. Define $P_n(V)$, a subgraph of $\SS$, to be a union of all paths of length $\leq n$ between the vertices of $V$.
+  Let $V \subseteq S$. Define $P_n(V)$, a subgraph of $\SS$, to be the union of all paths of length $\leq n$ between the vertices of $V$.
 \end{Definition}
 
 \begin{Lemma} \label{lm_bump}
@@ -101,7 +117,7 @@ First suppose that $I$ consists of singletons, that is $a_i \in S$.
   By a \ref{th_superflat_equivalence} we can find an infinite $\J \subseteq \I$ and a finite set $B'$
   such that each pair from $J = (a_j)_{j \in \J}$ has distance $>n$ over $B'$.
   By total indiscernibility there exists an automorphism mapping $J$ to $I$ and fixing $A$.
-  Image of $B'$ under this automorphism is the required set $B$.
+  The image of $B'$ under this automorphism is the required set $B$.
 \end{proof}
 
 In other words, $B$ separates $I$ when viewed inside the subgraph $P_n(I)$.
@@ -111,17 +127,17 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
 
 \begin{Definition}
   Given a graph $\GG$ and $V \subseteq G$ define $H(\GG, V) \subseteq G$ to be the connectivity hull of $V$ in $\GG$.
-  Note that if $V$ is finite, we have that $H(P_n(V), V)$ is $V$-definable.
+  Note that if $V$ is finite, then $H(P_n(V), V)$ is $V$-definable.
 \end{Definition}
 
 \begin{Lemma} \label{lm_uniform}
-  Let $H$ be the connectivity hull of $I$ inside of graph $P_n(I)$, that is $H = H(P_n(I), I)$.
+  Let $H$ be the connectivity hull of $I$ inside the graph $P_n(I)$, that is, $H = H(P_n(I), I)$.
   Then $H$ is uniformly definable from $I$ in $\SS$.
 \end{Lemma}
 
 \begin{proof}
-  Using total indiscernability we may assume without the loss of generality that $I$ is indexed by $\N$.
-  Let $I_i = \{a_0, a_1, \ldots, a_{i-1}\}$ a finite segment of the sequence.
+  Using total indiscernibility we may assume without the loss of generality that $I$ is indexed by $\N$.
+  Let $I_i = \paren{a_0, a_1, \ldots, a_{i-1}}$ a finite subsequence of the sequence $I$.
   Let $N$ be the connectivity of $I$ inside of $P_n(I)$.
   % Define $H_i = H(P_n(I_i), I_i)$.
   % It is $I_i$-definable.
@@ -153,8 +169,8 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
   Let $M = \max(M_1, M_2, M_3)$.
   Then for $i \geq M$ the set $P_n(I_i)$ contains all the $N$-element sets separating $I$ in $P_n(I)$,
   those sets separate $I_i$ in $P_n(I_i)$,
-  and the connectity of $I_i$ in $P_n(I_i)$ is at most $N$.
-  But this means that the connectity of $I_i$ in $P_n(I_i)$ has to be exactly $N$, and $H(P_n(I), I) \subseteq H(P_n(I_i), I_i)$.
+  and the connectivity of $I_i$ in $P_n(I_i)$ is at most $N$.
+  But this means that the connectivity of $I_i$ in $P_n(I_i)$ has to be exactly $N$, and $H(P_n(I), I) \subseteq H(P_n(I_i), I_i)$.
 
   For $i \geq M$ define
   \begin{align*}
@@ -176,8 +192,8 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
   Now we need to show uniform definability.
   Suppose $I'$ is a subsequence of $I$ of length $i$.
   There is an automorphism mapping $I_i$ to $I'$ that fixes $I$ setwise.
-  But then it has to fix $H(P_n(I), I)$ setwise.
-  Then it maps $I_i$-definition of $H(P_n(I), I)$ to a $I'$-definition of $H(P_n(I), I)$.
+  But this automorphism has to fix $H(P_n(I), I)$ setwise,
+  so it maps an $I_i$-definition of $H(P_n(I), I)$ to an $I'$-definition of $H(P_n(I), I)$.
   As $I'$ was arbitrary this shows uniformity.
 \end{proof}
 
@@ -221,7 +237,7 @@ More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a
 \end{Definition}
 
 \begin{Lemma} \label{cr_bump}
-  The sequence $I$ is indiscernible over the $A \cup B_n$.
+  The sequence $I$ is indiscernible over $A \cup B_n$.
 \end{Lemma}
 
 \begin{proof}
@@ -234,7 +250,7 @@ More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a
   Fix such a subsequence $\J$.
 
   Let $\psi(x_1, \ldots, x_l ,y)$ be an arbitrary $A$-formula with $|x_i| = m$. 
-  Consider a collection of traces (i.e a collection of subsets of $B_n^{|y|}$)
+  Consider the collection of traces (i.e a collection of subsets of $B_n^{|y|}$)
   \begin{align*}
     \curly{\psi(a(\J'), B_n^{|y|}) \mid \text{ $\J'$ a subsequence of $\I$ of length $l$ disjoint from $\J$}}.
   \end{align*}
@@ -267,7 +283,7 @@ More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a
   \begin{align*}
     d_{B_n}(\tpl{a_i}{k}, \tpl{a_j}{l}) \leq n/2.
   \end{align*}
-  As $B_n$ is uniformly $I$-definable, by total indiscernability we have that this inequality holds for all $i \neq j$.
+  As $B_n$ is uniformly $I$-definable, by total indiscernibility we have that this inequality holds for all $i \neq j$.
   Assuming for convenience that $I$ is enumerated by naturals, let $b_1 = \tpl{a_1}{k}$, $b_2 = \tpl{a_2}{l}$, $b_3 = \tpl{a_3}{k}$
   (note the superscripts).
   Then we have
@@ -313,8 +329,8 @@ Thus $I$ can be upgraded to have infinite distance over its parameter set.
 \section{Superflat graphs are dp-minimal}
 
 \begin{Definition}
-  For $B \subseteq S$ define an equivalence relation $\sim_B$ on $S - B$.
-  Two vertices $b,c$ are $\sim_B$-equivalent if $d_B(b,c)$ is finite.
+  For $B \subseteq S$ define an equivalence relation $\sim_B$ on $S - B$ as follows:
+  two vertices $b,c$ are $\sim_B$-equivalent if $d_B(b,c)$ is finite.
 \end{Definition}
 
 \begin{Lemma}
@@ -341,7 +357,7 @@ Thus $I$ can be upgraded to have infinite distance over its parameter set.
 \begin{Lemma} \label{exclude}
   % Let $G$ be a flat graph with $(a_i)_{i\in\Q}$ indiscernible over $A$ and $b \in G$.
   Let $b \in G$.
-  There exists $c \in \I$ such that all $(a_i)_{i\in\{\I - c\}}$ have the same type over $Ab$.
+  There exists $c \in \I$ such that all $(a_i)_{i \in \I - c}$ have the same type over $Ab$.
 \end{Lemma}
 
 \begin{proof}
@@ -356,7 +372,7 @@ Thus $I$ can be upgraded to have infinite distance over its parameter set.
 
 
 \begin{Theorem} \label{flat_dp_thm}
-  Flat graphs are dp-minimal.
+  Superflat graphs are dp-minimal.
 \end{Theorem}
 \begin{proof}
   It suffices to show that $\SS$ is dp-minimal.
@@ -367,12 +383,12 @@ Thus $I$ can be upgraded to have infinite distance over its parameter set.
 \end{proof}
 
 \section{Conclusion}
-The determination of dp-minimality is the first step towards establishing bounds on vc-density.
-It is this author's hope that the simple structure of flat graphs yields nicely behaved vc-density.
+The determination of dp-minimality is the first step towards establishing bounds on VC-density.
+It is this author's hope that the simple structure of superflat graphs yields nicely behaved VC-density.
 We pose the following question for the future work:
 \begin{openq} 
-  What are bounds on vc-function $\vc(n)$ in flat graphs?
+  What are bounds on VC-density function $\vc(n)$ in superflat graphs?
   In particular do we have $\vc(1) = 1$ or $\vc(n) = n \vc(1)$?
-  Are the bounds better in specific classes of flat graphs,
+  Are the bounds better in specific classes of superflat graphs,
   such as planar graphs, graphs with bounded tree-width, or graphs excluding certain classes of subgraphs?
 \end{openq}
