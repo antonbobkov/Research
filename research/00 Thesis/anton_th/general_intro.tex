@@ -37,13 +37,13 @@ tend to have VC-density bounded by above by $n$, a simple linear behavior.
 In a lot of cases (including the $p$-adic numbers) this bound is not known to be optimal.
 My research concentrates on improving those bounds and adapting those techniques to compute VC-density in other common NIP structures of interest to mathematicians.
 
-Some other well behaved NIP structures of a combinatorial flavor are Shelah-Spencer graphs and flat graphs.
+Some other well behaved NIP structures of a combinatorial flavor are Shelah-Spencer graphs and superflat graphs.
 Shelah-Spencer graphs are limit structures for random graphs arising naturally in a combinatorial context.
 Their model theory was studied Shelah and Spencer in 1988 \cite{spencer} and then refined by Baldwin, Shi, and Shelah in 1997 \cite{shi}, \cite{baldwin}.
 Later work of Laskowski in 2006 \cite{laskowski} provided a quantifier simplification result.
- Flat graphs were introduced by Podewski-Ziegler in 1978, who also showed that those are stable \cite{stable_graphs}, and later results gave a criterion for super stability \cite{ultraflat}.
-Flat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}.
-%Shelah-Spencer graphs and flat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
+ Superflat graphs were introduced by Podewski-Ziegler in 1978, who also showed that those are stable \cite{stable_graphs}, and later results gave a criterion for super stability \cite{ultraflat}.
+Superflat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}.
+%Shelah-Spencer graphs and superflat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
 
 The first chapter of my dissertation introduces some basics of model theory and defines VC-density and VC-dimension.
 
@@ -61,9 +61,9 @@ I show that VC-density is linear for an additive reduct of $p$-adic numbers
 using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduct}.
 % I will explore other reducts described in that paper, to see if my techniques apply to those as well.
 
-In chapter five I investigate flat graphs using the work of
+In chapter five I investigate superflat graphs using the work of
 Podewski-Ziegler \cite {stable_graphs}.
-I am able to show that flat graphs are dp-minimal, an important first step before establishing bounds on VC-density.
+I am able to show that superflat graphs are dp-minimal, an important first step before establishing bounds on VC-density.
 
 \section{Basic Model Theory}
 
@@ -284,7 +284,7 @@ Here it is easiest for us to introduce dp-rank in terms of VC-density over indis
     \end{align*}
   \item The \defn{dp-rank} of an $\aleph_1$-saturated structure $\MM$ is $\leq n$ if $\vcind(\phi) \leq n$ for all formulas $\phi$.
   \item The \defn{dp-rank} of a theory $T$ is $\leq n$ if dp-rank is $\leq n$ for any (each) $\aleph_1$-saturated model of $T$.
-  \item A theory $T$ is said to have finite dp-rank if its dp-rank is $\leq n$ for some $n$.
+  \item A theory $T$ is said to have a finite dp-rank if its dp-rank is $\leq n$ for some $n$.
   \item A theory $T$ is \defn{dp-minimal} if its dp-rank $\leq 1$.
   \end{itemize}
 \end{Definition}

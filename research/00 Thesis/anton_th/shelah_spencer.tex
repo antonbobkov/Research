@@ -3,29 +3,26 @@ In this \chapa we investigate VC-density of definable sets in Shelah-Spencer gra
 We provide an upper bound on a formula-by-formula basis and show that there isn't a uniform lower bound,
 forcing the VC-density function to be infinite.
 In addition we show that Shelah-Spencer graphs do not have a finite dp-rank,
-in particular they are not dp-minimal.
+thus, in particular, they are not dp-minimal.
 
 
 A Shelah-Spencer graph is a limit of random structures $G(n, n^{-\alpha})$ for an irrational $\alpha \in (0,1)$.
 Here $G(n, n^{-\alpha})$ is a random graph on $n$ vertices with edge probability $n^{-\alpha}$.
-(The model theory of $G(n, n^{-\alpha})$ as $n \arr \infty$ is much less pleasant if $\alpha \in (0,1)$ is rational, see \cite{rational}.)
-In \cite{spencer} Shelah and Spencer showed that such structures have a $0-1$ law, thus obtaining
+(The model theory of $G(n, n^{-\alpha})$ as $n \to \infty$ is much less pleasant if $\alpha \in (0,1)$ is rational, see \cite{rational}.)
+In \cite{spencer} Shelah and Spencer showed that such structures have a 0-1 law, thus obtaining
 a complete (first-order) theory of Shelah-Spencer graphs.
 These structures are of a general combinatorial interest as well.
-For example, \cite{anthony} studies the VC-dimension of neighborhood sets in finite Shelah-Spencer graphs.
+For example, \cite{anthony} computes the VC-dimension of neighborhood sets in finite Shelah-Spencer graphs.
 Our treatment of Shelah-Spencer graphs closely follows the one in \cite{laskowski}.
 
-Our first result is that in Shelah-Spencer graphs
-\begin{align*}
-  \vc(n) = \infty \text{ for each } n.
-\end{align*}
+Our first result is that Shelah-Spencer graphs have $\vc(n) = \infty$ for each $n$.
 % We also show that Shelah-Spencer graphs don't have a finite dp-rank, which in particular implies that they are not dp-minimal.
-Our second result provides an upper bound on the VC-density of a given formula $\phi(x, y)$:
+Our second result gives an upper bound on the VC-density of a given formula $\phi(x, y)$:
 \begin{align*}
   \vc(\phi) \leq \DPHI
 \end{align*}
 where $K(\phi), \epsilon(\phi)$ are explicitly computable expressions involving the number of vertices and edges defined by $\phi$.
-For example let $\phi(x,y)$ be a formula that says that there is an edge between $x$ and $y$.
+For example, let $\phi(x,y)$ be a formula that says that there is an edge between $x$ and $y$.
 Our bound gives $\vc(\phi) \leq \floor{\frac{2}{\alpha}}$.
 With a more careful computation one can get the exact value $\vc(\phi) = \floor{\frac{1}{\alpha}}$ (see 4.9 in \cite{density}).
 
@@ -33,17 +30,17 @@ Sec\-tion~1 summarizes notation and basic facts concerning Shelah-Spencer graphs
 We direct the reader to \cite{laskowski} for a more in-depth treatment.
 In Sec\-tion~2 we introduce key lemmas that will be useful in our proofs.
 Sec\-tion~3 computes a lower bound for VC-density to demonstrate that $\vc(n) = \infty$.
-Here we also do computations involving dp-rank.
+We also do computations involving dp-rank.
 Sec\-tion~4 computes an upper bound for VC-density on a formula-by-formula basis.
 The concluding section discusses open questions and future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Graph Combinatorics}
-Throughout this \chapa $A, B, C, M$ (sometimes with decorations) will denote finite graphs,
-and $\DB$ will be used to denote potentially infinite graphs.
+Throughout this \chapa $A, B, C, M$ (sometimes with decorations) denote finite graphs,
+and $\DB$ be used to denote potentially infinite graphs.
 All graphs are undirected and asymmetric.
 For a graph $A$ the set of its vertices is denoted by $v(A)$, and the set of its edges by $e(A)$.
-The number of vertices of $A$ will be denoted by $|A|$.
+The number of vertices of $A$ be denoted by $|A|$.
 Subgraph always means induced subgraph and $A \subseteq \DB$ means that $A$ is a subgraph of $\DB$.
 For two subgraphs $A, B$ of a larger graph, the union $A \cup B$ denotes the graph induced by $v(A) \cup v(B)$.
 Similarly, $A - B$ means a subgraph of $A$ induced by the vertices of $v(A) - v(B)$.
@@ -67,7 +64,7 @@ For the remainder of the \chapa fix $\alpha \in (0,1)$, irrational.
     (Here an embedding is taken in the model-theoretic sense, of structures in the language of graphs, so each embedding
     maps edges to edges and nonedges to nonedges.)
     This theory is complete and stable (see 5.7 and 7.1 in \cite{laskowski}).
-    From now on fix an ambient model $\GG \models S_\alpha$.
+    From now on, fix an ambient model $\GG \models S_\alpha$.
     This will be the only infinite graph we work with.
     % We denote the set of its vertices by $G$.
   \item Given $S \in \N$, a graph $S \subseteq \GG$ is called \defn{$S$-strong}
@@ -80,7 +77,7 @@ For the remainder of the \chapa fix $\alpha \in (0,1)$, irrational.
     if $(M_i, M_{i+1})$ is a minimal pair for all $0 \leq i < n$.
   \item Suppose we have a graph $A$ with vertices $v(A) = \curly{x_1, \ldots, x_n}$ with pairwise disjoint $x_i$.
     For the variable tuple of vertices $x = (x_1, \ldots, x_n)$ let $\diag_A(x)$ be the atomic diagram of $A$,
-    i.e. the first-order formula recording whether there is an edge between every pair of vertices.
+    i.e. the first-order formula recording whether there is an edge or a nonedge between every pair of vertices.
     So for a graph $\DB$ and a tuple $a = (a_1, \ldots, a_n)$ we have $\DB \models \diag_A(a)$ if and only if
     there exists an embedding $f \colon A \arr \DB$ such that $f(x_i) = a_i$.
   % \item Suppose we have a graph $A$ with vertices $v(A) = \curly{a_1, \ldots, a_n}$.
@@ -97,7 +94,7 @@ For the remainder of the \chapa fix $\alpha \in (0,1)$, irrational.
     Work in a graph $\DB$.
     Suppose $\DB \models \phi_{A,B}(a)$ for some tuple $a = (a_1, \ldots, a_m)$
     and we have a finite subgraph $B' \subset \DB$ with vertices $v(B') = \curly{b_1, \ldots b_n}$
-    such that $b_i = a_i$ with $i = 1, \ldots, m$ and $\DB \models \diag_B(b)$.
+    such that $b_i = a_i$ for $i = 1, \ldots, m$ and $\DB \models \diag_B(b)$.
     In this case we call such a graph $B'$ a \defn{witness of $\phi_{A,B}(a)$}.
   \item A formula $\phi_{A,B}$ is called a \defn{basic formula}
     if there is a minimal chain $\agl{M_i}_{0 \leq i \leq n}$
@@ -112,7 +109,7 @@ For the remainder of the \chapa fix $\alpha \in (0,1)$, irrational.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Basic Definitions and Lemmas}
-We will require the following lemmas from \cite{laskowski}:
+We require the following lemmas from \cite{laskowski}:
 
 \begin{Lemma} \label{diamond} [See 2.3 in \cite{laskowski}]
   Let $A, B \subseteq \DB$.
@@ -146,7 +143,7 @@ We will require the following lemmas from \cite{laskowski}:
 \end{Lemma}
 
 We conclude this section by stating a couple of technical lemmas that will be useful in our proofs later.
-In those lemmas we work in an ambient graph $\DB$; all finite graphs that we are dealing with are subgraphs of $\DB$.
+In those lemmas we work in some ambient graph $\DB$; that is, all the finite graphs that come up are assumed to be subgraphs of $\DB$.
 
 \begin{Lemma} \label{minimal_over_set}
   Let $B$ be a graph and $(A, M)$ be a minimal pair with $A \subseteq B$ and $\dim(M/A) = -\epsilon$.
@@ -190,7 +187,7 @@ In those lemmas we work in an ambient graph $\DB$; all finite graphs that we are
 \end{proof}
 
 \begin{Lemma} \label{minimal_subset}
-  Let $(A, M)$ be a minimal pair with dimension $\epsilon$ and $B \subseteq M$.
+  Let $(A, M)$ be a minimal pair with dimension $\epsilon$ and let $B \subseteq M$.
   Then
   \begin{align*}
     \dim B / (A \cap B) \geq -\epsilon.    
@@ -232,8 +229,8 @@ In those lemmas we work in an ambient graph $\DB$; all finite graphs that we are
 \section{Lower bound}
 \begin{Definition} \label{def_basic}
   Suppose $\phi_{A,B}(x, y)$ is a basic formula.
-  Define $X$ to be the graph on vertices $x$ with edges defined by $\phi$
-  (equivalently it is a subgraph of $A$ induced by the vertices of $x$).
+  Define $X$ to be the graph on the vertices $x$ with edges defined by $\phi$
+  (equivalently it is a subgraph of $A$ induced by the vertices $x$).
   Similarly define $Y$.
   Note that $X$, $Y$ are positive as $A$ is positive.
   Additionally, let $Y'$ be a subgraph of $Y$ induced by vertices of $Y$ that are connected to $B - (X \cup Y)$.
@@ -241,7 +238,7 @@ In those lemmas we work in an ambient graph $\DB$; all finite graphs that we are
 
 In this section we restrict our attention to the following family of basic formulas $\phi(x,y)$:
 \begin{itemize}
-\item All formulas have $Y = Y$.% (see Definition \ref{def_basic}).
+\item All formulas have $Y' = Y$.% (see Definition \ref{def_basic}).
 \item All formulas define no edges between $X$ and $Y$.
 \item The minimal chain of $\phi(x,y)$ consists of one step, that is we only have one minimal extension as opposed to a chain of minimal extensions.
 \item The dimension of that minimal extension is smaller than $\alpha$.
@@ -250,7 +247,7 @@ In this section we restrict our attention to the following family of basic formu
 We obtain a lower bound for the formulas that are boolean combinations of basic formulas of this type written in disjunctive-normal form.
 First, define $\epsilon_L(\phi)$.
 
-\begin{Definition}
+\begin{Definition} \ 
   \begin{itemize}
   \item For a basic formula $\phi = \phi_{M_0, M_1}(x, y)$ let $\epsilon(\phi) = -\dim \paren{M_1/M_0}$.
   \item (Negation)
@@ -264,14 +261,15 @@ First, define $\epsilon_L(\phi)$.
     If both positive and negative formulas are present then $\epsilon_L(\phi) = \infty$.
     We don't have a lower bound for that case.
     If different formulas define $X$ or $Y$ differently then let $\epsilon_L(\phi) = \infty$.
-    In the case of conflicting definitions the formula would have no realizations.
-    Otherwise let
+    In the case of conflicting definitions, the formula would have no realizations.
+    Otherwise, let
     \begin{align*}
       \epsilon_L\paren{\bigwedge_i \phi_i} &= \sum_i \epsilon_L(\phi_i).
     \end{align*}
   \item  (Disjunction)
-    Take a collection of formulas $\psi_i$ where each instance is a conjunction as above all agreeing on $X$ and $Y$.
-    Then
+    Take a collection of formulas $\psi_i$ where each instance is a conjunction as above,
+    with all formulas agreeing on $X$ and $Y$.
+    Then let
     \begin{align*}
       \epsilon_L\paren{\bigvee \psi_i} &= \min \epsilon_L(\psi_i).
     \end{align*}
@@ -283,7 +281,7 @@ First, define $\epsilon_L(\phi)$.
   \begin{align*}
     \vc (\psi) \geq \floor{\frac{Y(\psi)}{\epsilon_L(\psi)}},
   \end{align*}
-  where $Y(\psi)$ is $\dim(Y)$ (as all basic components agree on $Y$).
+  where $Y(\psi) = \dim(Y)$ (well-defined, as all basic components agree on $Y$).
 \end{Theorem}
 \begin{proof}
   First, work with a formula that is a conjunction of positive basic formulas $\psi = \bigwedge_{i \in I} \phi_i$.
@@ -442,28 +440,30 @@ First, define $\epsilon_L(\phi)$.
     \begin{align*}
       |W' \cup W| - |A| \leq |W' - W| + |W| - |A| \leq S_1 + |b| + (n_1 + n_2) \sum_{i \in I} S_i \leq S,
     \end{align*}
-    but then this contradicts that $A$ is $S$-strong, as then we would have $A \leq W \cup W'$.
+    but then this is a contradiction as $A$ is $S$-strong but $A \not\leq W \cup W'$.
   \end{proof}
 
-  In the construction of $W$ we have chosen indices $J_1, J_2$ arbitrarily.
-  In particular, suppose we let $J_2$ to be the last $n_2$ indices of $J$ and
+  In the construction of $W$ we could have chosen the index sets $J_1, J_2$ arbitrarily.
+  In particular, suppose we let $J_2$ be the last $n_2$ indices of $J$ and
   $J_1$ an arbitrary $n_1$-element subset of the first $N - n_2$ elements of $J$.
   Each of those choices would then yield a different trace $\psi(A, b)$ by the lemma above.
   Thus $\psi(A, M^{|y|}) \geq {N - n_2 \choose n_1}$ and therefore $\vc(\psi) \geq n_1$.
   By the definition of $n_1$ we have $n_1 = \floor{\frac{Y(\psi)}{\epsilon_L(\psi)}}$, so this proves the theorem for $\psi$.
  
-  Now consider a formula which is a conjunction consisting of negative basic formulas $\psi = \bigwedge_{i \in I} \neg \phi_i$.
+  Now consider a formula which is a conjunction of negative basic formulas $\psi = \bigwedge_{i \in I} \neg \phi_i$.
   Let $\bar \psi = \bigwedge_{i \in I} \phi_i$.
   Do the construction above for $\bar \psi$ and suppose its trace is $X \subseteq A$ for some $b$.
-  Then over $b$ the same construction gives trace $(A - X)$ for $\psi$. Thus we get as many traces as above, and the same bound.
+  Then $A - X$ is the trace $\psi(A, b)$.
+  Therefore we get as many traces as above and thus the same bound.
   
-  Finally consider a formula which is a disjunction of formulas considered above $\theta = \bigvee_{k \in K} \psi_k$.
+  Finally, consider a formula $\theta = \bigvee_{k \in K} \psi_k$
+  which is a disjunction of the formulas considered in the previous paragraph.
   Choose the one with the smallest $\epsilon_L$, say $\psi_k$, and repeat the construction above for $\psi_k$.
-  Any trace we obtain is automatically a trace for $\theta$, and thus we get as many traces as above, and the same bound.
+  Any trace for $\psi_k$ is automatically a trace for $\theta$, so we get as many traces as above, and thus the same bound.
 \end{proof}
 
 \begin{Corollary}
-  The VC-density function is infinite in the theory of Shelah-Spencer random graphs:
+  The VC-density function is infinite in the theory of Shelah-Spencer graphs:
   \begin{align*}
     \vc^{S_\alpha}(n) = \infty.
   \end{align*}
@@ -480,7 +480,7 @@ First, define $\epsilon_L(\phi)$.
 \end{proof}
 
 \begin{Corollary}
-  The theory of Shelah-Spencer random graphs doesn't have finite dp-rank.
+  The theory of Shelah-Spencer graphs doesn't have finite dp-rank.
   In particular it is not dp-minimal.
 \end{Corollary}
 

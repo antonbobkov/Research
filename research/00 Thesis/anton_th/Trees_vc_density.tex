@@ -18,7 +18,7 @@ In Sec\-tion~1 we introduce proper subdivisions -- the main tool that we use to 
 We also prove some basic properties of proper subdivisions.
 Sec\-tion~2 introduces the key constructions of proper subdivisions which will be used in the proof.
 Sec\-tion~3 presents the proof of $\vc(n) = n$ via subdivisions.
-In the concluding section we state open question and outline future work.
+In the concluding section we state open questions and outline future work.
 
 The language of trees consists of a single binary predicate symbol $\leq$. The theory of trees states that $\leq$ defines a partial order and that for every element $a$ the set $\{x \mid x \leq a\}$ is linearly ordered by $\leq$. For visualization purposes we assume that trees grow upwards, with the smaller elements on the bottom and the larger elements on the top. If $a \leq b$ we will say that $a$ is below $b$ and $b$ is above $a$.
 
@@ -427,12 +427,12 @@ Putting all of those results together we are able to compute the VC-density of f
     &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})|.
   \end{align*}
   We can bound $|\phi(S^p, B_{\vec k})|$ uniformly using Lemma \ref{lm_partition_bound}. The family $(\AT_k, \BT_k)_{k \in K}$ satisfies the requirements of the lemma and $B_{\vec k}$ looks like $B$ in the lemma after possibly permuting some variables in $\phi$.
-  (For example we would need to permute $B_{(2,1,2)} = B_2 \times B_1 \times B_2$ to make it into $B_1 \times B_2^2$ so it has the appropriate form for the lemma application.)
+  (For example we would need to permute $B_{(2,1,2)} = B_2 \times B_1 \times B_2$ into $B_1 \times B_2^2$ so it has the appropriate form for Lemma \ref{lm_partition_bound}.)
   Applying the lemma we get
   \begin{align*}
     |\phi(S^p, B_{\vec k})| \leq N^q
   \end{align*}
-  with $N$ only depending on $q$ and complexity of $\phi$. We complete our computation:
+  with $N$ only depending on $q$ and the complexity of $\phi$. We complete our computation:
   \begin{align*}
     |\phi(S^p, T^q)|
     &\leq \sum_{\vec k \in K^q} |\phi(S^p, B_{\vec k})| \leq \sum_{\vec k \in K^q} N^q \leq \\
@@ -452,7 +452,7 @@ We get the general result for trees that aren't necessarily meet trees via an ea
 \end{proof}
 
 \section{Conclusion}
-This settles the question of determining VC-density function for infinite trees.
+This settles the question of determining the VC-density function for infinite trees.
 Lacking a quantifier elimination result in a natural language, a lot is still not known.
 One can try to adapt these techniques to compute the VC-density on the formula by formula basis:
 % of a fixed formula, and see if it can take non-integer values.

@@ -708,7 +708,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   For the subintervals to be disjoint we need 
   $\inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i')) = \emptyset$.
   But $\val(t' - a_i) > \tfl(a_i')$ implying that $a_i \in \inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i'))$ giving a contradiction.
-  Therefore the subintervals coincide finishing the proof.
+  Therefore the subintervals coincide as needed.
 \end{proof}
 
 \begin{Corollary}
@@ -717,17 +717,17 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
 
 \begin{proof}
   Suppose we have $c, c' \in \Q_p^{|x|}$ such that $f(c), f(c')$ are in the same partition and $g(f(c)) = g(f(c'))$.
-  Then by the previous lemma $c, c'$ have the same $\Phi$-type.
+  Then by the previous lemma $c$ and $c'$ have the same $\Phi$-type.
   Thus the number of possible $\Phi$-types is bounded by the size of the range of $g$ times the number of possible partitions
   \begin{align*}
     \text{(number of partitions)} \cdot |\It|^{|I|} \cdot |\Sub|^{|J|} \cdot |\Ct|^{|I-J|}.
   \end{align*}
   There are at most $\paren{|2I|!}^2$ many partitions of $\Sg$,
-  so in the product above, the only component dependent on $B$ is
+  so in the product above the only component dependent on $B$ is
   \begin{align*}
     |\Sub|^{|J|} \leq (N \cdot 3{|I|}^2)^{|J|} = O(N^{|J|}).
   \end{align*}	
-  Every $p_i$ is an element of a $|x|$-dimensional vector space, so there can be at most $|x|$ many independent vectors.
+  Every $p_i$ is an element of an $|x|$-dimensional vector space, so there can be at most $|x|$ many independent vectors.
   Thus we have $|J| \leq |x|$ and the bound follows.
 \end{proof}
 
@@ -754,7 +754,7 @@ it is this author's hope that similar techniques can be used to also compute the
 
 Another interesting question is whether the reduct studied in this \chapa has the VC 1 property (see Definition 5.2 in \cite{density}).
 If so, this would imply the linear VC-density bound directly.
-The techniques used in the paper \cite{density} make it seem likely that the reduct has VC 2 property (just as the $\LLM$-structure $\Q_p$).
+The techniques used in the paper \cite{density} make it seem likely that the reduct has the VC 2 property (just as the $\LLM$-structure $\Q_p$).
 While there are techniques for showing that a structure has a given VC $n$ property,
 less is known about showing that a structure doesn't have a given VC $n$ property.
 Perhaps the simple structure of the $\LLA$-reduct can help understand this phenomenon better.

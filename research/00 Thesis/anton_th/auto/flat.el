@@ -10,9 +10,10 @@
     "th_superflat_equivalence"
     "lm_bump"
     "lm_uniform"
-    "inf_dis"
+    "inf_dis_corr"
     "cr_bump"
     "inf_dis_gen"
+    "inf_dis"
     "exclude"
     "flat_dp_thm")))
 
