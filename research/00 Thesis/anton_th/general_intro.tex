@@ -1,7 +1,7 @@
 \chapter{Introduction and Preliminaries}
 
 \section{Introduction}
-My research concentrates on the concept of VC-density, recently introduced notion of rank in NIP theories.
+My research concentrates on the concept of VC-density, a recently introduced notion of rank in NIP theories.
 The study of a structure in model theory usually starts with quantifier elimination in a natural language, followed by a finer analysis of definable functions and interpretability.
 The study of VC-density goes one step further, looking at the asymptotic growth of finite definable families.
 In the most geometric examples, VC-density is closely related to the natural notion of dimension.
@@ -13,15 +13,15 @@ The concept of VC-dimension was first introduced in 1971 by Vapnik and Chervonen
 The theory grew rapidly and found wide use in geometric combinatorics, computational learning theory, and machine learning.
 Around the same time Shelah was developing the notion of NIP ("not having the independence property"),
 a natural tameness property of (complete theories of) structures in model theory \cite{shelah_nip}.
-In 1992 Laskowski noticed the connection between the two: theories where all uniformly definable families of sets have finite VC-dimension are exactly NIP theories \cite{laskowski92}.
+In 1992, Laskowski noticed the connection between the two: theories where all uniformly definable families of sets have finite VC-dimension are exactly NIP theories \cite{laskowski92}.
 This is a wide class of theories including algebraically closed fields, differentially closed fields, modules, free groups, o-minimal structures, and ordered abelian groups.
 A variety of valued fields fall into this category as well, including the $p$-adic numbers.
 
 The $p$-adic numbers were first introduced by Hensel in 1897 in \cite{hensel}, and over the following century a powerful theory was developed around them with numerous applications across a variety of disciplines, primarily in number theory, but also in physics and computer science.
-In 1965 Ax, Kochen \cite{ak1} and Ershov \cite{er1} axiomatized the theory of $p$-adic numbers. 
+In 1965, Ax, Kochen \cite{ak1} and Ershov \cite{er1} axiomatized the theory of $p$-adic numbers. 
 A key insight was that properties of the value group and residue field determine the properties of the valued field itself.
-In 1976 Macintyre proved a quantifier elimination result in a definitional expansion of the field language \cite{mac76}.
-In 1984 Denef proved a cell decomposition result which clarified the geometry of definable sets in $\Q_p$ \cite{den84}.
+In 1976, Macintyre proved a quantifier elimination result in a definitional expansion of the field language \cite{mac76}.
+In 1984, Denef proved a cell decomposition result which clarified the geometry of definable sets in $\Q_p$ \cite{den84}.
 This result was soon generalized to $p$-adic subanalytic and rigid analytic extensions, allowing for the later development of the powerful technique of motivic integration.
 The conjunction of those model theoretic results allowed to solve a number of outstanding open problems in number theory (e.g., Artin's Conjecture on $p$-adic homogeneous forms).
 
@@ -32,17 +32,19 @@ It comes up naturally in combinatorics with relation to packings, Hamming metric
 In a model theoretic setting it is computed for families of uniformly definable sets.
  In 2013, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko computed a bound for VC-density in the field of $p$-adic numbers and a number of other NIP structures \cite{density}.
 They observed connections to dp-rank and dp-minimality, notions first introduced by Shelah.
-In well behaved NIP structures families of uniformly definable sets in $n$-space
-tend to have VC-density bounded by above by $n$, a simple linear behavior.
-In a lot of cases (including the $p$-adic numbers) this bound is not known to be optimal.
-My research concentrates on improving those bounds and adapting those techniques to compute VC-density in other common NIP structures of interest to mathematicians.
+In well behaved NIP structures, families of uniformly definable sets in $n$-space
+tend to have VC-density bounded above by $n$, a simple linear behavior.
+In many cases (including the $p$-adic numbers) this bound is not known to be optimal.
+My research concentrates on improving those bounds and adapting those techniques to compute VC-density in other common NIP structures.
 
 Some other well behaved NIP structures of a combinatorial flavor are Shelah-Spencer graphs and superflat graphs.
-Shelah-Spencer graphs are limit structures for random graphs arising naturally in a combinatorial context.
-Their model theory was studied Shelah and Spencer in 1988 \cite{spencer} and then refined by Baldwin, Shi, and Shelah in 1997 \cite{shi}, \cite{baldwin}.
-Later work of Laskowski in 2006 \cite{laskowski} provided a quantifier simplification result.
- Superflat graphs were introduced by Podewski-Ziegler in 1978, who also showed that those are stable \cite{stable_graphs}, and later results gave a criterion for super stability \cite{ultraflat}.
-Superflat graphs also come up naturally in combinatorics in work of Nesetril and Ossona de Mendez \cite{nowhere}.
+Shelah-Spencer graphs are the limit structures of random graphs arising naturally in a combinatorial context.
+Their model theory was studied by Shelah and Spencer in 1988 in \cite{spencer}
+and then refined by Baldwin, Shi, and Shelah in 1997 in \cite{shi}, \cite{baldwin}.
+Later work of Laskowski in 2007 provided a quantifier simplification result \cite{laskowski}.
+Superflat graphs were introduced by Podewski-Ziegler in 1978, who showed their stablity \cite{stable_graphs}.
+Later results gave a criterion for superstability \cite{ultraflat}.
+Superflat graphs also come up naturally in combinatorics (for example, see the work of Nesetril and Ossona de Mendez \cite{nowhere}).
 %Shelah-Spencer graphs and superflat graphs are both subclasses of NIP theories, extremely well behaved model theoretically.
 
 The first chapter of my dissertation introduces some basics of model theory and defines VC-density and VC-dimension.
@@ -51,17 +53,17 @@ The second chapter concentrates on trees.
 I answer an open question from \cite{density}, computing VC-density for trees viewed as a partial order.
 The main idea is to adapt a technique of Parigot \cite{parigot_trees} to partition trees into weakly interacting parts, with simple bounds of VC-density on each.
 
-In the third chapter of my dissertation I work with Shelah-Spencer graphs.
-I show that they have infinite dp-rank, so they are poorly behaved as NIP structures.
+In the third chapter I work with Shelah-Spencer graphs.
+I show that they don't have finite dp-rank, so they are poorly behaved as NIP structures.
 I also show that one can obtain arbitrarily high VC-density when looking at uniformly definable families in a fixed ambient space.
-However I'm able to bound VC-density of individual formulas in terms of edge density of the graphs they define.
+However, I'm able to bound VC-density of individual formulas in terms of edge density of the graphs they define.
 
 The fourth chapter deals with $p$-adic numbers.
 I show that VC-density is linear for an additive reduct of $p$-adic numbers
-using a cell decomposition result from the work of Leenknegt in 2013 \cite{reduct}.
+using a cell decomposition result from the work of Leenknegt in 2014 in \cite{reduct}.
 % I will explore other reducts described in that paper, to see if my techniques apply to those as well.
 
-In chapter five I investigate superflat graphs using the work of
+In chapter five I investigate superflat graphs using the techniques of
 Podewski-Ziegler \cite {stable_graphs}.
 I am able to show that superflat graphs are dp-minimal, an important first step before establishing bounds on VC-density.
 
@@ -72,7 +74,7 @@ We assume the reader's familiarity with the fundamental notions of languages, fo
 For an introduction to these topics, we refer to Chapters 1 and 2 of \cite{tent}.
 
 We work with structures $\MM = (M, \ldots)$ in finite or countable languages $\LL$.
-Generally in this thesis the structures have infinite universes $M$.
+Generally, in this thesis the structures have infinite universes $M$.
 For a tuple of variables $x$, let $|x|$ denote its arity.
 Similarly, for a tuple $a \in M^n$ let $|a|=n$.
 We often confuse a tuple $a = (a_1, \ldots, a_n) \in M^n$ with its underlying set $a = \curly{a_1, \ldots, a_n} \subseteq M$.
@@ -108,7 +110,7 @@ with parameters from $A$ (or simply $A$-formulas).
 %   \end{itemize}  
 % \end{Definition}
 
-More generally we work with complete theories and their models.
+More generally, we work with complete theories and their models.
 Throughout this text we often confuse the two.
 This is justified for properties that can be described by a collection of first-order sentences.
 Then a theory has this property if and only any (all) models have this property.
@@ -152,7 +154,7 @@ More generally, we will need a slightly more refined notion of trace:
     \phi(A, b) &= \curly{a \in A \mid \MM \models \phi(a,b)}, \\
     \phi(a, B) &= \curly{b \in B \mid \MM \models \phi(a,b)}.
   \end{align*}
-  These sets will be informally referred to as traces (on $A$ respectively $B$).
+  These sets will be informally referred to as traces (on $A$, respectively $B$).
   Similarly, let
   \begin{align*}
     \phi(A, B) = \curly{\phi(A, b) \mid b \in B} \subset \PP(A)
@@ -214,16 +216,16 @@ Instead of starting with an indiscernible sequence, we sometimes wish to constru
 \begin{Lemma} [see Lemma 5.1.3 in \cite{tent}] \label{make_ind}
   Work in a $\kappa$-saturated structure $\MM$.
   Let $B \subset M$ with $|B| < \kappa$.
-  Fix  tuple $x$ of variables and a collection of $B$-formulas $\Delta(x_1, \ldots, x_n)$ with $|x_i| = |x|$.
+  Fix a tuple of variables $x$ and a collection of $B$-formulas $\Delta(x_1, \ldots, x_n)$ with $|x_i| = |x|$.
   Suppose we can find an arbitrarily long finite sequence $(a_i)_{i \in \I}$ with $a_i \in M^{|x|}$ such that
   for any subset $\J \subseteq \I$ of length $n$ we have
   \begin{align*}
-    \MM \models \Delta(a(\J))
+    \MM \models \Delta(a(\J)).
   \end{align*}
   Then there exists an infinite $B$-indiscernible sequence $(b_i)_{i \in \N}$ such that
   for any subset $\J \subseteq \N$ of length $n$ we have
   \begin{align*}
-    \MM \models \Delta(b(\J))
+    \MM \models \Delta(b(\J)).
   \end{align*}
 \end{Lemma}
 

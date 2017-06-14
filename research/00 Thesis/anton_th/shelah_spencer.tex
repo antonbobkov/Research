@@ -30,17 +30,17 @@ Sec\-tion~1 summarizes notation and basic facts concerning Shelah-Spencer graphs
 We direct the reader to \cite{laskowski} for a more in-depth treatment.
 In Sec\-tion~2 we introduce key lemmas that will be useful in our proofs.
 Sec\-tion~3 computes a lower bound for VC-density to demonstrate that $\vc(n) = \infty$.
-We also do computations involving dp-rank.
+We also do some computations involving dp-rank.
 Sec\-tion~4 computes an upper bound for VC-density on a formula-by-formula basis.
 The concluding section discusses open questions and future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Graph Combinatorics}
 Throughout this \chapa $A, B, C, M$ (sometimes with decorations) denote finite graphs,
-and $\DB$ be used to denote potentially infinite graphs.
+and $\DB$ is used to denote potentially infinite graphs.
 All graphs are undirected and asymmetric.
 For a graph $A$ the set of its vertices is denoted by $v(A)$, and the set of its edges by $e(A)$.
-The number of vertices of $A$ be denoted by $|A|$.
+The number of vertices of $A$ is denoted by $|A|$.
 Subgraph always means induced subgraph and $A \subseteq \DB$ means that $A$ is a subgraph of $\DB$.
 For two subgraphs $A, B$ of a larger graph, the union $A \cup B$ denotes the graph induced by $v(A) \cup v(B)$.
 Similarly, $A - B$ means a subgraph of $A$ induced by the vertices of $v(A) - v(B)$.
@@ -77,7 +77,7 @@ For the remainder of the \chapa fix $\alpha \in (0,1)$, irrational.
     if $(M_i, M_{i+1})$ is a minimal pair for all $0 \leq i < n$.
   \item Suppose we have a graph $A$ with vertices $v(A) = \curly{x_1, \ldots, x_n}$ with pairwise disjoint $x_i$.
     For the variable tuple of vertices $x = (x_1, \ldots, x_n)$ let $\diag_A(x)$ be the atomic diagram of $A$,
-    i.e. the first-order formula recording whether there is an edge or a nonedge between every pair of vertices.
+    i.e., the first-order formula recording whether there is an edge or a nonedge between every pair of vertices.
     So for a graph $\DB$ and a tuple $a = (a_1, \ldots, a_n)$ we have $\DB \models \diag_A(a)$ if and only if
     there exists an embedding $f \colon A \arr \DB$ such that $f(x_i) = a_i$.
   % \item Suppose we have a graph $A$ with vertices $v(A) = \curly{a_1, \ldots, a_n}$.
@@ -143,7 +143,7 @@ We require the following lemmas from \cite{laskowski}:
 \end{Lemma}
 
 We conclude this section by stating a couple of technical lemmas that will be useful in our proofs later.
-In those lemmas we work in some ambient graph $\DB$; that is, all the finite graphs that come up are assumed to be subgraphs of $\DB$.
+In these lemmas we work in some ambient graph $\DB$; that is, all the finite graphs that come up are assumed to be subgraphs of $\DB$.
 
 \begin{Lemma} \label{minimal_over_set}
   Let $B$ be a graph and $(A, M)$ be a minimal pair with $A \subseteq B$ and $\dim(M/A) = -\epsilon$.
@@ -267,8 +267,8 @@ First, define $\epsilon_L(\phi)$.
       \epsilon_L\paren{\bigwedge_i \phi_i} &= \sum_i \epsilon_L(\phi_i).
     \end{align*}
   \item  (Disjunction)
-    Take a collection of formulas $\psi_i$ where each instance is a conjunction as above,
-    with all formulas agreeing on $X$ and $Y$.
+    Take a collection of formulas $\psi_i$ with each formula a conjunction as above.
+    Also assume that all the basic formulas that appear agree on $X$ and $Y$.
     Then let
     \begin{align*}
       \epsilon_L\paren{\bigvee \psi_i} &= \min \epsilon_L(\psi_i).
@@ -302,7 +302,7 @@ First, define $\epsilon_L(\phi)$.
 
   Fix some $N > n_1 + n_2$.
   Let $J$ be the set of first $N$ natural numbers. 
-  Let $\curly{a_j}_{j \in J}$ be a pairwise disjoint collection of graph, where each $a_i$ is isomorphic to $X$.
+  Let $\curly{a_j}_{j \in J}$ be a pairwise disjoint collection of graphs, where each $a_i$ is isomorphic to $X$.
   Let $A = \bigcup_{1 \leq j \leq N} a_j$.
   Let 
   \begin{align*}
@@ -395,11 +395,11 @@ First, define $\epsilon_L(\phi)$.
     \begin{align*}
       \dim(B/A) = \dim(B \cap \BA / A) + \sum_{k \in K} \dim(B_k/ B_k \cap \BA).
     \end{align*}
-    By the claim above each of $\dim(B_k/ B_k \cap \BA) > 0$, thus
+    By the claim above, each of $\dim(B_k/ B_k \cap \BA) > 0$, thus
     \begin{align*}
       \dim(B/A) > \dim(B \cap \BA / A).
     \end{align*}
-    In addition
+    In addition,
     \begin{align*}
       \dim(B \cap \BA / A) = \dim (B \cap b) \geq 0,
     \end{align*}
@@ -472,11 +472,12 @@ First, define $\epsilon_L(\phi)$.
 \begin{proof}
   Let $A$ be a graph consisting of $\ceil{1/\alpha} + 2$ disconnected vertices.
   Fix $\epsilon > 0$.
-  By Lemma \ref{las_min}, there exists $B$ such that $(A, B)$ is a minimal pair with dimension $\leq \epsilon$.
+  By Lemma \ref{las_min}, there exists $B$ such that $(A, B)$ is a minimal pair with dimension $\leq \epsilon$ and
+  every vertex in $A$ is connected to a vertex in $B - A$.
   Consider a basic formula $\psi_{A, B}(x, y)$ where $|x| = \ceil{1/\alpha} + 1$ and $|y| = 1$.
-  Then by the theorem above $\vc^{S_\alpha}(1) \geq \vc (\psi_{A,B}) \geq \floor{\frac{1}{\epsilon}}$.
-  As $\epsilon$ was arbitrary, this number can be made arbitrarily large, giving $\vc^{S_\alpha}(1) = \infty$.
-  By Lemma \ref{vcone} $\vc^{S_\alpha}(n) = \infty$ as needed.
+  Then by the theorem above we have $\vc^{S_\alpha}(1) \geq \vc (\psi_{A,B}) \geq \floor{\frac{1}{\epsilon}}$.
+  As $\epsilon$ was arbitrary, we can make this number as large as we want, giving $\vc^{S_\alpha}(1) = \infty$.
+  By Lemma \ref{vcone} we then have $\vc^{S_\alpha}(n) = \infty$ as needed.
 \end{proof}
 
 \begin{Corollary}
@@ -486,24 +487,26 @@ First, define $\epsilon_L(\phi)$.
 
 \begin{proof}
   Suppose that the ambient model $\GG$ is $\aleph_1$-saturated.
-  We would like to modify the proof of Theorem \ref{main_lower} to make $A$ $\emptyset$-indiscernible.
-  Note that as $S_\alpha$ is stable, all indiscernible sequences are totally indiscernible.
-  Note that in the proof we can construct sets $A = \curly{a_j}_{j \in J}$ of arbitrary length.
-  Moreover for every finite $J' \subseteq J$, the set $A = \curly{a_j}_{j \in J'}$ is still $S$-strong.
-  Thus by Lemma \ref{make_ind} we can find an infinite indiscernible set $A = \curly{a_j}_{j \in \N}$ that is $S$-strong.
+  It suffices to show that $\GG$ doesn't have finite dp-rank.
+  We would like to modify the proof of Theorem \ref{main_lower} to make $A$ an infinite $\emptyset$-indiscernible sequence.
+  (Note that as $S_\alpha$ is stable, all indiscernible sequences are totally indiscernible.)
+  In the proof we can construct $S$-strong sets $A = \curly{a_j}_{j \in J}$ of arbitrary finite size.
+  Moreover, for every $J' \subseteq J$, the set $A = \curly{a_j}_{j \in J'}$ is still $S$-strong.
+  Thus by Lemma \ref{make_ind} we can find an infinite $\emptyset$-indiscernible sequence $A = \curly{a_j}_{j \in \N}$ in $\GG$ that is $S$-strong.
   Repeating the construction of the corollary above,
-  we can obtain a formula with an arbitrarily large VC-density over the indiscernible sequence $A$.
+  we can obtain a formula with an arbitrarily large VC-density over this indiscernible sequence $A$.
+  By Definition \ref{def_dp} this means that $\GG$ doesn't have finite dp-rank.
 \end{proof}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Upper bound}
-Consider a basic formula $\phi(x,y)$ associated to a minimal chain  $\agl{M_i}_{0 \leq i \leq n_{\phi}}$ with dimensions  $\dim(M_{i+1}/M_i) = -\epsilon_i$.
+Let $\phi(x,y)$ be a basic formula associated to a minimal chain  $\agl{M_i}_{0 \leq i \leq n}$ with dimensions  $\dim(M_{i+1}/M_i) = -\epsilon_i$.
 Define
 \begin{align*}
   \epsilon(\phi) &= \min \curly{\epsilon_i}_{0 \leq i \leq n_\phi}\\
-  K(\phi) &= |M_{n_\phi}|.
+  K(\phi) &= |M_{n}|.
 \end{align*}
 Now consider a finite collection of basic formulas
 \begin{align*}
@@ -512,7 +515,7 @@ Now consider a finite collection of basic formulas
 Define
 \begin{align*}
   K(\Phi) &= \max \curly{K(\phi_i)}_{i \in I}, \\
-  \epsilon(\Phi) &= \min \curly{\epsilon(\phi_i)}_{i \in I} \cup \curly{\alpha}, \paren{\text{so }  \epsilon(\Phi) > 0}.
+  \epsilon(\Phi) &= \min \curly{\epsilon(\phi_i)}_{i \in I} \cup \curly{\alpha}.
 \end{align*}
 \begin{Theorem} \label{upper}
   If $\phi$ is a boolean combination of formulas from $\Phi$, then
@@ -543,8 +546,8 @@ Therefore it suffices to bound $\abs{\phi(\AX, \GGY)}$ uniformly in $\Phi, |A|$.
 \begin{Definition}
   For $A \subseteq \GG^{|x|}, B \subseteq \GG^{|y|}, b \in \GG^{|y|}$ define
   \begin{align*}
-    \Phi(A, b) &= \curly{(a, i) \in A \times I \mid \GG \models \phi_i(a, b) } \subseteq A \times I, \\
-    \Phi(A, B) &= \curly{\Phi(A, b) \mid b \in B } \subseteq \PP(A \times I).
+    &\Phi(A, b) = \curly{(a, i) \in A \times I \mid \GG \models \phi_i(a, b) } \subseteq A \times I, \\
+    &\Phi(A, B) = \curly{\Phi(A, b) \mid b \in B } \subseteq \PP(A \times I).
   \end{align*}  
 \end{Definition}
 
@@ -596,7 +599,7 @@ Thus it suffices to bound  $\abs{\Phi(\AX, \GGY)}$ in terms of $\Phi, |A|$.
 
 \begin{proof}
   Fix a graph isomorphism $\bar f \colon {\mybar W}_{b_1} \cup b_1 \arr {\mybar W}_{b_2} \cup b_2$.
-  Extend it to an isomorphism $f \colon W_{b_1} \cup A \arr W_{b_2} \cup A$ by being an identity map on the new vertices.
+  Extend it to an isomorphism $f \colon W_{b_1} \cup A \arr W_{b_2} \cup A$ by making it an identity map on the new vertices.
   Suppose $\GG \models \phi_i(a, b_1)$ for some $a \in \AX$.
   Then $f(W^i_{a, b_1})$ is a witness of $\phi_i(a, b_2)$ (though not necessarily equal to $W^i_{a, b_2}$)
   and thus $\GG \models \phi_i(a, b_2)$.
@@ -610,8 +613,8 @@ Thus to bound the number of traces it is sufficient to bound the number of $\sim
   Let $Y = \abs{b - A}$.
   Then
   \begin{align*}
-    |\partial_b| &\leq \floor{Y \DOPHI }\\ 
-    |{\mybar W}_b| &\leq \floor{3 Y \DOPHI}
+    |\partial_b| &\leq \floor{Y \DOPHI },\\ 
+    |{\mybar W}_b| &\leq \floor{3 Y \DOPHI}.
   \end{align*}
 \end{Theorem}
 
@@ -669,7 +672,7 @@ From this theorem we get the desired result:
   Define $M_j = \bigcup_{k=1}^j W_{k}$ for $1 \leq j \leq J$ and let $M_0 = b, M_{-1} = \emptyset$.
   Let $\BA = A \cup b$.
   \begin{Definition}
-    For $0 \leq j \leq J$ define:
+    For $0 \leq j \leq J$:
     \begin{itemize}
     \item Let $v_j = 1$ if new vertices are added to $M_j$ outside of $\BA$, that is if
       $M_j - \BA \neq M_{j-1} - B$,
@@ -686,7 +689,7 @@ From this theorem we get the desired result:
   \begin{Lemma} \label{ubd_lemma}
     For $0 \leq j \leq J$ we have
     \begin{align*}
-      |\partial(M_j, A)| \leq |E_0| + m_j K(\Phi) 
+      |\partial(M_j, A)| \leq |E_0| + m_j K(\Phi).
     \end{align*}
   \end{Lemma}
 
@@ -726,7 +729,7 @@ From this theorem we get the desired result:
   \begin{Lemma} \label{ub_lemma}
     For $0 \leq j \leq J$ we have
     \begin{align*}
-      |M_j - \BA| \leq \paren{\sum_{k=0}^j v_{k}} K(\Phi)
+      |M_j - \BA| \leq \paren{\sum_{k=0}^j v_{k}} K(\Phi).
     \end{align*}
   \end{Lemma}
 
@@ -738,7 +741,8 @@ From this theorem we get the desired result:
     \end{align*}
     holds.
     If $M_j - \BA = M_{j-1} - \BA$ then the inequality is immediate as $v_j \geq 0$.
-    Therefore assume this is not the case, so $v_j = 1$ and $|M_j - A| - |M_{j-1} - A| \leq |W_j| \leq v_j K(\Phi)$, and so we get the required inequality.
+    Therefore assume this is not the case.
+    Then $v_j = 1$ and $|M_j - A| - |M_{j-1} - A| \leq |W_j| \leq v_j K(\Phi)$ so we get the required inequality.
   \end{proof}
   
   \begin{Lemma} \label{ubdim_lemma}
@@ -760,7 +764,7 @@ From this theorem we get the desired result:
       &\leq \dim(M_j \cup \BA / M_{j-1} \cup \BA) - m_{j-1}  \epsilon(\Phi).
     \end{align*}
     Let $\BM = M_{j-1} \cup \BA$.
-    By Lemma \ref{diamond}
+    By Lemma \ref{diamond} we have
     \begin{align*}
       \dim(M_j \cup \BA / M_{j-1} \cup \BA) = \dim(W_j \cup \BM / \BM) = \dim(W_j / W_j \cap \BM) - E \alpha
     \end{align*}
@@ -811,7 +815,7 @@ From this theorem we get the desired result:
   \end{align*}
   By Lemma \ref{ub_lemma} we have
   \begin{align*}
-    \abs{M_{j+1} - A} &\leq \paren{\sum_{k=1}^{j+1} v_{k}} K(\Phi) \leq (m_j + 1) K(\Phi) \\
+    \abs{M_{j+1} - A} &\leq \paren{\sum_{k=1}^{j+1} v_{k}} K(\Phi) \leq (m_j + 1) K(\Phi) \leq \\
                      &\leq \paren{\frac{Y - |E_0| \alpha}{\epsilon(\Phi)} + 1} K(\Phi) \leq S.
   \end{align*}
   This is a contradiction, as $A$ is $S$-strong and $\dim(M_{j+1} \cup A / A)$ is negative.
@@ -823,14 +827,14 @@ From this theorem we get the desired result:
   \end{align*}
   As $K(\Phi) \geq 1$ and $\epsilon(\Phi) \geq \alpha$, we get
   \begin{align*}
-      |\ppp_b| \leq K(\Phi) \frac{Y}{\epsilon(\Phi)} \leq Y \frac{K(\Phi)}{\epsilon(\Phi)}.
+      |\ppp_b| \leq K(\Phi) \frac{Y}{\epsilon(\Phi)} = Y \frac{K(\Phi)}{\epsilon(\Phi)}.
   \end{align*}
   As $|\ppp_b|$ is an integer we have $|\ppp_b| \leq \floor{Y \DOPHI}$.
   But this is precisely the first inequality we need to prove.
   For the second inequality, Lemma \ref{ub_lemma} gives us
   \begin{align*}
     \abs{W_b - \BA} &\leq Y + \paren{\sum_{k=0}^J v_{k}} K(\Phi) \leq Y + m_J K(\Phi) \leq \\
-    &\leq Y + K(\Phi) \frac{Y}{\epsilon(\Phi)} \leq 2Y \frac{K(\Phi)}{\epsilon(\Phi)} \leq 2 Y \DOPHI.
+    &\leq Y + K(\Phi) \frac{Y}{\epsilon(\Phi)} \leq 2Y \frac{K(\Phi)}{\epsilon(\Phi)}.
   \end{align*}
   As $\abs{W_b - \BA}$ is an integer we have $\abs{W_b - \BA} \leq \floor{2 Y \DOPHI}$.
   Thus we have
@@ -850,23 +854,25 @@ dimension $\epsilon$ we have
 \begin{align*}
   \frac{|y|}{\epsilon} \leq \vc(\phi) \leq K \frac{|y|}{\epsilon},
 \end{align*}
-where $K$ is the number of vertices in the minimal extension.
+where $K$ is the number of vertices in this minimal extension.
 Thus there is a multiple of $K$ gap between lower and upper bounds.
 It is this author's hope that a refinement of the presented techniques can yield better estimates of the VC-density.
-One potential direction towards this goal is to conduct a closer study on
-how multiple minimal extensions can intersect without increasing overall dimension.
+One potential way to achieve this goal is to conduct a closer study on
+how multiple minimal extensions can intersect without increasing the overall dimension.
 
-One direction for future work is to ask what these bounds on VC-density can tell about structure in large finite random graphs, along the lines of results in \cite{anthony}.
+One direction for the future work is to ask what these bounds on VC-density can tell about
+the structure of large finite random graphs, along the lines of results in \cite{anthony}.
 
-Note that this \chapa doesn't answer the question whether there can be exotic values for VC-density of individual formulas,
+Note that this \chapa doesn't answer the question on whether there can be exotic values for the VC-density of individual formulas,
 such as non-integer or irrational values.
 A better bound can help address this.
 \begin{openq}
   In Shelah-Spencer graphs can a formula have non-integer or irrational VC-density?
 \end{openq}
-Another observation is that while $\vc(n) = \infty$ there seems to be a good structural behavior of the VC-density for individual formulas.
-This suggests that perhaps the VC-density function is not the best tool to describe behavior of the definable sets in Shelah-Spencer graphs,
+Another observation is that while the VC-density function is infinite
+there seems to be a good structural behavior of the VC-density for individual formulas.
+This suggests that perhaps the VC-density function is not the best tool to describe the behavior of definable sets in Shelah-Spencer graphs,
 and some more refined measure might be required.
-One potential way to do this is to separate the formulas based on values of $K(\phi), \epsilon(\phi)$.
+One potential way to do this is to separate the formulas based on the values of $K(\phi)$ and $\epsilon(\phi)$.
 Once those are bounded, VC-density seems to be well-behaved.
 The author hopes to explore this further in his future work.

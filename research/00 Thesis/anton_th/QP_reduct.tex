@@ -25,11 +25,11 @@ In this \chapa we investigate a reduct of the field of $p$-adic numbers and
 use a cell decomposition result of Leenknegt to compute an optimal bound for that structure.
 
 In \cite{reduct}, Leenknegt provides a cell decomposition result for a certain $P$-minimal additive reduct of the field of $p$-adic numbers.
-Using this result, we improve the bound for the VC-density function, showing that in Leenknegt's structure $\vc(n) = n$ for each $n$.
-Using Definition \ref{def_dp} this also gives a proof that this structure is dp-minimal which is more direct than using that the field of $p$-adics is dp-minimal.
+Using this result we improve the bound for the VC-density function, showing that in Leenknegt's structure $\vc(n) = n$ for each $n$.
+Using Definition \ref{def_dp} this also proves that this structure is dp-minimal which is more direct than using the fact that the field of $p$-adics is dp-minimal.
 
 In Sec\-tion~1 we recall some basic facts about the theory of $p$-adic numbers.
-Here we also introduce the reduct which we will be working with.
+Here we also introduce the reduct with which we will be working.
 Sec\-tion~2 sets up basic definitions and lemmas that will be needed for the proof.
 We define trees and intervals and show how they help with VC-density calculations. 
 Sec\-tion~3 finishes the proof.
@@ -68,11 +68,11 @@ There is also a cell decomposition result for definable sets in this structure:
 \end{Definition}
 
 \begin{Theorem} [see \cite{den84}]
-  Any definable subset of $\Q_p^k$ defined by an $\LLM$-formula decomposes into a finite disjoint union of $k$-cells.
+  Any subset of $\Q_p^k$ defined by an $\LLM$-formula decomposes into a finite disjoint union of $k$-cells.
 \end{Theorem}  
 
-In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that $\Q_p$ as $\LLM$-structure satisfies $\vc(n) \leq 2n - 1$
-for each $n \geq 1$, however it is not known whether this bound is optimal.
+In \cite{density}, Aschenbrenner, Dolich, Haskell, Macpherson, and Starchenko show that the $\LLM$-structure $\Q_p$ satisfies $\vc(n) \leq 2n - 1$
+for each $n \geq 1$, however, it is not known whether this bound is optimal.
 
 In \cite{reduct}, Leenknegt analyzes the reduct of $\Q_p$ to the language
 \begin{align*}
@@ -86,7 +86,7 @@ and $Q_{m,n}$ is a unary predicate interpreted as
 \end{align*}
 Note that $Q_{m,n} \backslash \curly{0}$ is a subgroup of the multiplicative group of $\Q_p$ with finitely many cosets.
 One can check that these extra relation symbols are definable in the $\LLM$-structure $\Q_p$.
-The paper \cite{reduct} provides a cell decomposition result based on the following notion of cell:
+The paper \cite{reduct} provides a cell decomposition result based on the following notion of a cell:
 
 \begin{Definition} \label{cell}
   A \defn{$0$-cell} is the singleton $\Q_p^0$.
@@ -103,7 +103,7 @@ The paper \cite{reduct} provides a cell decomposition result based on the follow
   We call $Q_{m,n}$ the \defn{defining predicate} of our cell.
 \end{Definition}
 
-\begin{Theorem}[Leenknegt '12] \label{leen}
+\begin{Theorem}[see \cite{reduct}] \label{leen}
   Any definable subset of $\Q_p^k$ defined by an $\LL_{aff}$-formula decomposes into a finite disjoint union of $k$-cells.
   %Any formula $\phi(x, t)$ in $(\Q_p, \LL_{aff})$ with $|x| = n$ and $|t| = 1$ decomposes into a union of $(k+1)$-cells.
 \end{Theorem}  
@@ -708,7 +708,7 @@ We call indices in $I$ \defn{independent} and we call the indices in $I \setminu
   For the subintervals to be disjoint we need 
   $\inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i')) = \emptyset$.
   But $\val(t' - a_i) > \tfl(a_i')$ implying that $a_i \in \inti(t, \tfl(a_i), \alpha_U) \cap B(t', \tfl(a_i'))$ giving a contradiction.
-  Therefore the subintervals coincide as needed.
+  Therefore the subintervals coincide.
 \end{proof}
 
 \begin{Corollary}

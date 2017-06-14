@@ -9,8 +9,8 @@ Here, however, we present a direct proof using the characterization of dp-minima
 Sec\-tion~1 gives all the necessary combinatorial and model-theoretic definitions.
 In addition, we list several basic results involving connectivity hulls and superflat graphs.
 In Sec\-tion~2 we study how to expand parameter sets of indiscernible sequences to increase the distance between the elements of those sequences.
-Sec\-tion~3 applies a special case of this result to show dp-mimality of superflat graphs via Lemma \ref{dp_min_simon}.
-In the concluding section we outline directions for the future work.
+Sec\-tion~3 applies a special case of this result to show dp-minimality of superflat graphs via Lemma \ref{dp_min_simon}.
+In the concluding section we outline directions for future work.
 
 \section{Preliminaries}
 First, we introduce some basic graph-theoretic definitions.
@@ -115,7 +115,7 @@ First suppose that $I$ consists of singletons, that is $a_i \in S$.
 \end{Lemma}
 
 \begin{proof}
-  By a \ref{th_superflat_equivalence} we can find an infinite $\J \subseteq \I$ and a finite set $B'$
+  By Theorem \ref{th_superflat_equivalence} we can find an infinite $\J \subseteq \I$ and a finite set $B'$
   such that each pair from $J = (a_j)_{j \in \J}$ has distance $>n$ over $B'$.
   By total indiscernibility there exists an automorphism mapping $J$ to $I$ and fixing $A$.
   The image of $B'$ under this automorphism is the required set $B$.
@@ -150,8 +150,8 @@ Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of 
   Vertices $a_0, a_1$ cannot be separated by less than $N$ elements inside of $P_n(I)$
   (as this would contradict connectivity being $N$).
   Thus by Theorem \ref{megner} there are $N$ disjoint paths inside of $P_n(I)$ connecting $a_0$ to $a_1$.
-  For large enough $i$, say $i \geq M_1$, all these paths are contained inside of $P_n(I_i)$.
-  Those paths witness that vertices $a_0, a_1$ cannot be separated by less than $N$ elements inside of $P_n(I_i)$.
+  For large enough $i$, say $i \geq M_1$, all those paths are contained inside of $P_n(I_i)$.
+  Those paths also witness that vertices $a_0, a_1$ cannot be separated by less than $N$ elements inside of $P_n(I_i)$.
   As the set $P_n(I_i)$ is $I_i$-definable and $I$ is indiscernible,
   we have that no two vertices can be separated by less than $N$ elements inside of $P_n(I_i)$
   Thus $I_i$ has connectivity $\geq N$ inside of $P_n(I_i)$ for $i \geq M_1$.
@@ -223,7 +223,7 @@ We would like to start working with tuples now instead of singletons.
 We need some notation to extract individual elements of a tuple:
 \begin{Definition}
   Suppose $a = (a_1, \ldots, a_m)$ is a tuple of arity $m$.
-  Let $\tpl{a}{j}$ denote the $i$'th component, that is $\tpl{a}{j} = a_j$.
+  Let $\tpl{a}{j}$ denote the $j$'th component, that is $\tpl{a}{j} = a_j$.
 \end{Definition}
 
 More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a_i \in S^m$.
@@ -255,7 +255,7 @@ More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a
   Fix such a subsequence $\J$.
 
   Let $\psi(x_1, \ldots, x_l ,y)$ be an arbitrary $A$-formula with $|x_i| = m$. 
-  Consider the collection of traces (i.e a collection of subsets of $B_n^{|y|}$)
+  Consider the collection of traces (i.e., a collection of subsets of $B_n^{|y|}$)
   \begin{align*}
     \curly{\psi(a(\J'), B_n^{|y|}) \mid \text{ $\J'$ a subsequence of $\I$ of length $l$ disjoint from $\J$}}.
   \end{align*}
@@ -318,7 +318,7 @@ More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a
 \begin{proof}
   Let $B_n$ as above. By Lemma \ref{inf_dis_gen} we have 
   \begin{align*}
-    \forall i \neq j \ d_{B_n}(a_i, a_j) > n,
+    \forall i \neq j \ d_{B_n}(a_i, a_j) > n/2,
   \end{align*}
   and $I$ is indiscernible over $A \cup B_n$ by Lemma \ref{cr_bump}.
   Let $B = \bigcup_{n \in \N} B_n$.
@@ -382,7 +382,7 @@ Thus $I$ can be upgraded to have infinite distance over its parameter set.
 \begin{proof}
   It suffices to show that $\SS$ is dp-minimal.
   Using Lemma \ref{dp_min_simon}, by total indiscernibility
-  it is enough to show that if $b \in S$ and $I$ is a countable $\emptyset$-indiscernible sequence,
+  it is enough to show that if $b \in S$ and $I$ is a countable $\emptyset$-indiscernible sequence
   then one element can be excluded from $I$, so that the remaining elements have the same type over $b$.
   But this is precisely Lemma \ref{exclude}.
 \end{proof}
@@ -392,8 +392,8 @@ The determination of dp-minimality is the first step towards establishing bounds
 It is this author's hope that the simple structure of superflat graphs yields nicely behaved VC-density.
 We pose the following question for the future work:
 \begin{openq} 
-  What are the bounds on the VC-density function in superflat graphs?
-  In particular do we have $\vc(1) = 1$ or $\vc(n) = n \vc(1)$?
+  What are the bounds on VC-density function in superflat graphs?
+  In particular, do we have $\vc(1) = 1$ or $\vc(n) = n \vc(1)$?
   Are the bounds better in specific classes of superflat graphs,
   such as planar graphs, graphs with bounded tree-width, or graphs excluding certain classes of subgraphs?
 \end{openq}
