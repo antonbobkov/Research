@@ -1,0 +1,66 @@
+\begin{tikzpicture}
+  \node[up] {}
+  child[grow = north, level distance=10mm] {node[up] {}
+    child[grow = north west, level distance=10mm]{node[up]{}	%left up
+      [sibling distance=5mm]
+      child{node[up]{}}
+      child{node[up]{}}
+    }
+    child[level distance=15mm]{node[c1]{$c_1$} %main up
+      [sibling distance=5mm]
+      child [grow = 120, level distance=12mm] {node[md]{}	%1
+        child[grow = 120]{node[md]{} %2
+          child[grow = 150]{node[md]{}
+            child{node[md]{}}
+            child{node[md]{}}
+          }
+          child[grow = 120]{node[c2]{$c_2$} %3
+            [grow = north]
+            child{node[dn]{}}
+            child{node[dn]{}
+              child{node[dn]{}}
+              child{node[dn]{}}
+            }
+          }
+        }
+        child[grow = north]{node[md]{}
+          child[grow = 60]{node[md]{}}
+        }
+      }
+      child[grow = 30, level distance=10mm]{node[ds]{}	%aux1 middle
+        [sibling distance=5mm]
+        child{node[ds]{}}
+        child{node[ds]{}}
+      }
+      child [grow = 60, level distance=10mm] {node[ds]{} 	%aux2 middle
+        [sibling distance=5mm]
+        child{node[ds]{}}
+        child{node[ds]{}}
+      }
+    }
+    child [grow = north east, level distance=10mm] {node[up]{}	%right up
+      [sibling distance=5mm]
+      child{node[up]{}}
+      child{node[up]{}}
+    }
+  }
+  child[grow = east, level distance=40mm, white]{node[black, ex]{}
+    [grow = north]
+    [level distance=10mm]
+    child[black]{node[ex]{}
+      [sibling distance=5mm]
+      child{node[ex]{}}
+      child{node[ex]{}}
+    }
+    child[black] {node[ex]{}
+      [sibling distance=5mm]
+      child{node[ex]{}}
+      child{node[ex]{}}
+    }
+  }
+  ;
+  \draw [black, fill=white] (70mm, 10mm) circle [radius=2mm];
+  \node [right] at (72mm, 10mm) {$A$};
+  \draw [black, fill=lightgray] (70mm, 0) circle [radius=2mm]; 
+  \node [right] at (72mm, 0) {$B$};
+\end{tikzpicture}

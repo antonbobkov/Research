@@ -1,0 +1,57 @@
+    \node[ex]{}
+    [grow=north]
+    child[black, s]{node(AAN)[ex]{}
+      child[l,ww]{node(BBN)[ex]{}
+        child[m,w]{node[ex]{}
+          child[s,n]{node[ex]{}
+          }
+          child[s,n]{node[ex]{}
+          }
+        }
+        child[s,w]{node[ex]{}
+          child[m,n]{node[ex]{}
+            child[s,a]{node[lb]{$\ldots$}
+            }
+            child[s,a]{node[lb]{$c_i(b)$}
+            }
+            child[s,a]{node[lb]{$\ldots$}
+            }
+          }
+          child[s,n]{node[ex]{}
+          }
+        }
+      }
+      child[m,ww]{node[ex]{}
+        child[s,n]{node[ex]{}
+        }
+        child[s,n]{node[ex]{}
+          child[s,n]{node[ex]{}
+          }
+          child[m,n]{node[ex]{}
+            child[s,wt]{node[lb]{$c_3(b_5)$}
+            }
+            child[s,wt]{node[lb]{$c_4(b_3)$}
+            }
+          }
+        }
+      }
+    };
+
+    \coordinate (bl) at (-1,2);
+    \coordinate (br) at (2,1);
+    \coordinate (tl) at (bl);
+    \coordinate (tr) at (br);
+    \def\offset{1.25};
+
+    \coordinate (AA) at (${1-\boffset}*(AAN) + \boffset*(BBN)$);
+    \coordinate (BB) at ($\toffset*(AAN) + {1-\toffset}*(BBN)$);
+
+    \path[fill=gray!50] (AA) -- ++(bl) --  ($(BB) + (tl)$) -- (BB) -- ++(tr) -- ($(AA) + (br)$) -- (AA);
+
+    % \draw ($(AA) + (bl)$) -- (AA) -- ++(br);
+    % \draw ($(BB) + (tl)$) -- (BB) -- ++(tr);
+    \draw (AA) -- (BB);
+
+    \draw[dashed] ($(AA) + \offset*(bl)$) -- (AA) -- ($(AA) + \offset*(br)$);
+    \draw[dashed] ($(BB) + \offset*(tl)$) -- (BB) -- ($(BB) + \offset*(tr)$);
+  

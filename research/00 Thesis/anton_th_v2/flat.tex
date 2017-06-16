@@ -1,0 +1,399 @@
+\chapter{Dp-minimality in Superflat Graphs}
+Superflat graphs were introduced in \cite{stable_graphs} as a natural class of stable graphs.
+This family of graphs is known in a combinatorial context as nowhere dense graphs, see \cite{adleradler} and \cite{nowhere}.
+In this chapter we prove that superflat graphs are dp-minimal.
+It may be possible to prove dp-minimality by combining a characterization of dp-minimality in stable theories studied in \cite{dpstable}
+with the results on forking in superflat graphs given in \cite{ivanov}.
+Here, however, we present a direct proof using the characterization of dp-minimality by Lemma \ref{dp_min_simon}.
+
+Sec\-tion~1 gives all the necessary combinatorial and model-theoretic definitions.
+In addition, we list several basic results involving connectivity hulls and superflat graphs.
+In Sec\-tion~2 we study how to expand parameter sets of indiscernible sequences to increase the distance between the elements of those sequences.
+Sec\-tion~3 applies a special case of this result to show dp-minimality of superflat graphs via Lemma \ref{dp_min_simon}.
+In the concluding section we outline directions for future work.
+
+\section{Preliminaries}
+First, we introduce some basic graph-theoretic definitions.
+\begin{Definition}
+  Work in a possibly infinite graph $\GG$. Let $A, B, S, V \subseteq G$ where $G$ is the set of vertices of $\GG$.
+  \begin{enumerate}
+  \item A \defn{path} is a subgraph of $\GG$ with distinct vertices $v_0, v_1, \ldots, v_n$ and an edge between $v_{i-1}, v_i$ for all $i = 1, \ldots n$.
+    It is called a path from $A$ to $B$ if $v_0 \in A$ and $v_n \in B$.
+    The \defn{length} of such a path is $n$.
+  \item Two paths are \defn{disjoint} if, excluding endpoints, they have no vertices in common.
+  \item For $a,b \in G$ define the \defn{distance} $d(a,b)$ between $a$ and $b$ to be the length of the shortest path from $a$ to $b$ in $G$.
+    If no such path exists then the distance is infinite.
+  \item For $a,b \in G - A$ define $d_A(a,b)$ to be the distance between $a$ and $b$ in the subgraph of $\GG$
+    induced on the set of vertices $G - A$. Equivalently it is the shortest path between $a$ and $b$ that avoids the vertices in $A$.
+  \item We say that $S$ \defn{separates} $A$ from $B$ if there exists $a \in A - S$ and $b \in B - S$ with $d_S(a,b) = \infty$.
+  \item We say that $A$ \defn{separates} $V$ if it separates $V$ from itself.
+  \item We say that $V$ has \defn{connectivity} $n$ if there is a set of size $n$ that separates $V$,
+    but there are no sets of size $n-1$ that separate $V$.
+  \item Suppose $V$ has connectivity $n$. The \defn{connectivity hull} of $V$ is defined to be the union of all sets of size $n$ separating $V$.
+  \end{enumerate}
+\end{Definition}
+
+In \cite{infinite_megner} we find a generalization of Menger's Theorem for infinite graphs:
+
+\begin{Theorem} \label{megner}
+  Let $A$ and $B$ be two sets of vertices in a possibly infinite graph. Then there exists a set $P$ of disjoint paths from $A$ to $B$, and a set $S$ of vertices separating $A$ from $B$, such that $S$ consists of a choice of precisely one vertex from each path in $P$.
+\end{Theorem}
+
+We use the following easy consequences:
+
+\begin{Corollary} \label{cr_disjoint_paths}
+  Let $V$ be a subset of vertices of a graph $\GG$ with connectivity $n$. Then there exists a set of $n$ disjoint paths from $V$ into itself.
+\end{Corollary}
+
+\begin{Corollary} \label{cr_hull_finite}
+  With assumptions as above, the connectivity hull of $V$ is finite.
+\end{Corollary}
+
+\begin{proof}
+  All the separating sets have to have exactly one vertex in each of those paths. 
+\end{proof}
+
+\begin{Definition} \ 
+  \begin{itemize}
+  \item $K^m_n$ denotes the graph obtained from a complete graph on $n$ vertices by adding $m$ vertices to every edge.
+    $K^m_\infty$ denotes the same construction on a complete graph with an infinite countable number of vertices.
+    \item A graph is called \defn{flat} if for every $m \in \N$ the graph avoids $K^m_\infty$ as a subgraph. 
+    \item A graph is called \defn{superflat} if for every $m \in \N$ there is $n \in \N$ such that the graph avoids $K^m_n$ as a subgraph. 
+  \end{itemize}
+\end{Definition}
+It is easy to see by compactness that a graph is superflat if and only if there is an elementary extension which is flat.
+By the same line of reasoning, in uncountably saturated structures the notions of flatness and superflatness coincide.
+
+Theorem 2 in \cite{stable_graphs} gives a useful characterization of superflat graphs.
+
+\begin{Theorem} \label{th_superflat_equivalence}
+  The following are equivalent:
+  \begin{enumerate}
+  \item $\GG$ is superflat.
+  \item For every $n \in \N$ and an infinite set $A \subseteq G$, there exists a finite $B \subseteq G$ and an infinite $A' \subseteq A$
+    such that for all $a,b \in A'$ we have $d_{B}(a,b) > n$.
+  \end{enumerate}
+\end{Theorem}
+
+Roughly, in superflat graphs every infinite set contains a sparse infinite subset (possibly after throwing away finitely many vertices).
+
+We also note the stability result:
+\begin{Theorem} [see Corollary 10 in \cite{stable_graphs}]
+  Every superflat graph is stable.
+\end{Theorem}
+
+\section{Indiscernible sequences}
+
+Fix an uncountable cardinal $\kappa$.
+Work in a superflat graph $\SS$ that is $\kappa$-saturated and strongly $\kappa$-homogeneous.
+Fix a parameter set $A \subset S$ with $|A| < \kappa$.
+Let $I = (a_i)_{i \in \I}$ be a countable $A$-indiscernible sequence.
+Stability implies that $I$ is totally indiscernible (see Lemma \ref{totally}).
+
+\begin{Definition} \ 
+  \begin{itemize}
+  \item For a subsequence $\J \subset \I$ let $a(\J)$ denote the tuple obtained by concatenating $(a_j)_{j \in \J}$.
+  \item Let $m$ be the arity of elements of $I$, that is, $a_i \in S^m$.
+    We call a set $H \subseteq S$ \defn{uniformly definable} from $I$ if there
+    is a formula $\phi(x, y_1, \ldots, y_k)$ with $|y_i| = m$
+    such that for every $\J \subseteq \I$ of size $k$ we have $H = \phi(G, a(\J))$.
+  \end{itemize}
+\end{Definition}
+
+First suppose that $I$ consists of singletons, that is $a_i \in S$.
+
+\begin{Definition}
+  Let $V \subseteq S$. Define $P_n(V)$, a subgraph of $\SS$, to be the union of all paths of length $\leq n$ between the vertices of $V$.
+\end{Definition}
+
+\begin{Lemma} \label{lm_bump}
+  Let $n \in \N$.
+  There exists a finite set $B \subset S$ such that
+  \begin{align*}
+    \forall i \neq j \ d_B(a_i, a_j) > n.
+  \end{align*}
+\end{Lemma}
+
+\begin{proof}
+  By Theorem \ref{th_superflat_equivalence} we can find an infinite $\J \subseteq \I$ and a finite set $B'$
+  such that each pair from $J = (a_j)_{j \in \J}$ has distance $>n$ over $B'$.
+  By total indiscernibility there exists an automorphism mapping $J$ to $I$ and fixing $A$.
+  The image of $B'$ under this automorphism is the required set $B$.
+\end{proof}
+
+In other words, $B$ separates $I$ when viewed inside the subgraph $P_n(I)$.
+This shows that $I$ has finite connectivity in $P_n(I)$.
+Applying Corollary \ref{cr_hull_finite} we obtain that the connectivity hull of $I$ in $P_n(I)$ is finite.
+
+
+\begin{Definition}
+  Given a graph $\GG$ and $V \subseteq G$ define $H(\GG, V) \subseteq G$ to be the connectivity hull of $V$ in $\GG$.
+  Note that if $V$ is finite, then $H(P_n(V), V)$ is $V$-definable.
+\end{Definition}
+
+\begin{Lemma} \label{lm_uniform}
+  Let $H$ be the connectivity hull of $I$ inside the graph $P_n(I)$, that is, $H = H(P_n(I), I)$.
+  Then $H$ is uniformly definable from $I$ in $\SS$.
+\end{Lemma}
+
+\begin{proof}
+  Using total indiscernibility we may assume without the loss of generality that $I$ is indexed by $\N$.
+  Let $I_i = \paren{a_0, a_1, \ldots, a_{i-1}}$ a finite subsequence of the sequence $I$.
+  Let $N$ be the connectivity of $I$ inside of $P_n(I)$.
+  % Define $H_i = H(P_n(I_i), I_i)$.
+  % It is $I_i$-definable.
+
+  First note that any finite set $H \subseteq P_n(I)$ will be contained in $P_n(I_i)$ for large enough $i$.
+  Every element of $H$ is inside a path of length $\leq n$ and endpoints of that path are eventually going to be inside $I_i$.
+  (Here the assumption that $I$ is enumerated by $\N$ is important.)
+
+  Vertices $a_0, a_1$ cannot be separated by less than $N$ elements inside of $P_n(I)$
+  (as this would contradict connectivity being $N$).
+  Thus by Theorem \ref{megner} there are $N$ disjoint paths inside of $P_n(I)$ connecting $a_0$ to $a_1$.
+  For large enough $i$, say $i \geq M_1$, all those paths are contained inside of $P_n(I_i)$.
+  Those paths also witness that vertices $a_0, a_1$ cannot be separated by less than $N$ elements inside of $P_n(I_i)$.
+  As the set $P_n(I_i)$ is $I_i$-definable and $I$ is indiscernible,
+  we have that no two vertices can be separated by less than $N$ elements inside of $P_n(I_i)$
+  Thus $I_i$ has connectivity $\geq N$ inside of $P_n(I_i)$ for $i \geq M_1$.
+
+  Consider a set $S$ of size $N$ that separates $I$ inside of $P_n(I)$.
+  This is witnessed by two elements of $I$ that are separated.
+  There are finitely many such sets $S$ as connectivity hull is finite.
+  Thus for large enough $i$, say $i \geq M_2$, for each such $S$
+  the segment $I_i$ contains a pair of vertices witnessing that $S$ is a separating set.
+
+  Corollary \ref{cr_disjoint_paths} tells us that there are finitely many paths between elements of $V$ such that
+  $H(P_n(I), I)$ is inside the union of those paths.
+  For large enough $i$, say $i \geq M_3$, $P_n(I_i)$ will contain all of those paths, and thus $H(P_n(I), I) \subseteq P_n(I_i)$.
+
+  Combine those three observations.
+  Let $M = \max(M_1, M_2, M_3)$.
+  Then for $i \geq M$ the set $P_n(I_i)$ contains all the $N$-element sets separating $I$ in $P_n(I)$,
+  those sets separate $I_i$ in $P_n(I_i)$,
+  and the connectivity of $I_i$ in $P_n(I_i)$ is at most $N$.
+  But this means that the connectivity of $I_i$ in $P_n(I_i)$ has to be exactly $N$, and $H(P_n(I), I) \subseteq H(P_n(I_i), I_i)$.
+
+  For $i \geq M$ define
+  \begin{align*}
+    E_i = \bigcap_{j = M}^{i} H(P_n(I_j), I_j).
+  \end{align*}
+  We have $H(P_n(I), I) \subseteq E_i$ and $E_i$ is a decreasing chain.
+  Suppose
+  \begin{align*}
+    H(P_n(I), I) \subsetneq H(P_n(I_M), I_M),    
+  \end{align*}
+  that is ${H(P_n(I_M), I_M) - H(P_n(I), I)} \neq \emptyset$.
+  Then there exists a set $S$ of size $N$ that separates $I_M$ in $P_n(I_M)$ but does not separate $I$ in $P_n(I)$.
+  Thus there has to be a finite subgraph of $P_n(I)$ disjoint from $S$ that connects all the elements of $I_M$ (witness of failure of separation).
+  For large enough $i$, say $i \geq M_S$, this subgraph is contained in $P_n(I_i)$.
+  There are finitely many possibilities for $S$ (as connectivity hull of $I_M$ in $P_n(I_M)$ is finite).
+  Let $M_4 = \max_S(M_S)$.
+  Then for $i \geq \max(M_4, M)$ we have
+  \begin{align*}
+    H(P_n(I_i), I_i) \cap \paren{H(P_n(I_M), I_M) - H(P_n(I), I)} = \emptyset,    
+  \end{align*}
+  and thus $E_i = H(P_n(I), I)$.
+  As $E_i$ is $I_i$-definable, this shows that $H(P_n(I), I)$ is $I_i$-definable.
+  Now we need to show uniform definability.
+  Suppose $I'$ is a subsequence of $I$ of length $i$.
+  There is an automorphism mapping $I_i$ to $I'$ that fixes $I$ setwise.
+  But this automorphism has to fix $H(P_n(I), I)$ setwise,
+  so it maps an $I_i$-definition of $H(P_n(I), I)$ to an $I'$-definition of $H(P_n(I), I)$.
+  As $I'$ was arbitrary this shows uniformity.
+\end{proof}
+
+\begin{Corollary} \label{inf_dis_corr}
+  Let $H_n = H(P_n(I), I)$.
+  Then 
+  \begin{align*}
+    \forall i \neq j \ d_{H_n}(a_i, a_j) > n.
+  \end{align*}
+\end{Corollary}
+
+\begin{proof}
+  The set $H_n$ separates $I$ inside of $P_n(I)$.
+  In particular there exist $i \neq j$ such that $d_{H_n}(a_i, a_j) = \infty$ inside $P_n(I)$.
+  This means that $d_{H_n}(a_i, a_j) > n$ inside of $\SS$.
+  But then by total indiscernibility and using the fact that $H_n$ is uniformly $I$-definable, this holds for all $i \neq j$.
+\end{proof}
+
+\newcommand{\tpl}[2]{{#1}^{(#2)}}
+
+We would like to start working with tuples now instead of singletons.
+We need some notation to extract individual elements of a tuple:
+\begin{Definition}
+  Suppose $a = (a_1, \ldots, a_m)$ is a tuple of arity $m$.
+  Let $\tpl{a}{j}$ denote the $j$'th component, that is $\tpl{a}{j} = a_j$.
+\end{Definition}
+
+More generally, now suppose that $I$ consists of tuples of arity $m$, that is $a_i \in S^m$.
+
+\begin{Definition} \ 
+  \begin{itemize}
+  \item We would like extract $j$'th components out of elements of $I$.
+    Let $\tpl{I}{j} = (\tpl{a_i}{j})_{i \in \I}$, an $A$-indiscernible sequence of singletons.
+  \item Let $\tpl{H_n}{j} = H(P_n(\tpl{I}{j}), \tpl{I}{j})$.
+  \item Let
+    \begin{align*}
+      B_n = \bigcup_{i = 1}^{n} \bigcup_{j = 1}^{m} \tpl{H_n}{j}.
+    \end{align*}
+    Note that $B_n$ is finite as each $\tpl{H_n}{j}$ is finite by Corollary \ref{cr_hull_finite}.
+  \end{itemize}
+\end{Definition}
+
+\begin{Lemma} \label{cr_bump}
+  The sequence $I$ is indiscernible over $A \cup B_n$.
+\end{Lemma}
+
+\begin{proof}
+  By Lemma \ref{lm_uniform} the set $\tpl{H_n}{j}$ is uniformly $\tpl{I}{j}$-definable.
+  Thus it is uniformly $I$-definable.
+  Then $B_n$ is a finite union of uniformly $I$-definable sets, thus also uniformly $I$-definable.
+
+  By uniform definability there is a formula $\phi(z, w_1, \ldots , w_k)$ with $|z| = 1$ and $|w_i| = m$ such that
+  for any subsequence $\J \subset \I$ of length $k$ we have $\phi(G, a(\J)) = B_n$.
+  Fix such a subsequence $\J$.
+
+  Let $\psi(x_1, \ldots, x_l ,y)$ be an arbitrary $A$-formula with $|x_i| = m$. 
+  Consider the collection of traces (i.e., a collection of subsets of $B_n^{|y|}$)
+  \begin{align*}
+    \curly{\psi(a(\J'), B_n^{|y|}) \mid \text{ $\J'$ a subsequence of $\I$ of length $l$ disjoint from $\J$}}.
+  \end{align*}
+  If two of the traces are distinct, then by indiscernibility all of them are (using the fact that $B_n$ is uniformly definable).
+  But that is impossible as $B_n$ is finite and thus has finitely many subsets.
+  Thus all such traces are identical.
+  As the choice of $\J$ was arbitrary, we can drop the condition that $\J'$ is disjoint from $\J$.
+  This shows that for any $\J_1, \J_2 \subset \I$ of length $l$ and $h \in B_n^{|y|}$ we have
+  \begin{align*}
+    \SS \models \psi(a(\J_1), h) \iff \SS \models \psi(a(\J_2), h)    .
+  \end{align*}
+  As the choice of $\psi$ was arbitrary, this shows that $I$ is indiscernible over $A \cup B_n$ as needed.
+\end{proof}
+
+\begin{Definition}
+  For tuples $a,b$ of the same arity $m$ and $B \subset S$ define
+  \begin{align*}
+    d_B(a,b) = \min_{1 \leq i,j \leq m} d_B(\tpl{a}{i}, \tpl{b}{j}).
+  \end{align*}
+\end{Definition}
+
+\begin{Lemma} \label{inf_dis_gen}
+  \begin{align*}
+    \forall i \neq j \ d_{B_n}(a_i, a_j) > n/2.
+  \end{align*}
+\end{Lemma}
+
+\begin{proof}
+  Towards a contradiction suppose we have some $i \neq j$ and $k, l$ such that
+  \begin{align*}
+    d_{B_n}(\tpl{a_i}{k}, \tpl{a_j}{l}) \leq n/2.
+  \end{align*}
+  As $B_n$ is uniformly $I$-definable, by total indiscernibility we have that this inequality holds for all $i \neq j$.
+  Assuming for convenience that $I$ is enumerated by naturals, let $b_1 = \tpl{a_1}{k}$, $b_2 = \tpl{a_2}{l}$, $b_3 = \tpl{a_3}{k}$
+  (note the superscripts).
+  Then we have
+  \begin{align*}
+    &d_{B_n}(b_1, b_2) \leq n/2, \\
+    &d_{B_n}(b_3, b_2) \leq n/2.
+  \end{align*}
+  By the triangle inequality
+  \begin{align*}
+    &d_{B_n}(b_1, b_3) \leq n, \\
+    &d_{B_n}(\tpl{a_1}{k}, \tpl{a_3}{k}) \leq n.
+  \end{align*}
+  But this is a contradiction, as Corollary \ref{inf_dis_corr} gives us
+  \begin{align*}
+    \forall i \neq j \ d_{\tpl{H_n}{k}}(\tpl{a_i}{k}, \tpl{a_j}{k}) > n
+  \end{align*}
+  and we have $\tpl{H_n}{k} \subseteq B_n$.
+\end{proof}
+
+\begin{Corollary} \label{inf_dis}
+  There is a countable $B$ such that $I$ is indiscernible over $A \cup B$ and
+  \begin{align*}
+    \forall i \neq j \ d_B(a_i, a_j) = \infty.
+  \end{align*}
+\end{Corollary}
+
+\begin{proof}
+  Let $B_n$ as above. By Lemma \ref{inf_dis_gen} we have 
+  \begin{align*}
+    \forall i \neq j \ d_{B_n}(a_i, a_j) > n/2,
+  \end{align*}
+  and $I$ is indiscernible over $A \cup B_n$ by Lemma \ref{cr_bump}.
+  Let $B = \bigcup_{n \in \N} B_n$.
+  Then
+  \begin{align*}
+    \forall i \neq j \ d_{B}(a_i, a_j) = \infty.
+  \end{align*}
+  As $B_n \subseteq B_{n+1}$, the sequence $I$ is indiscernible over $A \cup B$ as needed.
+\end{proof}
+
+Thus $I$ can be upgraded to have infinite distance over its parameter set.
+
+\section{Superflat graphs are dp-minimal}
+
+\begin{Definition}
+  For $B \subseteq S$ define an equivalence relation $\sim_B$ on $S - B$ as follows:
+  two vertices $b,c$ are $\sim_B$-equivalent if $d_B(b,c)$ is finite.
+\end{Definition}
+
+\begin{Lemma}
+  Fix tuples $a,b,c$ in $S$, with $a,b$ having the same arity.
+  Also let $B \subseteq S$.
+  Suppose $\tp(a/B) = \tp(b/B)$ and $d_B(a, c) = d_B(b, c) = \infty$.
+  Then $\tp(a/Bc) = \tp(b/Bc)$.
+\end{Lemma}
+
+\begin{proof}
+  Suppose $a = (a_1, a_2, \ldots, a_m)$ and $b = (b_1, b_2, \ldots, b_m)$.
+  Define $X_j$ to be the $\sim_B$-equivalence class of $a_j$ or $X_j = \emptyset$ if $a_j \in B$.
+  Similarly define $Y_j$ for $b_j$.
+  There is an automorphism $f$ of $\SS$ fixing $B$ with $f(a) = b$.
+  It's easy to see that $f(X_j) = Y_j$ setwise.
+  We would like to define a function $g \colon S \arr S$.
+  For each $j$ let $g = f$ on $X_j$.
+  Additionally if $X_j \neq Y_j$ then also let $g = f^{-1}$ on $Y_j$.
+  Define $g$ to be identity on the rest of $S$.
+  It is easy to check that $g$ is a well-defined automorphism fixing $Bc$ that maps $a$ to $b$.
+  This shows that $\tp(a/Bc) = \tp(b/Bc)$.
+\end{proof}
+
+\begin{Lemma} \label{exclude}
+  % Let $G$ be a flat graph with $(a_i)_{i\in\Q}$ indiscernible over $A$ and $b \in G$.
+  Let $b \in G$.
+  There exists $c \in \I$ such that all $(a_i)_{i \in \I - c}$ have the same type over $Ab$.
+\end{Lemma}
+
+\begin{proof}
+  Use Corollary \ref{inf_dis} to find $B \supseteq A$ such that $I$ is indiscernible over $B$ and has infinite distance over $B$.
+  All the tuples of the indiscernible sequence fall into distinct $\sim_B$-equivalence classes.
+  If $b \in B$ we are done.
+  Otherwise, there can be at most one element of the sequence that is in the same $\sim_B$-equivalence class as $b$.
+  Exclude that element from the sequence.
+  Remaining sequence elements are all infinitely far away from $b$ over $B$.
+  By the previous lemma we have that the elements of the indiscernible sequence all have the same type over $Bb$ as needed.
+\end{proof}
+
+
+\begin{Theorem} \label{flat_dp_thm}
+  Superflat graphs are dp-minimal.
+\end{Theorem}
+\begin{proof}
+  It suffices to show that $\SS$ is dp-minimal.
+  Using Lemma \ref{dp_min_simon}, by total indiscernibility
+  it is enough to show that if $b \in S$ and $I$ is a countable $\emptyset$-indiscernible sequence
+  then one element can be excluded from $I$, so that the remaining elements have the same type over $b$.
+  But this is precisely Lemma \ref{exclude}.
+\end{proof}
+
+\section{Conclusion}
+The determination of dp-minimality is the first step towards establishing bounds on VC-density.
+It is this author's hope that the simple structure of superflat graphs yields nicely behaved VC-density.
+We pose the following question for the future work:
+\begin{openq} 
+  What are the bounds on VC-density function in superflat graphs?
+  In particular, do we have $\vc(1) = 1$ or $\vc(n) = n \vc(1)$?
+  Are the bounds better in specific classes of superflat graphs,
+  such as planar graphs, graphs with bounded tree-width, or graphs excluding certain classes of subgraphs?
+\end{openq}
